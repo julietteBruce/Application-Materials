@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  6 SEP 2019 14:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  6 SEP 2019 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1577,10 +1577,7 @@ LaTeX Warning: Citation `voisin_greens_2002' on page 1 undefined on input line
 LaTeX Warning: Citation `voisin_greens_2005' on page 1 undefined on input line 
 301.
 
-
-LaTeX Warning: Citation `ermanYang18' on page 1 undefined on input line 307.
-
-LaTeX Font Info:    Try loading font information for U+eus on input line 334.
+LaTeX Font Info:    Try loading font information for U+eus on input line 335.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/ueus.fd
 File: ueus.fd 2013/01/14 v3.01 Euler Script
 )
@@ -1588,7 +1585,7 @@ File: ueus.fd 2013/01/14 v3.01 Euler Script
 File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
 ) [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for OT1+jkpss on input line 34
-8.
+9.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/kpfonts/ot1jkpss.fd
 File: ot1jkpss.fd 2007/07/16 Fontinst v1.928 font definitions for OT1/jkpss.
@@ -1597,76 +1594,67 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `jkpss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [2]
-
-LaTeX Warning: Reference `thm:poonen' on page 3 undefined on input line 397.
-
-[3] [4] [5] [6]
+ [2] [3]
+[4] [5] [6]
 
 Package amsrefs Warning: Duplicate \bib key `MR3451353' detected
-(amsrefs)                on input line 475.
+(amsrefs)                on input line 472.
 
 
 Package amsrefs Warning: Duplicate \bib key `bruce19' detected
-(amsrefs)                on input line 498.
+(amsrefs)                on input line 495.
 
 
 Package amsrefs Warning: Duplicate \bib key `bruce19' detected
-(amsrefs)                on input line 505.
+(amsrefs)                on input line 502.
 
 
 Package amsrefs Warning: Duplicate \bib key `bruce19' detected
-(amsrefs)                on input line 512.
+(amsrefs)                on input line 509.
 
 
 Package amsrefs Warning: Duplicate \bib key `bruce19' detected
-(amsrefs)                on input line 523.
+(amsrefs)                on input line 520.
 
 [7pdfTeX warning (ext4): destination with the same identifier (name{cite.MR3451
 353}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.657 \end{document}
+l.654 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.bruce19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.657 \end{document}
+l.654 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.bruce19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.657 \end{document}
+l.654 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.bruce19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.657 \end{document}
+l.654 \end{document}
                     pdfTeX warning (ext4): destination with the same identifier
  (name{cite.bruce19}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.657 \end{document}
+l.654 \end{document}
                     ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 657.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 657.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 654.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 654.
  (./research-v1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 657.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 657.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 654.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 654.
+Package rerunfilecheck Info: File `research-v1.out' has not changed.
+(rerunfilecheck)             Checksum: 2A642ADB0B1605CD8F298BCC742397EE;846.
 
-
-Package rerunfilecheck Warning: File `research-v1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `research-v1.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  2A642ADB0B1605CD8F298BCC742397EE;846.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.43996pt have occurred.
@@ -1674,19 +1662,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 657.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 654.
  ) 
 Here is how much of TeX's memory you used:
- 26319 strings out of 492649
- 497611 string characters out of 6129622
- 628598 words of memory out of 5000000
- 29047 multiletter control sequences out of 15000+600000
- 93650 words of font info for 391 fonts, out of 8000000 for 9000
+ 26331 strings out of 492649
+ 497833 string characters out of 6129622
+ 628950 words of memory out of 5000000
+ 29063 multiletter control sequences out of 15000+600000
+ 93325 words of font info for 387 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,18n,82p,1351b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,18n,82p,1351b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{cite.voisin_greens_2005} has been referenced but 
 does not exist, replaced by a fixed one
 
@@ -1714,10 +1699,10 @@ ic/kpfonts/jkpssmn8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public
 /kpfonts/jkpsy.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/kpfon
 ts/jkpsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/kpfonts/jk
 pttmn8a.pfb>
-Output written on research-v1.pdf (7 pages, 149714 bytes).
+Output written on research-v1.pdf (7 pages, 149292 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 166 compressed objects within 2 object streams
+ 231 PDF objects out of 1000 (max. 8388607)
+ 203 compressed objects within 3 object streams
  65 named destinations out of 1000 (max. 500000)
- 52749 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 52845 words of extra memory for PDF output out of 61914 (max. 10000000)
 
