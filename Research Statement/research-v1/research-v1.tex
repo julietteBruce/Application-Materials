@@ -303,9 +303,9 @@ Let $C$ be a generic smooth projective curve of genus $g$ over a characteristic 
 \end{theorem}
 
 \subsection{Asymptotic Syzygies}
+Asymptotic syzygies is the study of the graded Betti numbers of a variety as the positivity of the embedding grows.
 
-\begin{defn}
-If $X\subset \P^r$ is a smooth projective variety we define
+More precisely, following the notation of \cite{ermanYang18}, set
 \begin{align*}
 \rho_q\left(X,L\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L\right)\neq0\right\}}{r_{d}} 
 = \;\;\begin{matrix}
@@ -313,7 +313,7 @@ If $X\subset \P^r$ is a smooth projective variety we define
 \text{in the $q$-row of $\beta(X,L)$}\\
 \end{matrix}.
 \end{align*}
-\end{defn}
+
 
 \begin{theorem}
 Let $X\subset \P^r$ be a smooth projective curve. If $(L_{d})_{d\in\N}$ is  sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then 
@@ -458,43 +458,71 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
 
 \begin{bibdiv}
 \begin{biblist}
+\bib{MR3451353}{article}{
+   author={Bruce, Juliette},
+   author={Erman, Daniel},
+   title={A probabilistic approach to systems of parameters and Noether normalization },
+   journal={Algebra Number Theory},
+   note={to appear}
+}
+
+\bib{MR3451353}{article}{
+   author={Bruce, Juliette},
+   author={Li, Wanlin},
+   author={Walker, Robert},
+   title={Effective bounds on the dimensions of jacobians covering abelian varieties },
+   journal={Proc. Amer. Math. Soc.},
+   note={to appear}
+}
+
+\bib{bruce19}{article}{
+	author = {Bruce, Juliette},
+	author = {Erman, Daniel},
+	author = {Goldstein. Steve}, 
+	author = {Yang, Jay},
+	title = {Conjectures and computations about Veronese syzygies},
+	journal = {Experimental Mathematics},
+	volume = {0},
+	number = {0},
+	pages = {1-16},
+	year  = {2018}
+	}
+
+   \bib{bruce19}{article}{
+   author={Bruce, Juliette},
+   author = {Erman, Daniel},
+   author = {Goldstein. Steve}, 
+   author = {Yang, Jay},
+   title={The SchurVeronese package in Macaulay2},
+   date={2019},
+   note={ArXiv pre-print: \url{https://arxiv.org/abs/1905.12661}}
+   }
+
 \bib{bruce19}{article}{
    author={Bruce, Juliette},
    title={Asymptotic syzygies in the setting of semi-ample growth},
    date={2019},
    note={ArXiv pre-print: \url{https://arxiv.org/abs/1904.04944}}
-}
+   }
 
-\bib{coxLittleSchenck11}{book}{
-   author={Cox, David A.},
-   author={Little, John B.},
-   author={Schenck, Henry K.},
-   title={Toric varieties},
-   series={Graduate Studies in Mathematics},
-   volume={124},
-   publisher={American Mathematical Society, Providence, RI},
-   date={2011},
-   pages={xxiv+841},
-   isbn={978-0-8218-4819-7},
-   review={\MR{2810322}},
-   doi={10.1090/gsm/124},
-}
-
-\bib{durrett10}{book}{
-   author={Durrett, Rick},
-   title={Probability: theory and examples},
-   series={Cambridge Series in Statistical and Probabilistic Mathematics},
-   volume={31},
-   edition={4},
-   publisher={Cambridge University Press, Cambridge},
-   date={2010},
-   pages={x+428},
-   isbn={978-0-521-76539-8},
-   review={\MR{2722836}},
-   doi={10.1017/CBO9780511779398},
-}
-	
-	
+\bib{bruce19}{article}{
+   author={Bruce, Juliette},
+   title={The quantitative behavior of asymptotic syzygies for Hirzebruch surfaces},
+   date={2019},
+   note={ArXiv pre-print: \url{https://arxiv.org/abs/1906.07333}}
+   }
+  
+   
+      \bib{bruce19}{article}{
+   author={Bruce, Juliette},
+   author={Almousa, Ayah},
+   author={Loper, Michael C.},
+   author={Sayrafi, Mahrud},
+   title={The virtual resolutions package for Macaulay2},
+   date={2019},
+   note={ArXiv pre-print: \url{https://arxiv.org/abs/1905.07022}}
+   }
+   		
 \bib{einErmanLazarsfeld15}{article}{
    author={Ein, Lawrence},
    author={Erman, Daniel},
@@ -523,6 +551,19 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    doi={10.1007/s00222-012-0384-5},
 }
 
+\bib{eisenbud05}{book}{
+   author={Eisenbud, David},
+   title={The geometry of syzygies},
+   series={Graduate Texts in Mathematics},
+   volume={229},
+   note={A second course in commutative algebra and algebraic geometry},
+   publisher={Springer-Verlag, New York},
+   date={2005},
+   pages={xvi+243},
+   isbn={0-387-22215-4},
+   review={\MR{2103875}},
+}
+
 \bib{ermanYang18}{article}{
    author={Erman, Daniel},
    author={Yang, Jay},
@@ -536,22 +577,30 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    review={\MR{3894431}},
    doi={10.2140/ant.2018.12.2151},
 }
-		
-			
-\bib{lemmens18}{article}{
-   author={Lemmens, Alexander},
-   title={On the $n$-th row of the graded Betti table of an $n$-dimensional
-   toric variety},
-   journal={J. Algebraic Combin.},
-   volume={47},
-   date={2018},
-   number={4},
-   pages={561--584},
-   issn={0925-9899},
-   review={\MR{3813640}},
-   doi={10.1007/s10801-017-0786-y},
+
+\bib{green84-I}{article}{
+   author={Green, Mark L.},
+   title={Koszul cohomology and the geometry of projective varieties},
+   journal={J. Differential Geom.},
+   volume={19},
+   date={1984},
+   number={1},
+   pages={125--171},
+   issn={0022-040X},
+   review={\MR{739785}},
 }
 
+\bib{green84-II}{article}{
+   author={Green, Mark L.},
+   title={Koszul cohomology and the geometry of projective varieties. II},
+   journal={J. Differential Geom.},
+   volume={20},
+   date={1984},
+   number={1},
+   pages={279--289},
+   issn={0022-040X},
+   review={\MR{772134}},
+}
 
 \bib{M2}{misc}{
     label={M2},
@@ -560,6 +609,48 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
     title = {Macaulay 2, a software system for research
 	    in algebraic geometry},
     note = {Available at \url{http://www.math.uiuc.edu/Macaulay2/}},
+}
+
+\bib{peskineSzpiro74}{article}{
+   author={Peskine, C.},
+   author={Szpiro, L.},
+   title={Liaison des vari\'{e}t\'{e}s alg\'{e}briques. I},
+   language={French},
+   journal={Invent. Math.},
+   volume={26},
+   date={1974},
+   pages={271--302},
+   issn={0020-9910},
+   review={\MR{364271}},
+   doi={10.1007/BF01425554},
+}
+	
+\bib{voisin02}{article}{
+   author={Voisin, Claire},
+   title={Green's generic syzygy conjecture for curves of even genus lying
+   on a $K3$ surface},
+   journal={J. Eur. Math. Soc. (JEMS)},
+   volume={4},
+   date={2002},
+   number={4},
+   pages={363--404},
+   issn={1435-9855},
+   review={\MR{1941089}},
+   doi={10.1007/s100970200042},
+}
+
+\bib{voisin05}{article}{
+   author={Voisin, Claire},
+   title={Green's canonical syzygy conjecture for generic curves of odd
+   genus},
+   journal={Compos. Math.},
+   volume={141},
+   date={2005},
+   number={5},
+   pages={1163--1190},
+   issn={0010-437X},
+   review={\MR{2157134}},
+   doi={10.1112/S0010437X05001387},
 }
 	
 \end{biblist}
