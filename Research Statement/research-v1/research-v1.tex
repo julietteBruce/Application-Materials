@@ -290,20 +290,21 @@ My research interests lie in using homological, combinatorial, and explicit meth
 
 \section{Bridges Between Geometry and Syzygies}
 
-Given a graded module $M$ over a ring $R$, a helpful tool for understanding the structure of $M$ is its minimal free resolution. In essence, a minimal free resolution is a way of approximating $M$ by a sequence of free $R$-modules. More formally, a \textit{free resolution} of a graded $R$-module $M$ is an exact sequence 
+Given a graded module $M$ over a graded ring $R$, a helpful tool for understanding the structure of $M$ is its minimal free resolution. In essence, a minimal free resolution is a way of approximating $M$ by a sequence of free $R$-modules. More formally, a \textit{free resolution} of a graded $R$-module $M$ is an exact sequence 
 \[
 \cdots \xrightarrow{} F_{k} \xrightarrow{} F_{k-1} \xrightarrow{} \cdots \xrightarrow{d_{1}} F_{0}\xrightarrow{\epsilon}M\xrightarrow{} 0
 \]
-where each $F_{k}$ is a graded free $R$-module, and hence can be written as $\bigoplus_{j}R(-j)^{b_{ij}}$. Note that $R(-j)$ is the ring $R$ with its grading twisted, so that $R(-j)_{d}$ is equal to $R_{d-j}$ where $R_{d-j}$, is the graded piece of degree $d-j$. Useful numerical invariants of this graded free resolution are the $b_{ij}$, which are called the \textit{Betti numbers} of this resolution. These Betti numbers are often arranged into a matrix called a \textit{Betti table}.
+where each $F_{p}$ is a graded free $R$-module, and hence can be written as $\bigoplus_{q}R(-q)^{\beta_{p,q}}$. Note that $R(-q)$ is the ring $R$ with its grading twisted, so that $R(-q)_{d}$ is equal to $R_{d-q}$ where $R_{d-q}$, is the graded piece of degree $d-q$. The $\beta_{p,q}$'s are called the \textit{Betti numbers} of $M$, and they are often a useful numerical invariant when studying $M$. 
 
-An interesting application of the theory of free resolutions is to algebraic varieties. Given a projective variety $X$ embedded in $\P^n$, we associate to $X$ the ring $S_X=S/I_X$, where $S=\C[x_0,\ldots,x_n]$ and $I_X$ is the ideal of homogenous polynomials vanishing on $X$. Now, $S_X$ is naturally a graded $S$-module, and so we may consider its minimal free resolution. The minimal graded free resolution of $X$ is often closely related to the extrinsic and intrisic geometry of $X$.  As example of this phenomena, consider the following theorem, a special case of Green's Conjecture \cite{avramov_lectutres_2011}. 
+Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring $S_X=S/I_X$, where $S=\C[x_0,\ldots,x_r]$ and $I_X$ is the ideal of homogenous polynomials vanishing on $X$. As $S_X$ is naturally a graded $S$-module we may consider its minimal free resolution. The minimal graded free resolution of $X$ is often closely related to both the extrinsic and intrinsic geometry of $X$.  As example of this phenomena, consider the following theorem, a special case of Green's Conjecture \cite{avramov_lectutres_2011}. 
 
-\begin{theorem}[\cite{voisin_greens_2002}, \cite{voisin_greens_2005}]
+\begin{theorem}[\cite{voisin02}, \cite{voisin05}]
 Let $C$ be a generic smooth projective curve of genus $g$ over a characteristic zero field embedded in $\P^{g-1}$ by the complete canonical series. Then the length of the first linear strand of the minimal free resolution of $I_X$ is $g-3-\text{Cliff}(C)$.
 \end{theorem}
 
 \subsection{Asymptotic Syzygies}
-Asymptotic syzygies is the study of the graded Betti numbers of a variety as the positivity of the embedding grows.
+
+In his pioneering papers \cite{green84-I}, \cite{green84-II} initiated the study of the relationship between syzygies of an algebraic variety $X\subset \P^r$ and properties of the embedding line bundle. While Green did not frame his results in this way, in recent years, it has become clear that one framework to view these is that of asymptotic syzygies. Asymptotic syzygies is the study of the graded Betti numbers of a variety as the positivity of the embedding grows.
 
 More precisely, following the notation of \cite{ermanYang18}, set
 \begin{align*}
@@ -342,19 +343,17 @@ Let $X=\P^{n}\times\P^{m}$ and fix an index $1\leq q \leq n+m$. There exists con
 
 While the use of syzygies to study the geometry of projective varieties has proved very fruitful, it turns out to be quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only know for $d\leq 5$. That said it turns out that the problem computing syzygies can be reduced to computing the ranks of a number of matrices. However, the reduction has generally proven intractable because the number of matrices and their sizes quickly become extremely large. For example, in order to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
 
-In a project my co-authors and I exploited recent advances in numerical linear algebra and high throughput high preformance computing to overcome these challenges and compute a number of new examples of Veronese syzygies. This data provided support for a number of existing conjectures, as well as led us to conjecture previously unseen relationships between the representation theory and syzygies of Veronese embeddings. 
+In a project my co-authors and I exploited recent advances in numerical linear algebra and high throughput high performance computing to overcome these challenges and compute a number of new examples of Veronese syzygies. This data provided support for a number of existing conjectures, as well as led us to conjecture previously unseen relationships between the representation theory and syzygies of Veronese embeddings. 
 The data resulting from this project has been made publicly available via the website SyzygyData.com, as well as, a package for the computer algebra system Macaualy2.
 
 
-Recently with \juliette{GROUP} I have begun working to use similar computational techniques to compute the syzygies for various Hirzebruch surfaces including $\P^1\times\P^1$.  We hope that the new examples we generate will shed light on \juliette{tie to previous work}.
- 
-
+Recently I have begun working to use similar computational techniques to compute the syzygies for various Hirzebruch surfaces including $\P^1\times\P^1$. Thus, by exploiting the fact that there exists semi-ample line bundles on Hirzebruch surfaces we have managed to compute the syzygies in approximately 100 new examples. We hope that these new examples will lead to new conjectures regarding the syzygies of Hirzebruch surfaces. In particular, we hope to find ways to generalize \juliette{NEED} to other Hirzebruch surfaces. 
 
 \subsection{Liaison Theory via Virtual Resolutions}
 
-Generically if one picks two polynomials $f,g\in \C[x,y,z]$ their common zero locus $\V(f,g)\subset \P^3$ will be one dimensional (i.e. $\V(f,g)$ is an algebraic curve). Curves arriving in such a way are called complete intersections. While in a sense curves which are complete intersections are generic, much of the interesting geometry of curves in $\P^3$ comes from curves which are not complete intersections. Classically one approach to understanding the geometry of space curves in $\P^3$ is by asking when the union of two (or more) curves forms a particular nice variety. Two curves $C,C'\subset \P^3$ are said to be linked via a complete intersection if $C\cup C'$ is a complete intersection.
+Generically if one picks two polynomials $f,g\in \C[x,y,z]$ their common zero locus $\V(f,g)\subset \P^3$ will be one dimensional (i.e. $\V(f,g)$ is an algebraic curve). Curves arriving in such a way are called complete intersections. While in a sense curves which are complete intersections are generic, much of the interesting geometry of curves in $\P^3$ comes from curves which are not complete intersections. Classically one approach to understanding the geometry of space curves in $\P^3$ is by asking when the union of two (or more) curves is a complete intersection. Such curves are said to be linked, and the general idea so to try and identify properties that are preserved under linkage. 
 
-While the liaison theory of curves in $\P^3$ is well understood the same theory for curves in other 3-folds (even $\P^1\times\P^2$ remains quite mysterious. One reason for this stark difference is that the minimal graded free resolution of a curve $C\subset \P^1\times\P^2$ is much less understood than for curves in $\P^3$. For example, classical theorems implies that curves in $\P^3$  \juliette{FINISH THOUGHTS}
+While the liaison theory of curves in $\P^3$ is well understood the same theory for curves in other 3-folds (even $\P^1\times\P^2$) remains quite mysterious. One reason for this stark difference is that the minimal graded free resolution of curves in $\P^3$ are much simpler and better understood than resolutions of curves on other 3-folds.. For example, classical theorems implies that every curve in $\P^3$ has a minimal graded free resolution of length at most 3, while in for curves in $\P^1\times \P^2$ the minimal graded free resolution may have length up to 4. 
 
 In an ongoing program with Christine Berkesch and Patricia Klein I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory curves in $\P^1\times\P^2$. 
 
@@ -366,7 +365,7 @@ Let $C$ and $C'$ be linked curves in $\P^2\times\P^1$ then $C$ is virtually Cohe
 The even liaison classes of curves in $\P^1\times\P^2$ satisfying some technical assumptions are in bijection with \juliette{finish}
 \end{goalTheorem}
 
-\subsection{Syzygies of Rational Curves via Maximal Rank}
+In order to explore these questions we have computed a number of examples of curves in $\P^1\times\P^2$ 
 
 \section{Bridges to Arithmetic Geometry}
 
@@ -384,6 +383,8 @@ Let $X\subset \P^{r}_{\fF_{q}}$ be a smooth projective variety of dimension $n$,
 \end{equation}
 \end{theorem}
 
+Building upon Poonen's work Daniel Erman and I examined when collections of polynomials over a finite field form a (partial) system of parameters. That is when a the zero locus of a set of polynomials has the correct degree. By adapting  
+ 
 \begin{cor}\label{cor:error}
 Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n$.  Then
 \[
