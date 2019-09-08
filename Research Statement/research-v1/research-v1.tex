@@ -286,7 +286,7 @@
 
 \setcounter{section}{1}
 
-My research interests lie in using homological, combinatorial, and explicit methods to study the geometry of zero locus of systems of polynomials, that is the geometry of algebraic varieties, over both fields of characteristic zero and $p>0$. 
+My research interests lie in algebraic geometry, commutative algebra, and algebraic geometry. In particular, I am interest i using homological, combinatorial, and explicit methods to study the geometry of zero locus of systems of polynomials, that is the geometry of algebraic varieties, over both fields of characteristic zero and $p>0$. 
 
 \section{Bridges Between Geometry and Syzygies}
 
@@ -304,9 +304,9 @@ Let $C$ be a generic smooth projective curve of genus $g$ over a characteristic 
 
 \subsection{Asymptotic Syzygies}
 
-In his pioneering papers \cite{green84-I}, \cite{green84-II} initiated the study of the relationship between syzygies of an algebraic variety $X\subset \P^r$ and properties of the embedding line bundle. While Green did not frame his results in this way, in recent years, it has become clear that one framework to view these is that of asymptotic syzygies. Asymptotic syzygies is the study of the graded Betti numbers of a variety as the positivity of the embedding grows.
+In his pioneering papers \cite{green84-I}, \cite{green84-II} initiated the study of the relationship between syzygies of an algebraic variety $X\subset \P^r$ and properties of the embedding line bundle. While Green did not frame his results in this way, in recent years, it has become clear that one useful framework to study this relationship is that of asymptotic syzygies. Asymptotic syzygies is the study of the graded Betti numbers of a variety as the positivity of the embedding grows.
 
-More precisely, following the notation of \cite{ermanYang18}, set
+In order to give a flavor of the results of asymptotic syzygies precisely, following the notation of \cite{ermanYang18}, set
 \begin{align*}
 \rho_q\left(X,L\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L\right)\neq0\right\}}{r_{d}} 
 = \;\;\begin{matrix}
@@ -383,6 +383,8 @@ Let $X\subset \P^{r}_{\fF_{q}}$ be a smooth projective variety of dimension $n$,
 \end{equation}
 \end{theorem}
 
+\subsection{A Probabilistic Study of Systems of Parameters} 
+
 Building upon Poonen's work Daniel Erman and I examined when collections of polynomials over a finite field form a (partial) system of parameters. That is when a the zero locus of a set of polynomials has the correct degree. By adapting  
  
 \begin{cor}\label{cor:error}
@@ -392,13 +394,19 @@ Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n
 \]
 \end{cor} 
 
+\subsection{Explicit Bertini Theorems and Jacobians Covering Abelian Varieties}
+
+Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve. In fact, by using Bertini's theorem if $A\subset \P^r$ is an abelian variety of dimension $n$ over an infinite field there exists a hyperplane $H$ such that $A\cap H$ is a smooth curve whose Jacobian covers $A$. Moreover, one can even provide an effective upper bound on the dimension of the $\Jac(A\cap H)$ in terms of the dimension and degree of A (see [Mil08, Section III]).
+
+Over a finite field the failure of Bertini's theorem makes things substantially more subtle. For example, while Poonen's Bertini theorem shows that every abelian variety over a finite field is covered by a Jacobian variety it is not enough to effectively bound the dimension of such covers. This is a result of the fact Poonen's Bertin
+ 
 \subsection{Uniform Bertini}
 
 Notice that in the statement of Poonen's Bertini theorem while the left hand side of equation \juliette{CITE} is dependent of the embedding of $X$ into projective space (i.e. it depends on our choice of very ample line bundle $A$) while the overall limit is itself independent of the embedding of $X$. This suggests that there may be a more general and uniform statement of Poonen's Bertini Theorem. That is one might hope that the analogous limit along any sequence $(L_{d})_{d\in\N}$ of line bundles growing in positivity may limit to $\zeta_{X}(n+1)^{-1}$. I am working on a project, joint with Isabel Vogt, attempting to formalize and prove such a theorem.
 
 Work of Erman and Wood on semi-ample Bertini Theorems shows that such an analogue of Theorem~\ref{thm:poonen} fails for sequences of line bundles, which do not grow in an ample fashion. Isabel and I believe that this failure can be fixed by introducing a technical assumption on the the sequence of lines bundles grows in positivity we call going to infinity in all directions. Formally a sequence of line bundles  $\left(L_{d}\right)_{d\in\N}$ goes to infinity in all directions if for every ample line bundle $A$ there exists an $N\in \N$ such that $L_{i}-A$ is ample for all $i\geq N$. In particular, we are working to prove the following uniform version of Poonen's Bertini theorem.
  
-\begin{goalTheorem}
+\begin{goalTheorem}\label{gthm:effective-bertini}
 Let $X/\fF_{q}$ be a projective variety of dimension $n$. If $\left(L_{d}\right)_{d\in\N}$ is a sequence of line bundles on $X$ going to infinity in all directions then 
 \begin{equation}
 \lim_{d\to \infty} \Prob\left(\begin{matrix} f\in H^0\left(X, L_{d}\right) \\ \text{$X\cap H_{f}$ is smooth of dimension $n-1$}\end{matrix}\right)=
@@ -424,7 +432,7 @@ f \in H^0\left(X, \cF\otimes\cL(k)\otimes \cD\right) \quad \bigg| \quad
 for all $k\geq m(\cF,\cL)$ and all $\cD\in \Nef(X)$. 
  \end{conj}
 
-I hope that my work with Isabel Vogt on the Goal Theorem \juliette{CITE} to shed light on this conjecture, and allow us to prove at least parts of it. 
+I hope that my work with Isabel Vogt on the Goal Theorem~\ref{gthm:effective-bertini} to shed light on this conjecture, and allow us to prove at least parts of it. 
 
 \newpage 
 
@@ -433,13 +441,13 @@ I hope that my work with Isabel Vogt on the Goal Theorem \juliette{CITE} to shed
 
 
 \subsection{Organizing}
-In the Spring of 2017 I organized \textit{Math Careers Beyond Academia } (50 participants), a one day professional development conference on STEM careers outside of academia, and how graduate students should prepare for these careers. In April 2018 I organized a four day workshop focused on creating new packages for Macaulay2 -- an open source computer algebra system -- by bringing together over 45 developers and users of all skill levels and experience. Further in February 2019 I organized \textit{Geometry and Arithmetic of Surfaces} (40 participants), a workshop providing a diverse group of early career researchers the opportunity to learn about interesting cutting edge topics in the arithmetic and algebraic geometry of surfaces from a diverse set of prominent active researchers. In April 2019 I organized the \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants)  focused on forming a community of women and non-binary researchers interested in commutative algebra. In Fall 2019 I organized a \textit{Special Session on Combinatorial Algebraic Geometry} at the AMS Fall Central Sectional. At the 2019 Joint Mathematics Meetings I am organizing an Spectra Panel entitled \textit{Supporting Transgender and Non-binary Students}.
+In the Spring of 2017 I organized \textit{Math Careers Beyond Academia } (50 participants), a one day professional development conference on STEM careers outside of academia, and how graduate students should prepare for these careers. In April 2018 I organized a four day workshop focused on creating new packages for Macaulay2 -- an open source computer algebra system -- by bringing together over 45 developers and users of all skill levels and experience. Further in February 2019 I organized \textit{Geometry and Arithmetic of Surfaces} (40 participants), a workshop providing a diverse group of early career researchers the opportunity to learn about interesting cutting edge topics in the arithmetic and algebraic geometry of surfaces from a diverse set of prominent active researchers. In April 2019 I organized the \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants)  focused on forming a community of women and non-binary researchers interested in commutative algebra. In Fall 2019 I organized a \textit{Special Session on Combinatorial Algebraic Geometry} at the AMS Fall Central Sectional. At the 2019 Joint Mathematics Meetings I am organizing a Spectra Panel entitled \textit{Supporting Transgender and Non-binary Students}.
 
 \subsection{Math Circles}
 I began volunteering with the MMC in Fall 2014; at the time, the circle's main programming was a weekly on-campus lecture given by a member of the math department. After volunteering with the MMC for roughly a year I stepped into the role of student organizer overseeing much of the administrative needs of the circle including scheduling and overseeing speakers. Over my time as organizer I worked hard to build stronger connections between the Madison Math Circle, local schools and teachers, and other outreach organizations especially those focused on underrepresented groups. These ties helped the weekly attendance of the MMC more than double during my time as organizer. Additionally, I led the creation of a new outreach arm of the MMC, which visits high schools around the state of Wisconsin to better serve students from underrepresented groups. This program has dramatically expanded the reach of the circle. For example, during my last full yeas as organizer I planned over 10 visits to high schools around the state of Wisconsin reaching over 250 students. 
 
 \subsection{Mentoring}
-Since the winter of 2018 I have led reading courses with three undergraduates through Wisconsin's Directed Reading Program. One of these students, and undergraduate woman, worked with me for over a year, during which time I helped her through the process of applying for Research Experiences for Undergrads and researching options for graduate school. I have been a mentor to two undergraduate women studying math via the AWM's Mentoring Network program. Further, through I have lead directed reading courses with three undergraduates. During the Fall 2018 semester, working with Girls' Math Night Out I mentored two high school aged girls leading them through a project exploring RSA cryptography. Additionally, during the 2018-2019 academic year I served as a mentor to 6 first year graduate students (all women or non-binary students). 
+Since the winter of 2018 I have led reading courses with three undergraduates through Wisconsin's Directed Reading Program. One of these students, and undergraduate woman, worked with me for over a year, during which time I helped her through the process of applying for Research Experiences for Undergrads and researching options for graduate school. I have been a mentor to two undergraduate women studying math via the AWM's Mentoring Network program. Further, through I have lead directed reading courses with three undergraduates. Working with Girls' Math Night Out I mentored two high school aged girls leading them through a project exploring RSA cryptography. Additionally, during the 2018-2019 academic year I served as a mentor to 6 first year graduate students (all women or non-binary students). 
 
 
 \subsection{A More Inclusive Community.} During the Fall of 2016 in response to a growing climate of hate, bias, and discrimination on campus I pushed the Mathematics Department to form a committee on inclusivity and diversity. As a member of this committee I took the lead in drafting a statement on the department's commitment to inclusivity and non-discrimination that was  accepted by the faculty at a department meeting. I also worked to create template syllabi statements that let students know about these department polices, and that inform them of other campus resources that may be helpful. All teachers within the department are now encouraged to use these statements. 
