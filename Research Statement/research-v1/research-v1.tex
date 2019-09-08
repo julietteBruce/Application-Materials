@@ -353,9 +353,12 @@ Recently I have begun working to use similar computational techniques to compute
 
 Generically if one picks two polynomials $f,g\in \C[x,y,z]$ their common zero locus $\V(f,g)\subset \P^3$ will be one dimensional (i.e. $\V(f,g)$ is an algebraic curve). Curves arriving in such a way are called complete intersections. While in a sense curves which are complete intersections are generic, much of the interesting geometry of curves in $\P^3$ comes from curves which are not complete intersections. Classically one approach to understanding the geometry of space curves in $\P^3$ is by asking when the union of two (or more) curves is a complete intersection. Such curves are said to be linked, and the general idea so to try and identify properties that are preserved under linkage. 
 
-While the liaison theory of curves in $\P^3$ is well understood the same theory for curves in other 3-folds (even $\P^1\times\P^2$) remains quite mysterious. One reason for this stark difference is that the minimal graded free resolution of curves in $\P^3$ are much simpler and better understood than resolutions of curves on other 3-folds.. For example, classical theorems implies that every curve in $\P^3$ has a minimal graded free resolution of length at most 3, while in for curves in $\P^1\times \P^2$ the minimal graded free resolution may have length up to 4. 
+While the liaison theory of curves in $\P^3$ is well understood the same theory for curves in other 3-folds (even $\P^1\times\P^2$) remains quite mysterious. One reason for this stark difference is that while minimal graded free resolutions are an extremely useful tool to study quasicoherent sheaves on projective space, when working over other varieties -- like smooth toric varieties --  minimal graded free resolutions tend to be less useful. For example, minimal graded free resolutions over the Cox ring of a smooth toric variety seem overly burdened by algebraic structure that is often irrelevant to the geometry. 
 
-In an ongoing program with Christine Berkesch and Patricia Klein I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory curves in $\P^1\times\P^2$. 
+In an ongoing program with Christine Berkesch and Patricia Klein I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory curves in toric 3-folds. Broadly a virtual resolution is a homological representation of a finitely graded module over the Cox ring of a smooth toric variety that attempts to overcome the challenges mentioned in the previous paragraph by allowing a certain amount of homology. 
+
+
+Broadly, a virtual resolution is a homological representation of a finitely generated graded module over the Cox ring of a smooth projective toric variety. While graded minimal free resolutions are useful for studying quasicoherent sheaves over projective space, when working over a product of projective spaces or, more generally, over smooth projective toric vari- eties, they are somewhat less useful. In particular, graded minimal free resolutions over the Cox ring seem too burdened by algebraic structure that is, in some sense, unimportant geometrically
 
 \begin{goalTheorem}
 Let $C$ and $C'$ be linked curves in $\P^2\times\P^1$ then $C$ is virtually Cohen-Macaulay if and only if $C'$ is virtually Cohen-Macaualy.
@@ -365,8 +368,7 @@ Let $C$ and $C'$ be linked curves in $\P^2\times\P^1$ then $C$ is virtually Cohe
 The even liaison classes of curves in $\P^1\times\P^2$ satisfying some technical assumptions are in bijection with \juliette{finish}
 \end{goalTheorem}
 
-In order to explore these questions we have computed a number of examples of curves in $\P^1\times\P^2$ 
-
+We have begun exploring these 
 \section{Bridges to Arithmetic Geometry}
 
 Over a finite field a number of classical statements from algebraic geometry no longer hold. For example, if $X$ is a smooth projective variety of dimension $n$ over $\C$ then Bertini's Theorem states that a generic hyperplane section of $X$ (i.e. $X\cap H$ for a generic hyperplane $H\subset \P^n$) will be smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field. \juliette{insert example}. Similar statements for connectedness, irreducibility, and other properties also fail over finite fields. 
@@ -385,8 +387,10 @@ Let $X\subset \P^{r}_{\fF_{q}}$ be a smooth projective variety of dimension $n$,
 
 \subsection{A Probabilistic Study of Systems of Parameters} 
 
-Building upon Poonen's work Daniel Erman and I examined when collections of polynomials over a finite field form a (partial) system of parameters. That is when a the zero locus of a set of polynomials has the correct degree. By adapting  
- 
+Over an infinite field a Noether normalization states that if $X\subset \P^r$ is a projective variety of dimension $n$ then there exists a finite (i.e. surjective with finite fibres) map $X\arrow \P^n$. The existence of such a map is equivalent to the existence of a collection of homogenous polynomials $f_{0},\ldots,f_{n}$ such that $X\cap \V(f_{0},\ldots,f_{n})=\o$. Such a collection of polynomials is called a system of parameters. 
+
+Adapting Poonen's closed point sieve to sieve over higher dimensional varieties 
+
 \begin{cor}\label{cor:error}
 Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n$.  Then
 \[
@@ -441,7 +445,7 @@ I hope that my work with Isabel Vogt on the Goal Theorem~\ref{gthm:effective-ber
 
 
 \subsection{Organizing}
-In the Spring of 2017 I organized \textit{Math Careers Beyond Academia } (50 participants), a one day professional development conference on STEM careers outside of academia, and how graduate students should prepare for these careers. In April 2018 I organized a four day workshop focused on creating new packages for Macaulay2 -- an open source computer algebra system -- by bringing together over 45 developers and users of all skill levels and experience. Further in February 2019 I organized \textit{Geometry and Arithmetic of Surfaces} (40 participants), a workshop providing a diverse group of early career researchers the opportunity to learn about interesting cutting edge topics in the arithmetic and algebraic geometry of surfaces from a diverse set of prominent active researchers. In April 2019 I organized the \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants)  focused on forming a community of women and non-binary researchers interested in commutative algebra. In Fall 2019 I organized a \textit{Special Session on Combinatorial Algebraic Geometry} at the AMS Fall Central Sectional. At the 2019 Joint Mathematics Meetings I am organizing a Spectra Panel entitled \textit{Supporting Transgender and Non-binary Students}.
+In the Spring of 2017 I organized \textit{Math Careers Beyond Academia } (50 participants), a one day professional development conference on STEM careers outside of academia, and how graduate students should prepare for these careers. In April 2018 I organized a four day workshop focused on creating new packages for Macaulay2 -- an open source computer algebra system -- by bringing together over 45 developers and users of all skill levels and experience. Further in February 2019 I organized \textit{Geometry and Arithmetic of Surfaces} (40 participants), a workshop providing a diverse group of early career researchers the opportunity to learn about interesting cutting edge topics in the arithmetic and algebraic geometry of surfaces from a diverse set of prominent active researchers. In April 2019 I organized the \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants)  focused on forming a community of women and non-binary researchers interested in commutative algebra. In Fall 2019 I organized a \textit{Special Session on Combinatorial Algebraic Geometry} at the AMS Fall Central Sectional. At the 2019 Joint Mathematics Meetings I am organizing a Spectra Panel entitled \textit{Supporting Transgender and Non-binary Students}. 
 
 \subsection{Math Circles}
 I began volunteering with the MMC in Fall 2014; at the time, the circle's main programming was a weekly on-campus lecture given by a member of the math department. After volunteering with the MMC for roughly a year I stepped into the role of student organizer overseeing much of the administrative needs of the circle including scheduling and overseeing speakers. Over my time as organizer I worked hard to build stronger connections between the Madison Math Circle, local schools and teachers, and other outreach organizations especially those focused on underrepresented groups. These ties helped the weekly attendance of the MMC more than double during my time as organizer. Additionally, I led the creation of a new outreach arm of the MMC, which visits high schools around the state of Wisconsin to better serve students from underrepresented groups. This program has dramatically expanded the reach of the circle. For example, during my last full yeas as organizer I planned over 10 visits to high schools around the state of Wisconsin reaching over 250 students. 
