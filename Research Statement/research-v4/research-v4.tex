@@ -452,11 +452,11 @@ Using this analysis and a delicate Hilbert function argument we were also able t
 
 \subsection{Explicit Bertini Theorems and Jacobians Covering Abelian Varieties}
 
-Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve. In fact, if $A\subset \P^r$ is an abelian variety of dimension $n$ over an infinite field then by Bertini's theorem exists a hyperplane $H$ such that $A\cap H$ is a smooth curve whose Jacobian covers $A$. Moreover, one can even provide an effective upper bound on the dimension of the $\Jac(A\cap H)$ in terms of the dimension and degree of A (see [Mil08, Section III]).
+Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve. In fact, if $A\subset \P^r$ is an abelian variety of dimension $n$ over an infinite field then by Bertini's theorem there exists a hyperplane $H$ such that $A\cap H$ is a smooth curve whose Jacobian covers $A$. Moreover, one can even provide an effective upper bound on the dimension of the $\Jac(A\cap H)$ in terms of the dimension and degree of A (see [Mil08, Section III]).
 
 Over a finite field the failure of Bertini's theorem, again makes things more subtle. In fact while Poonen's Bertini theorem shows that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve, it is not enough to provide an effective upper bound on the dimension of the covering Jacobian variety. This is because while Poonen's work shows the existence of a hypersurface $H$ such that $A\cap H$ is smooth it does not allow one to control the degree of the hypersurface $H$. 
 
-Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12} Li and I established an effective and explicit version of Poonen's Bertini theorem over finite field. Using this theorem to control the degree of they hypersurface $H$, Li and I proved that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve whose dimension is bounded by an explicit constant. 
+Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12} Li and I established an effective and explicit version of Poonen's Bertini theorem over finite fields. Using this theorem to control the degree of the hypersurface $H$, Li and I proved that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve whose dimension is bounded by an explicit constant. 
 
 \begin{theorem}
 Fix $r,n\in \N$ with $n\geq2$, and let $\fF_{q}$ be a finite field of characteristic $p$. There exists an explicit constant $C_{r,q}$ such that if $A\subset \P^{r}_{\fF_q}$ is a non-degenerate abelian variety of dimension $n$, then for any $d\in \N$ satisfying 
@@ -474,21 +474,21 @@ Additionally, by utilizing my work with Erman on systems of parameters Li and I 
 
 \subsection{Uniform Bertini}
 
-Notice that in the statement of Poonen's Bertini theorem while the left hand side of equation~\eqref{eq:poonen} is dependent of the embedding of $X$ into projective space (i.e. it depends on our choice of very ample line bundle $A$) while the overall limit is itself independent of the embedding of $X$. This suggests that there may be a more general and uniform statement of Poonen's Bertini Theorem. That is one might hope that the analogous limit along any sequence $(L_{d})_{d\in\N}$ of line bundles growing in positivity may limit to $\zeta_{X}(n+1)^{-1}$. I am working on a project, joint with Isabel Vogt, attempting to formalize and prove such a theorem.
+Notice that in the statement of Poonen's Bertini theorem while the left hand side of equation~\eqref{eq:poonen} is dependent of the embedding of $X$ into projective space (i.e. it depends on our choice of very ample line bundle $A$) the overall limit is itself independent of the embedding of $X$. This suggests that there may be a more general and uniform statement of Poonen's Bertini theorem. That is one might hope that the analogous limit along any sequence $(L_{d})_{d\in\N}$ of line bundles growing in positivity may limit to $\zeta_{X}(n+1)^{-1}$. I am working on a project, with Isabel Vogt, attempting to formalize and prove such a theorem.
 
-Work of Erman and Wood on semi-ample Bertini Theorems shows that such an analogue of Theorem~\ref{thm:poonen} fails for sequences of line bundles, which do not grow in an ample fashion \cite{ermanWood15}. Isabel and I believe that this failure can be fixed by introducing a technical assumption on the the sequence of lines bundles grows in positivity we call going to infinity in all directions. Formally a sequence of line bundles  $\left(L_{d}\right)_{d\in\N}$ goes to infinity in all directions if for every ample line bundle $A$ there exists an $N\in \N$ such that $L_{i}-A$ is ample for all $i\geq N$. In particular, we are working to prove the following uniform version of Poonen's Bertini theorem.
+Work of Erman and Wood on semi-ample Bertini Theorems shows that such an analogue of Theorem~\ref{thm:poonen} fails for sequences of line bundles, which do not grow in an ample fashion \cite{ermanWood15}. Vogt and I believe that this failure can be fixed by introducing a technical assumption on how the sequence of lines bundles grows in positivity we call \textit{going to infinity in all directions}. Formally a sequence of line bundles  $\left(L_{d}\right)_{d\in\N}$ goes to infinity in all directions if for every ample line bundle $A$ there exists an $N\in \N$ such that $L_{i}-A$ is ample for all $i\geq N$. In particular, we are working to prove the following uniform version of Poonen's Bertini theorem.
  
 \begin{goalTheorem}\label{gthm:effective-bertini}
 Let $X/\fF_{q}$ be a projective variety of dimension $n$. If $\left(L_{d}\right)_{d\in\N}$ is a sequence of line bundles on $X$ going to infinity in all directions then 
 \begin{equation}
-\lim_{d\to \infty} \Prob\left(\begin{matrix} f\in H^0\left(X, L_{d}\right) \\ \text{$X\cap H_{f}$ is smooth of dimension $n-1$}\end{matrix}\right)=
-\zeta_X(n+1)^{-1} 
+\lim_{d\to \infty} \Prob\left(\begin{matrix} f\in H^0\left(X, L_{d}\right) \\ \text{$X\cap \V(f)$ is smooth of dimension $n-1$}\end{matrix}\right)=
+\zeta_X(n+1)^{-1}.
 \end{equation}
 \end{goalTheorem}
 
-Thus far we have managed to prove this theorem in a number of examples ($X=\P^1\times\P^1$ and $X=\P^1\times\P^1\times\P^1$), and we are hopefully that similar methods might extend to all products of projective spaces or possibly whenever the nef cone fo $X$ is finitely generate polyhedral cone. That said it appears the more general case when $\Nef(X)$ is not finitely generated will require new techniques. 
+We have verified this theorem in a number of examples ($X=\P^1\times\P^1$ and $X=\P^1\times\P^1\times\P^1$), and we are hopefully that similar methods might extend to all products of projective spaces or possibly whenever the nef cone fo $X$ is a finitely generate polyhedral cone. That said it appears the more general case when $\Nef(X)$ is not finitely generated will require new techniques. 
 
-Viewing Poonen's Bertini Theorem as a statement on the existence of smooth sections for line bundles sufficiently twisted by ample line bundles it is natural to ask the analogous question when twisting by arbitrary nef line bundles. In particular, inspired by Fujita's vanishing theorem and work of Erman and Wood the following conjecture is another natural version of Poonen's Bertini Theorem. 
+Viewing Poonen's Bertini Theorem as a statement on the existence of smooth sections for line bundles sufficiently twisted by an ample line bundles it is natural to ask the analogous question when twisting by arbitrary nef line bundles. In particular, inspired by Fujita's vanishing theorem and work of Erman and Wood the following conjecture is another natural version of Poonen's Bertini Theorem. 
 
  \begin{conj}
  Let $X/\fF_{q}$ be a projective variety of dimension $n$ and $\cL$ be an ample line bundle on $X$. If $\cF$ is any  coherent sheaf on $X$ there exists an integer $m(\cF,\cL)$ such that 
