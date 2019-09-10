@@ -1,0 +1,889 @@
+\documentclass[10pt,reqno]{amsart}
+\usepackage{amsfonts,amsmath,amssymb,amsbsy,amstext,amsthm}
+\usepackage{accents,color,enumerate,enumitem,float,fullpage,parskip,verbatim}
+
+\usepackage{url}
+\usepackage[colorlinks=true,hyperindex, linkcolor=magenta, pagebackref=false, citecolor=cyan]{hyperref}
+\usepackage[alphabetic,lite,backrefs]{amsrefs} 
+
+\usepackage{eucal,bm,kpfonts,mathbbol}
+
+\usepackage{tikz,tikz-cd}	
+\usetikzlibrary{positioning, matrix, shapes}         								    				
+\usetikzlibrary{arrows,calc,matrix}
+
+\usepackage{lscape}
+
+\usepackage{microtype}
+
+\usepackage{titlesec}		
+\setcounter{secnumdepth}{4}						     					% Allows one to use nice section titles
+\titleformat{\section}[block]{\large\scshape\bfseries\filcenter}{\thesection.}{1em}{}		% Creates section titles
+\titleformat{\subsection}[runin]{\large\scshape\bfseries}{\thesubsection}{1em}{}			% Creates subsection titles
+\titleformat{\subsubsection}[runin]{\large\scshape\bfseries}{\thesubsubsection}{1em}{}			% Creates subsection titles
+
+\usepackage[titles]{tocloft}								     					% Creates table of fancy contents
+\setcounter{tocdepth}{4}
+\renewcommand{\contentsname}{}	     					% Renames and centers title of ToC
+
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{diagbox}
+\usepackage{cancel}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{goalTheorem}[lemma]{Goal Theorem}
+\newtheorem{prop}[lemma]{Proposition}
+\newtheorem{cor}[lemma]{Corollary}
+\newtheorem{conj}[lemma]{Conjecture}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{defn}[lemma]{Definition} 
+\newtheorem{notation}[lemma]{Notation} 
+\newtheorem{exercise}[lemma]{Exercise}
+\newtheorem{question}[lemma]{Question}
+\newtheorem*{assumption}{Assumption}
+\newtheorem{principle}[lemma]{Principle}
+\newtheorem{heuristic}[lemma]{Heuristic}
+
+\newtheorem{theoremalpha}{Theorem}
+\newtheorem{corollaryalpha}[theoremalpha]{Corollary}
+\renewcommand{\thetheoremalpha}{\Alph{theoremalpha}}
+
+\theoremstyle{remark}
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{cexample}[lemma]{Counterexample}
+
+% Commands
+\newcommand{\initial}{\operatorname{in}}
+\newcommand{\NF}{\operatorname{NF}}
+\newcommand{\HF}{\operatorname{HF}}
+\newcommand{\Hilb}{\operatorname{Hilb}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\reg}{\operatorname{reg}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\img}{\operatorname{img}}
+\newcommand{\inn}{\operatorname{in}}
+
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\adeg}{\operatorname{adeg}}
+\newcommand{\pdim}{\operatorname{pdim}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\LT}{\operatorname{LT}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\NS}{\operatorname{NS}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Khar}{\operatorname{char}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Kl}{\operatorname{Cl}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\QQbar}{{\overline{\mathbb Q}}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\Bl}{\operatorname{Bl}}
+\newcommand{\Kox}{\operatorname{Cox}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\getsr}{\operatorname{Tor}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Hom}{\operatorname{Hom}} %done
+\newcommand{\sheafHom}{\mathcal{H}om}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\rank}{\operatorname{rank}} 
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\Sym}{\operatorname{Sym}} %done
+\newcommand{\GL}{{GL}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\Density}{\operatorname{Density}}
+\newcommand{\Syz}{\operatorname{Syz}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\cone}{\operatorname{\textbf{cone}}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\HS}{\operatorname{HS}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\oO}{\operatorname{O}}
+
+\newcommand{\defi}[1]{\textsf{#1}} % for defined terms
+
+\newcommand{\remd}{\operatorname{remd}}
+\newcommand{\colim}{\operatorname{colim}}
+\newcommand{\trideg}{\operatorname{tri.deg}}
+\newcommand{\indeg}{\operatorname{index.deg}}
+\newcommand{\moddeg}{\operatorname{mod.deg}}
+\newcommand{\Desc}{\operatorname{Desc}}
+\newcommand{\inter}{\operatorname{int}}
+\newcommand{\Nef}{\operatorname{Nef}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\Cox}{\operatorname{Cox}}
+
+\newcommand{\doot}{\bullet}
+
+\newcommand{\Alt}{\bigwedge\nolimits}
+\newcommand{\Set}{\text{\bf Set}}										% Category of Sets
+\newcommand{\Sch}{\text{\bf Sch}}										% Category of Abelian Groups
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Letters  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ff}{\mathbf f}
+\newcommand{\kk}{\mathbf k}
+\renewcommand{\aa}{\mathbf a}
+\newcommand{\bb}{\mathbf b}
+\newcommand{\cc}{\mathbf c}
+\newcommand{\dd}{\mathbf d}
+\newcommand{\ee}{\mathbf e}
+\newcommand{\vv}{\mathbf v}
+\newcommand{\ww}{\mathbf w}
+\newcommand{\xx}{\mathbf x}
+\newcommand{\yy}{\mathbf y}
+\newcommand{\rr}{\mathbf r}
+\newcommand{\ii}{\mathbf i}
+\newcommand{\nn}{\mathbf n}
+\newcommand{\pp}{\mathbf p}
+\newcommand{\mm}{\mathbf m}
+\newcommand{\fF}{\mathbf F}
+\newcommand{\gG}{\mathbf G}
+\newcommand{\eE}{\mathbf E}
+\newcommand{\qQ}{\mathbf Q}
+\newcommand{\tT}{\mathbf T}
+\renewcommand{\tt}{\mathbf t}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\zero}{\mathbf 0}
+
+\renewcommand{\H}{\operatorname{H}}
+\newcommand{\OO}{\operatorname{O}}
+\newcommand{\oo}{\operatorname{o}}
+
+
+%%%% Caligraphic Fonts - i.e. ????. %%%%%
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}} 
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\U}{\mathcal{U}} 		% Notice this is different
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%% Blackboard Fonts - i.e. Real Numbers, Integers, etc. %%%%%
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}		% Notice this is \bO
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\bU}{\mathbb{U}}		% Notice this is \bU
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+ %%%% Sarif Fonts - i.e. ???? %%%%%
+\newcommand{\sA}{\mathsf{A}}
+\newcommand{\sB}{\mathsf{B}}
+\newcommand{\sC}{\mathsf{C}}
+\newcommand{\sD}{\mathsf{D}}
+\newcommand{\sE}{\mathsf{E}}
+\newcommand{\sF}{\mathsf{F}}
+\newcommand{\sG}{\mathsf{G}}
+\newcommand{\sH}{\mathsf{H}} 
+\newcommand{\sI}{\mathsf{I}}
+\newcommand{\sJ}{\mathsf{J}}
+\newcommand{\sK}{\mathsf{K}}
+\newcommand{\sL}{\mathsf{L}}
+\newcommand{\sM}{\mathsf{M}}
+\newcommand{\sN}{\mathsf{N}}
+\newcommand{\sO}{\mathsf{O}}
+\newcommand{\sP}{\mathsf{P}}
+\newcommand{\sQ}{\mathsf{Q}}
+\newcommand{\sR}{\mathsf{R}}
+\newcommand{\sS}{\mathsf{S}}
+\newcommand{\sT}{\mathsf{T}}
+\newcommand{\sU}{\mathsf{U}} 
+\newcommand{\sV}{\mathsf{V}}
+\newcommand{\sW}{\mathsf{W}}
+\newcommand{\sX}{\mathsf{X}}
+\newcommand{\sY}{\mathsf{Y}}
+\newcommand{\sZ}{\mathsf{Z}}
+ 
+ %%%% Fraktur Fonts - i.e. maximal ideals, prime ideals, etc. %%%%%
+\newcommand{\cl}{\mathfrak{cl}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\renewcommand{\r}{\mathfrak{r}}
+
+
+
+\newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
+
+
+\title{Research Statement}
+
+\author{Juliette Bruce}
+\address{Department of Mathematics, University of Wisconsin, Madison, WI}
+\email{\href{mailto:juliette.bruce@math.wisc.edu}{juliette.bruce@math.wisc.edu}}
+\urladdr{\url{http://math.wisc.edu/~juliettebruce/}}
+
+%\thanks{The author was partially supported by the NSF GRFP under Grant No. DGE-1256259 and NSF grant DMS-1502553.}
+
+%\subjclass[2010]{13D02, 14M25}
+
+\begin{document} 
+
+\maketitle
+
+
+%\tableofcontents
+
+\setcounter{section}{1}
+
+My research interests lie in algebraic geometry, commutative algebra, and arithmetic geometry. In particular, I am interested in using homological and combinatorial methods to study the geometry of zero loci of systems of polynomials (i.e. algebraic varieties). Additionally, I am interested in studying the arithmetic properties of varieties over finite fields. I am passionate about promoting inclusivity, diversity, and justice within the mathematics community.
+
+\section{Syzygies in Algebraic Geometry}
+
+Given a graded module $M$ over a graded ring $R$, a helpful tool for understanding the structure of $M$ is its minimal free resolution. In essence, a minimal graded free resolution is a way of approximating $M$ by a sequence of free $R$-modules. More formally, a \textit{graded free resolution} of a module $M$ is an exact sequence 
+\[
+\cdots \xrightarrow{} F_{k} \xrightarrow{} F_{k-1} \xrightarrow{} \cdots \xrightarrow{d_{1}} F_{0}\xrightarrow{\epsilon}M\xrightarrow{} 0
+\]
+where each $F_{p}$ is a graded free $R$-module, and hence can be written as $\bigoplus_{q}R(-q)^{\beta_{p,q}}$. Note that $R(-q)$ is the ring $R$ with its grading twisted, so that $R(-q)_{d}$ is equal to $R_{d-q}$ where $R_{d-q}$, is the graded piece of degree $d-q$. The $\beta_{p,q}$'s are called the \textit{Betti numbers} of $M$, and they count number of $p$-syzygies of $M$ of degree $q$. We will often use syzygy and Betti number interchangeable throughout. 
+
+Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring $S_X=S/I_X$, where $S=\C[x_0,\ldots,x_r]$ and $I_X$ is the ideal of homogenous polynomials vanishing on $X$. As $S_X$ is naturally a graded $S$-module we may consider its minimal free resolution. The minimal graded free resolution of $X$ is often closely related to both the extrinsic and intrinsic geometry of $X$.  An example of this phenomena
+ is Green's Conjecture, which relates the Clifford index of a canonical curve with the vanishing of certain $\beta_{p,q}$. The generic case of this conjecture was resolved by Voisin in characteristic zero \cite{voisin02, voisin05}, and was recently shown to be true over fields of characteristic $p>0$ for $p$ sufficiently large \cite{aproduFarkas19}.
+
+%\begin{theorem}[\cite{voisin02}, \cite{voisin05}]
+%Let $C$ be a generic smooth projective curve of genus $g$ over a characteristic zero field embedded in $\P^{g-1}$ by the complete canonical series. Then the length of the first linear strand of the minimal free resolution of $I_X$ is $g-3-\text{Cliff}(C)$.
+%\end{theorem}
+
+\subsection{Asymptotic Syzygies}
+
+Much of my work has focused on studying the asymptotic properties of syzygies of projective varieties. Broadly speaking asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. In many ways this perspective dates back to classical work on the defining equations of curves of high degree and of projective normality. However, the modern take viewpoint arose from the pioneering work of Green \cite{green84-I, green84-II} and later Ein and Lazarsfeld \cite{einLazarsfeld12}. 
+
+In order to give a flavor of the results of asymptotic syzygies we will focus on the question of in what degrees do non-zero syzygies occur. Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Further, we set, 
+\begin{align*}
+\rho_q\left(X,L\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}}.
+\end{align*}
+which by the Hilbert Syzygy Theorem is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. For any particular, $X$, $L_{d}$, and $q$ computing $\rho_{q}(X;L_{d})$ is often quite difficult. The asymptotic perspective thus, asks instead, to consider a sequence of line bundles $(L_{d})_{d\in \N}$ and ask how $\rho_{q}(X;L_{d})$ behaves along the sequence of $(L_{d})_{d\in \N}$. 
+
+With this notation in hand we may phrase Green's work on the vanishing of syzygies for curves of high degree as computing the asymptotic percentage of non-zero quadratic syzygies. Note by considerations of Castelnuovo-Mumford regularity all syzygies of curves of sufficiently high degree occur with $q=1,2$.
+
+\begin{theorem}
+Let $X\subset \P^r$ be a smooth projective curve. If $(L_{d})_{d\in\N}$ is sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then 
+\[
+\lim_{d\to \infty} \rho_{2}\left(X;L_{d}\right) = 0.
+\]
+\end{theorem}
+
+Put differently Green showed that the syzygies of curves of high degree are as simple as possible, in that they occur only in the lowest possible degrees. This result inspired substantial work on so called $N_{p}$ conditions, with the intuition being that syzygies should become simpler as the positivity of an embedding increases.  
+
+In their groundbreaking paper Ein and Lazarsfeld showed that for higher dimensional varieties this intuition is often misleading. In particular, they showed that contrary to the case of curves, for higher dimensional varieties  asymptotically syzygies appear in every possible degree. 
+  
+\begin{theorem}\cite{einLazarsfeld12}*{Theorem~C}
+Let $X\subset \P^r$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq n$. If $(L_{d})_{d\in\N}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample then
+\[
+\lim_{d\to\infty} \rho_{q}\left(X; L_d\right) = 1.
+\]
+\end{theorem}
+
+My work has focused on how asymptotic syzygies behave when the condition that $L_{d+1}-L_{d}$ is constant and ample is weakened to just assuming $L_{d+1}-L_{d}$ is semi-ample. Recall a line bundle $L$ on a smooth variety is \textit{semi-ample} if the linear series $|kL|$ is base point free for some $k\gg0$. The prototypical example of a semi-ample line bundle is $\O_{\P^{n}\times\P^{m}}(1,0)$ on $\P^{n}\times \P^{m}$. 
+
+My exploration of asymptotic syzygies in the setting of semi-ample growth, thus began, by proving the following non-vanishing result for $\P^{n}\times\P^{m}$ embedded by $\O_{\P^{n}\times\P^{m}}(d_{1},d_{2})$. 
+
+\begin{theorem}\cite{bruce19-semiample}*{Corollary~B}\label{thm:bruce-semiample}
+Let $X=\P^{n}\times\P^{m}$ and fix an index $1\leq q \leq n+m$. There exists constants $C_{i,j}$ and $D_{i,j}$ such that
+\[
+\rho_{q}\left(X; \O\left(d_1,d_2\right)\right)\geq1-\sum_{\substack{i+j=q \\ 0\leq i \leq n \\ 0\leq j \leq m}}\left(
+\frac{C_{i,j}}{d_1^id_2^j}+\frac{D_{i,j}}{d_1^{n-i}d_2^{m-j}}\right)-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right).
+\]
+\end{theorem}
+
+Notice in the setting of ample growth, this recovers the results of Ein and Lazarsfeld. In particular, if both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\P^{n}\times\P^{m}; \O_{\P^{n}\times\P^{m}}(d_1,d_2)\right)\to 1$. However, in the setting of semi-ample growth, i.e. $d_{1}$ is fixed and $d_{2}\to \infty$, my results bound the asymptotic percentage of non-zero syzygies away from zero. In particular, the asymptotic behavior is dependent, in a nuanced way, on the relationship between $d_{1}$ and $d_{2}$. 
+
+For example, considering $\P^{1}\times\P^{5}$ and $q=2$ then Theorem~\ref{thm:bruce-semiample} shows that 
+\[
+\rho_{2}\left(\P^{1}\times\P^{5}; \O_{\P^{1}\times\P^{5}}(d_1,d_2)\right)\geq1-\frac{20}{d_2^2}-\frac{60}{d_1d_2^3}-\frac{5}{d_1d_2}-\frac{120}{d_2^4}-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right)\,.
+\]
+In particular, if $d_2$ is fixed and $d_1\to\infty$, then the limit of $\rho_{2}\left(\P^{1}\times\P^{5}; \O_{\P^{1}\times\P^{5}}(d_1,d_2)\right)$ is greater than or equal to $1-\frac{20}{d^2_2}-\frac{120}{d_2^4}$.
+
+Based on results of Lemmens in the case of $\P^1\times\P^1$ together with my work has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the case of semi-ample growth $\rho_{q}\left(\P^{n}\times\P^{m}; \O_{\P^{n}\times\P^{m}}(d_1,d_2)\right)$ does not approach 1 as $d_{1}\to \infty$. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case. See \cite[Conjecture~7.1, Conjecture~7.5]{einLazarsfeld12}.
+
+The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld to explicitly construct a non-trivial syzygy after having quotiented by a regular sequence. Generalizing Ein, Erman, and Lazarsfeld's methods to a product of projective spaces is complicated by the unlike the cases consider in their paper there are no monomial regular sequences of length $(n+m+1)$ on either the $\Z^2$-graded Cox ring of $\P^{n}\times\P^{m}$, denoted $\Cox(\P^{n}\times\P^{m})$ (see \cite{cox95}), or the $\Z$-graded homogeneous coordinate ring of $\P^{n}\times\P^{m}$ embedded by $\O_{\P^{n}\times\P^{m}}(d_{1},d_{2})$.
+
+Thus, instead we work with a regular sequence first introduced by Eisenbud and Schreyer in their study of Boij-S\"{o}derberg theory \cite{eisenbudSchreyer09}, and later used in \cite{berkesch13, oeding17}. A central theme in my work is to utilize the fact that the ideal generated by the regular sequence is homogeneous with respect to a number of non-trivial non-standard gradings. These gradings, when combined with a series of spectral sequence arguments allow me to prove Theorem~\ref{thm:bruce-semiample}.
+
+This work suggests that the theory of asymptotic syzygies in the setting of semi-ample growth is rich and substantially different from the other previous studied cases, and so, it is natural to ask how it might generalize to other examples.Thus, going forward I plan to use this previous work as a jumping off point for the following question.  
+
+\begin{question}\label{quest:semi-ample}
+Let $X\subset \P^r$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq n$. If $(L_{d})_{d\in\N}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and semi-ample then what is:
+\[
+\lim_{d\to\infty} \rho\left(X;L_{d}\right)
+\]
+\end{question}
+
+A natural next case in which to consider Question~\ref{quest:semi-ample} is that of Hirzebruch surfaces. I addressed a different, but related question for a certain narrow class of Hirzebruch surfaces in \cite{bruce19-hirzebruch}.
+
+\subsection{Syzygies via Highly Distributed Computing}
+
+While the use of syzygies to study the geometry of projective varieties has proved very fruitful, it turns out to be quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only know for $d\leq 5$. That said it turns out that the problem computing syzygies can be reduced to computing the ranks of a number of matrices. However, the reduction has generally proven intractable because the number of matrices and their sizes quickly become extremely large. For example, in order to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
+
+In a project my co-authors and I exploited recent advances in numerical linear algebra and high throughput high performance computing to overcome these challenges and compute a number of new examples of Veronese syzygies. This data provided support for a number of existing conjectures, as well as led us to conjecture previously unseen relationships between the representation theory and syzygies of Veronese embeddings. 
+The data resulting from this project has been made publicly available via the website SyzygyData.com, as well as, a package for the computer algebra system Macaualy2 \cite{bruceErman19}.
+
+
+Recently I have begun working to use similar computational techniques to compute the syzygies for various Hirzebruch surfaces including $\P^1\times\P^1$. Thus, by exploiting the fact that there exists semi-ample line bundles on Hirzebruch surfaces we have managed to compute the syzygies in approximately 100 new examples. We hope that these new examples will lead to new conjectures regarding the syzygies of Hirzebruch surfaces. In particular, we hope to find ways to generalize my work on the asymptotic syzygies in the setting of semi-ample growth to other Hirzebruch surfaces. 
+
+\subsection{Liaison Theory via Virtual Resolutions}
+
+Generically if one picks two polynomials $f,g\in \C[x,y,z]$ their common zero locus $\V(f,g)\subset \P^3$ will be one dimensional (i.e. $\V(f,g)$ is an algebraic curve). Curves arriving in such a way are called complete intersections. While in a sense curves which are complete intersections are generic, much of the interesting geometry of curves in $\P^3$ comes from curves which are not complete intersections. Classically one approach to understanding the geometry of space curves in $\P^3$ is by asking when the union of two (or more) curves is a complete intersection. Such curves are said to be linked, and the general idea so to try and identify properties that are preserved under linkage. 
+
+While the liaison theory of curves in $\P^3$ is well understood the same theory for curves in other 3-folds (even $\P^1\times\P^2$) remains quite mysterious. One reason for this stark difference is that while minimal graded free resolutions are an extremely useful tool to study quasicoherent sheaves on projective space, when working over other varieties -- like smooth toric varieties --  minimal graded free resolutions tend to be less useful. For example, minimal graded free resolutions over the Cox ring of a smooth toric variety seem overly burdened by algebraic structure that is often irrelevant to the geometry. 
+
+In an ongoing program with Christine Berkesch and Patricia Klein I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory curves in toric 3-folds. Broadly a virtual resolution is a homological representation of a finitely graded module over the Cox ring of a smooth toric variety that attempts to overcome the challenges mentioned in the previous paragraph by allowing a certain amount of homology. Using these we hope to generalize existing results for curves in $\P^3$ to curves in $\P^1\times\P^2$. 
+
+For example, it is possible to define a notation of virtual Cohen-Macaulay for finitely generated graded modules over the Cox ring of a smooth toric variety. We would thus like to prove the following virtual version of Peskine and Szpiro's result showing that being Cohen-Macaulay is preserved under linkage. 
+
+\begin{goalTheorem}
+Let $C$ and $C'$ be linked curves in $\P^1\times\P^2$ then $C$ is virtually Cohen-Macaulay if and only if $C'$ is virtually Cohen-Macaualy.
+\end{goalTheorem}
+
+Slightly more ambitiously we hope to use virtual resolutions to find a way to classify liaison classes of curves in $\P^1\times\P^2$ analogous to Rao modules. In particular, we would like to answer the following question. 
+ 
+\begin{question}
+What classifies even liaison classes of curves in $\P^1\times\P^2$?
+\end{question}
+
+A useful tool in approaching these questions is the ability to compute a number of interesting examples via the computer algebra system Macaualy2. These computations are made substantially easier thanks to the  \texttt{VirtualResolutions} package for Macaulay2, which I co-authored \cite{almousaBruce19}. This contains tools to construct, display, and study virtual resolutions for products of projective spaces, as well as tools for generating curves in $\P^1\times\P^2$. 
+
+\section{Bridges to Arithmetic Geometry}
+
+Over a finite field a number of classical statements from algebraic geometry no longer hold. For example, if $X$ is a smooth projective variety of dimension $n$ over $\C$ then Bertini's Theorem states that a generic hyperplane section of $X$ (i.e. $X\cap H$ for a generic hyperplane $H\subset \P^n$) will be smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Similar statements for connectedness, irreducibility, and other properties also fail over finite fields. 
+
+Historically, the lack of such Bertini theorems over finite fields has made many results in algebraic geometry over finite fields more complicated. (Bertini theorems are extremely useful as they often provide a basis for induction on dimension.) However, using an ingenious probabilistic argument Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of possibly arbitrarily large degree a version of Bertini's Theorem for Smoothness (highlighted above) is true \cite{poonen04}. In the below theorem we write $\fF_{q}[x_{0},x_{1},\ldots,x_{r}]_{d}$ for the $\fF_{q}$-vector space of homogenous polynomials of degree $d$. 
+
+\begin{theorem}\cite{poonen04}*{Theorem~1.1}\label{thm:poonen}
+Let $X\subset \P^{r}_{\fF_{q}}$ be a projective variety of dimension $n$ then:
+\begin{equation}\label{eq:poonen}
+\lim_{d\to \infty} \Prob\left(\begin{matrix} f\in \fF_{q}[x_{0},x_{1},\ldots,x_{r}]_{d}\\ \text{$X\cap \V(f)$ is smooth of dimension $n-1$}\end{matrix}\right)=
+\zeta_X(n+1)^{-1} >0.
+\end{equation}
+\end{theorem}
+
+More specifically Poonen showed that as $d\to\infty$ the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{n}$ of degree $d$ such that $X\cap H$ is smooth is determined by Hasse-Weil zeta function of $X$. Notice that it makes sense to discuss the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{n}$ of degree $d$ such that $X\cap H$ is smooth since over a finite field there are finitely many hypersurfaces of a given degree.
+
+
+\subsection{A Probabilistic Study of Systems of Parameters} 
+
+Given an $n$ dimensional projective variety $X\subset \P^r$ Noether normalization shows the existence of a finite (i.e. surjective with finite fibres) map $X\rightarrow \P^n$. The existence of such a map is equivalent to the existence of a collection of homogenous polynomials $f_{0},\ldots,f_{n}$ of degree $d$ such that $X\cap \V(f_{0},\ldots,f_{n})=\o$. Such a collection of polynomials is called a system of parameters, and over an infinite any collection of generic homogenous polynomials is a system of parameters. However, when working over a finite field finding systems of parameters is more subtle. For example, unlike in the case of an infinite field, a priori, there is no effectively bound on the degrees $d$ for which systems of parameters exist. 
+
+Inspired by the work of Poonen \cite{poonen04} and Buccur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I explored the ubiquity of (partial) systems of parameters over finite fields from a probabilistic perspective. A partial system of parameters is a collection of homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ of degree $d$ such that $\dim X\cap \V(f_{0},f_{1},\ldots,f_{k}) = \dim X - (k+1)$. Phrased differently a collection of polynomials is a system of parameters on $X$ if they intersect $X$ in the correct dimension. 
+
+Adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we computed the asymptotic probability that randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ form a system of parameters. Doing this we showed that when $k<n$ the probability randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by zeta function like power series that enumerates higher dimensional varieties instead of closed points. In the following theorem, $|Z|$ denotes the number of irreducible components of a scheme $Z$, and we write $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
+
+\begin{theorem}\label{thm:main finite field}
+Let $X\subseteq \P^r_{\fF_q}$ be a projective scheme of dimension $n$. Fix $e$ and let $k<n$. The probability that random polynomials $f_0,f_1,\dots,f_k$ of degree $d$ are parameters on $X$ is
+\[
+\Prob\left(\begin{matrix}f_0,f_1,\dots,f_{k} \text{ of degree $d$ } \\ \text{ are parameters on $X$}\end{matrix}\right) = 1 \ - 
+\sum_{\begin{smallmatrix}Z\subseteq X \text{reduced} \\ \dim Z \equiv n-k\\ \deg Z \leq e  \end{smallmatrix}}(-1)^{|Z|-1}q^{-(k+1)h^0(Z,\O_Z(d))}+ o\left(q^{-e(k+1)\binom{n-k+d}{n-k}}\right).
+\]
+\end{theorem}
+
+Notice that the power series on the right hand side essentially enumerates subvarieties of dimension $n-k$. From this it is possible to see that the main term determining the probability a randomly chosen set of homogenous polynomials forms a partial system of parameters is controlled by the number of $(n-k)$-planes contained in $X$. 
+
+\begin{cor}\label{cor:error}
+Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n$.  Then
+\[
+\lim_{d\to \infty} \frac{\Prob\left(\begin{matrix}(f_0,\dots,f_{k}) \text{ of degree $d$} \\ \text{ are \underline{not} parameters on $X$}\end{matrix}\right)} {q^{-(k+1)\binom{n-k+d}{n-k}}} = \#\left\{\begin{matrix}\text{$(n-k)$-planes } L\subseteq \P^r_{\fF_q}\\\text{such that }  L\subseteq X\end{matrix}\right\}.
+\]
+\end{cor} 
+
+Using this analysis and a delicate Hilbert function argument we were also able to provide the first explicit bound for Noether normalization over a finite field. Further, we used these methods to give a new proof of recent results on Noether normalizations of projective families over $\Z$ and $\fF_{q}[t]$ \cite{gabberLiuLorenzini15, cmbpt}.
+
+
+
+\subsection{Explicit Bertini Theorems and Jacobians Covering Abelian Varieties}
+
+Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve. In fact, if $A\subset \P^r$ is an abelian variety of dimension $n$ over an infinite field then by Bertini's theorem exists a hyperplane $H$ such that $A\cap H$ is a smooth curve whose Jacobian covers $A$. Moreover, one can even provide an effective upper bound on the dimension of the $\Jac(A\cap H)$ in terms of the dimension and degree of A (see [Mil08, Section III]).
+
+Over a finite field the failure of Bertini's theorem, again makes things more subtle. In fact while Poonen's Bertini theorem shows that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve, it is not enough to provide an effective upper bound on the dimension of the covering Jacobian variety. This is because while Poonen's work shows the existence of a hypersurface $H$ such that $A\cap H$ is smooth it does not allow one to control the degree of the hypersurface $H$. 
+
+Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12} Li and I established an effective and explicit version of Poonen's Bertini theorem over finite field. Using this theorem to control the degree of they hypersurface $H$, Li and I proved that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve whose dimension is bounded by an explicit constant. 
+
+\begin{theorem}
+Fix $r,n\in \N$ with $n\geq2$, and let $\fF_{q}$ be a finite field of characteristic $p$. There exists an explicit constant $C_{r,q}$ such that if $A\subset \P^{r}_{\fF_q}$ is a non-degenerate abelian variety of dimension $n$, then for any $d\in \N$ satisfying 
+\[
+C_{r,q}\zeta_{A}\left(n+\tfrac{1}{2}\right) \deg(A) \leq  \frac{q^{\frac{d}{\max\{n+1,p\}}}d}{d^{n+1}+d^n+q^{d}},
+\]
+there exists a smooth geometrically connected curve over $\fF_{q}$ whose Jacobian $J$ maps dominantly onto $A$, where 
+\[
+\dim J\leq 
+\OO\left(\frac{ \deg(A)^2 d^{2(n-1}}{r}\right).
+\]
+\end{theorem} 
+
+Additionally, by utilizing my work with Erman on systems of parameters Li and I proved a stronger upper bound in the case when $A$ is a simple abelian variety. 
+
+\subsection{Uniform Bertini}
+
+Notice that in the statement of Poonen's Bertini theorem while the left hand side of equation~\eqref{eq:poonen} is dependent of the embedding of $X$ into projective space (i.e. it depends on our choice of very ample line bundle $A$) while the overall limit is itself independent of the embedding of $X$. This suggests that there may be a more general and uniform statement of Poonen's Bertini Theorem. That is one might hope that the analogous limit along any sequence $(L_{d})_{d\in\N}$ of line bundles growing in positivity may limit to $\zeta_{X}(n+1)^{-1}$. I am working on a project, joint with Isabel Vogt, attempting to formalize and prove such a theorem.
+
+Work of Erman and Wood on semi-ample Bertini Theorems shows that such an analogue of Theorem~\ref{thm:poonen} fails for sequences of line bundles, which do not grow in an ample fashion \cite{ermanWood15}. Isabel and I believe that this failure can be fixed by introducing a technical assumption on the the sequence of lines bundles grows in positivity we call going to infinity in all directions. Formally a sequence of line bundles  $\left(L_{d}\right)_{d\in\N}$ goes to infinity in all directions if for every ample line bundle $A$ there exists an $N\in \N$ such that $L_{i}-A$ is ample for all $i\geq N$. In particular, we are working to prove the following uniform version of Poonen's Bertini theorem.
+ 
+\begin{goalTheorem}\label{gthm:effective-bertini}
+Let $X/\fF_{q}$ be a projective variety of dimension $n$. If $\left(L_{d}\right)_{d\in\N}$ is a sequence of line bundles on $X$ going to infinity in all directions then 
+\begin{equation}
+\lim_{d\to \infty} \Prob\left(\begin{matrix} f\in H^0\left(X, L_{d}\right) \\ \text{$X\cap H_{f}$ is smooth of dimension $n-1$}\end{matrix}\right)=
+\zeta_X(n+1)^{-1} 
+\end{equation}
+\end{goalTheorem}
+
+Thus far we have managed to prove this theorem in a number of examples ($X=\P^1\times\P^1$ and $X=\P^1\times\P^1\times\P^1$), and we are hopefully that similar methods might extend to all products of projective spaces or possibly whenever the nef cone fo $X$ is finitely generate polyhedral cone. That said it appears the more general case when $\Nef(X)$ is not finitely generated will require new techniques. 
+
+Viewing Poonen's Bertini Theorem as a statement on the existence of smooth sections for line bundles sufficiently twisted by ample line bundles it is natural to ask the analogous question when twisting by arbitrary nef line bundles. In particular, inspired by Fujita's vanishing theorem and work of Erman and Wood the following conjecture is another natural version of Poonen's Bertini Theorem. 
+
+ \begin{conj}
+ Let $X/\fF_{q}$ be a projective variety of dimension $n$ and $\cL$ be an ample line bundle on $X$. If $\cF$ is any  coherent sheaf on $X$ there exists an integer $m(\cF,\cL)$ such that 
+\begin{equation}
+\left\{
+f \in H^0\left(X, \cF\otimes\cL(k)\otimes \cD\right) \quad \bigg| \quad 
+\begin{matrix}
+ \text{$X\cap H_{f}$ is smooth}\\
+ \text{of dimension $n-1$}
+ \end{matrix}
+\right\}
+\end{equation}
+for all $k\geq m(\cF,\cL)$ and all $\cD\in \Nef(X)$. 
+ \end{conj}
+
+I hope that my work with Isabel Vogt on the Goal Theorem~\ref{gthm:effective-bertini} to shed light on this conjecture, and allow us to prove at least parts of it. 
+
+
+\section{Broader Impacts}
+
+
+
+\subsection{Organizing}
+In the Spring of 2017 I organized \textit{Math Careers Beyond Academia } (50 participants), a one day professional development conference on STEM careers outside of academia, and how graduate students should prepare for these careers. In April 2018 I organized, \textit{M2@UW}, a four day workshop focused on creating new packages for Macaulay2 -- an open source computer algebra system -- by bringing together over 45 developers and users of all skill levels and experience. In February 2019 I organized \textit{Geometry and Arithmetic of Surfaces} (40 participants), a workshop providing a diverse group of early career researchers the opportunity to learn about interesting topics in the arithmetic and algebraic geometry from a diverse set of prominent active researchers. In April 2019 I organized the \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants)  focused on forming a community of women and non-binary researchers interested in commutative algebra. In Fall 2019 I organized a \textit{Special Session on Combinatorial Algebraic Geometry} at the AMS Fall Central Sectional. At the 2019 Joint Mathematics Meetings I am organizing a Spectra Panel entitled \textit{Supporting Transgender and Non-binary Students}. 
+
+\subsection{Math Circles}
+I began volunteering with the MMC in Fall 2014; at the time, the circle's main programming was a weekly on-campus lecture given by a member of the math department. After volunteering with the MMC for roughly a year I stepped into the role of student organizer overseeing much of the administrative needs of the circle including scheduling and overseeing speakers. Over my time as organizer I worked hard to build stronger connections between the Madison Math Circle, local schools and teachers, and other outreach organizations especially those focused on underrepresented groups. These ties helped the weekly attendance of the MMC more than double during my time as organizer. Additionally, I led the creation of a new outreach arm of the MMC, which visits high schools around the state of Wisconsin to better serve students from underrepresented groups. This program has dramatically expanded the reach of the circle. For example, during my last full yeas as organizer I planned over 10 visits to high schools around the state of Wisconsin reaching over 250 students. 
+
+\subsection{Mentoring}
+Since the winter of 2018 I have led reading courses with three undergraduates through Wisconsin's Directed Reading Program. One of these students, and undergraduate woman, worked with me for over a year, during which time I helped her through the process of applying for Research Experiences for Undergrads and researching options for graduate school. I have been a mentor to two undergraduate women studying math via the AWM's Mentoring Network program. Further, through I have lead directed reading courses with three undergraduates. Working with Girls' Math Night Out I mentored two high school aged girls leading them through a project exploring RSA cryptography. Additionally, during the 2018-2019 academic year I served as a mentor to 6 first year graduate students (all women or non-binary students). 
+
+
+\subsection{A More Inclusive Community.} During the Fall of 2016 in response to a growing climate of hate, bias, and discrimination on campus I pushed the Mathematics Department to form a committee on inclusivity and diversity. As a member of this committee I took the lead in drafting a statement on the department's commitment to inclusivity and non-discrimination that was  accepted by the faculty at a department meeting. I also worked to create template syllabi statements that let students know about these department polices, and that inform them of other campus resources that may be helpful. All teachers within the department are now encouraged to use these statements. 
+
+Over the summer of 2017 I co-founded Out in Science, Technology, Engineering, and Mathematics at UW (oSTEM@UW) as a resource for LGBTQ+ students in STEM. During my time leading oSTEM@UW the group grew dramatically eventually having over fifty active members. The efficacy and importance of such a group was made clear by the numerous student comments indicating how helpful and encouraging oSTEM@UW is to them. For example, after a meeting, a student emailed me to say ``It made me very happy to see other friendly LGBTQ+ faces around, and I got to meet two people who were already in classes of mine! Thanks so much for organizing this stuff -- it's really helpful for me personally, and I believe it was encouraging for the others attending as well.'' Additionally, while leading oSTEM@UW I organized and obtained a travel grant for 11 members -- including undergraduates -- to attend the annual national oSTEM Inc. conference. 
+
+Since 2017 I have been the organizer of the campus social organization for LGBTQ+ graduate and post-graduate students, which currently has over 350 members. In this role I have co-organized a weekly coffee social hour intended to give LGBTQ+ graduate and post-graduates students a place to relax, make friends, and discussion the challenges of being LGBTQ+ at the UW - Madison.
+
+\newpage 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{bibdiv}
+\begin{biblist}
+      \bib{almousaBruce19}{article}{
+   author={Almousa, Ayah},
+   author={Bruce, Juliette},
+   author={Loper, Michael C.},
+   author={Sayrafi, Mahrud},
+   title={The virtual resolutions package for Macaulay2},
+   date={2019},
+   note={ArXiv pre-print: \url{https://arxiv.org/abs/1905.07022}}
+   }
+   
+\bib{aproduFarkas19}{article}{
+   author={Aprodu, Marian},
+   author={Farkas, Gavrill},
+   author={Papadima, {\c{S}}tefan},
+   author={Raicu, Claudiu},
+   author={Weyman, Jerzy},
+   title={Koszul modules and Green's conjecture},
+   journal={Inventiones mathematicae},
+   year={2019},
+   month={Jun}
+   day={15}
+   issn={1432-1297},
+   doi={10.1007/s00222-019-00894-1},
+}
+
+\bib{berkesch13}{article}{
+   author={Berkesch Zamaere, Christine},
+   author={Erman, Daniel},
+   author={Kummini, Manoj},
+   author={Sam, Steven V.},
+   title={Tensor complexes: multilinear free resolutions constructed from
+   higher tensors},
+   journal={J. Eur. Math. Soc. (JEMS)},
+   volume={15},
+   date={2013},
+   number={6},
+   pages={2257--2295},
+   issn={1435-9855},
+   review={\MR{3120743}},
+   doi={10.4171/JEMS/421},
+}
+
+\bib{bruceErman-sop}{article}{
+   author={Bruce, Juliette},
+   author={Erman, Daniel},
+   title={A probabilistic approach to systems of parameters and Noether normalization },
+   journal={Algebra Number Theory},
+   note={to appear}
+}
+
+\bib{bruceLi19}{article}{
+   author={Bruce, Juliette},
+   author={Li, Wanlin},
+   author={Walker, Robert},
+   title={Effective bounds on the dimensions of jacobians covering abelian varieties },
+   journal={Proc. Amer. Math. Soc.},
+   note={to appear}
+}
+
+\bib{bruceErman18}{article}{
+	author = {Bruce, Juliette},
+	author = {Erman, Daniel},
+	author = {Goldstein. Steve}, 
+	author = {Yang, Jay},
+	title = {Conjectures and computations about Veronese syzygies},
+	journal = {Experimental Mathematics},
+	volume = {0},
+	number = {0},
+	pages = {1-16},
+	year  = {2018}
+	}
+
+   \bib{bruceErman19}{article}{
+   author={Bruce, Juliette},
+   author = {Erman, Daniel},
+   author = {Goldstein. Steve}, 
+   author = {Yang, Jay},
+   title={The SchurVeronese package in Macaulay2},
+   date={2019},
+   note={ArXiv pre-print: \url{https://arxiv.org/abs/1905.12661}}
+   }
+
+\bib{bruce19-semiample}{article}{
+   author={Bruce, Juliette},
+   title={Asymptotic syzygies in the setting of semi-ample growth},
+   date={2019},
+   note={ArXiv pre-print: \url{https://arxiv.org/abs/1904.04944}}
+   }
+
+\bib{bruce19-hirzebruch}{article}{
+   author={Bruce, Juliette},
+   title={The quantitative behavior of asymptotic syzygies for Hirzebruch surfaces},
+   date={2019},
+   note={ArXiv pre-print: \url{https://arxiv.org/abs/1906.07333}}
+   }
+
+\bib{bucurKedlaya12}{article}{
+   author={Bucur, Alina},
+   author={Kedlaya, Kiran S.},
+   title={The probability that a complete intersection is smooth},
+   language={English, with English and French summaries},
+   journal={J. Th\'eor. Nombres Bordeaux},
+   volume={24},
+   date={2012},
+   number={3},
+   pages={541--556},
+%   issn={1246-7405},
+%   review={\MR{3010628}},
+}
+
+
+\bib{charlesPoonen16}{article}{
+   author={Charles, Fran\c{c}ois},
+   author={Poonen, Bjorn},
+   title={Bertini irreducibility theorems over finite fields},
+   journal={J. Amer. Math. Soc.},
+   volume={29},
+   date={2016},
+   number={1},
+   pages={81--94},
+   issn={0894-0347},
+   review={\MR{3402695}},
+   doi={10.1090/S0894-0347-2014-00820-1},
+}
+
+\bib{cmbpt}{article}{
+   author={Chinburg, Ted},
+   author={Moret-Bailly, Laurent},
+   author={Pappas, Georgios},
+   author={Taylor, Martin J.},
+   title={Finite morphisms to projective space and capacity theory},
+   journal={J. Reine Angew. Math.},
+   volume={727},
+   date={2017},
+   pages={69--84},
+}
+
+\bib{cox95}{article}{
+   author={Cox, David A.},
+   title={The homogeneous coordinate ring of a toric variety},
+   journal={J. Algebraic Geom.},
+   volume={4},
+   date={1995},
+   number={1},
+   pages={17--50},
+   issn={1056-3911},
+   review={\MR{1299003}},
+}
+			
+\bib{einErmanLazarsfeld15}{article}{
+   author={Ein, Lawrence},
+   author={Erman, Daniel},
+   author={Lazarsfeld, Robert},
+   title={Asymptotics of random Betti tables},
+   journal={J. Reine Angew. Math.},
+   volume={702},
+   date={2015},
+   pages={55--75},
+   issn={0075-4102},
+   review={\MR{3341466}},
+   doi={10.1515/crelle-2013-0032},
+}
+
+\bib{einLazarsfeld12}{article}{
+   author={Ein, Lawrence},
+   author={Lazarsfeld, Robert},
+   title={Asymptotic syzygies of algebraic varieties},
+   journal={Invent. Math.},
+   volume={190},
+   date={2012},
+   number={3},
+   pages={603--646},
+   issn={0020-9910},
+   review={\MR{2995182}},
+   doi={10.1007/s00222-012-0384-5},
+}
+
+\bib{eisenbud05}{book}{
+   author={Eisenbud, David},
+   title={The geometry of syzygies},
+   series={Graduate Texts in Mathematics},
+   volume={229},
+   note={A second course in commutative algebra and algebraic geometry},
+   publisher={Springer-Verlag, New York},
+   date={2005},
+   pages={xvi+243},
+   isbn={0-387-22215-4},
+   review={\MR{2103875}},
+}
+
+
+\bib{eisenbudSchreyer09}{article}{
+   author={Eisenbud, David},
+   author={Schreyer, Frank-Olaf},
+   title={Betti numbers of graded modules and cohomology of vector bundles},
+   journal={J. Amer. Math. Soc.},
+   volume={22},
+   date={2009},
+   number={3},
+   pages={859--888},
+   issn={0894-0347},
+   review={\MR{2505303}},
+   doi={10.1090/S0894-0347-08-00620-6},
+}
+
+
+\bib{ermanWood15}{article}{
+   author={Erman, Daniel},
+   author={Wood, Melanie Matchett},
+   title={Semiample Bertini theorems over finite fields},
+   journal={Duke Math. J.},
+   volume={164},
+   date={2015},
+   number={1},
+   pages={1--38},
+   issn={0012-7094},
+   review={\MR{3299101}},
+   doi={10.1215/00127094-2838327},
+}
+
+\bib{ermanYang18}{article}{
+   author={Erman, Daniel},
+   author={Yang, Jay},
+   title={Random flag complexes and asymptotic syzygies},
+   journal={Algebra Number Theory},
+   volume={12},
+   date={2018},
+   number={9},
+   pages={2151--2166},
+   issn={1937-0652},
+   review={\MR{3894431}},
+   doi={10.2140/ant.2018.12.2151},
+}
+
+\bib{gabberLiuLorenzini15}{article}{
+   author={Gabber, Ofer},
+   author={Liu, Qing},
+   author={Lorenzini, Dino},
+   title={Hypersurfaces in projective schemes and a moving lemma},
+   journal={Duke Math. J.},
+   volume={164},
+   date={2015},
+   number={7},
+   pages={1187--1270},
+%   issn={0012-7094},
+%   review={\MR{3347315}},
+%   doi={10.1215/00127094-2877293},
+}
+
+\bib{green84-I}{article}{
+   author={Green, Mark L.},
+   title={Koszul cohomology and the geometry of projective varieties},
+   journal={J. Differential Geom.},
+   volume={19},
+   date={1984},
+   number={1},
+   pages={125--171},
+   issn={0022-040X},
+   review={\MR{739785}},
+}
+
+\bib{green84-II}{article}{
+   author={Green, Mark L.},
+   title={Koszul cohomology and the geometry of projective varieties. II},
+   journal={J. Differential Geom.},
+   volume={20},
+   date={1984},
+   number={1},
+   pages={279--289},
+   issn={0022-040X},
+   review={\MR{772134}},
+}
+
+\bib{M2}{misc}{
+    label={M2},
+    author={Grayson, Daniel~R.},
+    author={Stillman, Michael~E.},
+    title = {Macaulay 2, a software system for research
+	    in algebraic geometry},
+    note = {Available at \url{http://www.math.uiuc.edu/Macaulay2/}},
+}
+
+\bib{oeding17}{article}{
+   author={Oeding, Luke},
+   author={Raicu, Claudiu},
+   author={Sam, Steven V},
+   title={On the (non-)vanishing of syzygies of Segre embeddings},
+   journal={Algebraic Geometry},
+   volume={6},
+   number={5},
+   date={2019},
+   pages={571--591},
+}
+
+
+\bib{peskineSzpiro74}{article}{
+   author={Peskine, C.},
+   author={Szpiro, L.},
+   title={Liaison des vari\'{e}t\'{e}s alg\'{e}briques. I},
+   language={French},
+   journal={Invent. Math.},
+   volume={26},
+   date={1974},
+   pages={271--302},
+   issn={0020-9910},
+   review={\MR{364271}},
+   doi={10.1007/BF01425554},
+}
+
+\bib{poonen04}{article}{
+   author={Poonen, Bjorn},
+   title={Bertini theorems over finite fields},
+   journal={Ann. of Math. (2)},
+   volume={160},
+   date={2004},
+   number={3},
+   pages={1099--1127},
+   issn={0003-486X},
+   review={\MR{2144974}},
+   doi={10.4007/annals.2004.160.1099},
+}
+	
+\bib{voisin02}{article}{
+   author={Voisin, Claire},
+   title={Green's generic syzygy conjecture for curves of even genus lying
+   on a $K3$ surface},
+   journal={J. Eur. Math. Soc. (JEMS)},
+   volume={4},
+   date={2002},
+   number={4},
+   pages={363--404},
+   issn={1435-9855},
+   review={\MR{1941089}},
+   doi={10.1007/s100970200042},
+}
+
+\bib{voisin05}{article}{
+   author={Voisin, Claire},
+   title={Green's canonical syzygy conjecture for generic curves of odd
+   genus},
+   journal={Compos. Math.},
+   volume={141},
+   date={2005},
+   number={5},
+   pages={1163--1190},
+   issn={0010-437X},
+   review={\MR{2157134}},
+   doi={10.1112/S0010437X05001387},
+}
+	
+\end{biblist}
+\end{bibdiv}
+\end{document}
