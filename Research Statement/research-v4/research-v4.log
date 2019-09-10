@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  9 SEP 2019 19:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  10 SEP 2019 09:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1620,9 +1620,9 @@ Here is how much of TeX's memory you used:
  498816 string characters out of 6129622
  632234 words of memory out of 5000000
  29100 multiletter control sequences out of 15000+600000
- 95795 words of font info for 408 fonts, out of 8000000 for 9000
+ 95841 words of font info for 408 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,14n,82p,1334b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,14n,82p,1335b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2018/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/t
@@ -1641,7 +1641,7 @@ onts/type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2018/texmf-dist/fonts
 ublic/kpfonts/jkpsy.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
 kpfonts/jkpsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/kpfon
 ts/jkpttmn8a.pfb>
-Output written on research-v4.pdf (9 pages, 168630 bytes).
+Output written on research-v4.pdf (9 pages, 168610 bytes).
 PDF statistics:
  302 PDF objects out of 1000 (max. 8388607)
  272 compressed objects within 3 object streams
