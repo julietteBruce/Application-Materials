@@ -307,9 +307,9 @@ Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring 
 
 \subsection{Asymptotic Syzygies}
 
-Much of my work has focused on studying the asymptotic properties of syzygies of projective varieties. Broadly speaking asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. In many ways, this perspective dates back to classical work on the defining equations of curves of high degree and projective normality. However, the modern take viewpoint arose from the pioneering work of Green \cite{green84-I, green84-II} and later Ein and Lazarsfeld \cite{einLazarsfeld12}. 
+Much of my work has focused on studying the asymptotic properties of syzygies of projective varieties. Broadly speaking asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. In many ways, this perspective dates back to classical work on the defining equations of curves of high degree and projective normality \cite{mumford66, mumford70}. However, the modern take viewpoint arose from the pioneering work of Green \cite{green84-I, green84-II} and later Ein and Lazarsfeld \cite{einLazarsfeld12}. 
 
-In order to give a flavor of the results of asymptotic syzygies we will focus on the question of in what degrees do non-zero syzygies occur. Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Further, we set, 
+In order to give a flavor of the results of asymptotic syzygies we will focus on the question of in what degrees do non-zero syzygies occur. Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Further, following \cite{ermanYang18} we set, 
 \begin{align*}
 \rho_q\left(X,L\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}}.
 \end{align*}
@@ -317,14 +317,14 @@ which by the Hilbert Syzygy Theorem is the percentage of degrees in which non-ze
 
 With this notation in hand, we may phrase Green's work on the vanishing of syzygies for curves of high degree as computing the asymptotic percentage of non-zero quadratic syzygies. Note by considerations of Castelnuovo-Mumford regularity all syzygies of curves of sufficiently high degree occur with $q=1,2$.
 
-\begin{theorem}
+\begin{theorem}\cite{green84-I}
 Let $X\subset \P^r$ be a smooth projective curve. If $(L_{d})_{d\in\N}$ is sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then 
 \[
 \lim_{d\to \infty} \rho_{2}\left(X;L_{d}\right) = 0.
 \]
 \end{theorem}
 
-Put differently Green showed that the syzygies of curves of high degree are as simple as possible, in that they occur only in the lowest possible degrees. This result inspired substantial work on so-called $N_{p}$ conditions, with the intuition being that syzygies should become simpler as the positivity of an embedding increases.  
+Put differently Green showed that the syzygies of curves of high degree are as simple as possible, in that they occur only in the lowest possible degrees. This result inspired substantial work on so-called $N_{p}$ conditions, with the intuition being that syzygies should become simpler as the positivity of an embedding increases \cite{ottavianiPaoletti01, einLazarsfeld93}.  
 
 In their groundbreaking paper, Ein and Lazarsfeld showed that for higher dimensional varieties this intuition is often misleading. In particular, they showed that contrary to the case of curves, for higher dimensional varieties  asymptotically syzygies appear in every possible degree. 
   
@@ -376,7 +376,7 @@ A natural next case in which to consider Question~\ref{quest:semi-ample} is that
 
 While the use of syzygies to study the geometry of projective varieties has proved very fruitful, it turns out to be quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. That said it turns out that the problem computing syzygies can be reduced to computing the ranks of a number of matrices. However, the reduction has generally proven intractable because the number of matrices and their sizes quickly become extremely large. For example, to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
 
-My co-authors and I exploited recent advances in numerical linear algebra and high throughput high-performance computing to overcome these challenges and compute a number of new examples of Veronese syzygies. This data provided support for several existing conjectures, as well as led us to conjecture previously unseen relationships between the representation theory and syzygies of Veronese embeddings. 
+My co-authors and I exploited recent advances in numerical linear algebra and high throughput high-performance computing to overcome these challenges and compute a number of new examples of Veronese syzygies. This data provided support for several existing conjectures, as well as led us to conjecture previously unseen relationships between the representation theory and syzygies of Veronese embeddings \cite{bruceErmanGoldsteinYang18}. 
 The data resulting from this project has been made publicly available via the website SyzygyData.com, as well as, a package for the computer algebra system Macaualy2 \cite{bruceErman19}.
 
 
@@ -388,15 +388,15 @@ Generically if one picks two polynomials $f,g\in \C[x,y,z]$ their common zero lo
 
 While the liaison theory of curves in $\P^3$ is well understood the same theory for curves in other 3-folds (even $\P^1\times\P^2$) remains quite mysterious. One reason for this stark difference is that while minimal graded free resolutions are an extremely useful tool to study quasicoherent sheaves on projective space, when working over other varieties -- like smooth toric varieties --  minimal graded free resolutions tend to be less useful. For example, minimal graded free resolutions over the Cox ring of a smooth toric variety seem overly burdened by algebraic structure that is often irrelevant to the geometry. 
 
-In an ongoing program with Christine Berkesch and Patricia Klein, I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory curves in toric 3-folds. Broadly a virtual resolution is a homological representation of a finitely graded module over the Cox ring of a smooth toric variety that attempts to overcome the challenges mentioned in the previous paragraph by allowing a certain amount of homology. Using these we hope to generalize existing results for curves in $\P^3$ to curves in $\P^1\times\P^2$. 
+In ongoing work with Christine Berkesch and Patricia Klein, I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory curves in toric 3-folds. Broadly a virtual resolution is a homological representation of a finitely graded module over the Cox ring of a smooth toric variety that attempts to overcome the challenges mentioned in the previous paragraph by allowing a certain amount of homology \cite{berkeschErmanSmith17}. Using these we hope to generalize existing results about the liaison theory of  curves in $\P^3$ to curves in $\P^1\times\P^2$. 
 
-For example, it is possible to define a notation of virtual Cohen-Macaulay for finitely generated graded modules over the Cox ring of a smooth toric variety. We would thus like to prove the following virtual version of Peskine and Szpiro's result showing that being Cohen-Macaulay is preserved under linkage. 
+For example, it is possible to define a notation of virtual Cohen-Macaulay for finitely generated graded modules over the Cox ring of a smooth toric variety. We would thus like to prove the following virtual version of Peskine and Szpiro's result showing that being Cohen-Macaulay is preserved under linkage \cite{peskineSzpiro74}. 
 
 \begin{goalTheorem}
 Let $C$ and $C'$ be linked curves in $\P^1\times\P^2$ then $C$ is virtually Cohen-Macaulay if and only if $C'$ is virtually Cohen-Macaualy.
 \end{goalTheorem}
 
-Slightly more ambitiously we hope to use virtual resolutions to find a way to classify liaison classes of curves in $\P^1\times\P^2$ analogous to Rao modules. In particular, we would like to answer the following question. 
+Slightly more ambitiously we hope to use virtual resolutions to find a way to classify liaison classes of curves in $\P^1\times\P^2$ analogous to Rao modules \cite{rao78}. In particular, we would like to answer the following question. 
  
 \begin{question}
 What classifies even liaison classes of curves in $\P^1\times\P^2$?
@@ -404,7 +404,7 @@ What classifies even liaison classes of curves in $\P^1\times\P^2$?
 
 A useful tool in approaching these questions is the ability to compute interesting examples via the computer algebra system Macaualy2. These computations are made substantially easier thanks to the  \texttt{VirtualResolutions} package for Macaulay2, which I co-authored \cite{almousaBruce19}. This contains tools to construct, display, and study virtual resolutions for products of projective spaces, as well as tools for generating curves in $\P^1\times\P^2$. 
 
-\section{Bridges to Arithmetic Geometry}
+\section{Varieties over Finite Fields}
 
 Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X$ is a smooth projective variety of dimension $n$ over $\C$ then Bertini's Theorem states that a generic hyperplane section of $X$ (i.e. $X\cap H$ for a generic hyperplane $H\subset \P^n$) will be smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Similar statements for connectedness, irreducibility, and other properties also fail over finite fields. 
 
@@ -429,7 +429,7 @@ Inspired by the work of Poonen \cite{poonen04} and Buccur and Kedlaya \cite{bucu
 
 Adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we computed the asymptotic probability that randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ form a system of parameters. Doing this we showed that when $k<n$ the probability randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by zeta function like power series that enumerates higher dimensional varieties instead of closed points. In the following theorem, $|Z|$ denotes the number of irreducible components of a scheme $Z$, and we write $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
 
-\begin{theorem}\label{thm:main finite field}
+\begin{theorem}\cite{bruceErman-sop}*{Theorem~1.4}\label{thm:main finite field}
 Let $X\subseteq \P^r_{\fF_q}$ be a projective scheme of dimension $n$. Fix $e$ and let $k<n$. The probability that random polynomials $f_0,f_1,\dots,f_k$ of degree $d$ are parameters on $X$ is
 \[
 \Prob\left(\begin{matrix}f_0,f_1,\dots,f_{k} \text{ of degree $d$ } \\ \text{ are parameters on $X$}\end{matrix}\right) = 1 \ - 
@@ -439,7 +439,7 @@ Let $X\subseteq \P^r_{\fF_q}$ be a projective scheme of dimension $n$. Fix $e$ a
 
 Notice that the power series on the right-hand side essentially enumerates subvarieties of dimension $n-k$. From this, it is possible to see that the main term determining the probability a randomly chosen set of homogenous polynomials forms a partial system of parameters is controlled by the number of $(n-k)$-planes contained in $X$. 
 
-\begin{cor}\label{cor:error}
+\begin{cor}\cite{bruceErman-sop}\label{cor:error}
 Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n$.  Then
 \[
 \lim_{d\to \infty} \frac{\Prob\left(\begin{matrix}(f_0,\dots,f_{k}) \text{ of degree $d$} \\ \text{ are \underline{not} parameters on $X$}\end{matrix}\right)} {q^{-(k+1)\binom{n-k+d}{n-k}}} = \#\left\{\begin{matrix}\text{$(n-k)$-planes } L\subseteq \P^r_{\fF_q}\\\text{such that }  L\subseteq X\end{matrix}\right\}.
@@ -452,13 +452,13 @@ Using this analysis and a delicate Hilbert function argument we were also able t
 
 \subsection{Explicit Bertini Theorems and Jacobians Covering Abelian Varieties}
 
-Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve. In fact, if $A\subset \P^r$ is an abelian variety of dimension $n$ over an infinite field then by Bertini's theorem there exists a hyperplane $H$ such that $A\cap H$ is a smooth curve whose Jacobian covers $A$. Moreover, one can even provide an effective upper bound on the dimension of the $\Jac(A\cap H)$ in terms of the dimension and degree of A (see [Mil08, Section III]).
+Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve. In fact, if $A\subset \P^r$ is an abelian variety of dimension $n$ over an infinite field then by Bertini's theorem there exists a hyperplane $H$ such that $A\cap H$ is a smooth curve whose Jacobian covers $A$. Moreover, one can even provide an effective upper bound on the dimension of the $\Jac(A\cap H)$.
 
 Over a finite field the failure of Bertini's theorem, again makes things more subtle. In fact, while Poonen's Bertini theorem shows that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve, it is not enough to provide an effective upper bound on the dimension of the covering Jacobian variety. This is because while Poonen's work shows the existence of a hypersurface $H$ such that $A\cap H$ is smooth it does not allow one to control the degree of the hypersurface $H$. 
 
 Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12} Li and I established an effective and explicit version of Poonen's Bertini theorem over finite fields. Using this theorem to control the degree of the hypersurface $H$, Li and I proved that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve whose dimension is bounded by an explicit constant. 
 
-\begin{theorem}
+\begin{theorem}\cite{bruceLi19}*{Theorem~A}
 Fix $r,n\in \N$ with $n\geq2$, and let $\fF_{q}$ be a finite field of characteristic $p$. There exists an explicit constant $C_{r,q}$ such that if $A\subset \P^{r}_{\fF_q}$ is a non-degenerate abelian variety of dimension $n$, then for any $d\in \N$ satisfying 
 \[
 C_{r,q}\zeta_{A}\left(n+\tfrac{1}{2}\right) \deg(A) \leq  \frac{q^{\frac{d}{\max\{n+1,p\}}}d}{d^{n+1}+d^n+q^{d}},
@@ -555,12 +555,12 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    year={2019},
    month={Jun}
    day={15}
-   issn={1432-1297},
-   doi={10.1007/s00222-019-00894-1},
+%   issn={1432-1297},
+%   doi={10.1007/s00222-019-00894-1},
 }
 
 \bib{berkesch13}{article}{
-   author={Berkesch Zamaere, Christine},
+   author={Berkesch, Christine},
    author={Erman, Daniel},
    author={Kummini, Manoj},
    author={Sam, Steven V.},
@@ -571,10 +571,24 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={2013},
    number={6},
    pages={2257--2295},
-   issn={1435-9855},
-   review={\MR{3120743}},
-   doi={10.4171/JEMS/421},
+%   issn={1435-9855},
+%   review={\MR{3120743}},
+%   doi={10.4171/JEMS/421},
 }
+
+\bib{berkeschErmanSmith17}{article}{
+   author={Berkesch, Christine},
+   author={Erman, Daniel},
+   author={Smith, Gregory G.},
+   title={Virtual resolutions for a product of projective spaces},
+   date={2017},
+   journal={Algebraic Geometry},
+   note={to appear},
+%   issn={1435-9855},
+%   review={\MR{3120743}},
+%   doi={10.4171/JEMS/421},
+}
+
 
 \bib{bruceErman-sop}{article}{
    author={Bruce, Juliette},
@@ -593,7 +607,7 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    note={to appear}
 }
 
-\bib{bruceErman18}{article}{
+\bib{bruceErmanGoldsteinYang18}{article}{
 	author = {Bruce, Juliette},
 	author = {Erman, Daniel},
 	author = {Goldstein. Steve}, 
@@ -645,19 +659,19 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
 }
 
 
-\bib{charlesPoonen16}{article}{
-   author={Charles, Fran\c{c}ois},
-   author={Poonen, Bjorn},
-   title={Bertini irreducibility theorems over finite fields},
-   journal={J. Amer. Math. Soc.},
-   volume={29},
-   date={2016},
-   number={1},
-   pages={81--94},
-   issn={0894-0347},
-   review={\MR{3402695}},
-   doi={10.1090/S0894-0347-2014-00820-1},
-}
+%\bib{charlesPoonen16}{article}{
+%   author={Charles, Fran\c{c}ois},
+%   author={Poonen, Bjorn},
+%   title={Bertini irreducibility theorems over finite fields},
+%   journal={J. Amer. Math. Soc.},
+%   volume={29},
+%   date={2016},
+%   number={1},
+%   pages={81--94},
+%   issn={0894-0347},
+%   review={\MR{3402695}},
+%   doi={10.1090/S0894-0347-2014-00820-1},
+%}
 
 \bib{cmbpt}{article}{
    author={Chinburg, Ted},
@@ -679,23 +693,39 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={1995},
    number={1},
    pages={17--50},
-   issn={1056-3911},
-   review={\MR{1299003}},
+%   issn={1056-3911},
+%   review={\MR{1299003}},
 }
-			
-\bib{einErmanLazarsfeld15}{article}{
+
+\bib{einLazarsfeld93}{article}{
    author={Ein, Lawrence},
-   author={Erman, Daniel},
    author={Lazarsfeld, Robert},
-   title={Asymptotics of random Betti tables},
-   journal={J. Reine Angew. Math.},
-   volume={702},
-   date={2015},
-   pages={55--75},
-   issn={0075-4102},
-   review={\MR{3341466}},
-   doi={10.1515/crelle-2013-0032},
+   title={Syzygies and Koszul cohomology of smooth projective varieties of
+   arbitrary dimension},
+   journal={Invent. Math.},
+   volume={111},
+   date={1993},
+   number={1},
+   pages={51--67},
+%   issn={0020-9910},
+%   review={\MR{1193597}},
+%   doi={10.1007/BF01231279},
 }
+	
+				
+%\bib{einErmanLazarsfeld15}{article}{
+%   author={Ein, Lawrence},
+%   author={Erman, Daniel},
+%   author={Lazarsfeld, Robert},
+%   title={Asymptotics of random Betti tables},
+%   journal={J. Reine Angew. Math.},
+%   volume={702},
+%   date={2015},
+%   pages={55--75},
+%   issn={0075-4102},
+%   review={\MR{3341466}},
+%   doi={10.1515/crelle-2013-0032},
+%}
 
 \bib{einLazarsfeld12}{article}{
    author={Ein, Lawrence},
@@ -706,9 +736,9 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={2012},
    number={3},
    pages={603--646},
-   issn={0020-9910},
-   review={\MR{2995182}},
-   doi={10.1007/s00222-012-0384-5},
+%   issn={0020-9910},
+%   review={\MR{2995182}},
+%   doi={10.1007/s00222-012-0384-5},
 }
 
 \bib{eisenbud05}{book}{
@@ -720,8 +750,8 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    publisher={Springer-Verlag, New York},
    date={2005},
    pages={xvi+243},
-   isbn={0-387-22215-4},
-   review={\MR{2103875}},
+%   isbn={0-387-22215-4},
+%   review={\MR{2103875}},
 }
 
 
@@ -734,9 +764,9 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={2009},
    number={3},
    pages={859--888},
-   issn={0894-0347},
-   review={\MR{2505303}},
-   doi={10.1090/S0894-0347-08-00620-6},
+%   issn={0894-0347},
+%   review={\MR{2505303}},
+%   doi={10.1090/S0894-0347-08-00620-6},
 }
 
 
@@ -749,9 +779,9 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={2015},
    number={1},
    pages={1--38},
-   issn={0012-7094},
-   review={\MR{3299101}},
-   doi={10.1215/00127094-2838327},
+%   issn={0012-7094},
+%   review={\MR{3299101}},
+%   doi={10.1215/00127094-2838327},
 }
 
 \bib{ermanYang18}{article}{
@@ -763,9 +793,9 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={2018},
    number={9},
    pages={2151--2166},
-   issn={1937-0652},
-   review={\MR{3894431}},
-   doi={10.2140/ant.2018.12.2151},
+%   issn={1937-0652},
+%   review={\MR{3894431}},
+%   doi={10.2140/ant.2018.12.2151},
 }
 
 \bib{gabberLiuLorenzini15}{article}{
@@ -791,8 +821,8 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={1984},
    number={1},
    pages={125--171},
-   issn={0022-040X},
-   review={\MR{739785}},
+%   issn={0022-040X},
+%   review={\MR{739785}},
 }
 
 \bib{green84-II}{article}{
@@ -803,8 +833,8 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={1984},
    number={1},
    pages={279--289},
-   issn={0022-040X},
-   review={\MR{772134}},
+%   issn={0022-040X},
+%   review={\MR{772134}},
 }
 
 \bib{M2}{misc}{
@@ -816,7 +846,35 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
     note = {Available at \url{http://www.math.uiuc.edu/Macaulay2/}},
 }
 
-\bib{oeding17}{article}{
+\bib{mumford70}{article}{
+   author={Mumford, David},
+   title={Varieties defined by quadratic equations},
+   conference={
+      title={Questions on Algebraic Varieties},
+      address={C.I.M.E., III Ciclo, Varenna},
+      date={1969},
+   },
+   book={
+      publisher={Edizioni Cremonese, Rome},
+   },
+   date={1970},
+   pages={29--100},
+%   review={\MR{0282975}},
+}
+	
+\bib{mumford66}{article}{
+   author={Mumford, D.},
+   title={On the equations defining abelian varieties. I},
+   journal={Invent. Math.},
+   volume={1},
+   date={1966},
+   pages={287--354},
+%   issn={0020-9910},
+%   review={\MR{204427}},
+%   doi={10.1007/BF01389737},
+}
+	
+	\bib{oeding17}{article}{
    author={Oeding, Luke},
    author={Raicu, Claudiu},
    author={Sam, Steven V},
@@ -828,6 +886,21 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    pages={571--591},
 }
 
+\bib{ottavianiPaoletti01}{article}{
+   author={Ottaviani, Giorgio},
+   author={Paoletti, Raffaella},
+   title={Syzygies of Veronese embeddings},
+   journal={Compositio Math.},
+   volume={125},
+   date={2001},
+   number={1},
+   pages={31--37},
+%   issn={0010-437X},
+%   review={\MR{1818055}},
+%   doi={10.1023/A:1002662809474},
+}
+	
+	
 
 \bib{peskineSzpiro74}{article}{
    author={Peskine, C.},
@@ -838,9 +911,9 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    volume={26},
    date={1974},
    pages={271--302},
-   issn={0020-9910},
-   review={\MR{364271}},
-   doi={10.1007/BF01425554},
+%   issn={0020-9910},
+%   review={\MR{364271}},
+%   doi={10.1007/BF01425554},
 }
 
 \bib{poonen04}{article}{
@@ -851,10 +924,24 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={2004},
    number={3},
    pages={1099--1127},
-   issn={0003-486X},
-   review={\MR{2144974}},
-   doi={10.4007/annals.2004.160.1099},
+%   issn={0003-486X},
+%   review={\MR{2144974}},
+%   doi={10.4007/annals.2004.160.1099},
 }
+
+\bib{rao78}{article}{
+   author={Prabhakar Rao, A.},
+   title={Liaison among curves in ${\bf P}^{3}$},
+   journal={Invent. Math.},
+   volume={50},
+   date={1978/79},
+   number={3},
+   pages={205--217},
+%   issn={0020-9910},
+%   review={\MR{520926}},
+%   doi={10.1007/BF01410078},
+}
+	
 	
 \bib{voisin02}{article}{
    author={Voisin, Claire},
@@ -865,9 +952,9 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={2002},
    number={4},
    pages={363--404},
-   issn={1435-9855},
-   review={\MR{1941089}},
-   doi={10.1007/s100970200042},
+%   issn={1435-9855},
+%   review={\MR{1941089}},
+%   doi={10.1007/s100970200042},
 }
 
 \bib{voisin05}{article}{
@@ -879,9 +966,9 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    date={2005},
    number={5},
    pages={1163--1190},
-   issn={0010-437X},
-   review={\MR{2157134}},
-   doi={10.1112/S0010437X05001387},
+%   issn={0010-437X},
+%   review={\MR{2157134}},
+%   doi={10.1112/S0010437X05001387},
 }
 	
 \end{biblist}
