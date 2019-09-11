@@ -1,0 +1,277 @@
+% Upper-case    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+% Lower-case    a b c d e f g h i j k l m n o p q r s t u v w x y z
+% Digits        0 1 2 3 4 5 6 7 8 9
+% Exclamation   !           Double quote "          Hash (number) #
+% Dollar        $           Percent      %          Ampersand     &
+% Acute accent  '           Left paren   (          Right paren   )
+% Asterisk      *           Plus         +          Comma         ,
+% Minus         -           Point        .          Solidus       /
+% Colon         :           Semicolon    ;          Less than     <
+% Equals        =           Greater than >          Question mark ?
+% At            @           Left bracket [          Backslash     \
+% Right bracket ]           Circumflex   ^          Underscore    _
+% Grave accent  `           Left brace   {          Vertical bar  |
+% Right brace   }           Tilde        ~
+
+%
+% NSF Biographical Sketch: Dr. Theodore P. Pavlic
+%
+% Copyright (c) 2013 by Theodore P. Pavlic
+% All rights reserved.
+%
+
+\documentclass[svgnames,11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\renewcommand\thesection{(\alph{section})}
+\renewcommand\thesubsection{(\alph{subsection})}
+
+\usepackage{calc}
+
+\usepackage{lastpage}
+%\newcommand{\pageoflastpage}{Page {\thepage} of \pageref*{LastPage}}
+%\newcommand{\pageoflastpage}{{\thepage} of \pageref*{LastPage}}
+\newcommand{\pageoflastpage}{}
+
+% Redefine the plain pagestyle for the title page
+\makeatletter
+\let\oldps@plain\ps@plain
+\renewcommand{\ps@plain}{\oldps@plain%
+\renewcommand{\@evenfoot}{\hfil\pageoflastpage\hfil}%
+\renewcommand{\@oddfoot}{\@evenfoot}}
+\makeatother
+
+% Use fancy for non-title pages
+\usepackage{fancyhdr}
+\fancyhead{}
+\fancyfoot{}
+\cfoot{\pageoflastpage}
+\pagestyle{fancy}
+
+\usepackage{xspace}
+
+\usepackage[shortlabels]{enumitem}
+\usepackage{graphicx}
+\usepackage{varioref}
+\usepackage[%
+        colorlinks=true,urlcolor=,
+        pdfpagelabels=true,hypertexnames=true,
+        plainpages=false,naturalnames=true,
+        ]{hyperref}
+%
+\usepackage{url}
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin={\bibhang+\widthof{[9]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=\textbf{\arabic*.},leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+\title{%
+        \vspace{-2\baselineskip}
+            \normalsize
+            Biographical Sketch\\
+            {\large\textbf{Juliette Bruce }}\\
+            \vspace{0.5\baselineskip}
+            \hrule
+            \vspace{0.5\baselineskip}
+            Graduate Student, University of Wisconsin
+            e-mail: \href{mailto:juliette.bruce@math.wisc.edu}{juliette.bruce@math.wisc.edu},
+            tel: +1-810-623-7610
+        \vspace{-1.5ex}
+        }
+\date{}
+\author{}
+
+\hypersetup{%
+        pdfsubject={NSF Biographical Sketch of Juliette Bruce},
+        pdfauthor={Juliette Bruce},
+        pdftitle={NSF Biographical Sketch of Juliette Bruce},
+        pdfkeywords={}
+        }
+
+\newcommand{\ie}{i.e.\xspace}
+\newcommand{\eg}{e.g.\xspace}
+
+\begin{document}
+
+\maketitle
+\vspace{-4\baselineskip}
+
+\subsection{Professional Preparation}
+
+    University of Michigan, Ann Arbor, MI;
+        Mathematics \& Political Science;
+        B.S., 2014
+        \\
+    University of Wisconsin, Madison, WI;
+        Mathematics;
+        M.A., 2016
+        \\
+     University of Wisconsin, Madison, WI;
+        Mathematics;
+        Ph.D., 2020 (expected)
+ 
+\subsection{Appointments}
+
+\begin{itemize}[label={\quad 9999--9999:},leftmargin=*,itemsep=0pt]
+%
+    \item[2014--present:]
+        \textbf{Graduate Student},
+        University of Wisconsin,
+        Madison, WI
+%
+%    \item[2010--2012:]
+%        \textbf{Postdoctoral Researcher},
+%        The Ohio State University,
+%        Columbus, OH
+%
+%    \item[2002, 2003:]
+%        \textbf{Hardware R\&D Intern},
+%        National Instruments,
+%        Austin, TX
+%
+%    \item[2001:]
+%        \textbf{Core Systems Software Developer},
+%        IBM Network Storage,
+%        Research Triangle Park, NC
+%
+%    \item[1997--2001:]
+%        \textbf{Information Technology Systems Engineer},
+%        CallTech Communications,
+%        Columbus, OH
+%
+%    \item[1995--1997:]
+%        \textbf{Web Developer},
+%        MegaLinx Communications,
+%        Dublin, OH
+%
+\end{itemize}
+
+\subsection{Products}
+
+\begin{bibenum}[itemsep=5pt]
+
+    \item
+	J.~Bruce and D.~Erman. A probabilistic approach to systems of parameters and Noether normalization. {\it Algebra and Number Theory}, To appear. E-print: \hyperref{http://arxiv.org/abs/1604.01704}{}{}{arXiv:1604.01704}.
+	
+\item
+	J.~Bruce and W.~Li. Effective bounds on the dimensions of Jacobians covering abelian varieties.  {\it Proc. Amer. Math. Soc.}, To appear. E-print: \hyperref{https://arxiv.org/abs/1804.11015}{}{}{arXiv:1804.11015}.
+			
+\item
+	J.~Bruce, D.~Erman, S.~Goldstein, and J.~Yang. Conjectures and computations about Veronese syzygies.  {\it Experimental Mathematics}, To Appear. E-print: \hyperref{https://arxiv.org/abs/1711.03513}{}{}{arXiv:1711.03513}.
+	
+\item
+	M.~Brandt, J.~Bruce, T.~Brysiewicz, R.~Krone, and E.~Robeva. The degree of $SO(n)$. {\it Combinatorial Algebraic Geometry}, 207-224, Fields Inst. Commun. \textbf{80}, (2017). E-print: \hyperref{https://arxiv.org/abs/1701.03200}{}{}{arXiv:1701.03200}.
+	
+\item
+	J.~Bruce, M.~Logue, and R.~Walker. Monomial valuations, cusp singularities, and continued fractions. {\it Journal of Commutative Algebra}, \textbf{7} (2015) no. 4, 495-522. E-print: \hyperref{http://arxiv.org/abs/1311.6493}{}{}{arXiv:1311.6493}.
+
+\item
+	J.~Bruce, P.~Kao, E.~Nash, B.~Perez, and P.~Vermeire. Betti tables of reducible algebraic curves. {\it Proc. Amer. Math. Soc.} \textbf{142} (2014) 4039-4051. E-print: \hyperref{http://arxiv.org/abs/1210.3064}{}{}{arXiv:1210.3064}.
+
+\item
+	J.~Bruce. The Quantitative Behavior of Asymptotic Syzygies for Hirzebruch Surfaces. {\it Submitted.} E-Print:  \hyperref{http://arxiv.org/abs/1906.07333}{}{}{arXiv:1906.07333}.
+	
+\item
+	J.~Bruce, D.~Erman, S.~Goldstein, and J.~Yang. The SchurVeronese package in Macaulay2.  {\it Submitted}. E-print: \hyperref{https://arxiv.org/abs/1905.12661}{}{}{arXiv:1905.12661}.
+	
+\item
+	A.~Almousa, J.~Bruce, M.~Loper, and M.~Sayrafi. The Virtual Resolutions Package for Macaulay2.  {\it Submitted.} E-print: \hyperref{http://arxiv.org/abs/1905.07022}{}{}{arXiv:1905.07022}.
+	
+\item
+	J.~Bruce. Asymptotic Syzygies in the Setting of Semi-Ample Growth. {\it Submitted.}\\ E-Print:  \hyperref{https://arxiv.org/abs/1904.04944}{}{}{arXiv:1904.04944}
+	
+\end{bibenum}
+
+
+
+\subsection{Synergistic Activities}
+
+\begin{bibenum}[itemsep=4pt]
+
+    \item \textbf{Conference Organizing:}
+        (i) Organizer for \textit{Special Session in Combinatorial Algebraic Geometry} at AMS Fall Central Sectional. 
+        (ii) Organizer for \textit{Graduate Workshop in Commutative Algebra for Women and Mathematicians of Minority Genders} (35 participants), 
+        (iii) Organizer for \textit{Geometry \& Arithmetic of Surfaces Workshop} (40 participants)
+        (iv) Organizer for \textit{Macaulay2 at Wisconsin} (50 participants)
+        (v) Organizer for \textit{Spectra Panel: Supporting Transgender and Non-binary Students} at the 2020 Joint Math Meetings
+    
+
+    \item \textbf{Community Outreach:}
+    	(i) Organizer of the Madison Math Circle 2016--2018. Lead creation of new program with the Madison Math Circle that directly visits high schools around the state of Wisconsin to better serve students from underrepresented groups. Increased reach to over 250 students per year.
+	(ii)  Volunteered at the Madison Math Circle 2015--2016.
+	(iii) Student organizer of the Michigan Math Circle 2013--2014.
+
+    \item \textbf{Mentoring:}
+        (i) Mentoring two undergraduate women through AWM?s Mentoring Network program.
+        (ii) Mentored 6 first year graduate students (all women or non-binary students).
+        (iii) Lead two semester long and one year long undergraduate reading courses, providing mentorship on applying to graduate school.
+        (iv) Mentored two girls in high school on semester long project exploring RSA cryptography.
+        
+           
+    \item \textbf{Department Service:} 
+    (i) Lead creation of Committee on Inclusivity and Diversity at University of Wisconsin - Madison, and 
+    (ii) As member of the Committee on Teaching Assistant Performance and Pay at University of Wisconsin - Madison, lead initiative to develop less biased and more transparent teaching evaluations. 
+    (iii) Organized one day professional development conference, \textit{Math Careers Beyond Academia} focused on careers for math students outside of academia (50 participants). 
+
+    \item \textbf{Work on Inclusion \& Diversity:}
+    (i) Organizer of \textit{qGrads}, the campus social organization for LGBTQ+ graduate students (350 members).
+    (ii) Founder and former organizer of \textit{oSTEM@UW}, the campus organization for LGBTQ+ students in STEM (50 members). Organized and secured funding for 11 members -- including undergraduates -- to attend national oSTEM Inc. conference. 
+    (iii) Panelist on \textit{Out in Math: Professional Issues Facing LGBTQ Mathematicians} at 2018 Joint Math Meetings. 
+      
+
+\end{bibenum}
+
+\subsection{Collaborators \& Other Affiliations}
+
+\begin{bibsection}
+
+    \item \textbf{Collaborators and Co-Editors:}
+%        \emph{The Ohio State University}:
+%            Manas Agrawal;
+	    Ayah Almousa (Cornell University),
+	    Christine Berkesch (University of Minnesota,
+	    Madeline Brandt (University of California - Berkeley),
+	    Taylor Brysiewicz (Texas A\&M University),
+	    Daniel Corey (University of Wisconsin),
+            Daniel Erman (University of Wisconsin),
+            Steve Goldstein (University of Wisconsin),
+            Patricia Klein (University of Minnesota),
+            Robert Krone (University of California - Davis),
+            Robert P. Laudone (University of Wisconsin),
+            Wanlin Li (Massachusetts Institute of Technology),
+            Michael C. Loper (University of Minnesota),
+            Erika Pirnes (University of Wisconsin),
+            Elina Robeva (University of British Columbia),
+            Mahrud Sayrafi (University of Minnesota),
+            Jay Yang (University of Minnesota),
+            Isabel Vogt (Stanford University),
+            Robert Walker (University of Wisconsin)
+            
+
+    \item \textbf{Graduate/Thesis Adviser:}
+        Daniel Erman (University of Wisconsin)
+
+
+\end{bibsection}
+
+\end{document}
