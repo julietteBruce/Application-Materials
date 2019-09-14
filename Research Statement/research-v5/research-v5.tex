@@ -324,9 +324,9 @@ Let $X\subset \P^r$ be a smooth projective curve. If $(L_{d})_{d\in\N}$ is seque
 \]
 \end{theorem}
 
-Put differently Green showed that the syzygies of curves of high degree are as simple as possible, in that they occur only in the lowest possible degrees. This result inspired substantial work on so-called $N_{p}$ conditions, with the intuition being that syzygies should become simpler as the positivity of an embedding increases \cite{ottavianiPaoletti01, einLazarsfeld93}.  
+Put differently Green showed that the syzygies of curves of high degree are as simple as possible, in that they occur only in the lowest possible degrees. This inspired substantial work on $N_{p}$ conditions, with the intuition being that syzygies should become simpler as the positivity of an embedding increases \cite{ottavianiPaoletti01, einLazarsfeld93}.  
 
-In their groundbreaking paper, Ein and Lazarsfeld showed that for higher dimensional varieties this intuition is often misleading. In particular, they showed that contrary to the case of curves, for higher dimensional varieties  asymptotically syzygies appear in every possible degree. 
+In their groundbreaking paper, Ein and Lazarsfeld showed that for higher dimensional varieties this intuition is often misleading. Contrary to the case of curves, they show that for higher dimensional varieties  asymptotically syzygies appear in every possible degree. 
   
 \begin{theorem}\cite{einLazarsfeld12}*{Theorem~C}
 Let $X\subset \P^r$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq n$. If $(L_{d})_{d\in\N}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample then
@@ -335,7 +335,7 @@ Let $X\subset \P^r$ be a smooth projective variety, $\dim X \geq2$, and fix an i
 \]
 \end{theorem}
 
-My work has focused on how asymptotic syzygies behave when the condition that $L_{d+1}-L_{d}$ is constant and ample is weakened to just assuming $L_{d+1}-L_{d}$ is semi-ample. Recall a line bundle $L$ on a smooth variety is \textit{semi-ample} if the linear series $|kL|$ is base point free for some $k\gg0$. The prototypical example of a semi-ample line bundle is $\O_{\P^{n}\times\P^{m}}(1,0)$ on $\P^{n}\times \P^{m}$. 
+My work has focused on how asymptotic syzygies behave when the condition that $L_{d+1}-L_{d}$ is constant and ample is weakened to assuming $L_{d+1}-L_{d}$ is semi-ample. Recall a line bundle $L$ on a smooth variety is \textit{semi-ample} if the linear series $|kL|$ is base point free for some $k\gg0$. The prototypical example of a semi-ample line bundle is $\O_{\P^{n}\times\P^{m}}(1,0)$ on $\P^{n}\times \P^{m}$. 
 
 My exploration of asymptotic syzygies in the setting of semi-ample growth, thus began, by proving the following non-vanishing result for $\P^{n}\times\P^{m}$ embedded by $\O_{\P^{n}\times\P^{m}}(d_{1},d_{2})$. 
 
@@ -374,21 +374,21 @@ A natural next case in which to consider Question~\ref{quest:semi-ample} is that
 
 \subsection{Syzygies via Highly Distributed Computing}
 
-While the use of syzygies to study the geometry of projective varieties has proved very fruitful, it turns out to be quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. That said it turns out that the problem computing syzygies can be reduced to computing the ranks of a number of matrices. However, the reduction has generally proven intractable because the number of matrices and their sizes quickly become extremely large. For example, to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
+Iturns out to be quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. That said it turns out that the problem computing syzygies can be reduced to computing the ranks of a number of matrices. However, the reduction has generally proven intractable because the number of matrices and their sizes quickly become extremely large. For example, to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
 
 My co-authors and I exploited recent advances in numerical linear algebra and high throughput high-performance computing to overcome these challenges and compute a number of new examples of Veronese syzygies. This data provided support for several existing conjectures, as well as led us to conjecture previously unseen relationships between the representation theory and syzygies of Veronese embeddings \cite{bruceErmanGoldsteinYang18}. 
 The data resulting from this project has been made publicly available via the website SyzygyData.com, as well as, a package for the computer algebra system Macaualy2 \cite{bruceErman19}.
 
 
-Recently I have begun working to use similar computational techniques to compute the syzygies for various Hirzebruch surfaces including $\P^1\times\P^1$. Thus, by exploiting the fact that there exist semi-ample line bundles on Hirzebruch surfaces we have managed to compute the syzygies in approximately 100 new examples. We hope that these new examples will lead to new conjectures regarding the syzygies of Hirzebruch surfaces. In particular, we hope to find ways to generalize my work on the asymptotic syzygies in the setting of semi-ample growth to other Hirzebruch surfaces. 
+Recently I have begun working to use similar computational techniques to compute the syzygies for Hirzebruch surfaces. By exploiting that there exist semi-ample line bundles on Hirzebruch surfaces we have managed to compute the syzygies in  $\sim100$ new examples. We hope that these examples will lead to new conjectures regarding the syzygies of Hirzebruch surfaces. In particular, we hope to find ways to generalize my work on the asymptotic syzygies in the setting of semi-ample growth to other Hirzebruch surfaces. 
 
 \subsection{Liaison Theory via Virtual Resolutions}
 
-Generically if one picks two polynomials $f,g\in \C[x,y,z]$ their common zero locus $\V(f,g)\subset \P^3$ will be one dimensional (i.e. $\V(f,g)$ is an algebraic curve). Curves arriving in such a way are called complete intersections. While in a sense curves which are complete intersections are generic, much of the interesting geometry of curves in $\P^3$ comes from curves which are not complete intersections. Classically one approach to understanding the geometry of space curves in $\P^3$ is by asking when the union of two (or more) curves is a complete intersection. Such curves are said to be linked, and the general idea so to try and identify properties that are preserved under linkage. 
+Generically if one picks two polynomials $f,g\in \C[x,y,z]$ their common zero locus $\V(f,g)\subset \P^3$ will be an algebraic curve. Curves arriving in such a way are called complete intersections. While in a sense curves which are complete intersections are generic, much of the interesting geometry of curves in $\P^3$ comes from curves which are not complete intersections. Classically one approach to understanding the geometry of space curves in $\P^3$ is by asking when the union of two (or more) curves is a complete intersection. Such curves are said to be linked, and the general idea so to try and identify properties that are preserved under linkage. 
 
 While the liaison theory of curves in $\P^3$ is well understood the same theory for curves in other 3-folds (even $\P^1\times\P^2$) remains quite mysterious. One reason for this stark difference is that while minimal graded free resolutions are an extremely useful tool to study quasicoherent sheaves on projective space, when working over other varieties -- like smooth toric varieties --  minimal graded free resolutions tend to be less useful. For example, minimal graded free resolutions over the Cox ring of a smooth toric variety seem overly burdened by algebraic structure that is often irrelevant to the geometry. 
 
-In ongoing work with Christine Berkesch and Patricia Klein, I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory curves in toric 3-folds. Broadly a virtual resolution is a homological representation of a finitely graded module over the Cox ring of a smooth toric variety that attempts to overcome the challenges mentioned in the previous paragraph by allowing a certain amount of homology \cite{berkeschErmanSmith17}. Using these we hope to generalize existing results about the liaison theory of  curves in $\P^3$ to curves in $\P^1\times\P^2$. 
+In ongoing work with Christine Berkesch and Patricia Klein, I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory of curves in toric 3-folds. Broadly a virtual resolution is a homological representation of a finitely graded module over the Cox ring of a smooth toric variety that attempts to overcome the challenges mentioned in the previous paragraph by allowing a certain amount of homology \cite{berkeschErmanSmith17}. Using these we hope to generalize existing results about the liaison theory of  curves in $\P^3$ to curves in $\P^1\times\P^2$. 
 
 For example, it is possible to define a notation of virtual Cohen-Macaulay for finitely generated graded modules over the Cox ring of a smooth toric variety. We would thus like to prove the following virtual version of Peskine and Szpiro's result showing that being Cohen-Macaulay is preserved under linkage \cite{peskineSzpiro74}. 
 
@@ -452,9 +452,7 @@ Using this analysis and a delicate Hilbert function argument we were also able t
 
 \subsection{Explicit Bertini Theorems and Jacobians Covering Abelian Varieties}
 
-Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve. In fact, if $A\subset \P^r$ is an abelian variety of dimension $n$ over an infinite field then by Bertini's theorem there exists a hyperplane $H$ such that $A\cap H$ is a smooth curve whose Jacobian covers $A$. Moreover, one can even provide an effective upper bound on the dimension of the $\Jac(A\cap H)$.
-
-Over a finite field the failure of Bertini's theorem, again makes things more subtle. In fact, while Poonen's Bertini theorem shows that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve, it is not enough to provide an effective upper bound on the dimension of the covering Jacobian variety. This is because while Poonen's work shows the existence of a hypersurface $H$ such that $A\cap H$ is smooth it does not allow one to control the degree of the hypersurface $H$. 
+Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve of bounded dimension. While Poonen's Bertini theorem shows that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve, it is not enough to provide an effective upper bound on the dimension of the covering Jacobian variety. This is because while Poonen's work shows the existence of a hypersurface $H$ such that $A\cap H$ is smooth it does not allow one to control the degree of the hypersurface $H$. 
 
 Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12} Li and I established an effective and explicit version of Poonen's Bertini theorem over finite fields. Using this theorem to control the degree of the hypersurface $H$, Li and I proved that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve whose dimension is bounded by an explicit constant. 
 
@@ -466,11 +464,9 @@ C_{r,q}\zeta_{A}\left(n+\tfrac{1}{2}\right) \deg(A) \leq  \frac{q^{\frac{d}{\max
 there exists a smooth geometrically connected curve over $\fF_{q}$ whose Jacobian $J$ maps dominantly onto $A$, where 
 \[
 \dim J\leq 
-\OO\left(\frac{ \deg(A)^2 d^{2(n-1}}{r}\right).
+\OO\left(\frac{ \deg(A)^2 d^{2(n-1)}}{r}\right).
 \]
 \end{theorem} 
-
-Additionally, by utilizing my work with Erman on systems of parameters Li and I proved a stronger upper bound in the case when $A$ is a simple abelian variety. 
 
 \subsection{Uniform Bertini}
 
@@ -523,7 +519,7 @@ Since the winter of 2018 I have led reading courses with three undergraduates th
 
 \subsection{A More Inclusive Community.} During the Fall of 2016 I pushed the Mathematics Department to form a committee on inclusivity and diversity. As a member of this committee, I took the lead in drafting a statement on the department's commitment to inclusivity and non-discrimination that was  accepted by the faculty at a department meeting. I also created template syllabi statements that let students know about these department polices, and that inform them of other campus resources that may be helpful. All teachers within the department are  encouraged to use these statements. 
 
-Over the summer of 2017, I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM. During my time leading oSTEM@UW, the group grew dramatically eventually having over fifty active members. The efficacy and importance of such a group was made clear by the numerous student comments indicating how helpful and encouraging oSTEM@UW is to them. For example, after a meeting, a student emailed me to say ``It made me very happy to see other friendly LGBTQ+ faces around, and I got to meet two people who were already in classes of mine! Thanks so much for organizing this stuff -- it's really helpful for me personally, and I believe it was encouraging for the others attending as well.'' Additionally, I organized and obtained a travel grant for 11 members -- including undergraduates -- to attend the annual national oSTEM Inc. conference. 
+Over the summer of 2017, I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM. During my time leading oSTEM@UW, the group grew dramatically eventually having over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around, and I got to meet two people who were already in classes of mine! Thanks so much for organizing this stuff -- it's really helpful for me personally, and I believe it was encouraging for the others attending as well.'' Additionally, I organized and obtained a travel grant for 11 members -- including undergraduates -- to attend the annual national oSTEM Inc. conference. 
 
 Since 2017 I have been the organizer of the campus social organization for LGBTQ+ graduate and post-graduate students, which currently has over 350 members. In this role, I have co-organized a weekly coffee social hour intended to give LGBTQ+ graduate and post-graduates students a place to relax, make friends, and discussion the challenges of being LGBTQ+ at the UW - Madison.
 
