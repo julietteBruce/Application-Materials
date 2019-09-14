@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 SEP 2019 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 SEP 2019 16:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -294,9 +294,6 @@ Package: pcatcode 2002/04/16 v1.04
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsrefs/ifoption.sty
 Package: ifoption 2002/03/04 v1.02
-)
-(/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/backref.sty
-Package: backref 2016/05/21 v1.39 Bibliographical back referencing
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsrefs/rkeyval.sty
 Package: rkeyval 2004/05/05 v1.08
@@ -1530,12 +1527,7 @@ LaTeX Info: Redefining \nameref on input line 282.
 \@outlinefile=\write4
 \openout4 = `research-v5.out'.
 
- (./research-v5.brf)
-\tf@brf=\write5
-\openout5 = `research-v5.brf'.
-
-
-ABD: EveryShipout initializing macros
+ ABD: EveryShipout initializing macros
 LaTeX Info: Redefining \microtypecontext on input line 282.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1613,15 +1605,15 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 972.
  ) 
 Here is how much of TeX's memory you used:
- 26418 strings out of 492649
- 499012 string characters out of 6129622
- 633295 words of memory out of 5000000
- 29115 multiletter control sequences out of 15000+600000
- 93893 words of font info for 393 fonts, out of 8000000 for 9000
+ 26197 strings out of 492649
+ 495470 string characters out of 6129622
+ 628734 words of memory out of 5000000
+ 28926 multiletter control sequences out of 15000+600000
+ 90273 words of font info for 375 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,14n,82p,1335b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
-exlive/2018/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}</usr/local/t
+{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.en
+c}{/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/t
 exlive/2018/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb></usr/local/te
 xlive/2018/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/
@@ -1634,14 +1626,13 @@ e/2018/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb></usr/local/texlive/2018
 st/fonts/type1/public/kpfonts/jkpmite.pfb></usr/local/texlive/2018/texmf-dist/f
 onts/type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2018/texmf-dist/fonts
 /type1/public/kpfonts/jkpmne.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
-1/public/kpfonts/jkpmsc8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/p
-ublic/kpfonts/jkpsy.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
-kpfonts/jkpsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/kpfon
-ts/jkpttmn8a.pfb>
-Output written on research-v5.pdf (8 pages, 167507 bytes).
+1/public/kpfonts/jkpsy.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/publ
+ic/kpfonts/jkpsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/kp
+fonts/jkpttmn8a.pfb>
+Output written on research-v5.pdf (8 pages, 155274 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 291 compressed objects within 3 object streams
- 101 named destinations out of 1000 (max. 500000)
- 46709 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 312 PDF objects out of 1000 (max. 8388607)
+ 284 compressed objects within 3 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 40565 words of extra memory for PDF output out of 42996 (max. 10000000)
 

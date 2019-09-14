@@ -14,7 +14,7 @@
 \backcite {einLazarsfeld12}{{2}{2.2}{lemma.2.2}}
 \backcite {bruce19-semiample}{{2}{2.3}{lemma.2.3}}
 \backcite {einLazarsfeld12}{{2}{2.1}{lemma.2.3}}
-\backcite {cox95}{{3}{2.1}{lemma.2.3}}
+\backcite {cox95}{{2}{2.1}{lemma.2.3}}
 \backcite {eisenbudSchreyer09}{{3}{2.1}{lemma.2.3}}
 \backcite {berkesch13}{{3}{2.1}{lemma.2.3}}
 \backcite {oeding17}{{3}{2.1}{lemma.2.3}}
@@ -30,9 +30,8 @@
 \backcite {poonen04}{{5}{3.1}{subsection.3.1}}
 \backcite {bucurKedlaya12}{{5}{3.1}{subsection.3.1}}
 \backcite {bruceErman-sop}{{5}{3.2}{lemma.3.2}}
-\backcite {bruceErman-sop}{{5}{3.3}{lemma.3.3}}
-\backcite {gabberLiuLorenzini15}{{5}{3.1}{lemma.3.3}}
-\backcite {cmbpt}{{5}{3.1}{lemma.3.3}}
+\backcite {gabberLiuLorenzini15}{{5}{3.1}{lemma.3.2}}
+\backcite {cmbpt}{{5}{3.1}{lemma.3.2}}
 \backcite {bucurKedlaya12}{{5}{3.2}{subsection.3.2}}
-\backcite {bruceLi19}{{6}{3.4}{lemma.3.4}}
+\backcite {bruceLi19}{{5}{3.3}{lemma.3.3}}
 \backcite {ermanWood15}{{6}{3.3}{subsection.3.3}}

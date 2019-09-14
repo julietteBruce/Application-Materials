@@ -4,7 +4,7 @@
 
 \usepackage{url}
 \usepackage[colorlinks=true,hyperindex, linkcolor=magenta, pagebackref=false, citecolor=cyan]{hyperref}
-\usepackage[alphabetic,lite,backrefs]{amsrefs} 
+\usepackage[alphabetic,lite]{amsrefs} 
 
 \usepackage{eucal,bm,kpfonts,mathbbol}
 
@@ -268,12 +268,12 @@
 \newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
 
 
-\title{Research Statement}
+\title{Juliette Bruce's Research Statement}
 
-\author{Juliette Bruce}
-\address{Department of Mathematics, University of Wisconsin, Madison, WI}
-\email{\href{mailto:juliette.bruce@math.wisc.edu}{juliette.bruce@math.wisc.edu}}
-\urladdr{\url{http://math.wisc.edu/~juliettebruce/}}
+%\author{Juliette Bruce}
+%\address{Department of Mathematics, University of Wisconsin, Madison, WI}
+%\email{\href{mailto:juliette.bruce@math.wisc.edu}{juliette.bruce@math.wisc.edu}}
+%\urladdr{\url{http://math.wisc.edu/~juliettebruce/}}
 
 %\thanks{The author was partially supported by the NSF GRFP under Grant No. DGE-1256259 and NSF grant DMS-1502553.}
 
@@ -299,7 +299,7 @@ Given a graded module $M$ over a graded ring $R$, a helpful tool for understandi
 where each $F_{p}$ is a graded free $R$-module, and hence can be written as $\bigoplus_{q}R(-q)^{\beta_{p,q}}$. Note that $R(-q)$ is the ring $R$ with its grading twisted, so that $R(-q)_{d}$ is equal to $R_{d-q}$ where $R_{d-q}$, is the graded piece of degree $d-q$. The $\beta_{p,q}$'s are called the \textit{Betti numbers} of $M$, and they count number of $p$-syzygies of $M$ of degree $q$. We will often use syzygy and Betti number interchangeable throughout. 
 
 Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring $S_X=S/I_X$, where $S=\C[x_0,\ldots,x_r]$ and $I_X$ is the ideal of homogenous polynomials vanishing on $X$. As $S_X$ is naturally a graded $S$-module we may consider its minimal free resolution. The minimal graded free resolution of $X$ is often closely related to both the extrinsic and intrinsic geometry of $X$.  An example of this phenomena
- is Green's Conjecture, which relates the Clifford index of a canonical curve with the vanishing of certain $\beta_{p,q}$. The generic case of this conjecture was resolved by Voisin in characteristic zero \cite{voisin02, voisin05}, and was recently shown to be true over fields of characteristic $p>0$ for $p$ sufficiently large \cite{aproduFarkas19}.
+ is Green's Conjecture, which relates the Clifford index of a curve with the vanishing of certain $\beta_{p,q}$ for its canonical embedding. The generic case of this conjecture was resolved by Voisin in characteristic zero \cite{voisin02, voisin05}, and was recently shown to be true over fields of characteristic $p>0$ for $p$ sufficiently large \cite{aproduFarkas19}.
 
 %\begin{theorem}[\cite{voisin02}, \cite{voisin05}]
 %Let $C$ be a generic smooth projective curve of genus $g$ over a characteristic zero field embedded in $\P^{g-1}$ by the complete canonical series. Then the length of the first linear strand of the minimal free resolution of $I_X$ is $g-3-\text{Cliff}(C)$.
@@ -357,11 +357,11 @@ In particular, if $d_2$ is fixed and $d_1\to\infty$, then the limit of $\rho_{2}
 
 Based on results of Lemmens in the case of $\P^1\times\P^1$ together with my work has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the case of semi-ample growth $\rho_{q}\left(\P^{n}\times\P^{m}; \O_{\P^{n}\times\P^{m}}(d_1,d_2)\right)$ does not approach 1 as $d_{1}\to \infty$. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case. See \cite[Conjecture~7.1, Conjecture~7.5]{einLazarsfeld12}.
 
-The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld to explicitly construct a non-trivial syzygy after having quotiented by a regular sequence. Generalizing Ein, Erman, and Lazarsfeld's methods to a product of projective spaces is complicated by the unlike the cases consider in their paper there are no monomial regular sequences of length $(n+m+1)$ on either the $\Z^2$-graded Cox ring of $\P^{n}\times\P^{m}$, denoted $\Cox(\P^{n}\times\P^{m})$ (see \cite{cox95}), or the $\Z$-graded homogeneous coordinate ring of $\P^{n}\times\P^{m}$ embedded by $\O_{\P^{n}\times\P^{m}}(d_{1},d_{2})$.
+The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld to explicitly construct a non-trivial syzygy after having quotiented by a regular sequence. Generalizing Ein, Erman, and Lazarsfeld's methods to a product of projective spaces is complicated by the unlike the cases consider in their paper there are no monomial regular sequences of length $(n+m+1)$ on either the $\Z^2$-graded Cox ring of $\P^{n}\times\P^{m}$ (see \cite{cox95}), or the $\Z$-graded homogeneous coordinate ring of $\P^{n}\times\P^{m}$ embedded by $\O_{\P^{n}\times\P^{m}}(d_{1},d_{2})$.
 
-Thus, instead we work with a regular sequence first introduced by Eisenbud and Schreyer in their study of Boij-S\"{o}derberg theory \cite{eisenbudSchreyer09}, and later used in \cite{berkesch13, oeding17}. A central theme in my work is to utilize the fact that the ideal generated by the regular sequence is homogeneous with respect to several non-trivial non-standard gradings. These gradings, when combined with a series of spectral sequence arguments allow me to prove Theorem~\ref{thm:bruce-semiample}.
+Instead we work with a regular sequence first introduced by Eisenbud and Schreyer in their study of Boij-S\"{o}derberg theory \cite{eisenbudSchreyer09} and later used in \cite{berkesch13, oeding17}. A central theme in my work is to utilize the fact that the ideal generated by the regular sequence is homogeneous with respect to several non-trivial non-standard gradings. These gradings, when combined with a series of spectral sequence arguments allow me to prove Theorem~\ref{thm:bruce-semiample}.
 
-This work suggests that the theory of asymptotic syzygies in the setting of semi-ample growth is rich and substantially different from the other previously studied cases, and so, it is natural to ask how it might generalize to other examples. Thus, going forward I plan to use this previous work as a jumping-off point for the following question.  
+This work suggests that the theory of asymptotic syzygies in the setting of semi-ample growth is rich and substantially different from the other previously studied cases. Going forward I plan to use this previous work as a jumping-off point for the following question.  
 
 \begin{question}\label{quest:semi-ample}
 Let $X\subset \P^r$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq n$. If $(L_{d})_{d\in\N}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and semi-ample then what is:
@@ -406,9 +406,9 @@ A useful tool in approaching these questions is the ability to compute interesti
 
 \section{Varieties over Finite Fields}
 
-Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X$ is a smooth projective variety of dimension $n$ over $\C$ then Bertini's Theorem states that a generic hyperplane section of $X$ (i.e. $X\cap H$ for a generic hyperplane $H\subset \P^n$) will be smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Similar statements for connectedness, irreducibility, and other properties also fail over finite fields. 
+Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X$ is a smooth projective variety of dimension $n$ over $\C$ then Bertini's Theorem states that a generic hyperplane section of $X$ (i.e. $X\cap H$ for a generic hyperplane $H\subset \P^n$) will be smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Historically, the lack of such Bertini theorems over finite fields has made many results in algebraic geometry over finite fields more complicated. Bertini theorems are extremely useful as they often provide a basis for induction on dimension.
 
-Historically, the lack of such Bertini theorems over finite fields has made many results in algebraic geometry over finite fields more complicated. (Bertini theorems are extremely useful as they often provide a basis for induction on dimension.) However, using an ingenious probabilistic argument Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of possibly arbitrarily large degree a version of Bertini's Theorem for Smoothness (highlighted above) is true \cite{poonen04}. In the below theorem we write $\fF_{q}[x_{0},x_{1},\ldots,x_{r}]_{d}$ for the $\fF_{q}$-vector space of homogenous polynomials of degree $d$. 
+Using an ingenious probabilistic sieving argument Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of possibly arbitrarily large degree a version of Bertini's Theorem is true \cite{poonen04}. Below we write $\fF_{q}[x_{0},x_{1},\ldots,x_{r}]_{d}$ for the $\fF_{q}$-vector space of homogenous polynomials of degree $d$. 
 
 \begin{theorem}\cite{poonen04}*{Theorem~1.1}\label{thm:poonen}
 Let $X\subset \P^{r}_{\fF_{q}}$ be a projective variety of dimension $n$ then:
@@ -423,7 +423,7 @@ More specifically Poonen showed that as $d\to\infty$ the percentage of hypersurf
 
 \subsection{A Probabilistic Study of Systems of Parameters} 
 
-Given an $n$ dimensional projective variety $X\subset \P^r$ Noether normalization shows the existence of a finite (i.e. surjective with finite fibres) map $X\rightarrow \P^n$. The existence of such a map is equivalent to the existence of a collection of homogenous polynomials $f_{0},\ldots,f_{n}$ of degree $d$ such that $X\cap \V(f_{0},\ldots,f_{n})=\o$. Such a collection of polynomials is called a system of parameters, and over an infinite field any collection of generic homogenous polynomials is a system of parameters. However, when working over a finite field finding systems of parameters is more subtle. For example, unlike in the case of an infinite field, a priori, there is no effectively bound on the degrees $d$ for which systems of parameters exist. 
+Given an $n$ dimensional projective variety $X\subset \P^r$ Noether normalization shows the existence of a finite (i.e. surjective with finite fibres) map $X\rightarrow \P^n$. The existence of such a map is equivalent to the existence of a collection of homogenous polynomials $f_{0},\ldots,f_{n}$ of degree $d$ such that $X\cap \V(f_{0},\ldots,f_{n})=\o$. Such a collection of polynomials is called a system of parameters, and over an infinite field any collection of generic homogenous polynomials is a system of parameters. However, when working over a finite field finding systems of parameters is more subtle. For example, a priori, there is no effectively bound on the degrees $d$ for which systems of parameters exist. 
 
 Inspired by the work of Poonen \cite{poonen04} and Buccur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I explored the ubiquity of (partial) systems of parameters over finite fields from a probabilistic perspective. A partial system of parameters is a collection of homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ of degree $d$ such that $\dim X\cap \V(f_{0},f_{1},\ldots,f_{k}) = \dim X - (k+1)$. Phrased differently a collection of polynomials is a system of parameters on $X$ if they intersect $X$ in the expected dimension. 
 
@@ -437,14 +437,14 @@ Let $X\subseteq \P^r_{\fF_q}$ be a projective scheme of dimension $n$. Fix $e$ a
 \]
 \end{theorem}
 
-Notice that the power series on the right-hand side essentially enumerates subvarieties of dimension $n-k$. From this, it is possible to see that the main term determining the probability a randomly chosen set of homogenous polynomials forms a partial system of parameters is controlled by the number of $(n-k)$-planes contained in $X$. 
+Notice that the power series on the right-hand side essentially enumerates subvarieties of dimension $n-k$. The main term determining the probability a randomly chosen set of homogenous polynomials forms a partial system of parameters is controlled by the number of $(n-k)$-planes contained in $X$. 
 
-\begin{cor}\cite{bruceErman-sop}\label{cor:error}
-Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n$.  Then
-\[
-\lim_{d\to \infty} \frac{\Prob\left(\begin{matrix}(f_0,\dots,f_{k}) \text{ of degree $d$} \\ \text{ are \underline{not} parameters on $X$}\end{matrix}\right)} {q^{-(k+1)\binom{n-k+d}{n-k}}} = \#\left\{\begin{matrix}\text{$(n-k)$-planes } L\subseteq \P^r_{\fF_q}\\\text{such that }  L\subseteq X\end{matrix}\right\}.
-\]
-\end{cor} 
+%\begin{cor}\cite{bruceErman-sop}\label{cor:error}
+%Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n$.  Then
+%\[
+%\lim_{d\to \infty} \frac{\Prob\left(\begin{matrix}(f_0,\dots,f_{k}) \text{ of degree $d$} \\ \text{ are \underline{not} parameters on $X$}\end{matrix}\right)} {q^{-(k+1)\binom{n-k+d}{n-k}}} = \#\left\{\begin{matrix}\text{$(n-k)$-planes } L\subseteq \P^r_{\fF_q}\\\text{such that }  L\subseteq X\end{matrix}\right\}.
+%\]
+%\end{cor} 
 
 Using this analysis and a delicate Hilbert function argument we were also able to provide the first explicit bound for Noether normalization over a finite field. Further, we used these methods to give a new proof of recent results on Noether normalizations of projective families over $\Z$ and $\fF_{q}[t]$ \cite{gabberLiuLorenzini15, cmbpt}.
 
@@ -452,7 +452,7 @@ Using this analysis and a delicate Hilbert function argument we were also able t
 
 \subsection{Explicit Bertini Theorems and Jacobians Covering Abelian Varieties}
 
-Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve of bounded dimension. While Poonen's Bertini theorem shows that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve, it is not enough to provide an effective upper bound on the dimension of the covering Jacobian variety. This is because while Poonen's work shows the existence of a hypersurface $H$ such that $A\cap H$ is smooth it does not allow one to control the degree of the hypersurface $H$. 
+Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve of bounded dimension. While Poonen's Bertini theorem shows that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve, it is not enough to provide an effective upper bound on the dimension of the covering Jacobian variety. This is because while Poonen's work does not allow one to control the degree of the hypersurface need for a smooth section. 
 
 Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12} Li and I established an effective and explicit version of Poonen's Bertini theorem over finite fields. Using this theorem to control the degree of the hypersurface $H$, Li and I proved that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve whose dimension is bounded by an explicit constant. 
 
@@ -482,7 +482,7 @@ Let $X/\fF_{q}$ be a projective variety of dimension $n$. If $\left(L_{d}\right)
 \end{equation}
 \end{goalTheorem}
 
-We have verified this theorem in a number of examples ($X=\P^1\times\P^1$ and $X=\P^1\times\P^1\times\P^1$), and we are hopeful that similar methods might extend to all products of projective spaces or possibly whenever the nef cone of $X$ is a finitely generate polyhedral cone. That said it appears the more general case when $\Nef(X)$ is not finitely generated will require new techniques. 
+We have verified this theorem in a number of examples (e.g. $X=\P^1\times\P^1, X=\P^1\times\P^1\times\P^1$), and we are hopeful that similar methods will extend to all products of projective spaces or possibly whenever the nef cone of $X$ is a finitely generate polyhedral cone. That said it appears the more general case when $\Nef(X)$ is not finitely generated will require new techniques. 
 
 Viewing Poonen's Bertini Theorem as a statement on the existence of smooth sections for line bundles sufficiently twisted by an ample line bundle it is natural to ask the analogous question when twisting by arbitrary nef line bundles. In particular, inspired by Fujita's vanishing theorem and work of Erman and Wood the following conjecture is another natural version of Poonen's Bertini Theorem. 
 
@@ -519,7 +519,7 @@ Since the winter of 2018 I have led reading courses with three undergraduates th
 
 \subsection{A More Inclusive Community.} During the Fall of 2016 I pushed the Mathematics Department to form a committee on inclusivity and diversity. As a member of this committee, I took the lead in drafting a statement on the department's commitment to inclusivity and non-discrimination that was  accepted by the faculty at a department meeting. I also created template syllabi statements that let students know about these department polices, and that inform them of other campus resources that may be helpful. All teachers within the department are  encouraged to use these statements. 
 
-Over the summer of 2017, I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM. During my time leading oSTEM@UW, the group grew dramatically eventually having over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around, and I got to meet two people who were already in classes of mine! Thanks so much for organizing this stuff -- it's really helpful for me personally, and I believe it was encouraging for the others attending as well.'' Additionally, I organized and obtained a travel grant for 11 members -- including undergraduates -- to attend the annual national oSTEM Inc. conference. 
+Over the summer of 2017, I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM. During my time leading oSTEM@UW, the group grew dramatically eventually having over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around ... Thanks so much for organizing this stuff -- it's really helpful for me personally, and I believe it was encouraging for the others attending as well.'' Additionally, I organized and obtained a travel grant for 11 members -- including undergraduates -- to attend the annual national oSTEM Inc. conference. 
 
 Since 2017 I have been the organizer of the campus social organization for LGBTQ+ graduate and post-graduate students, which currently has over 350 members. In this role, I have co-organized a weekly coffee social hour intended to give LGBTQ+ graduate and post-graduates students a place to relax, make friends, and discussion the challenges of being LGBTQ+ at the UW - Madison.
 
