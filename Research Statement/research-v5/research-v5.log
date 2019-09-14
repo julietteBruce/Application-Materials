@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  12 SEP 2019 11:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 SEP 2019 09:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1597,14 +1597,6 @@ Package rkeyval Warning: Missing comma on input line 557.
 
 Package rkeyval Warning: Unknown key: \bib'day on input line 557.
 
-
-Package amsrefs Warning: Citation label for bruce19-semiample is changing from 
-`Bru19' to `Bru19a' on input line 638.
-
-
-Package amsrefs Warning: Citation label for green84-I is changing from `Gre84' 
-to `Gre84a' on input line 826.
-
 [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 976.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 976.
@@ -1621,11 +1613,11 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 976.
  ) 
 Here is how much of TeX's memory you used:
- 26427 strings out of 492649
- 499096 string characters out of 6129622
- 633293 words of memory out of 5000000
+ 26419 strings out of 492649
+ 499018 string characters out of 6129622
+ 633295 words of memory out of 5000000
  29115 multiletter control sequences out of 15000+600000
- 94617 words of font info for 399 fonts, out of 8000000 for 9000
+ 93893 words of font info for 393 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,14n,82p,1335b,664s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
@@ -1646,7 +1638,7 @@ onts/type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2018/texmf-dist/fonts
 ublic/kpfonts/jkpsy.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/
 kpfonts/jkpsyc.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/kpfon
 ts/jkpttmn8a.pfb>
-Output written on research-v5.pdf (9 pages, 169111 bytes).
+Output written on research-v5.pdf (9 pages, 168798 bytes).
 PDF statistics:
  324 PDF objects out of 1000 (max. 8388607)
  294 compressed objects within 3 object streams
