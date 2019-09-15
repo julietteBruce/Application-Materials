@@ -286,7 +286,7 @@
 
 %\tableofcontents
 
-\setcounter{section}{1}
+\setcounter{section}{0}
 
 My research interests lie in algebraic geometry, commutative algebra, and arithmetic geometry. In particular, I am interested in using homological methods to study the geometry of zero loci of systems of polynomials (i.e. algebraic varieties). Additionally, I am interested in studying the arithmetic properties of varieties over finite fields. I am passionate about promoting inclusivity, diversity, and justice in the mathematics community.
 
@@ -347,17 +347,17 @@ Let $X=\P^{n}\times\P^{m}$ and fix an index $1\leq q \leq n+m$. There exist cons
 \]
 \end{theorem}
 
-Notice in the setting of ample growth, this recovers the results of Ein and Lazarsfeld. In particular, if both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\P^{n}\times\P^{m}; \O_{\P^{n}\times\P^{m}}(d_1,d_2)\right)\to 1$. However, in the setting of semi-ample growth, i.e. $d_{1}$ is fixed and $d_{2}\to \infty$, my results bound the asymptotic percentage of non-zero syzygies away from zero. In particular, the asymptotic behavior is dependent, in a nuanced way, on the relationship between $d_{1}$ and $d_{2}$. 
+Notice in the setting of ample growth, this recovers the results of Ein and Lazarsfeld. In particular, if both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)\to 1$. However, in the setting of semi-ample growth, i.e. $d_{1}$ is fixed and $d_{2}\to \infty$, my results bound the asymptotic percentage of non-zero syzygies away from zero. In particular, the asymptotic behavior is dependent, in a nuanced way, on the relationship between $d_{1}$ and $d_{2}$. 
 
 For example, considering $\P^{1}\times\P^{5}$ and $q=2$ then Theorem~\ref{thm:bruce-semiample} shows that 
 \[
-\rho_{2}\left(\P^{1}\times\P^{5}; \O_{\P^{1}\times\P^{5}}(d_1,d_2)\right)\geq1-\frac{20}{d_2^2}-\frac{60}{d_1d_2^3}-\frac{5}{d_1d_2}-\frac{120}{d_2^4}-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right)\,.
+\rho_{2}\left(\P^{1}\times\P^{5}; \O(d_1,d_2)\right)\geq1-\frac{20}{d_2^2}-\frac{60}{d_1d_2^3}-\frac{5}{d_1d_2}-\frac{120}{d_2^4}-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right)\,.
 \]
-In particular, if $d_2$ is fixed and $d_1\to\infty$, then the limit of $\rho_{2}\left(\P^{1}\times\P^{5}; \O_{\P^{1}\times\P^{5}}(d_1,d_2)\right)$ is greater than or equal to $1-\frac{20}{d^2_2}-\frac{120}{d_2^4}$.
+Moreover, if $d_2$ is fixed and $d_1\to\infty$, then the limit of $\rho_{2}\left(\P^{1}\times\P^{5}; \O(d_1,d_2)\right)$ is greater than or equal to $1-\frac{20}{d^2_2}-\frac{120}{d_2^4}$.
 
-Based on results of Lemmens in the case of $\P^1\times\P^1$ together with my work has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the case of semi-ample growth $\rho_{q}\left(\P^{n}\times\P^{m}; \O_{\P^{n}\times\P^{m}}(d_1,d_2)\right)$ does not approach 1 as $d_{1}\to \infty$. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case. See \cite[Conjecture~7.1, Conjecture~7.5]{einLazarsfeld12}.
+Based on results of Lemmens in the case of $\P^1\times\P^1$ together with my work has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the case of semi-ample growth $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)$ does not approach 1 as $d_{1}\to \infty$. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case. See \cite[Conjecture~7.1, Conjecture~7.5]{einLazarsfeld12}.
 
-The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld to explicitly construct a non-trivial syzygy after having quotiented by a regular sequence. Generalizing Ein, Erman, and Lazarsfeld's methods to a product of projective spaces is complicated by the unlike the cases consider in their paper there are no monomial regular sequences of length $(n+m+1)$ on either the $\Z^2$-graded Cox ring of $\P^{n}\times\P^{m}$ (see \cite{cox95}), or the $\Z$-graded homogeneous coordinate ring of $\P^{n}\times\P^{m}$ embedded by $\O_{\P^{n}\times\P^{m}}(d_{1},d_{2})$.
+The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld to explicitly construct a non-trivial syzygy after having quotiented by a regular sequence. Generalizing Ein, Erman, and Lazarsfeld's methods to a product of projective spaces is complicated by the unlike the cases consider in their paper there are no monomial regular sequences of length $(n+m+1)$ on either the $\Z^2$-graded Cox ring of $\P^{n}\times\P^{m}$ (see \cite{cox95}), or the $\Z$-graded homogeneous coordinate ring of $\P^{n}\times\P^{m}$ embedded by $\O(d_{1},d_{2})$.
 
 Instead we work with a regular sequence first introduced by Eisenbud and Schreyer in their study of Boij-S\"{o}derberg theory \cite{eisenbudSchreyer09} and later used in \cite{berkesch13, oeding17}. A central theme in my work is to utilize the fact that the ideal generated by the regular sequence is homogeneous with respect to several non-trivial non-standard gradings. These gradings, when combined with a series of spectral sequence arguments allow me to prove Theorem~\ref{thm:bruce-semiample}.
 
@@ -374,7 +374,7 @@ A natural next case in which to consider Question~\ref{quest:semi-ample} is that
 
 \subsection{Syzygies via Highly Distributed Computing}
 
-Iturns out to be quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. That said it turns out that the problem computing syzygies can be reduced to computing the ranks of a number of matrices. However, the reduction has generally proven intractable because the number of matrices and their sizes quickly become extremely large. For example, to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
+It turns out to be quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. That said it turns out that the problem computing syzygies can be reduced to computing the ranks of a number of matrices. However, the reduction has generally proven intractable because the number of matrices and their sizes quickly become extremely large. For example, to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
 
 My co-authors and I exploited recent advances in numerical linear algebra and high throughput high-performance computing to overcome these challenges and compute a number of new examples of Veronese syzygies. This data provided support for several existing conjectures, as well as led us to conjecture previously unseen relationships between the representation theory and syzygies of Veronese embeddings \cite{bruceErmanGoldsteinYang18}. 
 The data resulting from this project has been made publicly available via the website SyzygyData.com, as well as, a package for the computer algebra system Macaualy2 \cite{bruceErman19}.
@@ -390,17 +390,20 @@ While the liaison theory of curves in $\P^3$ is well understood the same theory 
 
 In ongoing work with Christine Berkesch and Patricia Klein, I hope to use the newly developed theory of virtual resolutions to better understand the linkage theory of curves in toric 3-folds. Broadly a virtual resolution is a homological representation of a finitely graded module over the Cox ring of a smooth toric variety that attempts to overcome the challenges mentioned in the previous paragraph by allowing a certain amount of homology \cite{berkeschErmanSmith17}. Using these we hope to generalize existing results about the liaison theory of  curves in $\P^3$ to curves in $\P^1\times\P^2$. 
 
-For example, it is possible to define a notation of virtual Cohen-Macaulay for finitely generated graded modules over the Cox ring of a smooth toric variety. We would thus like to prove the following virtual version of Peskine and Szpiro's result showing that being Cohen-Macaulay is preserved under linkage \cite{peskineSzpiro74}. 
+Ambitiously we hope to use virtual resolutions to find a way to classify liaison classes of curves in $\P^1\times\P^2$ analogous to Rao modules \cite{rao78}. In particular, we would like to answer the following question. 
+ 
+\begin{question}
+What classifies even liaison classes of curves in $\P^1\times\P^2$?
+\end{question}
+
+Using virtual resolutions we have managed to construct an analog of Rao modules, which answer this question under a fairly restrictive hypothesis on Betti numbers. Going forward we hope to explore whether this hypothesis can be weakened, and our construction generalized. 
+
+Further, for any homological property associated to free resolutions it is possible to define an analogous virtual property associated to a virtual resolutions.  Klein, Berkesch, and I have proposed a definition of \textit{virtual Cohen-Macaulay} for finitely generated graded modules over the Cox ring of a smooth toric variety. We would thus like to prove the following virtual version of Peskine and Szpiro's result showing that being Cohen-Macaulay is preserved under linkage \cite{peskineSzpiro74}. 
 
 \begin{goalTheorem}
 Let $C$ and $C'$ be linked curves in $\P^1\times\P^2$ then $C$ is virtually Cohen-Macaulay if and only if $C'$ is virtually Cohen-Macaualy.
 \end{goalTheorem}
 
-Slightly more ambitiously we hope to use virtual resolutions to find a way to classify liaison classes of curves in $\P^1\times\P^2$ analogous to Rao modules \cite{rao78}. In particular, we would like to answer the following question. 
- 
-\begin{question}
-What classifies even liaison classes of curves in $\P^1\times\P^2$?
-\end{question}
 
 A useful tool in approaching these questions is the ability to compute interesting examples via the computer algebra system Macaualy2. These computations are made substantially easier thanks to the  \texttt{VirtualResolutions} package for Macaulay2, which I co-authored \cite{almousaBruce19}. This contains tools to construct, display, and study virtual resolutions for products of projective spaces, as well as tools for generating curves in $\P^1\times\P^2$. 
 
@@ -408,7 +411,7 @@ A useful tool in approaching these questions is the ability to compute interesti
 
 Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X$ is a smooth projective variety of dimension $n$ over $\C$ then Bertini's Theorem states that a generic hyperplane section of $X$ (i.e. $X\cap H$ for a generic hyperplane $H\subset \P^n$) will be smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Historically, the lack of such Bertini theorems over finite fields has made many results in algebraic geometry over finite fields more complicated. Bertini theorems are extremely useful as they often provide a basis for induction on dimension.
 
-Using an ingenious probabilistic sieving argument Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of possibly arbitrarily large degree a version of Bertini's Theorem is true \cite{poonen04}. Below we write $\fF_{q}[x_{0},x_{1},\ldots,x_{r}]_{d}$ for the $\fF_{q}$-vector space of homogenous polynomials of degree $d$. 
+Using an ingenious probabilistic sieving argument Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of possibly arbitrarily large degree a version of Bertini's Theorem is true \cite{poonen04}. More specifically Poonen showed that as $d\to\infty$ the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{n}$ of degree $d$ such that $X\cap H$ is smooth is determined by Hasse-Weil zeta function of $X$. Below we write $\fF_{q}[x_{0},x_{1},\ldots,x_{r}]_{d}$ for the $\fF_{q}$-vector space of homogenous polynomials of degree $d$. 
 
 \begin{theorem}\cite{poonen04}*{Theorem~1.1}\label{thm:poonen}
 Let $X\subset \P^{r}_{\fF_{q}}$ be a projective variety of dimension $n$ then:
@@ -418,16 +421,12 @@ Let $X\subset \P^{r}_{\fF_{q}}$ be a projective variety of dimension $n$ then:
 \end{equation}
 \end{theorem}
 
-More specifically Poonen showed that as $d\to\infty$ the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{n}$ of degree $d$ such that $X\cap H$ is smooth is determined by Hasse-Weil zeta function of $X$. Notice that it makes sense to discuss the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{n}$ of degree $d$ such that $X\cap H$ is smooth since over a finite field there are finitely many hypersurfaces of a given degree.
-
 
 \subsection{A Probabilistic Study of Systems of Parameters} 
 
-Given an $n$ dimensional projective variety $X\subset \P^r$ Noether normalization shows the existence of a finite (i.e. surjective with finite fibres) map $X\rightarrow \P^n$. The existence of such a map is equivalent to the existence of a collection of homogenous polynomials $f_{0},\ldots,f_{n}$ of degree $d$ such that $X\cap \V(f_{0},\ldots,f_{n})=\o$. Such a collection of polynomials is called a system of parameters, and over an infinite field any collection of generic homogenous polynomials is a system of parameters. However, when working over a finite field finding systems of parameters is more subtle. For example, a priori, there is no effectively bound on the degrees $d$ for which systems of parameters exist. 
+Given an $n$ dimensional projective variety $X\subset \P^r$ a collection of homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ of degree $d$ is a (partial) system of parameters if $\dim X\cap \V(f_{0},f_{1},\ldots,f_{k}) = \dim X - (k+1)$. Systems of parameters are closely tied to Noether normalization as the existence of a finite (i.e. surjective with finite fibers) map $X\rightarrow \P^n$ is equivalent to the existence of system of parameters of length $n+1$. Over an infinite field any collection of generic homogenous polynomials is a system of parameters. However, when working over a finite field finding systems of parameters is subtle. For example, a priori, there is no effectively bound on the degrees for which systems of parameters exist. 
 
-Inspired by the work of Poonen \cite{poonen04} and Buccur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I explored the ubiquity of (partial) systems of parameters over finite fields from a probabilistic perspective. A partial system of parameters is a collection of homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ of degree $d$ such that $\dim X\cap \V(f_{0},f_{1},\ldots,f_{k}) = \dim X - (k+1)$. Phrased differently a collection of polynomials is a system of parameters on $X$ if they intersect $X$ in the expected dimension. 
-
-Adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we computed the asymptotic probability that randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ form a system of parameters. Doing this we showed that when $k<n$ the probability randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by zeta function like power series that enumerates higher dimensional varieties instead of closed points. In the following theorem, $|Z|$ denotes the number of irreducible components of a scheme $Z$, and we write $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
+Inspired by the work of Poonen \cite{poonen04} and Buccur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I explored the ubiquity of (partial) systems of parameters over finite fields from a probabilistic perspective. Adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we computed the asymptotic probability that randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ form a system of parameters. Doing this we showed that when $k<n$ the probability randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by zeta function like power series that enumerates higher dimensional varieties instead of closed points. In the following theorem, $|Z|$ denotes the number of irreducible components of a scheme $Z$, and we write $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
 
 \begin{theorem}\cite{bruceErman-sop}*{Theorem~1.4}\label{thm:main finite field}
 Let $X\subseteq \P^r_{\fF_q}$ be a projective scheme of dimension $n$. Fix $e$ and let $k<n$. The probability that random polynomials $f_0,f_1,\dots,f_k$ of degree $d$ are parameters on $X$ is
@@ -477,7 +476,12 @@ Work of Erman and Wood on semi-ample Bertini Theorems shows that such an analog 
 \begin{goalTheorem}\label{gthm:effective-bertini}
 Let $X/\fF_{q}$ be a projective variety of dimension $n$. If $\left(L_{d}\right)_{d\in\N}$ is a sequence of line bundles on $X$ going to infinity in all directions then 
 \begin{equation}
-\lim_{d\to \infty} \Prob\left(\begin{matrix} f\in H^0\left(X, L_{d}\right) \\ \text{$X\cap \V(f)$ is smooth of dimension $n-1$}\end{matrix}\right)=
+\lim_{d\to \infty} \Prob\left(f \in H^0\left(X, L_{d}\right)  \;\;\; \bigg| \;\;\; 
+\begin{matrix}
+ \text{$X\cap\V(f)$ is smooth}\\
+ \text{of dimension $n-1$}
+ \end{matrix}
+\right)=
 \zeta_X(n+1)^{-1}.
 \end{equation}
 \end{goalTheorem}
@@ -492,10 +496,10 @@ Viewing Poonen's Bertini Theorem as a statement on the existence of smooth secti
 \left\{
 f \in H^0\left(X, \cL(k)\otimes \cD\right) \quad \bigg| \quad 
 \begin{matrix}
- \text{$X\cap H_{f}$ is smooth}\\
+ \text{$X\cap\V(f)$ is smooth}\\
  \text{of dimension $n-1$}
  \end{matrix}
-\right\}
+\right\}\neq\o
 \end{equation}
 for all $k\geq m(\cL)$ and all $\cD\in \Nef(X)$. 
  \end{conj}
