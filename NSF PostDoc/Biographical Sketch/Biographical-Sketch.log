@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  11 SEP 2019 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 SEP 2019 09:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -386,11 +386,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 138.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 183.
+(Font)              <10.95> on input line 198.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (1.36401pt too wide) in paragraph at lines 236--240
+Overfull \hbox (1.36401pt too wide) in paragraph at lines 242--246
 []\T1/ptm/b/n/10.95 Work on In-clu-sion & Di-ver-sity: \T1/ptm/m/n/10.95 (i) Or
 -ga-nizer of \T1/ptm/m/it/10.95 qGrads\T1/ptm/m/n/10.95 , the cam-pus so-cial o
 r-ga-ni-za-tion for LGBTQ+
@@ -399,20 +399,20 @@ r-ga-ni-za-tion for LGBTQ+
 
 AED: lastpage setting LastPage
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 277.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 277.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
  (./Biographical-Sketch.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 277.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 277.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
 Package rerunfilecheck Info: File `Biographical-Sketch.out' has not changed.
-(rerunfilecheck)             Checksum: DC04596CCB9A9D2D3F4E591487975AA2;303.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 277.
+(rerunfilecheck)             Checksum: 202ABBD23A5F79F53AA5423BD65428D9;325.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
  ) 
 Here is how much of TeX's memory you used:
- 6420 strings out of 492649
- 94573 string characters out of 6129622
+ 6419 strings out of 492649
+ 94547 string characters out of 6129622
  196247 words of memory out of 5000000
- 10220 multiletter control sequences out of 15000+600000
+ 10219 multiletter control sequences out of 15000+600000
  22525 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,11n,43p,307b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -422,7 +422,7 @@ xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
 ive/2018/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on Biographical-Sketch.pdf (2 pages, 71628 bytes).
+Output written on Biographical-Sketch.pdf (2 pages, 70298 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  79 compressed objects within 1 object stream
