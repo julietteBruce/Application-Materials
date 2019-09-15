@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 SEP 2019 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 SEP 2019 13:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1052,23 +1052,27 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
 Package amsrefs Warning: Use of \cites is recommended instead of \cite 
-(amsrefs)                for multiple cites 'voisin02, voisin05' on input line 
-302.
+(amsrefs)                for multiple cites 'voisin02, voisin05, aproduFarkas19
+' on input line 302.
 
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package amsrefs Warning: The form \cite{...}*{...} is recommended
 (amsrefs)                instead of \cite[...]{...} on input line 358.
 
-
-LaTeX Warning: Citation `cox95' on page 2 undefined on input line 360.
-
+[2] [3]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[2] [3] [4]
-Overfull \hbox (3.7761pt too wide) detected at line 436
+
+Overfull \hbox (21.9343pt too wide) in paragraph at lines 403--404
+\OT1/cmr/m/n/10.95 (-20) puter al-ge-bra sys-tem Macaualy2. These com-pu-ta-tio
+ns are made eas-ier thanks to the \OT1/cmtt/m/n/10.95 VirtualResolutions
+ []
+
+[4]
+Overfull \hbox (3.7761pt too wide) detected at line 431
 [] [] \OT1/cmr/m/n/10.95 = 1  \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OM
 S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
 /10.95 + \OML/cmm/m/it/10.95 o [] :
@@ -1076,79 +1080,72 @@ S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
 
 [5]
 
-LaTeX Warning: Command \o invalid in math mode on input line 501.
+LaTeX Warning: Command \o invalid in math mode on input line 496.
 
 [6] [7]
 
-Package rkeyval Warning: Unknown key: \bib'month on input line 553.
+Package rkeyval Warning: Unknown key: \bib'month on input line 548.
 
 
-Package rkeyval Warning: Missing comma on input line 554.
+Package rkeyval Warning: Missing comma on input line 549.
 
 
-Package rkeyval Warning: Unknown key: \bib'day on input line 554.
+Package rkeyval Warning: Unknown key: \bib'day on input line 549.
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 635--635
+Underfull \hbox (badness 2573) in paragraph at lines 630--630
 []\OT1/cmr/m/n/9 (+20) Juliette Bruce, \OT1/cmr/m/it/9 (+20) As-ymp-totic syzy-
 gies in the set-ting of semi-ample growth \OT1/cmr/m/n/9 (+20) (2019). Pre-prin
 t:
  []
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 961.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 961.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 956.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 956.
  (./research-v6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 961.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 961.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 956.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 956.
 Package rerunfilecheck Info: File `research-v6.out' has not changed.
 (rerunfilecheck)             Checksum: BBF4F24BFE63026C5AEF5245D6AD7BC8;955.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 961.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 956.
  ) 
 Here is how much of TeX's memory you used:
- 24951 strings out of 492649
- 480547 string characters out of 6129622
- 637958 words of memory out of 5000000
- 27938 multiletter control sequences out of 15000+600000
- 19819 words of font info for 130 fonts, out of 8000000 for 9000
+ 24938 strings out of 492649
+ 480417 string characters out of 6129622
+ 637953 words of memory out of 5000000
+ 27932 multiletter control sequences out of 15000+600000
+ 19173 words of font info for 126 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,14n,82p,1097b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.cox95} has been referenced but does not exis
-t, replaced by a fixed one
-
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/te
-xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
-18/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2018/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2018/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/texmf
--dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2018/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-v6.pdf (8 pages, 310755 bytes).
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2018/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2018/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2018/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on research-v6.pdf (8 pages, 296212 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 299 compressed objects within 3 object streams
- 99 named destinations out of 1000 (max. 500000)
- 19061 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 327 PDF objects out of 1000 (max. 8388607)
+ 293 compressed objects within 3 object streams
+ 98 named destinations out of 1000 (max. 500000)
+ 16501 words of extra memory for PDF output out of 17280 (max. 10000000)
 
