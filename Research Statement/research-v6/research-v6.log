@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 SEP 2019 13:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  16 SEP 2019 13:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1080,47 +1080,52 @@ S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
 
 [5]
 
-LaTeX Warning: Command \o invalid in math mode on input line 496.
+LaTeX Warning: Command \o invalid in math mode on input line 498.
 
 [6] [7]
 
-Package rkeyval Warning: Unknown key: \bib'month on input line 548.
+Package rkeyval Warning: Unknown key: \bib'month on input line 549.
 
 
-Package rkeyval Warning: Missing comma on input line 549.
+Package rkeyval Warning: Missing comma on input line 550.
 
 
-Package rkeyval Warning: Unknown key: \bib'day on input line 549.
+Package rkeyval Warning: Unknown key: \bib'day on input line 550.
 
 
-Underfull \hbox (badness 2573) in paragraph at lines 630--630
+Underfull \hbox (badness 2573) in paragraph at lines 631--631
 []\OT1/cmr/m/n/9 (+20) Juliette Bruce, \OT1/cmr/m/it/9 (+20) As-ymp-totic syzy-
 gies in the set-ting of semi-ample growth \OT1/cmr/m/n/9 (+20) (2019). Pre-prin
 t:
  []
 
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 956.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 956.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1015.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1015.
  (./research-v6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 956.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 956.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1015.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1015.
+
 Package rerunfilecheck Info: File `research-v6.out' has not changed.
 (rerunfilecheck)             Checksum: BBF4F24BFE63026C5AEF5245D6AD7BC8;955.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 956.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1015.
  ) 
 Here is how much of TeX's memory you used:
- 24938 strings out of 492649
- 480417 string characters out of 6129622
- 637953 words of memory out of 5000000
- 27932 multiletter control sequences out of 15000+600000
- 19173 words of font info for 126 fonts, out of 8000000 for 9000
+ 24963 strings out of 492649
+ 480797 string characters out of 6129622
+ 638015 words of memory out of 5000000
+ 27944 multiletter control sequences out of 15000+600000
+ 19332 words of font info for 128 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,14n,82p,1097b,660s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,12n,82p,1097b,713s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
@@ -1142,10 +1147,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf
 ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2018/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-v6.pdf (8 pages, 296212 bytes).
+Output written on research-v6.pdf (9 pages, 297180 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 344 PDF objects out of 1000 (max. 8388607)
+ 308 compressed objects within 4 object streams
+ 107 named destinations out of 1000 (max. 500000)
  16501 words of extra memory for PDF output out of 17280 (max. 10000000)
 

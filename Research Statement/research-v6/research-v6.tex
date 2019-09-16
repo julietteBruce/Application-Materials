@@ -309,11 +309,11 @@ Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring 
 
 Much of my work has focused on studying the asymptotic properties of syzygies of projective varieties. Broadly speaking asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. In many ways, this perspective dates back to classical work on the defining equations of curves of high degree and projective normality \cite{mumford66, mumford70}. However, the modern take viewpoint arose from the pioneering work of Green \cite{green84-I, green84-II} and later Ein and Lazarsfeld \cite{einLazarsfeld12}. 
 
-In order to give a flavor of the results of asymptotic syzygies we will focus on the question of in what degrees do non-zero syzygies occur. Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Further, following \cite{ermanYang18} we set, 
-\begin{align*}
-\rho_q\left(X;L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}}.
-\end{align*}
-which by the Hilbert Syzygy Theorem is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. For any particular, $X$, $L_{d}$, and $q$ computing $\rho_{q}(X;L_{d})$ is often quite difficult. The asymptotic perspective thus, asks instead, to consider a sequence of line bundles $(L_{d})_{d\in \N}$ and ask how $\rho_{q}(X;L_{d})$ behaves along the sequence of $(L_{d})_{d\in \N}$. 
+In order to give a flavor of the results of asymptotic syzygies we will focus on the question of in what degrees do non-zero syzygies occur. Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Further, following \cite{ermanYang18} we set $\rho_q\left(X;L_{d}\right)$ the percentage of degrees in which non-zero syzygies appear. For any particular, $X$, $L_{d}$, and $q$ computing $\rho_{q}(X;L_{d})$ is often quite difficult. The asymptotic perspective thus, asks instead, to consider a sequence of line bundles $(L_{d})_{d\in \N}$ and ask how $\rho_{q}(X;L_{d})$ behaves along the sequence. 
+%\begin{align*}
+%\rho_q\left(X;L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}}.
+%\end{align*}
+%which by the Hilbert Syzygy Theorem is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. For any particular, $X$, $L_{d}$, and $q$ computing $\rho_{q}(X;L_{d})$ is often quite difficult. The asymptotic perspective thus, asks instead, to consider a sequence of line bundles $(L_{d})_{d\in \N}$ and ask how $\rho_{q}(X;L_{d})$ behaves along the sequence of $(L_{d})_{d\in \N}$. 
 
 With this notation in hand, we may phrase Green's work on the vanishing of syzygies for curves of high degree as computing the asymptotic percentage of non-zero quadratic syzygies. 
 
@@ -324,7 +324,7 @@ Let $X\subset \P^r$ be a smooth projective curve. If $(L_{d})_{d\in\N}$ is seque
 \]
 \end{theorem}
 
-Put differently Green showed that the syzygies of curves of high degree are as simple as possible, in that they occur only in the lowest possible degrees. This inspired substantial work on $N_{p}$ conditions, with the intuition being that syzygies should become simpler as the positivity of an embedding increases \cite{ottavianiPaoletti01, einLazarsfeld93}.  
+Put differently Green showed that the syzygies of curves of high degree are as simple as possible, ioccuring only in the lowest possible degrees. This inspired substantial work on $N_{p}$ conditions, with the intuition being that syzygies become simpler as the positivity of an embedding increases \cite{ottavianiPaoletti01, einLazarsfeld93, lazarsfeldPareschiPopa11, pareschi00, pareschiPopa03, pareschiPopa04}.  
 
 In their groundbreaking paper, Ein and Lazarsfeld showed that for higher dimensional varieties this intuition is often misleading. Contrary to the case of curves, they show that for higher dimensional varieties  asymptotically syzygies appear in every possible degree. 
   
@@ -453,10 +453,11 @@ Fix $r,n\in \N$ with $n\geq2$, and let $\fF_{q}$ be a finite field of characteri
 \[
 C_{r,q}\zeta_{A}\left(n+\tfrac{1}{2}\right) \deg(A) \leq  \frac{q^{\frac{d}{\max\{n+1,p\}}}d}{d^{n+1}+d^n+q^{d}},
 \]
-there exists a smooth geometrically connected curve over $\fF_{q}$ whose Jacobian $J$ maps dominantly onto $A$, where 
+there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively onto $A$, where 
 \[
 \dim J\leq 
-\OO\left(\frac{ \deg(A)^2 d^{2(n-1)}}{r}\right).
+%\OO\left(\frac{ \deg(A)^2 d^{2(n-1)}}{r}\right).
+\OO\left( \deg(A)^2 d^{2(n-1)}r^{-1}\right).
 \]
 \end{theorem} 
 
@@ -485,7 +486,8 @@ Inspired by Fujita's vanishing theorem and work of Erman and Wood the following 
 
 
  \begin{conj}
- Let $X/\fF_{q}$ be a projective variety of dimension $n$ and $\cL$ be an ample line bundle on $X$. There exists an integer $m(\cL)$ such that 
+ Let $X/\fF_{q}$ be a projective variety of dimension $n$ and $\cL$ be an ample line bundle on $X$. There exists an integer $m(\cL)$ such that for all $k\geq m(\cL)$ and all $\cD\in \Nef(X)$. 
+
 \begin{equation}
 \left\{
 f \in H^0\left(X, \cL(k)\otimes \cD\right) \quad \bigg| \quad 
@@ -493,9 +495,8 @@ f \in H^0\left(X, \cL(k)\otimes \cD\right) \quad \bigg| \quad
  \text{$X\cap\V(f)$ is smooth}\\
  \text{of dimension $n-1$}
  \end{matrix}
-\right\}\neq\o
+\right\}\neq\o.
 \end{equation}
-for all $k\geq m(\cL)$ and all $\cD\in \Nef(X)$. 
  \end{conj}
 
 
@@ -817,6 +818,22 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
 %   review={\MR{772134}},
 }
 
+\bib{lazarsfeldPareschiPopa11}{article}{
+   author={Lazarsfeld, Robert},
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Local positivity, multiplier ideals, and syzygies of abelian
+   varieties},
+   journal={Algebra Number Theory},
+   volume={5},
+   date={2011},
+   number={2},
+   pages={185--196},
+%   issn={1937-0652},
+%   review={\MR{2833789}},
+%   doi={10.2140/ant.2011.5.185},
+}
+
 \bib{M2}{misc}{
     label={M2},
     author={Grayson, Daniel~R.},
@@ -880,8 +897,50 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
 %   doi={10.1023/A:1002662809474},
 }
 	
-	
+\bib{pareschi00}{article}{
+   author={Pareschi, Giuseppe},
+   title={Syzygies of abelian varieties},
+   journal={J. Amer. Math. Soc.},
+   volume={13},
+   date={2000},
+   number={3},
+   pages={651--664},
+%   issn={0894-0347},
+%   review={\MR{1758758}},
+%   doi={10.1090/S0894-0347-00-00335-0},
+}
 
+\bib{pareschiPopa03}{article}{
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Regularity on abelian varieties. I},
+   journal={J. Amer. Math. Soc.},
+   volume={16},
+   date={2003},
+   number={2},
+   pages={285--302},
+%   issn={0894-0347},
+%   review={\MR{1949161}},
+%   doi={10.1090/S0894-0347-02-00414-9},
+}
+
+
+\bib{pareschiPopa04}{article}{
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Regularity on abelian varieties. II. Basic results on linear
+   series and defining equations},
+   journal={J. Algebraic Geom.},
+   volume={13},
+   date={2004},
+   number={1},
+   pages={167--193},
+%   issn={1056-3911},
+%   review={\MR{2008719}},
+%   doi={10.1090/S1056-3911-03-00345-X},
+}
+	
+	
 \bib{peskineSzpiro74}{article}{
    author={Peskine, C.},
    author={Szpiro, L.},
