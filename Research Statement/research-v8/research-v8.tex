@@ -313,7 +313,7 @@ Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring 
 
 Much of my work has focused on studying the asymptotic properties of syzygies of projective varieties. Broadly speaking asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. In many ways, this perspective dates back to classical work on the defining equations of curves of high degree and projective normality \cite{mumford66, mumford70}. However, the modern viewpoint arose from the pioneering work of Green \cite{green84-I, green84-II} and later Ein and Lazarsfeld \cite{einLazarsfeld12}. 
 
-To give a flavor of the results of asymptotic syzygies we will focus on the question of in what degrees do non-zero syzygies occur. Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Following \cite{ermanYang18} we set $\rho_q\left(X;L_{d}\right)$ to be the percentage of degrees in which non-zero syzygies appear. For any particular, $X$, $L_{d}$, and $q$ computing $\rho_{q}(X;L_{d})$ is often quite difficult. The asymptotic perspective. thus instead, considers a sequence of line bundles $(L_{d})_{d\in \N}$ and asks how $\rho_{q}(X;L_{d})$ behaves along the sequence. 
+To give a flavor of the results of asymptotic syzygies we will focus on the question of in what degrees do non-zero syzygies occur. Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Following \cite{ermanYang18} we set $\rho_q\left(X;L_{d}\right)$ to be the percentage of degrees in which non-zero syzygies appear. The asymptotic perspective considers a sequence of line bundles $(L_{d})_{d\in \N}$ and asks how $\rho_{q}(X;L_{d})$ behaves along the sequence. 
 %\begin{align*}
 %\rho_q\left(X;L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}}.
 %\end{align*}
@@ -362,12 +362,13 @@ Notice in the setting of ample growth, this recovers the results of Ein and Laza
 
 %Results of Lemmens in the case of $\P^1\times\P^1$ together with my work has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the case of semi-ample growth $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)$ does not approach 1 as $d_{1}\to \infty$. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case. See \cite[Conjecture~7.1, Conjecture~7.5]{einLazarsfeld12}.
 
-The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld. Such a generalization is complicated by the fact \juliette{FINISH}. A central theme in my work is to exploit the fact that the regular sequence I use has a number of non-trivial symmetries. These symmetries, when combined with a series of spectral sequence arguments, allow me to prove Theorem~\ref{thm:bruce-semiample}.
+The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld. Such a generalization is complicated by the difference between the Cox ring and homogenous coordinate ring of $\P^{n}\times\P^{m}$. A central theme in my work is to exploit the fact that the regular sequence I use has a number of non-trivial symmetries. 
+%These symmetries, when combined with a series of spectral sequence arguments, allow me to prove Theorem~\ref{thm:bruce-semiample}.
 
 This work suggests that the theory of asymptotic syzygies in the setting of semi-ample growth is rich and substantially different from the other previously studied cases. Going forward I plan to use this previous work as a jumping-off point for the following question.  
 
 \begin{question}\label{quest:semi-ample}
-Let $X\subset \P^r$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq n$. Let $(L_{d})_{d\in\N}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and semi-ample compute $\lim_{d\to\infty} \rho_{q}\left(X;L_{d}\right)$?
+Let $X\subset \P^{r_d}$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq n$. Let $(L_{d})_{d\in\N}$ be a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and semi-ample compute $\lim_{d\to\infty} \rho_{q}\left(X;L_{d}\right)$?
 \end{question}
 
 A natural next case in which to consider Question~\ref{quest:semi-ample} is that of Hirzebruch surfaces. I addressed a different, but related question for a narrow class of Hirzebruch surfaces in \cite{bruce19-hirzebruch}.
@@ -400,7 +401,7 @@ What invariant classifies even liaison classes of curves in $\P^1\times\P^2$?
 
 Using virtual resolutions we have managed to answer this question under a fairly restrictive hypothesis. We hope to explore whether this hypothesis can be weakened. 
 
-For any homological property associated to free resolutions (e.g. Cohen-Macaulay), it is possible to define an analogous virtual property associated to virtual resolutions (e.g. virtual Cohen-Macaulay). We would like to prove the following virtual version of Peskine and Szpiro's result showing that being Cohen-Macaulay is preserved under linkage \cite{peskineSzpiro74}. 
+For any homological property associated to free resolutions (e.g. Cohen-Macaulay), it is possible to define an analogous virtual property associated to virtual resolutions (e.g. virtual Cohen-Macaulay). We would like to prove the following virtual version of a result of Peskine and Szpiro \cite{peskineSzpiro74}. 
 
 \begin{goalTheorem}\label{goalTheorem:virtualACM}
 Let $C$ and $C'$ be linked curves in $\P^1\times\P^2$ then $C$ is virtually Cohen-Macaulay if and only if $C'$ is virtually Cohen-Macaualy.
