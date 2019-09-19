@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  19 SEP 2019 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  19 SEP 2019 12:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1078,36 +1078,36 @@ S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
 
 [4]
 
-LaTeX Warning: Command \o invalid in math mode on input line 505.
+LaTeX Warning: Command \o invalid in math mode on input line 504.
 
 [5] [6]
 
-Package rkeyval Warning: Unknown key: \bib'month on input line 559.
+Package rkeyval Warning: Unknown key: \bib'month on input line 558.
 
 
-Package rkeyval Warning: Missing comma on input line 560.
+Package rkeyval Warning: Missing comma on input line 559.
 
 
-Package rkeyval Warning: Unknown key: \bib'day on input line 560.
+Package rkeyval Warning: Unknown key: \bib'day on input line 559.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1040.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1040.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1039.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1039.
  (./research-v8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1040.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1040.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1039.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1039.
 
 Package rerunfilecheck Info: File `research-v8.out' has not changed.
-(rerunfilecheck)             Checksum: 3B2EF1A3E7EE2294BDB162A02E0269E0;1033.
+(rerunfilecheck)             Checksum: A4154DE8E0E3E35094B0098DC49E3554;1034.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1040.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1039.
  ) 
 Here is how much of TeX's memory you used:
  24960 strings out of 492649
@@ -1135,7 +1135,7 @@ e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
 8/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-v8.pdf (8 pages, 252105 bytes).
+Output written on research-v8.pdf (8 pages, 252073 bytes).
 PDF statistics:
  338 PDF objects out of 1000 (max. 8388607)
  306 compressed objects within 4 object streams

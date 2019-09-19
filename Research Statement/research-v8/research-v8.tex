@@ -349,7 +349,7 @@ Let $X=\P^{n}\times\P^{m}$ and fix an index $1\leq q \leq n+m$. There exist cons
 \]
 \end{theorem}
 
-Notice in the setting of ample growth, this recovers the results of Ein and Lazarsfeld for $\P^n\times\P^m$. In particular, if both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)\to 1$. However, in the setting of semi-ample growth, i.e. if $d_{1}$ is fixed and $d_{2}\to \infty$, my results bound the asymptotic percentage of non-zero syzygies away from zero. My work together with results of Lemmens \cite{lemmens18} has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the semi-ample setting $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)$ does not approach 1. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case  \cite[Conjecture~7.1, Conjecture~7.5]{einLazarsfeld12}.
+Notice in the setting of ample growth, this recovers the results of Ein and Lazarsfeld for $\P^n\times\P^m$. In particular, if both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)\to 1$. However, in the setting of semi-ample growth, i.e. if $d_{1}$ is fixed and $d_{2}\to \infty$, my results bound the asymptotic percentage of non-zero syzygies away from zero. My work together with results of Lemmens \cite{lemmens18} has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the semi-ample setting $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)$ does not approach 1. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case  \cite[Conjectures~7.1,~7.5]{einLazarsfeld12}.
 
 
 % In particular, the asymptotic behavior is dependent, in a nuanced way, on the relationship between $d_{1}$ and $d_{2}$. 
@@ -451,10 +451,9 @@ From this we proved the first explicit bound for Noether normalization over $\fF
 
 
 
-\subsection{Explicit Bertini Theorems and Jacobians Covering Abelian Varieties}
+\subsection{Effective Bertini Theorems and Jacobians Covering Abelian Varieties}
 
-Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve of bounded dimension. Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12} Li and I established an effective and explicit version of Poonen's Bertini theorem over finite fields. Using this theorem Li and I proved that every abelian variety over a finite field is covered by the Jacobian variety of a smooth connected curve whose dimension is bounded by an explicit constant. 
-
+Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve of bounded dimension. Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12} Li and I proved an analogous result for abelian varieties over finite fields. We did so by first proving an effective and explicit version of Poonen's Bertini theorem over finite fields. 
 \begin{theorem}\cite{bruceLi19}*{Theorem~A}
 Fix $r,n\in \N$ with $n\geq2$, and let $\fF_{q}$ be a finite field of characteristic $p$. There exists an explicit constant $C_{r,q}$ such that if $A\subset \P^{r}_{\fF_q}$ is a non-degenerate abelian variety of dimension $n$, then for any $d\in \N$ satisfying 
 \[
@@ -472,7 +471,7 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 
 Notice that in the statement of Poonen's Bertini theorem while the left-hand side of equation~\eqref{eq:poonen} is dependent of the embedding of $X$ into projective space (i.e. the choice of very ample line bundle) the overall limit is itself independent of the embedding of $X$. This suggests that there may be a more general and uniform statement of Poonen's Bertini theorem. One might hope that the analogous limit along any sequence $(L_{d})_{d\in\N}$ of line bundles growing in positivity equal $\zeta_{X}(n+1)^{-1}$. I am working with Isabel Vogt to formalize and prove such a theorem.
 
-Work of Erman and Wood on semi-ample Bertini theorems shows that a niave analog of Theorem~\ref{thm:poonen} fails \cite{ermanWood15}. Vogt and I believe that this failure can be fixed by introducing a technical assumption on how the sequence of lines bundles grows in positivity. We say a sequence of line bundles  $\left(L_{d}\right)_{d\in\N}$ \textit{goes to infinity in all directions} if for every ample line bundle $A$ there exists $N\in \N$ such that $L_{i}-A$ is ample for all $i\geq N$. We are working to prove the following uniform version of Poonen's Bertini theorem.
+Work of Erman and Wood on semi-ample Bertini theorems shows that a naive analog of Theorem~\ref{thm:poonen} fails \cite{ermanWood15}. Vogt and I believe that this failure can be fixed by introducing an assumption on how the sequence of lines bundles grows in positivity. We say a sequence of line bundles  $\left(L_{d}\right)_{d\in\N}$ \textit{goes to infinity in all directions} if for every ample line bundle $A$ there exists $N\in \N$ such that $L_{i}-A$ is ample for all $i\geq N$. We are working to prove the following uniform version of Poonen's Bertini theorem.
  
 \begin{goalTheorem}\label{gthm:effective-bertini}
 Let $X/\fF_{q}$ be a smooth projective variety of dimension $n$. If $\left(L_{d}\right)_{d\in\N}$ is a sequence of line bundles on $X$ going to infinity in all directions then 
