@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 SEP 2019 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  19 SEP 2019 10:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -951,26 +951,26 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 (./research-v7.aux)
 \openout1 = `research-v7.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 282.
-LaTeX Font Info:    ... okay on input line 282.
-LaTeX Font Info:    Try loading font information for U+msa on input line 282.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 283.
+LaTeX Font Info:    ... okay on input line 283.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 283.
+LaTeX Font Info:    ... okay on input line 283.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 283.
+LaTeX Font Info:    ... okay on input line 283.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 283.
+LaTeX Font Info:    ... okay on input line 283.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 283.
+LaTeX Font Info:    ... okay on input line 283.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 283.
+LaTeX Font Info:    ... okay on input line 283.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 283.
+LaTeX Font Info:    ... okay on input line 283.
+LaTeX Font Info:    Try loading font information for U+msa on input line 283.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 282.
+LaTeX Font Info:    Try loading font information for U+msb on input line 283.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1006,7 +1006,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring ON on input line 282.
+Package hyperref Info: Link coloring ON on input line 283.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1016,16 +1016,16 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count170
 )
-LaTeX Info: Redefining \ref on input line 282.
-LaTeX Info: Redefining \pageref on input line 282.
-LaTeX Info: Redefining \nameref on input line 282.
+LaTeX Info: Redefining \ref on input line 283.
+LaTeX Info: Redefining \pageref on input line 283.
+LaTeX Info: Redefining \nameref on input line 283.
 
 (./research-v7.out) (./research-v7.out)
 \@outlinefile=\write4
 \openout4 = `research-v7.out'.
 
  ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \microtypecontext on input line 282.
+LaTeX Info: Redefining \microtypecontext on input line 283.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1042,7 +1042,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 293.
+(Font)              using `OT1/cmr/bx/n' instead on input line 288.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1053,20 +1053,24 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 Package amsrefs Warning: Use of \cites is recommended instead of \cite 
 (amsrefs)                for multiple cites 'voisin02, voisin05, aproduFarkas19
-' on input line 302.
+' on input line 306.
 
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package amsrefs Warning: The form \cite{...}*{...} is recommended
-(amsrefs)                instead of \cite[...]{...} on input line 348.
+(amsrefs)                instead of \cite[...]{...} on input line 352.
 
-[2] [3]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+[2]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (3.7761pt too wide) detected at line 432
+ [3]
+Overfull \hbox (3.7761pt too wide) detected at line 436
 [] [] \OT1/cmr/m/n/10.95 = 1  \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OM
 S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
 /10.95 + \OML/cmm/m/it/10.95 o [] :
@@ -1074,28 +1078,28 @@ S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
 
 [4]
 
-LaTeX Warning: Command \o invalid in math mode on input line 499.
+LaTeX Warning: Command \o invalid in math mode on input line 503.
 
 [5] [6] [7]
 
-Package rkeyval Warning: Unknown key: \bib'month on input line 553.
+Package rkeyval Warning: Unknown key: \bib'month on input line 557.
 
 
-Package rkeyval Warning: Missing comma on input line 554.
+Package rkeyval Warning: Missing comma on input line 558.
 
 
-Package rkeyval Warning: Unknown key: \bib'day on input line 554.
+Package rkeyval Warning: Unknown key: \bib'day on input line 558.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
 [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1034.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1034.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1038.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1038.
  (./research-v7.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1034.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1034.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1038.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1038.
 
 Package rerunfilecheck Info: File `research-v7.out' has not changed.
 (rerunfilecheck)             Checksum: 3B2EF1A3E7EE2294BDB162A02E0269E0;1033.
@@ -1103,36 +1107,38 @@ Package rerunfilecheck Info: File `research-v7.out' has not changed.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1034.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1038.
  ) 
 Here is how much of TeX's memory you used:
- 24935 strings out of 492649
- 480570 string characters out of 6129622
- 636107 words of memory out of 5000000
- 27940 multiletter control sequences out of 15000+600000
- 17729 words of font info for 113 fonts, out of 8000000 for 9000
+ 24963 strings out of 492649
+ 480909 string characters out of 6129622
+ 635107 words of memory out of 5000000
+ 27950 multiletter control sequences out of 15000+600000
+ 19351 words of font info for 124 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,12n,82p,1097b,713s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
-e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/201
-8/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-v7.pdf (9 pages, 236058 bytes).
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
+2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on research-v7.pdf (9 pages, 253775 bytes).
 PDF statistics:
- 339 PDF objects out of 1000 (max. 8388607)
- 308 compressed objects within 4 object streams
+ 342 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
  110 named destinations out of 1000 (max. 500000)
- 13437 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 20093 words of extra memory for PDF output out of 20736 (max. 10000000)
 
