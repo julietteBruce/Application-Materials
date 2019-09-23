@@ -365,17 +365,17 @@ Notice if both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\P^{n}
 The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld. Such a generalization is complicated by the difference between the Cox ring and homogenous coordinate ring of $\P^{n}\times\P^{m}$. A central theme in my work is to exploit the fact that the regular sequence I use has a number of non-trivial symmetries. 
 %These symmetries, when combined with a series of spectral sequence arguments, allow me to prove Theorem~\ref{thm:bruce-semiample}.
 
-This work suggests that the theory of asymptotic syzygies in the setting of semi-ample growth is rich and substantially different from the other previously studied cases. Going forward I plan to use this previous work as a jumping-off point for the following question.  
+This work suggests that the theory of asymptotic syzygies in the setting of semi-ample growth is rich and substantially different from the other previously studied cases. Going forward I plan to use this work as a jumping-off point for the following question.  
 
 \begin{question}\label{quest:semi-ample}
-Let $X\subset \P^{r_d}$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq n$. Let $(L_{d})_{d\in\N}$ be a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and semi-ample, can one ompute $\lim_{d\to\infty} \rho_{q}\left(X;L_{d}\right)$?
+Let $X\subset \P^{r_d}$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq n$. Let $(L_{d})_{d\in\N}$ be a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and semi-ample, can one compute $\lim_{d\to\infty} \rho_{q}\left(X;L_{d}\right)$?
 \end{question}
 
 A natural next case in which to consider Question~\ref{quest:semi-ample} is that of Hirzebruch surfaces. I addressed a different, but related question for a narrow class of Hirzebruch surfaces in \cite{bruce19-hirzebruch}.
 
 \subsection{Syzygies via Highly Distributed Computing}
 
-It is quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. My co-authors and I exploited recent advances in numerical linear algebra and high-throughput high-performance computing to generate a number of new examples of Veronese syzygies. This data provided support for several existing conjectures, as well as led us to make a number of conjectures \cite{bruceErmanGoldsteinYang18}. 
+It is quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. My co-authors and I exploited recent advances in numerical linear algebra and high-throughput high-performance computing to generate a number of new examples of Veronese syzygies. This data provided support for several existing conjectures, as well as led us to make a number of new conjectures \cite{bruceErmanGoldsteinYang18}. 
 The resulting data has been made publicly available via SyzygyData.com as well as, a package for Macaualy2 \cite{bruceErman19}.
 
 %This is because while the problem of computing syzygies can be reduced to computing ranks of matrices, the number of matrices and their sizes quickly become extremely large. As an example, to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
@@ -412,9 +412,7 @@ A helpful tool in approaching these questions is the ability to compute interest
  
 \section{Varieties over Finite Fields}
 
-Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X\subset\P^r$ is a smooth projective variety of dimension $n$ over $\C$, Bertini's theorem states that, if $H\subset \P^r$ is a generic hyperplane, then $X\cap H$ is smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Historically, the lack of such Bertini theorems over finite fields has made many results in algebraic geometry over finite fields more complicated. 
-
-Using an ingenious probabilistic sieving argument, Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of arbitrarily large degree, a version of Bertini's theorem is true \cite{poonen04}. More specifically Poonen showed that as, $d\to\infty$, the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{r}$ of degree $d$ such that $X\cap H$ is smooth is determined by the Hasse-Weil zeta function of $X$.
+Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X\subset\P^r$ is a smooth projective variety of dimension $n$ over $\C$, Bertini's theorem states that, if $H\subset \P^r$ is a generic hyperplane, then $X\cap H$ is smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Using an ingenious probabilistic sieving argument, Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of arbitrarily large degree, a version of Bertini's theorem is true \cite{poonen04}. More specifically Poonen showed that as, $d\to\infty$, the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{r}$ of degree $d$ such that $X\cap H$ is smooth is determined by the Hasse-Weil zeta function of $X$.
 
 
 \subsection{A Probabilistic Study of Systems of Parameters} 
@@ -444,9 +442,9 @@ From this we proved the first explicit bound for Noether normalization over $\fF
 
 
 
-\subsection{Effective Bertini Theorems and Jacobians Covering Abelian Varieties}
+\subsection{Jacobians Covering Abelian Varieties}
 
-Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of a smooth connected curve of bounded dimension. Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12}, Li and I proved an analogous result for abelian varieties over finite fields. We did so by first proving an effective and explicit version of Poonen's Bertini theorem over finite fields. 
+Over an infinite field, it is a classic result that every abelian variety is covered by the Jacobian variety of bounded dimension. Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12}, Li and I proved an analogous result for abelian varieties over finite fields. We did so by first proving an effective version of Poonen's Bertini theorem over finite fields. 
 \begin{theorem}\cite{bruceLi19}*{Theorem~A}
 Fix $r,n\in \N$ with $n\geq2$, and let $\fF_{q}$ be a finite field of characteristic $p$. There exists an explicit constant $C_{r,q}$ such that if $A\subset \P^{r}_{\fF_q}$ is a non-degenerate abelian variety of dimension $n$, then for any $d\in \N$ satisfying 
 \[
