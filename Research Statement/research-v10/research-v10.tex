@@ -300,9 +300,9 @@ Given a graded module $M$ over a graded ring $R$, a helpful tool for understandi
 \[
 \cdots \xrightarrow{} F_{k} \xrightarrow{d_{k}} F_{k-1} \xrightarrow{d_{k-1}} \cdots \xrightarrow{d_{1}} F_{0}\xrightarrow{\epsilon}M\xrightarrow{} 0
 \]
-where each $F_{p}$ is a graded free $R$-module, and hence can be written as $\bigoplus_{q}R(-q)^{\beta_{p,q}}$. Note that $R(-q)$ is the ring $R$ with its grading twisted, so that $R(-q)_{d}$ is equal to $R_{d-q}$ where $R_{d-q}$ is the graded piece of degree $d-q$. The $\beta_{p,q}$'s are the \textit{Betti numbers} of $M$, and they count the number of $p$-syzygies of $M$ of degree $q$. We will use syzygy and Betti number interchangeablely throughout. 
+where each $F_{p}$ is a graded free $R$-module, and hence can be written as $\bigoplus_{q}R(-q)^{\beta_{p,q}}$. Note that $R(-q)$ is the ring $R$ with its grading twisted, so that $R(-q)_{d}$ is equal to $R_{d-q}$ where $R_{d-q}$ is the graded piece of degree $d-q$. The $\beta_{p,q}$'s are the \textit{Betti numbers} of $M$, and they count the number of $p$-syzygies of $M$ of degree $q$. We will use syzygy and Betti number interchangeably throughout. 
 
-Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring $S_X=S/I_X$, where $S=\C[x_0,\ldots,x_r]$ and $I_X$ is the ideal of homogenous polynomials vanishing on $X$. As $S_X$ is naturally a graded $S$-module we may consider its minimal free resolution. The minimal graded free resolution of $X$ is often closely related to both the extrinsic and intrinsic geometry of $X$.  An example of this phenomenon
+Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring $S_X=S/I_X$, where $S=\C[x_0,\ldots,x_r]$ and $I_X$ is the ideal of homogenous polynomials vanishing on $X$. As $S_X$ is naturally a graded $S$-module we may consider its minimal graded free resolution, which is often closely related to both the extrinsic and intrinsic geometry of $X$.  An example of this phenomenon
  is Green's Conjecture, which relates the Clifford index of a curve with the vanishing of certain $\beta_{p,q}$ for its canonical embedding \cite{voisin02, voisin05, aproduFarkas19}.
 
 %\begin{theorem}[\cite{voisin02}, \cite{voisin05}]
@@ -313,7 +313,7 @@ Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring 
 
 Much of my work has focused on studying the asymptotic properties of syzygies of projective varieties. Broadly speaking, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. In many ways, this perspective dates back to classical work on the defining equations of curves of high degree and projective normality \cite{mumford66, mumford70}. However, the modern viewpoint arose from the pioneering work of Green \cite{green84-I, green84-II} and later Ein and Lazarsfeld \cite{einLazarsfeld12}. 
 
-To give a flavor of the results of asymptotic syzygies we will focus on the question: In what degrees do non-zero syzygies occur? Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Following \cite{ermanYang18} we set $\rho_q\left(X;L_{d}\right)$ to be the percentage of degrees in which non-zero syzygies appear. The asymptotic perspective considers a sequence of line bundles $(L_{d})_{d\in \N}$ and asks how $\rho_{q}(X;L_{d})$ behaves along the sequence. 
+To give a flavor of the results of asymptotic syzygies we will focus on the question: In what degrees do non-zero syzygies occur? Going forward we will let $X\subset \P^{r_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Following \cite{ermanYang18} we set $\rho_q\left(X;L_{d}\right)$ to be the percentage of degrees in which nonzero syzygies appear. The asymptotic perspective considers a sequence of line bundles $(L_{d})_{d\in \N}$ and asks how $\rho_{q}(X;L_{d})$ behaves along the sequence. 
 %\begin{align*}
 %\rho_q\left(X;L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}}.
 %\end{align*}
@@ -339,7 +339,7 @@ Let $X\subset \P^r$ be a smooth projective variety, $\dim X \geq2$, and fix an i
 \]
 \end{theorem}
 
-My work has focused on the behavior of asymptotic syzygies when the condition that $L_{d+1}-L_{d}$ is constant and ample is weakened to assuming $L_{d+1}-L_{d}$ is semi-ample. Recall a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$. The prototypical example of a semi-ample line bundle is $\O(1,0)$ on $\P^{n}\times \P^{m}$. My exploration of asymptotic syzygies in the setting of semi-ample growth, thus began, by proving the following non-vanishing result for $\P^{n}\times\P^{m}$ embedded by $\O(d_{1},d_{2})$. 
+My work has focused on the behavior of asymptotic syzygies when the condition that $L_{d+1}-L_{d}$ is constant and ample is weakened to assuming $L_{d+1}-L_{d}$ is semi-ample. Recall a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$. The prototypical example of a semi-ample line bundle is $\O(1,0)$ on $\P^{n}\times \P^{m}$. My exploration of asymptotic syzygies in the setting of semi-ample growth, thus began, by proving the following nonvanishing result for $\P^{n}\times\P^{m}$ embedded by $\O(d_{1},d_{2})$. 
 
 \begin{theorem}\cite{bruce19-semiample}*{Corollary~B}\label{thm:bruce-semiample}
 Let $X=\P^{n}\times\P^{m}$ and fix an index $1\leq q \leq n+m$. There exist constants $C_{i,j}$ and $D_{i,j}$ such that
@@ -362,7 +362,7 @@ Notice if both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\P^{n}
 
 %Results of Lemmens in the case of $\P^1\times\P^1$ together with my work has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the case of semi-ample growth $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)$ does not approach 1 as $d_{1}\to \infty$. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case. See \cite[Conjecture~7.1, Conjecture~7.5]{einLazarsfeld12}.
 
-The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld. Such a generalization is complicated by the difference between the Cox ring and homogenous coordinate ring of $\P^{n}\times\P^{m}$. A central theme in my work is to exploit the fact that the regular sequence I use has a number of non-trivial symmetries. 
+The proof of Theorem~\ref{thm:bruce-semiample} is based upon generalizing the monomial methods of Ein, Erman, and Lazarsfeld. Such a generalization is complicated by the difference between the Cox ring and homogenous coordinate ring of $\P^{n}\times\P^{m}$. A central theme in this work is to exploit the fact that a key regular sequence I use has a number of non-trivial symmetries. 
 %These symmetries, when combined with a series of spectral sequence arguments, allow me to prove Theorem~\ref{thm:bruce-semiample}.
 
 This work suggests that the theory of asymptotic syzygies in the setting of semi-ample growth is rich and substantially different from the other previously studied cases. Going forward I plan to use this work as a jumping-off point for the following question.  
@@ -419,7 +419,7 @@ Over a finite field, a number of classical statements from algebraic geometry no
 
 Given an $n$ dimensional projective variety $X\subset \P^r$, a collection of homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ of degree $d$ is a (partial) system of parameters if $\dim X\cap \V(f_{0},f_{1},\ldots,f_{k}) = \dim X - (k+1)$. Systems of parameters are closely tied to Noether normalization, as the existence of a finite (i.e. surjective with finite fibers) map $X\rightarrow \P^n$ is equivalent to the existence of a system of parameters of length $n+1$.
 
-Inspired by work of Poonen \cite{poonen04} and Bucur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I computed the asymptotic probability that randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ over $\fF_{q}$ form a system of parameters. By adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we showed that when $k<n$ the probability that randomly chosen $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by zeta-function-like power series that enumerates higher dimensional varieties instead of closed points. In the following, $|Z|$ denotes the number of irreducible components of $Z$, and we write $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
+Inspired by work of Poonen \cite{poonen04} and Bucur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I computed the asymptotic probability that randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ over $\fF_{q}$ form a system of parameters. By adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we showed that when $k<n$ the probability that randomly chosen $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by a zeta-function-like power series that enumerates higher dimensional varieties instead of closed points. In the following, $|Z|$ denotes the number of irreducible components of $Z$, and we write $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
 
 \begin{theorem}\cite{bruceErman-sop}*{Theorem~1.4}\label{thm:main finite field}
 Let $X\subseteq \P^r_{\fF_q}$ be a projective scheme of dimension $n$. Fix $e$ and let $k<n$. The probability that random polynomials $f_0,f_1,\dots,f_k$ of degree $d$ are parameters on $X$ is
@@ -479,7 +479,7 @@ Let $X/\fF_{q}$ be a smooth projective variety of dimension $n$. If $\left(L_{d}
 \end{equation}
 \end{goalTheorem}
 
-We have verified this theorem in a number of examples ($X=\P^1\times\P^1, \P^1\times\P^1\times\P^1$). We  are hopeful that similar methods will extend to whenever the nef cone of $X$ is a finitely generatec polyhedral cone. That said it appears the more general case  will require new techniques. 
+We have verified this theorem in a number of examples ($X=\P^1\times\P^1, \P^1\times\P^1\times\P^1$). We  are hopeful that similar methods will extend to whenever the nef cone of $X$ is a finitely generated polyhedral cone. That said it appears the more general case  will require new techniques. 
 
 %Inspired by Fujita's vanishing theorem and work of Erman and Wood, the following conjecture is another natural version of Poonen's Bertini theorem, which I also hope to work on with Vogt.  
 %
@@ -516,7 +516,7 @@ I began volunteering with the Madison Math Circle in Fall 2014 at the time, the 
 Since the Winter of 2018 I have led reading courses with three undergraduates. One of these students, an undergraduate woman, worked with me for over a year, during which time I helped her through the process of applying for summer research projects. Working with \textit{Girls' Math Night Out} I lead two girls in high school through a project exploring RSA cryptography. During 2018-2019, I mentored 6 first-year graduate students (all women or non-binary students). I am currently mentoring two undergraduate women via the AWM's Mentoring Network. 
 
 
-\subsection{A More Inclusive Community.} In Fall of 2016, I pushed the Mathematics Department to form a committee on inclusivity and diversity. As a member of this committee, I drafted a statement on the department's commitment to inclusivity and non-discrimination that was accepted by the faculty at a department meeting. I also created template syllabi statements that let students know about these department polices. Everyone within the department is encouraged to use these. 
+\subsection{A More Inclusive Community.} In Fall of 2016, I pushed the Mathematics Department to form a committee on inclusivity and diversity. As a member of this committee, I drafted a statement on the department's commitment to inclusivity and non-discrimination that was accepted by the faculty at a department meeting. I also created template syllabi statements that let students know about these department policies. Everyone within the department is encouraged to use these. 
 
 Over the summer of 2017, I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM. During my time leading oSTEM@UW, the group grew to over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around... Thanks so much for organizing this stuff -- it's really helpful''. Additionally, I organized and obtained a travel grant for 11 members to attend the national oSTEM Inc. conference. 
 
@@ -636,7 +636,7 @@ Since 2017 I have been the organizer of the campus social organization for LGBTQ
    author={Bruce, Juliette},
    title={The quantitative behavior of asymptotic syzygies for Hirzebruch surfaces},
    date={2019},
-   note={Pre-print: \href{https://arxiv.org/abs/1906.07333}{arxiv:906.07333}}
+   note={Pre-print: \href{https://arxiv.org/abs/1906.07333}{arxiv:1906.07333}}
    }
 
 \bib{bucurKedlaya12}{article}{
