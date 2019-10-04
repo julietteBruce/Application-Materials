@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  3 OCT 2019 13:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 OCT 2019 09:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1103,11 +1103,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1100.
  ) 
 Here is how much of TeX's memory you used:
- 24954 strings out of 492649
- 480863 string characters out of 6129622
+ 24952 strings out of 492649
+ 480849 string characters out of 6129622
  636063 words of memory out of 5000000
  27950 multiletter control sequences out of 15000+600000
- 18865 words of font info for 120 fonts, out of 8000000 for 9000
+ 18814 words of font info for 119 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,14n,82p,1154b,713s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1127,7 +1127,7 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-v12.pdf (8 pages, 239212 bytes).
+Output written on research-v12.pdf (8 pages, 239240 bytes).
 PDF statistics:
  339 PDF objects out of 1000 (max. 8388607)
  308 compressed objects within 4 object streams
