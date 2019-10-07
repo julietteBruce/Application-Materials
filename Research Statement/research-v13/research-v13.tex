@@ -317,7 +317,7 @@ To give a flavor of the results of asymptotic syzygies we will focus on the ques
 \begin{align*}
 \rho_q\left(X,L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}},
 \end{align*}
-which is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. The asymptotic perspective considers a sequence of line bundles $(L_{d})_{d\in \N}$ and asks how $\rho_{q}(X;L_{d})$ behaves along the sequence. 
+which is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \N}$. 
 %\begin{align*}
 %\rho_q\left(X;L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}}.
 %\end{align*}
@@ -391,7 +391,7 @@ Recently I have begun using similar computational techniques to compute the syzy
 
 One approach to studying the geometry of curves is by asking when the union of two (or more) curves is a complete intersection. Such curves are said to be linked, and liaison theory studies linkage equivalence classes \cite{peskineSzpiro74, huneke84, hunekeUlrich87, hunekeUlrich88}. The liaison theory of curves in $\P^3$ is well understood, but the same theory for curves in other 3-folds is mysterious. In work with Christine Berkesch and Patricia Klein, I hope to use the newly developed theory of virtual resolutions to better understand the liaison theory of curves in toric 3-folds. 
 
-Broadly, a virtual resolution is a homological representation of a graded module over the Cox ring of a smooth toric variety that attempts to better capture the relevant geometric information by allowing a limited amount of homology \cite{berkeschErmanSmith17}. 
+Broadly, a virtual resolution is a homological representation of a graded module over the Cox ring of a smooth toric variety that attempts to better capture the relevant geometric information by allowing a limited amount of homology \cite{berkeschErmanSmith17}. In particular, they seem capable of being able to capture the subtle differences between ideal and set theoretic complete intersections that arise when studying liaison on toric varieties.
 
 %Using these we hope to generalize existing results about the liaison theory of  curves in $\P^3$ to curves in $\P^1\times\P^2$. 
 
@@ -415,7 +415,6 @@ A helpful tool in approaching these questions is the ability to compute interest
 \section{Varieties over Finite Fields}
 
 Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X\subset\P^r$ is a smooth projective variety of dimension $n$ over $\C$, Bertini's theorem states that, if $H\subset \P^r$ is a generic hyperplane, then $X\cap H$ is smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Using an ingenious probabilistic sieving argument, Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of arbitrarily large degree, then a version of Bertini's theorem is true \cite{poonen04}. More specifically Poonen showed that as, $d\to\infty$, the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{r}$ of degree $d$ such that $X\cap H$ is smooth is determined by the Hasse-Weil zeta function of $X$.
-
 
 \subsection{A Probabilistic Study of Systems of Parameters} 
 
@@ -481,7 +480,7 @@ Let $X/\fF_{q}$ be a smooth projective variety of dimension $n$. If $\left(L_{d}
 \end{equation}
 \end{conj}
 
-We have verified this conjecture in a number of examples ($X=\P^1\times\P^1, \P^1\times\P^1\times\P^1$). We  are hopeful that similar methods will extend to whenever the nef cone of $X$ is a finitely generated polyhedral cone. That said it appears the more general case  will require new techniques. 
+We have verified this conjecture in a number of examples ($X=\P^1\times\P^1, \P^1\times\P^1\times\P^1$). We  are hopeful that similar methods will extend to whenever the nef cone of $X$ is a finitely generated.
 
 %Inspired by Fujita's vanishing theorem and work of Erman and Wood, the following conjecture is another natural version of Poonen's Bertini theorem, which I also hope to work on with Vogt.  
 %
