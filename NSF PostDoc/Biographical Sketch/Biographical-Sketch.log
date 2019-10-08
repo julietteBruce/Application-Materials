@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  7 OCT 2019 11:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  8 OCT 2019 11:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -378,14 +378,14 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 AED: lastpage setting LastPage
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
  (./Biographical-Sketch.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
 Package rerunfilecheck Info: File `Biographical-Sketch.out' has not changed.
 (rerunfilecheck)             Checksum: 202ABBD23A5F79F53AA5423BD65428D9;325.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
  ) 
 Here is how much of TeX's memory you used:
  6378 strings out of 492649
@@ -402,7 +402,7 @@ sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/l
 ocal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on Biographical-Sketch.pdf (2 pages, 123846 bytes).
+Output written on Biographical-Sketch.pdf (2 pages, 123648 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
