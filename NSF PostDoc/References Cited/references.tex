@@ -1,0 +1,870 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage{amsfonts,amsmath,amssymb,amsbsy,amstext,amsthm,mathtools}
+\usepackage{accents,color,enumerate,enumitem,float,fullpage,verbatim}
+
+\usepackage{url}
+\usepackage[colorlinks=true,hyperindex, linkcolor=magenta, pagebackref=false, citecolor=cyan]{hyperref}
+\usepackage[alphabetic,lite]{amsrefs} 
+
+%\usepackage{eucal,bm,kpfonts,mathbbol}
+\usepackage[margin=1.06in,includeheadfoot]{geometry}
+
+\usepackage{tikz,tikz-cd}	
+\usetikzlibrary{positioning, matrix, shapes}         								    				
+\usetikzlibrary{arrows,calc,matrix}
+
+\usepackage{lscape}
+
+\usepackage{microtype}
+
+
+\usepackage{titlesec}		
+\setcounter{secnumdepth}{4}						     					% Allows one to use nice section titles
+\titleformat{\section}[block]{\scshape\bfseries\filcenter}{\thesection.}{1em}{}		% Creates section titles
+\titleformat{\subsection}[runin]{\scshape\bfseries}{\thesubsection}{1em}{}			% Creates subsection titles
+\titleformat{\subsubsection}[runin]{\scshape\bfseries}{\thesubsubsection}{1em}{}			% Creates subsection titles
+
+\usepackage[titles]{tocloft}								     					% Creates table of fancy contents
+\setcounter{tocdepth}{4}
+\renewcommand{\contentsname}{}	     					% Renames and centers title of ToC
+
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{diagbox}
+\usepackage{cancel}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{goalTheorem}[lemma]{Goal Theorem}
+\newtheorem{prop}[lemma]{Proposition}
+\newtheorem{cor}[lemma]{Corollary}
+\newtheorem{conj}[lemma]{Conjecture}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{defn}[lemma]{Definition} 
+\newtheorem{notation}[lemma]{Notation} 
+\newtheorem{exercise}[lemma]{Exercise}
+\newtheorem{question}[lemma]{Question}
+\newtheorem*{assumption}{Assumption}
+\newtheorem{principle}[lemma]{Principle}
+\newtheorem{heuristic}[lemma]{Heuristic}
+
+\newtheorem{theoremalpha}{Theorem}
+\newtheorem{corollaryalpha}[theoremalpha]{Corollary}
+\renewcommand{\thetheoremalpha}{\Alph{theoremalpha}}
+
+\theoremstyle{remark}
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{cexample}[lemma]{Counterexample}
+
+% Commands
+\newcommand{\initial}{\operatorname{in}}
+\newcommand{\NF}{\operatorname{NF}}
+\newcommand{\HF}{\operatorname{HF}}
+\newcommand{\Hilb}{\operatorname{Hilb}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\reg}{\operatorname{reg}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\img}{\operatorname{img}}
+\newcommand{\inn}{\operatorname{in}}
+
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\adeg}{\operatorname{adeg}}
+\newcommand{\pdim}{\operatorname{pdim}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\LT}{\operatorname{LT}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\NS}{\operatorname{NS}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Khar}{\operatorname{char}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Kl}{\operatorname{Cl}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\QQbar}{{\overline{\mathbb Q}}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\Bl}{\operatorname{Bl}}
+\newcommand{\Kox}{\operatorname{Cox}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\getsr}{\operatorname{Tor}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Hom}{\operatorname{Hom}} %done
+\newcommand{\sheafHom}{\mathcal{H}om}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\rank}{\operatorname{rank}} 
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\Sym}{\operatorname{Sym}} %done
+\newcommand{\GL}{{GL}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\Density}{\operatorname{Density}}
+\newcommand{\Syz}{\operatorname{Syz}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\cone}{\operatorname{\textbf{cone}}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\HS}{\operatorname{HS}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\oO}{\operatorname{O}}
+
+\newcommand{\defi}[1]{\textsf{#1}} % for defined terms
+
+\newcommand{\remd}{\operatorname{remd}}
+\newcommand{\colim}{\operatorname{colim}}
+\newcommand{\trideg}{\operatorname{tri.deg}}
+\newcommand{\indeg}{\operatorname{index.deg}}
+\newcommand{\moddeg}{\operatorname{mod.deg}}
+\newcommand{\Desc}{\operatorname{Desc}}
+\newcommand{\inter}{\operatorname{int}}
+\newcommand{\Nef}{\operatorname{Nef}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\Cox}{\operatorname{Cox}}
+
+\newcommand{\doot}{\bullet}
+
+\newcommand{\Alt}{\bigwedge\nolimits}
+\newcommand{\Set}{\text{\bf Set}}										% Category of Sets
+\newcommand{\Sch}{\text{\bf Sch}}										% Category of Abelian Groups
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Letters  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ff}{\mathbf f}
+\newcommand{\kk}{\mathbf k}
+\renewcommand{\aa}{\mathbf a}
+\newcommand{\bb}{\mathbf b}
+\newcommand{\cc}{\mathbf c}
+\newcommand{\dd}{\mathbf d}
+\newcommand{\ee}{\mathbf e}
+\newcommand{\vv}{\mathbf v}
+\newcommand{\ww}{\mathbf w}
+\newcommand{\xx}{\mathbf x}
+\newcommand{\yy}{\mathbf y}
+\newcommand{\rr}{\mathbf r}
+\newcommand{\ii}{\mathbf i}
+\newcommand{\nn}{\mathbf n}
+\newcommand{\pp}{\mathbf p}
+\newcommand{\mm}{\mathbf m}
+\newcommand{\fF}{\mathbf F}
+\newcommand{\gG}{\mathbf G}
+\newcommand{\eE}{\mathbf E}
+\newcommand{\qQ}{\mathbf Q}
+\newcommand{\tT}{\mathbf T}
+\renewcommand{\tt}{\mathbf t}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\zero}{\mathbf 0}
+
+\renewcommand{\H}{\operatorname{H}}
+\newcommand{\OO}{\operatorname{O}}
+\newcommand{\oo}{\operatorname{o}}
+
+
+%%%% Caligraphic Fonts - i.e. ????. %%%%%
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}} 
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\U}{\mathcal{U}} 		% Notice this is different
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%% Blackboard Fonts - i.e. Real Numbers, Integers, etc. %%%%%
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}		% Notice this is \bO
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\bU}{\mathbb{U}}		% Notice this is \bU
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+ %%%% Sarif Fonts - i.e. ???? %%%%%
+\newcommand{\sA}{\mathsf{A}}
+\newcommand{\sB}{\mathsf{B}}
+\newcommand{\sC}{\mathsf{C}}
+\newcommand{\sD}{\mathsf{D}}
+\newcommand{\sE}{\mathsf{E}}
+\newcommand{\sF}{\mathsf{F}}
+\newcommand{\sG}{\mathsf{G}}
+\newcommand{\sH}{\mathsf{H}} 
+\newcommand{\sI}{\mathsf{I}}
+\newcommand{\sJ}{\mathsf{J}}
+\newcommand{\sK}{\mathsf{K}}
+\newcommand{\sL}{\mathsf{L}}
+\newcommand{\sM}{\mathsf{M}}
+\newcommand{\sN}{\mathsf{N}}
+\newcommand{\sO}{\mathsf{O}}
+\newcommand{\sP}{\mathsf{P}}
+\newcommand{\sQ}{\mathsf{Q}}
+\newcommand{\sR}{\mathsf{R}}
+\newcommand{\sS}{\mathsf{S}}
+\newcommand{\sT}{\mathsf{T}}
+\newcommand{\sU}{\mathsf{U}} 
+\newcommand{\sV}{\mathsf{V}}
+\newcommand{\sW}{\mathsf{W}}
+\newcommand{\sX}{\mathsf{X}}
+\newcommand{\sY}{\mathsf{Y}}
+\newcommand{\sZ}{\mathsf{Z}}
+ 
+ %%%% Fraktur Fonts - i.e. maximal ideals, prime ideals, etc. %%%%%
+\newcommand{\cl}{\mathfrak{cl}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\renewcommand{\r}{\mathfrak{r}}
+
+
+
+\newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
+
+
+
+%\author{Juliette Bruce}
+%\address{Department of Mathematics, University of Wisconsin, Madison, WI}
+%\email{\href{mailto:juliette.bruce@math.wisc.edu}{juliette.bruce@math.wisc.edu}}
+%\urladdr{\url{http://math.wisc.edu/~juliettebruce/}}
+
+%\thanks{The author was partially supported by the NSF GRFP under Grant No. DGE-1256259 and NSF grant DMS-1502553.}
+
+%\subjclass[2010]{13D02, 14M25}
+
+\begin{document} 
+
+\begin{bibdiv}
+\begin{biblist}[\normalsize]
+      \bib{almousaBruce19}{article}{
+   author={Almousa, Ayah},
+   author={Bruce, Juliette},
+   author={Loper, Michael C.},
+   author={Sayrafi, Mahrud},
+   title={The virtual resolutions package for Macaulay2},
+   date={2019},
+   note={Pre-print: \href{https://arxiv.org/abs/1905.07022}{arxiv:1905.07022}}
+   }
+   
+\bib{aproduFarkas19}{article}{
+   author={Aprodu, Marian},
+   author={Farkas, Gavrill},
+   author={Papadima, {\c{S}}tefan},
+   author={Raicu, Claudiu},
+   author={Weyman, Jerzy},
+   title={Koszul modules and Green's conjecture},
+   journal={Inventiones mathematicae},
+   year={2019},
+   month={Jun}
+   day={15}
+%   issn={1432-1297},
+%   doi={10.1007/s00222-019-00894-1},
+}
+
+\bib{bayerEisenbud91}{article}{
+   author={Bayer, Dave},
+   author={Eisenbud, David},
+   title={Graph curves},
+   note={With an appendix by Sung Won Park},
+   journal={Adv. Math.},
+   volume={86},
+   date={1991},
+   number={1},
+   pages={1--40},
+%   issn={0001-8708},
+%   review={\MR{1097026}},
+%   doi={10.1016/0001-8708(91)90034-5},
+}
+%\bib{berkesch13}{article}{
+%   author={Berkesch, Christine},
+%   author={Erman, Daniel},
+%   author={Kummini, Manoj},
+%   author={Sam, Steven V.},
+%   title={Tensor complexes: multilinear free resolutions constructed from
+%   higher tensors},
+%   journal={J. Eur. Math. Soc. (JEMS)},
+%   volume={15},
+%   date={2013},
+%   number={6},
+%   pages={2257--2295},
+%%   issn={1435-9855},
+%%   review={\MR{3120743}},
+%%   doi={10.4171/JEMS/421},
+%}
+
+\bib{berkeschErmanSmith17}{article}{
+   author={Berkesch, Christine},
+   author={Erman, Daniel},
+   author={Smith, Gregory G.},
+   title={Virtual resolutions for a product of projective spaces},
+   date={2017},
+   journal={Algebraic Geometry},
+   note={to appear},
+%   issn={1435-9855},
+%   review={\MR{3120743}},
+%   doi={10.4171/JEMS/421},
+}
+
+\bib{berkeschSchreyer15}{article}{
+   author={Berkesch, Christine},
+   author={Schreyer, Frank-Olaf},
+   title={Syzygies, finite length modules, and random curves},
+   conference={
+      title={Commutative algebra and noncommutative algebraic geometry. Vol.
+      I},
+   },
+   book={
+      series={Math. Sci. Res. Inst. Publ.},
+      volume={67},
+      publisher={Cambridge Univ. Press, New York},
+   },
+   date={2015},
+   pages={25--52},
+   review={\MR{3525467}},
+}
+
+
+\bib{bruceErman-sop}{article}{
+   author={Bruce, Juliette},
+   author={Erman, Daniel},
+   title={A probabilistic approach to systems of parameters and Noether normalization },
+   journal={Algebra Number Theory},
+   note={to appear}
+}
+
+\bib{bruceLi19}{article}{
+   author={Bruce, Juliette},
+   author={Li, Wanlin},
+   title={Effective bounds on the dimensions of jacobians covering abelian varieties },
+   journal={Proc. Amer. Math. Soc.},
+   note={to appear}
+}
+
+\bib{bruceErmanGoldsteinYang18}{article}{
+	author = {Bruce, Juliette},
+	author = {Erman, Daniel},
+	author = {Goldstein. Steve}, 
+	author = {Yang, Jay},
+	title = {Conjectures and computations about Veronese syzygies},
+	journal = {Experimental Mathematics},
+	volume = {0},
+	number = {0},
+	pages = {1-16},
+	year  = {2018}
+	}
+
+   \bib{bruceErman19}{article}{
+   author={Bruce, Juliette},
+   author = {Erman, Daniel},
+   author = {Goldstein. Steve}, 
+   author = {Yang, Jay},
+   title={The SchurVeronese package in Macaulay2},
+   date={2019},
+   note={Pre-print: \href{https://arxiv.org/abs/1905.12661}{arxiv:1905.12661}}
+   }
+
+\bib{bruce19-semiample}{article}{
+   author={Bruce, Juliette},
+   title={Asymptotic syzygies in the setting of semi-ample growth},
+   date={2019},
+   note={Pre-print: \href{https://arxiv.org/abs/1904.04944}{arxiv:1904.04944}}
+   }
+
+\bib{bruce19-hirzebruch}{article}{
+   author={Bruce, Juliette},
+   title={The quantitative behavior of asymptotic syzygies for Hirzebruch surfaces},
+   date={2019},
+   note={Pre-print: \href{https://arxiv.org/abs/1906.07333}{arxiv:1906.07333}}
+   }
+
+\bib{bucurKedlaya12}{article}{
+   author={Bucur, Alina},
+   author={Kedlaya, Kiran S.},
+   title={The probability that a complete intersection is smooth},
+   language={English, with English and French summaries},
+   journal={J. Th\'eor. Nombres Bordeaux},
+   volume={24},
+   date={2012},
+   number={3},
+   pages={541--556},
+%   issn={1246-7405},
+%   review={\MR{3010628}},
+}
+
+
+%\bib{charlesPoonen16}{article}{
+%   author={Charles, Fran\c{c}ois},
+%   author={Poonen, Bjorn},
+%   title={Bertini irreducibility theorems over finite fields},
+%   journal={J. Amer. Math. Soc.},
+%   volume={29},
+%   date={2016},
+%   number={1},
+%   pages={81--94},
+%   issn={0894-0347},
+%   review={\MR{3402695}},
+%   doi={10.1090/S0894-0347-2014-00820-1},
+%}
+
+\bib{cmbpt}{article}{
+   author={Chinburg, Ted},
+   author={Moret-Bailly, Laurent},
+   author={Pappas, Georgios},
+   author={Taylor, Martin J.},
+   title={Finite morphisms to projective space and capacity theory},
+   journal={J. Reine Angew. Math.},
+   volume={727},
+   date={2017},
+   pages={69--84},
+}
+
+\bib{einLazarsfeld93}{article}{
+   author={Ein, Lawrence},
+   author={Lazarsfeld, Robert},
+   title={Syzygies and Koszul cohomology of smooth projective varieties of
+   arbitrary dimension},
+   journal={Invent. Math.},
+   volume={111},
+   date={1993},
+   number={1},
+   pages={51--67},
+%   issn={0020-9910},
+%   review={\MR{1193597}},
+%   doi={10.1007/BF01231279},
+}
+	
+				
+%\bib{einErmanLazarsfeld15}{article}{
+%   author={Ein, Lawrence},
+%   author={Erman, Daniel},
+%   author={Lazarsfeld, Robert},
+%   title={Asymptotics of random Betti tables},
+%   journal={J. Reine Angew. Math.},
+%   volume={702},
+%   date={2015},
+%   pages={55--75},
+%   issn={0075-4102},
+%   review={\MR{3341466}},
+%   doi={10.1515/crelle-2013-0032},
+%}
+
+\bib{einLazarsfeld12}{article}{
+   author={Ein, Lawrence},
+   author={Lazarsfeld, Robert},
+   title={Asymptotic syzygies of algebraic varieties},
+   journal={Invent. Math.},
+   volume={190},
+   date={2012},
+   number={3},
+   pages={603--646},
+%   issn={0020-9910},
+%   review={\MR{2995182}},
+%   doi={10.1007/s00222-012-0384-5},
+}
+
+\bib{eisenbud05}{book}{
+   author={Eisenbud, David},
+   title={The geometry of syzygies},
+   series={Graduate Texts in Mathematics},
+   volume={229},
+   note={A second course in commutative algebra and algebraic geometry},
+   publisher={Springer-Verlag, New York},
+   date={2005},
+   pages={xvi+243},
+%   isbn={0-387-22215-4},
+%   review={\MR{2103875}},
+}
+%
+%
+%\bib{eisenbudSchreyer09}{article}{
+%   author={Eisenbud, David},
+%   author={Schreyer, Frank-Olaf},
+%   title={Betti numbers of graded modules and cohomology of vector bundles},
+%   journal={J. Amer. Math. Soc.},
+%   volume={22},
+%   date={2009},
+%   number={3},
+%   pages={859--888},
+%%   issn={0894-0347},
+%%   review={\MR{2505303}},
+%%   doi={10.1090/S0894-0347-08-00620-6},
+%}
+
+
+\bib{ermanWood15}{article}{
+   author={Erman, Daniel},
+   author={Wood, Melanie Matchett},
+   title={Semiample Bertini theorems over finite fields},
+   journal={Duke Math. J.},
+   volume={164},
+   date={2015},
+   number={1},
+   pages={1--38},
+%   issn={0012-7094},
+%   review={\MR{3299101}},
+%   doi={10.1215/00127094-2838327},
+}
+
+\bib{ermanYang18}{article}{
+   author={Erman, Daniel},
+   author={Yang, Jay},
+   title={Random flag complexes and asymptotic syzygies},
+   journal={Algebra Number Theory},
+   volume={12},
+   date={2018},
+   number={9},
+   pages={2151--2166},
+%   issn={1937-0652},
+%   review={\MR{3894431}},
+%   doi={10.2140/ant.2018.12.2151},
+}
+
+\bib{gabberLiuLorenzini15}{article}{
+   author={Gabber, Ofer},
+   author={Liu, Qing},
+   author={Lorenzini, Dino},
+   title={Hypersurfaces in projective schemes and a moving lemma},
+   journal={Duke Math. J.},
+   volume={164},
+   date={2015},
+   number={7},
+   pages={1187--1270},
+%   issn={0012-7094},
+%   review={\MR{3347315}},
+%   doi={10.1215/00127094-2877293},
+}
+
+\bib{green84-I}{article}{
+   author={Green, Mark L.},
+   title={Koszul cohomology and the geometry of projective varieties},
+   journal={J. Differential Geom.},
+   volume={19},
+   date={1984},
+   number={1},
+   pages={125--171},
+%   issn={0022-040X},
+%   review={\MR{739785}},
+}
+
+\bib{green84-II}{article}{
+   author={Green, Mark L.},
+   title={Koszul cohomology and the geometry of projective varieties. II},
+   journal={J. Differential Geom.},
+   volume={20},
+   date={1984},
+   number={1},
+   pages={279--289},
+%   issn={0022-040X},
+%   review={\MR{772134}},
+}
+\bib{huneke84}{article}{
+   author={Huneke, C.},
+   title={Numerical invariants of liaison classes},
+   journal={Invent. Math.},
+   volume={75},
+   date={1984},
+   number={2},
+   pages={301--325},
+%   issn={0020-9910},
+%   review={\MR{732549}},
+%   doi={10.1007/BF01388567},
+}
+
+\bib{hunekeUlrich87}{article}{
+   author={Huneke, Craig},
+   author={Ulrich, Bernd},
+   title={The structure of linkage},
+   journal={Ann. of Math. (2)},
+   volume={126},
+   date={1987},
+   number={2},
+   pages={277--334},
+%   issn={0003-486X},
+%   review={\MR{908149}},
+%   doi={10.2307/1971402},
+}
+	
+\bib{hunekeUlrich88}{article}{
+   author={Huneke, Craig},
+   author={Ulrich, Bernd},
+   title={Algebraic linkage},
+   journal={Duke Math. J.},
+   volume={56},
+   date={1988},
+   number={3},
+   pages={415--429},
+%   issn={0012-7094},
+%   review={\MR{948528}},
+%   doi={10.1215/S0012-7094-88-05618-9},
+}
+	
+\bib{lazarsfeldPareschiPopa11}{article}{
+   author={Lazarsfeld, Robert},
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Local positivity, multiplier ideals, and syzygies of abelian
+   varieties},
+   journal={Algebra Number Theory},
+   volume={5},
+   date={2011},
+   number={2},
+   pages={185--196},
+%   issn={1937-0652},
+%   review={\MR{2833789}},
+%   doi={10.2140/ant.2011.5.185},
+}
+
+\bib{lemmens18}{article}{
+   author={Lemmens, Alexander},
+   title={On the $n$-th row of the graded Betti table of an $n$-dimensional
+   toric variety},
+   journal={J. Algebraic Combin.},
+   volume={47},
+   date={2018},
+   number={4},
+   pages={561--584},
+%   issn={0925-9899},
+%   review={\MR{3813640}},
+%   doi={10.1007/s10801-017-0786-y},
+}
+
+
+\bib{M2}{misc}{
+    label={M2},
+    author={Grayson, Daniel~R.},
+    author={Stillman, Michael~E.},
+    title = {Macaulay 2, a software system for research
+	    in algebraic geometry},
+    note = {Available at \url{http://www.math.uiuc.edu/Macaulay2/}},
+}
+
+\bib{mumford70}{article}{
+   author={Mumford, David},
+   title={Varieties defined by quadratic equations},
+   conference={
+      title={Questions on Algebraic Varieties},
+      address={C.I.M.E., III Ciclo, Varenna},
+      date={1969},
+   },
+   book={
+      publisher={Edizioni Cremonese, Rome},
+   },
+   date={1970},
+   pages={29--100},
+%   review={\MR{0282975}},
+}
+	
+\bib{mumford66}{article}{
+   author={Mumford, D.},
+   title={On the equations defining abelian varieties. I},
+   journal={Invent. Math.},
+   volume={1},
+   date={1966},
+   pages={287--354},
+%   issn={0020-9910},
+%   review={\MR{204427}},
+%   doi={10.1007/BF01389737},
+}
+	
+%	\bib{oeding17}{article}{
+%   author={Oeding, Luke},
+%   author={Raicu, Claudiu},
+%   author={Sam, Steven V},
+%   title={On the (non-)vanishing of syzygies of Segre embeddings},
+%   journal={Algebraic Geometry},
+%   volume={6},
+%   number={5},
+%   date={2019},
+%   pages={571--591},
+%}
+
+\bib{ottavianiPaoletti01}{article}{
+   author={Ottaviani, Giorgio},
+   author={Paoletti, Raffaella},
+   title={Syzygies of Veronese embeddings},
+   journal={Compositio Math.},
+   volume={125},
+   date={2001},
+   number={1},
+   pages={31--37},
+%   issn={0010-437X},
+%   review={\MR{1818055}},
+%   doi={10.1023/A:1002662809474},
+}
+	
+\bib{pareschi00}{article}{
+   author={Pareschi, Giuseppe},
+   title={Syzygies of abelian varieties},
+   journal={J. Amer. Math. Soc.},
+   volume={13},
+   date={2000},
+   number={3},
+   pages={651--664},
+%   issn={0894-0347},
+%   review={\MR{1758758}},
+%   doi={10.1090/S0894-0347-00-00335-0},
+}
+
+\bib{pareschiPopa03}{article}{
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Regularity on abelian varieties. I},
+   journal={J. Amer. Math. Soc.},
+   volume={16},
+   date={2003},
+   number={2},
+   pages={285--302},
+%   issn={0894-0347},
+%   review={\MR{1949161}},
+%   doi={10.1090/S0894-0347-02-00414-9},
+}
+
+
+\bib{pareschiPopa04}{article}{
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Regularity on abelian varieties. II. Basic results on linear
+   series and defining equations},
+   journal={J. Algebraic Geom.},
+   volume={13},
+   date={2004},
+   number={1},
+   pages={167--193},
+%   issn={1056-3911},
+%   review={\MR{2008719}},
+%   doi={10.1090/S1056-3911-03-00345-X},
+}
+	
+	
+\bib{peskineSzpiro74}{article}{
+   author={Peskine, C.},
+   author={Szpiro, L.},
+   title={Liaison des vari\'{e}t\'{e}s alg\'{e}briques. I},
+   language={French},
+   journal={Invent. Math.},
+   volume={26},
+   date={1974},
+   pages={271--302},
+%   issn={0020-9910},
+%   review={\MR{364271}},
+%   doi={10.1007/BF01425554},
+}
+
+\bib{poonen04}{article}{
+   author={Poonen, Bjorn},
+   title={Bertini theorems over finite fields},
+   journal={Ann. of Math. (2)},
+   volume={160},
+   date={2004},
+   number={3},
+   pages={1099--1127},
+%   issn={0003-486X},
+%   review={\MR{2144974}},
+%   doi={10.4007/annals.2004.160.1099},
+}
+
+\bib{rao78}{article}{
+   author={Prabhakar Rao, A.},
+   title={Liaison among curves in ${\bf P}^{3}$},
+   journal={Invent. Math.},
+   volume={50},
+   date={1978/79},
+   number={3},
+   pages={205--217},
+%   issn={0020-9910},
+%   review={\MR{520926}},
+%   doi={10.1007/BF01410078},
+}
+
+\bib{schreyer86}{article}{
+   author={Schreyer, Frank-Olaf},
+   title={Syzygies of canonical curves and special linear series},
+   journal={Math. Ann.},
+   volume={275},
+   date={1986},
+   number={1},
+   pages={105--137},
+%   issn={0025-5831},
+%   review={\MR{849058}},
+%   doi={10.1007/BF01458587},
+}	
+	
+\bib{voisin02}{article}{
+   author={Voisin, Claire},
+   title={Green's generic syzygy conjecture for curves of even genus lying
+   on a $K3$ surface},
+   journal={J. Eur. Math. Soc. (JEMS)},
+   volume={4},
+   date={2002},
+   number={4},
+   pages={363--404},
+%   issn={1435-9855},
+%   review={\MR{1941089}},
+%   doi={10.1007/s100970200042},
+}
+
+\bib{voisin05}{article}{
+   author={Voisin, Claire},
+   title={Green's canonical syzygy conjecture for generic curves of odd
+   genus},
+   journal={Compos. Math.},
+   volume={141},
+   date={2005},
+   number={5},
+   pages={1163--1190},
+%   issn={0010-437X},
+%   review={\MR{2157134}},
+%   doi={10.1112/S0010437X05001387},
+}
+	
+\end{biblist}
+\end{bibdiv}
+\end{document}

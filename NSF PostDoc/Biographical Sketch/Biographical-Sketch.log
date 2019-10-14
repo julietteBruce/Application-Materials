@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  8 OCT 2019 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 OCT 2019 12:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -274,16 +274,16 @@ LaTeX Font Info:    ... okay on input line 111.
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
+* modes: includehead includefoot 
 * h-part:(L,W,R)=(75.88371pt, 462.52757pt, 75.88371pt)
 * v-part:(T,H,B)=(75.88371pt, 643.20256pt, 75.88371pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=462.52757pt
-* \textheight=643.20256pt
+* \textheight=576.20256pt
 * \oddsidemargin=3.61372pt
 * \evensidemargin=3.61372pt
-* \topmargin=-33.38628pt
+* \topmargin=3.61372pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -390,7 +390,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 280.
 Here is how much of TeX's memory you used:
  6378 strings out of 492649
  93856 string characters out of 6129622
- 195993 words of memory out of 5000000
+ 196009 words of memory out of 5000000
  10186 multiletter control sequences out of 15000+600000
  11841 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -402,7 +402,7 @@ sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/l
 ocal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb>
-Output written on Biographical-Sketch.pdf (2 pages, 123648 bytes).
+Output written on Biographical-Sketch.pdf (2 pages, 123629 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  81 compressed objects within 1 object stream
