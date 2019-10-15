@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  14 OCT 2019 12:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  15 OCT 2019 12:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1036,15 +1036,15 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot twoside 
-* h-part:(L,W,R)=(72.55891pt, 469.17717pt, 72.55891pt)
-* v-part:(T,H,B)=(72.55891pt, 649.85216pt, 72.55891pt)
+* h-part:(L,W,R)=(72.62398pt, 469.04704pt, 72.62398pt)
+* v-part:(T,H,B)=(72.62398pt, 649.72203pt, 72.62398pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.17717pt
-* \textheight=637.85216pt
-* \oddsidemargin=0.28893pt
-* \evensidemargin=0.28893pt
-* \topmargin=0.28893pt
+* \textwidth=469.04704pt
+* \textheight=637.72203pt
+* \oddsidemargin=0.35399pt
+* \evensidemargin=0.35399pt
+* \topmargin=0.35399pt
 * \headheight=0.0pt
 * \headsep=0.0pt
 * \topskip=10.0pt
@@ -1120,14 +1120,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (4.35394pt too wide) detected at line 432
-[] [] \OT1/cmr/m/n/10.95 = 1  \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OM
-S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
-/10.95 + \OML/cmm/m/it/10.95 o [] :
- []
-
-[3] [4] [5]
+ [3] [4] [5]
 
 Package rkeyval Warning: Unknown key: \bib'month on input line 554.
 
@@ -1154,11 +1147,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1118.
  ) 
 Here is how much of TeX's memory you used:
- 25280 strings out of 492649
- 486143 string characters out of 6129622
- 647112 words of memory out of 5000000
+ 25268 strings out of 492649
+ 486043 string characters out of 6129622
+ 647114 words of memory out of 5000000
  28376 multiletter control sequences out of 15000+600000
- 19024 words of font info for 122 fonts, out of 8000000 for 9000
+ 18490 words of font info for 116 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  56i,14n,82p,1105b,713s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1178,7 +1171,7 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Research Statement.pdf" (7 pages, 230995 bytes).
+Output written on "Research Statement.pdf" (7 pages, 230948 bytes).
 PDF statistics:
  99 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
