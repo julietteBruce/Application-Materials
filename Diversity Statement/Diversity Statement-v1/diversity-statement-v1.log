@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 OCT 2019 10:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  23 OCT 2019 12:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**diversity-statement-v0.tex
-(./diversity-statement-v0.tex
+**diversity-statement-v1.tex
+(./diversity-statement-v1.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsart.cls
@@ -945,8 +945,8 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 \c@lemma=\count162
 \c@theoremalpha=\count163
 
-(./diversity-statement-v0.aux)
-\openout1 = `diversity-statement-v0.aux'.
+(./diversity-statement-v1.aux)
+\openout1 = `diversity-statement-v1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 284.
 LaTeX Font Info:    ... okay on input line 284.
@@ -1017,9 +1017,9 @@ LaTeX Info: Redefining \ref on input line 284.
 LaTeX Info: Redefining \pageref on input line 284.
 LaTeX Info: Redefining \nameref on input line 284.
 
-(./diversity-statement-v0.out) (./diversity-statement-v0.out)
+(./diversity-statement-v1.out) (./diversity-statement-v1.out)
 \@outlinefile=\write4
-\openout4 = `diversity-statement-v0.out'.
+\openout4 = `diversity-statement-v1.out'.
 
 
 ABD: EveryShipout initializing macros
@@ -1066,44 +1066,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 312--319
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--329
+Underfull \hbox (badness 10000) in paragraph at lines 322--326
 
  []
 
-[2] [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 331.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 331.
- (./diversity-statement-v0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 331.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 331.
-Package rerunfilecheck Info: File `diversity-statement-v0.out' has not changed.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+[3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 328.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 328.
+ (./diversity-statement-v1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 328.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 328.
+Package rerunfilecheck Info: File `diversity-statement-v1.out' has not changed.
 
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 331.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 328.
  ) 
 Here is how much of TeX's memory you used:
- 24558 strings out of 492649
- 475158 string characters out of 6129622
+ 24565 strings out of 492649
+ 475195 string characters out of 6129622
  633208 words of memory out of 5000000
- 27748 multiletter control sequences out of 15000+600000
- 11477 words of font info for 70 fonts, out of 8000000 for 9000
+ 27746 multiletter control sequences out of 15000+600000
+ 11960 words of font info for 75 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,6n,82p,1070b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,6n,82p,1248b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on diversity-statement-v0.pdf (3 pages, 104446 bytes).
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on diversity-statement-v1.pdf (3 pages, 82710 bytes).
 PDF statistics:
- 54 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
- 5 named destinations out of 1000 (max. 500000)
- 12301 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 44 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 9741 words of extra memory for PDF output out of 10000 (max. 10000000)
 
