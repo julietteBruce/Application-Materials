@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  24 OCT 2019 09:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  24 OCT 2019 12:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1050,10 +1050,6 @@ Package amsrefs Warning: Use of \cites is recommended instead of \cite
 (amsrefs)                for multiple cites 'bruceErmanGoldsteinYang18, bruceEr
 man19, bruce19-semiample, bruce19-hirzebruch' on input line 297.
 
-
-Package amsrefs Warning: Citation label for bruce19-semiample is changing from 
-`Bru19' to `Bru19a' on input line 333.
-
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 344.
@@ -1072,17 +1068,17 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 344.
 Here is how much of TeX's memory you used:
  24551 strings out of 492649
  475429 string characters out of 6129622
- 628377 words of memory out of 5000000
+ 628378 words of memory out of 5000000
  27766 multiletter control sequences out of 15000+600000
  10941 words of font info for 54 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,5n,82p,620b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,5n,82p,621b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on summary_of_thesis.pdf (1 page, 68108 bytes).
+Output written on summary_of_thesis.pdf (1 page, 68113 bytes).
 PDF statistics:
  53 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
