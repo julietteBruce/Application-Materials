@@ -292,12 +292,23 @@
 
 \setcounter{section}{0}
 
-My research interests lie in pure mathematics, more specifically, in algebraic geometry, commutative algebra, and arithmetic geometry. Broadly these fields make use of deep connections between geometry and algebra to study the solutions to systems of polynomial equations.
-
-In particular, I am interested in using homological methods to study the geometry of zero loci of systems of polynomials (i.e. algebraic varieties). I am also interested in studying the arithmetic properties of varieties over finite fields. Further, I am passionate about promoting inclusivity, diversity, and justice in the mathematics community.
+My research interests lie in pure mathematics, more specifically, in algebraic geometry, commutative algebra, and arithmetic geometry. Broadly these fields make use of deep connections between geometry and algebra to study the solutions of systems of polynomial equations. Further, I am passionate about promoting inclusivity, diversity, and justice in the mathematics community.
 
 \section{Syzygies in Algebraic Geometry}
 
+One might recall that given a list of numbers $p_1,p_2,\ldots,p_{d}$ there always exists a polynomial of degree less than or equal to $d$, $a_{d}x^{d}+a_{d-1}x^{d-1}+\cdots+a_{1}x+a_{0}$, such that the solutions to the equation $a_{d}x^{d}+a_{d-1}x^{d-1}+\cdots+a_{1}x+a_{0}=0$ is exactly $p_1,p_2,\ldots,p_{d}$. For example, if $d=2$ and the list of numbers is $4,9$ then the polynomial $x^2+13x+26$ has zeros exactly when $x=4$ and $x=9$.
+
+It is natural to then wonder what happens in higher dimensions, that is, given a list of points $p_{1},p_{2},\ldots,p_{d}$ in $\R^{r}$ for what $D$ can we guarantee that there exists a multivariate polynomial $F(\xx)$ of degree less than or equal to $D$ such that $F(p_{1})=F(p_{2})=\cdots=F(p_{d})=0$. Note that in higher dimensions the set of solutions to the equation $F(\xx)=0$ will be higher higher dimensional, and so we can no longer insist that the only solutions to $F(\xx)=0$ are our points $p_{1},p_{2},\ldots,p_{d}$. 
+
+When $r=2$ this problem can be concretely visualized in the following way: given points $(x_1,y_1), (x_2,y_2),\ldots,(x_r,y_r)$ in the Cartesian plane $\R^2$ we want to find a polynomial $\F(x,y)=$
+
+It turns out that in this higher dimensional setting the answer depends not just on the number of points, but also on the geometry of how the points are arranged in space. However, fascinatingly, the way to realize this connection with geometry, and answer the question, is through algebra by studying the polynomial relations amongst collections of polynomials. 
+
+While this result is well know, studying the polynomial relations amongst a collection of polynomials -- which are called syzygies -- has proven to be a fruitful area of mathematics all its own.  are extremely mysterious. For example, once one moves beyond points (0 dimensional) and curves (1 dimensional), and begins to study surfaces (2 dimensional) not only is little known, but only a handful of examples have ever been computed. This is because the complexity of such computations grows rapidly and quickly overwhelms our computational powers.
+
+I will discuss how the emergence of highly efficient numerical linear algebra algorithms together with high performance, massively distributed computing has provided a new approach for such computations. In particular, by making use of these tools I --  with several coauthors and several thousand computers -- have managed to compute previously unknown examples. These examples have begun shedding light on these higher dimensional syzygies, and led us to put forth several new, and perhaps surprising, conjectures. 
+ 
+ 
 Given a graded module $M$ over a graded ring $R$, a helpful tool for understanding the structure of $M$ is its minimal graded free resolution. In essence, a minimal graded free resolution is a way of approximating $M$ by a sequence of free $R$-modules. More formally, a \textit{graded free resolution} of a module $M$ is an exact sequence 
 \[
 \cdots \xrightarrow{} F_{k} \xrightarrow{d_{k}} F_{k-1} \xrightarrow{d_{k-1}} \cdots \xrightarrow{d_{1}} F_{0}\xrightarrow{\epsilon}M\xrightarrow{} 0

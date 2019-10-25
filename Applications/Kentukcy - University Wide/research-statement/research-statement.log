@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  24 OCT 2019 10:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  25 OCT 2019 10:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -948,7 +948,7 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 \c@lemma=\count162
 \c@theoremalpha=\count163
 
-No file research-statement.aux.
+(./research-statement.aux)
 \openout1 = `research-statement.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 283.
@@ -966,6 +966,7 @@ LaTeX Font Info:    ... okay on input line 283.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 283.
 LaTeX Font Info:    ... okay on input line 283.
 LaTeX Font Info:    Try loading font information for U+msa on input line 283.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1018,6 +1019,8 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 283.
 LaTeX Info: Redefining \pageref on input line 283.
 LaTeX Info: Redefining \nameref on input line 283.
+
+(./research-statement.out) (./research-statement.out)
 \@outlinefile=\write4
 \openout4 = `research-statement.out'.
 
@@ -1051,247 +1054,70 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 Package amsrefs Warning: Use of \cites is recommended instead of \cite 
 (amsrefs)                for multiple cites 'voisin02, voisin05, aproduFarkas19
-' on input line 306.
+' on input line 317.
 
+[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Citation `voisin02' on page 1 undefined on input line 306.
+Package amsrefs Warning: The form \cite{...}*{...} is recommended
+(amsrefs)                instead of \cite[...]{...} on input line 367.
 
+[2] [3]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-LaTeX Warning: Citation `voisin05' on page 1 undefined on input line 306.
-
-
-LaTeX Warning: Citation `aproduFarkas19' on page 1 undefined on input line 306.
-
-
-
-LaTeX Warning: Citation `eisenbud05' on page 1 undefined on input line 306.
-
-
-LaTeX Warning: Citation `schreyer86' on page 1 undefined on input line 306.
-
-
-LaTeX Warning: Citation `bayerEisenbud91' on page 1 undefined on input line 306
-.
-
-
-LaTeX Warning: Citation `farkasPopa05' on page 1 undefined on input line 306.
-
-
-LaTeX Warning: Citation `farkas06' on page 1 undefined on input line 306.
-
-
-LaTeX Warning: Citation `aproduFarkas11' on page 1 undefined on input line 306.
-
-
-
-LaTeX Warning: Citation `farkasKemeny16' on page 1 undefined on input line 306.
-
-
-
-LaTeX Warning: Citation `farkasKemeny17' on page 1 undefined on input line 306.
-
-
-
-LaTeX Warning: Citation `mumford66' on page 1 undefined on input line 314.
-
-
-LaTeX Warning: Citation `mumford70' on page 1 undefined on input line 314.
-
-
-LaTeX Warning: Citation `green84-I' on page 1 undefined on input line 314.
-
-
-LaTeX Warning: Citation `green84-II' on page 1 undefined on input line 314.
-
-
-LaTeX Warning: Citation `einLazarsfeld12' on page 1 undefined on input line 314
-.
-
-
-LaTeX Warning: Citation `ermanYang18' on page 1 undefined on input line 316.
-
-
-LaTeX Warning: Citation `ottavianiPaoletti01' on page 1 undefined on input line
- 335.
-
-
-LaTeX Warning: Citation `einLazarsfeld93' on page 1 undefined on input line 335
-.
-
-
-LaTeX Warning: Citation `lazarsfeldPareschiPopa11' on page 1 undefined on input
- line 335.
-
-
-LaTeX Warning: Citation `pareschi00' on page 1 undefined on input line 335.
-
-
-LaTeX Warning: Citation `pareschiPopa03' on page 1 undefined on input line 335.
-
-
-
-LaTeX Warning: Citation `pareschiPopa04' on page 1 undefined on input line 335.
-
-
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-
-LaTeX Warning: Citation `bruce19-semiample' on page 2 undefined on input line 3
-48.
-
-
-LaTeX Warning: Citation `lemmens18' on page 2 undefined on input line 356.
-
-
-Package amsrefs Warning: The form \cite{...}*{...} is recommended
-(amsrefs)                instead of \cite[...]{...} on input line 356.
-
-
-LaTeX Warning: Reference `thm:bruce-semiample' on page 2 undefined on input lin
-e 369.
-
-
-LaTeX Warning: Reference `quest:semi-ample' on page 2 undefined on input line 3
-78.
-
-
-LaTeX Warning: Citation `bruce19-hirzebruch' on page 2 undefined on input line 
-378.
-
-
-LaTeX Warning: Citation `bruceErmanGoldsteinYang18' on page 2 undefined on inpu
-t line 382.
-
-
-LaTeX Warning: Citation `bruceErman19' on page 2 undefined on input line 383.
-
-
-LaTeX Warning: Citation `M2' on page 2 undefined on input line 383.
-
-[2]
-
-LaTeX Warning: Reference `quest:semi-ample' on page 3 undefined on input line 3
-88.
-
-
-LaTeX Warning: Citation `peskineSzpiro74' on page 3 undefined on input line 392
-.
-
-
-LaTeX Warning: Citation `huneke84' on page 3 undefined on input line 392.
-
-
-LaTeX Warning: Citation `hunekeUlrich87' on page 3 undefined on input line 392.
-
-
-
-LaTeX Warning: Citation `hunekeUlrich88' on page 3 undefined on input line 392.
-
-
-
-LaTeX Warning: Citation `berkeschErmanSmith17' on page 3 undefined on input lin
-e 394.
-
-
-LaTeX Warning: Citation `rao78' on page 3 undefined on input line 398.
-
-
-LaTeX Warning: Citation `almousaBruce19' on page 3 undefined on input line 413.
-
-
-
-LaTeX Warning: Citation `poonen04' on page 3 undefined on input line 417.
-
-[3]
-
-LaTeX Warning: Citation `bucurKedlaya12' on page 4 undefined on input line 431.
-
-
-
-LaTeX Warning: Citation `bruceErman-sop' on page 4 undefined on input line 433.
-
-
-
-Overfull \hbox (3.7761pt too wide) detected at line 438
+Overfull \hbox (3.7761pt too wide) detected at line 449
 [] [] \OT1/cmr/m/n/10.95 = 1  \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OM
 S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
 /10.95 + \OML/cmm/m/it/10.95 o [] :
  []
 
-
-LaTeX Warning: Citation `gabberLiuLorenzini15' on page 4 undefined on input lin
-e 450.
-
-
-LaTeX Warning: Citation `cmbpt' on page 4 undefined on input line 450.
-
-
-LaTeX Warning: Citation `bruceLi19' on page 4 undefined on input line 457.
-
-
-LaTeX Warning: Reference `eq:poonen' on page 4 undefined on input line 471.
-
-
-LaTeX Warning: Reference `thm:poonen' on page 4 undefined on input line 473.
-
-
-LaTeX Warning: Citation `ermanWood15' on page 4 undefined on input line 473.
-
-
-LaTeX Warning: Reference `thm:poonen' on page 4 undefined on input line 473.
-
 [4] [5] [6]
 
-Package rkeyval Warning: Unknown key: \bib'month on input line 556.
+Package rkeyval Warning: Unknown key: \bib'month on input line 567.
 
 
-Package rkeyval Warning: Missing comma on input line 557.
+Package rkeyval Warning: Missing comma on input line 568.
 
 
-Package rkeyval Warning: Unknown key: \bib'day on input line 557.
+Package rkeyval Warning: Unknown key: \bib'day on input line 568.
+
+
+Package amsrefs Warning: Citation label for bruce19-semiample is changing from 
+`Bru19' to `Bru19a' on input line 695.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
+
+Package amsrefs Warning: Citation label for green84-I is changing from `Gre84' 
+to `Gre84a' on input line 928.
+
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1192.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1203.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1203.
  (./research-statement.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1192.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1203.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1203.
 
+Package rerunfilecheck Info: File `research-statement.out' has not changed.
+(rerunfilecheck)             Checksum: 0535B68AE3A544E83221ACD1769FAF49;925.
 
-
-Package rerunfilecheck Warning: File `research-statement.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `research-statement.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  0535B68AE3A544E83221ACD1769FAF49;925.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1192.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1203.
  ) 
 Here is how much of TeX's memory you used:
- 24966 strings out of 492649
- 481100 string characters out of 6129622
- 635134 words of memory out of 5000000
- 27955 multiletter control sequences out of 15000+600000
- 18808 words of font info for 120 fonts, out of 8000000 for 9000
+ 24984 strings out of 492649
+ 481427 string characters out of 6129622
+ 636219 words of memory out of 5000000
+ 27969 multiletter control sequences out of 15000+600000
+ 18814 words of font info for 119 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,14n,82p,1103b,720s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,14n,82p,1103b,713s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1309,10 +1135,10 @@ ve/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 18/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-statement.pdf (8 pages, 246452 bytes).
+Output written on research-statement.pdf (8 pages, 245088 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 280 compressed objects within 3 object streams
+ 357 PDF objects out of 1000 (max. 8388607)
+ 326 compressed objects within 4 object streams
  122 named destinations out of 1000 (max. 500000)
- 17933 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 18037 words of extra memory for PDF output out of 20736 (max. 10000000)
 
