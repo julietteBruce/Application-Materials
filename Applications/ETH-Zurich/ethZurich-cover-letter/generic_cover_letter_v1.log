@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 OCT 2019 11:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 OCT 2019 11:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -316,7 +316,7 @@ Here is how much of TeX's memory you used:
  29i,14n,43p,651b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on generic_cover_letter_v1.pdf (1 page, 74369 bytes).
+Output written on generic_cover_letter_v1.pdf (1 page, 73857 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream
