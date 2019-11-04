@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 NOV 2019 17:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 NOV 2019 17:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**julietteBruce-CL-icermCombAlg.tex
-(./julietteBruce-CL-icermCombAlg.tex
+**julietteBruce-CL-harvardComp.tex
+(./julietteBruce-CL-harvardComp.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -191,8 +191,8 @@ s
 \f@nch@O@olf=\skip52
 \f@nch@O@orf=\skip53
 )
-(./julietteBruce-CL-icermCombAlg.aux)
-\openout1 = `julietteBruce-CL-icermCombAlg.aux'.
+(./julietteBruce-CL-harvardComp.aux)
+\openout1 = `julietteBruce-CL-harvardComp.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -254,9 +254,9 @@ LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
 LaTeX Info: Redefining \nameref on input line 34.
 
-(./julietteBruce-CL-icermCombAlg.out) (./julietteBruce-CL-icermCombAlg.out)
+(./julietteBruce-CL-harvardComp.out) (./julietteBruce-CL-harvardComp.out)
 \@outlinefile=\write3
-\openout3 = `julietteBruce-CL-icermCombAlg.out'.
+\openout3 = `julietteBruce-CL-harvardComp.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 42.
@@ -305,25 +305,25 @@ n input line 108.
 -center-UWlogo-print-eps-converted-to.pdf>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
 
-(./julietteBruce-CL-icermCombAlg.aux)
+(./julietteBruce-CL-harvardComp.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
-Package rerunfilecheck Info: File `julietteBruce-CL-icermCombAlg.out' has not c
-hanged.
+Package rerunfilecheck Info: File `julietteBruce-CL-harvardComp.out' has not ch
+anged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
  5195 strings out of 492649
- 77687 string characters out of 6129622
+ 77674 string characters out of 6129622
  166142 words of memory out of 5000000
  9039 multiletter control sequences out of 15000+600000
  7283 words of font info for 26 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,14n,43p,615b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,14n,43p,614b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on julietteBruce-CL-icermCombAlg.pdf (1 page, 74387 bytes).
+Output written on julietteBruce-CL-harvardComp.pdf (1 page, 74076 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream
