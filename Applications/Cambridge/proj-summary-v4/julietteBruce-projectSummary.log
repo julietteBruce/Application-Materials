@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  11 NOV 2019 12:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  11 NOV 2019 13:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**SS.tex
-(./SS.tex
+**julietteBruce-projectSummary.tex
+(./julietteBruce-projectSummary.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amscls/amsart.cls
@@ -962,8 +962,9 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
 \c@lemma=\count165
 \c@theoremalpha=\count166
- (./SS.aux)
-\openout1 = `SS.aux'.
+
+(./julietteBruce-projectSummary.aux)
+\openout1 = `julietteBruce-projectSummary.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 284.
 LaTeX Font Info:    ... okay on input line 284.
@@ -1034,9 +1035,9 @@ LaTeX Info: Redefining \ref on input line 284.
 LaTeX Info: Redefining \pageref on input line 284.
 LaTeX Info: Redefining \nameref on input line 284.
 
-(./SS.out) (./SS.out)
+(./julietteBruce-projectSummary.out) (./julietteBruce-projectSummary.out)
 \@outlinefile=\write4
-\openout4 = `SS.out'.
+\openout4 = `julietteBruce-projectSummary.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1104,50 +1105,46 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 299--301
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 302--304
+Underfull \hbox (badness 10000) in paragraph at lines 303--305
 
  []
 
 [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 325.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 325.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 316.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 316.
 
-(./SS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 325.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 325.
-Package rerunfilecheck Info: File `SS.out' has not changed.
+(./julietteBruce-projectSummary.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 316.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 316.
+Package rerunfilecheck Info: File `julietteBruce-projectSummary.out' has not ch
+anged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 325.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 316.
  ) 
 Here is how much of TeX's memory you used:
- 25008 strings out of 492649
- 482006 string characters out of 6129622
- 643822 words of memory out of 5000000
- 28218 multiletter control sequences out of 15000+600000
- 13104 words of font info for 62 fonts, out of 8000000 for 9000
+ 25037 strings out of 492649
+ 482571 string characters out of 6129622
+ 643893 words of memory out of 5000000
+ 28217 multiletter control sequences out of 15000+600000
+ 13879 words of font info for 76 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 56i,5n,82p,1267b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,5n,82p,924b,343s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on SS.pdf (1 page, 88047 bytes).
+Output written on julietteBruce-projectSummary.pdf (1 page, 91150 bytes).
 PDF statistics:
  48 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
- 9229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 10253 words of extra memory for PDF output out of 12000 (max. 10000000)
 

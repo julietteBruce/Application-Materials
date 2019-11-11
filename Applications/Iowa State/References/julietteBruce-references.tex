@@ -1,0 +1,190 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2014 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\usepackage{amstext,amsfonts,amssymb,amscd,amsbsy,amsmath}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage{array}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{revnum}
+\usepackage{textcomp}
+
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tocloft}
+\usepackage{array}
+\usepackage{marvosym} % For cool symbols.
+
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+\setlength\LTleft{0.2in} % needed to make longtable full-width
+\setlength\LTright{0.2in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+% the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingTalk}[2]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		#1 & #2 \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadingb}[6]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingc}[8]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+		\textit{#7} & \textit{#8} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand\foo[9]{%
+    \def\tempb{#2}%
+    \def\tempc{#3}%
+    \def\tempd{#4}%
+    \def\tempe{#5}%
+    \def\tempf{#6}%
+    \def\tempg{#7}%
+    \def\temph{#8}%
+    \def\tempi{#9}%
+    \foocontinued
+}
+\newcommand\foocontinued[7]{%
+    % Do whatever you want with your 9+7 arguments here.
+}
+
+\newcommand{\ressubheadingd}[1]{
+	\def\argten{#1}%
+	\ressubheadingdb
+}
+\newcommand{\ressubheadingdb}[9]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{\argten} & #1 \\
+		\textit{#2} & \textit{#3} \\
+		\textit{#4} & \textit{#5} \\
+		\textit{#6} & \textit{#7} \\
+		\textit{#8} & \textit{#9} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\usepackage[lf]{Baskervaldx}
+
+\begin{document}
+
+{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\LARGE Juliette Bruce}\smallskip & \textbf{\today}\smallskip \\
+Department of Mathematics & \\
+University of Wisconsin & juliette.bruce@math.wisc.edu \\
+480 Lincoln Dr. & \hyperref{http://math.wisc.edu/~juliettebruce}{}{}{math.wisc.edu/\textasciitilde juliettebruce} \\
+Madison, WI 53706 & \\
+\end{tabular*}}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{References}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\begin{tabular}{lr}
+% Referee 1
+\begin{minipage}[t]{2.5in}
+Prof.\ Daniel Erman\\
+Department of Mathematics \\
+University of Wisconsin - Madison\\
+Madison, WI 53706-1325 USA\\
+\Telefon\ (608)-263-3055\\
+\Letter\ \href{derman@math.wisc.edu }{derman@math.wisc.edu }
+\end{minipage}
+&
+% Referee 2
+\begin{minipage}[t]{2.5in}
+Prof.\ David Eisenbud\\
+Department of Mathematics\\
+University of California, Berkeley\\
+Berkeley, CA 94720-3840 USA
+\\
+\Telefon\ (510)-642-0143\\
+\Letter\ \href{de@math.berkeley.edu}{de@math.berkeley.edu}
+\end{minipage}
+\\
+\\ % Additional newline for spacing.
+% Referee 3
+\begin{minipage}[t]{2.5in}
+Prof.\ Christine Berkesch\\
+Department of Mathematics\\
+University of Minnesota\\
+Minneapolis, MN 55455-0488 USA\\
+\Telefon\ (612)-624-6424\\
+\Letter\ \href{cberkesc@umn.edu}{cberkesc@umn.edu}
+\end{minipage}
+& 
+\begin{minipage}[t]{2.5in}
+Prof.\ Kiran Kedlaya\\
+Department of Mathematics\\
+University of California, San Diego\\
+La Jolla, CA 92093-0112 USA\\
+\Telefon\ (858)-534-2629 \\
+\Letter\ \href{kedlaya@ucsd.edu}{kedlaya@ucsd.edu}
+\end{minipage}
+\\
+\\
+\begin{minipage}[t]{2.5in}
+Assoc. Dean\ Shirin Malekpour\\
+College of Letters and Sciecnes\\
+University of Wisconsin - Madison\\
+Madison, WI 53706 USA\\
+\Telefon\ 608)-263-2506 \\
+\Letter\ \href{shirin.malekpour@wisc.edu}{shirin.malekpour@wisc.edu}
+\end{minipage}
+\end{tabular}
+\end{document}
