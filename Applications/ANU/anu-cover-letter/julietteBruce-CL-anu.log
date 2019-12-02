@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 DEC 2019 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  2 DEC 2019 10:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**julietteBruce-CL-harvardBP.tex
-(./julietteBruce-CL-harvardBP.tex
+**julietteBruce-CL-anu.tex
+(./julietteBruce-CL-anu.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/article.cls
@@ -191,8 +191,8 @@ s
 \f@nch@O@olf=\skip52
 \f@nch@O@orf=\skip53
 )
-(./julietteBruce-CL-harvardBP.aux)
-\openout1 = `julietteBruce-CL-harvardBP.aux'.
+(./julietteBruce-CL-anu.aux)
+\openout1 = `julietteBruce-CL-anu.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -254,9 +254,9 @@ LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
 LaTeX Info: Redefining \nameref on input line 34.
 
-(./julietteBruce-CL-harvardBP.out) (./julietteBruce-CL-harvardBP.out)
+(./julietteBruce-CL-anu.out) (./julietteBruce-CL-anu.out)
 \@outlinefile=\write3
-\openout3 = `julietteBruce-CL-harvardBP.out'.
+\openout3 = `julietteBruce-CL-anu.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 42.
@@ -377,28 +377,27 @@ n input line 158.
 (pdftex.def)             Requested size: 109.42036pt x 72.26999pt.
  [4]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
- (./julietteBruce-CL-harvardBP.aux)
+ (./julietteBruce-CL-anu.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 158.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
-Package rerunfilecheck Info: File `julietteBruce-CL-harvardBP.out' has not chan
-ged.
+Package rerunfilecheck Info: File `julietteBruce-CL-anu.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 158.
  ) 
 Here is how much of TeX's memory you used:
  5219 strings out of 492649
- 78019 string characters out of 6129622
+ 77941 string characters out of 6129622
  173142 words of memory out of 5000000
  9055 multiletter control sequences out of 15000+600000
  7937 words of font info for 28 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 28i,14n,43p,1240b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 28i,14n,43p,1234b,320s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on julietteBruce-CL-harvardBP.pdf (4 pages, 126603 bytes).
+Output written on julietteBruce-CL-anu.pdf (4 pages, 126641 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
