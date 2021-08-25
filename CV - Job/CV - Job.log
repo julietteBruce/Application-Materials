@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  7 JUL 2021 13:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  25 AUG 2021 16:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -649,11 +649,6 @@ Overfull \hbox (0.83124pt too wide) in alignment at lines 289--289
 [] [] 
  []
 
-
-Overfull \hbox (11.58415pt too wide) in alignment at lines 295--295
-[] [] 
- []
-
 [3]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 353.
@@ -667,19 +662,19 @@ LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 353.
  [4]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 512.
+(Font)              scaled to size 8.0pt on input line 524.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 512.
+(Font)              scaled to size 6.0pt on input line 524.
  [5] [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 756.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 775.
  [8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 756.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 775.
  (./CV - Job.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 756.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 756.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 775.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 775.
 Package rerunfilecheck Info: File `"CV - Job".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 756.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 775.
  ) 
 Here is how much of TeX's memory you used:
  8501 strings out of 480608
@@ -705,7 +700,7 @@ nts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-su
 per/sfsx1200.pfb>
-Output written on "CV - Job.pdf" (8 pages, 155640 bytes).
+Output written on "CV - Job.pdf" (8 pages, 155582 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
