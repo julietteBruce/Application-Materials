@@ -269,6 +269,8 @@
 
 \newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
 
+\newcommand{\PG}[1]{{}}
+\newcommand{\dao}[1]{{}}
 
 \title{Juliette Bruce's Research Statement}
 
@@ -293,7 +295,13 @@
 
 \setcounter{section}{0}
 
-My research interests lie in algebraic geometry, commutative algebra, and arithmetic geometry. In particular, I am interested in using homological and combinatorial methods to study the geometry of zero loci of systems of polynomials (i.e. algebraic varieties). I am also interested in studying the arithmetic properties of varieties over finite fields. Further, I am passionate about promoting inclusivity, diversity, and justice in the mathematics community.
+My research interests lie in algebraic geometry, commutative algebra, and arithmetic geometry. In particular, I am interested in using homological and combinatorial methods to study the geometry of zero loci of systems of polynomials (i.e. algebraic varieties). I am also interested in studying the arithmetic properties of varieties over finite fields. Further, I am passionate about promoting inclusivity, diversity, and justice in the mathematics community. Roughly speaking my work has focused on four areas:
+\begin{enumerate}
+\item \textbf{Syzygies in Algebraic Geometry:}
+\item \textbf{Homological Algebra on Toric Varieties:}
+\item \textbf{Tropical Geometry \& Moduli Spaces:}
+\item \textbf{Varieties over Finite Fields:}
+\end{enumerate}
 
 \section{Syzygies in Algebraic Geometry}
 
@@ -414,10 +422,75 @@ Building and improving upon these computational techniques my co-authors and I a
 %A helpful tool in approaching these questions is the ability to compute interesting examples via the  \texttt{VirtualResolutions} Macaulay2 package, which I co-authored \cite{almousaBruce19}.
  
 \section{Homological Algebra on Toric Varieties}
+
+Instead of studying subvarieties of projective space, like in Section\juliette{ref}, one might more generally study subvarieties of a toric variety $X$. Roughly, speaking a toric variety is a algebraic variety NEDEDED. Algebraically this corresponding to studying modules over the Cox ring of $X$, which is a polynomial ring graded by the Picard group of $X$. While this generalization may seems straightfoward it turns out that for many varieties the \juliette{finish}. For example, if $X=\P^{n}$ the Hilbert Syzygy theorem implies that any finitely generated graded $S$-module \juliette Much of my recent work has focused on developing the machinery of homological algebra on toric varieties. 
  
+\subsection{Multigraded Castelnuovo-Mumford Regularity}
  
+ Let $S$ be the polynomial ring on $n+1$ variables over an algebraically closed field $\kk$ and $\m$ its maximal homogeneous ideal. A coherent sheaf $\cF$ on the projective space $\P^{n}=\Proj S$ is $d$-regular if % see \cite[Lec.~14]{Mumford1996}
+\begin{enumerate}
+\item\label{item:sheaf-coh} $H^i(\P^n, \cF(b)) = 0$ for all $i > 0$ and $b \geq d-i$.
+\end{enumerate}
+In \cite{EG84}, Eisenbud and Goto considered the analogous condition on the local cohomology of a graded $S$-module $M$, proving the equivalence of the following:
+\begin{enumerate} \setcounter{enumi}{1}
+\item\label{item:local-coh} $H_\m^i(M)_b = 0$ for all $i \geq 0$ and $b > d-i$;
+\item\label{item:single-lin} the truncation $M_{\geq d}$ has a linear free resolution;
+\item\label{item:single-betti} $\Tor_i(M, \kk)_b = 0$ for all $i > 0$ and $b \geq d-i$.
+\end{enumerate}
+In particular, if $M = \bigoplus_b H^0(\P^{n}, \cF(b))$ is the graded $S$-module corresponding to $\cF$
+(so that $H_\m^0(M) = H_\m^1(M) = 0$) then conditions \eqref{item:sheaf-coh} through \eqref{item:single-betti} are equivalent (c.f.\ \cite[Prop.~4.16]{Eisenbud2005}).
+
+In \cite{MS04}, Maclagan and Smith introduced the notion of multigraded Castelnuovo--Mumford regularity for finitely generated $\Pic(X)$-graded modules over the Cox ring of a smooth projective toric variety $X$. In essence their definition is a generalization of condition \eqref{item:local-coh}. In this setting the multigraded regularity of a module is a semigroup inside $\Pic X$, rather than a single integer.
+
+When $X = \P^n$ the minimum element of the multigraded regularity recovers the classical Castelnuovo--Mumford regularity. However, when $X$ has higher Picard rank, translating the geometric definition given by Maclagan and Smith %(i.e., in terms of cohomological vanishing)
+into algebraic conditions like \eqref{item:single-lin} and \eqref{item:single-betti} above is an open problem.
+%For example, there are several possible ways to generalize the notion of a linear resolution \juliette{citation}.
+
+
+In recent work with Lauren Cranton Heller and Mahrud Sayrafi we explore the relationship between multigraded regularity, truncations, Betti numbers, and virtual resolutions when $X$ is a product of projective spaces. 
+
+The obvious way one might hope to generalize Eisenbud and Goto's result to products of projective spaces is false: the truncation $M_{\geq\dd}$ of a $\dd$-regular $\Pic(X)$-graded module $M$ can have nonlinear maps in its minimal free resolution (see Example~\ref{ex:not-linear}).  We show that under a mild saturation hypothesis, multigraded Castelnuovo--Mumford regularity is determined by a slightly weaker linearity condition, which we call \emph{quasilinearity} (see Definition~\ref{def:quasilinear-resolution}).
+
+%Let $S$ be the $\Z^r$-graded Cox ring of $\P^{n_1}\times\cdots\times\P^{n_r}$ and $B$ the corresponding irrelevant ideal.  The following complex contains all allowed twists for a quasilinear resolution generated in degree zero on a product of 2 projective spaces:
+%\[\begin{tikzcd}[]
+%  0&\lar \PG{S}&\lar
+%  \begin{matrix}
+%    \PG{S(-1,\;\;0)} \\[-3pt]
+%    \oplus \\[-3pt]
+%    \PG{S(\;\;0,-1)}
+%  \end{matrix}
+%  \; \oplus \;
+%  \begin{matrix}
+%    \dao{S(-1,-1)}
+%  \end{matrix}
+%  &\lar
+%  \begin{matrix}
+%    \PG{S(-2,\;\;\;0)} \\[-3pt]
+%    \oplus  \\[-3pt]
+%    \PG{S(-1,-1)}  \\[-3pt]
+%    \oplus  \\[-3pt]
+%    \PG{S(\;\;\;0,-2)}\\[-3pt]
+%  \end{matrix}
+%  \; \oplus \;
+%  \begin{matrix}
+%    \dao{S(-2,-1)}\\[-3pt]
+%    \oplus \\[-3pt]
+%    \dao{S(-1,-2)}
+%  \end{matrix}
+%  & \lar \cdots.
+%\end{tikzcd}\]
+%Within each term, the summands in the left column (green) are the linear syzygies while those in the right column (pink) are nonlinear syzygies. A quasilinear complex on a product of $r$ projective spaces contains at most $r-1$ nonlinear maps in each strand.
+%
+%Our main theorem characterizes multigraded regularity of modules on products of projective spaces in terms of the Betti numbers of their truncations.
+%
+\begin{theoremalpha}\label{main-thm-reg}
+  Let $M$ be a finitely generated $\Z^r$-graded $S$-module with $H_B^0(M) = 0$.  Then $M$ is $\dd$-regular if and only if $M_{\geq\dd}$ has a quasilinear resolution $F_\bullet$ with $F_0$ generated in degree $\dd$.
+\end{theoremalpha}
+
  
 \section{Tropical Geometry \& Moduli Spaces}
+ 
+ In recent year \juliette{blah blah blah}
  
 \begin{theorem}
 The top-weight rational cohomology of $\mathcal{A}_g$ for $g=5$, $6$, and $7$, is
@@ -448,6 +521,15 @@ The top-weight rational cohomology of $\mathcal{A}_{8}$, $\mathcal{A}_{9}$, and 
     \Gr_{110}^WH^i(\mathcal{A}_{10};\mathbb{Q})&=0 \quad \text{for $i\geq 99$}.
 \end{align*}
 \end{theorem}
+
+\begin{question}\label{quest:matroid-euler}
+
+\end{question}
+
+
+\begin{question}\label{quest:moduli-k3}
+Compute the top-weight cohomology of the moduli space of $K3$ surfaces of degree $d$. 
+\end{question}
 
  
 \section{Varieties over Finite Fields}

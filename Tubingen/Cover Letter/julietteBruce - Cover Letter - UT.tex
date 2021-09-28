@@ -1,0 +1,117 @@
+%%
+% UC Berkeley Modern Formal Color Letterhead
+% LaTeX Template
+% April 2020
+%
+% Adapted from Microsoft Word template
+% https://brand.berkeley.edu/stationery/ 
+% by Chris Hoofnagle https://hoofnagle.berkeley.edu 
+%
+% License: faculty and staff of the University of California are free to use this template
+%%
+
+
+\documentclass[12pt,letterpaper]{letter} %this controls the paper style and font size
+\usepackage{graphicx} % necessary for logos
+\usepackage{lipsum} %you can delete this
+\usepackage{parskip} % for spacing
+\usepackage{geometry} % so that page 2> have 1" margins
+\usepackage{fancyhdr} % for fancy headers
+\usepackage{lastpage} 
+\usepackage{hyperref}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{} % footer for pages 2 on
+\lfoot{\footnotesize {\textit{Letter from \Who{} regarding ...}}} % Left footer
+\cfoot{} % Change for center footer
+\rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}} % Right footer page #s 
+\renewcommand{\footrulewidth}{0pt}
+
+
+%this gives you Berkeley fonts
+\usepackage{fontspec}
+\setmainfont{UCBerkeleyOS.otf}[
+BoldFont = UCBerkeleyOSBold.otf ,
+ItalicFont = UCBerkeleyOSItalic.otf ,
+BoldItalicFont = UCBerkeleyOSBoldItalic.otf ]
+
+%Sender Information -- Edit this to fill in the header
+\def\Who{Juliette Bruce} % Fill in your name here
+\def\Title{NSF Postdoctoral Fellow} % Your title
+\def\Where{Mathematics Department} % Your department/institution
+\def\Address{970 Evans Hall \#751} % Your address
+\def\CityZip{Berkeley CA, 94720} % Your city, zip code, country, etc
+\def\Email{E-mail: juliette.bruce@berkeley.edu} % Your email address
+\def\TEL{Phone: (810) 623--7610} % Your phone number
+\def\TELM{} % Do you dare put your mobile here? How about a fax?
+\def\URL{https://juliettebruce.github.io} % Your URL
+
+%first page margins are different to accommodate the letterhead
+
+\topmargin=-1.1in % Moves the top margin; here it is a negative value to move the text up
+\textheight=9.5in % Total text height for this page
+\oddsidemargin=-10pt % Left margin; widened here with a negative value
+\textwidth=7in % Text width
+\let\raggedleft\raggedright % Makes the date appear on the left
+
+\makeatletter
+\let\@texttop\relax
+\makeatother
+
+
+\begin{document}
+
+\begin{letter}{\vspace{-1cm}} %put the recipient information here and maybe a reference line
+
+% This controls the header. The Berkeley wordmark and seal are in the same image. The text is put atop it. 
+
+\begin{center}
+\begin{picture}(1000,1)
+    \put(0,-20){\includegraphics[width=\textwidth]{formalheader.png}}
+    \put(150,33){\textbf{\footnotesize \Who }}
+    \put(150,22){\footnotesize \Title }
+    \put(150,11){\footnotesize \Where }
+    \put(280,33){\footnotesize \Address }
+    \put(280,22){\footnotesize \CityZip }
+    \put(280,11){\footnotesize \TEL }
+    %\put(280,0){\footnotesize \TELM } % Comment this out to omit your mobile
+    \put(280,-11){\footnotesize \Email }
+    \put(280,-22){\footnotesize \URL }
+    \put(0,-28){\rule{\textwidth}{0.4pt}}
+\end{picture}
+\end{center}
+\vspace{10mm}
+
+\opening{Dear Committee Members,}
+
+
+I am writing to apply for the tenure track professorship in combinatorial algebraic geometry. Currently, I am a National Science Foundation postdoctoral research fellow in the Mathematics Department at the University of California, Berkeley, a position I have held since September 2020. I received my Ph.D. in Mathematics from the University of Wisconsin - Madison in the Summer of 2020 under the guidance of my advisor Professor Daniel Erman. In addition to my position at the University of California, Berkeley, for the 2020-2021 academic year I was a postdoctoral fellow at the Mathematical Sciences Research Institute in Berkeley, CA. Currently, I have accepted a postdoctoral position at Brown University, which is to begin Fall 2021, as part of a National Science Foundation, Focused Research Group in topics relate to combinatorial algebraic geometry. 
+
+My research interests lie in algebraic geometry, commutative algebra, and arithmetic geometry. In particular, I am interested in using combinatorial and homological methods to study the geometry of zero loci of systems of polynomials (i.e. algebraic varieties). I am also interested in studying the arithmetic properties of varieties over finite fields. Further, I am passionate about promoting inclusivity, diversity, and justice in the mathematics community. Currently my research focus  is on: 1) studying syzygies in algebraic geometry, 2) developing homological algebra over toric varieties, and 3) using tropical geometry to study moduli spaces.
+
+With my application, I include the completed application form, as well as, a curriculum vitae, a publication list, a research statement,  a teaching statement, and a list of my teaching experiences. A few highlights in my file are:
+\begin{itemize}
+\item Invited to speak at the \textit{Western Algebraic Geometry Online} (April 2020), \textit{Foundations of Computing in Mathematics} (June 2020), and \textit{LGBTQ+Math} (July 2020).
+
+\item Excellence in Mathematical Research Award (2020) - Awarded by the Department of Mathematics at the University of Wisconsin for substantial contributions to research as part of a thesis. 
+%Elizabeth Hirschfelder Prize (2019) - Awarded by the Department of Mathematics at the University of Wisconsin to an outstanding female student who has demonstrated promise.
+
+\item Co-organizer for seven conferences, two AMS special sessions, and numerous outreach events. Awarded approximately \$55,000 in grants to support these conferences.  
+
+\item Capstone Teaching Award (2019) - Awarded by the Department of Mathematics at the University of Wisconsin to 1 student recognizing a record of exceptional teaching and service. Teaching Assistant Award for Exceptional Service  (2018) - Awarded by the University of Wisconsin to up to 3 teaching assistants campus-wide recognizing their exceptional service.
+\end{itemize}
+
+Please do not hesitate to contact me with any questions, and thank you in advance for your consideration.
+
+\closing{Sincerely,}
+% \includegraphics[]{} You can put an image of your signature here.
+\Who{}
+
+
+
+%\encl{Memorandum} %for enclosures
+
+\end{letter}
+
+\end{document}

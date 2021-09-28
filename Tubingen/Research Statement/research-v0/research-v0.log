@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  20 SEP 2021 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  23 SEP 2021 11:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -925,29 +925,29 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 (./research-v0.aux)
 \openout1 = `research-v0.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 284.
-LaTeX Font Info:    ... okay on input line 284.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 284.
-LaTeX Font Info:    ... okay on input line 284.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 284.
-LaTeX Font Info:    ... okay on input line 284.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 284.
-LaTeX Font Info:    ... okay on input line 284.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 284.
-LaTeX Font Info:    ... okay on input line 284.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 284.
-LaTeX Font Info:    ... okay on input line 284.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 284.
-LaTeX Font Info:    ... okay on input line 284.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 284.
-LaTeX Font Info:    ... okay on input line 284.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 284
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 286.
+LaTeX Font Info:    ... okay on input line 286.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 286
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 284
+LaTeX Font Info:    Trying to load font information for U+msb on input line 286
 .
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -976,7 +976,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box91
-Package hyperref Info: Link coloring ON on input line 284.
+Package hyperref Info: Link coloring ON on input line 286.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -990,23 +990,23 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count317
 )
-LaTeX Info: Redefining \ref on input line 284.
-LaTeX Info: Redefining \pageref on input line 284.
-LaTeX Info: Redefining \nameref on input line 284.
+LaTeX Info: Redefining \ref on input line 286.
+LaTeX Info: Redefining \pageref on input line 286.
+LaTeX Info: Redefining \nameref on input line 286.
  (./research-v0.out) (./research-v0.out)
 \@outlinefile=\write4
 \openout4 = `research-v0.out'.
 
 
 ABD: EveryShipout initializing macros
-LaTeX Info: Redefining \microtypecontext on input line 284.
+LaTeX Info: Redefining \microtypecontext on input line 286.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 284.
+LaTeX Info: Redefining \showhyphens on input line 286.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1017,7 +1017,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 289.
+(Font)              using `OT1/cmr/bx/n' instead on input line 291.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1028,83 +1028,127 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 Package amsrefs Warning: Use of \cites is recommended instead of \cite 
 (amsrefs)                for multiple cites 'voisin02, voisin05, aproduFarkas19
-' on input line 307.
+' on input line 315.
 
 [1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package amsrefs Warning: The form \cite{...}*{...} is recommended
-(amsrefs)                instead of \cite[...]{...} on input line 357.
+(amsrefs)                instead of \cite[...]{...} on input line 365.
 
-[2] [3]
-Overfull \hbox (3.77611pt too wide) detected at line 476
-[] [] \OT1/cmr/m/n/10.95 = 1  \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OM
-S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
-/10.95 + \OML/cmm/m/it/10.95 o [] :
- []
+[2]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 430
+.
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/microtype/mt-euf.cfg
+File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-[4]
+)
 
-Package rkeyval Warning: Unknown key: \bib'month on input line 594.
+LaTeX Warning: Citation `EG84' on page 3 undefined on input line 434.
 
-
-Package rkeyval Warning: Missing comma on input line 595.
-
-
-Package rkeyval Warning: Unknown key: \bib'day on input line 595.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1230.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1230.
+LaTeX Warning: Citation `Eisenbud2005' on page 3 undefined on input line 441.
+
+
+LaTeX Warning: Citation `MS04' on page 3 undefined on input line 443.
+
+
+LaTeX Warning: Reference `ex:not-linear' on page 3 undefined on input line 450.
+
+
+
+LaTeX Warning: Reference `def:quasilinear-resolution' on page 3 undefined on in
+put line 450.
+
+[3] [4]
+Overfull \hbox (3.77611pt too wide) detected at line 556
+[] [] \OT1/cmr/m/n/10.95 = 1  \OMS/cmsy/m/n/10.95 ^^@ []\OT1/cmr/m/n/10.95 (\OM
+S/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1)[]\OML/cmm/m/it/10.95 q[] \OT1/cmr/m/n
+/10.95 + \OML/cmm/m/it/10.95 o [] :
+ []
+
+[5]
+
+Package rkeyval Warning: Unknown key: \bib'month on input line 674.
+
+
+Package rkeyval Warning: Missing comma on input line 675.
+
+
+Package rkeyval Warning: Unknown key: \bib'day on input line 675.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+[7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1310.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1310.
  (./research-v0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1230.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1230.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1310.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1310.
 
 Package rerunfilecheck Info: File `research-v0.out' has not changed.
-(rerunfilecheck)             Checksum: 21EFCB946B48DA21F8AD73FDBAFC7AA2;674.
+(rerunfilecheck)             Checksum: 9B2A8EA32BEF9F011273BF5C6A47D0C3;766.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1230.
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1310.
  ) 
 Here is how much of TeX's memory you used:
- 25253 strings out of 480608
- 492543 string characters out of 5903631
- 806453 words of memory out of 5000000
- 40234 multiletter control sequences out of 15000+600000
- 547200 words of font info for 124 fonts, out of 8000000 for 9000
+ 25330 strings out of 480608
+ 493679 string characters out of 5903631
+ 807792 words of memory out of 5000000
+ 40272 multiletter control sequences out of 15000+600000
+ 548868 words of font info for 135 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,16n,84p,1070b,711s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-v0.pdf (6 pages, 234379 bytes).
+pdfTeX warning (dest): name{cite.MS04} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.Eisenbud2005} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{cite.EG84} has been referenced but does not exist, 
+replaced by a fixed one
+
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on research-v0.pdf (7 pages, 255945 bytes).
 PDF statistics:
- 321 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 116 named destinations out of 1000 (max. 500000)
- 18005 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 364 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 132 named destinations out of 1000 (max. 500000)
+ 20061 words of extra memory for PDF output out of 20736 (max. 10000000)
 
