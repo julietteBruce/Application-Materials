@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  16 FEB 2022 11:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  24 MAR 2022 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,6 +555,7 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \c@revi2=\count290
 \c@revi3=\count291
 \c@revi4=\count292
+\c@revi5=\count293
 )
 \openout1 = `"julietteBruce - CV.aux"'.
 
@@ -587,16 +588,16 @@ LaTeX Font Info:    ... okay on input line 123.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count293
+\scratchcounter=\count294
 \scratchdimen=\dimen163
 \scratchbox=\box56
-\nofMPsegments=\count294
-\nofMParguments=\count295
+\nofMPsegments=\count295
+\nofMParguments=\count296
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count296
+\MPscratchCnt=\count297
 \MPscratchDim=\dimen164
-\MPnumerator=\count297
-\makeMPintoPDFobject=\count298
+\MPnumerator=\count298
+\makeMPintoPDFobject=\count299
 \everyMPtoPDFconversion=\toks29
 )
 Package hyperref Info: Link coloring ON on input line 123.
@@ -610,7 +611,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count299
+\c@section@level=\count300
 )
 LaTeX Info: Redefining \ref on input line 123.
 LaTeX Info: Redefining \pageref on input line 123.
@@ -619,8 +620,8 @@ LaTeX Info: Redefining \nameref on input line 123.
 \@outlinefile=\write3
 \openout3 = `"julietteBruce - CV.out"'.
 
-\c@mv@tabular=\count300
-\c@mv@boldtabular=\count301
+\c@mv@tabular=\count301
+\c@mv@boldtabular=\count302
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 125.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 125
@@ -662,38 +663,38 @@ LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/it' will be
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (0.83124pt too wide) in alignment at lines 291--291
+Overfull \hbox (0.83124pt too wide) in alignment at lines 304--304
 [] [] 
  []
 
 [3]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 355.
+(Font)              scaled to size 8.0pt on input line 377.
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 355.
+(Font)              scaled to size 8.0pt on input line 377.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 355.
+(Font)              scaled to size 9.0pt on input line 377.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 355.
+(Font)              scaled to size 6.0pt on input line 377.
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 355.
+(Font)              scaled to size 6.0pt on input line 377.
  [4]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 531.
+(Font)              scaled to size 8.0pt on input line 564.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 531.
- [5] [6] [7] [8] (./julietteBruce - CV.aux)
+(Font)              scaled to size 6.0pt on input line 564.
+ [5] [6] [7] [8] [9] (./julietteBruce - CV.aux)
 Package rerunfilecheck Info: File `"julietteBruce - CV".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11122 strings out of 478994
- 160132 string characters out of 5858183
- 490657 words of memory out of 5000000
- 28402 multiletter control sequences out of 15000+600000
+ 11128 strings out of 478994
+ 160177 string characters out of 5858183
+ 490679 words of memory out of 5000000
+ 28407 multiletter control sequences out of 15000+600000
  444003 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,10n,74p,338b,488s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,74p,338b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_m4qttc.en
 c}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_2xv27p.en
 c}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -710,10 +711,10 @@ nts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-su
 per/sfsx1200.pfb>
-Output written on "julietteBruce - CV.pdf" (8 pages, 149471 bytes).
+Output written on "julietteBruce - CV.pdf" (9 pages, 151773 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
+ 112 PDF objects out of 1000 (max. 8388607)
+ 90 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
