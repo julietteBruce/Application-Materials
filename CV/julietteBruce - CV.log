@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  24 MAR 2022 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  2 AUG 2022 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,26 +663,26 @@ LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/it' will be
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (0.83124pt too wide) in alignment at lines 304--304
+Overfull \hbox (0.83124pt too wide) in alignment at lines 307--307
 [] [] 
  []
 
 [3]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 377.
+(Font)              scaled to size 8.0pt on input line 380.
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 377.
+(Font)              scaled to size 8.0pt on input line 380.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 377.
+(Font)              scaled to size 9.0pt on input line 380.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 377.
+(Font)              scaled to size 6.0pt on input line 380.
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 377.
+(Font)              scaled to size 6.0pt on input line 380.
  [4]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 564.
+(Font)              scaled to size 8.0pt on input line 567.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 564.
+(Font)              scaled to size 6.0pt on input line 567.
  [5] [6] [7] [8] [9] (./julietteBruce - CV.aux)
 Package rerunfilecheck Info: File `"julietteBruce - CV".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -711,7 +711,7 @@ nts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-su
 per/sfsx1200.pfb>
-Output written on "julietteBruce - CV.pdf" (9 pages, 151773 bytes).
+Output written on "julietteBruce - CV.pdf" (9 pages, 151911 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  90 compressed objects within 1 object stream

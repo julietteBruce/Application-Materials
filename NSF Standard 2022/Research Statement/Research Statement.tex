@@ -1,0 +1,2672 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage{amsfonts,amsmath,amssymb,amsbsy,amstext,amsthm,mathtools}
+\usepackage{accents,color,enumerate,enumitem,float,fullpage,verbatim}
+
+\usepackage[margin=1.0049in,includeheadfoot]{geometry}
+
+\usepackage{url}
+\usepackage[colorlinks=true,hyperindex, linkcolor=magenta, pagebackref=false, citecolor=cyan,draft]{hyperref}
+\usepackage[numeric,lite]{amsrefs} 
+
+%\usepackage{eucal,bm,kpfonts,mathbbol}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{tikz,tikz-cd}	
+\usetikzlibrary{positioning, matrix, shapes}         								    				
+\usetikzlibrary{arrows,calc,matrix}
+
+\usepackage{lscape}
+
+\usepackage{microtype}
+
+
+\usepackage{titlesec}		
+\setcounter{secnumdepth}{4}						     					% Allows one to use nice section titles
+\titleformat{\section}[block]{\scshape\bfseries\filcenter}{\thesection.}{1em}{}		% Creates section titles
+\titleformat{\subsection}[runin]{\scshape\bfseries}{\thesubsection}{1em}{}			% Creates subsection titles
+\titleformat{\subsubsection}[runin]{\scshape\bfseries}{\thesubsubsection}{1em}{}			% Creates subsection titles
+
+\usepackage[titles]{tocloft}								     					% Creates table of fancy contents
+\setcounter{tocdepth}{4}
+\renewcommand{\contentsname}{}	     					% Renames and centers title of ToC
+
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{diagbox}
+\usepackage{cancel}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{goalTheorem}[lemma]{Goal Theorem}
+\newtheorem{problem}[lemma]{Research Problem}
+\newtheorem{prop}[lemma]{Proposition}
+\newtheorem{cor}[lemma]{Corollary}
+\newtheorem{conj}[lemma]{Conjecture}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{defn}[lemma]{Definition} 
+\newtheorem{notation}[lemma]{Notation} 
+\newtheorem{exercise}[lemma]{Exercise}
+\newtheorem{question}[lemma]{Question}
+\newtheorem*{assumption}{Assumption}
+\newtheorem{principle}[lemma]{Principle}
+\newtheorem{heuristic}[lemma]{Heuristic}
+
+\newtheorem{theoremalpha}{Theorem}
+\newtheorem{corollaryalpha}[theoremalpha]{Corollary}
+\renewcommand{\thetheoremalpha}{\Alph{theoremalpha}}
+
+\theoremstyle{remark}
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{cexample}[lemma]{Counterexample}
+
+% Commands
+\newcommand{\initial}{\operatorname{in}}
+\newcommand{\NF}{\operatorname{NF}}
+\newcommand{\HF}{\operatorname{HF}}
+\newcommand{\Hilb}{\operatorname{Hilb}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\reg}{\operatorname{reg}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\img}{\operatorname{img}}
+\newcommand{\inn}{\operatorname{in}}
+
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\adeg}{\operatorname{adeg}}
+\newcommand{\pdim}{\operatorname{pdim}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\LT}{\operatorname{LT}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\NS}{\operatorname{NS}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Khar}{\operatorname{char}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Kl}{\operatorname{Cl}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\QQbar}{{\overline{\mathbb Q}}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\Bl}{\operatorname{Bl}}
+\newcommand{\Kox}{\operatorname{Cox}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\getsr}{\operatorname{Tor}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Hom}{\operatorname{Hom}} %done
+\newcommand{\sheafHom}{\mathcal{H}om}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\rank}{\operatorname{rank}} 
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\Sym}{\operatorname{Sym}} %done
+\newcommand{\GL}{{GL}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\Density}{\operatorname{Density}}
+\newcommand{\Syz}{\operatorname{Syz}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\cone}{\operatorname{\textbf{cone}}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\HS}{\operatorname{HS}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\oO}{\operatorname{O}}
+
+\newcommand{\defi}[1]{\textsf{#1}} % for defined terms
+
+\newcommand{\remd}{\operatorname{remd}}
+\newcommand{\colim}{\operatorname{colim}}
+\newcommand{\trideg}{\operatorname{tri.deg}}
+\newcommand{\indeg}{\operatorname{index.deg}}
+\newcommand{\moddeg}{\operatorname{mod.deg}}
+\newcommand{\Desc}{\operatorname{Desc}}
+\newcommand{\inter}{\operatorname{int}}
+\newcommand{\Nef}{\operatorname{Nef}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\Cox}{\operatorname{Cox}}
+\newcommand{\gon}{\operatorname{gon}}
+\newcommand{\cliff}{\operatorname{Cliff}}
+
+\newcommand{\doot}{\bullet}
+
+\newcommand{\Alt}{\bigwedge\nolimits}
+\newcommand{\Set}{\text{\bf Set}}										% Category of Sets
+\newcommand{\Sch}{\text{\bf Sch}}										% Category of Abelian Groups
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Letters  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ff}{\mathbf f}
+\newcommand{\kk}{\mathbf k}
+\renewcommand{\aa}{\mathbf a}
+\newcommand{\bb}{\mathbf b}
+\newcommand{\cc}{\mathbf c}
+\newcommand{\dd}{\mathbf d}
+\newcommand{\ee}{\mathbf e}
+\newcommand{\vv}{\mathbf v}
+\newcommand{\ww}{\mathbf w}
+\newcommand{\xx}{\mathbf x}
+\newcommand{\yy}{\mathbf y}
+\newcommand{\rr}{\mathbf r}
+\newcommand{\ii}{\mathbf i}
+\newcommand{\qq}{\mathbf q}
+\newcommand{\uu}{\mathbf u}
+
+\newcommand{\nn}{\mathbf n}
+\newcommand{\pp}{\mathbf p}
+\newcommand{\mm}{\mathbf m}
+\newcommand{\fF}{\mathbf F}
+\newcommand{\gG}{\mathbf G}
+\newcommand{\eE}{\mathbf E}
+\newcommand{\qQ}{\mathbf Q}
+\newcommand{\tT}{\mathbf T}
+\renewcommand{\tt}{\mathbf t}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\zero}{\mathbf 0}
+
+\renewcommand{\H}{\operatorname{H}}
+\newcommand{\OO}{\operatorname{O}}
+\newcommand{\oo}{\operatorname{o}}
+
+
+%%%% Caligraphic Fonts - i.e. ????. %%%%%
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}} 
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\U}{\mathcal{U}} 		% Notice this is different
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%% Blackboard Fonts - i.e. Real Numbers, Integers, etc. %%%%%
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}		% Notice this is \bO
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\bU}{\mathbb{U}}		% Notice this is \bU
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+ %%%% Sarif Fonts - i.e. ???? %%%%%
+\newcommand{\sA}{\mathsf{A}}
+\newcommand{\sB}{\mathsf{B}}
+\newcommand{\sC}{\mathsf{C}}
+\newcommand{\sD}{\mathsf{D}}
+\newcommand{\sE}{\mathsf{E}}
+\newcommand{\sF}{\mathsf{F}}
+\newcommand{\sG}{\mathsf{G}}
+\newcommand{\sH}{\mathsf{H}} 
+\newcommand{\sI}{\mathsf{I}}
+\newcommand{\sJ}{\mathsf{J}}
+\newcommand{\sK}{\mathsf{K}}
+\newcommand{\sL}{\mathsf{L}}
+\newcommand{\sM}{\mathsf{M}}
+\newcommand{\sN}{\mathsf{N}}
+\newcommand{\sO}{\mathsf{O}}
+\newcommand{\sP}{\mathsf{P}}
+\newcommand{\sQ}{\mathsf{Q}}
+\newcommand{\sR}{\mathsf{R}}
+\newcommand{\sS}{\mathsf{S}}
+\newcommand{\sT}{\mathsf{T}}
+\newcommand{\sU}{\mathsf{U}} 
+\newcommand{\sV}{\mathsf{V}}
+\newcommand{\sW}{\mathsf{W}}
+\newcommand{\sX}{\mathsf{X}}
+\newcommand{\sY}{\mathsf{Y}}
+\newcommand{\sZ}{\mathsf{Z}}
+ 
+ %%%% Fraktur Fonts - i.e. maximal ideals, prime ideals, etc. %%%%%
+\newcommand{\cl}{\mathfrak{cl}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\renewcommand{\r}{\mathfrak{r}}
+
+
+
+\newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
+
+\newcommand{\kit}[1]{{\color{blue} \sf Kit: [#1]}}
+\newcommand{\jcite}{{\color{blue} \sf $\heartsuit\heartsuit\heartsuit$:cite}}
+
+\title{Project Description: Multigraded Homological Algebra and Geometry}
+
+%\author{Juliette Bruce}
+%\address{Department of Mathematics, University of Wisconsin, Madison, WI}
+%\email{\href{mailto:juliette.bruce@math.wisc.edu}{juliette.bruce@math.wisc.edu}}
+%\urladdr{\url{http://math.wisc.edu/~juliettebruce/}}
+
+%\thanks{The author was partially supported by the NSF GRFP under Grant No. DGE-1256259 and NSF grant DMS-1502553.}
+
+%\subjclass[2010]{13D02, 14M25}
+
+\begin{document} 
+\thispagestyle{empty}
+\pagestyle{empty}
+%\maketitle
+\begingroup  
+  \centering
+  \large\scshape\bfseries Project Description: Multigraded Homological Algebra and Geometry\\[1em]
+\endgroup
+
+%\tableofcontents
+
+\setcounter{section}{0}
+
+\noindent This proposal involves research in commutative algebra and algebraic geometry with several connections to computation and combinatorics, as well as a wide array of broader impacts.
+% Additionally, it includes a wide array of broader impacts. As an overview: 
+\begin{itemize}[leftmargin=*]
+	\item \S~\ref{sec:prior-work} \textbf{Results of Prior NSF Support.} 
+	\item \S~\ref{sec:syzygies-beyond} \textbf{Syzygies Beyond Curves.} We will extend Green's conjecture describing the syzygies of canonical curves to the canonical rings of stacky curves. This includes developing a classification of varieties of minimal degree (and their minimal graded free resolutions) for toric varieties, and the development of a Bertini theorem for weighted projective spaces.  
+	\item \S~\ref{sec:mg-hilb-schemes} \textbf{Multigraded Hilbert Functions and Schemes.} By developing tools in multigraded commutative algebra this project seeks to improve our understanding of the geometry of multigraded Hilbert schemes. In particular, this project looks to characterize when multigraded Hilbert schemes are non-empty, connected, or smooth.
+%	\item By developing tools in multigraded commutative algebra, like analogs of lex ideals and generalizations of Macaulay's theorem, this project looks to characterize when mutligraded Hilbert schemes are non-empty, connected, or smooth.  
+%	By developing tools in multigraded commutative algebra, like analogs of lex ideals and generalizations of Macaulay's theorem,
+	\item \S~\ref{sec:broader-impacts} \textbf{Broader Impacts.}
+\end{itemize}
+
+\section{Results of Prior NSF Support}\label{sec:prior-work}
+
+In 2020 I received an NSF Postdoctoral Research Fellowship (NSF Grant No. MSPRF DMS-2002239), and in 2015 I received an NSF Graduate Research Fellowship (NSF Grant No. DGE-1256259). During the periods of these grants I posted 12 new papers to the arXiv \cite{almousaBruce19,BBBKR17,bruceErman-sop,bruceLi19,bruceErmanGoldsteinYang18,bruceErman19,bruce19-semiample,bruce19-hirzebruch,BCEGLY22,bruceHellerSayrafi21,bruceHellerSayrafi22,BBCMMW22}, with 9 of these papers being accepted for publication, including in such journals as \textit{Algebra \& Number Theory} \cite{bruceErman-sop}, \textit{Geometry \& Topology} \cite{BBCMMW22}, \textit{Journal of Algebra} \cite{BCEGLY22}, and \textit{Experimental Mathematics} \cite{bruceErmanGoldsteinYang18}. I also contributed to the release of 4 open-source software packages, one public-facing database making data available to other researchers, and two articles for the \textit{Notices of the AMS} \cite{bruceNotices21,bruceNotices22}. 
+%almousaBruce19,BBBKR17,bruceErman-sop,bruceLi19,bruceErmanGoldsteinYang18,bruceErman19,bruce19-semiample,bruce19-hirzebruch,BCEGLY22,bruceHellerSayrafi21,bruceHellerSayrafi22,BBCMMW22
+
+\subsection{Syzygies in Algebraic Geometry}\label{subsec:prior-syzygies}
+
+Given a graded module $M$ over a graded ring $R$, a helpful tool for understanding the structure of $M$ is its minimal graded free resolution. In essence, a minimal graded free resolution is a way of approximating $M$ by a sequence of free $R$-modules. More formally, a \textit{graded free resolution} of a module $M$ is an exact sequence 
+\begin{center}
+\begin{tikzcd}[column sep = 3em]
+0 & \lar{} M & \arrow[l,"\epsilon" above]  F_{0} & \arrow[l,"d_{1}" above] \cdots &  & \cdots & \arrow[l,"d_{k-1}" above]  F_{k-1} & \arrow[l,"d_{k}" above] F_{k} & \lar \cdots
+\end{tikzcd}
+\end{center}
+where each $F_{p}$ is a graded free $R$-module, and hence can be written as $\bigoplus_{q}R(-p)^{\beta_{p,q}}$. The module $R(-q)$ is the ring $R$ with a twisted grading, so that $R(-q)_{d}$ is equal to $R_{d-q}$ where $R_{d-q}$ is the graded piece of degree $d-q$. The $\beta_{p,q}$'s are the \textit{Betti numbers} of $M$, and they count the number of $p$-syzygies of $M$ of degree $q$. We will use syzygy and Betti number interchangeably throughout. 
+
+Given a projective variety $X$ embedded in $\P^n$, we associate to $X$ the ring $S_X=S/I_X$, where $S=\C[x_0,\ldots,x_n]$ and $I_X$ is the ideal of homogeneous polynomials vanishing on $X$. As $S_X$ is naturally a graded $S$-module we may consider its minimal graded free resolution, which is often closely related to both the extrinsic and intrinsic geometry of $X$.  An example of this phenomenon
+ is Green's Conjecture, which relates the Clifford index of a curve with the vanishing of certain $\beta_{p,q}$ for its canonical embedding \cite{voisin02, voisin05, aproduFarkas19}. See also \cite{eisenbud05}*{Conjecture 9.6} and \cite{schreyer86, bayerEisenbud91}.
+
+%\begin{theorem}[\cite{voisin02}, \cite{voisin05}]
+%Let $C$ be a generic smooth projective curve of genus $g$ over a characteristic zero field embedded in $\P^{g-1}$ by the complete canonical series. Then the length of the first linear strand of the minimal free resolution of $I_X$ is $g-3-\text{Cliff}(C)$.
+%\end{theorem}
+
+\subsubsection{Asymptotic Syzygies}
+
+Much of my work has focused on studying the asymptotic properties of syzygies of projective varieties. Broadly speaking, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. In many ways, this perspective dates back to classical work on the defining equations of curves of high degree and projective normality \cite{mumford66, mumford70}. However, the modern viewpoint arose from the pioneering work of Green \cite{green84-I, green84-II} and later Ein and Lazarsfeld \cite{einLazarsfeld12}. 
+
+To give a flavor of the results of asymptotic syzygies we will focus on the question: in what degrees do non-zero syzygies occur? Going forward we will let $X\subset \P^{n_{d}}$ be a smooth projective variety embedded by a very ample line bundle $L_{d}$. Following \cite{ermanYang18} we set, 
+\begin{align*}
+\rho_q\left(X,L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{n_{d}},
+\end{align*}
+which is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \N}$. 
+%\begin{align*}
+%\rho_q\left(X;L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\N |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{r_{d}}.
+%\end{align*}
+%which by the Hilbert Syzygy Theorem is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. For any particular, $X$, $L_{d}$, and $q$ computing $\rho_{q}(X;L_{d})$ is often quite difficult. The asymptotic perspective thus, asks instead, to consider a sequence of line bundles $(L_{d})_{d\in \N}$ and ask how $\rho_{q}(X;L_{d})$ behaves along the sequence of $(L_{d})_{d\in \N}$. 
+
+With this notation in hand, we may phrase Green's work on the vanishing of syzygies for curves of high degree as computing the asymptotic percentage of non-zero quadratic syzygies. 
+
+\begin{theorem}\cite{green84-I}
+Let $X\subset \P^n$ be a smooth projective curve. If $(L_{d})_{d\in\N}$ is a sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then 
+\[
+\lim_{d\to \infty} \rho_{2}\left(X;L_{d}\right) = 0.
+\]
+\end{theorem}
+
+Put differently, asymptotically the syzygies of curves are as simple as possible, occurring in the lowest possible degree. This inspired substantial work, with the intuition being that syzygies become simpler as the positivity of the embedding increases \cite{ottavianiPaoletti01, einLazarsfeld93, lazarsfeldPareschiPopa11, pareschi00, pareschiPopa03, pareschiPopa04}.  
+
+In a groundbreaking paper, Ein and Lazarsfeld showed that for higher dimensional varieties this intuition is often misleading. Contrary to the case of curves, they show that for higher dimensional varieties, asymptotically syzygies appear in every possible degree. 
+  
+\begin{theorem}\cite{einLazarsfeld12}*{Theorem~C}
+Let $X\subset \P^n$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq \dim X$. If $(L_{d})_{d\in\N}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample then
+\[
+\lim_{d\to\infty} \rho_{q}\left(X; L_d\right) = 1.
+\]
+\end{theorem}
+
+My work has focused on the behavior of asymptotic syzygies when the condition that $L_{d+1}-L_{d}$ is constant and ample is weakened to assuming $L_{d+1}-L_{d}$ is semi-ample. Recall a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$. The prototypical example of a semi-ample line bundle is $\O(1,0)$ on $\P^{n}\times \P^{m}$. My exploration of asymptotic syzygies in the setting of semi-ample growth thus began by proving the following nonvanishing result for $\P^{n}\times\P^{m}$ embedded by $\O(d_{1},d_{2})$. 
+
+\begin{theorem}\cite{bruce19-semiample}*{Corollary~B}\label{thm:bruce-semiample}
+Let $X=\P^{n}\times\P^{m}$ and fix an index $1\leq q \leq n+m$. There exist constants $C_{i,j}$ and $D_{i,j}$ such that
+\[
+\rho_{q}\left(X; \O\left(d_1,d_2\right)\right)\geq1-\sum_{\substack{i+j=q \\  i \leq n, \; j \leq m}}\left(
+\frac{C_{i,j}}{d_1^id_2^j}+\frac{D_{i,j}}{d_1^{n-i}d_2^{m-j}}\right)-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right).
+\]
+\end{theorem}
+
+Notice if both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)\to1$, recovering the results of Ein and Lazarsfeld for $\P^n\times\P^m$. However, if $d_{1}$ is fixed and $d_{2}\to \infty$ (i.e. semi-ample growth) my results bound the asymptotic percentage of non-zero syzygies away from zero. This together with work of Lemmens \cite{lemmens18} has led me to conjecture that, unlike in previously studied cases, in the semi-ample setting $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)$ does not approach 1. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case  \cite[Conjectures~7.1,~7.5]{einLazarsfeld12}.
+
+
+% In particular, the asymptotic behavior is dependent, in a nuanced way, on the relationship between $d_{1}$ and $d_{2}$. 
+
+%For example, considering $\P^{1}\times\P^{5}$ and $q=2$ then Theorem~\ref{thm:bruce-semiample} shows that 
+%\[
+%\rho_{2}\left(\P^{1}\times\P^{5}; \O(d_1,d_2)\right)\geq1-\frac{20}{d_2^2}-\frac{60}{d_1d_2^3}-\frac{5}{d_1d_2}-\frac{120}{d_2^4}-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right)\,.
+%\]
+%Moreover, if $d_2$ is fixed and $d_1\to\infty$, then the limit of $\rho_{2}\left(\P^{1}\times\P^{5}; \O(d_1,d_2)\right)$ is greater than or equal to $1-\frac{20}{d^2_2}-\frac{120}{d_2^4}$.
+
+%Results of Lemmens in the case of $\P^1\times\P^1$ together with my work has led me to conjecture that unlike in previously study cases (i.e. curves and ample growth) in the case of semi-ample growth $\rho_{q}\left(\P^{n}\times\P^{m}; \O(d_1,d_2)\right)$ does not approach 1 as $d_{1}\to \infty$. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case. See \cite[Conjecture~7.1, Conjecture~7.5]{einLazarsfeld12}.
+
+The proof of Theorem~\ref{thm:bruce-semiample} is based on generalizing the monomial methods of Ein, Erman, and Lazarsfeld. Such a generalization is complicated by the difference between the Cox ring and the homogeneous coordinate ring of $\P^{n}\times\P^{m}$. A central theme in this work is to exploit the fact that a key regular sequence I use has a number of non-trivial symmetries. 
+%These symmetries, when combined with a series of spectral sequence arguments, allow me to prove Theorem~\ref{thm:bruce-semiample}.
+
+%This work suggests that the theory of asymptotic syzygies in the setting of semi-ample growth is rich and substantially different from the other previously studied cases. Going forward I plan to use this work as a jumping-off point for the following question.  
+%
+%\begin{question}\label{quest:semi-ample}
+%Let $X\subset \P^{r_d}$ be a smooth projective variety and fix an index $1\leq q \leq \dim X$. Let $(L_{d})_{d\in\N}$ be a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and semi-ample, can one compute $\lim_{d\to\infty} \rho_{q}\left(X;L_{d}\right)$?
+%\end{question}
+%
+%A natural next case in which to consider Question~\ref{quest:semi-ample} is that of Hirzebruch surfaces. I addressed a different, but related question for a narrow class of Hirzebruch surfaces in \cite{bruce19-hirzebruch}.
+
+\subsubsection{Syzygies via Highly Distributed Computing}
+
+It is quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. My co-authors and I exploited recent advances in numerical linear algebra and high-throughput high-performance computing to generate a number of new examples of Veronese syzygies. A follow-up project used similar computational approaches to compute the syzygies of $\P^{1}\times\P^{1}$ in over 200 new examples. This data provided support for several existing conjectures, as well as led us to make a number of new conjectures \cite{bruceErmanGoldsteinYang18,BCEGLY22}. 
+The resulting data is publicly available via the website SyzygyData and a package for Macaualy2 \cite{bruceErman19, M2}.
+
+%This is because while the problem of computing syzygies can be reduced to computing ranks of matrices, the number of matrices and their sizes quickly become extremely large. As an example, to compute the syzygies of $\P^2$ embedded by the $6$-uple Veronese embedding there are well over 6,000 relevant matrices with the around 2,000 of them being on the order of $4,000,000 \times 12,000,000$. 
+
+
+%Recently I have begun using similar computational techniques to compute the syzygies for Hirzebruch surfaces. Thus far, we have computed the syzygies in  $\sim100$ new examples. It is our hope that these examples will lead to new conjectures regarding the syzygies of Hirzebruch surfaces. In particular, we believe our data will be useful in addressing Question~\ref{quest:semi-ample}.
+
+%\subsection{Liaison Theory via Virtual Resolutions}
+%
+%One approach to studying the geometry of curves is by asking when the union of two (or more) curves is a complete intersection. Such curves are said to be linked, and liaison theory studies linkage equivalence classes \cite{peskineSzpiro74, huneke84, hunekeUlrich87, hunekeUlrich88}. The liaison theory of curves in $\P^3$ is well understood, but the same theory for curves in other 3-folds is mysterious. In work with Christine Berkesch and Patricia Klein, I hope to use the newly developed theory of virtual resolutions to better understand the liaison theory of curves in toric 3-folds. 
+%
+%Broadly, a virtual resolution is a homological representation of a graded module over the Cox ring of a smooth toric variety that attempts to better capture the relevant geometric information by allowing a limited amount of homology \cite{berkeschErmanSmith17}. In particular, they seem capable of being able to capture the subtle differences between ideal and set theoretic complete intersections that arise when studying liaison on toric varieties.
+%
+%%Using these we hope to generalize existing results about the liaison theory of  curves in $\P^3$ to curves in $\P^1\times\P^2$. 
+%
+%Ambitiously, we hope to use virtual resolutions to find a way to classify liaison classes of curves in $\P^1\times\P^2$ analogous to Rao modules \cite{rao78}. We would like to answer the following question. 
+% 
+%\begin{question}\label{quest:virtual-rao}
+%What invariant classifies even liaison classes of curves in $\P^1\times\P^2$?
+%\end{question}
+%
+%Using virtual resolutions we have managed to answer this question under a fairly restrictive hypothesis. We hope to explore whether this hypothesis can be weakened. 
+%
+%For any homological property associated to free resolutions (e.g. Cohen-Macaulay), it is possible to define an analogous virtual property associated to virtual resolutions (e.g. virtual Cohen-Macaulay). We would like to prove the following virtual version of a result of Peskine and Szpiro \cite{peskineSzpiro74}. 
+%
+%\begin{conj}\label{goalTheorem:virtualACM}
+%Let $C$ and $C'$ be linked curves in $\P^1\times\P^2$. Then, $C$ is virtually Cohen-Macaulay if and only if $C'$ is virtually Cohen-Macaualy.
+%\end{conj}
+%
+%
+%A helpful tool in approaching these questions is the ability to compute interesting examples via the  \texttt{VirtualResolutions} Macaulay2 package, which I co-authored \cite{almousaBruce19}.
+
+\subsection{Multigraded Castelnuovo–Mumford Regularity}\label{subsec:prior-mgreg}
+
+Introduced by Mumford, the Castelnuovo–Mumford Regularity of a projective variety $X\subset \P^{n}$ is a measure of the complexity of $X$ given in terms of the vanishing of certain cohomology groups of $X$. Roughly speaking one should think about Castelnuovo--Mumford regularity as being a measure of geometric complexity. Such a measure can be easily extended to modules over a standard graded polynomial ring $S=\C[x_{0},\ldots,x_{n}]$ by requiring the analogous vanishing conditions for local cohomology. 
+
+%
+%\begin{defn}
+%A coherent sheaf $\cF$ on $\P^{n}$ is $d$-regular if and only if:
+%\[
+%H^{i}(\P^{n}, \cF(d-i))=0 \quad \quad \quad \text{for all $i>0$}.
+%\] 
+%The Castelnuovo--Mumford regularity of $\cF$ is then 
+%\[
+%\reg(\cF) \coloneqq \min\left\{ d\in \Z \;\; \big| \;\; \text{$\cF$ is $d$-regular}\right\}.
+%\]
+%\end{defn}
+
+Mumford was interested in such a measure as it plays a key role in constructing Hilbert and Quot schemes. In particular, being $d$-regular implies that $\cF(d)$ is globally generated. However, Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
+
+\begin{theorem}\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
+Let $\cF$ be a coherent sheaf on $\P^{n}$ and $M=\bigoplus_{e\in\Z} H^0(\P^{n},\cF(e))$ the corresponding section ring. The following are equivalent:
+\begin{enumerate}
+\item $M$ is $d$-regular;
+\item $\beta_{p,q}(M)=0$ for all $p\geq0$ and $q>d+i$;
+\item $M_{\geq d}$ has a linear resolution. 
+\end{enumerate}
+\end{theorem}
+
+My collaborators and I have worked to generalize this result to the multigraded setting, i.e. from coherent sheaves on a single projective space to sheaves on a product of projective spaces. In particular, fixing a dimension vector $\nn=(n_1,n_2,\ldots,n_{r})\in \N^{r}$ we let $\P^{\nn}\coloneqq \P^{n_1}\times \P^{n_2}\times \cdots \times \P^{n_r}$ and $S=\K[x_{i,j} \; |\; 1\leq i \leq r, 0\leq j \leq n_{i}]$ be the Cox ring of $\P^{\nn}$ with the $\Pic(X)\cong \Z^{r}$-grading given by $\deg x_{i,j} = \ee_{i} \in \Z^{r}$, where $\ee_{i}$ is the $i$-th standard basis vector in $\Z^{r}$. 
+
+Maclagan and Smith generalized Castelnuovo--Mumford regularity to this setting in terms of certain cohomology vanishing. Fixing some notation given $\dd\in \Z^{r}$ and $i\in \Z_{\geq0}$ we let:
+\[
+L_{i}(\dd)\coloneqq \bigcup_{\substack{\vv \in \N \\ |\vv| = i}} (\dd-\vv)+\N^{r}.
+\]
+Note when $r=2$ the region $L_{i}(\dd)$ looks like a staircase with $(i+1)$-corners. Roughly speaking we define regularity by requiring the $i$-th cohomology of certain twists of $\cF$ to vanish on $L_{i}$. 
+
+%\begin{center}
+%\begin{figure}[H]
+%\newcommand{\makegrid}{
+%  \path[use as bounding box] (-3.45,-3.25) rectangle (5.45,5.25);
+%  \foreach \x in {-4,...,4}
+%  \foreach \y in {-4,...,4}
+%    { \fill[Gray,fill=gray] (\x,\y) circle (1.5pt); }
+%  \draw[-,  semithick] (-4,0)--(4,0);
+%  \draw[-,  semithick] (0,-4)--(0,4);
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{tikzpicture}[scale=.3]
+%  \path[fill=Gray!45] (-1,4)--(-1,0)--(0,0)--(0,-1)--(4,-1)--(4,4)--(-1,4);
+%  \makegrid
+%  \draw[->, ultra thick] (-1,0)--(-1,4);
+%  \draw[-, cap=round,ultra thick] (-1,0)--(0,0)--(0,-1);
+%    \draw[->, ultra thick] (0,-1)--(4,-1);
+%  %\fill[Gray,fill=Gray] (-1,0) circle (6pt);
+% % \fill[Gray,fill=Gray] (0,-1) circle (6pt);
+%  \fill[Gray,fill=Black] (0,0) circle (6pt);
+%\end{tikzpicture}\quad\;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{tikzpicture}[scale=.3]
+%  \path[fill=Gray!45] (-2,4)--(-2,0)--(-1,0)--(-1,-1)--(0,-1)--(0,-2)--(4,-2)--(4,4)--(-2,4);
+%  \makegrid
+%  \draw[->, ultra thick] (-2,0)--(-2,4);
+%  \draw[-, cap=round,ultra thick] (-2,0)--(-1,0)--(-1,-1)--(0,-1)--(0,-2);
+%    \draw[->, ultra thick] (0,-2)--(4,-2);
+%%  \fill[Gray,fill=Gray] (-2,0) circle (6pt);
+% % \fill[Gray,fill=Gray] (-1,-1) circle (6pt);
+% % \fill[Gray,fill=Gray] (0,-2) circle (6pt);
+%  \fill[Gray,fill=Black] (0,0) circle (6pt);
+%\end{tikzpicture}\quad\;
+%\begin{tikzpicture}[scale=.3]
+%  \path[fill=Gray!45] (-3,4)--(-3,0)--(-2,0)--(-3,0)--(-2,0)--(-2,-1)--(-1,-1)--(-1,-2)--(0,-2)--(0,-3)--(4,-3)--(4,4)--(-2,4);
+%  \makegrid
+%  \draw[->, ultra thick] (-3,0)--(-3,4);
+%  \draw[-, cap=round,ultra thick] (-3,0)--(-2,0)--(-2,-1)--(-1,-1)--(-1,-2)--(0,-2)--(0,-3);
+%      \draw[->, ultra thick] (0,-3)--(4,-3);
+%%  \fill[Gray,fill=Gray] (-2,0) circle (6pt);
+% % \fill[Gray,fill=Gray] (-1,-1) circle (6pt);
+% % \fill[Gray,fill=Gray] (0,-2) circle (6pt);
+%  \fill[Gray,fill=Black] (0,0) circle (6pt);
+%\end{tikzpicture}
+%%
+%%\caption{Letting $r=2$ the regions $L_{1}(0,0)$, $L_{2}(0,0)$, and $L_{3}(0,0)$.}
+%\end{figure}
+%\end{center}
+
+\begin{defn}\cite{maclaganSmith04}*{Definition 6.1}\label{def:mg-reg}
+A coherent sheaf $\cF$ on $\P^{\nn}$ is $\dd$-regular if and only if
+\[
+H^i\left(\P^{\nn}, \cF(\ee)\right) =0 \quad \quad \quad \text{for all $\ee\in L_{i}(\dd)$}.
+\]
+The multigraded Castelnuovo--Mumford regularity of $\cF$ is then the set: 
+\[
+\reg(\cF) \coloneqq \left \{ \dd\in \Z^{r} \;\; \big| \;\; \text{$\cF$ is $\dd$-regular}\right\}\subset \Z^{r}.
+\]
+\end{defn}
+
+%Even for relatively simple examples the multigraded Castelnuovo--Mumford regularity does not necessarily have a unique minimal element. That said $\reg(\cF)$ does have the structure of a module over the semi-group $\Nef(\P^{\nn})\cong\N^{r}$, i.e. if $\dd \in \reg(\cF)$ then $\dd+\ee\in \reg(\cF)$ for all $\ee\in \N^{r}$. 
+
+%\begin{center}
+%\begin{figure}\label{fig:example-of-reg}
+%\newcommand{\makegrid}{
+%  \path[use as bounding box] (-3.45,-3.25) rectangle (5.45,5.25);
+%  \foreach \x in {-1,...,5}
+%  \foreach \y in {-1,...,5}
+%    { \fill[Gray,fill=gray] (\x,\y) circle (1.5pt); }
+%  \draw[-,  semithick] (-1,0)--(5,0);
+%  \draw[-,  semithick] (0,-1)--(0,5);
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{tikzpicture}[scale=.35]
+%  \path[fill=Gray!45] (5,0)--(2,0)--(2,1)--(1,1)--(1,2)--(0,2)--(0,5)--(5,5);
+%  \makegrid
+%  \draw[->, ultra thick] (2,0)--(5,0);
+%  \draw[-, cap=round,ultra thick] (2,0)--(2,1)--(1,1)--(1,2)--(0,2);
+%    \draw[->, ultra thick] (0,2)--(0,5);
+%  %\fill[Gray,fill=Gray] (-1,0) circle (6pt);
+% % \fill[Gray,fill=Gray] (0,-1) circle (6pt);
+%\end{tikzpicture}
+%\caption{The multigraded Castelnuovo--Mumford regularity of $\O_{X}$ where $X\subset \P^{1}\times \P^{1}$ is the subscheme consisting of three distinct points $([1:1],[1:4])$, $([1:2],[1:5])$, and $([1:3],[1:6])$.}
+%\end{figure}
+%\end{center}
+
+The obvious approaches to generalize Theorem~\ref{thm:eisenbud-goto} to a product of projective spaces turn out not to work. For example, the multigraded Betti numbers do not determine multigraded Castelnuovo--Mumford regularity \cite[Example 5.1]{bruceHellerSayrafi21} Despite this we show that part (3) of Theorem~\ref{thm:eisenbud-goto} can be generalized. To do so we introduce the following generalization of linear resolutions. 
+
+\begin{defn}
+A complex $F_{\bullet}$ of $\Z^{r}$-graded free $S$-modules is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$.
+%\begin{enumerate}
+%\item We say that  $F_{\bullet}$ is $\dd$-linear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i}(\dd)$. 
+%\item We say that $F_{\bullet}$ is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$. 
+%\end{enumerate}
+\end{defn}
+
+%In order to see the difference between linear and quasilinear resolutions we note that on a product of projective spaces the irrelevant ideal generally will have a quasilinear resolution, not a linear resolution.  For example, if we consider $\P^{1}\times \P^{2}$ so that $S=\K[x_{0},x_{1},y_{0},y_{1},y_{2}]$ and $B=\langle x_{0},x_{1}\rangle\cap\langle y_{0},y_{1},y_{2}\rangle$ then the minimal graded free resolution of $S/B$ is: 
+%	\[\begin{tikzcd}[column sep=1.75em]
+%	S & \lar S(-1,-1)^6 & \lar
+%	  \begin{matrix}
+%	    S(-1,-2)^6\\[-3pt]
+%	    \oplus \\[-3pt]
+%	    S(-2,-1)^3
+%	  \end{matrix}
+%	  &
+%	  \lar
+%	  \begin{matrix}
+%	    S(-1,-3)^2\\[-3pt]
+%	    \oplus \\[-3pt]
+%	    S(-2,-2)^3
+%	  \end{matrix}
+%	  &\lar
+%	  S(-2,-3)
+%	  & \lar 0.
+%	\end{tikzcd}\]
+%In particular, we see that the minimal graded free resolution $S/B$ is not $(0,0)$-linear since $(-1,-1) \not\in L_1(0,0)$, however, it is $(0,0)$-quasilinear. 
+%
+%It is not the case that $M$ being $\dd$-regular implies $M_{\geq \dd}$ has a linear resolution \cite[Example 4.2]{bruce21}, however, we can characterize being $\dd$-regular in terms of $M_{\geq \dd}$ having a quasilinear resolution. 
+
+\begin{theorem}\cite{bruceHellerSayrafi21}*{Theorem A}\label{thm:mgreg-main}
+Let $M$ be a finitely generated $\Z^{r}$-graded $S$-module with $H^{0}_{B}(M)=0$:
+\[
+\text{$M$ is $\dd$-regular} \iff  \text{$M_{\geq\dd}$ has a $\dd$-quasilinear resolution}.
+\]
+\end{theorem}
+
+The proof of Theorem~\ref{thm:mgreg-main} is based in part on a \v{C}ech--Koszul spectral sequence that relates the Betti numbers of $M_{\geq\dd}$ to the Fourier--Mukai transform of $\widetilde{M}$ with Beilinson's resolution of the diagonal as the kernel.  Precisely, if $M$ is $\dd$-regular and $H_B^0(M)=0$ we prove the that
+\begin{align*}\label{eq:magic-equality}
+  \dim_{\C}\Tor^S_j(M_{\geq\dd}, \C)_\aa = h^{|\aa|-j}\big(\P^{\nn}, \widetilde{M}\otimes\O_{\P^{\nn}}^\aa(\aa)\big) \quad \text{for } |\aa|\geq j\geq 0,
+\end{align*}
+where the $\O_{\P^{\nn}}^\aa$ are cotangent sheaves on $\P^\nn$. The result then follows from showing that $M$ being $\dd$-regular is equivalent to certain vanishings of the right-hand side above. 
+
+
+%We briefly sketching the proof of the above theorem:
+%\begin{enumerate}
+%\item Using a Fourier-Mukai argument we construct a complex $G_{\bullet}$ of free $\Z^{r}$-graded $S$-modules whose multigraded Betti numbers are given (in some range) as follows:
+%\[
+%\beta_{i,\aa}\left(G_{\bullet}\right) = \dim H^{|\aa|-i}\left(\P^{\nn}, \tilde{M}\otimes \Omega^{\aa}_{\P^{\nn}}(\aa)\right).
+%\]
+%\item Making use of a spectral sequence argument we show that even though $G_{\bullet}$ is not a priori a resolution of $M_{\geq\dd}$ we have that:
+%\[
+%\beta_{i,\aa}\left(M_{\geq\dd}\right) = \beta_{i,\aa}\left(G_{\bullet}\right).
+%\]
+%\item Finally, we characterize $M$ being $\dd$-regular in terms of the vanishing of the cohomology in (1) above.
+%\end{enumerate}
+%
+%Note the complex $G_{\bullet}$ constructed in part (1) of the proof sketch above is a priori not a resolution of $M_{\geq\dd}$, but instead is a virtual resolution of $M$ \cite{berkesch17}. That said as noted above it does have the same Betti numbers as $M_{\geq\dd}$, and in all the examples we have done it turns out to be a resolution.
+%
+%
+%
+
+
+\subsubsection{Multigraded Regularity of Powers of Ideals}
+
+Building on the work of many people \cite{bertramEinLazarsfeld91,chandler97,smithSwanson97,swanson97}, Cutkosky, Herzog, Trung \cite{cutkoskyHerzogTrung99} and independently Kodiyalam \cite{kodiyalam00} showed the Castelnuovo--Mumford regularity for powers of ideals on a projective space $\P^n$ has surprisingly predictable asymptotic behavior. In particular, given an ideal $I\subset \K[x_0,\ldots,x_n]$, there exist constants $d,e\in\Z$ such that $\reg\!\left(I^t\right) = dt+e$ for $t\gg0$.
+
+Building upon our work discussed above, my collaborators and I generalized this result to arbitrary toric varieties. In particular, Definition~\ref{def:mg-reg} can be extended to all toric varieties by letting $S$ be Cox ring of the toric variety $X$, replacing $\Z^r$ with the Picard group of $X$, and replacing $\N^{r}$ with the nef cone of $X$. My collaborators and I show that the multigraded regularity of powers of ideals is bounded and translates in a predictable way. In particular, the regularity of $I^{t}$ essentially translates within $\Nef X$ in fixed directions at a linear rate.
+
+%The rough idea is that Definition~\ref{def:mg-reg} generalizes verbatim where $S$ is replaced with the Cox ring of the toric variety $X$, $\Z^{r}$ is replaced by the Picard group of $X$ an $\N^{r}$ is replaced by the nef cone of $X$> In this setting the regularity of a $\Pic(X)$-graded module is a subset of $\Pic X$ that is closed under the addition of nef divisors. \juliette{finish this pragraph}
+
+ 
+
+\begin{theorem}\cite{bruceHellerSayrafi22}*{Theorem 4.1}
+  There exists a degree $\aa\in\Pic X$, depending only on $I$, such that for each integer $t>0$ and each pair of degrees $\qq_1,\qq_2\in\Pic X$ satisfying $\qq_1\geq\deg f_i\geq\qq_2$ for all generators $f_i$ of $I$, we have
+	\[ t\qq_1+\aa+\reg S \subseteq \reg\!\left(I^t\right) \subseteq t\qq_2+\Nef X. \]
+\end{theorem}
+
+
+\subsection{Varieties over Finite Fields}
+
+Over a finite field, many classical statements from algebraic geometry no longer hold. For example, if $X\subset\P^n$ is a smooth projective variety of dimension $r$ over $\C$, Bertini's theorem states that, if $H\subset \P^n$ is a generic hyperplane, then $X\cap H$ is smooth of dimension $r-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Using an ingenious probabilistic sieving argument, Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of arbitrarily large degree, then a version of Bertini's theorem is true \cite{poonen04}. Specifically Poonen showed that as, $d\to\infty$, the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{n}$ of degree $d$ such that $X\cap H$ is smooth is determined by the Hasse-Weil zeta function of $X$.
+
+\subsubsection{A Probabilistic Study of Systems of Parameters} 
+
+Given an $n$ dimensional projective variety $X\subset \P^n$, a collection of homogeneous polynomials $f_{0},f_{1},\ldots,f_{k}$ of degree $d$ is a (partial) system of parameters if $\dim X\cap \V(f_{0},f_{1},\ldots,f_{k}) = \dim X - (k+1)$. Systems of parameters are closely tied to Noether normalization, as the existence of a finite (i.e. surjective with finite fibers) map $X\rightarrow \P^r$ is equivalent to the existence of a system of parameters of length $r+1$.
+
+Inspired by work of Poonen \cite{poonen04} and Bucur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I computed the asymptotic probability that randomly chosen homogeneous polynomials $f_{0},f_{1},\ldots,f_{k}$ over $\fF_{q}$ form a system of parameters. By adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we showed that, when $k<n$, the probability that randomly chosen $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by a zeta-function-like power series that enumerates higher dimensional varieties instead of closed points. In the following, $|Z|$ is the number of irreducible components of $Z$, and $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
+
+\begin{theorem}\cite{bruceErman-sop}*{Theorem~1.4}\label{thm:main finite field}
+Let $X\subseteq \P^n_{\fF_q}$ be a projective scheme of dimension $r$. Fix $e$ and let $k<r$. The probability that random polynomials $f_0,\dots,f_k$ of degree $d$ are parameters on $X$ is
+\[
+\Prob\left(\begin{matrix}f_0,\dots,f_{k} \text{ of degree $d$ } \\ \text{ are parameters on $X$}\end{matrix}\right) = 1 \ - 
+\sum_{\begin{smallmatrix}Z\subseteq X \text{reduced} \\ \dim Z \equiv r-k\\ \deg Z \leq e  \end{smallmatrix}}(-1)^{|Z|-1}q^{-(k+1)h^0(Z,\O_Z(d))}+ o\left(q^{-e(k+1)\binom{r-k+d}{r-k}}\right).
+\]
+\end{theorem}
+
+%Notice that the power series on the right-hand side essentially enumerates subvarieties of dimension $n-k$. The main term determining the probability a randomly chosen set of homogeneous polynomials forms a partial system of parameters is controlled by the number of $(n-k)$-planes contained in $X$. 
+
+%\begin{cor}\cite{bruceErman-sop}\label{cor:error}
+%Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n$.  Then
+%\[
+%\lim_{d\to \infty} \frac{\Prob\left(\begin{matrix}(f_0,\dots,f_{k}) \text{ of degree $d$} \\ \text{ are \underline{not} parameters on $X$}\end{matrix}\right)} {q^{-(k+1)\binom{n-k+d}{n-k}}} = \#\left\{\begin{matrix}\text{$(n-k)$-planes } L\subseteq \P^r_{\fF_q}\\\text{such that }  L\subseteq X\end{matrix}\right\}.
+%\]
+%\end{cor} 
+
+From this we proved the first explicit bound for Noether normalization over $\fF_{q}$ and gave a new proof of recent results on Noether normalizations of families over $\Z$ and $\fF_{q}[t]$ \cite{gabberLiuLorenzini15, cmbpt}.
+
+
+
+%\subsubsection{Jacobians Covering Abelian Varieties}
+%
+%Over an infinite field, it is a classic result that every abelian variety is covered by a Jacobian variety of bounded dimension. Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12}, Li and I proved an analogous result for abelian varieties over finite fields. We did so by first proving an effective version of Poonen's Bertini theorem over finite fields. 
+%\begin{theorem}\cite{bruceLi19}*{Theorem~A}
+%Fix $r,n\in \N$ with $r\geq2$, and let $\fF_{q}$ be a finite field of characteristic $p$. There exists an explicit constant $C_{n,q}$ such that if $A\subset \P^{n}_{\fF_q}$ is a non-degenerate abelian variety of dimension $r$, then for any $d\in \N$ satisfying 
+%\[
+%C_{n,q}\zeta_{A}\left(r+\tfrac{1}{2}\right) \deg(A) \leq  \frac{q^{\frac{d}{\max\{r+1,p\}}}d}{d^{r+1}+d^r+q^{d}},
+%\]
+%there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively onto $A$, where 
+%\[
+%\dim J\leq 
+%%\OO\left(\frac{ \deg(A)^2 d^{2(n-1)}}{r}\right).
+%\OO\left( \deg(A)^2 d^{2(n-1)}r^{-1}\right).
+%\]
+%\end{theorem} 
+
+%\subsection{Uniform Bertini}
+%
+%%Notice that in the statement of Poonen's Bertini theorem, while the left-hand side of equation~\eqref{eq:poonen} is dependent of the embedding of $X$ into projective space (i.e. the choice of very ample line bundle), the overall limit is itself independent of the embedding of $X$. 
+%The probability that a random hypersurface of degree $d$ intersects $X\subset \P^r_{\fF_{q}}$ smoothly inherently depends on the embedding of $X$. However, Poonen's work shows that as $d\to\infty$ this is actually independent of the embedding. 
+%This suggests that there may be a more general and uniform statement of Poonen's Bertini theorem. That is one might hope that the analogous limit along any sequence $(L_{d})_{d\in\N}$ of line bundles growing in positivity equals $\zeta_{X}(n+1)^{-1}$.
+%
+%Work of Erman and Wood on semi-ample Bertini theorems shows that a naive analogue of Poonen's Bertini theorem fails \cite{ermanWood15}. Isabel Vogt and I believe that this can be fixed by introducing an assumption on how the sequence of lines bundles grows in positivity. We say a sequence of line bundles  $\left(L_{d}\right)_{d\in\N}$ \textit{goes to $\infty$ in all directions} if for every ample line bundle $A$ there exists $N\in \N$ such that $L_{i}-A$ is ample for all $i\geq N$. We are working to prove the following uniform Bertini theorem:
+% 
+%\begin{conj}\label{gthm:effective-bertini}
+%Let $X/\fF_{q}$ be a smooth projective variety of dimension $n$. If $\left(L_{d}\right)_{d\in\N}$ is a sequence of line bundles on $X$ going to infinity in all directions then 
+%\begin{equation}
+%\lim_{d\to \infty} \Prob\left(f \in H^0\left(X, L_{d}\right)  \;\;\; \bigg| \;\;\; 
+%\begin{matrix}
+% \text{$X\cap\V(f)$ is smooth}\\
+% \text{of dimension $n-1$}
+% \end{matrix}
+%\right)=
+%\zeta_X(n+1)^{-1}.
+%\end{equation}
+%\end{conj}
+%
+%We have verified this conjecture in a number of examples ($X=\P^1\times\P^1, \P^1\times\P^1\times\P^1$). We  are hopeful that similar methods will extend to whenever the nef cone of $X$ is a finitely generated.
+
+%Inspired by Fujita's vanishing theorem and work of Erman and Wood, the following conjecture is another natural version of Poonen's Bertini theorem, which I also hope to work on with Vogt.  
+%
+%
+% \begin{conj}\label{conj:bertini-fujita}
+% Let $X/\fF_{q}$ be a smooth projective variety of dimension $n$ and $\cL$ be an ample line bundle on $X$. There exists an integer $m(\cL)$ such that for all $k\geq m(\cL)$ and all $\cD\in \Nef(X)$. 
+%
+%\begin{equation}
+%\left\{
+%f \in H^0\left(X, \cL(k)\otimes \cD\right) \quad \bigg| \quad 
+%\begin{matrix}
+% \text{$X\cap\V(f)$ is smooth}\\
+% \text{of dimension $n-1$}
+% \end{matrix}
+%\right\}\neq\o.
+%\end{equation}
+% \end{conj}
+ 
+\subsection{Broader Impacts from Prior NSF Support}
+
+\subsubsection{Organizing}\label{subsubsec:prior-organizing} I have organized 9 conferences: \textit{Math Careers Beyond Academia } (50 participants), \textit{M2@UW} (45 participants), \textit{Geometry and Arithmetic of Surfaces} (40 participants), \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants), \textit{CAZoom} (70 participants), \textit{Western Algebraic Geometry Symposium} (100 participants), \textit{GEMS of Combinatorics} (40 participants), $\Spec(\overline{\Q})$ (50 participants), and \textit{BATMOBILE} (November 2022). Additionally, I have organized three special sessions at AMS Sectional Meetings and the Joint Math Meetings. When organizing these conferences I have given paid special attention to promoting women and other underrepresented groups in mathematics. For example, \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} and \textit{GEMS in Combinatorics}  focused on forming communities of women and non-binary researchers in commutative algebra and combinatorics respectively. Further, $\Spec(\overline{\Q})$ highlighted the research of LGBTQ+ mathematicians in algebra, geometry, and number theory.
+
+
+%In the Spring of 2017 I organized \textit{Math Careers Beyond Academia } (50 participants), a one-day professional development conference on STEM careers outside of academia. In April 2018 I organized \textit{M2@UW} (45 participants), a four-day workshop focused on creating new packages for Macaulay2. In February 2019 I organized \textit{Geometry and Arithmetic of Surfaces} (40 participants), a workshop providing a diverse group of early-career researchers the opportunity to learn about interesting topics in the arithmetic and algebraic geometry. In April 2019 I organized the \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants)  focused on forming a community of women and non-binary researchers interested in commutative algebra. I organized a \textit{Special Session on Combinatorial Algebraic Geometry} at the AMS Fall 2019 Central Sectional.  In April 2020 I organized a two-day virtual conference, \textit{CAZoom} (70 participants), highlight recent advances in commutative algebra. In the Spring of 2021 I organized the \textit{Western Algebraic Geometry Symposium (WAGS)}, which had over 100 participants. In the fall of 2021 I organized a two-day online workshop, \textit{GEMS of Combinatorics} (40 participants), seeking to highlight the work of women in combinatorics and promote gender equity in the field. In July 2022 I organized $\Spec(\overline{\Q})$ (50 participants) a three day conference at the Fields Institute for LGBTQ+ mathematicians in algebra, geometry, and number theory. I organized a \textit{Special Session on Combinatorial Algebraic Geometry} at the AMS Fall 2022 Eastern Sectional. 
+
+
+\subsubsection{Math Circles}
+	From 2015 through 2018 I was heavily involved in the Madison Math Circle, including  2 years as the lead organizer. As an organizer, I worked to build stronger connections between the Madison Math Circle, local schools and teachers, and other outreach organizations focused on underrepresented groups. This led to weekly attendance to more than double. I also created a new outreach arm of the circle, which visits high schools around the state of Wisconsin to better serve students from underrepresented groups. This dramatically expanded the reach of the Madison Math Circle, and during my final year as an organizer, the circle reached over 300 students. While a post-doc at UC Berkeley I volunteered as a speaker with the Berkeley Math Circle. 
+
+\subsubsection{Mentoring}
+I have actively sought out ways to mentor undergraduate and graduate students, especially those from generally underrepresented groups. While a graduate student, I led reading courses with three undergraduates. One of these students, an undergraduate woman, worked with me for over a year, during which time I helped her apply for summer research projects. Working with \textit{Girls' Math Night Out} I lead two girls in high school through a project exploring cryptography. During 2018-2019, I mentored 6 first-year graduate students (all women or non-binary students). I also mentored two undergraduate women via the AWM's Mentoring Network. 
+
+I advised two summer research projects for undergraduate students. The first of these projects ran virtually during Summer 2021 when 6 undergraduates worked on combinatorial questions related to my work in \cite{BBCMMW22}. In Summer 2022 I advised an undergraduate student on a research project related to my work on syzygies discussed in Section~\ref{subsec:prior-syzygies}. This work is ongoing and will hopefully result in a paper to be posted later this year. This student is now applying to graduate schools in math. 
+
+As a postdoc, I began research projects with three graduate students (a majority of whom identify with a generally underrepresented group). These projects have resulted in two pre-prints, with additional projects still ongoing. Throughout the Spring and Summer of 2022, I did a reading course with a first-year graduate woman on algebraic geometry.
+
+\subsubsection{Virtual Mathematics}
+In response to the COVID-19 pandemic and the shift of many mathematical activities to virtual formats, I worked to find ways for these online activities to reach those often at the periphery. During Summer and Fall 2020, I helped with Ravi Vakil's \textit{Algebraic Geometry in the Time of Covid} project. This massive online open-access course in algebraic geometry brought together $\sim2,000$ participants from around the world. In Spring 2021, I organized an 8-week virtual reading course for undergraduates in algebraic geometry and commutative algebra. %for ~20 undergraduate students.
+
+%For this program I helped process the registration, oversaw roughly 200 students, and helped with the online lectures.
+
+\subsubsection{A More Inclusive Community.} In Fall of 2016, I led the creation of a committee on inclusivity and diversity within the Mathematics Department, as a member of this committee, I drafted the department's commitment to inclusivity and non-discrimination and created template syllabi statements that let students know about these department policies. 
+
+While a graduate student I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM, which eventually grew to over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around... Thanks so much for organizing this stuff -- it's really helpful''. %Additionally, %I organized and obtained a travel grant for 11 members to attend the national oSTEM Inc. conference. 
+From 2017-2020 I lead the campus social organization for LGBTQ+ graduate and post-graduate students, which had over 350 members. %In this role, I have co-organized a weekly coffee social hour intended to give LGBTQ+ graduate and post-graduate students a place to relax, make friends, and discuss the challenges of being LGBTQ+ at the UW - Madison.
+
+Since Fall 2020 I have organized \textit{Trans Math Day}, an annual one-day virtual conference promoting the work of transgender and non-binary mathematicians. Highlighting the importance of such conferences one student participant said, ``I've been really considering leaving mathematics.  [Trans Math Day 2020] reminded me why I'm here and why I want to stay. ... If a conference like this had been around for me five years ago, my life would have been a lot better.'' Trans Math Day regularly has ~50 participants. The next Trans Math Day is in December 2022. 
+
+Since Fall 2020 I have been a board member for \textit{Spectra: The Association for LGBTQ+ Mathematicians}. As a board member I have overseen the growth and formalization of the organization, including the creation and adoption of bylaws, the creation of an invited lecture at the Joint Mathematics Meetings, and a fundraising campaign that has raised over \$20,000. I am currently the inaugural president of Spectra, and as of right now we have over 500 people on our mailing/membership lists.  
+
+
+\section{Syzygies Beyond Curves}\label{sec:syzygies-beyond}
+
+%As discussed Section~\ref{subsec:prior-syzygies} given a projective variety $X$ embedded $\P^{n}$, we associate to $X$ the ring $S_{X}=S/I_{X}$ where $S=\C[x_{0},\ldots,x_{n}]$ is a standard graded polynomial ring and $I_{X}$ is the homogeneous defining ideal of $X$. Since $S_{X}$ is naturally a graded $S$-module we may consider its minimal graded free resolution, which is often closely related to both the extrinsic and intrinsic geometry of $X$.
+
+Let $X$ be a projective variety and $L$ a very ample line bundle. Considering the embedding of $X$ into projective space $X \hookrightarrow \P H^{0}(X,L)\cong \P^{n}$ defined by $L$, let $S_{X}=S/I_{X}$ where $S=\C[x_{0},\ldots,x_{n}]$ is the standard graded polynomial ring and $I_{X}$ is the homogeneous defining ideal of $X$. The minimal graded free resolution of $S_{X}$ as an $S$-module is an exact sequence:
+\begin{center}
+\begin{tikzcd}[column sep = 3em]
+0 & \lar{} S_{X} & \arrow[l,"\epsilon" above]  F_{0} & \arrow[l,"d_{1}" above] \cdots &  & \cdots & \arrow[l,"d_{k-1}" above]  F_{k-1} & \arrow[l,"d_{k}" above] F_{k} & \lar \cdots
+\end{tikzcd}
+\end{center}
+%\[
+%\cdots \xrightarrow{} F_{k} \xrightarrow{d_{k}} F_{k-1} \xrightarrow{d_{k-1}} \cdots \xrightarrow{d_{1}} F_{0}\xrightarrow{\epsilon}S_{X}\xrightarrow{} 0
+%\]
+where $F_{p}$ is a graded free $S$-module, and the differentials satisfy some minimality conditions. Since $F_{p}$ is a graded free $S$-module it can be written as $\bigoplus_{q}S(-q)^{\beta_{p,q}(S_{X})}$. The module $S(-q)$ is the ring $S$ with a twisted grading, so that $S(-q)_{d}$ is equal to $S_{d-q}$ where $S_{d-q}$ is the graded piece of degree $d-q$. The $\beta_{p,q}(S_{X})$ are known as the graded Betti numbers (or syzygies) of the pair $(X,L)$, and we often denote them as $\beta_{p,q}(X;L)$ to indicate their dependence not just on $X$ but on the line bundle $L$ as well. That is to say the syzygies depend on the extrinsic embedding of $X$ into $\P^{n}$. An overarching theme in the study of syzygies in algebraic geometry is understanding ways that minimal graded free resolutions and grade Betti numbers also capture the intrinsic geometry of $X$.   
+
+%defining equations of $X\subset \P^{n}$.
+
+The connection between the geometry of $X$ and its minimal graded free resolutions has been made most precise when $X$ is a curve. For example, consider the following classical theorem of Noether and Petri concerning canonical curves.
+%of Noether and Petri:
+
+\begin{theorem}[Noether-Petri Theorem]\label{thm:noether-petri}
+	Let $X$ be a smooth projective curve of genus $g$. If $X$ does not have a degree $2$ cover of $\P^{1}$ then the canonical bundle $K_{X}$ defines a projectively normal embedding of $X$ into $\P^{g-1}$. Further, if $X$ does not admit a degree 3 cover of $\P^{1}$ then the image of $X\subset \P^{g-1}$ is defined by quadrics. 
+\end{theorem}
+
+In the language of minimal graded free resolutions this theorem can be translated as follows: 
+\begin{itemize}
+\item If $X$ does not admit a cover of $\P^{1}$ of degree $2$ then $\beta_{0,0}(X;K_X)=1$ and $\beta_{0,q}(X;K_X)=0$ for all $q\neq0$. 
+\item If $X$ does not admit a cover of $\P^{1}$ of degree $3$ then $\beta_{1,q}(X;K_X)=0$ for all $q\neq2$. 
+\end{itemize}
+From this we see that syzygies of a smooth projective curve $X$ seem to be closely related to the degrees for which $X$ admits a cover of $\P^{1}$. This heuristic turns out to be true in several ways, but to understand the higher syzygies of canonical curves one needs a slightly more subtle invariant. The Clifford index of a smooth curve $X$ is defined to be: 
+
+%From this we see that syzygies of a smooth projective curve $X$ seem to be closely related to which degrees $d$ does $X$ admit a degree $d$ cover $X\to \P^{1}$ of $\P^{1}$. We call the least such $d$ the gonality of $X$, which we denote by $\gon(X)$. It turns out that for curves of high degree \juliette{blah}
+%
+%\begin{theorem}
+%	Let $X\subset\P^{r}$ be a smooth projective curve. If $\deg X \gg 0$, then
+%	\[
+%	\beta_{p,p+1}(X\subset \P^{r})\neq 0 \quad \text{if and only if} \quad 1 \leq p \leq \dim r-\gon(X)-1.
+%	\]
+%\end{theorem}
+%
+
+%In general if we wish to have non-asymptoic results a slightly more subtle invariant is needed instead of gonality. The Clifford index of a smooth curve $X$ is defined to be: 
+
+\[
+\cliff(X)\coloneqq \min \left\{\deg(L) - 2 \dim H^{0}(X,L)+2 \quad \bigg| \begin{matrix} L\in \Pic(X) \\
+\deg(L)\leq g-1 \quad \dim H^0(X,L)\geq2\end{matrix}\right\}.
+\]
+
+As a vast generalization of the Noether-Petri theorem, the following conjecture of Green says that the syzygies of canonical curves (i.e. the syzygies of a (non-hyperelliptic) curve embedded by the complete linear series of the canonical divisor) are controlled by the Clifford index.
+
+
+\begin{conj}[Green's Conjecture \cite{green84-I}]
+	If $X$ is a smooth projective curve then:
+	\[
+	\beta_{p,p+2}(X;K_X)=0 \quad \quad \text{for all} \quad \quad p<\cliff(X).
+	\]
+\end{conj}
+
+Stated somewhat differently Green's conjecture say that one can read the Clifford index of a smooth curve (which is an intrinsic invariant of the curve, not dependent on the embedding) from the vanishing of the syzygies of the canonical embedding of the curve (which are extrinsic to the curve, dependent on the choice of the embedding). 
+
+Breakthrough work of Voisin proved this conjecture for general curves of even genus \cite{voisin02,voisin05}, and in recent years several new proofs of this result have been found \cite{aproduFarkas19,kemeny21}. Additionally, substantial work has gone into finding refinements and extensions of Green's Conjecture \cite{farkasMustataPopa03,chiodoEFS13,farkasKemeny16,farkasKemeny17,deopurkar18}.
+
+\begin{remark}
+Green's conjecture can be formulated entirely algebraically: Let $S=\C[x_{0},\ldots,x_{n}]$ and $I\subset S$ be a prime ideal containing no linear forms and whose degree two part is spanned by quadrics of rank $\leq 4$. Further, assume that $S/I$ is normal, Gorenstein, has dimension two, and $\deg(S/I)=2n$. If $\beta_{p,p+2}(S/I)=0$ for all $p\leq C$ then $I$ contains the $2\times2$ minors of a 1-generic $i\times j$ matrix where $i+j-n=C$ \cite{eisenbud92}*{Conjecture~1.3}.
+\end{remark}
+
+
+Despite these results for curves, much remains unknown about how syzygies encode geometry for other types of varieties. The overarching goal of this first project is to deepen our understanding of the ways minimal graded free resolutions encode geometry beyond the case of curves. In particular, this project seeks to extend Green's conjecture to stacky curves.
+
+
+%\begin{question}\label{ques:higher-dim-syzygies}
+%	How do the syzygies reflect the intrinsic geometry of 
+%	higher dimensional varieties?
+%\end{question}
+%
+%Note work of Ein and Lazarsfeld suggests that in a some sense the syzygies of higher dimensional varieties can be considerably more complicated than the case of curves (compare Theorems \juliette{internal cite}. Much of my previous work on syzygies has focused on exploring this question for certain families of surfaces; like products of projective spaces and Hirzebruch surfaces \juliette{cite}.
+
+
+
+\subsection{Syzygies of Stacky Curves}
+
+
+%Admittedly Question~\ref{ques:higher-dim-syzygies} is quite ambitious and broad, and as such a 
+%The primary goal of this project is to develop tools to better understand the of the wa connection for a class of geometry objects that I propose as a potentially tractable next step for understanding the ways minimal graded free resolutions encode geometry. In particular, this project focuses on attempting to understand the syzygies of stacky curves.
+
+Formally a \textit{stacky curve} (over a field $\K$) is a smooth proper geometrically connected Deligne-Mumford stack of dimension 1 over $\K$ which contains a dense open subscheme. However, intuitively one may think about a stacky curve as being a curve with a finite number of special points -- called stacky points -- which have ``fractional degrees''. Note this intuition can be made precise in the sense that any stacky curve is (Zariski) locally the quotient of a smooth affine curve by a finite group \cite{voightZurieckBrown22}*{Lemma~5.3.10}. For simplicity for the remainder of this section we will assume we $\K=\C$, however, everything remains true over an arbitrary field if one places minor conditions on the stacky curve. 
+
+In \cite{voightZurieckBrown22} Voight and Zureick-Brown develop a theory of divisors, including canonical divisors, for stacky curves. Roughly this theory proceeds by noting that every stacky curve $\cX$ admits a coarse space $\pi:\cX\to X$ where $X$ is a smooth (non-stacky) curve. The theory of divisors on $\cX$ can be developed by carefully transferring properties of divisors on $X$ to $\cX$ via the map $\pi$. Two key features in this theory differ from that of divisors on non-stacky curves. First, since the degree of a stacky point need not be an integers the degree of a divisor on a stacky curve maybe be a rational number. Second, when working with a stacky curve $\cX$ and divisor $D$ instead of thinking of $D$ as defining an embedding of $\cX$ into projective space we work directly with the section ring $R(\cX;D)\coloneqq \bigoplus_{k\in \Z}H^{0}(\cX,kD)$. When $D$ is the canonical divisor $K_{\cX}$ we refer to $R(\cX;K_{\cX})$ as the \textit{canonical ring} of $\cX$.
+
+
+In this setup Voight and Zureick-Brown generalize the Noether-Petri Theorem (see Theorem~\ref{thm:noether-petri}) to stacky curves by bounding the degrees of the generators and relations of the canonical ring. 
+
+%In particular, they show that, under  minor hypotheses, the canonical ring $R(\cX;K_{\cX})$ of a stacky curve $\cX$ is finitely generated and they bound the degrees of the generators and relations. \juliette{transition}
+
+\begin{theorem}\cite{voightZurieckBrown22}*{Theorem 8.4.1}\label{thm:voight-dzb}
+Let $\cX$ be stacky curve whose coarse space has genus $\geq 1$ and let $e$ be the maximum order of the stabilizer groups of the stacky points; then the canonical ring $R(\cX; K_{\cX})$ is  generated by elements in degree at most $3e$ with relations in degree at most $6e$. %let $e_1,\ldots,e_{t}$ be the orders of the stabilizer groups of the stacky points. If $e=\max\{e_{1},e_{2},\ldots,e_{t}\}$ then the canonical ring $R(\cX; K_{\cX})$ is  generated by elements in degree at most $3e$ with relations in degree at most $6e$.%Let $\cX$ be a stacky curve with one stacky point $q\in \cX$ whose stabalizer has order $e$. Suppose $X$ is the coarse space of $\cX$. If $X$ has genus one then the canonical ring $R(\cX, K_{\cX})$ is generated in degrees at most $3e$ and has relations in degree at most $6e$.
+\end{theorem}
+
+
+As a consequence of this result, we know that under minor hypotheses the canonical ring of a stacky curve is a finitely generated graded $\C$-algebra with a non-standard $\Z$-grading. That is there exists a $\Z$-graded polynomial ring $S=\C[x_{1},x_{2},\ldots,x_{n}]$ where $\deg(x_{i})=w_{i}\in\Z$ such that $R(\cX;K_{\cX}) \cong S/I$ for some homogeneous ideal $I\subset S$.
+
+\begin{example}\label{example:canonical-ring}
+Suppose $\cX$ is a stacky curve with two stacky points each having $\Z/2\Z$ as its stabilizer and whose coarse space has genus 1. The canonical ring of $\cX$ can be minimally presented as
+\[
+R(\cX;K_{\cX})\cong \C[x_{1},x_{2},x_{3}]/\langle x_{3}^{2}x_{1}-bx_{3}x_{2}^{6}-x_{1}^{2}-ax_{2}^{8}\rangle
+\]
+where $a,b\in \C$ and $\deg(x_{1})=4$, $\deg(x_{2})=1$, and $\deg(x_{3})=2$ \cite{voightZurieckBrown22}*{Remark 8.3.6}. 
+%are constants depending on $\cX$
+\end{example}
+
+
+We may translate Theorem~\ref{thm:voight-dzb} into a statement about the graded Betti numbers of $R(\cX;K_{\cX})$: Thinking of $R(\cX;K_{\cX})$ as a graded $S$-module, $\beta_{0,q}=1$ if $q=0$ and is zero otherwise and $\beta_{1,q}=0$ for all $q>6e$. A natural next question is to consider the minimal graded free resolution of $R(\cX;K_{\cX})$ as a module over this weighted polynomial ring. Given its centrality in the classical study of syzygies of curves an overarching goal of this project is to generalize Green's conjecture to stacky curves.
+
+
+\begin{problem}\label{prob:stackyGreens}
+Find and prove an appropriate generalization of Green's conjecture describing the vanishing of the syzygies of the canonical rings of stacky curves. 
+\end{problem}
+
+As far as I am aware, Problem~\ref{prob:stackyGreens} remains widely unconsidered and nothing is known about the higher syzygies of canonical rings of stacky curves. However, Theorem~\ref{thm:voight-dzb} and the fact that the geometry of stacky curves, while often complex and nuanced, is closely related to the geometry of classical curves (i.e. via the coarse space) make Problem~\ref{prob:stackyGreens} a natural approach to furthering our understanding of the relationship between syzygies and geometry. 
+%beyond the content of Theorem~\ref{thm:voight-dzb}
+
+
+\begin{example}
+Continuing Example~\ref{example:canonical-ring} let $\cX$ be a stacky curve with two stacky points each having $\Z/2\Z$ as its stabilizer and whose coarse space has genus 1. Letting $S=\C[x_{1},x_{2},x_{3}]$ where $\deg(x_{1})=4$, $\deg(x_{2})=1$, and $\deg(x_{3})=2$ the minimal graded free resolution of $R(\cX;K_{\cX})$ is:
+\begin{center}
+	\begin{tikzcd}[column sep = 3em]
+	0 & \arrow[l] R(\cX;K_{\cX}) & \arrow[l,"\epsilon" above ] S & \arrow[l,"d_{0}" above] S(-8) & \arrow[l] 0	
+	\end{tikzcd}
+\end{center}
+%\[
+%0 \xrightarrow{} S(-8) \xrightarrow{d_0} S \xrightarrow{\epsilon} R(\cX;K_{\cX}) \xrightarrow{} 0
+%\]
+with the map $d_{0}$ being multiplication by $x_{3}^{2}x_{1}-bx_{3}x_{2}^{6}-x_{1}^{2}-ax_{2}^{8}$. Thus, the non-zero graded Betti numbers of $R(\cX;K_{\cX})$ are: $\beta_{0,0}(R(\cX;K_{\cX}))=1$ and $\beta_{1,8}(R(\cX;K_{\cX}))=1$. 
+\end{example}
+
+\begin{remark}
+Voight and Zureick-Brown's interest in canonical rings of stacky curves arose primarily out of the fact that such rings are connected to modular forms. Much of the subsequent work on stacky curves has followed similar arithmetic motivations \cite{landsmanRuhmZhang16,bhargavaPoonen22}. If an answer to Problem~\ref{prob:stackyGreens} is found it would be interesting to understand what implications it might have in arithmetic geometry.%the arithmetic of modular forms.
+\end{remark} 
+
+\begin{remark}
+One could generalize the definition of the Clifford index to stacky curves verbatim and hope that it controls the syzygies of the canonical rings of stacky curves just like in Green's conjecture. However, since the degree of a divisor on a stacky curve is generally not an integer it is not obvious that the Clifford index of a stacky curve would be an integer. However, one can check that a stacky version of Clifford's theorem for effective divisors holds, and so at the very least this definition of the Clifford index would be a non-negative rational number.
+\end{remark}
+
+
+%\begin{remark}
+%	As hinted at above the canonical rings of stacky curves are closely connected to the rings of certain modular forms. If a suitable answer to Problem~\ref{prob:stackyGreens} is found it would be interesting to understand what implications (if any) it might have for the arithmetic of the corresponding modular forms. 
+%\end{remark}
+
+In attempting to generalize Green's conjecture to stacky curves, it would be helpful to know whether the canonical rings of stacky curves share the same nice algebraic properties as canonical rings of classical curves. In particular, the canonical rings of (non-stacky) curves are Gorenstein \cite{eisenbud05}*{Proposition 9.5}, which implies their syzygies have symmetries coming from a duality statement. Based on a number of examples explored as part of Problem~\ref{prob:comp-canonical-stacky} it seems like the canonical rings of stacky curves are also Gorenstein. As such, I am working to prove the following goal theorem.  
+
+\begin{goalTheorem}\label{goalThm:gorenstein}
+	If $\cX$ is a stacky curve whose coarse space has genus $\geq 3$ then the canonical ring $R(\cX;K_{\cX})$ is Gorenstein. 
+\end{goalTheorem}
+
+I am approaching proving Goal Theorem~\ref{goalThm:gorenstein} by first showing that $R(\cX;K_{\cX})$ is Cohen-Macaulay and then establishing generalizations of results in local cohomology, namely multigraded localy duality and the relationship between local cohomology and sheaf cohomology on $\cX$.
+%\begin{example}
+%Continuing Example~\ref{example:canonical-ring}, the canonical ring of As a reality check, 	\juliette{finish}
+%\end{example}
+
+
+
+\subsection{Computing Syzygies of Canonical Stacky Curves}
+
+The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cite{schreyer91} to show the existence of a Gr\"{o}bner basis for the canonical ring of a stacky curve whose elements have certain degrees. However, Voight and Zureick-Brown do not explicitly construct such Gr\"{o}bner bases. Instead, they prove the existence of such a Gr\"{o}bner basis via a delicate induction argument, which allows them to reduce to cases when $\cX$ has relatively few stacky points, the stacky points of $\cX$ have stabilizers of small order, or the coarse space of $\cX$ has small genus. It should be possible to make their arguments explicit for simple stacky curves. 
+
+With this in mind, one approach toward Problem~\ref{prob:stackyGreens} is to make Voight and Zureick-Brown's arguments explicit for a large number of examples, and then use a computer algebra system like Macaulay2 to compute the minimal graded free resolutions for these examples.  
+
+\begin{problem}\label{prob:comp-canonical-stacky}
+	Compute the minimal graded free resolution of the canonical ring $R(\cX, K_{\cX})$ for stacky curves $\cX$ where:
+	\begin{itemize}
+		\item the coarse space of $\cX$ has genus $\leq 4$,
+		\item there are at most 4 stacky points, and
+		\item the stabilizers of the stacky points have order at most 5.
+	\end{itemize}
+\end{problem}
+
+Building upon code generously shared by Voight and Zureick-Brown, I have carried out Problem~\ref{prob:comp-canonical-stacky} for most of the genus zero examples. In many of these computed cases, and as noted in \cite{voightZurieckBrown22}*{Appendix}, the canonical ring is a (weighted) complete intersection. However, there are examples showing that even for small examples the canonical ring of a stacky curve is quite complicated.
+
+\begin{example}
+Let $\cX$ be a stacky curve with three stacky points whose stabilizers are $\Z/4\Z$, $\Z/4\Z$, and $\Z/5\Z$ whose coarse space has genus zero. The canonical ring $R(\cX;K_{\cX})$ can be presented as $S/I$ where $S=\C[x_{1},x_{2},x_{3},x_{4},x_{5}]$ where $\deg(x_{1})=3$, $\deg(x_{2})=\deg(x_{3})=4$, and $\deg(x_{4})=\deg(x_{5})=5$ and $I$ is an ideal generated by 7 homogenous polynomials of degrees $8,8,9,9,10,13,13$. The minimal graded free resolution of $R(\cX;K_{\cX})$ is shown below (with the degrees suppressed for brevity):
+\begin{center}
+\begin{tikzcd}[column sep = 2em]
+0 & \lar R(\cX;K_{\cX}) & \lar S & \lar S^{\oplus7} & \lar S^{\oplus20} & \lar S^{\oplus30} & \lar S^{\oplus 22} & \lar S^{\oplus6} & \lar 0.
+\end{tikzcd}
+\end{center}
+\end{example}
+%
+%\[
+%\begin{matrix}
+%        & 0 & 1 & 2 & 3 & 4 & 5\\
+%     \text{total:}
+%        & 1 & 7 & 20 & 30 & 22 & 6\\
+%     0: & 1 & . & . & . & . & .\\
+%     1: & . & . & . & . & . & .\\
+%     2: & . & . & . & . & . & .\\
+%     3: & . & . & . & . & . & .\\
+%     4: & . & . & . & . & . & .\\
+%     5: & . & . & . & . & . & .\\
+%     6: & . & . & . & . & . & .\\
+%     7: & . & 2 & . & . & . & .\\
+%     8: & . & 2 & . & . & . & .\\
+%     9: & . & 1 & . & . & . & .\\
+%     10: & . & . & . & . & . & .\\
+%     11: & . & . & . & . & . & .\\
+%     12: & . & 2 & . & . & . & .\\
+%     13: & . & . & . & . & . & .\\
+%     14: & . & . & 1 & . & . & .\\
+%     15: & . & . & 7 & . & . & .\\
+%     16: & . & . & 7 & . & . & .\\
+%     17: & . & . & 2 & . & . & .\\
+%     18: & . & . & . & . & . & .\\
+%     19: & . & . & . & 6 & . & .\\
+%     20: & . & . & 2 & 1 & . & .\\
+%     21: & . & . & 1 & . & . & .\\
+%     22: & . & . & . & 3 & . & .\\
+%     23: & . & . & . & 8 & . & .\\
+%     24: & . & . & . & 9 & . & .\\
+%     25: & . & . & . & 3 & . & .\\
+%     26: & . & . & . & . & 6 & .\\
+%     27: & . & . & . & . & 10 & .\\
+%     28: & . & . & . & . & 6 & .\\
+%     29: & . & . & . & . & . & .\\
+%     30: & . & . & . & . & . & 3\\
+%     31: & . & . & . & . & . & 3
+%     \end{matrix}\]
+
+The approach of using large-scale computations to find conjectures concerning syzygies is very much in the same spirit as my prior work on the syzygies of surfaces \cite{bruceErmanGoldsteinYang18,BCEGLY22}. While the precise techniques need to address Problem~\ref{prob:comp-canonical-stacky} will likely be different much of the general framework of organizing, distributing, and publicizing such computations will likely be similar. 
+
+%Given it's computational nature Problem~\ref{prob:comp-canonical-stacky} will likely present excellent opportunities to invovled graduate student, or even potentially undergraduate, collaborators. Further, I would make all of the resulting examples and data publicly available via both a \textit{Macaulay2} package as well as adding it to the online syzygy databse I help maintain \juliette{cite}.
+ 
+
+\subsection{Varieties of Minimal Degree in Toric Varieties}\label{subsec:mini-dgre}
+
+One approach to proving Green's conjecture, originally pursued by Schreyer \cite{schreyer86}, is to note that given a cover $X\to \P^{1}$ of minimal degree then the image of $X\subset \P^{g-1}$ under the canonical embedding lies on a rational normal scroll. The minimal graded free resolution of a rational normal scroll is known to be an Eagon-Northcott complex, and via general considerations one can show that the minimal graded free resolution of a rational normal scroll containing $X$ injects into the minimal graded free resolution of $X$. 
+
+
+From this perspective, one way to develop and prove a version of Green's conjecture for stacky curves is to find the correct analog of rational normal scrolls. More precisely, let $\cX$ be a stacky curve and $R(\cX;K_{\cX})\cong S/I$ a presentation for its canonical ring, where $S$ is a weighted polynomial ring. If one could show there exists a homogeneous ideal $J\subset I\subset S$ such that we know the minimal graded free resolution of $S/J$ then it would be possible to deduce information about the syzygies of $R(\cX;K_{\cX})$. Note such an ideal $J$ defines a subscheme of weighted projective space. 
+
+One characterization of rational normal scrolls is that they have the smallest possible degree among all non-degenerate varieties. More precisely, a variety $X\subset \P^{n}$ is \textit{non-degenerate} if it is not contain in a hyperplane. A straightforward argument using projection shows that if $X \subset \P^{n}$ is a non-degenerate subvariety then $\deg(X) \geq \codim(X)+1$. We say that a subvariety $X\subset \P^{n}$ is a \textit{variety of minimal degree} if $X$ is non-degenerate and $\deg(X)=\codim(X)+1$. 
+
+%Classical of results of Del Pizzo and Bertini give a remarkable simple geometric classification of varieties of minimal degree in $P^{n}$. 
+
+\begin{theorem}\cite{eisenbudHarris87}
+	If $X\subset \P^{n}$ is a variety of minimal degree then $X$ is the cone over a variety of minimal degree. Moreover, if $X$ is smooth and $\codim(X)>1$ then $X$ is either a rational normal scroll or a the Veronese surface $\P^{2}\subset \P^{5}$. 
+\end{theorem}
+
+With this in mind, one approach I will pursue to try to find the correct analog of rational normal scrolls for a stacky Green's conjecture is to classify subvarieties of minimal degree when $\P^{n}$ is replaced by other toric varieties, namely weighted projective space. 
+
+\begin{problem}\label{prob:min-deg}
+	Let $Y$ be a smooth projective toric variety. Classify all subvarieties of $Y$ of minimal degree, and compute their minimal graded free resolutions.
+	\end{problem}
+
+Outside of when $Y=\P^{n}$ Problem~\ref{prob:min-deg} remains open. In fact, a central hurdle to answering Problem~\ref{prob:min-deg} is that one first needs to define what it means to be a ``variety of minimal degree'' when $Y$ is not $\P^{n}$. Note there are even subtleties in discussing the degree of a subvariety $X\subset Y$ as the usual approaches used for subvarieties of $\P^{n}$ (i.e. via Hilbert polynomials, intersecting with linear spaces, and intersection theory in the Chow ring) do not necessarily generalize.
+
+%in order to develop a notion of varieties of minimal degree in other toric varieties we also need to make sense of what it means for a subvariety $X\subset Y$ to be non-degenerate or a cone. Further, there is even some subtlety in discussing the degree of a subvariety $X\subset Y$ as the three usual approaches for defining the degree of a subvareity of $\P^{n}$ (i.e. via Hilbert polynomials, intersecting with linear spaces, and intersection theory in the Chow ring) do not always directly generalize. Further, when they do generalize they do not always necessarily coincide. 
+
+%It is worth noting that before developing a notional of minimal degree, one first must determine what one means by degree as there are multiple notions of what one might mean by degree of a subvariety $X\subset \P^{n}$ of dimension $t$
+%\begin{enumerate}
+%	\item Hilbert Polynomial: For $d\gg0$ the function $d\mapsto \dim_{\C} (S_{X})_{d}$ agrees with a polynomial $p_{X}(d)$ of degree $t$ call the Hilbert polynomial of $X$. The degree of $X$ is equal to the leading coefficient of $t! p_{X}(d)$. the 
+%	\item Intersection with linear space: The degree of $X\subset \P^{n}$ is the number of points given by interesting $X$ with e general linear subspace $\Lambda \subset \P^{n}$ of dimension $n-t$. 
+%	\item Intersection Theory: The Chow ring of $\P^{n}$ -- whose elements are subvarieties of $\P^{n}$ up to rational equivalence -- is isomorphic to $\Z[H]/\langle H^{n+1}\rangle$ where $H$ corresponds to the class of a hyperplane in $\P^{n}$. The class corresponding to the subvariety $X$ is equal to $cH^{n-t}$ for some integer $c$. The degree of $X$ can be defined to be the integer $c$> 
+%\end{enumerate}
+%When working on projective space these notions of degree all coincide, but on other toric varieties these notions can be different. 
+%
+%\begin{remark}
+%	As an indication in the subtlty here, not tha \juliette{finish}
+%\end{remark}
+
+Given these subtleties, instead of approaching Problem~\ref{prob:min-deg} in full generality, I have focused on the case when $Y$ is a weighted projective space. That is to say $Y=\P(w_{1},w_{2},\ldots,w_{n})$ is projective variety associated to the non-standard $\Z$-graded polynomial ring $S=\C[x_{1},x_{2},\ldots,x_{n}]$ where $\deg(x_{i})=w_{i}\in \Z$. This is a particularly interesting case to consider in light of Problem~\ref{prob:stackyGreens} since  the canonical ring of a stacky curve is naturally a quotient of a weighted polynomial ring. 
+
+
+%We write $P(w_{1},w_{2},\ldots,w_{n})$ for the weighted projective space where $\deg(x_{i})=w_{i}$, and adopt the convention that $\P(1^a,2^b,\ldots)$ is the weighted projective space with $a$ 1's, $b$ 2's, and so on. This is a particularly interesting case to consider in light of Problem~\ref{prob:stackyGreens} since  the canonical ring of a stacky curve is mostly naturally viewed as a quotient of a weighted polynomial ring like $S$ above. 
+
+
+In this setting, there are two classes of varieties with obvious notions of degree, namely curves and hypersurfaces. The degree of a hypersurface is the degree of its defining equation. The degree of a curve $X \subset \P(w_{1},\ldots,w_{n})$ is the degree of $\O_{X}(1)$ as a line bundle on $X$. Further, we say that a subvariety $X \subset \P(w_{1},\ldots,w_{n})$ is \textit{non-degenerate} if its defining ideal $I_{X}$ is contained in $\langle x_{1},x_{2},\ldots,x_{n}\rangle^{2}$. We say that $X$ is a \textit{cone} if $I_{X}$ is contained in a sub-polynomial ring of $S$. Finally, if $X$ is a curve or hypersurface we say it is a \textit{variety of minimal degree} if it is non-degenerate, not a cone, and has the smallest degree amongst all such subvarieties.
+
+Going forward we further restrict ourselves, letting $S=\C[x_{1},x_{2},\ldots,x_{a},y_{1},y_{2},\ldots,y_{b}]$ with $\deg(x_{i})=1$ and $\deg(y_{i})=2$ and write $\P(1^{a},2^{b})$ for the corresponding weighted projective space. 
+%Since the canonical rings of stacky curves are non-standard $\Z$-graded $\C$-algerbas, a fruitful place to begin approaching Problem~\ref{prob:stackyGreens} may be the case when $Y$ is a weighted projective space. That is to say $Y$ is projective variety associated to the non-standard $\Z$-graded polynomial ring $S=\C[x_{1},x_{2},\ldots,x_{n}]$ where $\deg x_{i}=w_{i}\in \Z$, %or stated geometrically $Y$ is the quotient of $\C^{n}-\{0\}/\C^{\times}$ where $C^{\times}$ acts by $\lambda \cdots (x_{1},x_{2},\ldots,x_{n})=(\lambda^{w_1}x_{1},\lambda^{w_2}x_{2},\ldots,\lambda^{w_n}x_{n})$. 
+%	We write $P(w_{1},w_{2},\ldots,w_{n})$ for the weighted projective space where $\deg x_{i}=w_{i}$, and adopt the convention that $\P(1^a,2^b,\ldots)$ is the weghted projective space with $a$ 1's, $b$ 2's, and so on.
+%	
+
+%As an initial step towards Problems~\ref{prob:stackyGreens} and \ref{prob:min-deg} in ongoing work with Lauren Cranton Heller and Ritvik Ramkumar I have sought to understand varieties of minimal degree in $\P(1^a,2^b)$. Letting $S=\C[x_{1},x_{2},\ldots,x_{a},y_{1},y_{2},\ldots,y_{b}]$ with $\deg(x_{i})=1$ and $\deg(y_{i})=2$ be the corresponding (Cox) ring then we say that $X\subset \P(1^a,2^b)$ is non-degenerate if $I_{X} \subset \langle x_{1},x_{2},\ldots,x_{a},y_{1},y_{2},\ldots,y_{b} \rangle^{2}$ where $I_{X}$ is the defining ideal of $X$. Further, we say that $X$ is a cone if $I_{X}$ is contained in a sub-polynomial ring of $S$. 
+
+\begin{example}
+Let $X\subset \P(1^a,2^b)$ be a hypersurface. If $X$ has degree one then by definition it is degenerate. Supposing $X$ has degree 2 then if its defining equation involves one of the $y_{i}$'s it is degenerate, and if its defining equation only involves the $x_{i}$'s it is a cone. Thus, unlike in $\P^{n}$ hypersurfaces of minimal degree in $\P(1^a,2^b)$ have degree three. 
+\end{example}
+
+%In this framework we see that even hypersurfaces of minimal degree in $\P(1^a,2^b)$ have slightly subtle behavior when compared to hypersurfaces of minimal degree in $\P^{n}$. Any hypersurface of degree 1 is clearly degenerate. For hypersurfaces of degree 2, if its defining equation involves one of the $y_{i}$'s then it is degenerate, and if its defining equation only involves the $x_{i}$'s it is a cone. Thus, hypersurfaces of minimal degree in $\P(1^a,2^b)$ have degree three. 
+
+In this setting, my co-authors and I have made progress understanding curves of minimal degree. 
+
+
+\begin{prop}\label{prop:ongoing-curves-min-deg}
+	If $C \subset \P(1^{a},2^2)$ is a smooth curve of minimal degree then $C$ has degree $a$ and is isomorphic to the image of the map: 
+	\[
+	\phi:\P^{1}\to \P(1^{a},2^{2}) \quad \quad \text{given by} \quad \quad [s:t]\mapsto [s^a: s^{a-1}t: \cdots : st^{a-1}: st^{2a-1} : t^{2a}].
+	\] 
+\end{prop}
+
+%Note that the curves in Proposition~\ref{prop:ongoing-curves-min-deg} are in many ways an analogue of rational normal curves in $\P^{n}$. 
+
+We are currently in the process of generalizing Proposition~\ref{prop:ongoing-curves-min-deg} to $\P(1^a,2^b)$ for any $a$ and $b$ satisfying some minor conditions. Additionally, motivated by Problem~\ref{prob:stackyGreens} and the fact that varieties of minimal degree in $\P^{n}$ have particular nice minimal graded free resolutions another natural next step is to compute the defining equations and syzygies for the curves in Proposition~\ref{prop:ongoing-curves-min-deg}.
+
+
+%Given that varieties of minimal degree in $\P^{n}$ have particular nice minimal graded free resolutions, as well as, this project being partially motivated by its connection to Problem~\ref{prob:stackyGreens} my collaborators and I are also in the process of attempting to compute the defining equations and syzygies for the curves in Proposition~\ref{prop:ongoing-curves-min-deg}.
+
+\begin{problem}
+	Compute the defining equations and minimal graded free resolutions for the curves defined in Proposition~\ref{prop:ongoing-curves-min-deg}. 
+\end{problem}
+
+More generally, one approach that I am currently pursuing to classify varieties of minimal degree in $\P(1^a,2^b)$ is to prove a Bertini-like theorem for weighted projective spaces. In particular, the goal would be to show that taking a general hyperplane section -- i.e. intersecting with a hypersurface defined by a polynomial of degree one -- would preserve the degree, the codimension, the nondegeneracy, and the smoothness/irreducibility of a subvariety of weighted projective space. 
+ 
+ 
+ \begin{goalTheorem}\label{prob:weighted-bertini}
+ 	Fix integers $1\leq b < a$. Let $X\subset \P(1^a,2^b)$ be an irreducible, smooth, non-degenerate subvariety, which is not a cone. For a general hyperplane $H\subset \P(1^a,2^b)$ the hyperplane section $X\cap H$ is irreducible, smooth,  non-degenerate, not a cone, and  $\deg(X) = \deg(X\cap H)$. 
+ \end{goalTheorem}
+ 
+%\begin{problem}\label{prob:weighted-bertini}
+%	Prove theBertini theorem for the weighted projective spaces $\P(1^a,2^b)$ showing that if $X\subset \P(1^a,2^b)$ is an irreducible smooth non-degenerate subvariety then for a general hyperplane $H\subset \P(1^a,2^b)$ the intersection $X\cap H$ is also irreducible, smooth, and non-degenerate, and further, $\deg(X) = \deg(X\cap H)$. 
+%\end{problem}
+
+	From such a theorem, varieties of minimal degree could then be classified by building off of a classification of curves of minimal degree. For example, combining Goal Theorem~\ref{prob:weighted-bertini} and Proposition~\ref{prop:ongoing-curves-min-deg} would imply that $X\subset \P(1^{a},2^2)$ is a variety of minimal degree if and only if $X\cap H$ is isomorphic to the curve described in Proposition~\ref{prop:ongoing-curves-min-deg} for an generic linear subspace $H \subset \P(1^{a},2^2)$.
+
+%There is some subtlety in finding the precise statement such a Bertini theorem as the following example shows. \juliette{reference previous bertini work} 
+%
+%\begin{example}
+%	Consider $\P(1^2,2^2)$ corresponding to the (Cox) ring $\C[x_{1},x_{2},y_{1},y_{2}]$ where $\deg x_{i}=1$ and $\deg y_{i}=2$ for $i=1,2$. The vanishing of $ x_0y_0 + x_1y_1$ defines an irreducible degree 3 hypersurface $X=\V( x_0y_0 + x_1y_1) \subset \P(1^2,2^2)$. However, \juliette{finsih}
+%\end{example}
+%
+
+\section{Multigraded Hilbert Functions and Schemes}\label{sec:mg-hilb-schemes}
+
+A central object of study in both commutative algebra and algebraic geometry has been Hilbert schemes parameterizing subvarieties of projective space. Given a polynomial $p\in\Q[t]$ the Hilbert scheme $\Hilb^{p}(\P^{n})$ parameterizes subschemes of $\P^{n}$ whose Hilbert polynomial is equal to $p$. Stated differently, if $S=\K[x_{0},x_{1},\ldots,x_{n}]$ is a standard graded polynomial ring then $\Hilb^{p}(\P^{n})$ parameterizes (saturated) homogeneous ideals $I\subset S$ whose Hilbert polynomial is equal to $p$. Hilbert schemes have proven to be both ubiquitous and extremely valuable throughout algebraic geometry. Further, much of our understanding of the geometry of Hilbert schemes (e.g. when they are non-empty, connected, smooth, etc.) comes from deep results combining combinatorics and commutative algebra. The goal of this project is to develop similar tools in multigraded commutative algebra to provide a better understanding of the geometry of multirgraded Hilbert schemes. 
+
+%By Hilbert polynomial we mean the unique polynomial that agrees with the function $d\mapsto \dim_{\K} I_{d}$ for $d\gg0$. Here $I_{d}$ is the $\C$-vector space of homogeneous polynomials of degree $d$. 
+
+
+Roughly speaking, just as classical Hilbert schemes parametrize (saturated) homogeneous ideals in a standard graded polynomial ring, multigraded Hilbert schemes parametrize certain ideals in a polynomial ring with a different grading. We now introduce some multigraded commutative algebra. %We now briefly introduce some background on multigraded commutative algebra.
+
+
+%\begin{enumerate}
+%\item (Non-Emptyness): Characterize for which polynomials $\Phi \in \Q[t]$ the Hilbert scheme $\Hilb(\P^{n}, \Phi)$ is non-empty?
+%\item (Connectedness): Characterize for which polynomials $\Phi \in \Q[t]$ the Hilbert scheme $\Hilb(\P^{n}, \Phi)$ is connected?
+%\item (Smooth): Characterize for which polynomials $\Phi \in \Q[t]$ the Hilbert scheme $\Hilb(\P^{n}, \Phi)$ is smooth?
+%\item Characterize for which polynomials $\Phi \in \Q[t]$ the Hilbert scheme $\Hilb(\P^{n}, \Phi)$ is irreducible?
+%\end{enumerate}
+
+%However, many questions concerning the geometry of Hilbert schemes can be phrased primarily in terms of algebraic questions. The goal of this project is to attempt to answer similar geometric questions for a slightly different type of spaces called multirgraded Hilbert schemes. Roughly speaking just as classical Hilbert schemes parametrize (saturated) homogeneous ideals in a standard graded polynomial ring, a multigraded Hilbert schemes parametrize certain ideals in a polynomial ring with other gradings. 
+
+Fix a field $\K$ and let $R$ be a $\K$-algebra. %Note we are primarily interested in the case when $R=\K$, but need the more general framework to make the global construction of multigraded Hilbert schemes precise. 
+There is a correspondence between the monomials in $T=R[x_{1},x_{2},\ldots,x_{n}]$ and vectors in $\N^{n}$ given by identifying the monomial $\xx^{\uu}=x_1^{u_1}x_2^{u_2}\cdots x_n^{u_n}$ with the vector $\uu=(u_1,u_2,\ldots,u_n)$. Given a semi-group homomorphism $\deg:\N^{n}\to A$ there is an induced $A$-grading on $T$ by setting $\deg (\xx^{\uu}) = \deg(\uu)\in A$. Given $\aa\in A$ let $T_{\aa}$ be the free $R$-module generated by the monomials of $T$ of degree $\aa$. There is a decomposition of $T$ as $T\cong \oplus_{\aa\in A} T_{\aa}$. We say that a $T$-module $M$ is $A$-graded if there is a direct sum decomposition $M=\oplus_{\aa\in A} M_{\aa}$ such that $T_{\aa}\cdot M_{\bb} \subset M_{\aa+\bb}$ for all $\aa,\bb\in A$. An ideal $I\subset T$ is homogeneous, with respect to the given $A$-grading, if it is $A$-graded when considered as a $T$-module. 
+
+%\begin{example}
+%Letting $A=\Z$ and $\deg:\N^{n}\to \Z$ be semi-group homomorphism given by $(1,0,\ldots,0)\mapsto 1$, $(0,1,\ldots,0)\mapsto 1$, and so on, gives the usual $\Z$-grading on $R[x_{1},x_{2},\ldots,x_{n}]$ where $\deg(x_i)=1\in \Z$ for all $i=1,2,\ldots,n$. Note this grading is usually referred to as the standard $\Z$-grading, or just standard grading, on $R[x_{1},x_{2},\ldots,x_{n}]$. 
+%\end{example}
+
+%\begin{example}
+%	Letting $A=0$ be the trivial group, the trivial grading $R[x_{1},x_{2},\ldots,x_{n}]$ is defined by semi-group homomorphism $\deg:\N^{n}\to 0$. In particular, with the trivial grading the degree of any element is equal to zero. 
+%\end{example}
+
+Given a homogeneous ideal $I\subset T$ in order to discuss the Hilbert function of $I$ we would like for $(T/I)_{\aa}$ to be a locally free $R$-module for all $\aa\in A$. However, this need not always be the case \cite[Section~18.5]{millerSturmfels05}. With this in mind, we restrict our attention to a certain class of homogeneous ideals, which avoids these pathologies. A homogeneous ideal $I\subset S$ is admissible if and only if $(S/I)_{\aa}$ is a locally free $R$-module of finite rank for all $\aa\in A$. The Hilbert function of a homogeneous admissible ideal $I\subset T$ is the function:
+\[
+h_{I}:A\to \N \quad \quad \text{given by} \quad \quad \aa \mapsto \rank_{R} (T/I)_{\aa}.
+\]
+With this definitions in hand, having fixed an $A$-graded polynomial ring $S=\K[x_{1},x_{2},\ldots,x_{n}]$ and a function $h:A\to\N$ the multigraded Hilbert scheme is a scheme which parameterizes homogeneous admissible ideals in $S$ with Hilbert polynomial $h$. The existence of such a scheme, and the framework discussed in this section, was established by work of Haiman and Sturmfels. 
+
+\begin{theorem}\cite{haimanSturmfels04}
+Fix an abelian group $A$, and let $S=\K[x_{1},x_{2},\ldots,x_{n}]$ be an $A$-graded polynomial ring. Given a function $h:A\to \N$, consider the functor $\cH^{h}_{S}:\text{$\K$-algebras}\to \text{Sets}$ given by:
+\[
+\cH_{S}^{h}\coloneqq \left\{ I\subset R\otimes_{\K}S \;\; \big| \begin{matrix}
+	\text{$I$ is an admissible homogeneous ideal} \\
+	\text{$h_{I}(\aa) = h(\aa)$ for all $\aa\in A$}
+\end{matrix}
+\right\}.
+\]
+There exists a quasi-projective $\K$-scheme $\Hilb_{S}^{h}$, called the multigraded Hilbert scheme of $S$ and $h$, which represents $\cH_{S}^{h}$. Moreover, if the grading on $S$ is positive, then $\Hilb_{S}^{h}$ is projective.
+\end{theorem}
+%However, sadly as the following example shows this need not be the case. 
+
+%\begin{example}
+%	\juliette{add}
+%\end{example}
+
+%\begin{defn}
+%	A homogeneous ideal $I\subset S$ is admissible if and only if $(S/I)_{\aa}$ is a locally free $\C$-module of finite rank for all $\aa\in A$. 
+%\end{defn}
+
+
+%\begin{remark}
+%	As the above examples indicate for an arbitrary grading the notion of admissibility can be somewhat subtle. That said if we place some minor restrictions on the grading, namely that $A$ is torsion free and $S_{\zero}\cong R$ (such gradings are called positive gradings is a field, if $A$ is torsion free and $S_{\zero}\cong R$ (such gradings are called positive gradings) then 
+%\end{remark}
+% 
+
+\begin{remark}
+	Multigraded Hilbert schemes are quite general and a number of important families of schemes in algebraic geometry can be realized as multigraded Hilbert schemes, this includes: classical Hilbert schemes $\Hilb^{p}(\P^{n})$ and toric Hilbert schemes \cite{peevaStilmann02}. Moreover, if $X$ is a smooth toric variety there exists a closed subscheme of a certain multigraded Hilbert scheme which parameterizes all toric subvarieties of $X$ with a given multigraded Hilbert polynomial \cite{maclaganSmith05}*{Theorem 6.2}.
+%	\begin{enumerate}[leftmargin=*]
+%		\item Letting $S=\K[x_{0},x_{1},\ldots,x_{n}]$ be the standard $\Z$-graded polynomial ring, the classical Hilbert scheme $\Hilb^{p}(\P^{n})$ can be realized as a multigraded Hilbert scheme.
+%%		$\item $\Hilb_{S}^{h}$ where: 
+%%		\[
+%%		h(t)=\begin{cases}
+%%		0 &  t<0 \\
+%%  \dim_{\K} S_{t}  & 0\leq t < R \\
+%%  p(t) & R \leq t
+%%\end{cases}
+%%		\]
+%%		where $R\gg0$ is a constant that depends on $n$ and $p$. 
+%		\item Toric Hilbert schemes, introduced by Peeva and Stillman \cite{peevaStilmann02},  parameterize all ideals in a standard $\Z$-graded polynomial ring whose Hilbert function is equal to the Hilbert function of a given toric ideal, can be realized as a certain multigraded Hilbert scheme \cite{millerSturmfels05}*{Example~18.51}.
+%		\item By work of Maclagan and Smith if $X$ is a smooth toric variety there is a closed subschmes of a certain multigraded Hilbert scheme which parameterizes all toric subvarieties of $X$ with a given multigraded Hilbert polynomial \cite{maclaganSmith05}*{Theorem 6.2}.
+%	\end{enumerate}
+\end{remark}
+
+Since their introduction, multigraded Hilbert schemes have proven both interesting in their own right \cite{santos05,maclaganSmith10,heringMaclagan12,ramkumarSammartano22} and useful tools for approach other problems in algebraic geometry \cite{alexeevBrion04,KLM12,ellenbergErman16,donaldsonSun17}. For example, multigraded Hilbert schemes have played a crucial role in recent results analyzing when the classical Hilbert scheme of points is irreducible \cite{cartwrightErmanVelscoViray09,DJNT17, jelisiejew20}, as well as, in recent work studying border rank \cite{BB21,HJMS22}. Despite this, much of the geometry of multigraded Hilbert schemes remains a mystery. The overall goal of this project is to develop tools in multigraded commutative algebra to approach understanding the geometry of multigraded Hilbert schemes. 
+
+
+
+\subsection{Non-Emptyness of Multigraded Hilbert Schemes}
+
+Having fixed an $A$-graded polynomial ring $S=\K[x_{1},x_{2},\ldots,x_{n}]$ and a function $h:A\to\N$ a natural first question concerning multigraded Hilbert schemes is to ask when is $\Hilb_{S}^{h}$ non-empty. That is to say, what conditions on the function $h$ ensure that there exists an admissible ideal $I\subset S$ with Hilbert function $h$? In most cases, this question remains open, and I plan to pursue it as part of this research proposal. 
+
+\begin{problem}\label{prob:mg-hilbert-functions}
+Give a combinatorial characterization of when a function $h:A \to \N$ is the Hilbert function of an admissible homogeneous ideal.
+\end{problem}
+
+
+Note that for classical Hilbert schemes on $\P^{n}$ (i.e. when $S$ is $\Z$-standard graded) this question has a beautiful answer touching on deep results in commutative algebra, which we briefly recall here. Given a positive integer $a$ for any fixed positive integer $i$ there is a unique way to express $a$ as:
+\[
+a = \binom{m_{i}}{i}+\binom{m_{i-1}}{i-1}+\cdots+\binom{m_{j}}{j}
+\]
+where $m_{i}> m_{i-1}>\cdots >m_{j}\geq j\geq 1$ are integers. We call the above representation the $i$-Macaulay expansion of $a$. (Note in some of the literature this is referred to as the $i$-binomial expansion of $a$.) Further, if the $i$-Macaulay expansion of $a$ is as above we define:
+\[
+a^{\langle i \rangle} = \binom{m_{i}+1}{i+1}+\binom{m_{i-1}+1}{i-1+1}+\cdots+\binom{m_{j}+1}{j+1}.
+\]
+
+%\begin{example}
+%If $i=1$ then the 1-Macaulay expansion of $a$ is just $a=\binom{m_{1}}{1}$ and so $m_{1}=a$. From this we see that $a^{\langle 1 \rangle}=\binom{a}{2}$. For larger $i$ the $i$-Macaulay expansion can be computed via a greedy algorithm type argument. For example, the  3-Macaulay expansion of 37 is equal to:
+%\[
+%37=\binom{7}{3}+\binom{2}{2}+\binom{1}{1} \quad \text{and} \quad 
+%37^{\langle 3\rangle}=\binom{7+1}{3+1}+\binom{2+1}{2+1}+\binom{1+1}{1+1}=72.
+%\]
+%\end{example}
+
+Using these expansions Macaulay was able to characterize the Hilbert functions of standard graded $\C$-algebras as being exactly those functions whose growth is bounded in a precise way. 
+
+\begin{theorem}[Macaulay's Theomrem \cite{macaulay27}]
+If $h:\N \to \N$ is a function the following are equivalent:
+\begin{enumerate}
+	\item $h$ is the Hilbert function of a standard graded $\C$-algebra, and
+	\item $h(0)=1$ and  $h(i+1) \leq h(i)^{\langle i \rangle}$ for all $i\geq1$.\end{enumerate}
+\end{theorem}
+
+In proving this theorem Macaulay also showed that the bound $h(i+1) \leq h(i)^{\langle i \rangle}$ is sharp and is achieved for all $i$ by certain special monomial ideals called lexicographic (lex) ideals (also called lexsegment ideals by some in the literature). Geometrically, we can interpret Macaulay's result as saying that all non-empty Hilbert schemes have a special canonical point, often called the lexicographic (lex) point, corresponding to the lexicographic (lex) ideal. Moreover, the failure of such a point to exist arises because a Hilbert function fails to satisfy certain growth conditions. 
+
+For multigraded polynomial rings, no generalization of Macaulay's theorem is known in wide generality. The difficulty in answering Problem~\ref{prob:mg-hilbert-functions} lies in the fact that when working with multigraded rings lex ideals need not exist \cite{maclaganSmith10}*{Example~3.13}. In particular, to answer Problem~\ref{prob:mg-hilbert-functions} one needs to find an appropriate replacement for lex ideals. 
+%\begin{example}
+%	Consider a function $h:\Z_{\geq0}\to \Z$ where $h(0)=1$ and $h(1)=0$. The above theorem states that in order for $h$ to be a Hilbert function of some standard graded $\C$-algebra we need that $f(2)\leq f(1)^{\langle 1 \rangle}=0^{\langle 1\rangle}=0$. Thus, for $h$ to be a Hilbert function we have that $h(t)=0$ for all $t\geq2$. Note we can deduce this directly since if $R=\C[x_{1},\ldots,x_{n}]/I$ is a standard graded $\C$-algebra with $h_{R}(1)=0$ then we know that all of the variables are in $I$ and so $R\cong \C$. 
+%\end{example}
+
+%For multigraded polynomial rings no generalization of Macaulay's theorem is know in wide generality. Thus, a natural research question I plan to pursue is to characaterize when a function $h:A\to \N$ is the Hilbert function of an (admissible) homogeneous ideal.
+%
+%\begin{problem}\label{prob:mg-hilbert-functions}
+%Give a combinatorial characterization of when a function $h:A \to \N$ is the multigraded Hilbert function of an admissible homogeneous ideal.
+%\end{problem}
+
+%Note the difficulty in answering this question lies in the fact that when working with multigraded rings lex ideals need not necessarily exist \cite{maclaganSmith10}*{Example~3.13}. In particular, to answer Problem~\ref{prob:mg-hilbert-functions} one needs to find an appropriate replacement for lex ideals. 
+
+In recent years this approach has seen some attention. For example, when $S=\Z[x_{1},x_{2}]$ Maclagan and Smith showed there are distinguished ideals, which they call the lex-most ideals, with many of the same properties of lex ideals. In particular, these lex-most ideals are maximal, with respect to some partial order, amongst all monomial ideals with a given Hilbert function \cite{maclaganSmith10}*{Proposition~3.12}. It would be interesting to see if this partial order can be generalized to polynomial rings with more variables in such a way so that the resulting poset of monomial ideals has a unique maximal element.
+
+In particular, given an ideal $I\subset S$ and a monomial $m\in S$ let $L_{m}(I)$ denote the set of standard monomials of $I$ with degree equal to $\deg(m)$ that are lexicographically less than or equal to $m$. Using this notation, we define a partial order as follows, if $I,J\subset S$ are monomial ideals with Hilbert function $h$ then we say that $J\preceq_{\text{Lex}} I$ if $\#L_{m}(J) \leq \#L_{m}(I)$ for every monomial $m\in S$. Let $\cL_{h}$ denote the poset of monomial ideals with Hilbert function $h$ with respect to the $\preceq_{\text{Lex}}$ partial ordering. A goal of this project would be to prove the following generalization of \cite{maclaganSmith10}*{Proposition~3.12}. 
+
+\begin{goalTheorem}\label{goalThm:hilbfun}
+	Let $S=\K[x_{1},x_{2},\ldots,x_{n}]$ be an $A$-graded polynomial ring. If $h:A\to \N$ is a Hilbert function then the poset $\cL_{h}$ has a unique maximal element. 
+\end{goalTheorem}
+
+I hope to prove Goal Theorem~\ref{goalThm:hilbfun} by first reducing to the case when the function $h$ has finite support, and then generalizing the combinatorial arguments in \cite{maclaganSmith10}. The hope is that identifying such extremal ideals will provide a stepping stone, similar to lex ideals, in answering Problem~\ref{prob:mg-hilbert-functions}.
+
+A different approach to generalizing lex ideals, is to characterize monomial ideals with the largest $A$-graded Betti numbers. That is, under minor assumptions on the grading (namely that it is positive), if $I\subset S$ is homogenous we may consider the minimal $A$-graded free resolution of $S/I$:
+\begin{center}
+\begin{tikzcd}[column sep = 3em]
+0 & \lar{} S/I & \arrow[l,"\epsilon" above]  F_{0} & \arrow[l,"d_{1}" above] \cdots &  & \cdots & \arrow[l,"d_{k-1}" above]  F_{k-1} & \arrow[l,"d_{k}" above] F_{k} & \lar \cdots
+\end{tikzcd}
+\end{center}
+where $F_{p}$ is free and has a direct sum decomposition as $F_{p}\cong \oplus_{\aa\in A}S(-\aa)^{\beta_{p,\aa}(S/I)}$. Define a partial order on the set of monomial ideals with Hilbert function $h$ by saying that $J\preceq_{\text{betti}} I$ if and only if $\beta_{p,\aa}(J) \leq \beta_{p,\aa}(I)$ for all $p\in \Z$ and all $\aa\in A$. Let $\cB_{h}$ denote the poset of monomial ideals with Hilbert function $h$ with respect to the $\preceq_{\text{betti}}$ partial ordering.
+
+
+% inspired by results of Bigatti-Hulett-Pardue stating that lex ideals have the largest possible graded Betti numbers, is to try and characterize the monomial ideals with the largest $A$-graded Betti numbers. More precisely, under minor hypotheses on the grading, if $I \subset S$ is homogenous with respect to $A$ then we may consider the minimal $A$-graded free resolution of $I$ so that if $F_{\doot}$ is the minimal $A$-graded free resolution of $I$ then $F_{p}\cong \oplus_{\aa\in A} S(-\aa)^{\beta_{p,\aa}(I)}$. Define a partial order on the set of monomial ideals with Hilbert function $h$ by saying that $J\preceq_{\text{betti}} I$ if and only if $\beta_{p,\aa}(J) \leq \beta_{p,\aa}$ for all $p\in \Z$ and all $\aa\in A$. Let $\cB_{h}$ denote the poset of monomial ideals with Hilbert function $h$ with respect to this partial ordering.
+
+\begin{problem}\label{prob:mg-BHP}
+Let $S=\K[x_{1},x_{2},\ldots,x_{n}]$ be a positively $A$-graded polynomial ring. Fixing a Hilbert function $h:A\to \N$ characterize the maximal elements of the poset $\cB_{h}$. 
+\end{problem}
+
+When $S$ has the standard grading results of Bigatti, Hulett, and Pardue \cite{bigatti93,hulett93,pardue96} imply that the maximal element of $\cB_{h}$ is unique and is a lex ideal. In particular, the maximal elements of $\cL_{h}$ and $\cB_{h}$ are equal. When $S$ is not standard graded, even if $S=\K[x_{1},x_{2}]$, this need not be the case \cite{maclaganSmith10}*{Example~3.14}. Thus, the natural place where I will begin approaching Problem~\ref{prob:mg-BHP} is when $S=\K[x_{1},x_{2}]$ with a relatively simple grading, for example $\Z^{2}$-grading where $\deg(x_{i})=\ww_{i}\in\Z^2$.
+
+ \begin{remark}\label{rem:mg-hilb-reg}
+ In the standard graded case the classification of Hilbert functions due to Macaulay, and subsequent refinements proven by Gotzmann and Green are closely related to Castelnuovo-Mumford regularity \cite{gotzmann78,green88}. For multigraded rings the analogous connections between multigraded Hilbert functions and multigraded Castelnuovo-Mumford regularity is an active area of research \cite{maclaganSmith05,bruceHellerSayrafi21,bruceHellerSayrafi22}. %For instance, a major missing element multigraded story is an appropriate version of Gotzmann's persistence theory.
+\end{remark}
+
+
+\subsection{Connectedness of Multigraded Hilbert Schemes}
+
+One of the first results concerning the geometry of classical Hilbert schemes, originally due to Hartshorne, is that $\Hilb^{p}(\P^{n})$ is always connected \cite{hartshorne66}. In comparison, multigraded Hilbert schemes can be disconnected. 
+
+\begin{theorem}\cite{santos05}
+There exists a $\Z^{6}$-grading on the polynomial ring $\C[x_{1},x_{2},\ldots,x_{26}]$ and a function $h:\Z^{6}\to \N$ such that $\Hilb_{S}^{h}$ is disconnect with at least 17 connected components.
+\end{theorem}
+
+The above example is the smallest known disconnected multigraded Hilbert scheme. It would be interesting to understand whether such disconnected examples are possible with fewer variables. 
+
+\begin{problem}\label{prob:disconnected}
+	Find the smallest positive integer $n$ such that there exists an $A$-graded polynomial ring $S=\K[x_{1},\ldots,x_{n}]$ (for some abelian group $A$) and a function $h:A\to\N$ where the corresponding multigraded Hilbert scheme $\Hilb^{h}_{S}$ is disconnected.
+\end{problem}
+
+I will approach Problem~\ref{prob:disconnected} by searching for configurations of vectors in $\Z^{r}$ whose graphs of (unimodular) triangulations are disconnected. Building upon \cite{maclaganThomas02,santos05,heringMaclagan12} such examples can be used to construct disconnected multigraded Hilbert schemes. Finding such a collection of vectors can be approached computationally, as well as, theoretically via the combinatorics of oriented matroids.  
+
+In the opposite direction, Maclagan and Smith have shown that when $S=\K[x_{1},x_{2}]$ then for any grading and function the corresponding multigraded Hilbert scheme is not only connected, but is in fact smooth and irreducible \cite{maclaganSmith10}*{Theorem~1.1}. As part of this proposal, I would like to see if there are other large classes of multigraded Hilbert schemes which are connected. 
+
+\begin{problem}\label{prob:connected-mghilb}
+		Fixing an $A$-graded polynomial ring $S=\K[x_{1},x_{2},\ldots,x_{n}]$, find a characterization, depending on $S$ and $A$, of all functions $h:A\to \N$ for which the multigraded Hilbert scheme $\Hilb^{h}_{S}$ is connected.
+\end{problem}
+
+In full generality, this question is quite ambitious, however, even progress in special cases would be new and interesting. For example, if we restrict to the case when $S=\C[x_{1},x_{2},x_{3}]$ and $A=\Z^{r}$ this question is completely open, but is especially interesting since in this case reducible multigraded Hilbert schemes are known to exist \cite{iarrobino72}. Further, one can likely build upon Goal Theorem~\ref{goalThm:hilbfun} via degeneration technique to provide at least a partial answer to Problem~\ref{prob:connected-mghilb}.
+
+
+\subsection{Smoothness of Multigraded Hilbert Schemes}
+
+In general, classical Hilbert schemes exhibit a number of pathologies. For example, Mumford showed that there exist Hilbert schemes with irreducible components that are generically non-reduced \cite{mumford62}. Further, Vakil's so-called ``Murphy's Law'' for Hilbert schemes shows that every singularity type appears on some Hilbert scheme of points in $\P^{4}$ \cite{vakil06}. Recent work of Skjelnes and Smith has shown that despite these pathologies it is possible to characterize smooth Hilbert schemes on $\P^{n}$ \cite{skjelnesSmith20}. A natural follow-up to this work, which I plan to pursue, is to provide a similar characterization of smooth multigraded Hilbert schemes.
+
+%Moreover, they show that smooth Hilbert schemes have particularly nice geometric descriptions. 
+
+\begin{problem}\label{prob:smooth-mg-hilb} 
+Characterize for which $A$-graded polynomial rings $S$ and which functions $h:A\to \N$ the multigraded Hilbert scheme $\Hilb^{h}_{S}$ is smooth. 
+\end{problem}
+
+Outside of classical Hilbert schemes relatively little is known about the singularities of multigraded Hilbert schemes \cite{maclaganSmith10,ramkumarSammartano22}. In particular, it is unclear what an answer to Problem~\ref{prob:smooth-mg-hilb} might look like. With this in mind, it is worth noting that the results of Skjelnes and Smith were discovered via large exploratory computations with the computer algebra system Macaulay2. While much more involved, Problem~\ref{prob:smooth-mg-hilb} is similarly amenable to computational exploration. %Thus, a natural first step towards Problem~\ref{prob:smooth-mg-hilb} is the following. 
+
+
+\begin{problem}\label{prob:search-smooth-mg-hilb}
+	Using Macaulay2, conduct a search for smooth multigraded Hilbert schemes $\Hilb_{S}^{h}$ when $S$ has $\leq 6$ variables.
+\end{problem}
+
+Problem~\ref{prob:search-smooth-mg-hilb} presents a number of subtleties. For example, how should one choose the grading on $S$ and how should one choose which function $h$. A reasonable answer to this first challenge is to consider the case when $A=\Z^{r}$ with $\deg(x_{i})\in\Z^{r}$ chosen uniformly within some box. The challenge of knowing which Hilbert functions to explore is best approached by answering Problems~\ref{prob:mg-hilbert-functions}. 
+%Note this problem naturally builds upon Problems~\ref{prob:mg-hilbert-functions} and \ref{prob:connected-mghilb} about the connectedness and non-emptiness of multigraded Hilbert schemes. In particular, given the methods of Skjelnes and Smith it seems likely that a robust enough theory of lex-like ideals to answer Problem~\ref{prob:mg-hilbert-function} would make characterizing smooth multigraded Hilbert schemes possible. 
+%Note that while somewhat ambitious this question naturally builds upon the other research problems laid out in this project. In particular, the crucial elements that go into the work of \juliette{finish}
+%
+%It is also worth noting that the results of Skjelnes and Smith were in a sense discovered via large exploratory computations with the computer algebra system Macaulay2. While much more involved, Problem~\ref{prob:smooth-mg-hilb} is similarly amenable to computational exploration.
+%
+%
+%\begin{problem}\label{prob:search-smooth-mg-hilb}
+%	Using \textit{Macaulay2} conduct a search for smooth multigraded Hilbert schemes $\Hilb_{S}^{h}$ when $S$ has $\leq 6$ variables.
+%\end{problem}
+
+%Problem~\ref{prob:search-smooth-mg-hilb} does present a number of subtleties. For example, how should one choose the grading on the polynomial ring $S$ and how should one choose which function $h$. A potential \juliette{decide whether to say more}
+
+\section{Broader Impacts}\label{sec:broader-impacts}
+
+\subsection{Organization:} %Building upon my experience organizing over 15 conferences, workshops, sessions, and panels (see Section~\ref{subsubsec:prior-organizing}) I hope to organize 2-3 conferences in the coming years. 
+I am in the early stages of organizing a week-long conference, \textit{Gender Equity in the Mathematical Study (GEMS) of Commutative Algebra} to support young women and non-binary researchers in commutative algebra and related fields. I also plan to organize a research conference in multigraded commutative algebra and algebraic geometry.
+
+\subsection{Mentorship:} In Fall 2023 I plan to organize a mentorship program helping guide LGBTQ+ undergraduates through the process of applying to graduate programs in mathematics and helping young LGBTQ+ graduate students establish themselves. The plan for this program is to break participants into groups with each group having LGBTQ+ mathematicians at various career stages, thus allowing participants to exchange advice, find support, and build mentoring networks. 
+
+Currently, I have ongoing research projects with two graduate students and one undergraduate which build upon the broader impacts and intellectual merits of this project
+\begin{itemize}
+	\item \textit{Multigraded Regularity:} Two graduate students, Lauren Cranton Heller and Mahrud Sayrafi, and I are working on a broad project to understand the homological properties of multigraded Castelnuovo–Mumford regularity on toric varieties (see Section~\ref{subsec:prior-mgreg}). %As discussed in Remark~\ref{rem:mg-hilb-reg} this is closely connected to Problem~\ref{prob:mg-hilbert-functions}.
+	\item \textit{Varieties of Minimal Degree:} Lauren Cranton Heller, Ritvik Ramkumar (who was a graduate student when this began), and I are working to understand varieties of minimal degree in weighted projective space (see Section~\ref{subsec:mini-dgre}).  
+	\item \textit{Explicit Non-Vanishing Syzygies:} In ongoing work with Daniel Rostamloo, an undergraduate at UC, Berkeley, I am seeking to refine Theorem~\ref{thm:bruce-semiample}. In particular, we are looking to give more precise non-vanishing statements for certain products of projective spaces. 
+\end{itemize}
+In the summer of 2024, I will organize a summer undergraduate research program for 1-3 students to computational explore the combinatorics and geometry of multigraded Hilbert schemes in the spirit of those problems laid out in Section~\ref{sec:mg-hilb-schemes}. When organizing this program I will prioritize women, LGBTQ+ mathematicians, and mathematicians from other underrepresented groups. 
+
+
+%While the exact project will depend on the interest of the students the current plan is to have the students use a computer algebra system like \textit{Macaulay2} to explore the combinatorics and geometry of multigraded Hilbert schemes in the spirit of those questions laid out in Section~\ref{sec:mg-hilb-schemes}. When organizing this program I will prioritizeg women, LGBTQ+ mathematicians, and mathematicians from other underrepresented groups. 
+
+\subsection{A More Inclusive Community:} Continuing my efforts to create a more welcoming and inclusive mathematical environment for LGBTQ+ mathematicians in 2024 I will organize the fourth annual \textit{Trans Math Day} as an in-person conference highlighting the research contributions of transgender and non-binary mathematicians. Further, I will remain a board member of \textit{Spectra: The Association for LGBTQ+ Mathematicians} through at least 2023. During this time I will continue to help Spectra grow, as well as oversee the creation of a manual of best practices for hosting mathematical events that are inclusive and welcoming of LGBTQ+ mathematicians.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{bibdiv}
+\begin{biblist}[\normalsize]
+
+\bib{alexeevBrion04}{article}{
+   author={Alexeev, Valery},
+   author={Brion, Michel},
+   title={Stable reductive varieties. I. Affine varieties},
+   journal={Invent. Math.},
+   volume={157},
+   date={2004},
+   number={2},
+   pages={227--274},
+%   issn={0020-9910},
+%   review={\MR{2076923}},
+%   doi={10.1007/s00222-003-0347-y},
+}
+
+\bib{almousaBruce19}{article}{
+   author={Almousa, Ayah},
+   author={Bruce, Juliette},
+   author={Loper, Michael},
+   author={Sayrafi, Mahrud},
+   title={The virtual resolutions package for Macaulay2},
+   journal={J. Softw. Algebra Geom.},
+   volume={10},
+   date={2020},
+   number={1},
+   pages={51--60},
+}
+   
+\bib{aproduFarkas19}{article}{
+   author={Aprodu, Marian},
+   author={Farkas, Gavrill},
+   author={Papadima, {\c{S}}tefan},
+   author={Raicu, Claudiu},
+   author={Weyman, Jerzy},
+   title={Koszul modules and Green's conjecture},
+   journal={Inventiones mathematicae},
+   year={2019},
+   month={Jun}
+   day={15}
+%   issn={1432-1297},
+%   doi={10.1007/s00222-019-00894-1},
+}
+
+\bib{bayerEisenbud91}{article}{
+   author={Bayer, Dave},
+   author={Eisenbud, David},
+   title={Graph curves},
+   note={With an appendix by Sung Won Park},
+   journal={Adv. Math.},
+   volume={86},
+   date={1991},
+   number={1},
+   pages={1--40},
+%   issn={0001-8708},
+%   review={\MR{1097026}},
+%   doi={10.1016/0001-8708(91)90034-5},
+}
+%\bib{berkesch13}{article}{
+%   author={Berkesch, Christine},
+%   author={Erman, Daniel},
+%   author={Kummini, Manoj},
+%   author={Sam, Steven V.},
+%   title={Tensor complexes: multilinear free resolutions constructed from
+%   higher tensors},
+%   journal={J. Eur. Math. Soc. (JEMS)},
+%   volume={15},
+%   date={2013},
+%   number={6},
+%   pages={2257--2295},
+%%   issn={1435-9855},
+%%   review={\MR{3120743}},
+%%   doi={10.4171/JEMS/421},
+%}
+
+%\bib{berkeschErmanSmith17}{article}{
+%   author={Berkesch, Christine},
+%   author={Erman, Daniel},
+%   author={Smith, Gregory G.},
+%   title={Virtual resolutions for a product of projective spaces},
+%   date={2017},
+%   journal={Algebraic Geometry},
+%   note={to appear},
+%%   issn={1435-9855},
+%%   review={\MR{3120743}},
+%%   doi={10.4171/JEMS/421},
+%}
+
+%\bib{berkeschErmanSmith17}{article}{
+%   author={Berkesch, Christine},
+%   author={Erman, Daniel},
+%   author={Smith, Gregory G.},
+%   title={Virtual resolutions for a product of projective spaces},
+%   journal={Algebr. Geom.},
+%   volume={7},
+%   date={2020},
+%   number={4},
+%   pages={460--481},
+%}
+
+\bib{bertramEinLazarsfeld91}{article}{
+  author={Bertram, Aaron},
+  author={Ein, Lawrence},
+  author={Lazarsfeld, Robert},
+  title={Vanishing theorems, a theorem of {Severi}, and the equations defining projective varieties},
+  journal={J. Amer. Math. Soc.},
+  volume={4},
+  date={1991},
+  number={3},
+  pages={587--602},
+% issn={0894-0347},
+% review={\MR{1092845}},
+% doi={10.2307/2939270},
+}
+
+\bib{bhargavaPoonen22}{article}{
+   author={Bhargava, Manjul},
+   author={Poonen, Bjorn},
+   title={The local-global principle for integral points on stacky curves},
+   date={2022},
+   journal={Journal of Algebraic Geometry},
+   note={to appear},
+%   issn={1435-9855},
+%   review={\MR{3120743}},
+%   doi={10.4171/JEMS/421},
+}
+
+\bib{bigatti93}{article}{
+   author={Bigatti, Anna Maria},
+   title={Upper bounds for the Betti numbers of a given Hilbert function},
+   journal={Comm. Algebra},
+   volume={21},
+   date={1993},
+   number={7},
+   pages={2317--2334},
+}
+
+\bib{bruceNotices21}{article}{
+   author={Bonato, Anthony},
+   author={Bruce, Juliette},
+   author={Buckmire, Ron},
+   title={Spaces for all: the rise of LGBTQ+ mathematics conferences},
+   journal={Notices Amer. Math. Soc.},
+   volume={68},
+   date={2021},
+   number={6},
+   pages={998--1003},
+}
+
+\bib{BBCMMW22}{article}{
+   author={Brandt, Madeline},
+   author={Bruce, Juliette},
+   author={Chan, Melody},
+   author={Melo, Margarida},
+   author={Moreland, Gwyneth},
+   author={Wolfe, Corey},
+   title={On the top-weight rational cohomology of $\mathcal{A}_g$},
+   date={2022},
+   journal={Geometry \& Topology},
+   note={to appear},
+}
+
+\bib{BBBKR17}{article}{
+   author={Brandt, Madeline},
+   author={Bruce, Juliette},
+   author={Brysiewicz, Taylor},
+   author={Krone, Robert},
+   author={Robeva, Elina},
+   title={The degree of ${\rm SO}(n,\Bbb C)$},
+   conference={
+      title={Combinatorial algebraic geometry},
+   },
+   book={
+      series={Fields Inst. Commun.},
+      volume={80},
+      publisher={Fields Inst. Res. Math. Sci., Toronto, ON},
+   },
+   date={2017},
+   pages={229--246},
+}
+
+
+\bib{bruceErman-sop}{article}{
+   author={Bruce, Juliette},
+   author={Erman, Daniel},
+   title={A probabilistic approach to systems of parameters and Noether
+   normalization},
+   journal={Algebra Number Theory},
+   volume={13},
+   date={2019},
+   number={9},
+   pages={2081--2102},
+}
+
+\bib{bruceLi19}{article}{
+   author={Bruce, Juliette},
+   author={Li, Wanlin},
+   title={Effective bounds on the dimensions of Jacobians covering abelian
+   varieties},
+   journal={Proc. Amer. Math. Soc.},
+   volume={148},
+   date={2020},
+   number={2},
+   pages={535--551}
+   }
+
+
+\bib{bruceErmanGoldsteinYang18}{article}{
+   author={Bruce, Juliette},
+   author={Erman, Daniel},
+   author={Goldstein, Steve},
+   author={Yang, Jay},
+   title={Conjectures and computations about Veronese syzygies},
+   journal={Exp. Math.},
+   volume={29},
+   date={2020},
+   number={4},
+   pages={398--413},
+}
+
+\bib{bruceErman19}{article}{
+   author={Bruce, Juliette},
+   author={Erman, Daniel},
+   author={Goldstein, Steve},
+   author={Yang, Jay},
+   title={The Schur-Veronese package in Macaulay2},
+   journal={J. Softw. Algebra Geom.},
+   volume={11},
+   date={2021},
+   number={1},
+   pages={83--87},
+}
+
+\bib{bruce19-semiample}{article}{
+   author={Bruce, Juliette},
+   title={Asymptotic syzygies in the setting of semi-ample growth},
+   date={2019},
+   note={Pre-print: \href{https://arxiv.org/abs/1904.04944}{arxiv:1904.04944}}
+   }
+
+
+\bib{bruce19-hirzebruch}{article}{
+   author={Bruce, Juliette},
+   title={The quantitative behavior of asymptotic syzygies for Hirzebruch
+   surfaces},
+   journal={J. Commut. Algebra},
+   volume={14},
+   date={2022},
+   number={1},
+   pages={19--26},
+}
+
+\bib{bruceNotices22}{article}{
+   author={Bruce, Juliette},
+   title={A word from... Juliette Bruce, Inaugural President of Spectra},
+   journal={Notices Amer. Math. Soc.},
+   volume={69},
+   date={2022},
+   number={6},
+   pages={898--899},
+}
+
+
+\bib{BCEGLY22}{article}{
+   author={Bruce, Juliette},
+   author={Corey, Daniel},
+   author={Erman, Daniel},
+   author={Goldstein, Steve},
+   author={Laudone, Robert P.},
+   author={Yang, Jay},
+   title={Syzygies of $\Bbb P^1\times\Bbb P^1$: data and conjectures},
+   journal={J. Algebra},
+   volume={593},
+   date={2022},
+   pages={589--621},
+}
+	
+
+\bib{bruceHellerSayrafi21}{article}{
+   author={Bruce, Juliette},
+   author={Cranton Heller, Lauren},
+   author={Sayrafi, Mahrud}
+   title={Characterizing Multigraded Regularity on Products of Projective Spaces},
+   date={2021},
+   note={Pre-print: \href{https://arxiv.org/abs/2110.10705}{arxiv:2110.10705}}
+   }
+   
+\bib{bruceHellerSayrafi22}{article}{
+   author={Bruce, Juliette},
+   author={Cranton Heller, Lauren},
+   author={Sayrafi, Mahrud}
+   title={Bounds on Multigraded Regularity},
+   date={2022},
+   note={Pre-print: \href{https://arxiv.org/abs/2208.11115}{arxiv:2208.11115}}
+   }
+   
+\bib{bucurKedlaya12}{article}{
+   author={Bucur, Alina},
+   author={Kedlaya, Kiran S.},
+   title={The probability that a complete intersection is smooth},
+   language={English, with English and French summaries},
+   journal={J. Th\'eor. Nombres Bordeaux},
+   volume={24},
+   date={2012},
+   number={3},
+   pages={541--556},
+%   issn={1246-7405},
+%   review={\MR{3010628}},
+}
+
+\bib{BB21}{article}{
+   author={Buczy\'{n}ska, Weronika},
+   author={Buczy\'{n}ski, Jaros\l aw},
+   title={Apolarity, border rank, and multigraded Hilbert scheme},
+   journal={Duke Math. J.},
+   volume={170},
+   date={2021},
+   number={16},
+   pages={3659--3702},
+}
+
+\bib{cartwrightErmanVelscoViray09}{article}{
+   author={Cartwright, Dustin A.},
+   author={Erman, Daniel},
+   author={Velasco, Mauricio},
+   author={Viray, Bianca},
+   title={Hilbert schemes of 8 points},
+   journal={Algebra Number Theory},
+   volume={3},
+   date={2009},
+   number={7},
+   pages={763--795},
+}
+	
+
+%\bib{charlesPoonen16}{article}{
+%   author={Charles, Fran\c{c}ois},
+%   author={Poonen, Bjorn},
+%   title={Bertini irreducibility theorems over finite fields},
+%   journal={J. Amer. Math. Soc.},
+%   volume={29},
+%   date={2016},
+%   number={1},
+%   pages={81--94},
+%   issn={0894-0347},
+%   review={\MR{3402695}},
+%   doi={10.1090/S0894-0347-2014-00820-1},
+%}
+
+\bib{chandler97}{article}{
+  author={Chandler, Karen A.},
+  title={Regularity of the powers of an ideal},
+  journal={Comm. Algebra},
+  volume={25},
+  date={1997},
+  number={12},
+  pages={3773--3776},
+% issn={0092-7872},
+% review={\MR{1481564}},
+% doi={10.1080/00927879708826084},
+}
+
+\bib{cmbpt}{article}{
+   author={Chinburg, Ted},
+   author={Moret-Bailly, Laurent},
+   author={Pappas, Georgios},
+   author={Taylor, Martin J.},
+   title={Finite morphisms to projective space and capacity theory},
+   journal={J. Reine Angew. Math.},
+   volume={727},
+   date={2017},
+   pages={69--84},
+}
+
+\bib{chiodoEFS13}{article}{
+   author={Chiodo, Alessandro},
+   author={Eisenbud, David},
+   author={Farkas, Gavril},
+   author={Schreyer, Frank-Olaf},
+   title={Syzygies of torsion bundles and the geometry of the level $\ell$
+   modular variety over $\overline{M}_g$},
+   journal={Invent. Math.},
+   volume={194},
+   date={2013},
+   number={1},
+   pages={73--118},
+%   issn={0020-9910},
+%   review={\MR{3103256}},
+%   doi={10.1007/s00222-012-0441-0},
+}
+
+\bib{cutkoskyHerzogTrung99}{article}{
+  author={Cutkosky, S. Dale},
+  author={Herzog, J\"{u}rgen},
+  author={Trung, Ng\^{o} Vi\^{e}t},
+  title={Asymptotic behaviour of the Castelnuovo-Mumford regularity},
+  journal={Compositio Mathematica},
+  volume={118},
+  date={1999},
+  number={3},
+  pages={243--261},
+% issn={0010-437X},
+% review={\MR{1711319}},
+% doi={10.1023/A:1001559912258},
+}
+
+
+\bib{deopurkar18}{article}{
+   author={Deopurkar, Anand},
+   title={The canonical syzygy conjecture for ribbons},
+   journal={Math. Z.},
+   volume={288},
+   date={2018},
+   number={3-4},
+   pages={1157--1164},
+}
+
+\bib{donaldsonSun17}{article}{
+   author={Donaldson, Simon},
+   author={Sun, Song},
+   title={Gromov-Hausdorff limits of K\"{a}hler manifolds and algebraic
+   geometry, II},
+   journal={J. Differential Geom.},
+   volume={107},
+   date={2017},
+   number={2},
+   pages={327--371},
+}
+	
+
+\bib{DJNT17}{article}{
+   author={Douvropoulos, Theodosios},
+   author={Jelisiejew, Joachim},
+   author={N\o dland, Bernt Ivar Utst\o l},
+   author={Teitler, Zach},
+   title={The Hilbert scheme of 11 points in $\Bbb A^3$ is irreducible},
+   conference={
+      title={Combinatorial algebraic geometry},
+   },
+   book={
+      series={Fields Inst. Commun.},
+      volume={80},
+      publisher={Fields Inst. Res. Math. Sci., Toronto, ON},
+   },
+   date={2017},
+   }
+ 
+ \bib{eisenbudGoto84}{article}{
+   author={Eisenbud, David},
+   author={Goto, Shiro},
+   title={Linear free resolutions and minimal multiplicity},
+   journal={J. Algebra},
+   volume={88},
+   date={1984},
+   number={1},
+   pages={89--133},
+}
+	
+\bib{eisenbudHarris87}{article}{
+   author={Eisenbud, David},
+   author={Harris, Joe},
+   title={On varieties of minimal degree (a centennial account)},
+   conference={
+      title={Algebraic geometry, Bowdoin, 1985},
+      address={Brunswick, Maine},
+      date={1985},
+   },
+   book={
+      series={Proc. Sympos. Pure Math.},
+      volume={46},
+      publisher={Amer. Math. Soc., Providence, RI},
+   },
+   date={1987},
+   pages={3--13},
+}
+
+\bib{einLazarsfeld93}{article}{
+   author={Ein, Lawrence},
+   author={Lazarsfeld, Robert},
+   title={Syzygies and Koszul cohomology of smooth projective varieties of
+   arbitrary dimension},
+   journal={Invent. Math.},
+   volume={111},
+   date={1993},
+   number={1},
+   pages={51--67},
+%   issn={0020-9910},
+%   review={\MR{1193597}},
+%   doi={10.1007/BF01231279},
+}
+	
+				
+%\bib{einErmanLazarsfeld15}{article}{
+%   author={Ein, Lawrence},
+%   author={Erman, Daniel},
+%   author={Lazarsfeld, Robert},
+%   title={Asymptotics of random Betti tables},
+%   journal={J. Reine Angew. Math.},
+%   volume={702},
+%   date={2015},
+%   pages={55--75},
+%   issn={0075-4102},
+%   review={\MR{3341466}},
+%   doi={10.1515/crelle-2013-0032},
+%}
+
+\bib{einLazarsfeld12}{article}{
+   author={Ein, Lawrence},
+   author={Lazarsfeld, Robert},
+   title={Asymptotic syzygies of algebraic varieties},
+   journal={Invent. Math.},
+   volume={190},
+   date={2012},
+   number={3},
+   pages={603--646},
+%   issn={0020-9910},
+%   review={\MR{2995182}},
+%   doi={10.1007/s00222-012-0384-5},
+}
+
+\bib{eisenbud05}{book}{
+   author={Eisenbud, David},
+   title={The geometry of syzygies},
+   series={Graduate Texts in Mathematics},
+   volume={229},
+   note={A second course in commutative algebra and algebraic geometry},
+   publisher={Springer-Verlag, New York},
+   date={2005},
+   pages={xvi+243},
+%   isbn={0-387-22215-4},
+%   review={\MR{2103875}},
+}
+%
+%
+%\bib{eisenbudSchreyer09}{article}{
+%   author={Eisenbud, David},
+%   author={Schreyer, Frank-Olaf},
+%   title={Betti numbers of graded modules and cohomology of vector bundles},
+%   journal={J. Amer. Math. Soc.},
+%   volume={22},
+%   date={2009},
+%   number={3},
+%   pages={859--888},
+%%   issn={0894-0347},
+%%   review={\MR{2505303}},
+%%   doi={10.1090/S0894-0347-08-00620-6},
+%}
+
+\bib{eisenbud92}{article}{
+   author={Eisenbud, David},
+   title={Green's conjecture: an orientation for algebraists},
+   conference={
+      title={Free resolutions in commutative algebra and algebraic geometry},
+      address={Sundance, UT},
+      date={1990},
+   },
+   book={
+      series={Res. Notes Math.},
+      volume={2},
+      publisher={Jones and Bartlett, Boston, MA},
+   },
+   date={1992},
+   pages={51--78},
+%   review={\MR{1165318}},
+}
+
+\bib{ellenbergErman16}{article}{
+   author={Ellenberg, Jordan S.},
+   author={Erman, Daniel},
+   title={Furstenberg sets and Furstenberg schemes over finite fields},
+   journal={Algebra Number Theory},
+   volume={10},
+   date={2016},
+   number={7},
+   pages={1415--1436},
+}
+
+%\bib{ermanWood15}{article}{
+%   author={Erman, Daniel},
+%   author={Wood, Melanie Matchett},
+%   title={Semiample Bertini theorems over finite fields},
+%   journal={Duke Math. J.},
+%   volume={164},
+%   date={2015},
+%   number={1},
+%   pages={1--38},
+%%   issn={0012-7094},
+%%   review={\MR{3299101}},
+%%   doi={10.1215/00127094-2838327},
+%}
+
+\bib{ermanYang18}{article}{
+   author={Erman, Daniel},
+   author={Yang, Jay},
+   title={Random flag complexes and asymptotic syzygies},
+   journal={Algebra Number Theory},
+   volume={12},
+   date={2018},
+   number={9},
+   pages={2151--2166},
+%   issn={1937-0652},
+%   review={\MR{3894431}},
+%   doi={10.2140/ant.2018.12.2151},
+}
+
+\bib{farkasMustataPopa03}{article}{
+   author={Farkas, Gavril},
+   author={Musta\c{t}\v{a}, Mircea},
+   author={Popa, Mihnea},
+   title={Divisors on ${M}_{g,g+1}$ and the minimal resolution
+   conjecture for points on canonical curves},
+   language={English, with English and French summaries},
+   journal={Ann. Sci. \'{E}cole Norm. Sup. (4)},
+   volume={36},
+   date={2003},
+   number={4},
+   pages={553--581},
+%   issn={0012-9593},
+%   review={\MR{2013926}},
+%   doi={10.1016/S0012-9593(03)00022-3},
+}
+
+\bib{farkasKemeny16}{article}{
+   author={Farkas, Gavril},
+   author={Kemeny, Michael},
+   title={The generic Green-Lazarsfeld secant conjecture},
+   journal={Invent. Math.},
+   volume={203},
+   date={2016},
+   number={1},
+   pages={265--301},
+}
+
+\bib{farkasKemeny17}{article}{
+   author={Farkas, Gavril},
+   author={Kemeny, Michael},
+   title={The Prym-Green conjecture for torsion line bundles of high order},
+   journal={Duke Math. J.},
+   volume={166},
+   date={2017},
+   number={6},
+   pages={1103--1124},
+}
+	
+\bib{gabberLiuLorenzini15}{article}{
+   author={Gabber, Ofer},
+   author={Liu, Qing},
+   author={Lorenzini, Dino},
+   title={Hypersurfaces in projective schemes and a moving lemma},
+   journal={Duke Math. J.},
+   volume={164},
+   date={2015},
+   number={7},
+   pages={1187--1270},
+%   issn={0012-7094},
+%   review={\MR{3347315}},
+%   doi={10.1215/00127094-2877293},
+}
+
+\bib{green84-I}{article}{
+   author={Green, Mark L.},
+   title={Koszul cohomology and the geometry of projective varieties},
+   journal={J. Differential Geom.},
+   volume={19},
+   date={1984},
+   number={1},
+   pages={125--171},
+%   issn={0022-040X},
+%   review={\MR{739785}},
+}
+
+\bib{green84-II}{article}{
+   author={Green, Mark L.},
+   title={Koszul cohomology and the geometry of projective varieties. II},
+   journal={J. Differential Geom.},
+   volume={20},
+   date={1984},
+   number={1},
+   pages={279--289},
+%   issn={0022-040X},
+%   review={\MR{772134}},
+}
+
+\bib{green88}{article}{
+   author={Green, Mark},
+   title={Restrictions of linear series to hyperplanes, and some results of
+   Macaulay and Gotzmann},
+   conference={
+      title={Algebraic curves and projective geometry},
+      address={Trento},
+      date={1988},
+   },
+   book={
+      series={Lecture Notes in Math.},
+      volume={1389},
+      publisher={Springer, Berlin},
+   },
+   date={1989},
+   pages={76--86},
+%   review={\MR{1023391}},
+%   doi={10.1007/BFb0085925},
+}
+
+\bib{gotzmann78}{article}{
+   author={Gotzmann, Gerd},
+   title={Eine Bedingung f\"{u}r die Flachheit und das Hilbertpolynom eines
+   graduierten Ringes},
+   language={German},
+   journal={Math. Z.},
+   volume={158},
+   date={1978},
+   number={1},
+   pages={61--70},
+%   issn={0025-5874},
+%   review={\MR{480478}},
+%   doi={10.1007/BF01214566},
+}
+\bib{haimanSturmfels04}{article}{
+   author={Haiman, Mark},
+   author={Sturmfels, Bernd},
+   title={Multigraded Hilbert schemes},
+   journal={J. Algebraic Geom.},
+   volume={13},
+   date={2004},
+   number={4},
+   pages={725--769},
+%   issn={1056-3911},
+%   review={\MR{2073194}},
+%   doi={10.1090/S1056-3911-04-00373-X},
+}
+
+\bib{hartshorne66}{article}{
+   author={Hartshorne, Robin},
+   title={Connectedness of the Hilbert scheme},
+   journal={Inst. Hautes \'{E}tudes Sci. Publ. Math.},
+   number={29},
+   date={1966},
+   pages={5--48},
+}
+	
+
+\bib{heringMaclagan12}{article}{
+   author={Hering, Milena},
+   author={Maclagan, Diane},
+   title={The $T$-graph of a multigraded Hilbert scheme},
+   journal={Exp. Math.},
+   volume={21},
+   date={2012},
+   number={3},
+   pages={280--297},
+}
+
+\bib{HJMS22}{article}{
+   author={Homs, Roser},
+   author={Jelisiejew, Joachim},
+   author={Micha\l ek, Mateusz},
+   author={Seynnaeve, Tim},
+   title={Bounds on complexity of matrix multiplication away from
+   Coppersmith-Winograd tensors},
+   journal={J. Pure Appl. Algebra},
+   volume={226},
+   date={2022},
+   number={12},
+   pages={Paper No. 107142, 16},
+}
+\bib{hulett93}{article}{
+   author={Hulett, Heather A.},
+   title={Maximum Betti numbers of homogeneous ideals with a given Hilbert
+   function},
+   journal={Comm. Algebra},
+   volume={21},
+   date={1993},
+   number={7},
+   pages={2335--2350},
+}
+
+%\bib{huneke84}{article}{
+%   author={Huneke, C.},
+%   title={Numerical invariants of liaison classes},
+%   journal={Invent. Math.},
+%   volume={75},
+%   date={1984},
+%   number={2},
+%   pages={301--325},
+%%   issn={0020-9910},
+%%   review={\MR{732549}},
+%%   doi={10.1007/BF01388567},
+%}
+
+%\bib{hunekeUlrich87}{article}{
+%   author={Huneke, Craig},
+%   author={Ulrich, Bernd},
+%   title={The structure of linkage},
+%   journal={Ann. of Math. (2)},
+%   volume={126},
+%   date={1987},
+%   number={2},
+%   pages={277--334},
+%%   issn={0003-486X},
+%%   review={\MR{908149}},
+%%   doi={10.2307/1971402},
+%}
+%	
+%\bib{hunekeUlrich88}{article}{
+%   author={Huneke, Craig},
+%   author={Ulrich, Bernd},
+%   title={Algebraic linkage},
+%   journal={Duke Math. J.},
+%   volume={56},
+%   date={1988},
+%   number={3},
+%   pages={415--429},
+%%   issn={0012-7094},
+%%   review={\MR{948528}},
+%%   doi={10.1215/S0012-7094-88-05618-9},
+%}
+
+\bib{iarrobino72}{article}{
+   author={Iarrobino, A.},
+   title={Reducibility of the families of $0$-dimensional schemes on a
+   variety},
+   journal={Invent. Math.},
+   volume={15},
+   date={1972},
+   pages={72--77},
+%   issn={0020-9910},
+%   review={\MR{301010}},
+%   doi={10.1007/BF01418644},
+}
+
+\bib{jelisiejew20}{article}{
+   author={Jelisiejew, Joachim},
+   title={Pathologies on the Hilbert scheme of points},
+   journal={Invent. Math.},
+   volume={220},
+   date={2020},
+   number={2},
+   pages={581--610},
+}
+
+\bib{kemeny21}{article}{
+   author={Kemeny, Michael},
+   title={Universal secant bundles and syzygies of canonical curves},
+   journal={Invent. Math.},
+   volume={223},
+   date={2021},
+   number={3},
+   pages={995--1026},
+}
+
+\bib{kodiyalam00}{article}{
+  author={Kodiyalam, Vijay},
+  title={Asymptotic behaviour of Castelnuovo-Mumford regularity},
+  journal={Proc. Amer. Math. Soc.},
+  volume={128},
+  date={2000},
+  number={2},
+  pages={407--411},
+% issn={0002-9939},
+% review={\MR{1621961}},
+% doi={10.1090/S0002-9939-99-05020-0},
+}
+
+
+\bib{KLM12}{article}{
+   author={K\"{u}ronya, Alex},
+   author={Lozovanu, Victor},
+   author={Maclean, Catriona},
+   title={Convex bodies appearing as Okounkov bodies of divisors},
+   journal={Adv. Math.},
+   volume={229},
+   date={2012},
+   number={5},
+   pages={2622--2639},
+}
+
+\bib{landsmanRuhmZhang16}{article}{
+   author={Landesman, Aaron},
+   author={Ruhm, Peter},
+   author={Zhang, Robin},
+   title={Spin canonical rings of log stacky curves},
+   language={English, with English and French summaries},
+   journal={Ann. Inst. Fourier (Grenoble)},
+   volume={66},
+   date={2016},
+   number={6},
+}
+	
+\bib{lazarsfeldPareschiPopa11}{article}{
+   author={Lazarsfeld, Robert},
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Local positivity, multiplier ideals, and syzygies of abelian
+   varieties},
+   journal={Algebra Number Theory},
+   volume={5},
+   date={2011},
+   number={2},
+   pages={185--196},
+%   issn={1937-0652},
+%   review={\MR{2833789}},
+%   doi={10.2140/ant.2011.5.185},
+}
+
+\bib{lemmens18}{article}{
+   author={Lemmens, Alexander},
+   title={On the $n$-th row of the graded Betti table of an $n$-dimensional
+   toric variety},
+   journal={J. Algebraic Combin.},
+   volume={47},
+   date={2018},
+   number={4},
+   pages={561--584},
+%   issn={0925-9899},
+%   review={\MR{3813640}},
+%   doi={10.1007/s10801-017-0786-y},
+}
+
+
+\bib{M2}{misc}{
+    label={M2},
+    author={Grayson, Daniel~R.},
+    author={Stillman, Michael~E.},
+    title = {Macaulay 2, a software system for research
+	    in algebraic geometry},
+    note = {Available at \url{http://www.math.uiuc.edu/Macaulay2/}},
+}
+
+\bib{macaulay27}{article}{
+   author={MacAulay, F. S.},
+   title={Some Properties of Enumeration in the Theory of Modular Systems},
+   journal={Proc. London Math. Soc. (2)},
+   volume={26},
+   date={1927},
+   pages={531--555},
+%   issn={0024-6115},
+%   review={\MR{1576950}},
+%   doi={10.1112/plms/s2-26.1.531},
+}
+
+\bib{maclaganSmith10}{article}{
+   author={Maclagan, Diane},
+   author={Smith, Gregory G.},
+   title={Smooth and irreducible multigraded Hilbert schemes},
+   journal={Adv. Math.},
+   volume={223},
+   date={2010},
+   number={5},
+   pages={1608--1631},
+%   issn={0001-8708},
+%   review={\MR{2592504}},
+%   doi={10.1016/j.aim.2009.10.003},
+}
+
+\bib{maclaganSmith05}{article}{
+   author={Maclagan, Diane},
+   author={Smith, Gregory G.},
+   title={Uniform bounds on multigraded regularity},
+   journal={J. Algebraic Geom.},
+   volume={14},
+   date={2005},
+   number={1},
+   pages={137--164},
+%   issn={1056-3911},
+%   review={\MR{2092129}},
+%   doi={10.1090/S1056-3911-04-00385-6},
+}
+
+\bib{maclaganSmith04}{article}{
+   author={Maclagan, Diane},
+   author={Smith, Gregory G.},
+   title={Multigraded Castelnuovo-Mumford regularity},
+   journal={J. Reine Angew. Math.},
+   volume={571},
+   date={2004},
+   pages={179--212},
+%   issn={0075-4102},
+%   review={\MR{2070149}},
+%   doi={10.1515/crll.2004.040},
+}
+
+\bib{maclaganThomas02}{article}{
+   author={Maclagan, D.},
+   author={Thomas, R. R.},
+   title={Combinatorics of the toric Hilbert scheme},
+   journal={Discrete Comput. Geom.},
+   volume={27},
+   date={2002},
+   number={2},
+   pages={249--272},
+}
+
+\bib{millerSturmfels05}{book}{
+   author={Miller, Ezra},
+   author={Sturmfels, Bernd},
+   title={Combinatorial commutative algebra},
+   series={Graduate Texts in Mathematics},
+   volume={227},
+   publisher={Springer-Verlag, New York},
+   date={2005},
+   pages={xiv+417},
+}
+
+\bib{mumford62}{article}{
+   author={Mumford, David},
+   title={Further pathologies in algebraic geometry},
+   journal={Amer. J. Math.},
+   volume={84},
+   date={1962},
+   pages={642--648},
+%   issn={0002-9327},
+%   review={\MR{148670}},
+%   doi={10.2307/2372870},
+}
+
+\bib{mumford70}{article}{
+   author={Mumford, David},
+   title={Varieties defined by quadratic equations},
+   conference={
+      title={Questions on Algebraic Varieties},
+      address={C.I.M.E., III Ciclo, Varenna},
+      date={1969},
+   },
+   book={
+      publisher={Edizioni Cremonese, Rome},
+   },
+   date={1970},
+   pages={29--100},
+%   review={\MR{0282975}},
+}
+	
+\bib{mumford66}{article}{
+   author={Mumford, D.},
+   title={On the equations defining abelian varieties. I},
+   journal={Invent. Math.},
+   volume={1},
+   date={1966},
+   pages={287--354},
+%   issn={0020-9910},
+%   review={\MR{204427}},
+%   doi={10.1007/BF01389737},
+}
+	
+%	\bib{oeding17}{article}{
+%   author={Oeding, Luke},
+%   author={Raicu, Claudiu},
+%   author={Sam, Steven V},
+%   title={On the (non-)vanishing of syzygies of Segre embeddings},
+%   journal={Algebraic Geometry},
+%   volume={6},
+%   number={5},
+%   date={2019},
+%   pages={571--591},
+%}
+
+\bib{ottavianiPaoletti01}{article}{
+   author={Ottaviani, Giorgio},
+   author={Paoletti, Raffaella},
+   title={Syzygies of Veronese embeddings},
+   journal={Compositio Math.},
+   volume={125},
+   date={2001},
+   number={1},
+   pages={31--37},
+%   issn={0010-437X},
+%   review={\MR{1818055}},
+%   doi={10.1023/A:1002662809474},
+}
+
+\bib{pardue96}{article}{
+   author={Pardue, Keith},
+   title={Deformation classes of graded modules and maximal Betti numbers},
+   journal={Illinois J. Math.},
+   volume={40},
+   date={1996},
+   number={4},
+   pages={564--585},
+}
+
+\bib{pareschi00}{article}{
+   author={Pareschi, Giuseppe},
+   title={Syzygies of abelian varieties},
+   journal={J. Amer. Math. Soc.},
+   volume={13},
+   date={2000},
+   number={3},
+   pages={651--664},
+%   issn={0894-0347},
+%   review={\MR{1758758}},
+%   doi={10.1090/S0894-0347-00-00335-0},
+}
+
+\bib{pareschiPopa03}{article}{
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Regularity on abelian varieties. I},
+   journal={J. Amer. Math. Soc.},
+   volume={16},
+   date={2003},
+   number={2},
+   pages={285--302},
+%   issn={0894-0347},
+%   review={\MR{1949161}},
+%   doi={10.1090/S0894-0347-02-00414-9},
+}
+
+
+\bib{pareschiPopa04}{article}{
+   author={Pareschi, Giuseppe},
+   author={Popa, Mihnea},
+   title={Regularity on abelian varieties. II. Basic results on linear
+   series and defining equations},
+   journal={J. Algebraic Geom.},
+   volume={13},
+   date={2004},
+   number={1},
+   pages={167--193},
+%   issn={1056-3911},
+%   review={\MR{2008719}},
+%   doi={10.1090/S1056-3911-03-00345-X},
+}
+	
+\bib{peevaStilmann02}{article}{
+   author={Peeva, Irena},
+   author={Stillman, Mike},
+   title={Toric Hilbert schemes},
+   journal={Duke Math. J.},
+   volume={111},
+   date={2002},
+   number={3},
+   pages={419--449},
+%   issn={0012-7094},
+%   review={\MR{1885827}},
+%   doi={10.1215/S0012-7094-02-11132-6},
+}
+
+%\bib{peskineSzpiro74}{article}{
+%   author={Peskine, C.},
+%   author={Szpiro, L.},
+%   title={Liaison des vari\'{e}t\'{e}s alg\'{e}briques. I},
+%   language={French},
+%   journal={Invent. Math.},
+%   volume={26},
+%   date={1974},
+%   pages={271--302},
+%%   issn={0020-9910},
+%%   review={\MR{364271}},
+%%   doi={10.1007/BF01425554},
+%}
+
+\bib{poonen04}{article}{
+   author={Poonen, Bjorn},
+   title={Bertini theorems over finite fields},
+   journal={Ann. of Math. (2)},
+   volume={160},
+   date={2004},
+   number={3},
+   pages={1099--1127},
+%   issn={0003-486X},
+%   review={\MR{2144974}},
+%   doi={10.4007/annals.2004.160.1099},
+}
+
+\bib{ramkumarSammartano22}{article}{
+   author={Ramkumar, Ritvik},
+   author={Sammartano, Alessio},
+   title={On the smoothness of lexicographic points on Hilbert schemes},
+   journal={J. Pure Appl. Algebra},
+   volume={226},
+   date={2022},
+   number={3},
+   pages={Paper No. 106872, 12},
+}
+
+%\bib{rao78}{article}{
+%   author={Prabhakar Rao, A.},
+%   title={Liaison among curves in ${\bf P}^{3}$},
+%   journal={Invent. Math.},
+%   volume={50},
+%   date={1978/79},
+%   number={3},
+%   pages={205--217},
+%%   issn={0020-9910},
+%%   review={\MR{520926}},
+%%   doi={10.1007/BF01410078},
+%}
+
+\bib{ramkumarSammartano22}{article}{
+   author={Ramkumar, Ritvik},
+   author={Sammartano, Alessio},
+   title={On the smoothness of lexicographic points on Hilbert schemes},
+   journal={J. Pure Appl. Algebra},
+   volume={226},
+   date={2022},
+   number={3},
+   pages={Paper No. 106872, 12},
+}
+	
+	
+\bib{santos05}{article}{
+   author={Santos, Francisco},
+   title={Non-connected toric Hilbert schemes},
+   journal={Math. Ann.},
+   volume={332},
+   date={2005},
+   number={3},
+   pages={645--665},
+%   issn={0025-5831},
+%   review={\MR{2181765}},
+%   doi={10.1007/s00208-005-0643-5},
+}
+
+\bib{schreyer86}{article}{
+   author={Schreyer, Frank-Olaf},
+   title={Syzygies of canonical curves and special linear series},
+   journal={Math. Ann.},
+   volume={275},
+   date={1986},
+   number={1},
+   pages={105--137},
+%   issn={0025-5831},
+%   review={\MR{849058}},
+%   doi={10.1007/BF01458587},
+}
+
+\bib{schreyer91}{article}{
+   author={Schreyer, Frank-Olaf},
+   title={A standard basis approach to syzygies of canonical curves},
+   journal={J. Reine Angew. Math.},
+   volume={421},
+   date={1991},
+   pages={83--123},
+}
+
+
+\bib{skjelnesSmith20}{article}{
+   author={Skjelnes, Roy},
+   author={Smith, Gregory G.},
+   title={Smooth Hilbert schemes: their classification and geometry},
+   journal={Journal für die reine und angewandte Mathematik (Crelle's Journal),},
+   note={to appear}
+}
+
+\bib{smithSwanson97}{article}{
+  author={Smith, Karen E.},
+  author={Swanson, Irena},
+  title={Linear bounds on growth of associated primes},
+  journal={Comm. Algebra},
+  volume={25},
+  date={1997},
+  number={10},
+  pages={3071--3079},
+% issn={0092-7872},
+% review={\MR{1465103}},
+% doi={10.1080/00927879708826041},
+}
+
+\bib{swanson97}{article}{
+   author={Swanson, Irena},
+   title={Powers of ideals: primary decompositions, Artin-Rees lemma and regularity},
+   journal={Math. Ann.},
+   volume={307},
+   date={1997},
+   number={2},
+   pages={299--313},
+%  issn={0025-5831},
+%  review={\MR{1428875}},
+%  doi={10.1007/s002080050035},
+}
+
+\bib{vakil06}{article}{
+   author={Vakil, Ravi},
+   title={Murphy's law in algebraic geometry: badly-behaved deformation
+   spaces},
+   journal={Invent. Math.},
+   volume={164},
+   date={2006},
+   number={3},
+   pages={569--590},
+%   issn={0020-9910},
+%   review={\MR{2227692}},
+%   doi={10.1007/s00222-005-0481-9},
+}
+
+\bib{voightZurieckBrown22}{article}{
+   author={Voight, John},
+   author={Zureick-Brown, David},
+   title={The canonical ring of a stacky curve},
+   journal={Mem. Amer. Math. Soc.},
+   volume={277},
+   date={2022},
+   number={1362},
+   pages={v+144},
+}
+
+\bib{voisin02}{article}{
+   author={Voisin, Claire},
+   title={Green's generic syzygy conjecture for curves of even genus lying
+   on a $K3$ surface},
+   journal={J. Eur. Math. Soc. (JEMS)},
+   volume={4},
+   date={2002},
+   number={4},
+   pages={363--404},
+%   issn={1435-9855},
+%   review={\MR{1941089}},
+%   doi={10.1007/s100970200042},
+}
+
+\bib{voisin05}{article}{
+   author={Voisin, Claire},
+   title={Green's canonical syzygy conjecture for generic curves of odd
+   genus},
+   journal={Compos. Math.},
+   volume={141},
+   date={2005},
+   number={5},
+   pages={1163--1190},
+%   issn={0010-437X},
+%   review={\MR{2157134}},
+%   doi={10.1112/S0010437X05001387},
+}
+	
+\end{biblist}
+\end{bibdiv}
+\end{document}
