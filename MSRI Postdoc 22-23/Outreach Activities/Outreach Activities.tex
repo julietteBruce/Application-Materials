@@ -1,0 +1,312 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2014 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\usepackage{amstext,amsfonts,amssymb,amscd,amsbsy,amsmath}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage{array}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{revnum}
+\usepackage{textcomp}
+
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tocloft}
+\usepackage{array}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+\setlength\LTleft{0.2in} % needed to make longtable full-width
+\setlength\LTright{0.2in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+% the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingb}[6]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingc}[8]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+		\textit{#7} & \textit{#8} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand\foo[9]{%
+    \def\tempb{#2}%
+    \def\tempc{#3}%
+    \def\tempd{#4}%
+    \def\tempe{#5}%
+    \def\tempf{#6}%
+    \def\tempg{#7}%
+    \def\temph{#8}%
+    \def\tempi{#9}%
+    \foocontinued
+}
+\newcommand\foocontinued[7]{%
+    % Do whatever you want with your 9+7 arguments here.
+}
+
+\newcommand{\ressubheadingd}[1]{
+	\def\argten{#1}%
+	\ressubheadingdb
+}
+\newcommand{\ressubheadingdb}[9]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{\argten} & #1 \\
+		\textit{#2} & \textit{#3} \\
+		\textit{#4} & \textit{#5} \\
+		\textit{#6} & \textit{#7} \\
+		\textit{#8} & \textit{#9} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\usepackage[lf]{Baskervaldx}
+
+\begin{document}
+
+{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\LARGE Juliette Bruce}\smallskip & \textbf{\today}\smallskip \\
+Department of Mathematics & \\
+University of Wisconsin & juliette.bruce@math.wisc.edu \\
+480 Lincoln Dr. & \hyperref{http://math.wisc.edu/~juliettebruce}{}{}{math.wisc.edu/\textasciitilde juliettebruce} \\
+Madison, WI 53706 & \\
+\end{tabular*}}
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Outreach Activities}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{itemize}
+
+	
+\item 
+	\ressubheading{qGrads}{University of Wisconsin}{Organizer}{July 2017 -- Present}
+	\begin{itemize}
+		\item A social organization for LGBTQ+ graduate students and post-graduate students at the University of Wisconsin - Madison.
+		\item Organize a weekly coffee social event, with a consistent attendance of 10-20 students, intended to give LGBTQ+ graduate students a place to relax, make friends, and discussion the challenges of being LGBTQ+ at the UW - Madison.
+	\end{itemize}
+		
+\item 
+	\ressubheading{Math Girls Night Out}{University of Wisconsin}{Mentor}{September 2018 -- December 2018}
+	\begin{itemize}
+		\item Mentored two women from local high schools on a project about RSA.
+	\end{itemize}
+		
+\item 
+	\ressubheading{Madison Math Circle}{University of Wisconsin}{Lead Organizer}{January 2016 -- December 2018}
+	\begin{itemize}
+		\item Helped lead the creation of a new outreach program, which directly visits high schools around the state of Wisconsin to better serve students from underrepresented groups.
+		\item This program has dramatically expanded expanding the reach of the circle, with over 20 likely visits planned for this year reaching hundreds of students.
+		\item Responsible for helping presenters (professors, post-docs, graduate students, and undergraduate students) learn to design and give effective math lessons giving middle and high school students a glimpse of the beauty of math research.
+		\item Worked to increase the attendance at weekly meetings. Since joining the Circle in 2015 average attendance at these meetings has more than doubled.
+	\end{itemize}
+	
+\item 
+	\ressubheading{Out in STEM (oSTEM) @ UW-Madison}{University of Wisconsin}{co-Founder \& Vice President}{July 2017 -- July 2018}
+	\begin{itemize}
+		\item A student organization aimed at promoting and supporting LGBTQ+ individuals working and studying in STEM fields at the University of Wisconsin - Madison.
+		\item Since its founding this summer oSTEM@UW has grown to have a diverse membership of over 50 people from around campus. This includes undergrads, grads, special students, etc. 
+		\item This is the only resource on campus aimed specifically at LGBTQ+ individuals in STEM, and thus fills a substantial gap. As one student said after attending a meeting, ``It made me very happy to see other friendly LGBTQ+ faces around, and I got to meet two people who were already in classes of mine! Thanks so much for organizing this stuff -- it's really helpful for me personally, and I believe it was encouraging for the others attending as well.''
+		\item In Fall 2017 I secured an ASM travel grant to help 11 of these members attend the national oSTEM conference. This includes multiple undergrads for whom this will be their first conference, and their first chance to present their research. The grant was for the maximal possible amount.
+	\end{itemize}
+
+\item 
+	\ressubheading{Out in Math: Professional Issues Facing LGBTQ Mathematicians}{Joint Math Meeting}{Panelist}{January 2018}
+	\begin{itemize}
+		\item Spectra panel addressing issues of concern for LGBTQ mathematicians, professionals or students
+		\end{itemize}
+			
+\item 
+	\ressubheading{Madison Mega Math Meet}{University of Wisconsin}{Graded}{May 2015/2017}
+
+\item 
+	\ressubheading{Madison Math Circle}{University of Wisconsin}{Student Volunteer}{January 2015 -- August 2017}
+	
+\item 
+	\ressubheading{Bonding Undergraduate and Graduate Students}{University of Wisconsin}{Mentor for Undergraduate}{September 2014 -- December 2014}
+	\begin{itemize}
+		\item Mentored an upper level undergraduate student interested in pursuing graduate school in STEM.
+	\end{itemize}
+%\item 
+%	\ressubheading{Michigan Math Circle}{University of Michigan}{Organizer}{January 2013 -- June 2014}
+%	\begin{itemize}
+%		\item Oversaw the partnership of the Michigan Math Circle with the Society of Undergrad Math Students, which now helps provide the circle find volunteers and manage finances.
+%	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Service}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+	
+\item 
+	\ressubheading{AMS Graduate Student Chapter}{University of Wisconsin}{Member}{September 2014 -- Present}
+\begin{itemize}
+	\item Gave a number of talks in the Student Chapter (aka Donut) Seminar for a general audience.
+\end{itemize}
+
+\item 
+	\ressubheading{Graduate Peer Mentoring}{UW Dept. of Mathematics}{Mentor}{August 2018 -- May 2019}
+	\begin{itemize}
+		\item Served as the peer mentor to five incoming graduate students from minority genders.
+		%%% 
+		\item Organized monthly mentoring events for my mentees focusing on creating a space where everyone is comfortable discussing issues they might be facing.
+	\end{itemize} 
+	
+\item 
+	\ressubheading{Directed Reading Program}{UW Dept. of Mathematics}{Mentor}{January 2018 -- May 2019}
+	\begin{itemize}
+		\item Lead three undergraduates on semesters long reading project on Commutative Algebra, Algebraic Geometry, and applications of these fields. 
+		\item Lead an undergraduate women on a two semester reading project using \textit{Ideals, Varieties, and Algorithms}. Also provided guidance on applying for REU's. 
+	\end{itemize} 
+	
+\item 
+	\ressubheading{Prospective Student Visit Day}{UW Dept. of Mathematics}{Organizer/Volunteer}{September 2015 -- August 2018}
+	\begin{itemize}
+		\item Organized the evening social actives for prospective students during the 2015 and 2016 visit days.
+		\item Have volunteered during 2015, 2016, and 2017 to serve on the graduate student panel and host prospective students for lunch.
+		
+		\item During the 2018 visit I hosted an international prospective student at my house for 4 days.
+		
+		\item For the last two years have followed up with prospective students after visit day via email to answer any lingering questions. 
+	\end{itemize}
+	
+\item 
+	\ressubheading{Committee on Inclusivity and Diversity}{UW Dept. of Mathematics}{Member}{November 2016 -- May 2017}
+	\begin{itemize}
+		\item Helped create policies seeking to make the department a more welcoming, inclusive, and comfortable place for every member of our university community. This included drafting the department's statement on inclusivity, and creating similar statements for syllabi to be used throughout the department.
+	\end{itemize}
+\item 
+	\ressubheading{Committee on TA Pay and Performance}{UW Dept. of Mathematics}{Member}{September 2015 -- May 2017}
+	\begin{itemize}
+	\item Helped develop and implement a new system to evaluate TA performance, with the goal of creating a more transparent, useful, and non-biased system.
+	\end{itemize}
+
+\item 
+	\ressubheading{Graduate Student Algebraic Geometry Seminar}{UW Dept. of Mathematics}{Organizer}{March 2015 -- December 2017}
+	\begin{itemize}
+	\item Have worked to encourage young graduate students to become involved and give presentations.
+	\end{itemize}
+		
+\item 
+	\ressubheading{AMS Graduate Student Blog}{American Mathematical Society}{Senior Editor}{September 2015 -- September 2018}
+	
+\item 
+	\ressubheading{International TA Training}{UW Dept. of Mathematics}{Guest Teaching Mentor}{August 2017}
+	\begin{itemize}
+		\item Mentored three first time international teaching assistants for one week.
+	\end{itemize}
+	
+\item 
+	\ressubheading{Instructor Excellence Program}{UW Dept. of Mathematics}{Teaching Mentor}{September 2015 -- May 2016}
+	\begin{itemize}
+		\item Mentored roughly one ten first time teaching assistants including multiple class visits.
+		\item Helped create and lead workshops for first time teaching assistants.
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Organizing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item 
+	\ressubheading{Spectra Panel: Supporting Transgender and Non-binary Students}{Joint Math Meetings}{Organizer}{January 2020}
+	\begin{itemize}
+		\item A panel discussing the experiences of transgender, non-binary, and gender nonconforming students, and ways that universities (faculty, staff, and administration) can be more supportive of transgender and non-binary students.
+		\item This panel hopes to spark frank conversations amongst university faculty, staff, and administration about structural changes that can be made that will increase the gender diversity of mathematics departments.
+	\end{itemize}
+	
+	
+\item 
+	\ressubheading{Special Session on Combinatorial Algebraic Geometry}{AMS Sectional}{Organizer}{September 2019}
+	
+\item 
+	\ressubheading{GWCAWMMG}{U-Minnesota Dept. of Mathematics}{Organizer}{April 2019}
+	\begin{itemize}
+		\item Graduate Workshop in Comm. Alg. for Women \& Mathematicians of Minority Genders
+		\item A two day workshop focused on forming a community of women and non-binary researchers interested in commutative algebra through learning about specific topics in commutative algebra from a group of prominent active researchers.
+		\item Approximately 35 participants.
+		\item Helped secure an NSF grant for \$15,000 to cover the costs of the conference. 
+	\end{itemize}
+	
+\item 
+	\ressubheading{Geometry \& Arithmetic of Surfaces}{UW Dept. of Mathematics}{Organizer}{February 2019}
+	\begin{itemize}
+		\item A two day workshop providing a diverse group of early career researchers the opportunity to learn about interesting cutting edge topics in the arithmetic and algebraic geometry of surfaces from a diverse set of prominent active researchers
+		\item Approximately 40 individuals attended, with approximately half being women and mathematicians of minority genders. 
+	\end{itemize}
+	
+\item 
+	\ressubheading{Macaulay2 at Wisconsin}{UW Dept. of Mathematics}{Organizer}{April 2018}
+	\begin{itemize}
+		\item A four day workshop focused on extending the functionality of the computer algebra system Macaulay2 by developing new packages.
+		\item Approximately fifty individuals attended, with a large focus on recruiting individuals from generally underrepresented groups and the UW-Madison community.
+		\item Helped secure an NSF grant for \$15,000 to cover the costs of the conference. 
+	\end{itemize}
+	
+\item 
+	\ressubheading{Math Careers Beyond Academia}{UW Dept. of Mathematics}{Organizer}{April 2017}
+	\begin{itemize}
+		\item Organized a one day professional development conference focused on providing graduate students and advanced undergraduates a sense of potential careers outside of academia, and what skills they should be developing to pursue those careers.
+		\item Over 50 individuals from many departments on campus participated in this event. This included numerous undergraduates and a handful of individuals from other parts of the Madison area.
+		\item Secured a \$1000 grant from the Graduate School at UW - Madison.
+	\end{itemize}
+	
+\end{itemize}
+
+\end{document}
