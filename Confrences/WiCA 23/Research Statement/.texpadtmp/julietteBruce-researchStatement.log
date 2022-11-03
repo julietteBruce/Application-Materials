@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  3 NOV 2022 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  31 OCT 2022 13:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**julietteBruce-statementPurpose-Reg.tex
-(./julietteBruce-statementPurpose-Reg.tex
+**julietteBruce-researchStatement.tex
+(./julietteBruce-researchStatement.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsart.cls
 Document Class: amsart 2020/05/29 v2.20.6
@@ -744,32 +744,32 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count326
 \l__pdf_internal_box=\box91
-) (/Users/juliettebruce/Documents/GitHub/Application-Materials/MSRI Postdoc 22-23/Statement of Purpose (Multigraded Regularity)/.texpadtmp/julietteBruce-statementPurpose-Reg.aux)
-\openout1 = `julietteBruce-statementPurpose-Reg.aux'.
+) (/Users/juliettebruce/Documents/GitHub/Application-Materials/Confrences/WiCA 23/Research Statement/.texpadtmp/julietteBruce-researchStatement.aux)
+\openout1 = `julietteBruce-researchStatement.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 288.
-LaTeX Font Info:    ... okay on input line 288.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 288.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 289.
+LaTeX Font Info:    ... okay on input line 289.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 289.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 288.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 289.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -791,7 +791,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 288.
+Package hyperref Info: Link coloring ON on input line 289.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -801,12 +801,12 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count333
 )
-LaTeX Info: Redefining \ref on input line 288.
-LaTeX Info: Redefining \pageref on input line 288.
-LaTeX Info: Redefining \nameref on input line 288.
- (/Users/juliettebruce/Documents/GitHub/Application-Materials/MSRI Postdoc 22-23/Statement of Purpose (Multigraded Regularity)/.texpadtmp/julietteBruce-statementPurpose-Reg.out) (/Users/juliettebruce/Documents/GitHub/Application-Materials/MSRI Postdoc 22-23/Statement of Purpose (Multigraded Regularity)/.texpadtmp/julietteBruce-statementPurpose-Reg.out)
+LaTeX Info: Redefining \ref on input line 289.
+LaTeX Info: Redefining \pageref on input line 289.
+LaTeX Info: Redefining \nameref on input line 289.
+ (/Users/juliettebruce/Documents/GitHub/Application-Materials/Confrences/WiCA 23/Research Statement/.texpadtmp/julietteBruce-researchStatement.out) (/Users/juliettebruce/Documents/GitHub/Application-Materials/Confrences/WiCA 23/Research Statement/.texpadtmp/julietteBruce-researchStatement.out)
 \@outlinefile=\write4
-\openout4 = `julietteBruce-statementPurpose-Reg.out'.
+\openout4 = `julietteBruce-researchStatement.out'.
 
 
 *geometry* driver: auto-detecting
@@ -843,47 +843,48 @@ LaTeX Info: Redefining \nameref on input line 288.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 288.
+LaTeX Info: Redefining \microtypecontext on input line 289.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 288.
+LaTeX Info: Redefining \showhyphens on input line 289.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+)
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
+(Font)              using `OT1/cmr/bx/n' instead on input line 294.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
+) [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (/Users/juliettebruce/Documents/GitHub/Application-Materials/Confrences/WiCA 23/Research Statement/.texpadtmp/julietteBruce-researchStatement.aux)
 
-LaTeX Warning: Reference `thm:mgreg-main' on page 1 undefined on input line 462.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (/Users/juliettebruce/Documents/GitHub/Application-Materials/MSRI Postdoc 22-23/Statement of Purpose (Multigraded Regularity)/.texpadtmp/julietteBruce-statementPurpose-Reg.aux)
-
-LaTeX Warning: There were undefined references.
-
-Package rerunfilecheck Info: File `julietteBruce-statementPurpose-Reg.out' has not changed.
+Package rerunfilecheck Info: File `julietteBruce-researchStatement.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28487 strings out of 478994
- 539804 string characters out of 5858183
- 900083 words of memory out of 5000000
- 45174 multiletter control sequences out of 15000+600000
- 416116 words of font info for 113 fonts, out of 8000000 for 9000
+ 28382 strings out of 478994
+ 538367 string characters out of 5858183
+ 888030 words of memory out of 5000000
+ 45156 multiletter control sequences out of 15000+600000
+ 411981 words of font info for 72 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 113i,12n,116p,1223b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "/Users/juliettebruce/Documents/GitHub/Application-Materials/MSRI Postdoc 22-23/Statement of Purpose (Multigraded Regularity)/.texpadtmp/julietteBruce-statementPurpose-Reg.pdf" (4 pages, 161503 bytes).
+ 113i,5n,116p,1220b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "/Users/juliettebruce/Documents/GitHub/Application-Materials/Confrences/WiCA 23/Research Statement/.texpadtmp/julietteBruce-researchStatement.pdf" (1 page, 38609 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
- 24589 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 32 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 12301 words of extra memory for PDF output out of 14400 (max. 10000000)
 

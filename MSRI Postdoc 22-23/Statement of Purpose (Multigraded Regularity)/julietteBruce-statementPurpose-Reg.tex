@@ -296,41 +296,43 @@
 %\tableofcontents
 
 \setcounter{section}{0}
+Castelnuovo–Mumford regularity is a measure of geometric complexity that has proven extremely useful in studying subvarieties of projective space. As introduced originally introduced by Mumford the regularity of a coherent sheaf $\cF$ on $\P^{n}$ is given in terms of certain cohomological vanishing conditions. Roughly, one can think of the regularity of $\cF$ as being an effective bound for Serre vanishing. Mumford was interested  such a measure as it plays a key role in constructing Hilbert schemes. However, the connection between coherent sheaves on projective space and graded modules over the standard $\Z$-graded polynomial ring $S=\C[x_{0},\ldots,x_{n}]$ has meant that Castelnuovo–Mumford regularity has proven a fruitful area of active research in commutative algebra. 
 
-Introduced by Mumford, the Castelnuovo–Mumford regularity of a coherent sheaf $\cF$ on aprojective variety $X\subset \P^{n}$ is a measure of the complexity of $\cF$ given in terms of the vanishing of certain cohomology groups. Roughly speaking one should think about Castelnuovo--Mumford regularity as being a measure of geometric complexity. Such a measure can be easily extended to modules over a standard graded polynomial ring $S=\C[x_{0},\ldots,x_{n}]$ by requiring the analogous vanishing conditions for local cohomology. 
+In recent years an active area of research in commutative algebra has been 
 
-Mumford was interested in such a measure as it plays a key role in constructing Hilbert and Quot schemes. In particular, being $d$-regular implies that $\cF(d)$ is globally generated. However, Castelnuovo–Mumford regularity has proven to be closely connected to 
-Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
-%
-%\begin{defn}
-%A coherent sheaf $\cF$ on $\P^{n}$ is $d$-regular if and only if:
-%\[
-%H^{i}(\P^{n}, \cF(d-i))=0 \quad \quad \quad \text{for all $i>0$}.
-%\] 
-%The Castelnuovo--Mumford regularity of $\cF$ is then 
-%\[
-%\reg(\cF) \coloneqq \min\left\{ d\in \Z \;\; \big| \;\; \text{$\cF$ is $d$-regular}\right\}.
-%\]
-%\end{defn}
 
-Mumford was interested in such a measure as it plays a key role in constructing Hilbert and Quot schemes. In particular, being $d$-regular implies that $\cF(d)$ is globally generated. However, Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
+In order to give a taste of some of my recent work in these directions. Let me focus on the following theorem of Eisenbud and Goto showed that regularity would be characterized solely in terms of homological properties of minimal graded free resolutions. 
 
-\begin{theorem}\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
+
+%As introduced by Mumford, the Castelnuovo–Mumford regularity of a coherent sheaf $\cF$ on $\P^{n}$ is a measure of the complexity of $\cF$ given in terms of the vanishing of certain cohomology groups. Such a measure can be easily extended to graded modules over the standard graded polynomial ring $S=\C[x_{0},\ldots,x_{n}]$ where $\deg(x_i)=1$ by requiring the analogous vanishing conditions for local cohomology. Mumford was interested  such a measure as it plays a key role in constructing Hilbert schemes. However, Castelnuovo–Mumford regularity has proven to be closely connected to 
+Eisenbud and Goto showed that regularity would be characterized solely in terms of homological properties of minimal graded free resolutions. 
+
+
+%In particular, if $M$ is a graded $S$-module we say that $M$ is $d$-regular if and only if \juliette{ADD}. 
+
+%Mumford was interested  such a measure as it plays a key role in constructing Hilbert and Quot schemes. However, Castelnuovo–Mumford regularity has proven to be closely connected to 
+%Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
+
+\begin{theoremalpha}[Eisenbud-Goto]\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
 Let $\cF$ be a coherent sheaf on $\P^{n}$ and $M=\bigoplus_{e\in\Z} H^0(\P^{n},\cF(e))$ the corresponding section ring. The following are equivalent:
 \begin{enumerate}
 \item $M$ is $d$-regular;
-\item $\beta_{p,q}(M)=0$ for all $p\geq0$ and $q>d+i$;
+\item $\Tor_{p}^{S}(M,\C)_{q}=0$ for all $p\geq0$ and $q>d+i$;
 \item $M_{\geq d}$ has a linear resolution. 
 \end{enumerate}
-\end{theorem}
+\end{theoremalpha}
 
-My collaborators and I have worked to generalize this result to the multigraded setting, i.e. from coherent sheaves on a single projective space to sheaves on a product of projective spaces. In particular, fixing a dimension vector $\nn=(n_1,n_2,\ldots,n_{r})\in \N^{r}$ we let $\P^{\nn}\coloneqq \P^{n_1}\times \P^{n_2}\times \cdots \times \P^{n_r}$ and $S=\K[x_{i,j} \; |\; 1\leq i \leq r, 0\leq j \leq n_{i}]$ be the Cox ring of $\P^{\nn}$ with the $\Pic(X)\cong \Z^{r}$-grading given by $\deg x_{i,j} = \ee_{i} \in \Z^{r}$, where $\ee_{i}$ is the $i$-th standard basis vector in $\Z^{r}$. 
+This close connection between Castelnuovo–Mumford regularity and minimal graded free resolutions has lead Castelnuovo–Mumford regularity to be an active area of research in commutative algebra. 
 
-Maclagan and Smith generalized Castelnuovo--Mumford regularity to this setting in terms of certain cohomology vanishing. Fixing some notation given $\dd\in \Z^{r}$ and $i\in \Z_{\geq0}$ we let:
-\[
-L_{i}(\dd)\coloneqq \bigcup_{\substack{\vv \in \N \\ |\vv| = i}} (\dd-\vv)+\N^{r}.
-\]
-Note when $r=2$ the region $L_{i}(\dd)$ looks like a staircase with $(i+1)$-corners. Roughly speaking we define regularity by requiring the $i$-th cohomology of certain twists of $\cF$ to vanish on $L_{i}$. 
+%For example, work of many people showed that the Castelnuovo–Mumford regularity of powers of ideals displays surprisingly predictable asymptotic behavoir. In particular, Cutkosky, Herzog, Trung and independently Kodiyalam proved that if $I\subset S$ is a homogenous ideal then there exist constants $d,e\in\Z$ such that $\reg\!\left(I^t\right) = dt+e$ for $t\gg0$.
+
+My collaborators and I have worked to understand the connections between multigraded Castelnuovo–Mumford regularity and multigraded homological algebra. To give a taste of their definition, and the work my collaborators and I have done, let us focus on the the case when $X$ is a product of projective spaces.  In particular, flet $X= \P^{n_1}\times \P^{n_2}\times \cdots \times \P^{n_r}$ and $S=\C[x_{i,j} \; |\; 1\leq i \leq r, 0\leq j \leq n_{i}]$ be the corresponding Cox ring with the $\Pic(X)\cong \Z^{r}$-grading given by $\deg x_{i,j} = \ee_{i} \in \Z^{r}$, where $\ee_{i}$ is the $i$-th standard basis vector in $\Z^{r}$. 
+
+%Maclagan and Smith generalized Castelnuovo--Mumford regularity to this setting in terms of certain cohomology vanishing. Fixing some notation given $\dd\in \Z^{r}$ and $i\in \Z_{\geq0}$ we let:
+%\[
+%L_{i}(\dd)\coloneqq \bigcup_{\substack{\vv \in \N \\ |\vv| = i}} (\dd-\vv)+\N^{r}.
+%\]
+%Note when $r=2$ the region $L_{i}(\dd)$ looks like a staircase with $(i+1)$-corners. Roughly speaking we define regularity by requiring the $i$-th cohomology of certain twists of $\cF$ to vanish on $L_{i}$. 
 
 %\begin{center}
 %\begin{figure}[H]
@@ -388,11 +390,11 @@ Note when $r=2$ the region $L_{i}(\dd)$ looks like a staircase with $(i+1)$-corn
 \begin{defn}\label{def:mg-reg}
 A coherent sheaf $\cF$ on $\P^{\nn}$ is $\dd$-regular if and only if
 \[
-H^i\left(\P^{\nn}, \cF(\ee)\right) =0 \quad \quad \quad \text{for all $\ee\in L_{i}(\dd)$}.
+H^i\left(\P^{\nn}, \cF(\ee)\right) =0 \quad \quad \quad \text{for all $\ee\in L_{i}(\dd)=\bigcup_{\substack{\vv \in \N, |\vv| = i}} (\dd-\vv)+\N^{r}$}.
 \]
 The multigraded Castelnuovo--Mumford regularity of $\cF$ is then the set: 
 \[
-\reg(\cF) \coloneqq \left \{ \dd\in \Z^{r} \;\; \big| \;\; \text{$\cF$ is $\dd$-regular}\right\}\subset \Z^{r}.
+\reg(\cF) \coloneqq \left \{ \dd\in \Z^{r} \;\; | \;\; \text{$\cF$ is $\dd$-regular}\right\}\subset \Z^{r}.
 \]
 \end{defn}
 
@@ -424,7 +426,7 @@ The multigraded Castelnuovo--Mumford regularity of $\cF$ is then the set:
 %\end{figure}
 %\end{center}
 
-The obvious approaches to generalize Theorem~\ref{thm:eisenbud-goto} to a product of projective spaces turn out not to work. For example, the multigraded Betti numbers do not determine multigraded Castelnuovo--Mumford regularity. Despite this we show that part (3) of Theorem~\ref{thm:eisenbud-goto} can be generalized. To do so we introduce the following generalization of linear resolutions. 
+With my collaborators, I was able to find examples showing that generalizing Theorem~\ref{thm:eisenbud-goto} to mulitgraded regularity is quite subtle. For example, we showed that the multigraded Betti numbers of a module do not determine multigraded Castelnuovo--Mumford regularity, and there exists a finitely generated module $M$ that is $\dd$-regular, but where the truncation $M_{\geq\dd}$ does not have a linear free resolution.  this we show that part (3) of Theorem~\ref{thm:eisenbud-goto} can be generalized. To do so we introduce the following generalization of linear resolutions. 
 
 \begin{defn}
 A complex $F_{\bullet}$ of $\Z^{r}$-graded free $S$-modules is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$.
@@ -457,12 +459,12 @@ A complex $F_{\bullet}$ of $\Z^{r}$-graded free $S$-modules is $\dd$-quasilinear
 %
 %It is not the case that $M$ being $\dd$-regular implies $M_{\geq \dd}$ has a linear resolution \cite[Example 4.2]{bruce21}, however, we can characterize being $\dd$-regular in terms of $M_{\geq \dd}$ having a quasilinear resolution. 
 
-\begin{theorem}\cite{bruceHellerSayrafi21}*{Theorem A}\label{thm:mgreg-main}
+\begin{theoremalpha}
 Let $M$ be a finitely generated $\Z^{r}$-graded $S$-module with $H^{0}_{B}(M)=0$:
 \[
 \text{$M$ is $\dd$-regular} \iff  \text{$M_{\geq\dd}$ has a $\dd$-quasilinear resolution}.
 \]
-\end{theorem}
+\end{theoremalpha}
 
 The proof of Theorem~\ref{thm:mgreg-main} is based in part on a \v{C}ech--Koszul spectral sequence that relates the Betti numbers of $M_{\geq\dd}$ to the Fourier--Mukai transform of $\widetilde{M}$ with Beilinson's resolution of the diagonal as the kernel.  Precisely, if $M$ is $\dd$-regular and $H_B^0(M)=0$ we prove the that
 \begin{align*}\label{eq:magic-equality}
@@ -470,20 +472,17 @@ The proof of Theorem~\ref{thm:mgreg-main} is based in part on a \v{C}ech--Koszul
 \end{align*}
 where the $\O_{\P^{\nn}}^\aa$ are cotangent sheaves on $\P^\nn$. The result then follows from showing that $M$ being $\dd$-regular is equivalent to certain vanishings of the right-hand side above. 
 
-\begin{theorem}
-  There exists a degree $\aa\in\Pic X$, depending only on $I$, such that for each integer $t>0$ and each pair of degrees $\qq_1,\qq_2\in\Pic X$ satisfying $\qq_1\geq\deg f_i\geq\qq_2$ for all generators $f_i$ of $I$, we have
-	\[ t\qq_1+\aa+\reg S \subseteq \reg\!\left(I^t\right) \subseteq t\qq_2+\Nef X. \]
-\end{theorem}
+%\begin{theoremalpha}
+%  There exists a degree $\aa\in\Z^{r}$, depending only on $I$, such that for each integer $t>0$ and each pair of degrees $\qq_1,\qq_2\in\Z^{r}$ satisfying $\qq_1\geq\deg f_i\geq\qq_2$ for all generators $f_i$ of $I$, we have
+%	\[ t\qq_1+\aa+\N^r \subseteq \reg\!\left(I^t\right) \subseteq t\qq_2+\N^r. \]
+%\end{theoremalpha}
+%
 
+\newpage 
 
+\noindent \textbf{Relevance of Visit.} Being a postdoctoral fellow at MSRI would be extremely beneficially towards my career goals as it would provide me with a stimulating mathematical environment, and the opportunity to engage and work with a number of leading researchers in commutative algebra. My research interest align extremely well with the topics of the program. For example, one project I am working on concerns better understanding the homological properties of multigraded Castelnuovo--Mumford regularity, and in a separate project I am exploring ways Green's conjecture can be generalized tp canonical stacky curves. These projects touch upon many of the topics included in the program description. As such begin a postdoc at MSRI would likely prove valuable toward progressing both of these projects, as well as a fantastic opportunity to being new collaborations with other participants. Further, given the the ways my research interest align with the program I feel I would be able to find numerous ways to myself contribute to the program.% including by discussing my own work, building new collaborations, and NEDEDED. 
 
-Building on the work of many people \cite{bertramEinLazarsfeld91,chandler97,smithSwanson97,swanson97}, Cutkosky, Herzog, Trung \cite{cutkoskyHerzogTrung99} and independently Kodiyalam \cite{kodiyalam00} showed the Castelnuovo--Mumford regularity for powers of ideals on a projective space $\P^n$ has surprisingly predictable asymptotic behavior. In particular, given an ideal $I\subset \K[x_0,\ldots,x_n]$, there exist constants $d,e\in\Z$ such that $\reg\!\left(I^t\right) = dt+e$ for $t\gg0$.
-
-Building upon our work discussed above, my collaborators and I generalized this result to arbitrary toric varieties. In particular, Definition~\ref{def:mg-reg} can be extended to all toric varieties by letting $S$ be Cox ring of the toric variety $X$, replacing $\Z^r$ with the Picard group of $X$, and replacing $\N^{r}$ with the nef cone of $X$. My collaborators and I show that the multigraded regularity of powers of ideals is bounded and translates in a predictable way. In particular, the regularity of $I^{t}$ essentially translates within $\Nef X$ in fixed directions at a linear rate.
-
-\noindent \textbf{Relevance of Visit.} Being a postdoctoral fellow at MSRI would be extremely beneficially towards my career goals as it would provide me with a stimulating mathematical environment, and the opportunity to engage and work with a number of leading researchers in commutative algebra. My research interest align extremely well with topics the of semester long program. For example, one ongoing project I am working on concerns better understanding the homological implications of certain generalizations of Castelnuovo--Mumford regularity to toric varieties, and in a separate project I am beginning to explore ways Green's conjecture may be generalized to describe the syzygies of canonical stacky curves. Both of these projects touch upon many of the topics included in the program description. As such begin a postdoc at MSRI would likely prove valuable toward progressing both of these projects, as well as a fantastic opprotunity to being new collaborations with other participants. Moreover, given the the ways my research interest align with the program I feel I would be able to find numerous ways to myself contribute to the program.% including by discussing my own work, building new collaborations, and NEDEDED. 
-
-Overall, being a postdoctoral fellow for this semester program in commutative algebra presents an amazing opportunity to connect and build relationships within the research area that has long felt like my research community/home. And such connections would significantly advance my goals of being a math professor at a research university.
+I am specifically applying for a postdoctoral position, since my current position would make it extremely difficult for me to participate in the semester as a research member. Overall, being a postdoctoral fellow for this semester program in commutative algebra presents an amazing opportunity to connect and build relationships within the research area that has long felt like my research community/home. And such connections would significantly advance my goals of being a math professor at a research university.
 
 %Finally, a particular aspect I have enjoyed about working in commutative algebra has been the strong sense of community I have found within the field. Being a postdoctoral fellow for this semester program thus presents an amazing opportunity to connect and build relationships within the research area that has long felt like my research home.
 
@@ -493,17 +492,15 @@ Overall, being a postdoctoral fellow for this semester program in commutative al
 
 \noindent \textbf{Building Mathematical Community.} As an LGBTQ+ woman, I have worked hard to promote diversity, inclusivity, and justice in the mathematical community by mentoring students, supporting women and LGBTQ+ people in mathematics, and organizing conferences and outreach programs. %For brevity, below I will discuss a few of my more recent efforts in these directions to build community.
 
-As a postdoc, I have put significant effort into mentoring, advising, and working with students, especially those from underrepresented groups. During Summer 2021 in order to help fill gaps caused by the COVID-19 pandemic I organized a virtual summer undergraduate research program for 6 undergraduates from around the world. In Summer 2022 I advised an undergraduate student on a research project related to my work on asymptotic syzygies. This student is now applying to graduate schools in math. I began research projects with multiple graduate students, in which I played a substantial mentoring and guiding role. In the Spring and Summer of 2022, I did a reading course with a first-year graduate woman who is now working in commutative algebra.
+I have put significant effort into mentoring and working with students, especially those from underrepresented groups. During Summer 2021 I organized a virtual summer undergraduate research program for 6 undergraduates. In 2022 I advised an undergraduate student on a research project in commutative algebra. This student is now applying to graduate schools in math. I began research projects with multiple graduate students, in which I played a substantial mentoring role. In 2022, I led a reading course with a first-year graduate woman in commutative algebra.
 
 %undergraduates
 %I advised two summer research projects for undergraduate students. The first of these projects ran virtually during Summer 2021 when 6 undergraduates. In Summer 2022 I advised an undergraduate student on a research project related to my work on syzygies discussed on the previous page. This student is now applying to graduate schools in math. As a postdoc, I began research projects with multiple graduate students (a majority of whom identify with a generally underrepresented group), in which I played a substantial mentoring and guiding role. These projects have resulted in two pre-prints, with additional projects still ongoing. Throughout the Spring and Summer of 2022, I did a reading course with a first-year graduate woman on algebraic geometry.
 
-Since Fall 2020 I have organized an annual virtual conference promoting the work of transgender and non-binary mathematicians. Highlighting the importance of such conferences one participant said, ``I've been really considering leaving mathematics.  [Trans Math Day 2020] reminded me why I'm here and why I want to stay. ... If a conference like this had been around for me five years ago, my life would have been a lot better.'' Trans Math Day regularly has ~50 participants. %The next Trans Math Day is in December 2022. 
-
-For over the last two years I have served as a board member for \textit{Spectra: The Association for LGBTQ+ Mathematicians}. As a board member I have overseen the growth and formalization of the organization, including the creation and adoption of bylaws, the creation of an invited lecture at the Joint Mathematics Meetings, and a fundraising campaign that has raised over \$20,000 to support LGBTQ+ students and mathematicians. I am currently the inaugural president of Spectra, and as of right now we have over 500 people on our mailing/membership lists.  
+Since 2020 I have organized an annual conference promoting the work of transgender and non-binary mathematicians, which regularly has over 50 participants. Highlighting the importance of such conferences one participant said, ``I've been really considering leaving mathematics.  [Trans Math Day 2020] reminded me why I'm here and why I want to stay. ... If a conference like this had been around for me five years ago, my life would have been a lot better.'' For the last two years I have been a board member for \textit{Spectra: The Association for LGBTQ+ Mathematicians}, and currently I am the inaugural president. As a board member I led the creation and adoption of bylaws, the creation of an invited lecture at the Joint Mathematics Meetings, and a fundraising campaign that has raised over \$20,000 to support LGBTQ+ students and mathematicians. %I am currently the inaugural president of Spectra, and as of right now we have over 500 people on our mailing/membership lists.  
 
 
-In response to the COVID-19 pandemic and the shift of many mathematical activities to virtual formats, I worked to find ways for these online activities to reach those often at the periphery. During Summer and Fall 2020, I helped with Ravi Vakil's \textit{Algebraic Geometry in the Time of Covid} project. This massive online open-access course in algebraic geometry brought together $\sim2,000$ participants from around the world. In Spring 2021, I organized an 8-week virtual reading course for undergraduates in algebraic geometry and commutative algebra. 
+In response to the COVID-19 pandemic, I worked to find ways for these online activities to reach those often at the periphery. During Summer and Fall 2020, I helped with Ravi Vakil's \textit{Algebraic Geometry in the Time of Covid} project. This massive online open-access course in algebraic geometry brought together $\sim2,000$ participants from around the world. In Spring 2021, I organized an 8-week virtual reading course for undergraduates in algebraic geometry and commutative algebra. 
 
 
 I have organized over 15 conferences, special sessions, and workshops including: \textit{M2@UW} (45 participants), \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Minority Genders} (35 participants), \textit{CAZoom} (70 participants), \textit{Western Algebraic Geometry Symposium} (100 participants)x, and $\Spec(\overline{\Q})$ (50 participants). When organizing these conferences I have given paid special attention to promoting women and other underrepresented groups in mathematics. For example, \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} and \textit{GEMS in Combinatorics}  focused on forming communities of women and non-binary researchers in commutative algebra and combinatorics respectively. Further, $\Spec(\overline{\Q})$ highlighted the research of LGBTQ+ mathematicians in algebra, geometry, and number theory.
