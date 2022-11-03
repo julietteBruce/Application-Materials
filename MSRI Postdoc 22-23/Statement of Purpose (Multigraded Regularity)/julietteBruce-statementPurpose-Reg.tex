@@ -296,9 +296,29 @@
 %\tableofcontents
 
 \setcounter{section}{0}
-Just as the connection between subvarieties of projective space and graded modules over the standard graded polynomial ring inspired substantial work in commutative algebra, recently there has be substantial work in developing homological tools to study multigraded modules over multigraded polynomial rings to better understand subvarieties of toric varieties. Much of my recent work fits into this trend. As a taste of some of this work I will focus on recent work studying the homological properties of multigraded Castelnuovo–Mumford regularity.
 
-Castelnuovo–Mumford regularity is a measure of geometric complexity that has proven extremely useful in studying subvarieties of projective space. As introduced originally introduced by Mumford the regularity of a coherent sheaf $\cF$ on $\P^{n}$ is given in terms of certain cohomological vanishing conditions. Roughly, one can think of the regularity of $\cF$ as being an effective bound for Serre vanishing. Mumford was interested  such a measure as it plays a key role in constructing Hilbert schemes. However, the connection between coherent sheaves on projective space and graded modules over the standard $\Z$-graded polynomial ring $S=\C[x_{0},\ldots,x_{n}]$ has meant that Castelnuovo–Mumford regularity has proven a fruitful area of active research in commutative algebra. 
+A projective variety $X\subset \P^n$, is defined by a homogenous ideal $I_{X}$ in the standard $\Z$-graded polynomial ring $\C[x_0,\ldots,x_n]$. The minimal graded free resolution of $I_{X}$ often captures not only interesting algebraic information about the defining equations of $X$, but also captures various things about the extrinsic and intrinsic geometry of $X$. When $\P^{n}$ is replaced by another toric variety $X$ the ways minimal multigraded free resolutions over the Cox ring of $X$ capture algebraic and geometric information about subvarieties of $X$ remains quite mysterious. Much of my recent work has focused on developing tools in multigraded homological algebra to better understand the geometry of toric varieties. As a taste of some of this work I will focus on recent work studying the homological properties of multigraded Castelnuovo–Mumford regularity.
+
+%Much of my recent research has focused on understanding how they ways minimal graded free resolutions capture information about subvarietes $\P^{n}$ is replaced by a different toric variety.  
+
+%Given a projective variety $X$ embedded in $\P^n$, we associate to $X$  the ideal of homogeneous polynomials vanishing on $X$.  $S=\C[x_0,\ldots,x_n]$ and $I_X$ is the ideal of homogeneous polynomials vanishing on $X$. As $S_X$ is a graded $S$-module we may consider its minimal graded free resolution, which is often closely related to both the extrinsic and intrinsic geometry of $X$.
+
+
+%Just as the connection between subvarieties of projective space and graded modules over the standard graded polynomial ring inspired substantial work in commutative algebra, recently there has be substantial work in developing homological tools to study multigraded modules over multigraded polynomial rings to better understand subvarieties of toric varieties. Much of my recent work fits into this trend. As a taste of some of this work I will focus on recent work studying the homological properties of multigraded Castelnuovo–Mumford regularity.
+
+
+Castelnuovo–Mumford regularity is a measure of geometric complexity that has proven extremely useful in studying subvarieties of projective space. As introduced originally introduced by Mumford the regularity of a coherent sheaf $\cF$ on $\P^{n}$ is given in terms of certain cohomological vanishing conditions. Roughly, one can think of the regularity of $\cF$ as being an effective bound for Serre vanishing. Mumford was interested  such a measure as it plays a key role in constructing Hilbert schemes. However, as the following result of Eisenbud and Goto shows it is also closely connected to minimal graded free resolutions. 
+
+\begin{theoremalpha}[Eisenbud-Goto]\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
+Let $\cF$ be a coherent sheaf on $\P^{n}$ and $M=\bigoplus_{e\in\Z} H^0(\P^{n},\cF(e))$ the corresponding section ring. The following are equivalent: (1) $M$ is $d$-regular; (2) $\Tor_{p}^{S}(M,\C)_{q}=0$ for all $p\geq0$ and $q>d+i$; (3) $M_{\geq d}$ has a linear minimal graded free resolution. 
+%\begin{enumerate}
+%\item $M$ is $d$-regular;
+%\item $\Tor_{p}^{S}(M,\C)_{q}=0$ for all $p\geq0$ and $q>d+i$;
+%\item $M_{\geq d}$ has a linear resolution. 
+%\end{enumerate}
+\end{theoremalpha}
+
+%the connection between coherent sheaves on projective space and graded modules over the standard $\Z$-graded polynomial ring $S=\C[x_{0},\ldots,x_{n}]$ has meant that Castelnuovo–Mumford regularity has proven a fruitful area of active research in commutative algebra. 
 
 %In recent years an active area of research has been in developing the connections between toric geometry and commutative algebra over multigraded polynomial rings. This includes work by 
 
@@ -309,7 +329,7 @@ H^i\left(\P^{\nn}, \cF(\ee)\right) =0 \quad \quad \quad \text{for all $\ee\in L_
 
 
 
-In order to give a taste of some of my recent work in these directions. Let me focus on the following theorem of Eisenbud and Goto, which states that the Castelnuovo–Mumford regularity of a module over the standard graded polynomial ring $S$ can be characterized solely in terms of homological properties of minimal graded free resolutions. 
+%In order to give a taste of some of my recent work in these directions. Let me focus on the following theorem of Eisenbud and Goto, which states that the Castelnuovo–Mumford regularity of a module over the standard graded polynomial ring $S$ can be characterized solely in terms of homological properties of minimal graded free resolutions. 
 
 
 %As introduced by Mumford, the Castelnuovo–Mumford regularity of a coherent sheaf $\cF$ on $\P^{n}$ is a measure of the complexity of $\cF$ given in terms of the vanishing of certain cohomology groups. Such a measure can be easily extended to graded modules over the standard graded polynomial ring $S=\C[x_{0},\ldots,x_{n}]$ where $\deg(x_i)=1$ by requiring the analogous vanishing conditions for local cohomology. Mumford was interested  such a measure as it plays a key role in constructing Hilbert schemes. However, Castelnuovo–Mumford regularity has proven to be closely connected to 
@@ -321,20 +341,20 @@ In order to give a taste of some of my recent work in these directions. Let me f
 %Mumford was interested  such a measure as it plays a key role in constructing Hilbert and Quot schemes. However, Castelnuovo–Mumford regularity has proven to be closely connected to 
 %Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
 
-\begin{theoremalpha}[Eisenbud-Goto]\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
-Let $\cF$ be a coherent sheaf on $\P^{n}$ and $M=\bigoplus_{e\in\Z} H^0(\P^{n},\cF(e))$ the corresponding section ring. The following are equivalent: (1) $M$ is $d$-regular; (2) $\Tor_{p}^{S}(M,\C)_{q}=0$ for all $p\geq0$ and $q>d+i$; (3) $M_{\geq d}$ has a linear minimal graded free resolution. 
-%\begin{enumerate}
-%\item $M$ is $d$-regular;
-%\item $\Tor_{p}^{S}(M,\C)_{q}=0$ for all $p\geq0$ and $q>d+i$;
-%\item $M_{\geq d}$ has a linear resolution. 
-%\end{enumerate}
-\end{theoremalpha}
+%\begin{theoremalpha}[Eisenbud-Goto]\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
+%Let $\cF$ be a coherent sheaf on $\P^{n}$ and $M=\bigoplus_{e\in\Z} H^0(\P^{n},\cF(e))$ the corresponding section ring. The following are equivalent: (1) $M$ is $d$-regular; (2) $\Tor_{p}^{S}(M,\C)_{q}=0$ for all $p\geq0$ and $q>d+i$; (3) $M_{\geq d}$ has a linear minimal graded free resolution. 
+%%\begin{enumerate}
+%%\item $M$ is $d$-regular;
+%%\item $\Tor_{p}^{S}(M,\C)_{q}=0$ for all $p\geq0$ and $q>d+i$;
+%%\item $M_{\geq d}$ has a linear resolution. 
+%%\end{enumerate}
+%\end{theoremalpha}
 
 %This close connection between Castelnuovo–Mumford regularity and minimal graded free resolutions has lead Castelnuovo–Mumford regularity to be an active area of research in commutative algebra. 
 
 %For example, work of many people showed that the Castelnuovo–Mumford regularity of powers of ideals displays surprisingly predictable asymptotic behavoir. In particular, Cutkosky, Herzog, Trung and independently Kodiyalam proved that if $I\subset S$ is a homogenous ideal then there exist constants $d,e\in\Z$ such that $\reg\!\left(I^t\right) = dt+e$ for $t\gg0$.
 
-My collaborators and I have worked to understand how such a result can be extended to characterize multigraded Castelnuovo–Mumford regularity in terms of minimal resolutions. To give a taste of our results let us again focus on the the case when $X$ is a product of projective spaces.  In particular, let $X= \P^{n_1}\times \P^{n_2}\times \cdots \times \P^{n_r}$ and $S=\C[x_{i,j} \; |\; 1\leq i \leq r, 0\leq j \leq n_{i}]$ be the corresponding Cox ring with the $\Z^{r}$-grading given by $\deg x_{i,j} = \ee_{i} \in \Z^{r}$, where $\ee_{i}$ is the $i$-th standard basis vector in $\Z^{r}$. 
+My collaborators and I have worked to understand how multigraded Castelnuovo–Mumford regularity can be characterized in terms of minimal multigraded free resolutions. Containing focus on the the case when $X$ is a product of projective spaces, let $X= \P^{n_1}\times \P^{n_2}\times \cdots \times \P^{n_r}$ and $S=\C[x_{i,j} \; |\; 1\leq i \leq r, 0\leq j \leq n_{i}]$ be the corresponding Cox ring with the $\Z^{r}$-grading given by $\deg x_{i,j} = \ee_{i} \in \Z^{r}$, where $\ee_{i}$ is the $i$-th standard basis vector in $\Z^{r}$. 
 
 %Maclagan and Smith generalized Castelnuovo--Mumford regularity to this setting in terms of certain cohomology vanishing. Fixing some notation given $\dd\in \Z^{r}$ and $i\in \Z_{\geq0}$ we let:
 %\[
