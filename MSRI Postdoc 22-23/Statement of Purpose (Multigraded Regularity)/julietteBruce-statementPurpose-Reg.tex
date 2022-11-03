@@ -297,7 +297,7 @@
 
 \setcounter{section}{0}
 
-A projective variety $X\subset \P^n$, is defined by a homogenous ideal $I_{X}$ in the standard $\Z$-graded polynomial ring $\C[x_0,\ldots,x_n]$. The minimal graded free resolution of $I_{X}$ often captures not only interesting algebraic information about the defining equations of $X$, but also captures various things about the extrinsic and intrinsic geometry of $X$. When $\P^{n}$ is replaced by another toric variety $X$ the ways minimal multigraded free resolutions over the Cox ring of $X$ capture algebraic and geometric information about subvarieties of $X$ remains quite mysterious. Much of my recent work has focused on developing tools in multigraded homological algebra to better understand the geometry of toric varieties. As a taste of some of this work I will focus on recent work studying the homological properties of multigraded Castelnuovo–Mumford regularity.
+A projective variety $X\subset \P^n$, is defined by a homogenous ideal $I_{X}$ in the standard $\Z$-graded polynomial ring $\C[x_0,\ldots,x_n]$. The minimal graded free resolution of $I_{X}$ often captures not only interesting algebraic information about the defining equations of $X$, but also infromation about the extrinsic and intrinsic geometry of $X$. When $\P^{n}$ is replaced by another toric variety $X$ the ways minimal multigraded free resolutions over the Cox ring of $X$ capture algebraic and geometric information about subvarieties of $X$ remains quite mysterious. Much of my recent work has focused on developing tools in multigraded homological algebra to better understand the geometry of toric varieties. As a taste of this I will focus on my recent work studying the homological properties of multigraded Castelnuovo–Mumford regularity.
 
 %Much of my recent research has focused on understanding how they ways minimal graded free resolutions capture information about subvarietes $\P^{n}$ is replaced by a different toric variety.  
 
@@ -454,15 +454,16 @@ My collaborators and I have worked to understand how multigraded Castelnuovo–M
 %\end{figure}
 %\end{center}
 
-With my collaborators, I was able to find examples showing that generalizing Theorem~\ref{thm:eisenbud-goto} to mulitgraded regularity is quite subtle. For example, the multigraded Betti numbers of a module do not determine multigraded Castelnuovo--Mumford regularity, and there exists a finitely generated module $M$ that is $\dd$-regular, but where the truncation $M_{\geq\dd}$ does not have a linear free resolution. However, we show that multigraded regularity can be characterized by the truncation $M_{\geq \dd}$ having a certain type of free resolution, which generalizes the notion of a linear resolutions. 
+We were able to find examples showing that generalizing Theorem~\ref{thm:eisenbud-goto} to mulitgraded regularity is subtle. For example, the multigraded Betti numbers of a module do not determine its multigraded Castelnuovo--Mumford regularity, and $M$ being $\dd$-regular does not imply that the truncation $M_{\geq\dd}$ does not have a linear free resolution. However, we show that multigraded regularity can be characterized by the truncation $M_{\geq \dd}$ having a certain type of free resolution, which generalizes the notion of a linear resolutions. We say that a complex $F_{\bullet}$ of $\Z^{r}$-graded free $S$-modules is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$.
 
-\begin{defn}
-A complex $F_{\bullet}$ of $\Z^{r}$-graded free $S$-modules is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$.
-%\begin{enumerate}
-%\item We say that  $F_{\bullet}$ is $\dd$-linear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i}(\dd)$. 
-%\item We say that $F_{\bullet}$ is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$. 
-%\end{enumerate}
-\end{defn}
+
+%\begin{defn}
+%A complex $F_{\bullet}$ of $\Z^{r}$-graded free $S$-modules is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$.
+%%\begin{enumerate}
+%%\item We say that  $F_{\bullet}$ is $\dd$-linear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i}(\dd)$. 
+%%\item We say that $F_{\bullet}$ is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$. 
+%%\end{enumerate}
+%\end{defn}
 
 %In order to see the difference between linear and quasilinear resolutions we note that on a product of projective spaces the irrelevant ideal generally will have a quasilinear resolution, not a linear resolution.  For example, if we consider $\P^{1}\times \P^{2}$ so that $S=\K[x_{0},x_{1},y_{0},y_{1},y_{2}]$ and $B=\langle x_{0},x_{1}\rangle\cap\langle y_{0},y_{1},y_{2}\rangle$ then the minimal graded free resolution of $S/B$ is: 
 %	\[\begin{tikzcd}[column sep=1.75em]
@@ -487,12 +488,17 @@ A complex $F_{\bullet}$ of $\Z^{r}$-graded free $S$-modules is $\dd$-quasilinear
 %
 %It is not the case that $M$ being $\dd$-regular implies $M_{\geq \dd}$ has a linear resolution \cite[Example 4.2]{bruce21}, however, we can characterize being $\dd$-regular in terms of $M_{\geq \dd}$ having a quasilinear resolution. 
 
-\begin{theoremalpha}
+\begin{theoremalpha}\label{thm:mgreg-main}
 Let $M$ be a finitely generated $\Z^{r}$-graded $S$-module with $H^{0}_{B}(M)=0$:
 \[
 \text{$M$ is $\dd$-regular} \iff  \text{$M_{\geq\dd}$ has a $\dd$-quasilinear resolution}.
 \]
 \end{theoremalpha}
+
+\noindent The proof of Theorem~\ref{thm:mgreg-main} is based in part on a \v{C}ech--Koszul spectral sequence that relates the multigraded Betti numbers of $M_{\geq\dd}$ to the Fourier--Mukai transform of $\widetilde{M}$. %with Beilinson's resolution of the diagonal as the kernel. 
+
+ This work together with additional work I have done studying the asymptotic behavior of multigraded regularity for powers of ideals, as well was work of Berkesch, Brown, Chardin, Erman, and Smith, suggest that further developing tools in multigraded homolgocal algebra will both highlight new algebraic phenomena as well as prove fruitful for understanding some of the rich geometry of toric varieties. . Currently, my collaborators and I are exploring other ways minimal multigraded free resolutions on toric varieties capture geometric and algebraic of subvarieties of toric varieties including via things like Bayer-Stillman type results for multigraded regularity and generalizations of Green's conjecture for canonical stacky curves. 
+
 
 %The proof of Theorem~\ref{thm:mgreg-main} is based in part on a \v{C}ech--Koszul spectral sequence that relates the Betti numbers of $M_{\geq\dd}$ to the Fourier--Mukai transform of $\widetilde{M}$ with Beilinson's resolution of the diagonal as the kernel.  Precisely, if $M$ is $\dd$-regular and $H_B^0(M)=0$ we prove the that
 %\begin{align*}\label{eq:magic-equality}
