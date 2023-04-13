@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.12)  5 APR 2023 12:04
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.12)  12 APR 2023 17:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -603,97 +603,97 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 60.
 
 
-./julietteBruce Resume.tex:104: LaTeX Error: There's no line here to end.
+./julietteBruce Resume.tex:108: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 ^^I}
+l.108 ^^I}
            % Description
 ? 
 
-./julietteBruce Resume.tex:117: LaTeX Error: There's no line here to end.
+./julietteBruce Resume.tex:121: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.117 ^^I  }
+l.121 ^^I  }
              % Description
 ? 
 
-Overfull \hbox (4.07315pt too wide) in paragraph at lines 117--117
+Overfull \hbox (4.07315pt too wide) in paragraph at lines 121--121
 \TU/EBGaramond(0)/m/n/10 Developed a successful independent research program th
 at brought together
  []
 
 
-./julietteBruce Resume.tex:132: LaTeX Error: There's no line here to end.
+./julietteBruce Resume.tex:136: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.132 ^^I}
+l.136 ^^I}
            % Description
 ? 
-./julietteBruce Resume.tex:280: Misplaced \noalign.
+./julietteBruce Resume.tex:284: Misplaced \noalign.
 \@tabletail ->\noalign 
                        {\global \let \@savcr =\\ \global \let \\=\org@tabula...
-l.280 }
+l.284 }
        
 ? 
-./julietteBruce Resume.tex:280: Misplaced \noalign.
+./julietteBruce Resume.tex:284: Misplaced \noalign.
 \@tabletail ...l \let \\=\org@tabularcr }\noalign 
                                                   {\global \let \\=\@savcr }
-l.280 }
+l.284 }
        
 ? 
-./julietteBruce Resume.tex:333: Misplaced \noalign.
+./julietteBruce Resume.tex:337: Misplaced \noalign.
 \@tabletail ->\noalign 
                        {\global \let \@savcr =\\ \global \let \\=\org@tabula...
-l.333 \end{supertabular}
+l.337 \end{supertabular}
                         
 ? 
-./julietteBruce Resume.tex:333: Misplaced \noalign.
+./julietteBruce Resume.tex:337: Misplaced \noalign.
 \@tabletail ...l \let \\=\org@tabularcr }\noalign 
                                                   {\global \let \\=\@savcr }
-l.333 \end{supertabular}
+l.337 \end{supertabular}
                         
 ? 
 
-Overfull \hbox (6.29898pt too wide) in paragraph at lines 301--334
+Overfull \hbox (6.29898pt too wide) in paragraph at lines 305--338
 [] 
  []
 
 
-Overfull \hbox (3.769pt too wide) in paragraph at lines 433--434
+Overfull \hbox (3.769pt too wide) in paragraph at lines 437--438
 \TU/EBGaramond(0)/m/n/10 international conferences and seminars, including: Har
 vard,
  []
 
 
-Overfull \hbox (23.28574pt too wide) in paragraph at lines 442--443
-\TU/EBGaramond(0)/m/n/10 sociation for LGBTQ+ mathematicians, and oversaw a fun
-draiser
+Overfull \hbox (4.89574pt too wide) in paragraph at lines 446--447
+\TU/EBGaramond(0)/m/n/10 tion for LGBTQ+ mathematicians, and oversaw a fundrais
+er
  []
 
 
-Overfull \hbox (3.85902pt too wide) in paragraph at lines 449--450
+Overfull \hbox (3.85902pt too wide) in paragraph at lines 453--454
 \TU/EBGaramond(0)/m/n/10 Developed four peer-reviewed software packages extendi
 ng the
  []
 
 
-Overfull \hbox (3.95572pt too wide) in paragraph at lines 453--454
+Overfull \hbox (3.95572pt too wide) in paragraph at lines 457--458
 \TU/EBGaramond(0)/m/n/10 Led a collaborative research project that brought toge
 ther tools
  []
 
 [1
 
-] (./julietteBruce Resume.aux)
+] [2] (./julietteBruce Resume.aux)
 Package rerunfilecheck Info: File `"julietteBruce Resume".out' has not changed.
 
 (rerunfilecheck)             Checksum: <no file>.
@@ -701,10 +701,10 @@ Package rerunfilecheck Info: File `"julietteBruce Resume".out' has not changed.
 Here is how much of TeX's memory you used:
  14154 strings out of 476919
  262726 string characters out of 5821839
- 657601 words of memory out of 5000000
+ 658885 words of memory out of 5000000
  33986 multiletter control sequences out of 15000+600000
  404054 words of font info for 61 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 96i,13n,103p,511b,702s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,13n,103p,511b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on julietteBruce Resume.pdf (1 page).
+Output written on julietteBruce Resume.pdf (2 pages).

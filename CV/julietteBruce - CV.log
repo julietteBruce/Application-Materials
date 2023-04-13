@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  2 AUG 2022 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  7 APR 2023 10:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -537,14 +537,14 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
 LaTeX Font Info:    Trying to load font information for T1+Baskervaldx-TLF on i
-nput line 123.
+nput line 128.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/baskervaldx/T1Baskervaldx-TLF.fd
 File: T1Baskervaldx-TLF.fd 2014/03/31 (autoinst) Font definitions for T1/Basker
 valdx-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 123.
+(Font)              scaled to size 10.95pt on input line 128.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count288
@@ -559,32 +559,32 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 )
 \openout1 = `"julietteBruce - CV.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
-LaTeX Font Info:    ... okay on input line 123.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 123.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
+LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 128.
 LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 1
-23.
+28.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    ... okay on input line 128.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -600,7 +600,7 @@ LaTeX Font Info:    ... okay on input line 123.
 \makeMPintoPDFobject=\count299
 \everyMPtoPDFconversion=\toks29
 )
-Package hyperref Info: Link coloring ON on input line 123.
+Package hyperref Info: Link coloring ON on input line 128.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -613,9 +613,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count300
 )
-LaTeX Info: Redefining \ref on input line 123.
-LaTeX Info: Redefining \pageref on input line 123.
-LaTeX Info: Redefining \nameref on input line 123.
+LaTeX Info: Redefining \ref on input line 128.
+LaTeX Info: Redefining \pageref on input line 128.
+LaTeX Info: Redefining \nameref on input line 128.
  (./julietteBruce - CV.out) (./julietteBruce - CV.out)
 \@outlinefile=\write3
 \openout3 = `"julietteBruce - CV.out"'.
@@ -623,78 +623,78 @@ LaTeX Info: Redefining \nameref on input line 123.
 \c@mv@tabular=\count301
 \c@mv@boldtabular=\count302
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 125.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 125
+(Font)              scaled to size 12.0pt on input line 130.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 130
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 125
+LaTeX Font Info:    Trying to load font information for U+msb on input line 130
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 126.
+(Font)              scaled to size 12.0pt on input line 131.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 126.
+(Font)              scaled to size 17.28pt on input line 131.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 10.95pt on input line 136.
+(Font)              scaled to size 10.95pt on input line 141.
 LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
-36.
+41.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Trying to load font information for TS1+Baskervaldx-TLF on 
-input line 140.
+input line 145.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/baskervaldx/TS1Baskervaldx-TLF.fd
 File: TS1Baskervaldx-TLF.fd 2014/03/31 (autoinst) Font definitions for TS1/Bask
 ervaldx-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 140.
+(Font)              scaled to size 10.95pt on input line 145.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 140.
+(Font)              scaled to size 10.95pt on input line 145.
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2]
-Overfull \hbox (0.83124pt too wide) in alignment at lines 307--307
+Overfull \hbox (0.83124pt too wide) in alignment at lines 321--321
 [] [] 
  []
 
 [3]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 380.
+(Font)              scaled to size 8.0pt on input line 415.
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 380.
+(Font)              scaled to size 8.0pt on input line 415.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 380.
+(Font)              scaled to size 9.0pt on input line 415.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 380.
+(Font)              scaled to size 6.0pt on input line 415.
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 380.
- [4]
+(Font)              scaled to size 6.0pt on input line 415.
+ [4] [5]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 567.
+(Font)              scaled to size 8.0pt on input line 628.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 567.
- [5] [6] [7] [8] [9] (./julietteBruce - CV.aux)
+(Font)              scaled to size 6.0pt on input line 628.
+ [6] [7] [8] [9] [10] (./julietteBruce - CV.aux)
 Package rerunfilecheck Info: File `"julietteBruce - CV".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11128 strings out of 478994
- 160177 string characters out of 5858183
- 490679 words of memory out of 5000000
- 28407 multiletter control sequences out of 15000+600000
+ 11130 strings out of 478994
+ 160205 string characters out of 5858183
+ 491752 words of memory out of 5000000
+ 28408 multiletter control sequences out of 15000+600000
  444003 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,10n,74p,338b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,74p,338b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_m4qttc.en
 c}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_2xv27p.en
 c}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -711,10 +711,10 @@ nts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-su
 per/sfsx1200.pfb>
-Output written on "julietteBruce - CV.pdf" (9 pages, 151911 bytes).
+Output written on "julietteBruce - CV.pdf" (10 pages, 153946 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 10 named destinations out of 1000 (max. 500000)
+ 118 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 11 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
