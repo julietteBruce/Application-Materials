@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.12)  12 APR 2023 17:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.12)  15 APR 2023 10:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"julietteBruce Resume.tex"
-(./julietteBruce Resume.tex
+**"julietteBruce Long Resume.tex"
+(./julietteBruce Long Resume.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (./FreemanCV.cls
 Document Class: FreemanCV 2021/09/03 Freeman CV Class v3.0
@@ -448,8 +448,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count295
 \enitdp@description=\count296
 )
-(./julietteBruce Resume.aux)
-\openout1 = `"julietteBruce Resume.aux"'.
+(./julietteBruce Long Resume.aux)
+\openout1 = `"julietteBruce Long Resume.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
@@ -593,9 +593,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 42.
 LaTeX Info: Redefining \pageref on input line 42.
 LaTeX Info: Redefining \nameref on input line 42.
- (./julietteBruce Resume.out) (./julietteBruce Resume.out)
+ (./julietteBruce Long Resume.out) (./julietteBruce Long Resume.out)
 \@outlinefile=\write3
-\openout3 = `"julietteBruce Resume.out"'.
+\openout3 = `"julietteBruce Long Resume.out"'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 60.
@@ -603,7 +603,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 60.
 
 
-./julietteBruce Resume.tex:108: LaTeX Error: There's no line here to end.
+./julietteBruce Long Resume.tex:108: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -613,7 +613,7 @@ l.108 ^^I}
            % Description
 ? 
 
-./julietteBruce Resume.tex:121: LaTeX Error: There's no line here to end.
+./julietteBruce Long Resume.tex:121: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -629,7 +629,7 @@ at brought together
  []
 
 
-./julietteBruce Resume.tex:136: LaTeX Error: There's no line here to end.
+./julietteBruce Long Resume.tex:136: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -638,73 +638,79 @@ Type  H <return>  for immediate help.
 l.136 ^^I}
            % Description
 ? 
-./julietteBruce Resume.tex:284: Misplaced \noalign.
+./julietteBruce Long Resume.tex:284: Misplaced \noalign.
 \@tabletail ->\noalign 
                        {\global \let \@savcr =\\ \global \let \\=\org@tabula...
 l.284 }
        
 ? 
-./julietteBruce Resume.tex:284: Misplaced \noalign.
+./julietteBruce Long Resume.tex:284: Misplaced \noalign.
 \@tabletail ...l \let \\=\org@tabularcr }\noalign 
                                                   {\global \let \\=\@savcr }
 l.284 }
        
 ? 
-./julietteBruce Resume.tex:337: Misplaced \noalign.
+./julietteBruce Long Resume.tex:338: Misplaced \noalign.
 \@tabletail ->\noalign 
                        {\global \let \@savcr =\\ \global \let \\=\org@tabula...
-l.337 \end{supertabular}
+l.338 \end{supertabular}
                         
 ? 
-./julietteBruce Resume.tex:337: Misplaced \noalign.
+./julietteBruce Long Resume.tex:338: Misplaced \noalign.
 \@tabletail ...l \let \\=\org@tabularcr }\noalign 
                                                   {\global \let \\=\@savcr }
-l.337 \end{supertabular}
+l.338 \end{supertabular}
                         
 ? 
 
-Overfull \hbox (6.29898pt too wide) in paragraph at lines 305--338
+Overfull \hbox (6.29898pt too wide) in paragraph at lines 306--339
 [] 
  []
 
 
-Overfull \hbox (3.769pt too wide) in paragraph at lines 437--438
+Overfull \hbox (3.769pt too wide) in paragraph at lines 438--439
 \TU/EBGaramond(0)/m/n/10 international conferences and seminars, including: Har
 vard,
  []
 
 
-Overfull \hbox (4.89574pt too wide) in paragraph at lines 446--447
+Overfull \hbox (4.89574pt too wide) in paragraph at lines 447--448
 \TU/EBGaramond(0)/m/n/10 tion for LGBTQ+ mathematicians, and oversaw a fundrais
 er
  []
 
 
-Overfull \hbox (3.85902pt too wide) in paragraph at lines 453--454
+Overfull \hbox (3.85902pt too wide) in paragraph at lines 454--455
 \TU/EBGaramond(0)/m/n/10 Developed four peer-reviewed software packages extendi
 ng the
  []
 
 
-Overfull \hbox (3.95572pt too wide) in paragraph at lines 457--458
+Overfull \hbox (3.95572pt too wide) in paragraph at lines 458--459
 \TU/EBGaramond(0)/m/n/10 Led a collaborative research project that brought toge
 ther tools
  []
 
 [1
 
-] [2] (./julietteBruce Resume.aux)
-Package rerunfilecheck Info: File `"julietteBruce Resume".out' has not changed.
+]
+Overfull \hbox (0.49815pt too wide) in paragraph at lines 477--478
+\TU/EBGaramond(0)/b/n/10 Freeman, G. R. \TU/EBGaramond(0)/m/n/10 (1996). Chemis
+try of Multiply Charged Neg-
+ []
 
+[2] (./julietteBruce Long Resume.aux)
+Package rerunfilecheck Info: File `"julietteBruce Long Resume".out' has not cha
+nged.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
  14154 strings out of 476919
- 262726 string characters out of 5821839
- 658885 words of memory out of 5000000
+ 262801 string characters out of 5821839
+ 657603 words of memory out of 5000000
  33986 multiletter control sequences out of 15000+600000
  404054 words of font info for 61 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 96i,13n,103p,511b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,13n,103p,516b,686s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on julietteBruce Resume.pdf (2 pages).
+Output written on julietteBruce Long Resume.pdf (2 pages).
