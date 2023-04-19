@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  18 APR 2023 16:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  18 APR 2023 16:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**teaching-statement-v0.tex
-(./teaching-statement-v0.tex
+**references.tex
+(./references.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsart.cls
@@ -190,6 +190,10 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks30
 \@floatcapt=\box53
 )
+(/usr/local/texlive/2021/texmf-dist/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip62
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks31
@@ -330,7 +334,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
-\Hy@SectionHShift=\skip62
+\Hy@SectionHShift=\skip63
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsrefs/amsrefs.sty
 Package: amsrefs 2013/03/07 v2.14
 
@@ -789,80 +793,61 @@ File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
 
 LaTeX Info: Redefining \lsstyle on input line 915.
 LaTeX Info: Redefining \lslig on input line 915.
-\MT@outer@space=\skip63
+\MT@outer@space=\skip64
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count313
-\Gm@cntv=\count314
-\c@Gm@tempcnt=\count315
-\Gm@bindingoffset=\dimen283
-\Gm@wd@mp=\dimen284
-\Gm@odd@mp=\dimen285
-\Gm@even@mp=\dimen286
-\Gm@layoutwidth=\dimen287
-\Gm@layoutheight=\dimen288
-\Gm@layouthoffset=\dimen289
-\Gm@layoutvoffset=\dimen290
-\Gm@dimlist=\toks48
-)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box85
-\beforetitleunit=\skip64
-\aftertitleunit=\skip65
-\ttl@plus=\dimen291
-\ttl@minus=\dimen292
-\ttl@toksa=\toks49
-\titlewidth=\dimen293
-\titlewidthlast=\dimen294
-\titlewidthfirst=\dimen295
+\beforetitleunit=\skip65
+\aftertitleunit=\skip66
+\ttl@plus=\dimen283
+\ttl@minus=\dimen284
+\ttl@toksa=\toks48
+\titlewidth=\dimen285
+\titlewidthlast=\dimen286
+\titlewidthfirst=\dimen287
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip66
-\cftbeforetoctitleskip=\skip67
-\cftaftertoctitleskip=\skip68
-\cftbeforepartskip=\skip69
-\cftpartnumwidth=\skip70
-\cftpartindent=\skip71
-\cftbeforesecskip=\skip72
-\cftsecindent=\skip73
-\cftsecnumwidth=\skip74
-\cftbeforesubsecskip=\skip75
-\cftsubsecindent=\skip76
-\cftsubsecnumwidth=\skip77
-\cftbeforesubsubsecskip=\skip78
-\cftsubsubsecindent=\skip79
-\cftsubsubsecnumwidth=\skip80
-\cftbeforeparaskip=\skip81
-\cftparaindent=\skip82
-\cftparanumwidth=\skip83
-\cftbeforesubparaskip=\skip84
-\cftsubparaindent=\skip85
-\cftsubparanumwidth=\skip86
-\cftbeforeloftitleskip=\skip87
-\cftafterloftitleskip=\skip88
-\cftbeforefigskip=\skip89
-\cftfigindent=\skip90
-\cftfignumwidth=\skip91
-\c@lofdepth=\count316
-\c@lotdepth=\count317
-\cftbeforelottitleskip=\skip92
-\cftafterlottitleskip=\skip93
-\cftbeforetabskip=\skip94
-\cfttabindent=\skip95
-\cfttabnumwidth=\skip96
+\cftparskip=\skip67
+\cftbeforetoctitleskip=\skip68
+\cftaftertoctitleskip=\skip69
+\cftbeforepartskip=\skip70
+\cftpartnumwidth=\skip71
+\cftpartindent=\skip72
+\cftbeforesecskip=\skip73
+\cftsecindent=\skip74
+\cftsecnumwidth=\skip75
+\cftbeforesubsecskip=\skip76
+\cftsubsecindent=\skip77
+\cftsubsecnumwidth=\skip78
+\cftbeforesubsubsecskip=\skip79
+\cftsubsubsecindent=\skip80
+\cftsubsubsecnumwidth=\skip81
+\cftbeforeparaskip=\skip82
+\cftparaindent=\skip83
+\cftparanumwidth=\skip84
+\cftbeforesubparaskip=\skip85
+\cftsubparaindent=\skip86
+\cftsubparanumwidth=\skip87
+\cftbeforeloftitleskip=\skip88
+\cftafterloftitleskip=\skip89
+\cftbeforefigskip=\skip90
+\cftfigindent=\skip91
+\cftfignumwidth=\skip92
+\c@lofdepth=\count313
+\c@lotdepth=\count314
+\cftbeforelottitleskip=\skip93
+\cftafterlottitleskip=\skip94
+\cftbeforetabskip=\skip95
+\cfttabindent=\skip96
+\cfttabnumwidth=\skip97
 
 
 Package tocloft Warning: \@starttoc has already been redefined; tocloft bailing
@@ -870,40 +855,40 @@ Package tocloft Warning: \@starttoc has already been redefined; tocloft bailing
 
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip97
-\multirow@cntb=\count318
-\multirow@dima=\skip98
-\bigstrutjot=\dimen296
+\multirow@colwidth=\skip98
+\multirow@cntb=\count315
+\multirow@dima=\skip99
+\bigstrutjot=\dimen288
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen297
+\col@sep=\dimen289
 \ar@mcellbox=\box86
-\extrarowheight=\dimen298
-\NC@list=\toks50
-\extratabsurround=\skip99
-\backup@length=\skip100
+\extrarowheight=\dimen290
+\NC@list=\toks49
+\extratabsurround=\skip100
+\backup@length=\skip101
 \ar@cellbox=\box87
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen299
-\lightrulewidth=\dimen300
-\cmidrulewidth=\dimen301
-\belowrulesep=\dimen302
-\belowbottomsep=\dimen303
-\aboverulesep=\dimen304
-\abovetopsep=\dimen305
-\cmidrulesep=\dimen306
-\cmidrulekern=\dimen307
-\defaultaddspace=\dimen308
-\@cmidla=\count319
-\@cmidlb=\count320
-\@aboverulesep=\dimen309
-\@belowrulesep=\dimen310
-\@thisruleclass=\count321
-\@lastruleclass=\count322
-\@thisrulewidth=\dimen311
+\heavyrulewidth=\dimen291
+\lightrulewidth=\dimen292
+\cmidrulewidth=\dimen293
+\belowrulesep=\dimen294
+\belowbottomsep=\dimen295
+\aboverulesep=\dimen296
+\abovetopsep=\dimen297
+\cmidrulesep=\dimen298
+\cmidrulekern=\dimen299
+\defaultaddspace=\dimen300
+\@cmidla=\count316
+\@cmidlb=\count317
+\@aboverulesep=\dimen301
+\@belowrulesep=\dimen302
+\@thisruleclass=\count318
+\@lastruleclass=\count319
+\@thisrulewidth=\dimen303
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/diagbox/diagbox.sty
 Package: diagbox 2020/02/09 v2.3 Making table heads with diagonal lines
@@ -920,65 +905,65 @@ Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
-\pIIe@GRAPH=\toks51
-\@arclen=\dimen312
-\@arcrad=\dimen313
-\pIIe@tempdima=\dimen314
-\pIIe@tempdimb=\dimen315
-\pIIe@tempdimc=\dimen316
-\pIIe@tempdimd=\dimen317
-\pIIe@tempdime=\dimen318
-\pIIe@tempdimf=\dimen319
+\pIIe@GRAPH=\toks50
+\@arclen=\dimen304
+\@arcrad=\dimen305
+\pIIe@tempdima=\dimen306
+\pIIe@tempdimb=\dimen307
+\pIIe@tempdimc=\dimen308
+\pIIe@tempdimd=\dimen309
+\pIIe@tempdime=\dimen310
+\pIIe@tempdimf=\dimen311
 )
 \diagbox@boxa=\box88
 \diagbox@boxb=\box89
 \diagbox@boxm=\box90
-\diagbox@wd=\dimen320
-\diagbox@ht=\dimen321
-\diagbox@insepl=\dimen322
-\diagbox@insepr=\dimen323
-\diagbox@outsepl=\dimen324
-\diagbox@outsepr=\dimen325
+\diagbox@wd=\dimen312
+\diagbox@ht=\dimen313
+\diagbox@insepl=\dimen314
+\diagbox@insepr=\dimen315
+\diagbox@outsepl=\dimen316
+\diagbox@outsepr=\dimen317
 )
 (/usr/local/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 )
-\c@lemma=\count323
-\c@theoremalpha=\count324
+\c@lemma=\count320
+\c@theoremalpha=\count321
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count325
+\l__color_backend_stack_int=\count322
 \l__pdf_internal_box=\box91
 )
-(./teaching-statement-v0.aux)
-\openout1 = `teaching-statement-v0.aux'.
+(./references.aux)
+\openout1 = `references.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 283.
-LaTeX Font Info:    ... okay on input line 283.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 283
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 284.
+LaTeX Font Info:    ... okay on input line 284.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 284
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 283
+LaTeX Font Info:    Trying to load font information for U+msb on input line 284
 .
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -986,17 +971,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count326
-\scratchdimen=\dimen326
+\scratchcounter=\count323
+\scratchdimen=\dimen318
 \scratchbox=\box92
-\nofMPsegments=\count327
-\nofMParguments=\count328
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count329
-\MPscratchDim=\dimen327
-\MPnumerator=\count330
-\makeMPintoPDFobject=\count331
-\everyMPtoPDFconversion=\toks53
+\nofMPsegments=\count324
+\nofMParguments=\count325
+\everyMPshowfont=\toks51
+\MPscratchCnt=\count326
+\MPscratchDim=\dimen319
+\MPnumerator=\count327
+\makeMPintoPDFobject=\count328
+\everyMPtoPDFconversion=\toks52
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1006,7 +991,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON on input line 283.
+Package hyperref Info: Link coloring ON on input line 284.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -1018,23 +1003,23 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count332
+\c@section@level=\count329
 )
-LaTeX Info: Redefining \ref on input line 283.
-LaTeX Info: Redefining \pageref on input line 283.
-LaTeX Info: Redefining \nameref on input line 283.
- (./teaching-statement-v0.out) (./teaching-statement-v0.out)
+LaTeX Info: Redefining \ref on input line 284.
+LaTeX Info: Redefining \pageref on input line 284.
+LaTeX Info: Redefining \nameref on input line 284.
+ (./references.out) (./references.out)
 \@outlinefile=\write4
-\openout4 = `teaching-statement-v0.out'.
+\openout4 = `references.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 283.
+LaTeX Info: Redefining \microtypecontext on input line 284.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 283.
+LaTeX Info: Redefining \showhyphens on input line 284.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1043,68 +1028,48 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(61.42993pt, 491.43513pt, 61.42993pt)
-* v-part:(T,H,B)=(61.42993pt, 672.11012pt, 61.42993pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=491.43513pt
-* \textheight=672.11012pt
-* \oddsidemargin=-10.84006pt
-* \evensidemargin=-10.84006pt
-* \topmargin=-32.84006pt
-* \headheight=8.0pt
-* \headsep=14.0pt
-* \topskip=10.0pt
-* \footskip=12.0pt
-* \marginparwidth=90.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=7.0pt plus 11.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 288.
+(Font)              using `OT1/cmr/bx/n' instead on input line 289.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Overfull \hbox (48.13498pt too wide) in paragraph at lines 294--301
+[][] 
+ []
+
+
+Overfull \hbox (48.13498pt too wide) in paragraph at lines 309--316
+[][] 
+ []
 
 [1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./teaching-statement-v0.aux)
+(./references.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `teaching-statement-v0.out' has not changed.
+Package rerunfilecheck Info: File `references.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27995 strings out of 478994
- 531629 string characters out of 5858183
- 887677 words of memory out of 5000000
- 44770 multiletter control sequences out of 15000+600000
- 410724 words of font info for 76 fonts, out of 8000000 for 9000
+ 27573 strings out of 478994
+ 525718 string characters out of 5858183
+ 866962 words of memory out of 5000000
+ 44368 multiletter control sequences out of 15000+600000
+ 411827 words of font info for 69 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 113i,5n,116p,1057b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,7n,116p,460b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on teaching-statement-v0.pdf (1 page, 60600 bytes).
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on references.pdf (1 page, 36221 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 28 PDF objects out of 1000 (max. 8388607)
+ 21 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  12301 words of extra memory for PDF output out of 14400 (max. 10000000)
 

@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.12)  18 APR 2023 09:17
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.10.12)  19 APR 2023 09:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"julietteBruce Short Resume.tex"
-(./julietteBruce Short Resume.tex
+**"Resume Short - General.tex"
+(./Resume Short - General.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (./FreemanCV.cls
 Document Class: FreemanCV 2021/09/03 Freeman CV Class v3.0
@@ -448,8 +448,8 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count295
 \enitdp@description=\count296
 )
-(./julietteBruce Short Resume.aux)
-\openout1 = `"julietteBruce Short Resume.aux"'.
+(./Resume Short - General.aux)
+\openout1 = `"Resume Short - General.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
@@ -593,21 +593,17 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 42.
 LaTeX Info: Redefining \pageref on input line 42.
 LaTeX Info: Redefining \nameref on input line 42.
- (./julietteBruce Short Resume.out) (./julietteBruce Short Resume.out)
+ (./Resume Short - General.out) (./Resume Short - General.out)
 \@outlinefile=\write3
-\openout3 = `"julietteBruce Short Resume.out"'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
+\openout3 = `"Resume Short - General.out"'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 60.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 60.
 
-./julietteBruce Short Resume.tex:108: LaTeX Error: There's no line here to end.
 
+./Resume Short - General.tex:108: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -617,8 +613,7 @@ l.108 ^^I}
            % Description
 ? 
 
-./julietteBruce Short Resume.tex:121: LaTeX Error: There's no line here to end.
-
+./Resume Short - General.tex:121: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -634,8 +629,7 @@ at brought together
  []
 
 
-./julietteBruce Short Resume.tex:136: LaTeX Error: There's no line here to end.
-
+./Resume Short - General.tex:136: LaTeX Error: There's no line here to end.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -644,73 +638,74 @@ Type  H <return>  for immediate help.
 l.136 ^^I}
            % Description
 ? 
-./julietteBruce Short Resume.tex:284: Misplaced \noalign.
+./Resume Short - General.tex:284: Misplaced \noalign.
 \@tabletail ->\noalign 
                        {\global \let \@savcr =\\ \global \let \\=\org@tabula...
 l.284 }
        
 ? 
-./julietteBruce Short Resume.tex:284: Misplaced \noalign.
+./Resume Short - General.tex:284: Misplaced \noalign.
 \@tabletail ...l \let \\=\org@tabularcr }\noalign 
                                                   {\global \let \\=\@savcr }
 l.284 }
        
 ? 
-./julietteBruce Short Resume.tex:338: Misplaced \noalign.
-\@tabletail ->\noalign 
-                       {\global \let \@savcr =\\ \global \let \\=\org@tabula...
-l.338 \end{supertabular}
-                        
-? 
-./julietteBruce Short Resume.tex:338: Misplaced \noalign.
-\@tabletail ...l \let \\=\org@tabularcr }\noalign 
-                                                  {\global \let \\=\@savcr }
-l.338 \end{supertabular}
-                        
-? 
 
-Overfull \hbox (6.29898pt too wide) in paragraph at lines 306--339
-[] 
- []
-
-
-Overfull \hbox (3.769pt too wide) in paragraph at lines 438--439
-\TU/EBGaramond(0)/m/n/10 international conferences and seminars, including: Har
-vard,
- []
-
-
-Overfull \hbox (4.89574pt too wide) in paragraph at lines 447--448
-\TU/EBGaramond(0)/m/n/10 tion for LGBTQ+ mathematicians, and oversaw a fundrais
-er
- []
-
-
-Overfull \hbox (3.85902pt too wide) in paragraph at lines 454--455
+Overfull \hbox (3.85902pt too wide) in paragraph at lines 383--384
 \TU/EBGaramond(0)/m/n/10 Developed four peer-reviewed software packages extendi
 ng the
  []
 
 
-Overfull \hbox (3.95572pt too wide) in paragraph at lines 458--459
+Overfull \hbox (3.95572pt too wide) in paragraph at lines 387--388
 \TU/EBGaramond(0)/m/n/10 Led a collaborative research project that brought toge
 ther tools
  []
 
+
+Overfull \hbox (3.769pt too wide) in paragraph at lines 404--405
+\TU/EBGaramond(0)/m/n/10 international conferences and seminars, including: Har
+vard,
+ []
+
+
+Overfull \hbox (4.89574pt too wide) in paragraph at lines 413--414
+\TU/EBGaramond(0)/m/n/10 tion for LGBTQ+ mathematicians, and oversaw a fundrais
+er
+ []
+
+
+Overfull \hbox (6.29898pt too wide) in paragraph at lines 431--460
+[] 
+ []
+
 [1
 
-] [2] (./julietteBruce Short Resume.aux)
-Package rerunfilecheck Info: File `"julietteBruce Short Resume".out' has not ch
-anged.
+]
+./Resume Short - General.tex:463: Misplaced \noalign.
+\@tabletail ->\noalign 
+                       {\global \let \@savcr =\\ \global \let \\=\org@tabula...
+l.463 \end{supertabular}
+                        
+? 
+./Resume Short - General.tex:463: Misplaced \noalign.
+\@tabletail ...l \let \\=\org@tabularcr }\noalign 
+                                                  {\global \let \\=\@savcr }
+l.463 \end{supertabular}
+                        
+? 
+[2] (./Resume Short - General.aux)
+Package rerunfilecheck Info: File `"Resume Short - General".out' has not change
+d.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 14151 strings out of 476919
- 262792 string characters out of 5821839
- 656211 words of memory out of 5000000
- 33983 multiletter control sequences out of 15000+600000
+ 14154 strings out of 476919
+ 262756 string characters out of 5821839
+ 658583 words of memory out of 5000000
+ 33986 multiletter control sequences out of 15000+600000
  404054 words of font info for 61 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 96i,13n,103p,517b,700s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 96i,13n,103p,513b,725s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on julietteBruce Short Resume.pdf (2 pages).
+Output written on Resume Short - General.pdf (2 pages).
