@@ -1,0 +1,236 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2014 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\usepackage{amstext,amsfonts,amssymb,amscd,amsbsy,amsmath}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage{array}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{revnum}
+\usepackage{textcomp}
+
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tocloft}
+\usepackage{array}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+\setlength\LTleft{0.2in} % needed to make longtable full-width
+\setlength\LTright{0.2in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+% the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingTalk}[2]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		#1 & #2 \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadingb}[6]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingc}[8]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+		\textit{#7} & \textit{#8} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand\foo[9]{%
+    \def\tempb{#2}%
+    \def\tempc{#3}%
+    \def\tempd{#4}%
+    \def\tempe{#5}%
+    \def\tempf{#6}%
+    \def\tempg{#7}%
+    \def\temph{#8}%
+    \def\tempi{#9}%
+    \foocontinued
+}
+\newcommand\foocontinued[7]{%
+    % Do whatever you want with your 9+7 arguments here.
+}
+
+\newcommand{\ressubheadingd}[1]{
+	\def\argten{#1}%
+	\ressubheadingdb
+}
+\newcommand{\ressubheadingdb}[9]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{\argten} & #1 \\
+		\textit{#2} & \textit{#3} \\
+		\textit{#4} & \textit{#5} \\
+		\textit{#6} & \textit{#7} \\
+		\textit{#8} & \textit{#9} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\usepackage[lf]{Baskervaldx}
+
+\begin{document}
+
+{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\LARGE Juliette Bruce}\smallskip & \textbf{\today}\smallskip \\
+Department of Mathematics & \\
+Brown University & juliette\_bruce1@brown.edu \\
+151 Thayer Street & \hyperref{https://www.juliettebruce.xyz}{}{}{https://www.juliettebruce.xyz} \\
+Providence, RI 02912 & \\
+\end{tabular*}}
+\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Publications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\vspace{-0.15in}\subsection*{Peer-Reviewed Journal Articles}
+
+\begin{revnumerate}[15]
+
+\item
+	M.~Brandt, J.~Bruce, M.~Chan, M.~Melo, G.~Moreland, C.~Wolfe. On the Top-weight Cohomology of $\mathcal{A}_{g}$.  {\it Geometry \& Topology}, To appear. E-Print:  \hyperref{https://arxiv.org/abs/2012.02892}{}{}{arXiv:2012.02892}
+	
+\item
+	J.~Bruce, D.~Corey, D.~Erman, S.~Goldstein, R.~Laudone, and J.~Yang. Syzygies of $\mathbb{P}^{1}\times\mathbb{P}^{1}$: Data and Conjectures.  {\it Journal of Algebra}, \textbf{593} (2022) no. 1,  589-621. E-Print:  \hyperref{https://arxiv.org/abs/2104.14598}{}{}{arXiv:2104.14598}
+	
+\item
+	J.~Bruce, D.~Erman, S.~Goldstein, and J.~Yang. The Schur-Veronese package in Macaulay2.  {\it Journal of Software for Algebra and Geometry}, \textbf{11} (2021), 83-87 E-print: \hyperref{https://arxiv.org/abs/1905.12661}{}{}{arXiv:1905.12661}.
+	
+\item
+	J.~Bruce. The Quantitative Behavior of Asymptotic Syzygies for Hirzebruch Surfaces. {\it Journal of Commutative Algebra,} To appear. E-Print:  \hyperref{http://arxiv.org/abs/1906.07333}{}{}{arXiv:1906.07333}.
+	
+\item
+	A.~Almousa, J.~Bruce, M.~Loper, and M.~Sayrafi. The Virtual Resolutions Package for Macaulay2.  {\it Journal of Software for Algebra and Geometry}, \textbf{10} (2020), 50-60. E-print: \hyperref{http://arxiv.org/abs/1905.07022}{}{}{arXiv:1905.07022}.
+	
+\item
+	J.~Bruce and D.~Erman. A probabilistic approach to systems of parameters and Noether normalization. {\it Algebra and Number Theory}, \textbf{13} (2019), no. 9, 2081–2102. E-print: \hyperref{http://arxiv.org/abs/1604.01704}{}{}{arXiv:1604.01704}.
+	
+\item
+	J.~Bruce and W.~Li. Effective bounds on the dimensions of Jacobians covering abelian varieties.  {\it Proc. Amer. Math. Soc.}, \textbf{148} (2020), no. 2, 535-551. E-print: \hyperref{https://arxiv.org/abs/1804.11015}{}{}{arXiv:1804.11015}.
+			
+\item
+	J.~Bruce, D.~Erman, S.~Goldstein, and J.~Yang. Conjectures and computations about Veronese syzygies.  {\it Experimental Mathematics}, \textbf{29} (2020), 398-413. E-print: \hyperref{https://arxiv.org/abs/1711.03513}{}{}{arXiv:1711.03513}.
+	
+\item
+	M.~Brandt, J.~Bruce, T.~Brysiewicz, R.~Krone, and E.~Robeva. The degree of $SO(n)$. {\it Combinatorial Algebraic Geometry}, 207-224, Fields Inst. Commun. \textbf{80} (2017). E-print: \hyperref{https://arxiv.org/abs/1701.03200}{}{}{arXiv:1701.03200}.
+	
+\item
+	J.~Bruce, M.~Logue, and R.~Walker. Monomial valuations, cusp singularities, and continued fractions. {\it Journal of Commutative Algebra}, \textbf{7} (2015) no. 4, 495-522. E-print: \hyperref{http://arxiv.org/abs/1311.6493}{}{}{arXiv:1311.6493}.
+
+\item
+	J.~Bruce, P.~Kao, E.~Nash, B.~Perez, and P.~Vermeire. Betti tables of reducible algebraic curves. {\it Proc. Amer. Math. Soc.} \textbf{142} (2014) 4039-4051. E-print: \hyperref{http://arxiv.org/abs/1210.3064}{}{}{arXiv:1210.3064}.
+\end{revnumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Pre-Prints}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{revnumerate}
+
+\item
+	M.~Brandt, J.~Bruce, D.~Corey. The virtual Euler characteristic for binary matroids. {\it Submitted}. E-Print: \hyperref{https://arxiv.org/abs/2301.10108}{}{}{arXiv:2301.10108}
+	
+\item
+	J.~Bruce, L.~Cranton Heller, M.~Sayrafi. Bounds on Multigraded Regularity.  {\it Submitted}. E-Print: \hyperref{https://arxiv.org/abs/2208.11115}{}{}{arXiv:2208.11115}
+	
+\item
+	J.~Bruce, L.~Cranton Heller, M.~Sayrafi. Characterizing Multigraded Regularity on Products of Projective Space.  {\it Submitted}. E-Print:  \hyperref{https://arxiv.org/abs/2110.10705}{}{}{arXiv:2110.10705}
+	
+\item
+	J.~Bruce. Asymptotic Syzygies in the Setting of Semi-Ample Growth. {\it Submitted}. E-Print:  \hyperref{https://arxiv.org/abs/1904.04944}{}{}{arXiv:1904.04944}
+
+\end{revnumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Software}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{revnumerate}
+\item
+	SchurVeronese, (with D.~Erman, S.~Goldstein, and J.~Yang).  Submitted for distribution with future releases of Macaulay2, a compute algebra system focused on computations in algebraic geometry and commutative algebra.
+	
+\item
+	VirtualResolutions, (with A.~Almousa, M.~Loper, and M.~Sayrafi). Distributed with version 1.14 of Macaulay2 (2019). 
+	
+\item
+	FrobeniusThresholds, (with D.~Hern\'{a}ndez, K.~Schwede, D.~Smolkin, P.~Teixeira, and E.~Witt).  Distributed with version 1.14 of Macaulay2 (2019). 
+
+\item
+	TestIdeals, (with E.~Bela, A.~Boix, D.~Ellingson, D.~Hern\'{a}ndez, Z.~Kadyrsizova, M.~Katzman, S.~Malec, M.~Mastroeni, M.~Mostafazadehfard, M.~Robinson, K.~Schwede, D.~Smolkin, P.~Teixeira, and E.~Witt).  Distributed with version 1.14 of Macaulay2 (2019). 
+		
+\end{revnumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Non-Research Articles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{revnumerate}
+\item
+	J.~Bruce. A Word from... Juliette Bruce, Inaugural President of Spectra.  {\it Notices of the AMS}, \textbf{69} (2022) no. 6,  898--899.  %\hyperref{https://doi.org/10.1090/noti2288}{}{}{https://doi.org/10.1090/noti2288}
+
+\item
+	A.~Bonato, J.~Bruce, and R.~Buckmire. Spaces for All: The Rise of LGBTQ+ Mathematics Conferences.  {\it Notices of the AMS}, \textbf{68} (2021) no. 6,  998-1003.  \hyperref{https://doi.org/10.1090/noti2288}{}{}{https://doi.org/10.1090/noti2288}
+
+\end{revnumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Multimedia}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{revnumerate}
+\item
+	\href{https://syzygydata.com}{SyzygyData.com}, (with D.~Erman, S.~Goldstein, and J.~Yang). An online public database on large-scale syzygy computations. 
+
+\end{revnumerate}
+
+	
+\end{document}
