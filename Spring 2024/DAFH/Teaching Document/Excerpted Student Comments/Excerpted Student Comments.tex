@@ -1,0 +1,264 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2014 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\usepackage{amstext,amsfonts,amssymb,amscd,amsbsy,amsmath}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage{array}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{revnum}
+\usepackage{textcomp}
+
+\usepackage{parskip}
+\usepackage[colorlinks=true,urlcolor=blue]{hyperref}
+\usepackage{tocloft}
+\usepackage{array}
+
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+\setlength\LTleft{0.2in} % needed to make longtable full-width
+\setlength\LTright{0.2in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+% the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingb}[6]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingc}[8]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+		\textit{#7} & \textit{#8} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand\foo[9]{%
+    \def\tempb{#2}%
+    \def\tempc{#3}%
+    \def\tempd{#4}%
+    \def\tempe{#5}%
+    \def\tempf{#6}%
+    \def\tempg{#7}%
+    \def\temph{#8}%
+    \def\tempi{#9}%
+    \foocontinued
+}
+\newcommand\foocontinued[7]{%
+    % Do whatever you want with your 9+7 arguments here.
+}
+
+\newcommand{\ressubheadingd}[1]{
+	\def\argten{#1}%
+	\ressubheadingdb
+}
+\newcommand{\ressubheadingdb}[9]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{\argten} & #1 \\
+		\textit{#2} & \textit{#3} \\
+		\textit{#4} & \textit{#5} \\
+		\textit{#6} & \textit{#7} \\
+		\textit{#8} & \textit{#9} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\usepackage[lf]{Baskervaldx}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Excerpted Student Comments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Fall 2014 -- Math 221 (TA for 2 Discussion Sections)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{itemize}
+\item In response to the question, ``How could the TA improve his/her teaching?''
+	\begin{itemize}
+	\item ``Our TA is perfect. She is great at teaching math problems and concepts.''
+%	\item ``I'd prefer if [s]he lectured as opposed to Prof. Paul.''
+	\item ``She arrives on time and when we don't have questions she has a plan for the whole hour, she has been very effective and helpful in her teaching.'' 
+	\item ``I believe that my TA is doing a great job as is, and does not need to change anything.''
+	\end{itemize}
+
+\item In response to the question, ``What do you like most about the TA's teaching?''
+	\begin{itemize}
+	\item ``She gets the whole class to participate.''
+	\item ``She is very clear and helpful, and she really cares about our learning.''
+	\item ``Our TA is very encouraging and optimistic. She treats everyone fairly. She is great at solving math problems of varying difficulties.''
+%	\item ``[S]he does a better job teaching than the professor in all aspects.''
+%	\item ``Great Attitude.''
+	\item ``Very friendly and willing to help; tries to create a comfortable atmosphere open to questions and discussion.''
+	\item ``She is always there for us and is willing to help us in any shape, way, or form. Holds review sessions, most TA's don't.''
+	\item ``She is willing to find extra time to help out.''
+	\item ``She takes a very confusing lecture and makes it understandable. If it weren't for discussion my grade would be far lower.''
+	\item ``I like that my TA is always willing to help, and honestly wants us all to succeed, which is reflected in her teaching methods.''
+	\end{itemize}
+
+\item In response to the question, ``Any further comments?''
+	\begin{itemize}
+	\item ``TA should be the professor.''
+	\item ``Very good TA!''
+%	\item ``Juliette's the shit.''
+%	\item ``[Juliette] is a pretty good TA.''
+	\item ``I think Juliette Bruce is a very good TA.''
+	\item ``By far one of the best TA's.''
+	\item ``She is essentially the best math teacher I've ever had.''
+	\end{itemize}
+
+\item Misc. comments
+	\begin{itemize}
+	\item ``The TA in charge of discussion  appears to really care, ...''
+	\item ``If it weren't for your discussion I would still be lost ...''
+	\item ``Thank you for all that you have done. I have thoroughly enjoyed your discussion, you made math actually enjoyable at 8:50 in the morning. I also found your discussion very helpful compared to lecture. I appreciate it!''
+	\end{itemize}
+	
+	
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Spring 2015 -- Math 132 (Instructor for 1 Discussion Section)} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item In response to the question, ``What do you like most about the TA's teaching?''
+	\begin{itemize}
+	\item ``Constantly open to changing teaching style based on what we need.''
+	\item ``Willingness to talk through confusion and answer questions.''
+	\item ``Wanted us to succeed -- tried to make concepts connect to our lives.''
+	\item ``She is very clear spoken and is always willing to go above and beyond to meet or clarify mistakes or confusion.''
+	\end{itemize}
+
+\item Misc. comments
+	\begin{itemize}
+	\item ``I really appreciate your willingness to help and desire for us succeed -- especially when it comes to showing the material differently, or trying a different method to the course concepts.''
+	\end{itemize}
+\end{itemize}	
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Spring 2016/2017, Fall 2016/2017 -- Madison Math Circle (TA Student Organizer)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item Each semester we collect comments from parents, since I have been an organizer these have included:
+	\begin{itemize}
+	\item ``You guys are doing great stuff!  Keep up the wonderful work!''
+	\item ``Great job. This is a fantastic service that you provide. And all your presenters are so enthusiastic. Thank you for sharing your love of mathematics with us all.''
+	\item ``My daughter loves the Math Circle and we're very grateful for this opportunity. It has been an amazing experience for her!''
+	\item ``Thank you for holding this course. My children like to be challenged in math and this is a great opportunity for them to experience math outside the box. They especially like when there is hands on group activities.''
+	\item ``[Student] struggles with Math, not her strong suit, so I very much appreciate this resource!''
+	\end{itemize}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Fall 2018 -- Math 221/228 (TA/Instructor for 1 Discussion Section)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+\item In response to the question, ``What do you like most about the instructor's teaching?''
+	\begin{itemize}
+		\item ``Juliette made sure that I knew all the material and was comfortable with it. When I did have confusion she was really understanding and broke down problems step by step through asking me questions and having me solve through the work in ways I understood. She is always so positive, supportive, and enthusiastic in class and made me excited to learn every day. Additionally, she provided challenging material broken down in simpler ways so we were able to expand our problem solving skills of complex problems in interesting attainable ways.''
+		\item ``She explains thoroughly step by step, which makes learning the material much easier to understand. Anytime I have any questions or am confused in any way, she makes the time to explain it and I'd able to explain it in more than one way so that I can understand. She?s also super supportive and helpful and creates and really great environment in which I look forward to coming to Discussion because I know it?ll be productive and helpful for me.''
+		\item ``She always has a simpler way to explain stuff - Respectful - She brings interesting topics to class - challenges us effectively''
+		\item ``I really appreciate how she explains things very clearly and goes through problems step-by-step. I also feel that she does an amazing job of preparing us for what is going to be on exams and explains exactly how we should write our answers to be the most clear possible in our understanding. She really knows what she is talking about, and is able to effectively communicate that understanding to someone who may be confused on the material.''
+		\item ``She is very effective and takes time to make sure that everyone understands the materials that are taught in lecture. It is very obvious that she cares about how we do and that we are comfortable asking questions.''
+		\item ``Juliette will clearly work through all the problems for us. She has a good sense of what material we understand and what we don't understand. Additionally, she is very supportive and encouraging. Juliette will effectively use time and I never feel like coming to class is ever a waste.''
+	\end{itemize}
+	
+\item In response to the question, `How could the instructor improve his/her teaching?''
+	\begin{itemize}
+		\item ``Hmmm, tough question. Can a non massless particle reach the speed of light? Not really. The same goes here, I don?t think there's a better teaching atyle than this''
+		\item ``I think she already does a fantastic job teaching this course and do not have any recommendations for improvements at this time.''
+		\item ``Juliette is honestly the best math instructor I've ever had so I can't think of many ways she could improve her teaching.''
+	\end{itemize}
+
+\item Misc. comments
+	\begin{itemize}
+		\item ``I've always struggle with math and I've had a lot of teachers that didn't believe in me so because of this I've always dreaded math courses. But Juliette always showed she cared, was constantly encouraging, believed in our class, and taught the material really clearly. From her constant availability to help and great instructing, her class became one of my favorites and I am more successful in a math course than I've ever been before.''
+		\item ``I would highly recommend this instructor to anyone. She is incredibly good at explaining challenging concepts and is also a very kind and caring individual.''
+		\item ``Juliette is an amazing TA and she has really made me interested in calculus.''
+		\item ``She's one of if not the best math teacher I?ve had and I strongly recommend anyone to take a class with her.'' 
+		\item ``I went to the review today and I just wanted to let you know that everyone around me kept commenting about how good of a teacher you are. The people behind me said many times that they wished that you were our professor instead of [the professor]. I just wanted to let know that everyone was
+saying nice things about you and I am really so blessed to have had you for a TA :) ''
+		\item ``I am sending this email to let you know that I appreciate all the support you have given us this semester. It has been a true pleasure being in your class this semester. And even though, I did not expect to learn much this semester, you proved me wrong so thank you. ''
+	\end{itemize}
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Fall 2019 -- Math 221 (TA for 2 Discussion Sections)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item In response to the question, `How could the instructor improve his/her teaching?''
+\begin{itemize}
+\item ``She is the best TA I have had and I have learned so much from this discussion.''
+
+\item ``I really appreciate how available Juliette is and how she genuinely cares about my understanding and success in this class. I have a slower processing speed than other students and therefore require testing accommodations. Juliette was very understanding about it and worked with me to make sure we had a plan in place so I can feel confident with this class. She is also willing to work with me one on one if there is a specific problem I am not understanding or concept I want to talk through. Whenever she is explaining problems she walks through step by step which is very clear and helpful. Overall she is the best TA I have had here and I love everything about how she teaches''
+
+\item ``She really seemed to care about each of her students and was extremely good at explaining problems and answering everyones issues. Overall, I felt she was very fair and is my favorite TA this semester. She goes over everything very effectively and does a very good job about clearly explaining and breaking down a complex subject.''
+
+\item ``She went around and tried helping each student instead of giving broad answers to the whole class. She cared about each student's success in the class and tried her best to make everyone understand the material.''
+
+\item ``Juliette Bruce has been, by far, my favorite TA because of her ability to relay the and teach the material. She is especially good at clarifying difficult material from lecture. For example, when we covered the delta epsilon process in the actual definition of a limit the concept was difficult for most students to wrap there head around but Juliette was able to clarify this topic enough where I ended up teaching my fellow students in a way they understood it by using the way she taught my discussion group. This is a small example but I by far have retained the most information from my math discussion compared to all of my other discussion sections and I believe this is due to our TA.''
+
+\item ``Juliette is an incredibly personable teacher. The charisma, humor, and brightness she brings into the classroom both brightens students day, and in NO WAY detracts from the con tent we are learning. She is able to fully describe the process of all of the problems that we work on, as well as offer ing her own tips and tricks to help further our understanding. Tuesday’s are my busiest day, and I often find my self skipping some of my Tuesday classes, but Juliette’s class I will never willing miss. As difficult as I find this course, Juliette goes above and beyond in the reinforcement of ideas went over in lecture, and her ability to clarify content is very helpful.''
+
+\item ``Juliette obviously wants us to succeed not only in math but in life. She is always making sure we know our resources especially when it comes to health. She also always wishes us a good day/weekend and that is awesome.''
+\end{itemize}
+\end{itemize}
+
+\end{document}
