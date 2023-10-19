@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  18 OCT 2023 19:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  18 OCT 2023 20:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1048,15 +1048,7 @@ Package amsrefs Warning: Use of \cites is recommended instead of \cite
 Package amsrefs Warning: The form \cite{...}*{...} is recommended
 (amsrefs)                instead of \cite[...]{...} on input line 372.
 
-[2] [3]
-
-LaTeX Warning: Citation `kodiyalam00' on page 4 undefined on input line 617.
-
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-[4]
+[2] [3] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 659.
@@ -1122,6 +1114,11 @@ Package rkeyval Warning: Missing comma on input line 1083.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [9]
@@ -1130,42 +1127,39 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `research-statement.out' has not changed.
 (rerunfilecheck)             Checksum: 2913F3B7B4C99CA81B8DCF2D489E0589;2132.
  ) 
 Here is how much of TeX's memory you used:
- 28157 strings out of 478994
- 533418 string characters out of 5858183
- 883255 words of memory out of 5000000
- 44620 multiletter control sequences out of 15000+600000
- 421605 words of font info for 167 fonts, out of 8000000 for 9000
+ 28159 strings out of 478994
+ 533454 string characters out of 5858183
+ 882271 words of memory out of 5000000
+ 44621 multiletter control sequences out of 15000+600000
+ 421596 words of font info for 167 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  113i,14n,116p,996b,724s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.kodiyalam00} has been referenced but does no
-t exist, replaced by a fixed one
-
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
-r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/lo
-cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
-e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-statement.pdf (10 pages, 246117 bytes).
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
+usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on research-statement.pdf (10 pages, 245298 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 372 compressed objects within 4 object streams
- 152 named destinations out of 1000 (max. 500000)
+ 405 PDF objects out of 1000 (max. 8388607)
+ 373 compressed objects within 4 object streams
+ 153 named destinations out of 1000 (max. 500000)
  39509 words of extra memory for PDF output out of 42996 (max. 10000000)
 

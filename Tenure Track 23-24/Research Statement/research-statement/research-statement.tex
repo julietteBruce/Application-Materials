@@ -302,9 +302,9 @@
 My research interests lie in algebraic geometry, commutative algebra, and arithmetic geometry. In particular, I am interested in using homological and combinatorial methods to study the geometry of zero loci of systems of polynomials (i.e. algebraic varieties). I am also interested in studying the arithmetic properties of varieties over finite fields. Further, I am passionate about promoting inclusivity, diversity, and justice in the mathematics community. Broadly speaking my current research follows these ideas in two directions. 
 
 \begin{itemize}[leftmargin=*]
-\item \textbf{Homological Algebra on Toric Varieties:} A classical story in algebraic geometry is that homological methods and tools like minimal free resolutions and Caastelunouvo--Mumford regularity capture the geometry of subavarieties of projective space in nuanced ways. Much of my work has sought to generalize this story by developing ways homological algebra can be used to study the geometry of toric varieties (i.e., ``nice' compactifications of the torus $(\C^{\times})^{n}$). Such generalizations are closely connected to multigraded commutative algebra and representation theory.
+\item \textbf{Homological Algebra on Toric Varieties:} A classical story in algebraic geometry is that homological methods and tools like minimal free resolutions and Caastelunouvo--Mumford regularity capture the geometry of subavarieties of projective space in nuanced ways. My work has sought to generalize this story by developing ways homological algebra can be used to study the geometry of toric varieties (i.e., ``nice' compactifications of the torus $(\C^{\times})^{n}$). 
 
-\item \textbf{Cohomology of Moduli Spaces and Arithmetic Groups:} One of the most classically studied objects in algebraic geometry is he moduli space of abelian varieties of dimension $g$, which we denote $\mathcal{A}_{g}$. Recently my work has focused on developing ways to compute a canonical ``part'' of the cohomology of $\mathcal{A}_{g}$, which we call the top-weight cohomology. This turns out to be closely connected to the study of cohomology of various arithmetic groups like $\GL_{g}(\Z)$, $\Sp_{2g}(\Z)$, and $\GL_{g}(\Z)(m)$, as well as the study of automorphic forms. 
+\item \textbf{Cohomology of Moduli Spaces and Arithmetic Groups:} One of the most classically studied objects in algebraic geometry is $\cA_{g}$, the moduli space of abelian varieties of dimension $g$. I have sought to develops ways to study a canonical ``part'' of the cohomology of $\mathcal{A}_{g}$, called the top-weight cohomology. This turns out to be closely connected to the study of cohomology of various arithmetic groups like $\GL_{g}(\Z)$ and $\Sp_{2g}(\Z)$, as well as the study of automorphic forms. 
 
 \end{itemize}
 
@@ -400,7 +400,7 @@ It is quite difficult to compute examples of syzygies. For example, until recent
 
 \subsection{Multigraded Castelnuovo–Mumford Regularity}\label{subsec:prior-mgreg}
 
-Introduced by Mumford, the Castelnuovo–Mumford Regularity of a projective variety $X\subset \P^{n}$ is a measure of the complexity of $X$ given in terms of the vanishing of certain cohomology groups of $X$. Roughly speaking one should think about Castelnuovo--Mumford regularity as being a numerical measure of geometric complexity. Mumford was interested in such a measure as it plays a key role in constructing Hilbert and Quot schemes. In particular, being $d$-regular implies that $\cF(d)$ is globally generated. However, Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
+Introduced by Mumford, the Castelnuovo–Mumford Regularity of a projective variety $X\subset \P^{r}$ is a measure of the complexity of $X$ given in terms of the vanishing of certain cohomology groups of $X$. Roughly speaking one should think about Castelnuovo--Mumford regularity as being a numerical measure of geometric complexity. Mumford was interested in such a measure as it plays a key role in constructing Hilbert and Quot schemes. In particular, being $d$-regular implies that $\cF(d)$ is globally generated. However, Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
 
 
 %Such a measure can be easily extended to modules over a standard graded polynomial ring $S=\C[x_{0},\ldots,x_{n}]$ by requiring the analogous vanishing conditions for local cohomology. 
@@ -420,7 +420,7 @@ Introduced by Mumford, the Castelnuovo–Mumford Regularity of a projective vari
 %Mumford was interested in such a measure as it plays a key role in constructing Hilbert and Quot schemes. In particular, being $d$-regular implies that $\cF(d)$ is globally generated. However, Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
 
 \begin{theorem}\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
-Let $\cF$ be a coherent sheaf on $\P^{n}$ and $M=\bigoplus_{e\in\Z} H^0(\P^{n},\cF(e))$ the corresponding section ring. The following are equivalent:
+Let $\cF$ be a coherent sheaf on $\P^{r}$ and $M=\bigoplus_{e\in\Z} H^0(\P^{r},\cF(e))$ the corresponding section ring. The following are equivalent:
 \begin{enumerate}
 \item $M$ is $d$-regular;
 \item $\beta_{p,q}(M)=0$ for all $p\geq0$ and $q>d+i$;
@@ -428,7 +428,7 @@ Let $\cF$ be a coherent sheaf on $\P^{n}$ and $M=\bigoplus_{e\in\Z} H^0(\P^{n},\
 \end{enumerate}
 \end{theorem}
 
-Maclagan and Smith introduced a generalized notion of Castelnuovo--Mumford regularity, which they call multigraded Castelnuovo--Mumford regularity, where $\P^{n}$ can be replaced by any toric variety. Similarly to the definition in the classical setting multigraded Castelnuovo--Mumford regularity is defined in terms of the vanishing of certain cohomology groups. Crucially, however, the multigraded Castelnuovo--Mumford regularity of a subvariety or module is not a single number, but instead an infinite subset of $\Z^{r}$. 
+Maclagan and Smith introduced  what they call multigraded Castelnuovo--Mumford regularity, where $\P^{n}$ can be replaced by any toric variety. Similarly to the definition in the classical setting multigraded Castelnuovo--Mumford regularity is defined in terms of the vanishing of certain cohomology groups, however, the multigraded Castelnuovo--Mumford regularity of a subvariety or module is not a single number, but instead an infinite subset of $\Z^{r}$. 
 
 As an example, let us consider the case of  products of projective spaces. Fixing a dimension vector $\nn=(n_1,n_2,\ldots,n_{r})\in \N^{r}$ we let $\P^{\nn}\coloneqq \P^{n_1}\times \P^{n_2}\times \cdots \times \P^{n_r}$ and $S=\K[x_{i,j} \; |\; 1\leq i \leq r, 0\leq j \leq n_{i}]$ be the Cox ring of $\P^{\nn}$ with the $\Pic(X)\cong \Z^{r}$-grading given by $\deg x_{i,j} = \ee_{i} \in \Z^{r}$, where $\ee_{i}$ is the $i$-th standard basis vector in $\Z^{r}$. Fixing some notation given $\dd\in \Z^{r}$ and $i\in \Z_{\geq0}$ we let:
 \[
@@ -614,7 +614,7 @@ How can Theorem~\ref{thm:mgreg-main} be generalized to an arbitrary smooth proje
 
 \subsubsection{Multigraded Regularity of Powers of Ideals}
 
-Building on the work of many people \cite{bertramEinLazarsfeld91,chandler97}, Cutkosky, Herzog, Trung \cite{cutkoskyHerzogTrung99} and independently Kodiyalam \cite{kodiyalam00} showed the Castelnuovo--Mumford regularity for powers of ideals on a projective space $\P^n$ has surprisingly predictable asymptotic behavior. In particular, given an ideal $I\subset \K[x_0,\ldots,x_n]$, there exist constants $d,e\in\Z$ such that $\reg\!\left(I^t\right) = dt+e$ for $t\gg0$.
+Building on the work of many people \cite{bertramEinLazarsfeld91,chandler97}, Cutkosky, Herzog, Trung \cite{cutkoskyHerzogTrung99} and independently Kodiyalam \cite{kodiyalam00} showed the Castelnuovo--Mumford regularity for powers of ideals on a projective space $\P^r$ has surprisingly predictable asymptotic behavior. In particular, given an ideal $I\subset \K[x_0,\ldots,x_r]$, there exist constants $d,e\in\Z$ such that $\reg\!\left(I^t\right) = dt+e$ for $t\gg0$.
 
 Building upon our work discussed above, my collaborators and I generalized this result to arbitrary toric varieties. In particular, Definition~\ref{def:mg-reg} can be extended to all toric varieties by letting $S$ be Cox ring of the toric variety $X$, replacing $\Z^r$ with the Picard group of $X$, and replacing $\N^{r}$ with the nef cone of $X$. My collaborators and I show that the multigraded regularity of powers of ideals is bounded and translates in a predictable way. In particular, the regularity of $I^{t}$ essentially translates within $\Nef X$ in fixed directions at a linear rate.
 
@@ -1440,7 +1440,18 @@ Constructing such a Lie bracket likely relies on developing a new understanding 
    }
    
    
-
+\bib{kodiyalam00}{article}{
+  author={Kodiyalam, Vijay},
+  title={Asymptotic behaviour of Castelnuovo-Mumford regularity},
+  journal={Proc. Amer. Math. Soc.},
+  volume={128},
+  date={2000},
+  number={2},
+  pages={407--411},
+% issn={0002-9939},
+% review={\MR{1621961}},
+% doi={10.1090/S0002-9939-99-05020-0},
+}
 \bib{kontsevich93}{article}{
    author={Kontsevich, Maxim},
    title={Formal (non)commutative symplectic geometry},
