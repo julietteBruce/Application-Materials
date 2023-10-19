@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  18 OCT 2023 20:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  18 OCT 2023 20:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1076,44 +1076,44 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [5]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 705.
+(hyperref)                removing `math shift' on input line 703.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 705.
+(hyperref)                removing `subscript' on input line 703.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 705.
+(hyperref)                removing `superscript' on input line 703.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 705.
+(hyperref)                removing `math shift' on input line 703.
 
-[6] [7]
+[6]
 
-Package rkeyval Warning: Unknown key: \bib'month on input line 858.
-
-
-Package rkeyval Warning: Missing comma on input line 859.
+Package rkeyval Warning: Unknown key: \bib'month on input line 856.
 
 
-Package rkeyval Warning: Unknown key: \bib'day on input line 859.
+Package rkeyval Warning: Missing comma on input line 857.
+
+
+Package rkeyval Warning: Unknown key: \bib'day on input line 857.
 
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 1067.
+ on input line 1065.
 
 
-Package rkeyval Warning: Missing comma on input line 1074.
+Package rkeyval Warning: Missing comma on input line 1072.
 
 
-Package rkeyval Warning: Missing comma on input line 1083.
+Package rkeyval Warning: Missing comma on input line 1081.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
+ [7]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1121,21 +1121,18 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-[10] (./research-statement.aux)
+ [8]
+[9] (./research-statement.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `research-statement.out' has not changed.
 (rerunfilecheck)             Checksum: 2913F3B7B4C99CA81B8DCF2D489E0589;2132.
  ) 
 Here is how much of TeX's memory you used:
- 28159 strings out of 478994
- 533454 string characters out of 5858183
- 882271 words of memory out of 5000000
+ 28158 strings out of 478994
+ 533447 string characters out of 5858183
+ 883269 words of memory out of 5000000
  44621 multiletter control sequences out of 15000+600000
  421596 words of font info for 167 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
@@ -1156,10 +1153,10 @@ ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
 21/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
 1/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on research-statement.pdf (10 pages, 245298 bytes).
+Output written on research-statement.pdf (9 pages, 245098 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 373 compressed objects within 4 object streams
- 153 named destinations out of 1000 (max. 500000)
+ 401 PDF objects out of 1000 (max. 8388607)
+ 370 compressed objects within 4 object streams
+ 152 named destinations out of 1000 (max. 500000)
  39509 words of extra memory for PDF output out of 42996 (max. 10000000)
 
