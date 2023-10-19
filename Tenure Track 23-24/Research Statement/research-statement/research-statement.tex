@@ -117,6 +117,7 @@
 \newcommand{\Cl}{\operatorname{Cl}}
 \newcommand{\oO}{\operatorname{O}}
 \newcommand{\Sp}{\operatorname{Sp}}
+\newcommand{\trop}{\operatorname{trop}}
 
 \newcommand{\defi}[1]{\textsf{#1}} % for defined terms
 
@@ -318,7 +319,7 @@ where each $F_{i}$ is a graded free $R$-module, and hence can be written as $\bi
 Given a projective variety $X$ embedded in $\P^r$, we associate to $X$ the ring $S_X=S/I_X$, where $S=\C[x_0,\ldots,x_r]$ and $I_X$ is the ideal of homogenous polynomials vanishing on $X$. As $S_X$ is naturally a graded $S$-module we may consider its minimal graded free resolution, which is often closely related to both the extrinsic and intrinsic geometry of $X$.  An example of this phenomenon
  is Green's Conjecture, which relates the Clifford index of a curve with the vanishing of certain $\beta_{i,j}$ for its canonical embedding \cite{voisin02, voisin05, aproduFarkas19}. See also \cite{eisenbud05}*{Conjecture 9.6} and \cite{schreyer86, bayerEisenbud91,farkasPopa05, farkas06,aproduFarkas11,farkasKemeny16,farkasKemeny17}.
  
- Much of my work can be viewed as understanding how minimal graded free resolutions capture the geometry when the role of $\P^{r}$ is replaced by another variety $Y$. In particular, I have focused on the case when $Y$ is a toric variety, i.e. a compactification of the torus $(\C^{n})^{r}$ where the action of the torus extends to the boundary. Toric varieties are a paritulcarly nice class of varieites to look for such generalizations  
+ Much of my work can be viewed as understanding how minimal graded free resolutions capture the geometry when the role of $\P^{r}$ is replaced by another variety $Y$. In particular, I have focused on the case when $Y$ is a toric variety, i.e., a compactification of the torus $(\C^{n})^{r}$ where the action of the torus extends to the boundary. Examples of toric varieties include: projective space, products of projective spaces, and Hirzebruch surfaces. Work of Cox shows there is a orrespondence between (toric) subvarieties of a fixed toric variety and quotients of a polynomial ring similar to the story discussed above for $\P^{r}$ \cite{cox95}. As such recent years have seen substantial work looking to use homological algebra and to better understand the geometry of toric varieties \cite{almousaBruce19,berkeschErmanSmith17,brownErman22,brownErman23,BB21,cartwrightErmanVelscoViray09,EES15,GVT15,maclaganSmith04,maclaganSmith05},
 
 %\begin{theorem}[\cite{voisin02}, \cite{voisin05}]
 %Let $C$ be a generic smooth projective curve of genus $g$ over a characteristic zero field embedded in $\P^{g-1}$ by the complete canonical series. Then the length of the first linear strand of the minimal free resolution of $I_X$ is $g-3-\text{Cliff}(C)$.
@@ -431,7 +432,7 @@ Maclagan and Smith introduced a generalized notion of Castelnuovo--Mumford regul
 
 As an example, let us consider the case of  products of projective spaces. Fixing a dimension vector $\nn=(n_1,n_2,\ldots,n_{r})\in \N^{r}$ we let $\P^{\nn}\coloneqq \P^{n_1}\times \P^{n_2}\times \cdots \times \P^{n_r}$ and $S=\K[x_{i,j} \; |\; 1\leq i \leq r, 0\leq j \leq n_{i}]$ be the Cox ring of $\P^{\nn}$ with the $\Pic(X)\cong \Z^{r}$-grading given by $\deg x_{i,j} = \ee_{i} \in \Z^{r}$, where $\ee_{i}$ is the $i$-th standard basis vector in $\Z^{r}$. Fixing some notation given $\dd\in \Z^{r}$ and $i\in \Z_{\geq0}$ we let:
 \[
-L_{i}(\dd)\coloneqq \bigcup_{\substack{\vv \in \N \\ |\vv| = i}} (\dd-\vv)+\N^{r}.
+L_{i}(\dd)\coloneqq \bigcup_{\substack{\vv \in \N, |\vv| = i}} (\dd-\vv)+\N^{r}.
 \]
 Note when $r=2$ the region $L_{i}(\dd)$ looks like a staircase with $(i+1)$-corners. Roughly speaking we define regularity by requiring the $i$-th cohomology of certain twists of $\cF$ to vanish on $L_{i}$. 
 
@@ -580,13 +581,13 @@ Let $M$ be a finitely generated $\Z^{r}$-graded $S$-module with $H^{0}_{B}(M)=0$
 \]
 \end{theorem}
 
-The proof of Theorem~\ref{thm:mgreg-main} is based in part on a \v{C}ech--Koszul spectral sequence that relates the Betti numbers of $M_{\geq\dd}$ to the Fourier--Mukai transform of $\widetilde{M}$ with Beilinson's resolution of the diagonal as the kernel.  Precisely, if $M$ is $\dd$-regular and $H_B^0(M)=0$ we prove the that
-\begin{align*}\label{eq:magic-equality}
-  \dim_{\C}\Tor^S_j(M_{\geq\dd}, \C)_\aa = h^{|\aa|-j}\big(\P^{\nn}, \widetilde{M}\otimes\O_{\P^{\nn}}^\aa(\aa)\big) \quad \text{for } |\aa|\geq j\geq 0,
-\end{align*}
-where the $\O_{\P^{\nn}}^\aa$ are cotangent sheaves on $\P^\nn$. The result then follows from showing that $M$ being $\dd$-regular is equivalent to certain vanishings of the right-hand side above. 
+The proof of Theorem~\ref{thm:mgreg-main} is based in part on a spectral sequence argument that relates the Betti numbers of $M_{\geq\dd}$ to the Fourier--Mukai transform of $\widetilde{M}$ with Beilinson's resolution of the diagonal as the kernel.  Recent breakthroughs \cite{HHL23, brownErman23-2} understanding resolutions of the diagonal on arbitrary toric varieties mean that there is hope one may be able to generalize the above argument to arbitrary toric varieties. With this in mind, I am interested in pursing the following question
 
-Recent breakthroughs using symplectic geometry to understand exceptional connections and resolutions of the diagonal on arbitrary toric varieties mean that there is hope one may be able to generalize the above argument to arbitrary toric varieties. With this in mind, an interesting question I am pursing is the following.
+%Precisely, if $M$ is $\dd$-regular and $H_B^0(M)=0$ we prove the that
+%\begin{align*}\label{eq:magic-equality}
+%  \dim_{\C}\Tor^S_j(M_{\geq\dd}, \C)_\aa = h^{|\aa|-j}\big(\P^{\nn}, \widetilde{M}\otimes\O_{\P^{\nn}}^\aa(\aa)\big) \quad \text{for } |\aa|\geq j\geq 0,
+%\end{align*}
+%where the $\O_{\P^{\nn}}^\aa$ are cotangent sheaves on $\P^\nn$. The result then follows from showing that $M$ being $\dd$-regular is equivalent to certain vanishings of the right-hand side above. 
 
 \begin{question}
 How can Theorem~\ref{thm:mgreg-main} be generalized to an arbitrary smooth projective toric varieties? in particular, what is the correct definition of quasilinear resolutions?
@@ -626,29 +627,27 @@ Building upon our work discussed above, my collaborators and I generalized this 
 	\[ t\qq_1+\aa+\reg S \subseteq \reg\!\left(I^t\right) \subseteq t\qq_2+\Nef X. \]
 \end{theorem}
 
-A key aspect of the proof of this theorem is showing that the multigraded regularity of an ideal is finitely generated, in the sense that there exists vectors $\vv,\ww\in \Z^r$ such that $\vv+\Nef X \subset \reg(I) \subset \ww + \Nef X$. Perhaps somewhat surprisingly, my co-authors and I showed that this can fail for arbitrary modules \cite{bruceHellerSayrafi22}. 
+A key aspect of the proof of this theorem is showing that the multigraded regularity of an ideal is finitely generated, in the sense that there exists vectors $\vv,\ww\in \Z^r$ such that $\vv+\Nef X \subset \reg(I) \subset \ww + \Nef X$. Perhaps somewhat surprisingly, my co-authors and I showed that this can fail for arbitrary modules \cite{bruceHellerSayrafi22}. This naturally riases the question of whether one can characterize when multigraded regularity is finitely generated. 
 
 
 \begin{question}\label{quest:finitegen}
 Let $X$ be a smooth projective toric variety. Can one characterize when $\reg(M)$ is finitely generated for a module $M$ over the Cox ring of $X$?
 \end{question} 
 
-An first toy case of this question that I think is particular, interesting and feel would make a lovely first research project for a student is to attempt to answer Question~\ref{quest:finitegen} when $M$ is the Cox ring of a torus fixed-point. In this special case, the question seems to reduce down to a delicate combinatorial question about counting lattice points and vector partition functions.
+An first case of this question that I think would make a lovely first research project for a student is to attempt to answer Question~\ref{quest:finitegen} when $M$ is the Cox ring of a torus fixed-point. In this special case, the question reduces to a delicate combinatorial question about vector partition functions.
 
 
 
 
 \section{Cohomology of Moduli Spaces and Arithmetic Groups}
 
-Some of the most classical objects in algebraic geometry are moduli spaces, i.e., spaces which parameterize a given collection of geometric objects. Example of such include: the moduli space of (smooth) genus $g$ curves which we denote by $\cM_{g}$, the moduli space of abelian varieties of dimension $g$ which we denote by $\cA_{g}$. Despite their classical nature much remains unknown about the geometry of both of these spaces. For example, the rational cohomology of $\cM_{g}$ is only known for $g\leq 4$. Moreover, classical results suggest that $\cM_{g}$ should have a lot cohomology because the Euler characteristic of $\cM_{g}$ grows super exponentially. Recent groundbreaking work of Chan, Galatius, and Payne has shed the first direct light on this phenomena by not only constructing new non-trivial cohomology classes, but also showing that the dimension of certain cohomology groups of $\cM_{g}$ grow at least exponentially. 
+Some of the most classical objects in algebraic geometry are moduli spaces, i.e., spaces which parameterize a given collection of geometric objects. The quintessential of such a moduli space is $\cM_{g}$, the moduli space of (smooth) genus $g$ curves, also know as the moduli space of comapct Reimann surfaces of genus $g$. Despite their classical nature much remains unknown about the geometry of many moduli spaces. For example, the rational cohomology of $\cM_{g}$ is only known for $g\leq 4$. However, classical results suggest that $\cM_{g}$ should have a lot cohomology because its Euler characteristic grows super exponentially. Recent groundbreaking work of Chan, Galatius, and Payne has shed the first direct light on this phenomena byconstructing new non-trivial cohomology classes, and showing that the dimension of certain cohomology groups of $\cM_{g}$ grow at least exponentially. 
 
-\begin{theorem}
-For $g\geq2$ the dimension of $H^{4g-6}(\cM_{g};\Q)$ grows at least exponentially. More precisely,
-\[
-\dim H^{4g-6}\left(\cM_{g}; \Q\right) > \beta^{g}+\text{constant}
-\]
-for any real number $\beta<\beta_{0}$ where $\beta_{0}\approx1.3247\ldots$ is the real solution of $t^3-t-1=0$. 
+\begin{theorem}\cite{CGP21}*{Theorem 1.1}\label{thm:Mg}
+For $g\geq2$ the dimension of $H^{4g-6}(\cM_{g};\Q)$ grows at least exponentially. In particular $\dim H^{4g-6}\left(\cM_{g}; \Q\right) > \beta^{g}$ for any real number $\beta<\beta_{0}$ where $\beta_{0}\approx1.3247\ldots$ is the real solution of $t^3-t-1=0$. 
 \end{theorem}
+
+Much of my recent work has sought to build up the groundwork laid by Chan, Galatius, and Payne to study the rational cohomology of other moduli spaces. Of particular, interest to me has been the moduli space of abelian varieties and various generalizations. This work has deep connections to the cohomology of various arithmetic groups like $\Sp_{2g}(\Z)$ and  $\GL_{g}(\Z)$. 
 
 %Their proof of this theorem is related upon 
 
@@ -659,32 +658,45 @@ for any real number $\beta<\beta_{0}$ where $\beta_{0}\approx1.3247\ldots$ is th
 
 \subsection{Cohomology of $\cA_{g}$}
 
-The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorpism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}_{2g}(\Z)]$ where $\H_{g}$ is the Siegel upper half-space. Notice this means that $\cA_{g}$ can also be viewed is a rational classifying space for the integral symplectic group $\mathrm{Sp}_{2g}(\Z)$. 
+The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorphism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}_{2g}(\Z)]$ where $\H_{g}$ is the Siegel upper half-space. Notice this means that $\cA_{g}$  is a rational classifying space for the integral symplectic group $\mathrm{Sp}_{2g}(\Z)$. 
 
-Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example the (singular) cohomology is $\cA_{g}$ is only fully know when $g=0$ in which case $A_{g}$ is a single point, $g=1$ blah blah, $g=2$ which is a classical result of NEDEDED and $g=3$ due to work of Hain. In fact the cohomology of $\cA_{g}$ is so mysterious until recently it was not know whether $H^{i}(\cA_{g};\Q)\neq0$ for some $g$ and some odd $i$. This was a question posed by Gruskestkky that my recent work answered. Building upon the work of Chan, Galatius, and Payne, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology class for $H^{k}(\cA_{g}; \Q)$ in a large number of new cases. 
+Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example the (singular) cohomology is $\cA_{g}$ is only fully know for $g\leq 3$, with $g=0,1$ being relatively easy, $g=2$ which is a classical result of Igusa, and $g=3$ due to work of Hain. In fact the cohomology of $\cA_{g}$ is so mysterious until recently work by myself and co-authors it was unknown whether $H^{2i+1}(\cA_{g};\Q)\neq0$ for some $g$ and $i$. This was a question posed by Gruskestkky that my recent work answered. 
 
-\begin{theorem}\label{thm:A}
+Building upon the work of Chan, Galatius, and Payne, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology class for $H^{k}(\cA_{g}; \Q)$ in a number of new cases. 
+
+\begin{theorem}\cite{BBCMMW22}*{Theorem A}\label{thm:Ag}
 The rational cohomology $H^{k}\left(\cA_{g};\Q\right)\neq0$ for:
 \[
 \text{$(g,k)=(5,15),(5,20),(6,30),(7,28),(7,33),(7,37)$, and $(7,42)$}.
 \]
 \end{theorem}
 
-For broader context, since $\cA_g$ is a rational classifying space for $\mathrm{Sp}_{2g}(\Z)$ there is natural isomorphism $H^*(\cA_g;\Q) \cong H^*(\mathrm{Sp}_{2g}(\Z);\Q)$. In particular, the above results provide new non-vanishing results for $H^*(\mathrm{Sp}_{2g}(\Z);\Q)$. In fact, our methods show an even more mysterious NEDEDEDEDDEDE
-
-The situation is analogous to that of the moduli space of curves $\cM_g$, which is a rational classifying space for the mapping class group $\mathrm{Mod}_g$ via its action on Teichm\"uller space.  Moreover, in both cases, we find ourselves in the advantageous situation that $\cM_g$ and $\cA_g$  are smooth and separated Deligne Mumford stacks with coarse moduli spaces which are algebraic varieties, permitting Deligne's mixed Hodge theory to be applied to study the rational cohomology of these groups. 
-
-In particular, the rational cohomology of a %smooth 
+For broader context, since $\cA_g$ is a rational classifying space for $\mathrm{Sp}_{2g}(\Z)$ there is natural isomorphism $H^*(\cA_g;\Q) \cong H^*(\mathrm{Sp}_{2g}(\Z);\Q)$. In particular, the above results provide new non-vanishing results for $H^*(\mathrm{Sp}_{2g}(\Z);\Q)$. However, my work takes advantage of the fact that since $\cA_g$  is a smooth and separated Deligne Mumford stacks with a coarse moduli space which is an algebraic variety, permitting Deligne's mixed Hodge theory to be applied to study the rational cohomology of these groups. In particular, the rational cohomology of a %smooth 
 complex algebraic variety $X$ of dimension $d$ admits a weight filtration with graded pieces $\Gr_{j}^W\!H^k(X;\mathbb{Q})$. %with $j$ ranging from %$k$ 
 %$0$ to ${\rm min}\{2k, 2d\}$. 
-As $\Gr_{j}^W\!H^k(X;\mathbb{Q})$ vanishes whenever $j>2d$, $\Gr_{2d}^W\!H^k(X;\mathbb{Q})$ is referred to as the {\em top weight} part of $H^k(X;\Q)$.) Theorem NEDED above is actually based upon a more prcisely NEDEDEDED
+As $\Gr_{j}^W\!H^k(X;\mathbb{Q})$ vanishes whenever $j>2d$, $\Gr_{2d}^W\!H^k(X;\mathbb{Q})$ is referred to as the {\em top-weight} part of $H^k(X;\Q)$.)  In this way we deduce Theorem~\ref{thm:Ag} above as a corollary to computing the top-weight cohomology of $\cA_{g}$ for all $g\leq 7$.  
 
 
-\subsection{Cohomology of $\cA_{g}$ and $\GL_{g}(\Z)(m)$}
 
- 
 
-Note that the cohomology of $\Sp(2g,\Z)(m)$ -- and hence  $\cA_{g}(m)$ -- is closely connected to study of automorphic forms. Thus it is natural to wonder whether our methods for computing the top-weight cohomology of $\cA_{g}(m)$ shed new light on automorphic forms. In particular, the top-weight cohomology of $\cA_{g}(m)$ comes from understanding the boundary of a locally symmetric space one may hope it is related to Siegel--Eisenstein series. An ongoging project and conversations with Melody Chan and Peter Sarnak hopes to address this question.
+%The situation is analogous to that of the moduli space of curves $\cM_g$, which is a rational classifying space for the mapping class group $\mathrm{Mod}_g$ via its action on Teichm\"uller space.  Moreover, in both cases, we find ourselves in the advantageous situation that $\cM_g$ and $\cA_g$  are smooth and separated Deligne Mumford stacks with coarse moduli spaces which are algebraic varieties, permitting Deligne's mixed Hodge theory to be applied to study the rational cohomology of these groups. 
+
+
+
+\subsection{Cohomology of $\cA_{g}(m)$}
+
+The moduli space $\cA_{g}$ actually fits into a family of family spaces called the moduli space of (principally polarized) abelian varieties of dimension $g$ with level $m$-structure. Denoted by $\cA_{g}(m)$, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}_{2g}(\Z)](m)$  where $\Sp_{2g}(\Z)(m)$ is the principal congruence subgroup $\ker(\Sp_{2g}(\Z) \to \Sp_{2g}(\Z/m\Z)$. Note that when $m=1$, we have that $\cA_{g}(m)$ is isomorphic to $\cA_{g}$. 
+
+From this perspective one may hope to generalize Theorem~\ref{thm:Ag} and underlying methods my co-authors and I developed in \cite{BBCMMW22} to studying to the rational cohomology of  $\cA_{g}(m)$ and $\Sp_{2g}(\Z)(m)$. In ongoing work Melody Chan and I are working on developing such generalizations. The overall goal of our current project is something like the following Goal Theorem
+
+\begin{goalTheorem}\label{goalThm:agm}
+Let $d=\binom{g+1}{2}$ be the dimension of $\cA_{g}(m)$. For any integers $m\geq1$ and $g\geq0$ there exists a cellular complex $LA_{g}(m)^{\trop}$ such that for all $i\geq0$ here is a natural isomorphism
+\[
+\tilde{H}_{i-1}\left(LA_{g}(m)^{\trop};\Q\right) \cong \Gr_{2d}^W\!H^{i}\left(\cA_{g}(m);\mathbb{Q}\right),
+\]
+\end{goalTheorem}
+
+The methods we working on to prove Goal Theorem~\ref{goalThm:agm} shows new connections between the cohomology of $\cA_{g}(m)$ and the cohomology of $\GL_{g}(\Z)(m)$. The cohomology of $\Sp(2g,\Z)(m)$ -- and hence  $\cA_{g}(m)$ -- and $\GL_{g}(\Z)(m)$ are closely connected to study of automorphic forms. Thus it is natural to wonder whether our methods for computing the top-weight cohomology of $\cA_{g}(m)$ shed new light on automorphic forms. In particular, the top-weight cohomology of $\cA_{g}(m)$ comes from understanding the boundary of a locally symmetric space one may hope it is related to Siegel--Eisenstein series. An ongoing project and conversations with Melody Chan and Peter Sarnak hopes to address this question.
 
 \begin{question}
 What is the relationship between the top-weight cohomology of $\cA_{g}(m)$ and Siegel Eisenstein series?
@@ -692,85 +704,83 @@ What is the relationship between the top-weight cohomology of $\cA_{g}(m)$ and S
 
 \subsection{Matroid Complexes and Cohomology of $\cA_{g}^{\text{mat}}$}
 
-Together with my co-authors I identified a subcomplex $R_{g}^{\bullet}$ with even richer combinatorics EDEDED
+A key step in the proof of Theorem~\ref{thm:Ag} is constructing a chain complex $P^{(g)}_{\bullet}$ whose homology is precisely the top-weight cohomology of $\cA_{g}$. A major hurdle to pushing our results on the cohomology of $\cA_{g}$, further, is that this chain complex very quickly becomes extremely large and complicated. However,  with my co-authors, I identified a subcomplex $R^{(g)}_{\bullet} \subset P^{(g)}_{\bullet}$, called the regular matroid complex, which has rich combinatorics. In particular, $R^{(g)}_{k}$ is spanned by isomorphism classes of regular matroids on $k$ elements of rank $\leq g$.  I am working to study this complex from a number of perspectives. As an example, the following goal theorem is a result that I am working on with three graduate students.
 
 \begin{goalTheorem}
 Compute the homology of the matroid complex $R_{\bullet}^{(g)}$ for all $g\geq 14$.
 \end{goalTheorem}
 
-This is ongoing work with three graduate students, where currently we combined theoretical results and large-scale computations to compute the cohomology for all $g\leq 9$.
-
-Computing the homology of the regular matroid complexe is interesting, not only because it provides a new approach for studying the combinatorics of matroids, but also because it is closely related to the cohomology of partial compactification of $\cA_{g}$. x
+Currently by combining theoretical results and large-scale computations to compute the cohomology for all $g\leq 9$. Computing the homology of the regular matroid complex is interesting, not only because it provides a new approach for studying the combinatorics of matroids, but also because it is closely related to the cohomology of partial compactification of $\cA_{g}$ called the matroidal (partial) compactification $\cA_{g}^{\mat}$. In ongoing work with Madeline Brandy and Daniel Corey I am looking to show that one can compute the top-weight cohomology of $\cA_{g}^{\mat}$ from the regular matroid complex. 
 
 \begin{goalTheorem}
-The top-weigh cohomology of $\cA_{g}^{\mat}$ can be computed from the cohomlogy of $R^{(g)}_{\bullet}$. 
+Compute the top-weigh cohomology of $\cA_{g}^{\mat}$ for all $g\leq 10$. 
 \end{goalTheorem}
 
-Work of Whitwaker and Kontsevich on graph complexe also lea to the following natural question. If answered in the affirmative this would likely allow for any known cohomlogy classes to be spread out and converted in statements about the dimension of top-weight cohomology for more $g$. 
+Work of Willwacher \cite{willwacher15} and Kpntsevich \cite{kontsevich93, kontsevich94} on graph complexes suggests that one may hope for $R_{\bullet}^{(g)}$ to have rich algebraic structure beyond just that of chain complex.
 
 \begin{question}
-Does the complex $\cR_{\bullet}$ carry a natural Lie bracket, endowing it with the structure of a differentially graded Lie algebra?
+Does the complex $R_{\bullet}^{(g)}$ carry a natural Lie bracket, endowing it with the structure of a differentially graded Lie algebra?
 \end{question}
 
-Constructing such a Lie bracket likely relies on developing a new understanding of the ways one can combine two matroids. Ongoing work with the graduate students mentioned above is studying this problem in the special cases of graphic and co-graphic matroids, however, for more general matroids such a constriction remains mysterious. 
+Constructing such a Lie bracket likely relies on developing a new understanding of the ways one can combine two matroids. Ongoing work with the graduate students mentioned above is studying this problem in the special cases of graphic and co-graphic matroids, however, for more general matroids such a constriction remains mysterious. If answered in the affirmative this would likely allow for any known cohomology classes to be spread out and converted in statements about the dimension of top-weight cohomology for more $g$, similar to the bounds in Theorem~\ref{thm:Mg}.
 
 
-
-\section{Varieties over Finite Fields}
-
-Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X\subset\P^r$ is a smooth projective variety of dimension $n$ over $\C$, Bertini's theorem states that, if $H\subset \P^r$ is a generic hyperplane, then $X\cap H$ is smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Using an ingenious probabilistic sieving argument, Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of arbitrarily large degree, then a version of Bertini's theorem is true \cite{poonen04}. More specifically Poonen showed that as, $d\to\infty$, the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{r}$ of degree $d$ such that $X\cap H$ is smooth is determined by the Hasse-Weil zeta function of $X$. Below we write $\fF_{q}[x_{0},\ldots,x_{r}]_{d}$ for the $\fF_{q}$-vector space of homogenous polynomials of degree $d$. 
-
-\begin{theorem}\cite{poonen04}*{Theorem~1.1}\label{thm:poonen}
-Let $X\subset \P^{r}_{\fF_{q}}$ be a smooth variety of dimension $n$. Then:
-\begin{equation}\label{eq:poonen}
-\lim_{d\to \infty} \Prob\left(\begin{matrix} f\in \fF_{q}[x_{0},x_{1},\ldots,x_{r}]_{d}\\ \text{$X\cap \V(f)$ is smooth of dimension $n-1$}\end{matrix}\right)=
-\zeta_X(n+1)^{-1} >0.
-\end{equation}
-\end{theorem}
-
-\subsection{A Probabilistic Study of Systems of Parameters} 
-
-Given an $n$ dimensional projective variety $X\subset \P^r$, a collection of homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ of degree $d$ is a (partial) system of parameters if $\dim X\cap \V(f_{0},f_{1},\ldots,f_{k}) = \dim X - (k+1)$. Systems of parameters are closely tied to Noether normalization, as the existence of a finite (i.e. surjective with finite fibers) map $X\rightarrow \P^n$ is equivalent to the existence of a system of parameters of length $n+1$.
-
-Inspired by work of Poonen \cite{poonen04} and Bucur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I computed the asymptotic probability that randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ over $\fF_{q}$ form a system of parameters. By adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we showed that, when $k<n$, the probability that randomly chosen $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by a zeta-function-like power series that enumerates higher dimensional varieties instead of closed points. In the following, $|Z|$ denotes the number of irreducible components of $Z$, and we write $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
-
-\begin{theorem}\cite{bruceErman-sop}*{Theorem~1.4}\label{thm:main finite field}
-Let $X\subseteq \P^r_{\fF_q}$ be a projective scheme of dimension $n$. Fix $e$ and let $k<n$. The probability that random polynomials $f_0,f_1,\dots,f_k$ of degree $d$ are parameters on $X$ is
-\[
-\Prob\left(\begin{matrix}f_0,f_1,\dots,f_{k} \text{ of degree $d$ } \\ \text{ are parameters on $X$}\end{matrix}\right) = 1 \ - 
-\sum_{\begin{smallmatrix}Z\subseteq X \text{reduced} \\ \dim Z \equiv n-k\\ \deg Z \leq e  \end{smallmatrix}}(-1)^{|Z|-1}q^{-(k+1)h^0(Z,\O_Z(d))}+ o\left(q^{-e(k+1)\binom{n-k+d}{n-k}}\right).
-\]
-\end{theorem}
-
-
+%
+%\section{Varieties over Finite Fields}
+%
+%Over a finite field, a number of classical statements from algebraic geometry no longer hold. For example, if $X\subset\P^r$ is a smooth projective variety of dimension $n$ over $\C$, Bertini's theorem states that, if $H\subset \P^r$ is a generic hyperplane, then $X\cap H$ is smooth of dimension $n-1$. Famously, however, this fails if $\C$ is replaced by a finite field $\fF_{q}$. Using an ingenious probabilistic sieving argument, Poonen showed that if one is willing to replace the role of hyperplanes by hypersurfaces of arbitrarily large degree, then a version of Bertini's theorem is true \cite{poonen04}. More specifically Poonen showed that as, $d\to\infty$, the percentage of hypersurfaces $H\subset \P_{\fF_{q}}^{r}$ of degree $d$ such that $X\cap H$ is smooth is determined by the Hasse-Weil zeta function of $X$. Below we write $\fF_{q}[x_{0},\ldots,x_{r}]_{d}$ for the $\fF_{q}$-vector space of homogenous polynomials of degree $d$. 
+%
+%\begin{theorem}\cite{poonen04}*{Theorem~1.1}\label{thm:poonen}
+%Let $X\subset \P^{r}_{\fF_{q}}$ be a smooth variety of dimension $n$. Then:
+%\begin{equation}\label{eq:poonen}
+%\lim_{d\to \infty} \Prob\left(\begin{matrix} f\in \fF_{q}[x_{0},x_{1},\ldots,x_{r}]_{d}\\ \text{$X\cap \V(f)$ is smooth of dimension $n-1$}\end{matrix}\right)=
+%\zeta_X(n+1)^{-1} >0.
+%\end{equation}
+%\end{theorem}
+%
+%\subsection{A Probabilistic Study of Systems of Parameters} 
+%
+%Given an $n$ dimensional projective variety $X\subset \P^r$, a collection of homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ of degree $d$ is a (partial) system of parameters if $\dim X\cap \V(f_{0},f_{1},\ldots,f_{k}) = \dim X - (k+1)$. Systems of parameters are closely tied to Noether normalization, as the existence of a finite (i.e. surjective with finite fibers) map $X\rightarrow \P^n$ is equivalent to the existence of a system of parameters of length $n+1$.
+%
+%Inspired by work of Poonen \cite{poonen04} and Bucur and Kedlaya \cite{bucurKedlaya12}, Daniel Erman and I computed the asymptotic probability that randomly chosen homogenous polynomials $f_{0},f_{1},\ldots,f_{k}$ over $\fF_{q}$ form a system of parameters. By adapting Poonen's closed point sieve to sieve over higher dimensional varieties, we showed that, when $k<n$, the probability that randomly chosen $f_{0},f_{1},\ldots,f_{k}$ form a partial system of parameters is controlled by a zeta-function-like power series that enumerates higher dimensional varieties instead of closed points. In the following, $|Z|$ denotes the number of irreducible components of $Z$, and we write $\dim Z \equiv k$ if $Z$ is equidimensional of dimension $k$. 
+%
+%\begin{theorem}\cite{bruceErman-sop}*{Theorem~1.4}\label{thm:main finite field}
+%Let $X\subseteq \P^r_{\fF_q}$ be a projective scheme of dimension $n$. Fix $e$ and let $k<n$. The probability that random polynomials $f_0,f_1,\dots,f_k$ of degree $d$ are parameters on $X$ is
+%\[
+%\Prob\left(\begin{matrix}f_0,f_1,\dots,f_{k} \text{ of degree $d$ } \\ \text{ are parameters on $X$}\end{matrix}\right) = 1 \ - 
+%\sum_{\begin{smallmatrix}Z\subseteq X \text{reduced} \\ \dim Z \equiv n-k\\ \deg Z \leq e  \end{smallmatrix}}(-1)^{|Z|-1}q^{-(k+1)h^0(Z,\O_Z(d))}+ o\left(q^{-e(k+1)\binom{n-k+d}{n-k}}\right).
+%\]
+%\end{theorem}
+%
+%
 %Notice that the power series on the right-hand side essentially enumerates subvarieties of dimension $n-k$. The main term determining the probability a randomly chosen set of homogenous polynomials forms a partial system of parameters is controlled by the number of $(n-k)$-planes contained in $X$. 
-
+%
 %\begin{cor}\cite{bruceErman-sop}\label{cor:error}
 %Let $X\subseteq \P^r_{\fF_q}$ be a $n$-dimensional closed subscheme and let $k<n$.  Then
 %\[
 %\lim_{d\to \infty} \frac{\Prob\left(\begin{matrix}(f_0,\dots,f_{k}) \text{ of degree $d$} \\ \text{ are \underline{not} parameters on $X$}\end{matrix}\right)} {q^{-(k+1)\binom{n-k+d}{n-k}}} = \#\left\{\begin{matrix}\text{$(n-k)$-planes } L\subseteq \P^r_{\fF_q}\\\text{such that }  L\subseteq X\end{matrix}\right\}.
 %\]
 %\end{cor} 
-
-From this we proved the first explicit bound for Noether normalization over $\fF_{q}$ and gave a new proof of recent results on Noether normalizations of families over $\Z$ and $\fF_{q}[t]$ \cite{gabberLiuLorenzini15, cmbpt}.
-
-
-
-\subsection{Jacobians Covering Abelian Varieties}
-
-Over an infinite field, it is a classic result that every abelian variety is covered by a Jacobian variety of bounded dimension. Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12}, Li and I proved an analogous result for abelian varieties over finite fields. We did so by first proving an effective version of Poonen's Bertini theorem over finite fields. 
-\begin{theorem}\cite{bruceLi19}*{Theorem~A}
-Fix $r,n\in \N$ with $n\geq2$, and let $\fF_{q}$ be a finite field of characteristic $p$. There exists an explicit constant $C_{r,q}$ such that if $A\subset \P^{r}_{\fF_q}$ is a non-degenerate abelian variety of dimension $n$, then for any $d\in \N$ satisfying 
-\[
-C_{r,q}\zeta_{A}\left(n+\tfrac{1}{2}\right) \deg(A) \leq  \frac{q^{\frac{d}{\max\{n+1,p\}}}d}{d^{n+1}+d^n+q^{d}},
-\]
-there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively onto $A$, where 
-\[
-\dim J\leq 
+%
+%From this we proved the first explicit bound for Noether normalization over $\fF_{q}$ and gave a new proof of recent results on Noether normalizations of families over $\Z$ and $\fF_{q}[t]$ \cite{gabberLiuLorenzini15, cmbpt}.
+%
+%
+%
+%\subsection{Jacobians Covering Abelian Varieties}
+%
+%Over an infinite field, it is a classic result that every abelian variety is covered by a Jacobian variety of bounded dimension. Building upon work of Bucur and Kedlaya \cite{bucurKedlaya12}, Li and I proved an analogous result for abelian varieties over finite fields. We did so by first proving an effective version of Poonen's Bertini theorem over finite fields. 
+%\begin{theorem}\cite{bruceLi19}*{Theorem~A}
+%Fix $r,n\in \N$ with $n\geq2$, and let $\fF_{q}$ be a finite field of characteristic $p$. There exists an explicit constant $C_{r,q}$ such that if $A\subset \P^{r}_{\fF_q}$ is a non-degenerate abelian variety of dimension $n$, then for any $d\in \N$ satisfying 
+%\[
+%C_{r,q}\zeta_{A}\left(n+\tfrac{1}{2}\right) \deg(A) \leq  \frac{q^{\frac{d}{\max\{n+1,p\}}}d}{d^{n+1}+d^n+q^{d}},
+%\]
+%there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively onto $A$, where 
+%\[
+%\dim J\leq 
 %\OO\left(\frac{ \deg(A)^2 d^{2(n-1)}}{r}\right).
-\OO\left( \deg(A)^2 d^{2(n-1)}r^{-1}\right).
-\]
-\end{theorem} 
+%\OO\left( \deg(A)^2 d^{2(n-1)}r^{-1}\right).
+%\]
+%\end{theorem} 
 
 %\subsection{Uniform Bertini}
 %Notice that in the statement of Poonen's Bertini theorem, while the left-hand side of equation~\eqref{eq:poonen} is dependent of the embedding of $X$ into projective space (i.e. the choice of very ample line bundle), the overall limit is itself independent of the embedding of $X$. This suggests that there may be a more general and uniform statement of Poonen's Bertini theorem. One might hope that the analogous limit along any sequence $(L_{d})_{d\in\N}$ of line bundles growing in positivity equals $\zeta_{X}(n+1)^{-1}$. I am working with Isabel Vogt to formalize and prove such a theorem.
@@ -822,15 +832,19 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 
 \begin{bibdiv}
 \begin{biblist}[\normalsize]
-      \bib{almousaBruce19}{article}{
+
+\bib{almousaBruce19}{article}{
    author={Almousa, Ayah},
    author={Bruce, Juliette},
-   author={Loper, Michael C.},
+   author={Loper, Michael},
    author={Sayrafi, Mahrud},
    title={The virtual resolutions package for Macaulay2},
-   date={2019},
-   note={Pre-print: \href{https://arxiv.org/abs/1905.07022}{arxiv:1905.07022}}
-   }
+   journal={J. Softw. Algebra Geom.},
+   volume={10},
+   date={2020},
+   number={1},
+   pages={51--60},
+}
    
 \bib{aproduFarkas19}{article}{
    author={Aprodu, Marian},
@@ -855,10 +869,7 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
    volume={147},
    date={2011},
    number={3},
-   pages={839--851},
-   issn={0010-437X},
-   review={\MR{2801402}},
-   doi={10.1112/S0010437X10005099},
+   pages={839--851}
 }
 
 
@@ -912,44 +923,14 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
    author={Erman, Daniel},
    author={Smith, Gregory G.},
    title={Virtual resolutions for a product of projective spaces},
-   date={2017},
-   journal={Algebraic Geometry},
-   note={to appear},
-%   issn={1435-9855},
-%   review={\MR{3120743}},
-%   doi={10.4171/JEMS/421},
-}
-
-\bib{berkeschSchreyer15}{article}{
-   author={Berkesch, Christine},
-   author={Schreyer, Frank-Olaf},
-   title={Syzygies, finite length modules, and random curves},
-   conference={
-      title={Commutative algebra and noncommutative algebraic geometry. Vol.
-      I},
-   },
-   book={
-      series={Math. Sci. Res. Inst. Publ.},
-      volume={67},
-      publisher={Cambridge Univ. Press, New York},
-   },
-   date={2015},
-   pages={25--52},
-   review={\MR{3525467}},
-}
-
-
-
-\bib{bruceNotices21}{article}{
-   author={Bonato, Anthony},
-   author={Bruce, Juliette},
-   author={Buckmire, Ron},
-   title={Spaces for all: the rise of LGBTQ+ mathematics conferences},
-   journal={Notices Amer. Math. Soc.},
-   volume={68},
-   date={2021},
-   number={6},
-   pages={998--1003},
+   journal={Algebr. Geom.},
+   volume={7},
+   date={2020},
+   number={4},
+   pages={460--481},
+   issn={2313-1691},
+   review={\MR{4156411}},
+   doi={10.14231/ag-2020-013},
 }
 
 \bib{BBCMMW22}{article}{
@@ -965,49 +946,54 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
    note={to appear},
 }
 
-\bib{BBBKR17}{article}{
-   author={Brandt, Madeline},
-   author={Bruce, Juliette},
-   author={Brysiewicz, Taylor},
-   author={Krone, Robert},
-   author={Robeva, Elina},
-   title={The degree of ${\rm SO}(n,\Bbb C)$},
-   conference={
-      title={Combinatorial algebraic geometry},
-   },
-   book={
-      series={Fields Inst. Commun.},
-      volume={80},
-      publisher={Fields Inst. Res. Math. Sci., Toronto, ON},
-   },
-   date={2017},
-   pages={229--246},
-}
-
-
-\bib{bruceErman-sop}{article}{
-   author={Bruce, Juliette},
+\bib{brownErman22}{article}{
+   author={Brown, Michael K.},
    author={Erman, Daniel},
-   title={A probabilistic approach to systems of parameters and Noether
-   normalization},
-   journal={Algebra Number Theory},
-   volume={13},
-   date={2019},
-   number={9},
-   pages={2081--2102},
-}
-
-\bib{bruceLi19}{article}{
-   author={Bruce, Juliette},
-   author={Li, Wanlin},
-   title={Effective bounds on the dimensions of Jacobians covering abelian
-   varieties},
-   journal={Proc. Amer. Math. Soc.},
-   volume={148},
-   date={2020},
-   number={2},
-   pages={535--551}
+   title={Tate resolutions on toric varietie},
+   date={2022},
+   note={Pre-print: \href{https://arxiv.org/abs/2108.03345}{arxiv:2108.03345}}
    }
+
+\bib{brownErman23}{article}{
+   author={Brown, Michael K.},
+   author={Erman, Daniel},
+   title={Linear syzygies of curves in weighted projective space},
+   date={2023},
+   note={Pre-print: \href{https://arxiv.org/abs/2301.09150}{arxiv:2301.0915}}
+   }
+
+\bib{brownErman23-2}{article}{
+   author={Brown, Michael K.},
+   author={Erman, Daniel},
+   title={A short proof of the Hanlon-Hicks-Lazarev Theorem},
+   date={2023},
+   note={Pre-print: \href{https://arxiv.org/abs/2303.14319}{arxiv:2303.14319}}
+   }
+   
+   
+%\bib{bruceErman-sop}{article}{
+%   author={Bruce, Juliette},
+%   author={Erman, Daniel},
+%   title={A probabilistic approach to systems of parameters and Noether
+%   normalization},
+%   journal={Algebra Number Theory},
+%   volume={13},
+%   date={2019},
+%   number={9},
+%   pages={2081--2102},
+%}
+%
+%\bib{bruceLi19}{article}{
+%   author={Bruce, Juliette},
+%   author={Li, Wanlin},
+%   title={Effective bounds on the dimensions of Jacobians covering abelian
+%   varieties},
+%   journal={Proc. Amer. Math. Soc.},
+%   volume={148},
+%   date={2020},
+%   number={2},
+%   pages={535--551}
+%   }
 
 
 \bib{bruceErmanGoldsteinYang18}{article}{
@@ -1055,15 +1041,15 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
    pages={19--26},
 }
 
-\bib{bruceNotices22}{article}{
-   author={Bruce, Juliette},
-   title={A word from... Juliette Bruce, Inaugural President of Spectra},
-   journal={Notices Amer. Math. Soc.},
-   volume={69},
-   date={2022},
-   number={6},
-   pages={898--899},
-}
+%\bib{bruceNotices22}{article}{
+%   author={Bruce, Juliette},
+%   title={A word from... Juliette Bruce, Inaugural President of Spectra},
+%   journal={Notices Amer. Math. Soc.},
+%   volume={69},
+%   date={2022},
+%   number={6},
+%   pages={898--899},
+%}
 
 
 \bib{BCEGLY22}{article}{
@@ -1098,20 +1084,31 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
    date={2022},
    note={Pre-print: \href{https://arxiv.org/abs/2208.11115}{arxiv:2208.11115}}
    }
-
-\bib{bucurKedlaya12}{article}{
-   author={Bucur, Alina},
-   author={Kedlaya, Kiran S.},
-   title={The probability that a complete intersection is smooth},
-   language={English, with English and French summaries},
-   journal={J. Th\'eor. Nombres Bordeaux},
-   volume={24},
-   date={2012},
-   number={3},
-   pages={541--556},
-%   issn={1246-7405},
-%   review={\MR{3010628}},
+   
+   \bib{BB21}{article}{
+   author={Buczy\'{n}ska, Weronika},
+   author={Buczy\'{n}ski, Jaros\l aw},
+   title={Apolarity, border rank, and multigraded Hilbert scheme},
+   journal={Duke Math. J.},
+   volume={170},
+   date={2021},
+   number={16},
+   pages={3659--3702},
 }
+
+%\bib{bucurKedlaya12}{article}{
+%   author={Bucur, Alina},
+%   author={Kedlaya, Kiran S.},
+%   title={The probability that a complete intersection is smooth},
+%   language={English, with English and French summaries},
+%   journal={J. Th\'eor. Nombres Bordeaux},
+%   volume={24},
+%   date={2012},
+%   number={3},
+%   pages={541--556},
+%%   issn={1246-7405},
+%%   review={\MR{3010628}},
+%}
 
 
 %\bib{charlesPoonen16}{article}{
@@ -1127,6 +1124,34 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 %   review={\MR{3402695}},
 %   doi={10.1090/S0894-0347-2014-00820-1},
 %}
+
+\bib{cartwrightErmanVelscoViray09}{article}{
+   author={Cartwright, Dustin A.},
+   author={Erman, Daniel},
+   author={Velasco, Mauricio},
+   author={Viray, Bianca},
+   title={Hilbert schemes of 8 points},
+   journal={Algebra Number Theory},
+   volume={3},
+   date={2009},
+   number={7},
+   pages={763--795},
+}
+	
+
+\bib{CGP21}{article}{
+   author={Chan, Melody},
+   author={Galatius, S\o ren},
+   author={Payne, Sam},
+   title={Tropical curves, graph complexes, and top weight cohomology of
+   $\mathcal{M}_g$},
+   journal={J. Amer. Math. Soc.},
+   volume={34},
+   date={2021},
+   number={2},
+   pages={565--594}
+}
+
 \bib{chandler97}{article}{
   author={Chandler, Karen A.},
   title={Regularity of the powers of an ideal},
@@ -1138,6 +1163,18 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 % issn={0092-7872},
 % review={\MR{1481564}},
 % doi={10.1080/00927879708826084},
+}
+
+\bib{cox95}{article}{
+   author={Cox, David A.},
+   title={The homogeneous coordinate ring of a toric variety},
+   journal={J. Algebraic Geom.},
+   volume={4},
+   date={1995},
+   number={1},
+   pages={17--50},
+   issn={1056-3911},
+   review={\MR{1299003}},
 }
 
 
@@ -1157,17 +1194,17 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 }
 
 
-\bib{cmbpt}{article}{
-   author={Chinburg, Ted},
-   author={Moret-Bailly, Laurent},
-   author={Pappas, Georgios},
-   author={Taylor, Martin J.},
-   title={Finite morphisms to projective space and capacity theory},
-   journal={J. Reine Angew. Math.},
-   volume={727},
-   date={2017},
-   pages={69--84},
-}
+%\bib{cmbpt}{article}{
+%   author={Chinburg, Ted},
+%   author={Moret-Bailly, Laurent},
+%   author={Pappas, Georgios},
+%   author={Taylor, Martin J.},
+%   title={Finite morphisms to projective space and capacity theory},
+%   journal={J. Reine Angew. Math.},
+%   volume={727},
+%   date={2017},
+%   pages={69--84},
+%}
 
 \bib{einLazarsfeld93}{article}{
    author={Ein, Lawrence},
@@ -1213,6 +1250,21 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 %   doi={10.1007/s00222-012-0384-5},
 }
 
+\bib{EES15}{article}{
+   author={Eisenbud, David},
+   author={Erman, Daniel},
+   author={Schreyer, Frank-Olaf},
+   title={Tate resolutions for products of projective spaces},
+   journal={Acta Math. Vietnam.},
+   volume={40},
+   date={2015},
+   number={1},
+   pages={5--36},
+   issn={0251-4184},
+   review={\MR{3331930}},
+   doi={10.1007/s40306-015-0126-z},
+}
+
  \bib{eisenbudGoto84}{article}{
    author={Eisenbud, David},
    author={Goto, Shiro},
@@ -1253,20 +1305,6 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 %}
 
 
-\bib{ermanWood15}{article}{
-   author={Erman, Daniel},
-   author={Wood, Melanie Matchett},
-   title={Semiample Bertini theorems over finite fields},
-   journal={Duke Math. J.},
-   volume={164},
-   date={2015},
-   number={1},
-   pages={1--38},
-%   issn={0012-7094},
-%   review={\MR{3299101}},
-%   doi={10.1215/00127094-2838327},
-}
-
 \bib{ermanYang18}{article}{
    author={Erman, Daniel},
    author={Yang, Jay},
@@ -1279,6 +1317,20 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 %   issn={1937-0652},
 %   review={\MR{3894431}},
 %   doi={10.2140/ant.2018.12.2151},
+}
+
+\bib{GVT15}{book}{
+   author={Guardo, Elena},
+   author={Van Tuyl, Adam},
+   title={Arithmetically Cohen-Macaulay sets of points in $\Bbb P^{1} \times
+   \Bbb P^{1}$},
+   series={SpringerBriefs in Mathematics},
+   publisher={Springer, Cham},
+   date={2015},
+   pages={viii+134},
+   isbn={978-3-319-24164-7},
+   isbn={978-3-319-24166-1},
+   review={\MR{3443335}},
 }
 
 \bib{farkasPopa05}{article}{
@@ -1376,46 +1428,51 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 %   issn={0022-040X},
 %   review={\MR{772134}},
 }
-\bib{huneke84}{article}{
-   author={Huneke, C.},
-   title={Numerical invariants of liaison classes},
-   journal={Invent. Math.},
-   volume={75},
-   date={1984},
-   number={2},
-   pages={301--325},
-%   issn={0020-9910},
-%   review={\MR{732549}},
-%   doi={10.1007/BF01388567},
+
+
+\bib{HHL23}{article}{
+   author={Hanlon, Andrew},
+   author={Hicks, Jeff},
+   author={Lazarev, Oleg},
+   title={Resolutions of toric subvarieties by line bundles and applications},
+   date={2023},
+   note={Pre-print: \href{https://arxiv.org/abs/2303.03763}{arxiv:2303.03763}}
+   }
+   
+   
+
+\bib{kontsevich93}{article}{
+   author={Kontsevich, Maxim},
+   title={Formal (non)commutative symplectic geometry},
+   conference={
+      title={The Gelfand Mathematical Seminars, 1990--1992},
+   },
+   book={
+      publisher={Birkh\"{a}user Boston, Boston, MA},
+   },
+   isbn={0-8176-3689-7},
+   date={1993},
+   pages={173--187}
 }
 
-\bib{hunekeUlrich87}{article}{
-   author={Huneke, Craig},
-   author={Ulrich, Bernd},
-   title={The structure of linkage},
-   journal={Ann. of Math. (2)},
-   volume={126},
-   date={1987},
-   number={2},
-   pages={277--334},
-%   issn={0003-486X},
-%   review={\MR{908149}},
-%   doi={10.2307/1971402},
-}
-	
-\bib{hunekeUlrich88}{article}{
-   author={Huneke, Craig},
-   author={Ulrich, Bernd},
-   title={Algebraic linkage},
-   journal={Duke Math. J.},
-   volume={56},
-   date={1988},
-   number={3},
-   pages={415--429},
-%   issn={0012-7094},
-%   review={\MR{948528}},
-%   doi={10.1215/S0012-7094-88-05618-9},
-}
+\bib{kontsevich94}{article}{
+   author={Kontsevich, Maxim},
+   title={Feynman diagrams and low-dimensional topology},
+   conference={
+      title={First European Congress of Mathematics, Vol. II},
+      address={Paris},
+      date={1992},
+   },
+   book={
+      series={Progr. Math.},
+      volume={120},
+      publisher={Birkh\"{a}user, Basel},
+   },
+   isbn={3-7643-2799-5},
+   date={1994},
+   pages={97--121}
+   }
+
 	
 \bib{lazarsfeldPareschiPopa11}{article}{
    author={Lazarsfeld, Robert},
@@ -1580,47 +1637,6 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 %   review={\MR{2008719}},
 %   doi={10.1090/S1056-3911-03-00345-X},
 }
-	
-	
-\bib{peskineSzpiro74}{article}{
-   author={Peskine, C.},
-   author={Szpiro, L.},
-   title={Liaison des vari\'{e}t\'{e}s alg\'{e}briques. I},
-   language={French},
-   journal={Invent. Math.},
-   volume={26},
-   date={1974},
-   pages={271--302},
-%   issn={0020-9910},
-%   review={\MR{364271}},
-%   doi={10.1007/BF01425554},
-}
-
-\bib{poonen04}{article}{
-   author={Poonen, Bjorn},
-   title={Bertini theorems over finite fields},
-   journal={Ann. of Math. (2)},
-   volume={160},
-   date={2004},
-   number={3},
-   pages={1099--1127},
-%   issn={0003-486X},
-%   review={\MR{2144974}},
-%   doi={10.4007/annals.2004.160.1099},
-}
-
-\bib{rao78}{article}{
-   author={Prabhakar Rao, A.},
-   title={Liaison among curves in ${\bf P}^{3}$},
-   journal={Invent. Math.},
-   volume={50},
-   date={1978/79},
-   number={3},
-   pages={205--217},
-%   issn={0020-9910},
-%   review={\MR{520926}},
-%   doi={10.1007/BF01410078},
-}
 
 \bib{schreyer86}{article}{
    author={Schreyer, Frank-Olaf},
@@ -1661,6 +1677,20 @@ there exists a smooth curve over $\fF_{q}$ whose Jacobian $J$ maps surjectively 
 %   issn={0010-437X},
 %   review={\MR{2157134}},
 %   doi={10.1112/S0010437X05001387},
+}
+
+\bib{willwacher15}{article}{
+   author={Willwacher, Thomas},
+   title={M. Kontsevich's graph complex and the Grothendieck-Teichm\"{u}ller
+   Lie algebra},
+   journal={Invent. Math.},
+   volume={200},
+   date={2015},
+   number={3},
+   pages={671--760},
+   issn={0020-9910},
+   review={\MR{3348138}},
+   doi={10.1007/s00222-014-0528-x},
 }
 	
 \end{biblist}
