@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  18 OCT 2023 16:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  20 OCT 2023 14:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1033,17 +1033,17 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
 (Font)              using `OT1/cmr/bx/n' instead on input line 289.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 296--300
+Underfull \hbox (badness 10000) in paragraph at lines 296--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--305
+Underfull \hbox (badness 10000) in paragraph at lines 296--303
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--314
+Underfull \hbox (badness 10000) in paragraph at lines 308--312
 
  []
 
@@ -1057,25 +1057,21 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 315--323
+Underfull \hbox (badness 10000) in paragraph at lines 313--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--323
+Underfull \hbox (badness 10000) in paragraph at lines 313--321
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--333
+Underfull \hbox (badness 10000) in paragraph at lines 322--331
 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-[3] (./Diversity Statement-v0.aux)
+[2] (./Diversity Statement-v0.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1084,13 +1080,13 @@ d.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27665 strings out of 478994
- 526777 string characters out of 5858183
+ 27672 strings out of 478994
+ 526835 string characters out of 5858183
  877028 words of memory out of 5000000
  44376 multiletter control sequences out of 15000+600000
- 415413 words of font info for 112 fonts, out of 8000000 for 9000
+ 415683 words of font info for 116 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 113i,5n,116p,1376b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,5n,116p,1315b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1101,10 +1097,10 @@ ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/loc
 al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "Diversity Statement-v0.pdf" (3 pages, 103816 bytes).
+Output written on "Diversity Statement-v0.pdf" (2 pages, 102889 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
+ 57 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
  18445 words of extra memory for PDF output out of 20736 (max. 10000000)
 
