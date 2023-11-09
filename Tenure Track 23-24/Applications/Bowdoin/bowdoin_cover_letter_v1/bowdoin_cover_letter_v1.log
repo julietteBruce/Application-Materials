@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  9 NOV 2023 10:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  9 NOV 2023 10:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**amherst_cover_letter_v1.tex
-(./amherst_cover_letter_v1.tex
+**bowdoin_cover_letter_v1.tex
+(./bowdoin_cover_letter_v1.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -228,8 +228,8 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count266
 \l__pdf_internal_box=\box48
 )
-(./amherst_cover_letter_v1.aux)
-\openout1 = `amherst_cover_letter_v1.aux'.
+(./bowdoin_cover_letter_v1.aux)
+\openout1 = `bowdoin_cover_letter_v1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -289,9 +289,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 36.
 LaTeX Info: Redefining \pageref on input line 36.
 LaTeX Info: Redefining \nameref on input line 36.
- (./amherst_cover_letter_v1.out) (./amherst_cover_letter_v1.out)
+ (./bowdoin_cover_letter_v1.out) (./bowdoin_cover_letter_v1.out)
 \@outlinefile=\write3
-\openout3 = `amherst_cover_letter_v1.out'.
+\openout3 = `bowdoin_cover_letter_v1.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 44.
@@ -307,18 +307,18 @@ Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 84.
+(epstopdf)             \includegraphics on input line 82.
 Package epstopdf Info: Output file is already uptodate.
 <brownlogo-eps-converted-to.pdf, id=5, 114.4275pt x 57.21375pt>
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 84.
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 82.
 
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 84.
+(Font)              <9> on input line 82.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 84.
+(Font)              <5> on input line 82.
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./brown
@@ -331,15 +331,15 @@ Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 117.
+(epstopdf)             \includegraphics on input line 116.
 Package epstopdf Info: Output file is already uptodate.
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 117
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 116
 .
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
- [2] (./amherst_cover_letter_v1.aux)
-Package rerunfilecheck Info: File `amherst_cover_letter_v1.out' has not changed
+ [2] (./bowdoin_cover_letter_v1.aux)
+Package rerunfilecheck Info: File `bowdoin_cover_letter_v1.out' has not changed
 .
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
@@ -350,14 +350,14 @@ Here is how much of TeX's memory you used:
  26017 multiletter control sequences out of 15000+600000
  408540 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,14n,74p,985b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,15n,74p,1313b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on amherst_cover_letter_v1.pdf (2 pages, 117808 bytes).
+Output written on bowdoin_cover_letter_v1.pdf (2 pages, 118064 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream
