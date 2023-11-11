@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  11 NOV 2023 11:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  11 NOV 2023 11:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**union_cover_letter_v1.tex
-(./union_cover_letter_v1.tex
+**jmu_cover_letter.tex
+(./jmu_cover_letter.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -228,8 +228,8 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count266
 \l__pdf_internal_box=\box48
 )
-(./union_cover_letter_v1.aux)
-\openout1 = `union_cover_letter_v1.aux'.
+(./jmu_cover_letter.aux)
+\openout1 = `jmu_cover_letter.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -289,9 +289,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 36.
 LaTeX Info: Redefining \pageref on input line 36.
 LaTeX Info: Redefining \nameref on input line 36.
- (./union_cover_letter_v1.out) (./union_cover_letter_v1.out)
+ (./jmu_cover_letter.out) (./jmu_cover_letter.out)
 \@outlinefile=\write3
-\openout3 = `union_cover_letter_v1.out'.
+\openout3 = `jmu_cover_letter.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 44.
@@ -307,27 +307,22 @@ Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 80.
+(epstopdf)             \includegraphics on input line 87.
 Package epstopdf Info: Output file is already uptodate.
 <brownlogo-eps-converted-to.pdf, id=5, 114.4275pt x 57.21375pt>
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 80.
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 87.
 
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 80.
+(Font)              <9> on input line 87.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 80.
+(Font)              <5> on input line 87.
  [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./brown
 logo-eps-converted-to.pdf>]
-Overfull \hbox (10.37962pt too wide) in paragraph at lines 93--94
-\OT1/cmr/m/n/10.95 di-ver-sity state-ment. I have three let-ters of rec-om-men-
-da-tion, Melody Chan ([]melody[]chan@brown.edu[]),
- []
-
 Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    date: 2023-04-05 22:38:10
 (epstopdf)                    size: 86214 bytes
@@ -336,32 +331,32 @@ Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 118.
+(epstopdf)             \includegraphics on input line 120.
 Package epstopdf Info: Output file is already uptodate.
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 118
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 120
 .
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
-[2] (./union_cover_letter_v1.aux)
-Package rerunfilecheck Info: File `union_cover_letter_v1.out' has not changed.
+ [2] (./jmu_cover_letter.aux)
+Package rerunfilecheck Info: File `jmu_cover_letter.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  8638 strings out of 478994
- 128591 string characters out of 5858183
- 437710 words of memory out of 5000000
+ 128516 string characters out of 5858183
+ 436685 words of memory out of 5000000
  26017 multiletter control sequences out of 15000+600000
  408540 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,14n,74p,1368b,602s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,14n,74p,937b,570s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on union_cover_letter_v1.pdf (2 pages, 119035 bytes).
+Output written on jmu_cover_letter.pdf (2 pages, 116691 bytes).
 PDF statistics:
  50 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream
