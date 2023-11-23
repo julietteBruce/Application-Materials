@@ -1,0 +1,330 @@
+\documentclass[10pt,reqno]{amsart}
+\usepackage{amsfonts,amsmath,amssymb,amsbsy,amstext,amsthm}
+\usepackage{accents,color,enumerate,enumitem,float,fullpage,parskip,verbatim}
+
+\usepackage{url}
+\usepackage[colorlinks=true,hyperindex, linkcolor=magenta, pagebackref=false, citecolor=cyan]{hyperref}
+\usepackage[alphabetic,lite,backrefs]{amsrefs} 
+
+\usepackage{eucal,bm,kpfonts,mathbbol}
+
+\usepackage{tikz,tikz-cd}	
+\usetikzlibrary{positioning, matrix, shapes}         								    				
+\usetikzlibrary{arrows,calc,matrix}
+
+\usepackage{lscape}
+
+\usepackage{titlesec}		
+\setcounter{secnumdepth}{4}						     					% Allows one to use nice section titles
+\titleformat{\section}[block]{\large\scshape\bfseries\filcenter}{\thesection.}{1em}{}		% Creates section titles
+\titleformat{\subsection}[hang]{\large\scshape\bfseries}{\thesubsection}{1em}{}			% Creates subsection titles
+\titleformat{\subsubsection}[hang]{\large\scshape\bfseries}{\thesubsubsection}{1em}{}			% Creates subsection titles
+
+\usepackage[titles]{tocloft}								     					% Creates table of fancy contents
+\setcounter{tocdepth}{4}
+\renewcommand{\contentsname}{}	     					% Renames and centers title of ToC
+
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{diagbox}
+\usepackage{cancel}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{prop}[lemma]{Proposition}
+\newtheorem{cor}[lemma]{Corollary}
+\newtheorem{conj}[lemma]{Conjecture}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{defn}[lemma]{Definition} 
+\newtheorem{notation}[lemma]{Notation} 
+\newtheorem{exercise}[lemma]{Exercise}
+\newtheorem{question}[lemma]{Question}
+\newtheorem*{assumption}{Assumption}
+\newtheorem{principle}[lemma]{Principle}
+\newtheorem{heuristic}[lemma]{Heuristic}
+
+\newtheorem{groupExercise}[lemma]{Group Exercise}
+\newtheorem{individualExercise}[lemma]{Individual Exercise}
+
+\newtheorem{theoremalpha}{Theorem}
+\newtheorem{corollaryalpha}[theoremalpha]{Corollary}
+\renewcommand{\thetheoremalpha}{\Alph{theoremalpha}}
+
+\theoremstyle{remark}
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{cexample}[lemma]{Counterexample}
+
+% Commands
+\newcommand{\initial}{\operatorname{in}}
+\newcommand{\NF}{\operatorname{NF}}
+\newcommand{\HF}{\operatorname{HF}}
+\newcommand{\Hilb}{\operatorname{Hilb}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\reg}{\operatorname{reg}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\img}{\operatorname{img}}
+\newcommand{\inn}{\operatorname{in}}
+
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\adeg}{\operatorname{adeg}}
+\newcommand{\pdim}{\operatorname{pdim}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\LT}{\operatorname{LT}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\NS}{\operatorname{NS}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Khar}{\operatorname{char}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Kl}{\operatorname{Cl}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\QQbar}{{\overline{\mathbb Q}}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\Bl}{\operatorname{Bl}}
+\newcommand{\Kox}{\operatorname{Cox}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\getsr}{\operatorname{Tor}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Hom}{\operatorname{Hom}} %done
+\newcommand{\sheafHom}{\mathcal{H}om}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\Sym}{\operatorname{Sym}} %done
+\newcommand{\GL}{{GL}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\Density}{\operatorname{Density}}
+\newcommand{\Syz}{\operatorname{Syz}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\cone}{\operatorname{\textbf{cone}}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\HS}{\operatorname{HS}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\oO}{\operatorname{O}}
+
+\newcommand{\defi}[1]{\textsf{#1}} % for defined terms
+
+\newcommand{\remd}{\operatorname{remd}}
+\newcommand{\colim}{\operatorname{colim}}
+\newcommand{\trideg}{\operatorname{tri.deg}}
+\newcommand{\indeg}{\operatorname{index.deg}}
+\newcommand{\moddeg}{\operatorname{mod.deg}}
+\newcommand{\Desc}{\operatorname{Desc}}
+\newcommand{\inter}{\operatorname{int}}
+\newcommand{\Nef}{\operatorname{Nef}}
+
+\newcommand{\doot}{\bullet}
+
+\newcommand{\Alt}{\bigwedge\nolimits}
+\newcommand{\Set}{\text{\bf Set}}										% Category of Sets
+\newcommand{\Sch}{\text{\bf Sch}}										% Category of Abelian Groups
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ideal}[1]{\langle #1 \rangle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Letters  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ff}{\mathbf f}
+\newcommand{\kk}{\mathbf k}
+\renewcommand{\aa}{\mathbf a}
+\newcommand{\bb}{\mathbf b}
+\newcommand{\cc}{\mathbf c}
+\newcommand{\dd}{\mathbf d}
+\newcommand{\ee}{\mathbf e}
+\newcommand{\vv}{\mathbf v}
+\newcommand{\ww}{\mathbf w}
+\newcommand{\xx}{\mathbf x}
+\newcommand{\yy}{\mathbf y}
+\newcommand{\rr}{\mathbf r}
+\newcommand{\ii}{\mathbf i}
+\newcommand{\nn}{\mathbf n}
+\newcommand{\pp}{\mathbf p}
+\newcommand{\mm}{\mathbf m}
+\newcommand{\fF}{\mathbf F}
+\newcommand{\gG}{\mathbf G}
+\newcommand{\eE}{\mathbf E}
+\newcommand{\qQ}{\mathbf Q}
+\newcommand{\tT}{\mathbf T}
+\renewcommand{\tt}{\mathbf t}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\zero}{\mathbf 0}
+
+\renewcommand{\H}{\operatorname{H}}
+\newcommand{\OO}{\operatorname{O}}
+\newcommand{\oo}{\operatorname{o}}
+
+
+%%%% Caligraphic Fonts - i.e. ????. %%%%%
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}} 
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\U}{\mathcal{U}} 		% Notice this is different
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%% Blackboard Fonts - i.e. Real Numbers, Integers, etc. %%%%%
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\renewcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}		% Notice this is \bO
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\bU}{\mathbb{U}}		% Notice this is \bU
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+ %%%% Sarif Fonts - i.e. ???? %%%%%
+\newcommand{\sA}{\mathsf{A}}
+\newcommand{\sB}{\mathsf{B}}
+\newcommand{\sC}{\mathsf{C}}
+\newcommand{\sD}{\mathsf{D}}
+\newcommand{\sE}{\mathsf{E}}
+\newcommand{\sF}{\mathsf{F}}
+\newcommand{\sG}{\mathsf{G}}
+\newcommand{\sH}{\mathsf{H}} 
+\newcommand{\sI}{\mathsf{I}}
+\newcommand{\sJ}{\mathsf{J}}
+\newcommand{\sK}{\mathsf{K}}
+\newcommand{\sL}{\mathsf{L}}
+\newcommand{\sM}{\mathsf{M}}
+\newcommand{\sN}{\mathsf{N}}
+\newcommand{\sO}{\mathsf{O}}
+\newcommand{\sP}{\mathsf{P}}
+\newcommand{\sQ}{\mathsf{Q}}
+\newcommand{\sR}{\mathsf{R}}
+\newcommand{\sS}{\mathsf{S}}
+\newcommand{\sT}{\mathsf{T}}
+\newcommand{\sU}{\mathsf{U}} 
+\newcommand{\sV}{\mathsf{V}}
+\newcommand{\sW}{\mathsf{W}}
+\newcommand{\sX}{\mathsf{X}}
+\newcommand{\sY}{\mathsf{Y}}
+\newcommand{\sZ}{\mathsf{Z}}
+ 
+ %%%% Fraktur Fonts - i.e. maximal ideals, prime ideals, etc. %%%%%
+\newcommand{\cl}{\mathfrak{cl}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\renewcommand{\r}{\mathfrak{r}}
+
+
+
+\newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
+
+
+
+%\address{Department of Mathematics, University of Wisconsin, Madison, WI}
+%\email{\href{mailto:juliette.bruce@math.wisc.edu}{juliette.bruce@math.wisc.edu}}
+%\urladdr{\url{http://math.wisc.edu/~juliettebruce/}}
+
+%\thanks{The author was partially supported by the NSF GRFP under Grant No. DGE-1256259 and NSF grant DMS-1502553.}
+
+%\subjclass[2010]{13D02, 14M25}
+
+\begin{document} 
+
+
+%\begin{abstract}
+%The goal of this note is to quantitatively study the behavior of asymptotic syzygies for certain toric surfaces, including Hirzebruch surfaces. In particular, we show that the asymptotic linear syzygies of Hirzebruch surfaces embedded by $\O(d,2)$ conform to Ein, Erman, and Lazarsfeld's normality heuristic. We also show that the higher degree asymptotic syzygies are not asymptotically normally distributed. 
+%\end{abstract}
+
+%\tableofcontents
+
+\setcounter{section}{1}
+
+NB: I am going to assume that students have seen vectors, matrices, and the vector spaces $\R^{n}$, but not linear transformations and bases. 
+
+Learning Outcomes: 1) Recognize that matrix multiplication is a convention, 2) Understand how to multiply 2x2 and 2x3 and 3x3 matrices, 3) Identify when matrix multiplication can be done, 4) Begin developing an understanding of why we choose this convention. 
+
+The goal for this lesson is to introduce matrix multiplication, which broadly can be thought of as a way to take two matrices and combine them into one new matrix. This is similar to how multiplication of numbers takes two numbers and gives use a new number, however, as we will see we will not be able to multiple just any matrices. 
+
+\begin{groupExercise}
+Together with your group members think of as many different ways as you can to ``multiple'' the following $2\times 2$ matrices together. Your only restriction is that the result of your ``multiplications'' should itself be a $2\times 2$ matrix
+\[
+\begin{pmatrix}
+4 & 0 \\
+7 & 3 \end{pmatrix} \odot 
+\begin{pmatrix} 1 & -1 \\
+1 & 3 
+\end{pmatrix}
+=\begin{pmatrix} \square & \square \\
+\square & \square
+\end{pmatrix}
+\]
+\end{groupExercise}
+
+Hopefully we have seen that there are many different ways we might define matrix multiplication, now let me tell you how we actually define it by the example above. 
+\[
+\begin{pmatrix}
+4 & 0 \\
+7 & 3 \end{pmatrix}  
+\begin{pmatrix} 1 & -1 \\
+1 & 3 
+\end{pmatrix}
+=\begin{pmatrix} \square & \square \\
+\square & \square
+\end{pmatrix}
+\]
+
+\begin{individualExercise}
+Do you think you see the pattern? Spend a moment and see if you cannot follow a similar pattern to multiple these two matrices. I've already gotten it a bit started for you. 
+\end{individualExercise}
+
+A key about matrix multiplication is that we do not want to just multiply square matrices, we also want to be able to sometimes multiple two NEDDED. 
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  11 NOV 2023 15:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  13 NOV 2023 12:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -300,10 +300,10 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 44.
 Package epstopdf Info: Source file: <brownlogo.eps>
-(epstopdf)                    date: 2023-04-05 22:38:10
+(epstopdf)                    date: 2023-04-05 20:38:10
 (epstopdf)                    size: 86214 bytes
 (epstopdf)             Output file: <brownlogo-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-04-07 11:38:13
+(epstopdf)                    date: 2023-04-07 09:38:13
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
@@ -324,30 +324,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./brown
 logo-eps-converted-to.pdf>]
-Overfull \hbox (0.17096pt too wide) in paragraph at lines 92--94
-\OT1/cmr/m/n/10.95 re-search let-ters: Chris-tine Berkesch ([]cberkesc@umn.edu[
-]), Melody Chan ([]melody[]chan@brown.edu[]),
- []
-
-
-Overfull \hbox (12.77573pt too wide) in paragraph at lines 92--94
-\OT1/cmr/m/n/10.95 smith@mast.queensu.ca[]), and one teach-ing let-ter from Shi
-rin Malekpour ([]shirin.malekpour@wisc.edu[]). 
+Overfull \hbox (35.83157pt too wide) in paragraph at lines 95--97
+\OT1/cmr/m/n/10.95 ([]de@berkeley.edu[]), Daniel Er-man ([]er-man@hawaii.edu[])
+, and Gre-gory G. Smith ([]gg-smith@mast.queensu.ca[]),
  []
 
 Package epstopdf Info: Source file: <brownlogo.eps>
-(epstopdf)                    date: 2023-04-05 22:38:10
+(epstopdf)                    date: 2023-04-05 20:38:10
 (epstopdf)                    size: 86214 bytes
 (epstopdf)             Output file: <brownlogo-eps-converted-to.pdf>
-(epstopdf)                    date: 2023-04-07 11:38:13
+(epstopdf)                    date: 2023-04-07 09:38:13
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 119.
+(epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 119
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 122
 .
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
 [2] (./cspu_pomona_cover_letter_v1.aux)
@@ -356,23 +350,23 @@ nged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8632 strings out of 478994
- 128582 string characters out of 5858183
+ 8638 strings out of 478994
+ 128681 string characters out of 5858183
  437740 words of memory out of 5000000
- 26013 multiletter control sequences out of 15000+600000
+ 26017 multiletter control sequences out of 15000+600000
  408540 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,14n,74p,880b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,14n,74p,973b,553s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on cspu_pomona_cover_letter_v1.pdf (2 pages, 118508 bytes).
+Output written on cspu_pomona_cover_letter_v1.pdf (2 pages, 119335 bytes).
 PDF statistics:
- 52 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
- 4 named destinations out of 1000 (max. 500000)
+ 53 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
+ 6 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
