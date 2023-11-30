@@ -317,7 +317,7 @@ Finally for case (3) note that if $1<a_{0}<2$ then $\floor{a_{0}}=1$. The next t
 \end{proof}
 
 
-\begin{lemma}
+\begin{lemma}\label{lem:floor}
 If $a_{0}\geq2$ is not an integer there exists a number $k\in \N$, depending on $a_{0}$, such that $a_{k} < \floor{a_{0}}$
 \end{lemma}
 
@@ -329,7 +329,7 @@ Towards a contradiction assume that $\floor{a_{n}}=\floor{a_{0}}$ for all $n\in 
 \end{enumerate}
 Here $f^{(n)}$ denotes the $n$-fold composition of $f$ with itself. Claim (i) follows from the fact that $f'(x)=\floor{a_{0}}\geq2$, with the last inequality coming from the fact that $a_{0}\geq2$. For (ii) note that since $\floor{a_{k}}=\floor{a_{0}}$ we also have that $a_{n}-\floor{a_{0}}=\ideal{a_{n}}$ for all $n\in \N$. The claim follows via induction from these facts. 
 
-Now let us consider the sequence $\{b_{n}\}_{n\in \N}$ defined by $b_{n}=\floor{a_{0}}+1+\floor{a_{0}}^{-n}$. The key property of this sequence, which follows from direct computation, is that $f(b_{n+1})=b_{n}$ for any $n\in \N$. Now notice that $b_{0}=\floor{a_{0}}$<a_{0} and $a_{0}< \lim_{n\to \infty}b_{n}= \floor{a_{0}}+1$, and so there exists $k\in \N$ such that 
+Now let us consider the sequence $\{b_{n}\}_{n\in \N}$ defined by $b_{n}=\floor{a_{0}}+1+\floor{a_{0}}^{-n}$. The key property of this sequence, which follows from direct computation, is that $f(b_{n+1})=b_{n}$ for any $n\in \N$. Now notice that $b_{0}=\floor{a_{0}}<a_{0}$ and $a_{0}< \lim_{n\to \infty}b_{n}= \floor{a_{0}}+1$, and so there exists $k\in \N$ such that 
 \[
 b_{k-1} \leq a_{0} < b_{k}.
 \]
@@ -341,11 +341,22 @@ By Lemmas~\ref{NEDEDED} we know the claim is true if $a_{0}$ is an integer or $0
 
 Turning to using Claim~\ref{claim:main} as a jumping off point for an REU-style research project; I like to approach student research as a holistic opportunity for students to explore their curiosities and develop new skills both in and out of mathematics. I feel like student research presents fantastic opportunities for students to develop skills in a number of different areas, e.g., writing, programming, art/visualization. With this in mind, I view a crucial aspect of my role in supporting student research in mathematics as carefully tailoring projects to the interests and goals of the students.
 
-\begin{enumerate}
-\item Given a real number $a_{0}>0$ determine how quickly the sequence $\{a_{n}\}_{n\in\N}$ converges.
-\item Our work above shows that regardless of starting value $a_{0}$ the sequence $\{a_{n}\}_{n\in\N}$ will converge to a number $a_{N}$ where $1\leq a_{N} < 2$. Moreover, every value in the interval $[1,2)$ occurs. Do some values occur more often than others?
-\item Replace $1$ with other constants? Replace $\ideal{a_{n}}$ with $\ideal{a_{n}}^{d}$ for some $d\geq2$.
-\end{enumerate}
+That said a natural first questions that I think may be interesting for a student to explore is studying how quickly the sequence $\{a_{n}\}_{n\in\N}$ stabilizes. In particular, since Lemma~\ref{lem:floor} is non-constructive our proof of Claim~\ref{claim:main} does not provide much insight into when the sequence converges. 
+
+\begin{question}
+Given a real number $a_{0}>0$ how quickly does the sequence $\{a_{n}\}_{n\in\N}$ stabilize?
+\end{question}
+
+There are many different ways one might answer this. For example, one could try to provide a precise formula, an upper bound,  or an asymptotic description on the smallest value of $n\in \N$ for which the sequence stabilizes. Moreover, one could attempt to student this question probabilistically by asking what the expected value of such an $n$ is. Some simple computational experiments seem to suggest these sequences stabilize relatively quickly. 
+
+
+A potentially different project for a student interested in art or graphic design might be to think of a way to artistically represent these sequences and how they stabilize. 
+
+Our work above shows that regardless of starting value $a_{0}$ the sequence $\{a_{n}\}_{n\in\N}$ will stabilize to a number $a_{N}$ where $1\leq a_{N} < 2$. Moreover, it is relatively easy to show that every number $c\in[1,2)$ there is a real number $a_{0}>0$ such that the sequence $\{a_{n}\}_{n\in\N}$ stabilizes to $c$. One question that might interest students is whether some values in this interval occur more often than others. More precisely, we might try to answer the following question
+
+\begin{question}
+What is the distribution of the 
+\end{question}
 
 Finally a project that may be out of the scope of some students, but would offer the opportunity for the students to learn some potentially interesting mathematics, would be consider the analogous problem for other fields. The jumping off point might be to consider a $p$-adic analog of Claim~\ref{claim:main} where $a_{0}\in \Q_{p}$ or more ambitiously $\overline{\Q_{p}}$. Note in this case the first hurdle would be finding appropriate ways to define the integer and decimal part of a $p$-adic number. One such approach would be to note that any number $x\in \Q_{p}$ can be written as $m+q$ where $m\in \Z_{p}$ and $|q|_{p}<1$. However, in this setting I feel like there may be other ways one might define the fractional part of a $p$-adic number. Exploring each of these different definitions, and their resulting effects on Claim~\ref{claim:main} seems interesting in it's own right. I should add the caveat that this last suggested direction feels quite speculative, and I would want to spend more time thinking about it before suggesting it to a student. 
 

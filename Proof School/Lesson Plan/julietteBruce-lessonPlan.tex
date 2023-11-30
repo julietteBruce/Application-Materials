@@ -1,6 +1,7 @@
 \documentclass[10pt,reqno]{amsart}
 \usepackage{amsfonts,amsmath,amssymb,amsbsy,amstext,amsthm}
-\usepackage{accents,color,enumerate,enumitem,float,fullpage,parskip,verbatim}
+\usepackage{accents,enumerate,enumitem,float,fullpage,parskip,verbatim}
+\usepackage[table]{xcolor}
 
 \usepackage{url}
 \usepackage[colorlinks=true,hyperindex, linkcolor=magenta, pagebackref=false, citecolor=cyan]{hyperref}
@@ -287,9 +288,7 @@
 
 \setcounter{section}{1}
 
-NB: I am going to assume that students have seen vectors, matrices, and the vector spaces $\R^{n}$, but not linear transformations and bases. 
-
-Learning Outcomes: 1) Recognize that matrix multiplication is a convention, 2) Understand how to multiply 2x2 and 2x3 and 3x3 matrices, 3) Identify when matrix multiplication can be done, 4) Begin developing an understanding of why we choose this convention. 
+\textbf{Learning Outcomes:} 1) Recognize that matrix multiplication is a convention, 2) Understand how to multiply matrices especially small matrices, 3) Be able to identify when matrix multiplication can be done, 4) Begin developing an understanding of why we choose this convention. 
 
 The goal for this lesson is to introduce matrix multiplication, which broadly can be thought of as a way to take two matrices and combine them into one new matrix. This is similar to how multiplication of numbers takes two numbers and gives use a new number, however, as we will see we will not be able to multiple just any matrices. 
 
@@ -300,7 +299,7 @@ Together with your group members think of as many different ways as you can to `
 4 & 0 \\
 7 & 3 \end{pmatrix} \odot 
 \begin{pmatrix} 1 & -1 \\
-1 & 3 
+2 & 5 
 \end{pmatrix}
 =\begin{pmatrix} \square & \square \\
 \square & \square
@@ -314,17 +313,112 @@ Hopefully we have seen that there are many different ways we might define matrix
 4 & 0 \\
 7 & 3 \end{pmatrix}  
 \begin{pmatrix} 1 & -1 \\
-1 & 3 
+2 & 5 
 \end{pmatrix}
-=\begin{pmatrix} \square & \square \\
-\square & \square
+=\begin{pmatrix} 4\cdot1+0\cdot2 & 4\cdot(-1)+0\cdot5  \\
+7\cdot1+3\cdot2 & 7\cdot(-1)+3\cdot5
+\end{pmatrix}=\begin{pmatrix}
+4 & -4 \\
+13 & 8
 \end{pmatrix}
 \]
 
 \begin{individualExercise}
-Do you think you see the pattern? Spend a moment and see if you cannot follow a similar pattern to multiple these two matrices. I've already gotten it a bit started for you. 
+Do you think you see the pattern? Spend a moment and see if you cannot follow a similar pattern to multiple these two matrices. I've already gotten it a bit started for you. (Don't give red values.)
+\[
+\begin{pmatrix}
+6 & 7 \\
+8 & 9
+\end{pmatrix}
+\begin{pmatrix}
+0 & 1 \\
+1 & 0\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+6 \cdot 0 + 7 \cdot 1 & {\color{red} 6 \cdot 1 + 7 \cdot 0} \\
+{\color{red} 8 \cdot 0 + 9 \cdot 1} & 8 \cdot 1 + 9 \cdot 0 
+\end{pmatrix}=
+\begin{pmatrix}
+7 & 6 \\
+9 & 8
+\end{pmatrix}.
+\]
 \end{individualExercise}
 
-A key about matrix multiplication is that we do not want to just multiply square matrices, we also want to be able to sometimes multiple two NEDDED. 
+A key about matrix multiplication is that we do not want to just multiply square matrices, we also want to be able to sometimes multiple two matrices of different sizes. 
+
+\begin{individualExercise}
+Do you think you see the pattern? Spend a moment and see if you cannot follow a similar pattern to multiple these two matrices. I've already gotten it a bit started for you. (Don't give red values.)
+\[
+\begin{pmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{pmatrix}
+\begin{pmatrix}
+1 & 0 \\
+-2 & 1\\
+4 & 6 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+1\cdot 1 + 2\cdot (-2) + 3\cdot 4 & {\color{red}1\cdot 0 + 2\cdot 1 + 3\cdot  6} \\
+{\color{red}4\cdot 1 + 5\cdot (-2) + 6\cdot 4} & 4\cdot 0 + 5\cdot 1 + 6\cdot  6
+\end{pmatrix}=
+\begin{pmatrix}
+9 & 20 \\
+18 & 41
+\end{pmatrix}.
+\]
+\end{individualExercise}
+
+\begin{groupExercise}
+Below are five different matrices of varying sizes. Together with your group try to multiple these matrices together in as many different ways as possible:
+\[
+A_{1}=\begin{pmatrix}
+-1 & 0 \\
+0 & -1 
+\end{pmatrix}, \quad 
+A_{2}=\begin{pmatrix} 3 \\
+5
+\end{pmatrix}, \quad 
+A_{3}=\begin{pmatrix} \frac{3}{2} & 5 & -3 \\
+17 & 3 & -2
+\end{pmatrix}, \quad 
+A_{4} = \begin{pmatrix} 
+1 & 1 & 1
+\end{pmatrix}, \quad
+A_{5} = \begin{pmatrix} 0 & -1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1
+\end{pmatrix}.
+\]
+{\color{red}Answer:  $A_{1}A_{2}$, $A_{1}A_{3}$, $A_{3}A_{5}$, $A_{4}A_{5}$, and if we want to include multiplying three matrixes $A_{1}A_{2}A_{3}$} Why can you not multiple the other ones? Do you notice any patterns or surprising results? Try to write down a general set of instructions for how you would multiply two matrices. 
+\end{groupExercise}
+
+As we saw in the above example we cannot always multiple two matrices together, for example we cannot multiple  $A_{1}$ and $A_{5}$. In particular, since we are doing row times column, row times column, we can only multiple two matrices if their sizes line up:
+\begin{center}
+\textbf{We can multiple $AB$ if the length of a row of $A$ equals a length of a column of $B$.}
+\end{center}
+
+\begin{individualExercise}
+Remember that we say that $A$ is a $m\times n$ matrix if it has $m$ rows and $n$ columns. If $B$ is a $m'\times n'$ matrix can you describe when we can multiple $AB$ in terms of $m,n,m',n'$? What is the size of $AB$?
+\end{individualExercise}
+
+\[
+  \left(\begin{array}{cccc}
+    \rowcolor{red!20}
+    a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+    a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+   \rowcolor{blue!20}
+    0   & 0   & \x & \x \\
+    0   & 0   & 0  & \x \\
+    \y a  &  b  & \y c &  d\\
+  \end{array}\right)
+  \]
+
+\begin{individualExercise}
+Think about what questions you have matrix multiplication. Write down three questions about matrix multiplication you would like to have answered by the end of the next class period. 
+\end{individualExercise}
 
 \end{document}

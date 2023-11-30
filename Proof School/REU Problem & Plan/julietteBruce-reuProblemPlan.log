@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  14 NOV 2023 11:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  27 NOV 2023 13:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1354,28 +1354,44 @@ jkp/m/it/10 f\OT1/jkp/m/n/10 (\OML/jkp/m/it/10 x\OT1/jkp/m/n/10 ) = \OMS/jkp/m/
 n/10 b\OML/jkp/m/it/10 a[]\OMS/jkp/m/n/10 c [] \OT1/jkp/m/n/10 +
  []
 
-./julietteBruce-reuProblemPlan.tex:332: Missing $ inserted.
-<inserted text> 
-                $
-l.332 ... Now notice that $b_{0}=\floor{a_{0}}$<a_
-                                                  {0} and $a_{0}< \lim_{n\to...
 
-? 
-./julietteBruce-reuProblemPlan.tex:332: Emergency stop.
-<inserted text> 
-                $
-l.332 ... Now notice that $b_{0}=\floor{a_{0}}$<a_
-                                                  {0} and $a_{0}< \lim_{n\to...
-End of file on the terminal!
+LaTeX Warning: Reference `NEDEDED' on page 1 undefined on input line 339.
 
- 
+
+LaTeX Warning: Reference `NEDEDED' on page 1 undefined on input line 339.
+
+[1{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] (./julietteBruce-reuProblemPlan.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `julietteBruce-reuProblemPlan.out' has not ch
+anged.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
 Here is how much of TeX's memory you used:
- 27261 strings out of 478994
- 511098 string characters out of 5858183
- 815163 words of memory out of 5000000
- 44048 multiletter control sequences out of 15000+600000
- 427979 words of font info for 91 fonts, out of 8000000 for 9000
+ 27292 strings out of 478994
+ 511382 string characters out of 5858183
+ 825188 words of memory out of 5000000
+ 44051 multiletter control sequences out of 15000+600000
+ 432864 words of font info for 102 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 113i,3n,116p,1217b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
-./julietteBruce-reuProblemPlan.tex:332:  ==> Fatal error occurred, no output PD
-F file produced!
+ 113i,5n,116p,1217b,406s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.en
+c}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/local/t
+exlive/2021/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb></usr/local/te
+xlive/2021/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb></usr/local/texliv
+e/2021/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb></usr/local/texlive/2021
+/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb></usr/local/texlive/2021/te
+xmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb></usr/local/texlive/2021/texmf-
+dist/fonts/type1/public/kpfonts/jkpmne.pfb></usr/local/texlive/2021/texmf-dist/
+fonts/type1/public/kpfonts/jkpsy.pfb></usr/local/texlive/2021/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msam10.pfb>
+Output written on julietteBruce-reuProblemPlan.pdf (2 pages, 71621 bytes).
+PDF statistics:
+ 80 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 15 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+
