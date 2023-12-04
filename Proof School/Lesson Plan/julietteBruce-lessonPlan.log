@@ -1310,4 +1310,50 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring ON
+Package hyperref Info: Link coloring ON on input line 280.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count332
+)
+LaTeX Info: Redefining \ref on input line 280.
+LaTeX Info: Redefining \pageref on input line 280.
+LaTeX Info: Redefining \nameref on input line 280.
+ (./julietteBruce-lessonPlan.out) (./julietteBruce-lessonPlan.out)
+\@outlinefile=\write4
+\openout4 = `julietteBruce-lessonPlan.out'.
+
+
+(./julietteBruce-lessonPlan.brf)
+\tf@brf=\write5
+\openout5 = `julietteBruce-lessonPlan.brf'.
+
+
+./julietteBruce-lessonPlan.tex:414: Undefined control sequence.
+l.414     0   & 0   & \x
+                         & \x \\
+? 
+./julietteBruce-lessonPlan.tex:414: Emergency stop.
+l.414     0   & 0   & \x
+                         & \x \\
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 27298 strings out of 478994
+ 511252 string characters out of 5858183
+ 824101 words of memory out of 5000000
+ 44088 multiletter control sequences out of 15000+600000
+ 427774 words of font info for 90 fonts, out of 8000000 for 9000
+ 1302 hyphenation exceptions out of 8191
+ 113i,8n,116p,1213b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
+./julietteBruce-lessonPlan.tex:414:  ==> Fatal error occurred, no output PDF fi
+le produced!

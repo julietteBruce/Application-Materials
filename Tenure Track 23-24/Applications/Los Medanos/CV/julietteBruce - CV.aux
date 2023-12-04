@@ -16,5 +16,14 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
-\@ifundefined{amsrefs@bibcite}{}{\let\bibcite\amsrefs@bibcite}
-\bibstyle{amsra}
+\expandafter\ifx\csname c@revi1\endcsname\relax \newcounter{revi1}\fi
+\setcounter{revi1}{11} 
+\expandafter\ifx\csname c@revi2\endcsname\relax \newcounter{revi2}\fi
+\setcounter{revi2}{4} 
+\expandafter\ifx\csname c@revi3\endcsname\relax \newcounter{revi3}\fi
+\setcounter{revi3}{4} 
+\expandafter\ifx\csname c@revi4\endcsname\relax \newcounter{revi4}\fi
+\setcounter{revi4}{2} 
+\expandafter\ifx\csname c@revi5\endcsname\relax \newcounter{revi5}\fi
+\setcounter{revi5}{1} 
+\gdef \@abspage@last{10}
