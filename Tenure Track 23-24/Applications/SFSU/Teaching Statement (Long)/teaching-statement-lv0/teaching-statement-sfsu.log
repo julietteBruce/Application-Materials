@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  5 DEC 2023 19:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  6 DEC 2023 11:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**teaching-statement-lv0.tex
-(./teaching-statement-lv0.tex
+**teaching-statement-sfsu.tex
+(./teaching-statement-sfsu.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amscls/amsart.cls
@@ -955,8 +955,8 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
 \l__pdf_internal_box=\box91
 )
-(./teaching-statement-lv0.aux)
-\openout1 = `teaching-statement-lv0.aux'.
+(./teaching-statement-sfsu.aux)
+\openout1 = `teaching-statement-sfsu.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 288.
 LaTeX Font Info:    ... okay on input line 288.
@@ -1027,9 +1027,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 288.
 LaTeX Info: Redefining \pageref on input line 288.
 LaTeX Info: Redefining \nameref on input line 288.
- (./teaching-statement-lv0.out) (./teaching-statement-lv0.out)
+ (./teaching-statement-sfsu.out) (./teaching-statement-sfsu.out)
 \@outlinefile=\write4
-\openout4 = `teaching-statement-lv0.out'.
+\openout4 = `teaching-statement-sfsu.out'.
 
 
 *geometry* driver: auto-detecting
@@ -1105,29 +1105,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--328
 
  []
 
-[2] (./teaching-statement-lv0.aux)
+[2] (./teaching-statement-sfsu.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `teaching-statement-lv0.out' has not changed.
-
+Package rerunfilecheck Info: File `teaching-statement-sfsu.out' has not changed
+.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
  28104 strings out of 478994
- 533395 string characters out of 5858183
- 892423 words of memory out of 5000000
+ 533412 string characters out of 5858183
+ 892428 words of memory out of 5000000
  44832 multiletter control sequences out of 15000+600000
  414267 words of font info for 101 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 113i,5n,116p,1487b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,5n,116p,1488b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
 local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on teaching-statement-lv0.pdf (2 pages, 89301 bytes).
+Output written on teaching-statement-sfsu.pdf (2 pages, 89325 bytes).
 PDF statistics:
  44 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
