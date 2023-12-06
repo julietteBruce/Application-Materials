@@ -1,0 +1,343 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage{amsfonts,amsmath,amssymb,amsbsy,amstext,amsthm,mathtools}
+\usepackage{accents,color,enumerate,enumitem,float,fullpage,verbatim}
+
+\usepackage{url}
+\usepackage[colorlinks=true,hyperindex, linkcolor=magenta, pagebackref=false, citecolor=cyan]{hyperref}
+\usepackage[alphabetic,lite]{amsrefs} 
+
+%\usepackage{eucal,bm,kpfonts,mathbbol}
+
+%\usepackage{parskip}
+\usepackage{tikz,tikz-cd}	
+\usetikzlibrary{positioning, matrix, shapes}         								    				
+\usetikzlibrary{arrows,calc,matrix}
+
+\usepackage{lscape}
+
+\usepackage{microtype}
+
+\usepackage[letterpaper, margin=.7in]{geometry}
+
+
+\usepackage{titlesec}		
+\setcounter{secnumdepth}{4}						     					% Allows one to use nice section titles
+\titleformat{\section}[runin]{\scshape\bfseries}{\thesection.}{1em}{}		% Creates section titles
+\titleformat{\subsection}[runin]{\scshape\bfseries}{\thesubsection}{1em}{}			% Creates subsection titles
+\titleformat{\subsubsection}[runin]{\scshape\bfseries}{\thesubsubsection}{1em}{}			% Creates subsection titles
+
+\usepackage[titles]{tocloft}								     					% Creates table of fancy contents
+\setcounter{tocdepth}{4}
+\renewcommand{\contentsname}{}	     					% Renames and centers title of ToC
+
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{diagbox}
+\usepackage{cancel}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{goalTheorem}[lemma]{Goal Theorem}
+\newtheorem{prop}[lemma]{Proposition}
+\newtheorem{cor}[lemma]{Corollary}
+\newtheorem{conj}[lemma]{Conjecture}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{defn}[lemma]{Definition} 
+\newtheorem{notation}[lemma]{Notation} 
+\newtheorem{exercise}[lemma]{Exercise}
+\newtheorem{question}[lemma]{Question}
+\newtheorem*{assumption}{Assumption}
+\newtheorem{principle}[lemma]{Principle}
+\newtheorem{heuristic}[lemma]{Heuristic}
+
+\newtheorem{theoremalpha}{Theorem}
+\newtheorem{corollaryalpha}[theoremalpha]{Corollary}
+\renewcommand{\thetheoremalpha}{\Alph{theoremalpha}}
+
+\theoremstyle{remark}
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{cexample}[lemma]{Counterexample}
+
+% Commands
+\newcommand{\initial}{\operatorname{in}}
+\newcommand{\NF}{\operatorname{NF}}
+\newcommand{\HF}{\operatorname{HF}}
+\newcommand{\Hilb}{\operatorname{Hilb}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\reg}{\operatorname{reg}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\img}{\operatorname{img}}
+\newcommand{\inn}{\operatorname{in}}
+
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\adeg}{\operatorname{adeg}}
+\newcommand{\pdim}{\operatorname{pdim}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\LT}{\operatorname{LT}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\NS}{\operatorname{NS}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Khar}{\operatorname{char}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Kl}{\operatorname{Cl}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\QQbar}{{\overline{\mathbb Q}}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\Bl}{\operatorname{Bl}}
+\newcommand{\Kox}{\operatorname{Cox}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\getsr}{\operatorname{Tor}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Hom}{\operatorname{Hom}} %done
+\newcommand{\sheafHom}{\mathcal{H}om}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\rank}{\operatorname{rank}} 
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\Sym}{\operatorname{Sym}} %done
+\newcommand{\GL}{{GL}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\Density}{\operatorname{Density}}
+\newcommand{\Syz}{\operatorname{Syz}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\cone}{\operatorname{\textbf{cone}}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\HS}{\operatorname{HS}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\oO}{\operatorname{O}}
+
+\newcommand{\defi}[1]{\textsf{#1}} % for defined terms
+
+\newcommand{\remd}{\operatorname{remd}}
+\newcommand{\colim}{\operatorname{colim}}
+\newcommand{\trideg}{\operatorname{tri.deg}}
+\newcommand{\indeg}{\operatorname{index.deg}}
+\newcommand{\moddeg}{\operatorname{mod.deg}}
+\newcommand{\Desc}{\operatorname{Desc}}
+\newcommand{\inter}{\operatorname{int}}
+\newcommand{\Nef}{\operatorname{Nef}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\Cox}{\operatorname{Cox}}
+
+\newcommand{\doot}{\bullet}
+
+\newcommand{\Alt}{\bigwedge\nolimits}
+\newcommand{\Set}{\text{\bf Set}}										% Category of Sets
+\newcommand{\Sch}{\text{\bf Sch}}										% Category of Abelian Groups
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Letters  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ff}{\mathbf f}
+\newcommand{\kk}{\mathbf k}
+\renewcommand{\aa}{\mathbf a}
+\newcommand{\bb}{\mathbf b}
+\newcommand{\cc}{\mathbf c}
+\newcommand{\dd}{\mathbf d}
+\newcommand{\ee}{\mathbf e}
+\newcommand{\vv}{\mathbf v}
+\newcommand{\ww}{\mathbf w}
+\newcommand{\xx}{\mathbf x}
+\newcommand{\yy}{\mathbf y}
+\newcommand{\rr}{\mathbf r}
+\newcommand{\ii}{\mathbf i}
+\newcommand{\nn}{\mathbf n}
+\newcommand{\pp}{\mathbf p}
+\newcommand{\mm}{\mathbf m}
+\newcommand{\fF}{\mathbf F}
+\newcommand{\gG}{\mathbf G}
+\newcommand{\eE}{\mathbf E}
+\newcommand{\qQ}{\mathbf Q}
+\newcommand{\tT}{\mathbf T}
+\renewcommand{\tt}{\mathbf t}
+\newcommand{\one}{\mathbf 1}
+\newcommand{\zero}{\mathbf 0}
+
+\renewcommand{\H}{\operatorname{H}}
+\newcommand{\OO}{\operatorname{O}}
+\newcommand{\oo}{\operatorname{o}}
+
+
+%%%% Caligraphic Fonts - i.e. ????. %%%%%
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}} 
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\U}{\mathcal{U}} 		% Notice this is different
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+%%%% Blackboard Fonts - i.e. Real Numbers, Integers, etc. %%%%%
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}		% Notice this is \bO
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\bU}{\mathbb{U}}		% Notice this is \bU
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathbb{X}}
+\newcommand{\Y}{\mathbb{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+ %%%% Sarif Fonts - i.e. ???? %%%%%
+\newcommand{\sA}{\mathsf{A}}
+\newcommand{\sB}{\mathsf{B}}
+\newcommand{\sC}{\mathsf{C}}
+\newcommand{\sD}{\mathsf{D}}
+\newcommand{\sE}{\mathsf{E}}
+\newcommand{\sF}{\mathsf{F}}
+\newcommand{\sG}{\mathsf{G}}
+\newcommand{\sH}{\mathsf{H}} 
+\newcommand{\sI}{\mathsf{I}}
+\newcommand{\sJ}{\mathsf{J}}
+\newcommand{\sK}{\mathsf{K}}
+\newcommand{\sL}{\mathsf{L}}
+\newcommand{\sM}{\mathsf{M}}
+\newcommand{\sN}{\mathsf{N}}
+\newcommand{\sO}{\mathsf{O}}
+\newcommand{\sP}{\mathsf{P}}
+\newcommand{\sQ}{\mathsf{Q}}
+\newcommand{\sR}{\mathsf{R}}
+\newcommand{\sS}{\mathsf{S}}
+\newcommand{\sT}{\mathsf{T}}
+\newcommand{\sU}{\mathsf{U}} 
+\newcommand{\sV}{\mathsf{V}}
+\newcommand{\sW}{\mathsf{W}}
+\newcommand{\sX}{\mathsf{X}}
+\newcommand{\sY}{\mathsf{Y}}
+\newcommand{\sZ}{\mathsf{Z}}
+ 
+ %%%% Fraktur Fonts - i.e. maximal ideals, prime ideals, etc. %%%%%
+\newcommand{\cl}{\mathfrak{cl}}
+\newcommand{\g}{\mathfrak{g}}
+\newcommand{\h}{\mathfrak{h}}
+\newcommand{\m}{\mathfrak{m}}
+\newcommand{\n}{\mathfrak{n}}
+\newcommand{\p}{\mathfrak{p}}
+\newcommand{\q}{\mathfrak{q}}
+\renewcommand{\r}{\mathfrak{r}}
+
+
+
+\newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
+
+
+\title{Juliette Bruce's Research Statement}
+
+%\author{Juliette Bruce}
+%\address{Department of Mathematics, University of Wisconsin, Madison, WI}
+%\email{\href{mailto:juliette.bruce@math.wisc.edu}{juliette.bruce@math.wisc.edu}}
+%\urladdr{\url{http://math.wisc.edu/~juliettebruce/}}
+
+%\thanks{The author was partially supported by the NSF GRFP under Grant No. DGE-1256259 and NSF grant DMS-1502553.}
+
+%\subjclass[2010]{13D02, 14M25}
+
+\begin{document} 
+
+%\maketitle
+\begingroup  
+  \centering
+  \large\scshape\bfseries Juliette Bruce's Diversity Statement\\[1em]
+\endgroup
+
+%\tableofcontents
+
+\setcounter{section}{0}
+
+\noindent \textbf{I. Introduction.} I believe strongly in the importance of inclusivity, diversity, and justice, and I am passionate about promoting these values within the mathematical community. I have worked hard to create a learning community that was as open and inclusive to as many people as possible. For example,  I have worked to make mathematics more inclusive of people from underrepresented groups; by founding events like \textit{Trans Math Day} and leading \textit{Spectra: the Association for LGBTQ+ Mathematicians}. Further, to promote the success of mathematicians from underrepresented groups I organized numerous national and international workshops and conferences. Going forward, I am excited to continue working hard to promote these values through my research, teaching, and service. 
+\\
+\\
+\noindent \textbf{II. Organizational Service.}  I have organized 10+ national/international conferences including \textit{M2@UW} (45 participants), \textit{Geometry and Arithmetic of Surfaces} (40 participants), \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Minority Genders} (35 participants), \textit{CAZoom} (70 participants), \textit{Western Algebraic Geometry Symposium} (100 participants), \textit{GEMS of Combinatorics} (40 participants), $\Spec(\overline{\Q})$ (50 participants), \textit{BATMOBILE} (30 participants),  \textit{GEMS of Combinatorics II} (30 participants), and \textit{GEMS of Commutative Algebra} (40 participants). Additionally, I organized three special sessions at AMS Sectional Meetings and the Joint Math Meetings.
+
+Multiple of these conferences were specifically aimed a supporting mathematicians from underrepresented groups. For example, \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Minority Genders} focused on forming communities of women and non-binary researchers, and  $\Spec(\overline{\Q})$ highlighted the research of LGBTQ+ mathematicians in algebra, geometry, and number theory. Further, the ``GEMS'' workshops sought to build a diverse community of mathematicians to address gender equity in the mathematical community from new perspectives. Going forward I am interested in expanding these ``GEMS'' workshops to other areas of mathematics and creating cross-field discussions that broaden the standard notion of gender equity in mathematics. 
+
+When organizing these conferences I paid particular attention to making them as inclusive of women and non-binary researchers as possible. For example, I designed the registration form to be thoughtful of the concerns of transgender researchers and highlighted the locations of single occupancy and ADA-compliant restrooms. The importance of such efforts was highlighted by the following comment I received from a participant, ``I just wanted to thank you for making this workshop inclusive for people with all gender identifications. ... I have always felt out of place when I participated in conferences/workshops for women when they do not specify that non-binary people are welcome ... I really appreciate those questions you put in the registration form. It means a lot to me.''
+\\
+\\
+\noindent \textbf{III. National \& International Advocacy.}  As a postdoc, I looked to deepen the impact of my work by attempting to promote underrepresented groups in mathematics beyond just campus. For example, I have worked with the Executive Committee of the \textit{Association for Women in Mathematics} to consider ways they could expand their support of women and non-binary mathematicians. In Winter 2023 I joined MSRI's  \textit{Committee on Women in Mathematics}. Since Fall 2020 I have organized \textit{Trans Math Day}, an annual virtual conference promoting the work of transgender and non-binary mathematicians. This conference regularly has ~50 participants. Highlighting the importance of such conferences one participant said, ``I've been really considering leaving mathematics.  [Trans Math Day] reminded me why I'm here and why I want to stay. If a conference like this had been around for me five years ago, my life would have been a lot better.'' Further, I have been a board member for \textit{Spectra: The Association for LGBTQ+ Mathematicians} since 2020, including as the inaugural president in  2022. In this role, I have overseen the growth and formalization of the organization, including the creation and adoption of bylaws, the creation of an invited lecture at the Joint Mathematics Meetings, and a \$20,000+ fundraising campaign. Spectra has ~500 members.
+
+Going forward I am excited to continue my work supporting LGBTQ+ students, and would love to continue building organizations to do so. In particular, given the amazing successes of programs like MSRI-UP and the EDGE Program, I would love to organize a summer REU program specifically aimed at supporting and promoting LGBTQ+ mathematicians. Further, I am in the early stages of planning a mentorship program to help guide LGBTQ+ undergraduates through the process of applying to graduate programs in mathematics and helping young LGBTQ+ graduate students establish themselves. The plan would be to break participants into groups with each group having LGBTQ+ mathematicians at various career stages, thus allowing participants to exchange advice, find support, and build mentoring networks.
+\\
+\\
+\noindent \textbf{IIV A More Inclusive Learning Community.} During the Fall of 2016, in response to a growing climate of hate, bias, and discrimination on campus, I led the creation of the Mathematics Department's \textit{Committee on Inclusivity and Diversity}. As a member of this committee, I drafted what would become the department's  commitment to inclusivity and non-discrimination. I also created syllabi statements that let students know about these department policies, and that inform them of campus resources. Everyone within the department is encouraged to use these statements. 
+
+
+While a graduate student I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM, which eventually grew to over fifty members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around... Thanks so much for organizing this stuff -- it's really helpful''. %Additionally, %I organized and obtained a travel grant for 11 members to attend the national oSTEM Inc. conference. 
+From 2017-2020 I led the campus social organization for LGBTQ+ graduate students, which had over 350 members. In this role, I have co-organized a weekly coffee social hour intended to give LGBTQ+ graduate students a place to relax, make friends, and discuss the challenges of being LGBTQ+ at the UW - Madison.
+\\
+\\
+\noindent \textbf{IV. Mentoring.} Inspired by the mentoring that helped me navigate the challenges of being a woman in mathematics, I have worked hard to mentor people from underrepresented groups. While a graduate student, I led reading courses with three undergraduates. One of these students, an undergraduate woman, worked with me for over a year, during which time I helped her apply for summer research projects. Working with \textit{Girls' Math Night Out} I lead two girls in high school through a project exploring cryptography. During 2018-2019, I mentored 6 first-year graduate students (all women, non-binary students, or students of color).
+
+As a postdoc, I began research projects with three graduate students (a majority of whom identify with a generally underrepresented group). These projects have resulted in two pre-prints, with additional projects still ongoing. Throughout the Spring and Summer of 2022, I did a reading course with a first-year graduate woman on algebraic geometry.  Additionally, I advised two summer research projects for undergraduate students. The first of these projects ran virtually during Summer 2021 when 6 undergraduates worked on a question related to the moduli space of Abelian varieties. In Summer 2022 I advised an undergraduate student on a research project related to my work on syzygies. This work is ongoing and will hopefully result in a paper. This student is now in graduate school for math and was awarded an NSF Graduate Fellowship. 
+%Since the Winter of 2018 I have led reading courses with three undergraduates through the \textit{Wisconsin Directed Reading Program}. One of these students, an undergraduate woman, worked with me for over a year. During this time I helped her through the process of applying for summer research projects. This student is now applying to graduate school to pursue a Ph.D. in math. Working with \textit{Girls' Math Night Out} I lead two girls in high school through a semester long project exploring RSA cryptography. During 2018-2019, I mentored 6 first-year graduate students (all women or non-binary students), advicing them oh how to navigte the program requirements, helping them find advisors, and organizing monthly social dinners. Since 2016 I have volunteered with the AWM's Mentoring Network, and currently I am mentoring two undergraduate women.
+\\
+\\
+\noindent \textbf{V. Virtual Mathematics} In response to the COVID-19 pandemic and the shift of many mathematical activities to virtual formats, I worked to find ways for these online activities to reach those often at the periphery. During the Summer and Fall of 2020, I helped with Ravi Vakil's \textit{Algebraic Geometry in the Time of Covid} project. This massive online open-access course in algebraic geometry brought together $\sim1,500$ participants from around the world. In Spring 2021, I organized an 8-week virtual reading course for undergraduates in algebraic geometry and commutative algebra. 
+\\
+\\
+\noindent \textbf{IV. Expanding the Learning Community.} The Madison Math Circle (MMC) is an outreach program sponsored by the UW - Madison Math Department. Its goal is to kindle excitement and appreciation of math in middle and high school students. In Fall 2014, I began volunteering with the MMC. At the time, the circle's main programming was a weekly on-campus lecture given by a member of the math department. After a year of volunteering, I stepped into the role of organizer. During my three years as an organizer, I worked to build stronger connections between the MMC, local schools and other outreach organizations focused on underrepresented groups. These ties helped the weekly attendance more than double, and grow substantially more diverse. I also led the creation of a new outreach arm of the MMC, which visits high schools around the state of Wisconsin to better serve students from underrepresented groups. This program has dramatically expanded the reach of the circle, and during my final year as an organizer, the MMC reached over 300 students.
+%\noindent \textbf{VI. Organizational Service.}   I have organized 10 conferences: \textit{Math Careers Beyond Academia } (50 participants), \textit{M2@UW} (45 participants), \textit{Geometry and Arithmetic of Surfaces} (40 participants), \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants), \textit{CAZoom} (70 participants), \textit{Western Algebraic Geometry Symposium} (100 participants), \textit{GEMS of Combinatorics} (40 participants), $\Spec(\overline{\Q})$ (50 participants), \textit{BATMOBILE} (November 2022), and  \textit{GEMS of Commutative Algebra} (40 participants). Additionally, I have organized three special sessions at AMS Sectional Meetings and the Joint Math Meetings. When organizing these conferences I have paid special attention to promoting women and other underrepresented groups in mathematics. For example, \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} and \textit{GEMS in Combinatorics/Commutative Algebra}, focused on forming communities of women and non-binary researchers. Further, $\Spec(\overline{\Q})$ highlighted the research of LGBTQ+ mathematicians in algebra, geometry, and number theory.
+%
+%When organizing these conferences I paid particular attention to making them as inclusive of women and non-binary researchers as possible. For example, I designed the registration form to be thoughtful of the concerns of transgender researchers and highlighted the locations of single occupancy and ADA-compliant restrooms. The importance of such efforts was highlighted by the following comment I received from a participant, ``I just wanted to thank you for making this workshop inclusive for people with all gender identifications. ... I have always felt out of place when I participated in conferences/workshops for women when they do not specify that non-binary people are welcome ... I really appreciate those questions you put in the registration form. It means a lot to me.''
+%In the Spring of 2017 I organized \textit{Math Careers Beyond Academia } (50 participants), a one-day professional development conference on STEM careers outside of academia. In April 2018 I organized \textit{M2@UW} (45 participants), a four-day workshop focused on creating new packages for Macaulay2. In February 2019 I organized \textit{Geometry and Arithmetic of Surfaces} (40 participants), a workshop providing a diverse group of early-career researchers the opportunity to learn about interesting topics in the arithmetic and algebraic geometry. In April 2019 I organized the \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} (35 participants)  focused on forming a community of women and non-binary researchers in commutative algebra, and give young graduate students from minority genders, role models for the next stage in their careers. I organized a \textit{Special Session on Combinatorial Algebraic Geometry} at the AMS Fall 2019 Central Sectional. At the 2020 Joint Mathematics Meetings, I am organizing a panel titled \textit{Supporting Transgender and Non-binary Students}. 
+%
+%When organizing these conferences I paid particular attention to making them as inclusive of women and non-binary researchers as possible. In particular, I worked hard to make sure there was gender parity among the speakers and participants.  For example, of the five speakers at G\&AoS four were from generally underrepresented groups with three women and one person of color speaking. Additionally, over 30 identify as either female or non-binary researchers. 
+%
+%I have given substantial thought to how to make many of the smaller aspects of conferences more inclusive. For example, I designed the registration form to be thoughtful of the concerns of transgender researchers, implemented the process of putting pronouns on name tags, highlighted the locations of single occupancy and ADA compliant restrooms. The importance of such efforts was highlighted by the following comment I received from a participant, ``I just wanted to thank you for making this workshop inclusive for people with all gender identifications. As a non-binary biologically female person I have always felt out of place when I participated in conferences/workshops for women when they do not specify that non-binary people are welcome or just assume I am female. I really appreciate those questions you put in the registration form. It means a lot to me.''
+\\
+\\
+\noindent \textbf{VII. Conclusion.} I have worked hard to develop programs, policies, and practices that promoted diversity, inclusion, and justice within the mathematical community. Going forward, I will continue promoting these values through my research, teaching, and service.
+
+
+\end{document}
