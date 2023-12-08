@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  6 DEC 2023 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  6 DEC 2023 20:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -379,12 +379,12 @@ Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 81.
+(epstopdf)             \includegraphics on input line 80.
 Package epstopdf Info: Output file is already uptodate.
 <brownlogo-eps-converted-to.pdf, id=5, 114.4275pt x 57.21375pt>
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 81.
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 80.
 
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
  [1
@@ -399,11 +399,11 @@ Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 101.
+(epstopdf)             \includegraphics on input line 100.
 Package epstopdf Info: Output file is already uptodate.
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 101
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 100
 .
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
  [2]
@@ -415,15 +415,15 @@ Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 107.
+(epstopdf)             \includegraphics on input line 106.
 Package epstopdf Info: Output file is already uptodate.
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 107
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 106
 .
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
  [3]
-Overfull \hbox (59.00914pt too wide) in paragraph at lines 110--111
+Overfull \hbox (59.00914pt too wide) in paragraph at lines 109--110
 \OT1/cmr/m/n/10.95 Smith ([]gg-smith@mast.queensu.ca[]), and one teach-ing let-
 ter from Shirin Malekpour ([]shirin.malekpour@wisc.edu[]). 
  []
@@ -436,11 +436,11 @@ Package epstopdf Info: Source file: <brownlogo.eps>
 (epstopdf)                    size: 40073 bytes
 (epstopdf)             Command: <repstopdf --outfile=brownlogo-eps-converted-to
 .pdf brownlogo.eps>
-(epstopdf)             \includegraphics on input line 135.
+(epstopdf)             \includegraphics on input line 134.
 Package epstopdf Info: Output file is already uptodate.
 File: brownlogo-eps-converted-to.pdf Graphic file (type pdf)
 <use brownlogo-eps-converted-to.pdf>
-Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 135
+Package pdftex.def Info: brownlogo-eps-converted-to.pdf  used on input line 134
 .
 (pdftex.def)             Requested size: 144.54607pt x 72.26999pt.
 [4] (./sfsu_cover_letter_v1.aux)
@@ -448,10 +448,10 @@ Package rerunfilecheck Info: File `sfsu_cover_letter_v1.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 9358 strings out of 478994
- 137213 string characters out of 5858183
+ 9357 strings out of 478994
+ 137205 string characters out of 5858183
  450375 words of memory out of 5000000
- 26700 multiletter control sequences out of 15000+600000
+ 26699 multiletter control sequences out of 15000+600000
  411727 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,15n,74p,1857b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -462,7 +462,7 @@ r/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
 /local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/l
 ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></u
 sr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on sfsu_cover_letter_v1.pdf (4 pages, 134642 bytes).
+Output written on sfsu_cover_letter_v1.pdf (4 pages, 134545 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  53 compressed objects within 1 object stream
