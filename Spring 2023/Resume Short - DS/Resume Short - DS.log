@@ -586,4 +586,48 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
 ty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title refere
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count297
+)
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
+ (./Resume Short - DS.out) (./Resume Short - DS.out)
+\@outlinefile=\write3
+\openout3 = `"Resume Short - DS.out"'.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 60.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 60.
+
+
+./Resume Short - DS.tex:108: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.108 ^^I}
+           % Description
+? 
+./Resume Short - DS.tex:108: Emergency stop.
+ ...                                              
+                                                  
+l.108 ^^I}
+           % Description
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 14117 strings out of 476919
+ 261824 string characters out of 5821839
+ 635558 words of memory out of 5000000
+ 33956 multiletter control sequences out of 15000+600000
+ 404014 words of font info for 56 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 96i,2n,103p,508b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
