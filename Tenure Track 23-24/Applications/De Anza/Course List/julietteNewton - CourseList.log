@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  4 DEC 2023 12:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  14 JAN 2024 07:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"julietteBruce - CV.tex"
-(./julietteBruce - CV.tex
+**"julietteNewton - CourseList.tex"
+(./julietteNewton - CourseList.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18>
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/article.cls
@@ -550,14 +550,8 @@ File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count288
 \l__pdf_internal_box=\box55
 )
-(./julietteBruce - CV.aux
-\c@revi1=\count289
-\c@revi2=\count290
-\c@revi3=\count291
-\c@revi4=\count292
-\c@revi5=\count293
-)
-\openout1 = `"julietteBruce - CV.aux"'.
+(./julietteNewton - CourseList.aux)
+\openout1 = `"julietteNewton - CourseList.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
 LaTeX Font Info:    ... okay on input line 128.
@@ -588,16 +582,16 @@ LaTeX Font Info:    ... okay on input line 128.
 
 (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count294
+\scratchcounter=\count289
 \scratchdimen=\dimen163
 \scratchbox=\box56
-\nofMPsegments=\count295
-\nofMParguments=\count296
+\nofMPsegments=\count290
+\nofMParguments=\count291
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count297
+\MPscratchCnt=\count292
 \MPscratchDim=\dimen164
-\MPnumerator=\count298
-\makeMPintoPDFobject=\count299
+\MPnumerator=\count293
+\makeMPintoPDFobject=\count294
 \everyMPtoPDFconversion=\toks29
 )
 Package hyperref Info: Link coloring ON on input line 128.
@@ -611,17 +605,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count300
+\c@section@level=\count295
 )
 LaTeX Info: Redefining \ref on input line 128.
 LaTeX Info: Redefining \pageref on input line 128.
 LaTeX Info: Redefining \nameref on input line 128.
- (./julietteBruce - CV.out) (./julietteBruce - CV.out)
+ (./julietteNewton - CourseList.out) (./julietteNewton - CourseList.out)
 \@outlinefile=\write3
-\openout3 = `"julietteBruce - CV.out"'.
+\openout3 = `"julietteNewton - CourseList.out"'.
 
-\c@mv@tabular=\count301
-\c@mv@boldtabular=\count302
+\c@mv@tabular=\count296
+\c@mv@boldtabular=\count297
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 130.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 130
@@ -649,52 +643,32 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 1
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Trying to load font information for TS1+Baskervaldx-TLF on 
-input line 145.
+input line 144.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/baskervaldx/TS1Baskervaldx-TLF.fd
 File: TS1Baskervaldx-TLF.fd 2014/03/31 (autoinst) Font definitions for TS1/Bask
 ervaldx-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 145.
+(Font)              scaled to size 10.95pt on input line 144.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/it' will be
-(Font)              scaled to size 10.95pt on input line 145.
-
-Overfull \hbox (0.83124pt too wide) in alignment at lines 195--195
-[] [] 
- []
-
-[1
+(Font)              scaled to size 10.95pt on input line 144.
+ [1
 
 {/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4]
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 499.
-LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 499.
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 499.
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 499.
-LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 499.
- [5] [6]
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 712.
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 712.
- [7] [8] [9] [10] (./julietteBruce - CV.aux)
-Package rerunfilecheck Info: File `"julietteBruce - CV".out' has not changed.
+[2] (./julietteNewton - CourseList.aux)
+Package rerunfilecheck Info: File `"julietteNewton - CourseList".out' has not c
+hanged.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11130 strings out of 478994
- 160205 string characters out of 5858183
- 491752 words of memory out of 5000000
- 28408 multiletter control sequences out of 15000+600000
- 444003 words of font info for 87 fonts, out of 8000000 for 9000
+ 11071 strings out of 478994
+ 159685 string characters out of 5858183
+ 481685 words of memory out of 5000000
+ 28366 multiletter control sequences out of 15000+600000
+ 428892 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,10n,74p,338b,445s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,10n,74p,331b,447s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_m4qttc.en
 c}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_2xv27p.en
 c}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
@@ -704,17 +678,11 @@ c}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 Bol.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/baskervaldx/Bask
 ervaldx-Ita.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/baskerva
 ldx/Baskervaldx-Reg.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-su
-per/sfsx1200.pfb>
-Output written on "julietteBruce - CV.pdf" (10 pages, 153457 bytes).
+cm-super/sfsx1200.pfb>
+Output written on "julietteNewton - CourseList.pdf" (2 pages, 85177 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
+ 41 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
