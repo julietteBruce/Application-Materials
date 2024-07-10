@@ -1,0 +1,377 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008-2014 Nathaniel Johnston <nathaniel@njohnston.ca> http://www.njohnston.ca
+%
+% Depending on your TeX distribution, you may need to download the revnum and longtable packages for this template to work!
+%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,12pt]{article}
+\newlength{\outerbordwidth}
+\usepackage{amstext,amsfonts,amssymb,amscd,amsbsy,amsmath}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage{array}
+\usepackage[svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{longtable}
+\usepackage{revnum}
+\usepackage{textcomp}
+
+\usepackage[colorlinks=true,urlcolor=blue,hyperfootnotes=false]{hyperref}
+\usepackage{tocloft}
+\usepackage{array}
+
+\usepackage[symbol]{footmisc}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%-----------------------------------------------------------
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+
+%-----------------------------------------------------------
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
+\setlength\LTleft{0.2in} % needed to make longtable full-width
+\setlength\LTright{0.2in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\fboxsep}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+
+% the next four commands allow for the \ressubheading environment to be 1, 2, 3, or 4 subrows, depending on which command you use. This is admittedly hack-ish, and should probably be replaced by a single more flexible command (with optional arguments) in the future
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingTalk}[2]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		#1 & #2 \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadingTalkBold}[2]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+\end{tabular*}\vspace{-6pt}}
+
+\newcommand{\ressubheadingb}[6]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand{\ressubheadingc}[8]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+		\textit{#5} & \textit{#6} \\
+		\textit{#7} & \textit{#8} \\
+\end{tabular*}\vspace{-6pt}}
+\newcommand\foo[9]{%
+    \def\tempb{#2}%
+    \def\tempc{#3}%
+    \def\tempd{#4}%
+    \def\tempe{#5}%
+    \def\tempf{#6}%
+    \def\tempg{#7}%
+    \def\temph{#8}%
+    \def\tempi{#9}%
+    \foocontinued
+}
+\newcommand\foocontinued[7]{%
+    % Do whatever you want with your 9+7 arguments here.
+}
+
+\newcommand{\ressubheadingd}[1]{
+	\def\argten{#1}%
+	\ressubheadingdb
+}
+\newcommand{\ressubheadingdb}[9]{
+\begin{tabular*}{6.5in}[t]{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{\argten} & #1 \\
+		\textit{#2} & \textit{#3} \\
+		\textit{#4} & \textit{#5} \\
+		\textit{#6} & \textit{#7} \\
+		\textit{#8} & \textit{#9} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+\usepackage[lf]{Baskervaldx}
+
+\begin{document}
+
+{\large \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\large Juliette Bruce}\smallskip & \textbf{\today}\smallskip \\
+Department of Mathematics & \\
+Brown University & juliette\_bruce1@brown.edu \\
+Providence, RI 02912& \hyperref{https://www.juliettebruce.xyz}{}{}{https://www.juliettebruce.xyz} \\
+\end{tabular*}}
+\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Employment \& Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.15in}
+\begin{itemize}	
+\item
+	\ressubheading{Brown University}{Providence, RI}{Postdoctoral Research Associate}{2022 -- Present}
+
+\item
+	\ressubheading{University of California, Berkeley}{Berkeley, CA}{NSF Postdoctoral Research Fellow}{2020-- 2022}
+
+\item
+	\ressubheading{University of Wisconsin}{Madison, WI}{Ph.D. Mathematics}{2014 -- August 2020}
+
+\item
+	\ressubheading{University of Michigan}{Ann Arbor, MI}{B.S. in Mathematics \& Political Science}{2010 -- 2014}
+%	\begin{itemize}
+%		\resitem{With High Honors and Distinction}
+%	\end{itemize}
+\end{itemize}
+\vspace{-0.15in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Research Interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Algebraic Geometry, Commutative Algebra, Arithmetic Geometry. Specifically, homological and combinatorial methods in  algebraic geometry and commutative algebra.
+\vspace{-0.15in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Selected Publications \& Preprints}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.15in}
+%\vspace{-0.15in}\subsection*{Peer-Reviewed Journal Articles}
+
+\begin{revnumerate}
+	
+\item
+	J.~Bruce, L.~Cranton Heller, M.~Sayrafi. Characterizing Multigraded Regularity on Products of Projective Space.  {\it Submitted}. E-Print:  \hyperref{https://arxiv.org/abs/2110.10705}{}{}{arXiv:2110.10705}
+	\vspace{-0.12in}
+\item
+	M.~Brandt, J.~Bruce, M.~Chan, M.~Melo, G.~Moreland, C.~Wolfe. On the Top-weight Cohomology of $\mathcal{A}_{g}$.  {\it Geometry \& Topology}, To appear. E-Print:  \hyperref{https://arxiv.org/abs/2012.02892}{}{}{arXiv:2012.02892}
+		\vspace{-0.12in}
+\item
+	J.~Bruce and D.~Erman. A probabilistic approach to systems of parameters and Noether normalization. {\it Algebra and Number Theory}, \textbf{13} (2019), no. 9, 2081–2102.
+		\vspace{-0.12in}
+\item
+	J.~Bruce, D.~Erman, S.~Goldstein, and J.~Yang. Conjectures and computations about Veronese syzygies.  {\it Experimental Mathematics}, \textbf{29} (2020), 398-413.
+		\vspace{-0.12in}
+\item
+	M.~Brandt, J.~Bruce, T.~Brysiewicz, R.~Krone, and E.~Robeva. The degree of $SO(n)$. {\it Combinatorial Algebraic Geometry}, 207-224, Fields Inst. Commun. \textbf{80} (2017).
+\end{revnumerate}
+
+\vspace{-0.35in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Selected Awards \& Honors \& Grants }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.15in}
+\begin{itemize}
+%\item 
+%	\ressubheading{US Junior Oberwolfach Fellow}{April 2022}{Awarded to outstanding junior scientists from US to participate in activities at Oberwolfach.}{}
+\item 
+	\ressubheading{Conference Grants DMS 2332592/1908799/1812462 -- \$73,000}{2018 -- Present}{National Science Foundation \& Fields Institue}{}
+
+\item 
+	\ressubheading{Postdoctoral Research Fellowship -- \$150,000}{2020 -- 2022}{National Science Foundation}{}
+	
+\item 
+	\ressubheading{Capstone Teaching Award}{October 2019}{Awarded to one student for an exceptional record of teaching excellence.}{}
+
+\item 
+	\ressubheading{Teaching Assistant Award for Exceptional Service}{February 2018}{Campus-wide award recognizing TA's who perform exceptional service}{}
+
+%	
+%\item 
+%	\ressubheading{Outstanding Achievement in Mathematics}{May 2014}{Dept. of Mathematics -- University of Michigan}{}
+%
+%\item 
+%	\ressubheading{Phi Beta Kappa}{April 2014}{University of Michigan}{}
+%
+%\item 
+%	\ressubheading{Chancellor's Opportunity Award}{April 2014}{University of Wisconsin}{}
+
+\end{itemize}
+
+
+\vspace{-0.15in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{ Conferences for Graduate Students Organized}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.15in}
+
+\begin{itemize}
+
+\item 
+\ressubheading{GEMS in Commutative Algebra}{University of Minnesota}{}{} 
+\vspace{-.2in}
+\item 
+\ressubheading{GEMS in Combinatorics (x2)}{Virtually / AIM}{}{} 
+\vspace{-.2in}
+\item 
+\ressubheading{Trans Math Day (x3)}{Held Virtually}{}{} 
+\vspace{-.2in}
+\item 
+\ressubheading{$\text{Spec}(\overline{\mathbb{Q}})$}{Fields Institute}{}{} 
+
+
+%\item
+%\ressubheading{Special Session on Commutative Algebra}{AMS Sectional}{May 1 - May 2, 2021}{} 
+
+
+
+%\item 
+%\ressubheading{Experimental Talks in Algebraic Geometry}{Held Virtually}{May  - July, 2020}{} 
+
+
+%\item 
+%\ressubheading{Spectra Panel: Supporting Transgender and Non-binary Students}{Joint Math Meetings}{January 18, 2020}{} 
+%
+%\item
+%\ressubheading{Special Session on Combinatorial Algebraic Geometry}{AMS Sectional}{September 14 - September 15, 2019}{} 
+\vspace{-.2in}
+\item 
+\ressubheading{GWCAWMMG}{University of Minnesota}{}{} 
+\end{itemize}
+
+\vspace{-0.35in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Outreach  \& Service Activities Aimed at Graduate Students}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.15in}
+
+\begin{itemize}
+\item 
+	\ressubheading{Spectra: The Association for LGBTQ+ Mathematicians }{}{President, Immediate Past President}{September 2020 -- Present}
+	
+\item 
+	\ressubheading{MSRI: Committee on Women in Mathematics }{}{Committee Member}{March 2023 -- Present}
+	
+%\item 
+%	\ressubheading{Equity, Diversity, and Inclusion in Mathematics}{CAIMS}{Panelist}{June 2021}
+%
+%
+%\item 
+%	\ressubheading{Diversity and Inclusion Panel}{Womxn in Math at Berkeley}{Panelist}{April 2021}
+\item 
+	\ressubheading{Michigan Research Experience for Graduate Students }{University of Michigan}{Project Leader}{July -- August 2023}
+	\begin{itemize}
+		\resitem{Lead a diverse group of 4 early-stage graduate students on a project in geometry.}
+	\end{itemize}
+	
+\item 
+	\ressubheading{Algebraic Geometry in the Time of COVID}{Held Virtually}{Shepard}{June 2020 -- October 2020}
+	\begin{itemize}
+		\resitem{A virtual, open access introductory graduate course with ~1600 participants.}
+	\end{itemize}
+		
+%\item 
+%	\ressubheading{How to Stay Productive as a Researcher}{Lunch in the Time of COVID}{Panelist}{June 2020}
+%
+%\item 
+%	\ressubheading{Mathematics Research Online: Hosting Virtual Events}{Held Virtually}{Panelist}{May 2020}
+%
+%\item 
+%	\ressubheading{Supporting Transgender and Non-binary Students}{MAA Panel at the JMM}{Panelist}{January 2020}
+%	
+
+\item 
+	\ressubheading{Graduate Peer Mentoring}{University of Wisconsin}{Mentor}{September 2018 -- December 2018}
+	\begin{itemize}
+		\resitem{Mentored 5 first year graduate students from minority genders, organizing monthly dinners where the mentees could discuss issues they were facing.}
+	\end{itemize}
+		
+\item 
+	\ressubheading{Out in STEM (oSTEM) @ UW-Madison}{University of Wisconsin}{co-Founder}{July 2017 -- Math 2018}
+	\begin{itemize}
+		\resitem{Founded, at the time. the only campus resource specifically for LGBTQ+ individuals in STEM, and grew the organization to over 50 members.}
+%\item 
+%	\ressubheading{Out in Math: Professional Issues Facing LGBTQ Mathematicians}{MAA Panel at the JMM}{Panelist}{January 2018}
+\end{itemize}
+
+\end{itemize}
+
+
+\vspace{-0.15in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Teaching Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.15in}
+
+\begin{itemize}
+\item 
+	\ressubheading{Math 221: Calculus and Analytic Geometry I}{University of Wisconsin}{Teaching Assistant (Average score 4.9/5.0)}{Fall 2014/2018/2019}
+	\begin{itemize}
+		\resitem{Selected as a TA coordinator in 2018 and 2019, and was responsible for overseeing all other TA's and mentoring first year TA's.}
+	\end{itemize}
+	
+\item 
+	\ressubheading{Math 228: Wisconsin Emerging Scholars}{University of Wisconsin}{Instructor (Average score: 5.0/5.0)}{Fall 2018}
+	\begin{itemize}
+		\resitem{Course providing students from underrepresented groups additional support.}
+	\end{itemize}
+
+%\item 
+%	\ressubheading{Hex and the 4 C's}{Michigan Math and Science Scholars}{Course Assistant}{Summer 2014}
+%
+%
+%\item 
+%	\ressubheading{Math 310: Explorations in Randomness}{University of Michigan}{Course Assistant}{Winter 2014}
+%	\begin{itemize}
+%		\resitem{Assisted facilitating inquiry based learning in the classroom.}
+%		\resitem{Responsible for office hours, grading, and review sessions.}
+%	\end{itemize}
+%
+%\item 
+%	\ressubheading{Math 490: Introduction to Topology}{University of Michigan}{Course Assistant}{Fall 2013}
+%	\begin{itemize}
+%		\resitem{Assisted facilitating inquiry based learning in the classroom.}
+%		\resitem{Responsible for office hours, grading, and review sessions.}
+%	\end{itemize}
+%
+%\item 
+%	\ressubheading{Graph Theory}{Michigan Math and Science Scholars}{Course Assistant}{Summer 2013}
+%
+%\item 
+%	\ressubheading{Math 351: Principals of Analysis}{University of Michigan}{Course Assistant}{Winter 2013}
+%
+%	
+%\item 
+%	\ressubheading{Math 105: Data, Functions, and Graphs}{University of Michigan}{Course Assistant}{Fall 2012}
+%
+%\item 
+%	\ressubheading{Math Lab}{University of Michigan}{Tutor}{Fall 2011 -- Winter 2013}
+
+\end{itemize}
+
+
+	
+\end{document}
