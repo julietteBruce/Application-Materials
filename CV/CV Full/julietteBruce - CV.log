@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  21 JUL 2024 09:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  23 JUL 2024 11:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -680,9 +680,9 @@ LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 440.
  [5] [6]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 672.
+(Font)              scaled to size 8.0pt on input line 673.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 672.
+(Font)              scaled to size 6.0pt on input line 673.
  [7] [8] [9] [10] [11] (./julietteBruce - CV.aux)
 Package rerunfilecheck Info: File `"julietteBruce - CV".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
@@ -690,7 +690,7 @@ Package rerunfilecheck Info: File `"julietteBruce - CV".out' has not changed.
 Here is how much of TeX's memory you used:
  11131 strings out of 478994
  160212 string characters out of 5858183
- 491752 words of memory out of 5000000
+ 490752 words of memory out of 5000000
  28408 multiletter control sequences out of 15000+600000
  444003 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -711,7 +711,7 @@ nts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
 symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-su
 per/sfsx1200.pfb>
-Output written on "julietteBruce - CV.pdf" (11 pages, 156415 bytes).
+Output written on "julietteBruce - CV.pdf" (11 pages, 156435 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  98 compressed objects within 1 object stream
