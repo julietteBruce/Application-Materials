@@ -1,0 +1,56 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Project Description.aux
+The style file: alpha.bst
+Database file #1: sample.bib
+Repeated entry---line 504 of file sample.bib
+ : @article {ulirsch17
+ :                    ,
+I'm skipping whatever remains of this entry
+Warning--there's a number but no volume in CFP12
+Warning--there's a number but no volume in Deligne71
+Warning--there's a number but no volume in Deligne74
+Warning--there's a number but no volume in lan17
+Warning--there's a number but no volume in Willwacher22
+You've used 87 entries,
+            2543 wiz_defined-function locations,
+            1123 strings with 16809 characters,
+and the built_in function-call counts, 37631 in all, are:
+= -- 3881
+> -- 1614
+< -- 57
++ -- 569
+- -- 546
+* -- 2956
+:= -- 6040
+add.period$ -- 268
+call.type$ -- 87
+change.case$ -- 542
+chr.to.int$ -- 85
+cite$ -- 92
+duplicate$ -- 1374
+empty$ -- 2798
+format.name$ -- 662
+if$ -- 7640
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 84
+newline$ -- 435
+num.names$ -- 261
+pop$ -- 422
+preamble$ -- 1
+purify$ -- 632
+quote$ -- 0
+skip$ -- 1112
+stack$ -- 0
+substring$ -- 2869
+swap$ -- 200
+text.length$ -- 57
+text.prefix$ -- 33
+top$ -- 0
+type$ -- 684
+warning$ -- 5
+while$ -- 385
+width$ -- 96
+write$ -- 1141
+(There was 1 error message)
