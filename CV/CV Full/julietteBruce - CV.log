@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  17 MAR 2025 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  11 JUN 2025 12:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -662,34 +662,34 @@ al/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local
 /texlive/2024/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_m4qttc.enc}]
 
 [2]
+LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 310.
+LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 310.
+LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 310.
+LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 310.
+LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 310.
+
 
 [3]
-Overfull \hbox (0.83124pt too wide) in alignment at lines 341--341
+Overfull \hbox (0.83124pt too wide) in alignment at lines 347--347
 [] [] 
  []
 
 
 
 [4]
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 481.
-LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 481.
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 481.
-LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 481.
-LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 481.
-
 
 [5]
 
 [6]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 722.
+(Font)              scaled to size 8.0pt on input line 734.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 722.
+(Font)              scaled to size 6.0pt on input line 734.
 
 
 [7]
@@ -700,7 +700,9 @@ LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
 
 [10]
 
-[11] (./julietteBruce - CV.aux)
+[11]
+
+[12] (./julietteBruce - CV.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -709,13 +711,13 @@ Package rerunfilecheck Info: File `"julietteBruce - CV".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11791 strings out of 473201
- 180683 string characters out of 5716121
+ 11793 strings out of 473201
+ 180713 string characters out of 5716121
  612370 words of memory out of 5000000
- 34841 multiletter control sequences out of 15000+600000
+ 34842 multiletter control sequences out of 15000+600000
  599410 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,411b,568s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,411b,566s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/baskervaldx/Baskervald
 x-Bol.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/baskervaldx/Ba
 skervaldx-Ita.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/basker
@@ -727,10 +729,10 @@ fonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-
 super/sfsx1200.pfb>
-Output written on "julietteBruce - CV.pdf" (11 pages, 167846 bytes).
+Output written on "julietteBruce - CV.pdf" (12 pages, 169242 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 98 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 140 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
+ 13 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
