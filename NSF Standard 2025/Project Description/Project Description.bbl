@@ -1,0 +1,488 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{CCUW20}
+
+\bibitem[ABLS20]{ABLS20}
+Ayah Almousa, Juliette Bruce, Michael Loper, and Mahrud Sayrafi.
+\newblock The virtual resolutions package for {M}acaulay2.
+\newblock {\em J. Softw. Algebra Geom.}, 10(1):51--60, 2020.
+
+\bibitem[ACG{\etalchar{+}}13]{ACGHOS13}
+Dan Abramovich, Qile Chen, Danny Gillam, Yuhao Huang, Martin Olsson, Matthew
+  Satriano, and Shenghao Sun.
+\newblock Logarithmic geometry and moduli.
+\newblock In {\em Handbook of moduli. {V}ol. {I}}, volume~24 of {\em Adv. Lect.
+  Math. (ALM)}, pages 1--61. Int. Press, Somerville, MA, 2013.
+
+\bibitem[ACP15a]{ACP15}
+Dan Abramovich, Lucia Caporaso, and Sam Payne.
+\newblock The tropicalization of the moduli space of curves.
+\newblock {\em Ann. Sci. \'Ec. Norm. Sup\'er. (4)}, 48(4):765--809, 2015.
+
+\bibitem[ACP15b]{abramovichCaporasoPayne15}
+Dan Abramovich, Lucia Caporaso, and Sam Payne.
+\newblock The tropicalization of the moduli space of curves.
+\newblock {\em Ann. Sci. \'Ec. Norm. Sup\'er. (4)}, 48(4):765--809, 2015.
+
+\bibitem[AMRT75]{AMRT}
+A.~Ash, D.~Mumford, M.~Rapoport, and Y.~Tai.
+\newblock {\em Smooth compactification of locally symmetric varieties}, volume
+  Vol. IV of {\em Lie Groups: History, Frontiers and Applications}.
+\newblock Math Sci Press, Brookline, MA, 1975.
+
+\bibitem[BBB{\etalchar{+}}17]{BBBKR17}
+Madeline Brandt, Juliette Bruce, Taylor Brysiewicz, Robert Krone, and Elina
+  Robeva.
+\newblock The degree of {${\rm SO}(n,\mathbb{C})$}.
+\newblock In {\em Combinatorial algebraic geometry}, volume~80 of {\em Fields
+  Inst. Commun.}, pages 229--246. Fields Inst. Res. Math. Sci., Toronto, ON,
+  2017.
+
+\bibitem[BBB21]{BBB21}
+Anthony Bonato, Juliette Bruce, and Ron Buckmire.
+\newblock Spaces for all: the rise of {LGBTQ}+ mathematics conferences.
+\newblock {\em Notices Amer. Math. Soc.}, 68(6):998--1003, 2021.
+
+\bibitem[BBC23]{brandtBruceCorey23}
+Madeline Brandt, Juliette Bruce, and Daniel Corey.
+\newblock The virtual euler characteristic for binary matroids, 2023.
+
+\bibitem[BBC{\etalchar{+}}24]{BBCMMW24}
+Madeline Brandt, Juliette Bruce, Melody Chan, Margarida Melo, Gwyneth Moreland,
+  and Corey Wolfe.
+\newblock On the top-weight rational cohomology of {$\mathcal{A}_g$}.
+\newblock {\em Geom. Topol.}, 28(2):497--538, 2024.
+
+\bibitem[BBP24]{BBP24}
+Tara Brendle, Nathan Broaddus, and Andrew Putman.
+\newblock The high-dimensional cohomology of the moduli space of curves with
+  level structures {II}: {P}unctures and boundary.
+\newblock {\em Israel J. Math.}, 260(1):303--340, 2024.
+
+\bibitem[BCE{\etalchar{+}}22]{BCEGLY22}
+Juliette Bruce, Daniel Corey, Daniel Erman, Steve Goldstein, Robert~P. Laudone,
+  and Jay Yang.
+\newblock Syzygies of {$\mathbb{P}^1\times\mathbb{P}^1$}: data and conjectures.
+\newblock {\em J. Algebra}, 593:589--621, 2022.
+
+\bibitem[BCGP24]{BCGP24}
+Francis Brown, Melody Chan, Søren Galatius, and Sam Payne.
+\newblock Hopf algebras in the cohomology of $\mathcal{A}_g$,
+  $\mathrm{GL}_n(\mathbb{Z})$, and $\mathrm{SL}_n(\mathbb{Z})$, 2024.
+
+\bibitem[BCK24]{brandChanKannan24}
+Madeline Brandt, Melody Chan, and Siddarth Kannan.
+\newblock On the weight zero compactly supported cohomology of {$\mathcal{
+  H}_{g,n}$}.
+\newblock {\em Forum Math. Sigma}, 12:Paper No. e67, 37, 2024.
+
+\bibitem[BE19]{bruceErman19}
+Juliette Bruce and Daniel Erman.
+\newblock A probabilistic approach to systems of parameters and {N}oether
+  normalization.
+\newblock {\em Algebra Number Theory}, 13(9):2081--2102, 2019.
+
+\bibitem[BE24]{brownErman23-2}
+Michael~K. Brown and Daniel Erman.
+\newblock A short proof of the {H}anlon-{H}icks-{L}azarev theorem.
+\newblock {\em Forum Math. Sigma}, 12:Paper No. e56, 6, 2024.
+
+\bibitem[BEGY20]{BEGY20}
+Juliette Bruce, Daniel Erman, Steve Goldstein, and Jay Yang.
+\newblock Conjectures and computations about {V}eronese syzygies.
+\newblock {\em Exp. Math.}, 29(4):398--413, 2020.
+
+\bibitem[BEGY21]{BEGY21}
+Juliette Bruce, Daniel Erman, Steve Goldstein, and Jay Yang.
+\newblock The {S}chur-{V}eronese package in {M}acaulay2.
+\newblock {\em J. Softw. Algebra Geom.}, 11(1):83--87, 2021.
+
+\bibitem[BEL91]{BEL91}
+Aaron Bertram, Lawrence Ein, and Robert Lazarsfeld.
+\newblock Vanishing theorems, a theorem of {S}everi, and the equations defining
+  projective varieties.
+\newblock {\em J. Amer. Math. Soc.}, 4(3):587--602, 1991.
+
+\bibitem[BG18]{bibbyGadish18}
+Christin Bibby and Nir Gadish.
+\newblock Combinatorics of orbit configuration spaces.
+\newblock {\em S\'em. Lothar. Combin.}, 80B:Art. 72, 11, 2018.
+
+\bibitem[BHS22]{bruceHellerSayrafi22}
+Juliette Bruce, Lauren~Cranton Heller, and Mahrud Sayrafi.
+\newblock Bounds on multigraded regularity, 2022.
+
+\bibitem[BHS24]{bruceHellerSayrafi21}
+Juliette Bruce, Lauren~Cranton Heller, and Mahrud Sayrafi.
+\newblock Characterizing multigraded regularity and virtual resolutions on
+  products of projective spaces, 2024.
+
+\bibitem[BL20]{bruceLi20}
+Juliette Bruce and Wanlin Li.
+\newblock Effective bounds on the dimensions of {J}acobians covering abelian
+  varieties.
+\newblock {\em Proc. Amer. Math. Soc.}, 148(2):535--551, 2020.
+
+\bibitem[BMV11]{BMV11}
+Silvia Brannetti, Margarida Melo, and Filippo Viviani.
+\newblock On the tropical {T}orelli map.
+\newblock {\em Adv. Math.}, 226(3):2546--2586, 2011.
+
+\bibitem[BPR16]{BPR16}
+Matthew Baker, Sam Payne, and Joseph Rabinoff.
+\newblock Nonarchimedean geometry, tropicalization, and metrics on curves.
+\newblock {\em Algebr. Geom.}, 3(1):63--105, 2016.
+
+\bibitem[Bro21]{brown21}
+Francis Brown.
+\newblock Invariant differential forms on complexes of graphs and {F}eynman
+  integrals.
+\newblock {\em SIGMA Symmetry Integrability Geom. Methods Appl.}, 17:Paper No.
+  103, 54, 2021.
+
+\bibitem[Bru22a]{bruce22}
+Juliette Bruce.
+\newblock The quantitative behavior of asymptotic syzygies for {H}irzebruch
+  surfaces.
+\newblock {\em J. Commut. Algebra}, 14(1):19--26, 2022.
+
+\bibitem[Bru22b]{bruceNotices22}
+Juliette Bruce.
+\newblock A word from... juliette bruce, inaugural president of spectra.
+\newblock {\em Notices Amer. Math. Soc.}, 69(6):898--899, 2022.
+
+\bibitem[Bru24]{bruce24}
+Juliette Bruce.
+\newblock Asymptotic syzygies for products of projective spaces.
+\newblock {\em J. Algebra}, 649:347--391, 2024.
+
+\bibitem[BS24]{BS24}
+Francis Brown and Oliver Schnetz.
+\newblock The wheel classes in the locally finite homology of
+  $\mathrm{GL}_n(\mathbb{Z})$, canonical integrals and zeta values, 2024.
+
+\bibitem[BV23]{BV23}
+Michael Borinsky and Karen Vogtmann.
+\newblock The {E}uler characteristic of the moduli space of graphs.
+\newblock {\em Adv. Math.}, 432:Paper No. 109290, 58, 2023.
+
+\bibitem[BW24]{BW24}
+Simon Brun and Thomas Willwacher.
+\newblock Graph homology computations.
+\newblock {\em New York J. Math.}, 30:58--92, 2024.
+
+\bibitem[Cap12]{Caporaso12}
+Lucia Caporaso.
+\newblock Geometry of tropical moduli spaces and linkage of graphs.
+\newblock {\em J. Combin. Theory Ser. A}, 119(3):579--598, 2012.
+
+\bibitem[Cap13]{Caporaso13}
+Lucia Caporaso.
+\newblock Algebraic and tropical curves: comparing their moduli spaces.
+\newblock In {\em Handbook of moduli. {V}ol. {I}}, volume~24 of {\em Adv. Lect.
+  Math. (ALM)}, pages 119--160. Int. Press, Somerville, MA, 2013.
+
+\bibitem[CCUW20]{CCUW20}
+Renzo Cavalieri, Melody Chan, Martin Ulirsch, and Jonathan Wise.
+\newblock A moduli stack of tropical curves.
+\newblock {\em Forum Math. Sigma}, 8:Paper No. e23, 93, 2020.
+
+\bibitem[CFGP23]{CCGP23}
+Melody Chan, Carel Faber, S\o~ren Galatius, and Sam Payne.
+\newblock The {$S_n$}-equivariant top weight {E}uler characteristic of
+  {$\mathcal{M}_{g,n}$}.
+\newblock {\em Amer. J. Math.}, 145(5):1549--1585, 2023.
+
+\bibitem[CFP12]{CFP12}
+Thomas Church, Benson Farb, and Andrew Putman.
+\newblock The rational cohomology of the mapping class group vanishes in its
+  virtual cohomological dimension.
+\newblock {\em Int. Math. Res. Not. IMRN}, (21):5025--5030, 2012.
+
+\bibitem[CFP14]{CFP14}
+Thomas Church, Benson Farb, and Andrew Putman.
+\newblock A stability conjecture for the unstable cohomology of {${\rm
+  SL}_n\Bbb Z$}, mapping class groups, and {${\rm Aut}(F_n)$}.
+\newblock In {\em Algebraic topology: applications and new directions}, volume
+  620 of {\em Contemp. Math.}, pages 55--70. Amer. Math. Soc., Providence, RI,
+  2014.
+
+\bibitem[CG18]{CG18}
+Frank Calegari and David Geraghty.
+\newblock Modularity lifting beyond the {T}aylor-{W}iles method.
+\newblock {\em Invent. Math.}, 211(1):297--433, 2018.
+
+\bibitem[CGP21]{CGP21}
+Melody Chan, S\o~ren Galatius, and Sam Payne.
+\newblock Tropical curves, graph complexes, and top weight cohomology of
+  {$\mathcal{M}_g$}.
+\newblock {\em J. Amer. Math. Soc.}, 34(2):565--594, 2021.
+
+\bibitem[CGP22]{CGP22}
+Melody Chan, S\o~ren Galatius, and Sam Payne.
+\newblock Topology of moduli spaces of tropical curves with marked points.
+\newblock In {\em Facets of algebraic geometry. {V}ol. {I}}, volume 472 of {\em
+  London Math. Soc. Lecture Note Ser.}, pages 77--131. Cambridge Univ. Press,
+  Cambridge, 2022.
+
+\bibitem[CGV05]{CGV05}
+James Conant, Ferenc Gerlits, and Karen Vogtmann.
+\newblock Cut vertices in commutative graphs.
+\newblock {\em Q. J. Math.}, 56(3):321--336, 2005.
+
+\bibitem[Cha12]{chan12}
+Melody Chan.
+\newblock Combinatorics of the tropical {T}orelli map.
+\newblock {\em Algebra Number Theory}, 6(6):1133--1169, 2012.
+
+\bibitem[Cha22]{chan22}
+Melody Chan.
+\newblock Topology of the tropical moduli spaces {$\Delta_{2,n}$}.
+\newblock {\em Beitr. Algebra Geom.}, 63(1):69--93, 2022.
+
+\bibitem[CHT99]{CHT99}
+S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
+\newblock Asymptotic behaviour of the {C}astelnuovo-{M}umford regularity.
+\newblock {\em Compositio Math.}, 118(3):243--261, 1999.
+
+\bibitem[CT09]{CT09}
+Brian Conrad and Michael Temkin.
+\newblock Non-{A}rchimedean analytification of algebraic spaces.
+\newblock {\em J. Algebraic Geom.}, 18(4):731--788, 2009.
+
+\bibitem[CV03]{JV03}
+James Conant and Karen Vogtmann.
+\newblock On a theorem of {K}ontsevich.
+\newblock {\em Algebr. Geom. Topol.}, 3:1167--1224, 2003.
+
+\bibitem[Del71]{Deligne71}
+Pierre Deligne.
+\newblock Th\'eorie de {H}odge. {II}.
+\newblock {\em Inst. Hautes \'Etudes Sci. Publ. Math.}, (40):5--57, 1971.
+
+\bibitem[Del74]{Deligne74}
+Pierre Deligne.
+\newblock Th\'eorie de {H}odge. {III}.
+\newblock {\em Inst. Hautes \'Etudes Sci. Publ. Math.}, (44):5--77, 1974.
+
+\bibitem[EG84]{eisenbudGoto84}
+David Eisenbud and Shiro Goto.
+\newblock Linear free resolutions and minimal multiplicity.
+\newblock {\em J. Algebra}, 88(1):89--133, 1984.
+
+\bibitem[FC90]{faltingsChai}
+Gerd Faltings and Ching-Li Chai.
+\newblock {\em Degeneration of abelian varieties}, volume~22 of {\em Ergebnisse
+  der Mathematik und ihrer Grenzgebiete (3) [Results in Mathematics and Related
+  Areas (3)]}.
+\newblock Springer-Verlag, Berlin, 1990.
+\newblock With an appendix by David Mumford.
+
+\bibitem[FNW23]{FNW23}
+Matteo Felder, Florian Naef, and Thomas Willwacher.
+\newblock Stable cohomology of graph complexes.
+\newblock {\em Selecta Math. (N.S.)}, 29(2):Paper No. 23, 72, 2023.
+
+\bibitem[GKM09]{GKM09}
+Andreas Gathmann, Michael Kerber, and Hannah Markwig.
+\newblock Tropical fans and the moduli spaces of tropical curves.
+\newblock {\em Compos. Math.}, 145(1):173--195, 2009.
+
+\bibitem[GM07]{GM07}
+Andreas Gathmann and Hannah Markwig.
+\newblock The {C}aporaso-{H}arris formula and plane relative {G}romov-{W}itten
+  invariants in tropical geometry.
+\newblock {\em Math. Ann.}, 338(4):845--868, 2007.
+
+\bibitem[GM08]{GM08}
+Andreas Gathmann and Hannah Markwig.
+\newblock Kontsevich's formula and the {WDVV} equations in tropical geometry.
+\newblock {\em Adv. Math.}, 217(2):537--560, 2008.
+
+\bibitem[Gru09]{grushevsky09}
+Samuel Grushevsky.
+\newblock Geometry of {$\mathcal{A}_g$} and its compactifications.
+\newblock In {\em Algebraic geometry---{S}eattle 2005. {P}art 1}, volume 80,
+  Part 1 of {\em Proc. Sympos. Pure Math.}, pages 193--234. Amer. Math. Soc.,
+  Providence, RI, 2009.
+
+\bibitem[Hai02]{hain02}
+Richard Hain.
+\newblock The rational cohomology ring of the moduli space of abelian 3-folds.
+\newblock {\em Math. Res. Lett.}, 9(4):473--491, 2002.
+
+\bibitem[Har86]{harer86}
+John~L. Harer.
+\newblock The virtual cohomological dimension of the mapping class group of an
+  orientable surface.
+\newblock {\em Invent. Math.}, 84(1):157--176, 1986.
+
+\bibitem[Har90]{harder90}
+G\"unter Harder.
+\newblock Some results on the {E}isenstein cohomology of arithmetic subgroups
+  of {${\rm GL}_n$}.
+\newblock In {\em Cohomology of arithmetic groups and automorphic forms
+  ({L}uminy-{M}arseille, 1989)}, volume 1447 of {\em Lecture Notes in Math.},
+  pages 85--153. Springer, Berlin, 1990.
+
+\bibitem[Har14]{harris14}
+Michael Harris.
+\newblock Weight zero {E}isenstein cohomology of {S}himura varieties via
+  {B}erkovich spaces.
+\newblock {\em Pacific J. Math.}, 268(2):275--281, 2014.
+
+\bibitem[Hat95]{hatcher95}
+Allen Hatcher.
+\newblock Homological stability for automorphism groups of free groups.
+\newblock {\em Comment. Math. Helv.}, 70(1):39--62, 1995.
+
+\bibitem[HHL24]{HHL23}
+Andrew Hanlon, Jeff Hicks, and Oleg Lazarev.
+\newblock Resolutions of toric subvarieties by line bundles and applications,
+  2024.
+
+\bibitem[HLTT16]{HLTT16}
+Michael Harris, Kai-Wen Lan, Richard Taylor, and Jack Thorne.
+\newblock On the rigid cohomology of certain {S}himura varieties.
+\newblock {\em Res. Math. Sci.}, 3:Paper No. 37, 308, 2016.
+
+\bibitem[HT12]{HT12}
+Klaus Hulek and Orsola Tommasi.
+\newblock Cohomology of the second {V}oronoi compactification of {$\mathcal{
+  A}_4$}.
+\newblock {\em Doc. Math.}, 17:195--244, 2012.
+
+\bibitem[HT18]{HT18}
+Klaus Hulek and Orsola Tommasi.
+\newblock The topology of {$\mathcal{A}_g$} and its compactifications.
+\newblock In {\em Geometry of moduli}, volume~14 of {\em Abel Symp.}, pages
+  135--193. Springer, Cham, 2018.
+\newblock With an appendix by Olivier Ta\"ibi.
+
+\bibitem[HZ94]{harrisZucker}
+Michael Harris and Steven Zucker.
+\newblock Boundary cohomology of {S}himura varieties. {I}. {C}oherent
+  cohomology on toroidal compactifications.
+\newblock {\em Ann. Sci. \'Ecole Norm. Sup. (4)}, 27(3):249--344, 1994.
+
+\bibitem[Igu62]{igusa62}
+Jun-ichi Igusa.
+\newblock On {S}iegel modular forms of genus two.
+\newblock {\em Amer. J. Math.}, 84:175--200, 1962.
+
+\bibitem[Kan21]{kannan21}
+Siddarth Kannan.
+\newblock Symmetries of tropical moduli spaces of curves.
+\newblock {\em Trans. Amer. Math. Soc.}, 374(8):5805--5847, 2021.
+
+\bibitem[KLSY23]{KLSY23}
+Siddarth Kannan, Shiyue Li, Stefano Serpente, and Claudia~He Yun.
+\newblock Topology of tropical moduli spaces of weighted stable curves in
+  higher genus.
+\newblock {\em Adv. Geom.}, 23(3):305--314, 2023.
+
+\bibitem[Kod00]{Kodiyalam00}
+Vijay Kodiyalam.
+\newblock Asymptotic behaviour of {C}astelnuovo-{M}umford regularity.
+\newblock {\em Proc. Amer. Math. Soc.}, 128(2):407--411, 2000.
+
+\bibitem[Kon93]{Kontsevich93}
+Maxim Kontsevich.
+\newblock Formal (non)commutative symplectic geometry.
+\newblock In {\em The {G}el'fand {M}athematical {S}eminars, 1990--1992}, pages
+  173--187. Birkh\"auser Boston, Boston, MA, 1993.
+
+\bibitem[Kon94]{Kontsevich}
+Maxim Kontsevich.
+\newblock Feynman diagrams and low-dimensional topology.
+\newblock In {\em First {E}uropean {C}ongress of {M}athematics, {V}ol.\ {II}
+  ({P}aris, 1992)}, volume 120 of {\em Progr. Math.}, pages 97--121.
+  Birkh\"auser, Basel, 1994.
+
+\bibitem[KSY24]{KSY24}
+Siddarth Kannan, Stefano Serpente, and Claudia~He Yun.
+\newblock Equivariant {H}odge polynomials of heavy/light moduli spaces.
+\newblock {\em Forum Math. Sigma}, 12:Paper No. e34, 19, 2024.
+
+\bibitem[Lan16]{Lan16}
+Kai-Wen Lan.
+\newblock Compactifications of {PEL}-type {S}himura varieties in ramified
+  characteristics.
+\newblock {\em Forum Math. Sigma}, 4:Paper No. e1, 98, 2016.
+
+\bibitem[Lan17]{lan17}
+Kai-Wen Lan.
+\newblock Integral models of toroidal compactifications with projective cone
+  decompositions.
+\newblock {\em Int. Math. Res. Not. IMRN}, (11):3237--3280, 2017.
+
+\bibitem[Mik05]{Mikhalkin05}
+Grigory Mikhalkin.
+\newblock Enumerative tropical algebraic geometry in {$\Bbb R^2$}.
+\newblock {\em J. Amer. Math. Soc.}, 18(2):313--377, 2005.
+
+\bibitem[MS04]{maclaganSmith04}
+Diane Maclagan and Gregory~G. Smith.
+\newblock Multigraded {C}astelnuovo-{M}umford regularity.
+\newblock {\em J. Reine Angew. Math.}, 571:179--212, 2004.
+
+\bibitem[Nam80]{namikawa80}
+Yukihiko Namikawa.
+\newblock {\em Toroidal compactification of {S}iegel spaces}, volume 812 of
+  {\em Lecture Notes in Mathematics}.
+\newblock Springer, Berlin, 1980.
+
+\bibitem[OS90]{odaSchwermer90}
+Takayuki Oda and Joachim Schwermer.
+\newblock Mixed {H}odge structures and automorphic forms for {S}iegel modular
+  varieties of degree two.
+\newblock {\em Math. Ann.}, 286(1-3):481--509, 1990.
+
+\bibitem[Pay13]{payne13}
+Sam Payne.
+\newblock Boundary complexes and weight filtrations.
+\newblock {\em Michigan Math. J.}, 62(2):293--322, 2013.
+
+\bibitem[RSZ21]{RMZ21}
+M.~Rapoport, B.~Smithling, and W.~Zhang.
+\newblock On {S}himura varieties for unitary groups.
+\newblock {\em Pure Appl. Math. Q.}, 17(2):773--837, 2021.
+
+\bibitem[Sch15]{scholze15}
+Peter Scholze.
+\newblock On torsion in the cohomology of locally symmetric varieties.
+\newblock {\em Ann. of Math. (2)}, 182(3):945--1066, 2015.
+
+\bibitem[Uli17]{ulirsch17}
+Martin Ulirsch.
+\newblock Tropicalization is a non-{A}rchimedean analytic stack quotient.
+\newblock {\em Math. Res. Lett.}, 24(4):1205--1237, 2017.
+
+\bibitem[Uli19]{Ulirsch19}
+Martin Ulirsch.
+\newblock Non-{A}rchimedean geometry of {A}rtin fans.
+\newblock {\em Adv. Math.}, 345:346--381, 2019.
+
+\bibitem[Viv13]{viviani13}
+Filippo Viviani.
+\newblock Tropicalizing vs. compactifying the {T}orelli morphism.
+\newblock In {\em Tropical and non-{A}rchimedean geometry}, volume 605 of {\em
+  Contemp. Math.}, pages 181--210. Amer. Math. Soc., Providence, RI, 2013.
+
+\bibitem[Vog15]{vogtmann15}
+Karen Vogtmann.
+\newblock On the geometry of outer space.
+\newblock {\em Bull. Amer. Math. Soc. (N.S.)}, 52(1):27--46, 2015.
+
+\bibitem[Wil15]{Willwacher15}
+Thomas Willwacher.
+\newblock M. {K}ontsevich's graph complex and the
+  {G}rothendieck-{T}eichm\"uller {L}ie algebra.
+\newblock {\em Invent. Math.}, 200(3):671--760, 2015.
+
+\bibitem[Wil22]{Willwacher22}
+Thomas Willwacher.
+\newblock Pre-{L}ie pairs and triviality of the {L}ie bracket on the twisted
+  hairy graph complexes.
+\newblock {\em Int. Math. Res. Not. IMRN}, (23):18205--18255, 2022.
+
+\end{thebibliography}
