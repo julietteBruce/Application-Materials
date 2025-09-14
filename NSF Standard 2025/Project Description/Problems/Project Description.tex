@@ -1,0 +1,414 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage{amsfonts,amsmath,amssymb,amsbsy,amstext,amsthm,mathtools}
+\usepackage{accents,color,enumerate,enumitem,float,fullpage,verbatim}
+
+\usepackage[margin=1.0049in,includeheadfoot]{geometry}
+
+\usepackage{url}
+%\usepackage[colorlinks=true,hyperindex, linkcolor=magenta, pagebackref=false, citecolor=cyan,draft]{hyperref}
+\usepackage[nolinks=true]{hyperref}
+
+%\usepackage[alphabetic]{amsrefs} 
+
+%\usepackage{eucal,bm,kpfonts,mathbbol}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{tikz,tikz-cd}	
+\usetikzlibrary{positioning, matrix, shapes}         								    				
+\usetikzlibrary{arrows,calc,matrix}
+
+\usepackage{lscape}
+
+\usepackage{microtype}
+
+
+\usepackage{titlesec}		
+\setcounter{secnumdepth}{4}						     					% Allows one to use nice section titles
+\titleformat{\section}[block]{\scshape\bfseries\filcenter}{\thesection.}{1em}{}		% Creates section titles
+\titleformat{\subsection}[runin]{\scshape\bfseries}{\thesubsection}{1em}{}			% Creates subsection titles
+\titleformat{\subsubsection}[runin]{\scshape\bfseries}{\thesubsubsection}{1em}{}			% Creates subsection titles
+
+\usepackage[titles]{tocloft}								     					% Creates table of fancy contents
+\setcounter{tocdepth}{4}
+\renewcommand{\contentsname}{}	     					% Renames and centers title of ToC
+
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{booktabs}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{N}{@{}m{0pt}@{}}
+\usepackage{diagbox}
+\usepackage{cancel}
+
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{goalTheorem}[lemma]{Goal Theorem}
+\newtheorem{goal}[lemma]{Research Goal}
+\newtheorem{problem}[lemma]{Research Problem}
+\newtheorem{prop}[lemma]{Proposition}
+\newtheorem{cor}[lemma]{Corollary}
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{claim}[lemma]{Claim}
+\newtheorem{defn}[lemma]{Definition} 
+\newtheorem{notation}[lemma]{Notation} 
+\newtheorem{exercise}[lemma]{Exercise}
+\newtheorem{question}[lemma]{Question}
+\newtheorem*{assumption}{Assumption}
+\newtheorem{principle}[lemma]{Principle}
+\newtheorem{heuristic}[lemma]{Heuristic}
+
+\newtheorem{theoremalpha}{Theorem}
+\newtheorem{corollaryalpha}[theoremalpha]{Corollary}
+\renewcommand{\thetheoremalpha}{\Alph{theoremalpha}}
+
+\theoremstyle{remark}
+\newtheorem{remark}[lemma]{Remark}
+\newtheorem{example}[lemma]{Example}
+\newtheorem{cexample}[lemma]{Counterexample}
+
+% Commands
+\newcommand{\initial}{\operatorname{in}}
+\newcommand{\NF}{\operatorname{NF}}
+\newcommand{\HF}{\operatorname{HF}}
+\newcommand{\Hilb}{\operatorname{Hilb}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\reg}{\operatorname{reg}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\img}{\operatorname{img}}
+\newcommand{\inn}{\operatorname{in}}
+
+\newcommand{\length}{\operatorname{length}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\adeg}{\operatorname{adeg}}
+\newcommand{\pdim}{\operatorname{pdim}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\LT}{\operatorname{LT}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\NS}{\operatorname{NS}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\Khar}{\operatorname{char}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Div}{\operatorname{Div}}
+\newcommand{\Kl}{\operatorname{Cl}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\QQbar}{{\overline{\mathbb Q}}}
+\newcommand{\Br}{\operatorname{Br}}
+\newcommand{\Bl}{\operatorname{Bl}}
+\newcommand{\Kox}{\operatorname{Cox}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\getsr}{\operatorname{Tor}}
+\newcommand{\diam}{\operatorname{diam}}
+\newcommand{\Hom}{\operatorname{Hom}} %done
+\newcommand{\sheafHom}{\mathcal{H}om}
+\newcommand{\Gr}{\operatorname{Gr}}
+\newcommand{\rank}{\operatorname{rank}} 
+\newcommand{\codim}{\operatorname{codim}}
+\newcommand{\Sym}{\operatorname{Sym}} %done
+\newcommand{\GL}{{GL}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\Density}{\operatorname{Density}}
+\newcommand{\Syz}{\operatorname{Syz}}
+\newcommand{\pd}{\operatorname{pd}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\cone}{\operatorname{\textbf{cone}}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\HS}{\operatorname{HS}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\oO}{\operatorname{O}}
+
+\newcommand{\defi}[1]{\textsf{#1}} % for defined terms
+
+\newcommand{\remd}{\operatorname{remd}}
+\newcommand{\colim}{\operatorname{colim}}
+\newcommand{\trideg}{\operatorname{tri.deg}}
+\newcommand{\indeg}{\operatorname{index.deg}}
+\newcommand{\moddeg}{\operatorname{mod.deg}}
+\newcommand{\Desc}{\operatorname{Desc}}
+\newcommand{\inter}{\operatorname{int}}
+\newcommand{\Nef}{\operatorname{Nef}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\Cox}{\operatorname{Cox}}
+\newcommand{\gon}{\operatorname{gon}}
+\newcommand{\cliff}{\operatorname{Cliff}}
+
+\newcommand{\doot}{\bullet}
+
+\newcommand{\Alt}{\bigwedge\nolimits}
+\newcommand{\Set}{\text{\bf Set}}										% Category of Sets
+\newcommand{\Sch}{\text{\bf Sch}}										% Category of Abelian Groups
+\newcommand{\Mod}[1]{\ (\mathrm{mod}\ #1)}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Letters  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\aa}{\mathbf{a}}
+\newcommand{\dd}{\mathbf{d}}
+\newcommand{\nn}{\mathbf{n}}
+\newcommand{\ee}{\mathbf{e}}
+\newcommand{\ff}{\mathbf{f}}
+\newcommand{\vv}{\mathbf{v}}
+\newcommand{\ww}{\mathbf{w}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\pp}{\mathbf{p}}
+\newcommand{\qq}{\mathbf{q}}
+
+\renewcommand{\AA}{\mathbb{A}}
+\newcommand{\BB}{\mathbb{B}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\DD}{\mathbb{D}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\GG}{\mathbb{G}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\JJ}{\mathbb{J}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\MM}{\mathbb{M}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\renewcommand{\SS}{\mathbb{S}}
+\newcommand{\TT}{\mathbb{T}}
+\newcommand{\UU}{\mathbb{U}}
+\newcommand{\VV}{\mathbb{V}}
+\newcommand{\WW}{\mathbb{W}}
+\newcommand{\XX}{\mathbb{X}}
+\newcommand{\YY}{\mathbb{Y}}
+\newcommand{\ZZ}{\mathbb{Z}}
+
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
+\DeclareMathOperator{\RB}{RB}
+\DeclareMathOperator{\Trop}{Trop}
+\DeclareMathOperator{\trop}{Trop}
+
+\DeclareMathOperator{\OO}{O}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Sp}{Sp}
+\DeclareMathOperator{\Ag}{\mathcal{A}_{g}}
+\DeclareMathOperator{\PDrt}{PD^{rt}}
+\DeclareMathOperator{\PD}{PD}
+\DeclareMathOperator{\Herm}{Herm}
+
+\newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
+
+\newcommand{\kit}[1]{{\color{blue} \sf Kit: [#1]}}
+\newcommand{\jcite}{{\color{blue} \sf $\heartsuit\heartsuit\heartsuit$:cite}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Project Description: Multigraded Homological Algebra and Geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document} 
+
+\thispagestyle{empty}
+\pagestyle{empty}
+\begingroup  
+  \centering
+  \large\scshape\bfseries Project Description: Homological Algebra Beyond Projective Space\\[1em]
+\endgroup
+
+%\tableofcontents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Geometry of Syzygies on Stacks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{$N_{p}$-Conditions for Stacky Curves}
+
+\begin{goal}
+	Understand the syzygies of stacky curves.
+\end{goal}
+
+\begin{problem}
+	Let $\cX$ be a stacky curve of genus 0 and 1. If $\cL$ is a line bundle on $\cX$ and $\deg(\cX)\gg0$ what $N_{p}$ conditions does $R(\cX; \cL)$ satisfy?
+\end{problem}
+
+
+
+\subsection{Green's Conjecture for Canonical Stacky Curves} 
+
+\begin{goal}\label{goal:stackyGreens}
+Find and prove an appropriate generalization of Green's conjecture describing the vanishing of the syzygies of the canonical rings of stacky curves. 
+\end{goal}
+
+\begin{theorem}\cite{voightZurieckBrown22}*{Theorem 8.4.1}\label{thm:voight-dzb}
+Let $\cX$ be stacky curve whose coarse space has genus $\geq 1$ and let $e$ be the maximum order of the stabilizer groups of the stacky points; then the canonical ring $R(\cX; K_{\cX})$ is  generated by elements in degree at most $3e$ with relations in degree at most $6e$. %let $e_1,\ldots,e_{t}$ be the orders of the stabilizer groups of the stacky points. If $e=\max\{e_{1},e_{2},\ldots,e_{t}\}$ then the canonical ring $R(\cX; K_{\cX})$ is  generated by elements in degree at most $3e$ with relations in degree at most $6e$.%Let $\cX$ be a stacky curve with one stacky point $q\in \cX$ whose stabalizer has order $e$. Suppose $X$ is the coarse space of $\cX$. If $X$ has genus one then the canonical ring $R(\cX, K_{\cX})$ is generated in degrees at most $3e$ and has relations in degree at most $6e$.
+\end{theorem}
+
+\begin{problem}
+	Can Theorem~\ref{thm:voight-dzb} be refined  by considering the existence of certain stacky  or weighted linear series on $\cX$?
+\end{problem}
+
+\begin{problem}
+	If $\cX$ is a general stacky curve is the stacky Brill-Noether locus $\cW_{d}^{r}(\cX)$ of expected dimension, smooth away from $\cW_{d}^{r+1}(\cX)$, and irreducible when of positive dimensional?
+\end{problem}
+
+
+\begin{problem}
+	Let $\cX$ be a stacky whose coarse space has genus $g$. For what $k$ does the canonical ring $R(\cX;K_{\cK})$ satisfy begin $k$-Koszul in the sense above.
+\end{problem}
+
+\begin{problem}\label{prob:comp-canonical-stacky}
+	Compute the minimal graded free resolution of the canonical ring $R(\cX, K_{\cX})$ for all stacky curves $\cX$ where:
+	\begin{itemize}
+		\item the coarse space of $\cX$ has genus $\leq 4$,
+		\item there are at most 4 stacky points, and
+		\item the stabilizers of the stacky points have order at most 5.
+	\end{itemize}
+\end{problem}
+
+\subsection{Asymptotic Syzygies of Weighted Projective Stacks}
+
+\begin{problem}
+Let $\cX$ be a smooth DM stack, $\dim \cX \geq2$, and fix an index $1\leq q \leq \dim \cX$. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample compute the limit (if it exists):
+\[
+\lim_{d\to\infty} \rho_{q}\left(\cX; L_d\right) = \lim_{d\to\infty} \frac{\#\left\{p\in\NN \; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{n_{d}}.
+\]
+\end{problem}
+
+\subsection{Computations with Toric Stacks}
+
+\begin{problem}\label{prob:toric-stacks-m2}
+Develop a robust software package for \textit{Macaualy2} allowing for computations with toric stacks. 
+\end{problem}
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Geometric \& Algebraic Measures of Complexity on Toric Varieties}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \subsection{Asymptotic Regularity of Powers of Ideals and Ideal Sheaves}
+ 
+ \begin{goal}
+ 	Let $X$ be a smooth projective toric variety with $S$ it's $\Pic(X)$-graded Cox ring. Understand the asymptotic behavior of $\reg(I^p)$ and $\reg(\cI^p)$ where $I \subset S$ is an $\ZZ^r$-graded ideal and $\cI\subset \cO_{X}$ is an ideal sheaf.
+\end{goal}
+ 
+ \begin{conjecture}\label{conj:reg-ideal-sheaves}
+ 	Let $X$ be a smooth projective toric variety and $\cI \subset \cO_{X}$ an ideal sheaf. With the notation as above:
+	\[
+	\lim_{p\to \infty} \frac{\reg\left(\cI^p\right)_{\RR}}{p} = \left\{ \; L \in\in \Pic(X)_{\RR} \;\; \big| \;\; \pi^*(L)-E \text{ is nef on $\tilde{X}$} \;\right\}.
+	\]
+ \end{conjecture}
+ 
+ \begin{problem}
+ 	Prove Conjecture~\ref{conj:reg-ideal-sheaves}. 
+ \end{problem}
+ 
+ \begin{problem}
+ 	Can the Seshadri regions as defined above be connected 
+ \end{problem}
+ 
+ \begin{problem}
+ 	Let $X$ be a smooth projective toric variety with $S$ it's $\Pic(X)$-graded Cox ring. If $I\subset S$ is a $\ZZ^r$-graded ideal bound the number of minimal generators of $\reg(I^p)$ as a function of $p$ in terms of invariants of $I$?
+\end{problem}
+ 
+ \begin{problem}
+ 	Let $X$ be a smooth projective toric variety and $Z\subset X$ a smooth subvariety. Can one bound the multigraded regularity of $I_{Z}$ in terms of the codimension of $Z\subset X$ and the degrees of minimal generators of $I_{Z}$?
+\end{problem}
+
+\begin{problem}
+	Compute the multigraded regularity of torus invariant subvarieties of $X$ in terms of the combinatorics of the cone defining them.
+\end{problem}
+
+ \subsection{A Generalized Eisenbud--Goto Theorem for Toric Varieties}
+ 
+ \begin{problem}
+ 	Let $X$ be a smooth projective toric variety with $S$ it's $\Pic(X)$-graded Cox ring and $B$ its irelevant ideal. Let $M$ be a $\Pic(X)$-graded $S$-module.  Find the correction generalization of $d$-quasi-linear resolution such that a $\Pic(X)$-graded $S$-module  $M$ is $d$-regular if and only if the truncation $M_{\geq d}$ has a $d$-quasilinear resolution. 
+\end{problem}
+ 
+ 
+\begin{conjecture}\label{conj:eg-hirzebruch}
+	Let $S$ be the $\ZZ^2$-graded Cox ring of the Hirzebruch surface $H_{t}$. If $M$ is a $\ZZ^2$-graded $S$-module then $M_{\geq d}$ has a $d$-linear resolution if and only if $d+\reg(S) \subset \reg(M)$. 
+\end{conjecture}
+
+\begin{problem}
+	Prove Conjecture~\ref{conj:eg-hirzebruch}
+\end{problem}
+ 
+ \begin{problem}
+ 	Let $X$ be a smooth projective toric variety with $S$ it's $\Pic(X)$-graded Cox ring and $B$ its irrelevant ideal. Let $M$ be a $\Pic(X)$-graded $S$-module.  Find a characterization for when the truncation $M_{\geq d}$ for $d\in \Pic(X)$ has a linear resolution in terms of vanishing of the local cohomology groups $H^i_{B}(M)_{t}$. 
+\end{problem}
+
+\begin{problem}
+	Find an algorithm to compute a minimal generating set for $\reg(M)$. 
+\end{problem}
+
+\begin{problem}
+	Let $X$ be a smooth projective toric variety with $S$ it's $\Pic(X)$-graded Cox ring and $B$ its irrelevant ideal. Let $M$ be a $\Pic(X)$-graded $S$-module. Does the set of (multigraded) Betti numbers of all virtual resolutions of $M$ determine the multigraded egularity of $M$? 
+\end{problem}
+
+
+ \subsection{Regularity on the $D_{\Cox}$ Category}
+ 
+ \begin{goal}
+ 	Develop a theory of Castelunovo--Mumford regularity on the category $D_{\Cox}$ the restrict to the classical notion of regularity $X_{i}$. 
+ \end{goal}
+ 
+  
+\subsection{The Free Resolution of $\overline{\cM}_{0,n}$}
+
+\begin{problem}
+ 	Compute the multigraded Castelunovo--Mumford Regularity of $\overline{\cM}_{0,n+3} \subset \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n}$.
+\end{problem}
+
+\begin{problem}
+ 	Compute the minimal graded free resolution of the defining ideal $I$ of  $\overline{\cM}_{0,n+3} \subset \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n}$.
+\end{problem}
+
+\begin{goal}
+	Describe the minimal graded free resolutions or multigraded regularitiy of wonderful varieties.
+\end{goal}
+
+\newpage
+\renewcommand{\bibliofont}{\normalsize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

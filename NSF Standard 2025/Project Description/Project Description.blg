@@ -3,54 +3,50 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Project Description.aux
 The style file: alpha.bst
 Database file #1: sample.bib
-Repeated entry---line 504 of file sample.bib
- : @article {ulirsch17
- :                    ,
-I'm skipping whatever remains of this entry
-Warning--there's a number but no volume in CFP12
-Warning--there's a number but no volume in Deligne71
-Warning--there's a number but no volume in Deligne74
-Warning--there's a number but no volume in lan17
-Warning--there's a number but no volume in Willwacher22
-You've used 87 entries,
+Warning--I didn't find a database entry for "igusa62"
+Warning--I didn't find a database entry for "hain02"
+Warning--I didn't find a database entry for "HT12"
+Warning--I didn't find a database entry for "HT18"
+Warning--I didn't find a database entry for "grushevsky09"
+You've used 22 entries,
             2543 wiz_defined-function locations,
-            1123 strings with 16809 characters,
-and the built_in function-call counts, 37631 in all, are:
-= -- 3881
-> -- 1614
-< -- 57
-+ -- 569
-- -- 546
-* -- 2956
-:= -- 6040
-add.period$ -- 268
-call.type$ -- 87
-change.case$ -- 542
-chr.to.int$ -- 85
-cite$ -- 92
-duplicate$ -- 1374
-empty$ -- 2798
-format.name$ -- 662
-if$ -- 7640
-int.to.chr$ -- 3
+            711 strings with 7774 characters,
+and the built_in function-call counts, 9574 in all, are:
+= -- 964
+> -- 510
+< -- 6
++ -- 189
+- -- 180
+* -- 766
+:= -- 1596
+add.period$ -- 63
+call.type$ -- 22
+change.case$ -- 152
+chr.to.int$ -- 21
+cite$ -- 22
+duplicate$ -- 310
+empty$ -- 657
+format.name$ -- 203
+if$ -- 1895
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 84
-newline$ -- 435
-num.names$ -- 261
-pop$ -- 422
+missing$ -- 18
+newline$ -- 110
+num.names$ -- 66
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 632
+purify$ -- 174
 quote$ -- 0
-skip$ -- 1112
+skip$ -- 271
 stack$ -- 0
-substring$ -- 2869
-swap$ -- 200
-text.length$ -- 57
-text.prefix$ -- 33
+substring$ -- 630
+swap$ -- 33
+text.length$ -- 6
+text.prefix$ -- 4
 top$ -- 0
-type$ -- 684
-warning$ -- 5
-while$ -- 385
-width$ -- 96
-write$ -- 1141
-(There was 1 error message)
+type$ -- 176
+warning$ -- 0
+while$ -- 98
+width$ -- 28
+write$ -- 279
+(There were 5 warnings)
