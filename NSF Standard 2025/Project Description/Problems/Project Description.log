@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  14 SEP 2025 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  18 SEP 2025 14:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1081,11 +1081,17 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 LaTeX Warning: Citation `voightZurieckBrown22' on page 1 undefined on input lin
 e 277.
 
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
 
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 [2]
+
+[3]
 No file "Project Description".bbl.
 (./Project Description.aux)
  ***********
@@ -1101,13 +1107,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 29005 strings out of 473201
- 560467 string characters out of 5716121
+ 29023 strings out of 473201
+ 560686 string characters out of 5716121
  1018789 words of memory out of 5000000
- 51510 multiletter control sequences out of 15000+600000
- 572069 words of font info for 120 fonts, out of 8000000 for 9000
+ 51517 multiletter control sequences out of 15000+600000
+ 572781 words of font info for 126 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,9n,107p,1018b,605s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,9n,107p,1018b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1115,14 +1121,16 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
 r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
-l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/t
-exlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Project Description.pdf" (2 pages, 146906 bytes).
+al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loca
+l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
+live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on "Project Description.pdf" (3 pages, 170449 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 26637 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 28685 words of extra memory for PDF output out of 29859 (max. 10000000)
 
