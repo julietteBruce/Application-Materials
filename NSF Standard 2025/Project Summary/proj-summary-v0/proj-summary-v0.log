@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  26 SEP 2025 11:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  26 SEP 2025 11:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1113,13 +1113,13 @@ Package rerunfilecheck Info: File `proj-summary-v0.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 29638 strings out of 473201
- 568393 string characters out of 5716121
+ 29642 strings out of 473201
+ 568429 string characters out of 5716121
  1024340 words of memory out of 5000000
  52175 multiletter control sequences out of 15000+600000
- 568232 words of font info for 92 fonts, out of 8000000 for 9000
+ 568391 words of font info for 94 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,5n,107p,1655b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,5n,107p,1295b,464s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
@@ -1127,7 +1127,7 @@ usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
 ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on proj-summary-v0.pdf (1 page, 88846 bytes).
+Output written on proj-summary-v0.pdf (1 page, 89261 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream
