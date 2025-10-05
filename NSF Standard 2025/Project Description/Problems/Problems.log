@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  18 SEP 2025 14:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  4 OCT 2025 20:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"Project Description.tex"
-(./Project Description.tex
+**Problems.tex
+(./Problems.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amscls/amsart.cls
@@ -953,8 +953,8 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count339
 \l__pdf_internal_box=\box97
 )
-(./Project Description.aux)
-\openout1 = `"Project Description.aux"'.
+No file Problems.aux.
+\openout1 = `Problems.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 242.
 LaTeX Font Info:    ... okay on input line 242.
@@ -976,7 +976,6 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 242.
 LaTeX Font Info:    ... okay on input line 242.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 242
 .
-
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1081,6 +1080,10 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 LaTeX Warning: Citation `voightZurieckBrown22' on page 1 undefined on input lin
 e 277.
 
+
+LaTeX Warning: Reference `thm:voight-dzb' on page 1 undefined on input line 282
+.
+
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1089,11 +1092,20 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
+LaTeX Warning: Reference `conj:reg-ideal-sheaves' on page 2 undefined on input 
+line 346.
+
+
+LaTeX Warning: Reference `conj:eg-hirzebruch' on page 2 undefined on input line
+ 377.
+
+
+
 [2]
 
 [3]
-No file "Project Description".bbl.
-(./Project Description.aux)
+No file Problems.bbl.
+(./Problems.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1105,15 +1117,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 29023 strings out of 473201
- 560686 string characters out of 5716121
- 1018789 words of memory out of 5000000
- 51517 multiletter control sequences out of 15000+600000
+ 29018 strings out of 473201
+ 560405 string characters out of 5716121
+ 1018607 words of memory out of 5000000
+ 51514 multiletter control sequences out of 15000+600000
  572781 words of font info for 126 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,9n,107p,1018b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,9n,107p,1005b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
@@ -1127,7 +1142,7 @@ l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
 live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Project Description.pdf" (3 pages, 170449 bytes).
+Output written on Problems.pdf (3 pages, 170292 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream

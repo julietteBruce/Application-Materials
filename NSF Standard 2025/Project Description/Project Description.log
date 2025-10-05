@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  18 SEP 2025 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  4 OCT 2025 20:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -953,7 +953,11 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count339
 \l__pdf_internal_box=\box97
 )
-(./Project Description.aux)
+(./Project Description.aux
+
+LaTeX Warning: Label `prob:toric-stacks-m2' multiply defined.
+
+)
 \openout1 = `"Project Description.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 242.
@@ -976,8 +980,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 242.
 LaTeX Font Info:    ... okay on input line 242.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 242
 .
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 242
@@ -1069,7 +1072,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 248.
+(Font)              using `OT1/cmr/bx/n' instead on input line 247.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1077,26 +1080,7 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-
-LaTeX Warning: Reference `sec:trop-moduli' on page 1 undefined on input line 25
-9.
-
-
-LaTeX Warning: Reference `sec:gen-trop' on page 1 undefined on input line 260.
-
-
-LaTeX Warning: Reference `sec:trop-mod' on page 1 undefined on input line 261.
-
-
-LaTeX Warning: Reference `sec:computing' on page 1 undefined on input line 262.
-
-
-
-LaTeX Warning: Reference `sec:alg-structure' on page 1 undefined on input line 
-263.
-
-
-Overfull \hbox (12.14458pt too wide) in paragraph at lines 287--288
+Overfull \hbox (12.14458pt too wide) in paragraph at lines 282--283
 [] []|\OT1/cmr/bx/sc/10.95 (-20) 1.1 Ho-mo-log-i-cal Al-ge-bra on Toric Va-ri-e
 ties[] \OT1/cmr/m/n/10.95 (-20) In-tro-duced by Mum-ford, the Castel-n-uovo{Mum
 ford
@@ -1107,19 +1091,19 @@ ford
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
 ocal/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-LaTeX Warning: Citation `igusa62' on page 2 undefined on input line 332.
+LaTeX Warning: Citation `igusa62' on page 2 undefined on input line 326.
 
 
-LaTeX Warning: Citation `hain02' on page 2 undefined on input line 332.
+LaTeX Warning: Citation `hain02' on page 2 undefined on input line 326.
 
 
-LaTeX Warning: Citation `HT12' on page 2 undefined on input line 332.
+LaTeX Warning: Citation `HT12' on page 2 undefined on input line 326.
 
 
-LaTeX Warning: Citation `HT18' on page 2 undefined on input line 332.
+LaTeX Warning: Citation `HT18' on page 2 undefined on input line 326.
 
 
-LaTeX Warning: Citation `grushevsky09' on page 2 undefined on input line 332.
+LaTeX Warning: Citation `grushevsky09' on page 2 undefined on input line 326.
 
 
 
@@ -1128,35 +1112,41 @@ LaTeX Warning: Citation `grushevsky09' on page 2 undefined on input line 332.
 [3]
 
 LaTeX Warning: Citation `voightZurieckBrown22' on page 4 undefined on input lin
-e 401.
+e 399.
 
 
-LaTeX Warning: Citation `schreyer91' on page 4 undefined on input line 412.
-
-
-LaTeX Warning: Reference `prob:stackyGreens' on page 4 undefined on input line 
-417.
+LaTeX Warning: Citation `schreyer91' on page 4 undefined on input line 419.
 
 
 
 [4]
 
+LaTeX Warning: Reference `prob:stackyGreens' on page 5 undefined on input line 
+421.
+
+
 LaTeX Warning: Citation `voightZurieckBrown22' on page 5 undefined on input lin
-e 428.
+e 432.
 
 
 LaTeX Warning: Citation `bruceErmanGoldsteinYang18' on page 5 undefined on inpu
-t line 478.
+t line 443.
 
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 
 
 [5]
 
 [6]
 
-[7] (./Project Description.bbl)
+[7]
 
-[8] (./Project Description.aux)
+[8] (./Project Description.bbl)
+
+[9] (./Project Description.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1168,13 +1158,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 29347 strings out of 473201
- 566895 string characters out of 5716121
- 1021949 words of memory out of 5000000
- 51758 multiletter control sequences out of 15000+600000
- 575980 words of font info for 167 fonts, out of 8000000 for 9000
+ 29382 strings out of 473201
+ 567337 string characters out of 5716121
+ 1021248 words of memory out of 5000000
+ 51766 multiletter control sequences out of 15000+600000
+ 577363 words of font info for 181 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  102i,14n,107p,1417b,1123s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1187,15 +1180,17 @@ local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
 l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
-/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "Project Description.pdf" (8 pages, 226307 bytes).
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
+4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
+/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on "Project Description.pdf" (9 pages, 252943 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 34829 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 36877 words of extra memory for PDF output out of 42996 (max. 10000000)
 
