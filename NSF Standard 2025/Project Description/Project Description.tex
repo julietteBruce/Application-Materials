@@ -269,13 +269,47 @@
 
 During 2020-2022 the PI was supported by an NSF Postdoctoral Research Fellowship (NSF Grant No. MSPRF DMS-2002239, \$150,000) titled \textit{Asymptotic Syzygies in Algebraic Geometry}. In this period the PI made major contributions to extending our understanding of homological algebra on toric varieties (see Section~\ref{subsec:prior:homological-algebra-on-toric}) and the cohomology of moduli spaces (see Section~\ref{subsec:prior:cohomology-of-ag}). These works resulted in 5 new papers being posted to the arXiv \cite{BCEGLY22,bruceHellerSayrafi21,bruceHellerSayrafi22,brandtBruceCorey23,BBCMMW24}.
 
-During 2015-2020 the PI was supported by an NSF Graduate Research Fellowship (NSF Grant No. DGE-1256259, \$150,000) title \textit{Syzygies in Algebraic Geometry}. In this period the PI made substantial contributions to commutative algebra and algebraic geometry, including furthering our understanding of syzygies on higher dimensional varieties and extending classical results in algebraic geometry and commutative algebra to finite fields. This resulted in the PI posting 8 new papers to the arXiv \cite{ABLS20,BBBKR17,bruceErman19,bruceLi20,BEGY20,BEGY21,bruce24,bruce22}.
+During 2015-2020 the PI was supported by an NSF Graduate Research Fellowship (NSF Grant No. DGE-1256259, \$150,000) title \textit{Syzygies in Algebraic Geometry}. In this period the PI made substantial contributions to commutative algebra and algebraic geometry, including furthering our understanding of syzygies on higher dimensional varieties. This resulted in the PI posting 8 new papers to the arXiv \cite{ABLS20,BBBKR17,bruceErman19,bruceLi20,BEGY20,BEGY21,bruce24,bruce22}.
 
-Additionally, of the 12 new papers the PI posted to the arXiv during these periods of support 9 of these above-mentioned papers were accepted for publication, including in such journals as \textit{Algebra \& Number Theory} \cite{bruceErman19}, \textit{Geometry \& Topology} \cite{BBCMMW24}, \textit{Journal of Algebra} \cite{BCEGLY22}, and \textit{Experimental Mathematics} \cite{BEGY20}. The PI contributed to 4 open-source software packages, one public-facing database, and two articles for the \textit{Notices of the AMS} \cite{BBB21,bruceNotices22}. All of these are available via the software \textit{Macaulay2} or the PI's website and Github. A more detailed summary of these results and their intellectual merits continues in the following sections. 
+Of the 12 new papers the PI posted to the arXiv during these periods of support 9 of these above-mentioned papers were accepted for publication, including in such journals as \textit{Algebra \& Number Theory} \cite{bruceErman19}, \textit{Geometry \& Topology} \cite{BBCMMW24}, \textit{Journal of Algebra} \cite{BCEGLY22}, and \textit{Experimental Mathematics} \cite{BEGY20}. The PI contributed to 4 open-source software packages, one public-facing database, and two articles for the \textit{Notices of the AMS} \cite{BBB21,bruceNotices22}. A more detailed summary of these results and their intellectual merits continues in the following sections. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Asymptotic Syzygies}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Broadly speaking, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. For a smooth projective variety $X\subset \PP^{n_{d}}$ embedded by a very ample line bundle $L_{d}$, following \cite{ermanYang18}, set,
+\begin{align*}
+\rho_q\left(X,L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\NN |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{n_{d}},
+\end{align*}
+which is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \NN}$. In this language, Green's foundational work on the syzygies of high degree curves can be phrased in the following way. 
+
+\begin{theorem}\cite{green84-I}
+Let $X\subset \PP^n$ be a smooth projective curve. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then $\lim_{d\to \infty} \rho_{2}\left(X;L_{d}\right) = 0$.
+\end{theorem}
+
+Put differently, asymptotically the syzygies of curves are as simple as possible, occurring in the lowest possible degree. Ein and Lazarsfeld established the opposite asymptotic behavior for higher dimensional varieties under the analogous positiivty condition. 
+
+\begin{theorem}\cite{einLazarsfeld12}*{Theorem~C}
+Let $X\subset \PP^n$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq \dim X$. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample then $\lim_{d\to\infty} \rho_{q}\left(X; L_d\right) = 1$.
+\end{theorem}
+
+My work weakens the ample-growth hypothesis to semi-ample growth, recall a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$ (e.g.  $\cO(1,0)$ on $\PP^{n}\times \PP^{m}$). I established the following asymptotic nonvanishing result for $PP^{n}\times\PP^{m}$ embedded by $\cO(d_{1},d_{2})$. 
+
+\begin{theorem}\cite{bruce19-semiample}*{Corollary~B}\label{thm:bruce-semiample}
+Let $X=\PP^{n}\times\PP^{m}$ and fix an index $1\leq q \leq n+m$. There exist constants $C_{i,j}$ and $D_{i,j}$ such that
+\[
+\rho_{q}\left(X; \cO\left(d_1,d_2\right)\right)\geq1-\sum_{\substack{i+j=q \\  i \leq n, \; j \leq m}}\left(
+\frac{C_{i,j}}{d_1^id_2^j}+\frac{D_{i,j}}{d_1^{n-i}d_2^{m-j}}\right)-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right).
+\]
+\end{theorem}
+
+If both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\PP^{n}\times\PP^{m}; \cO(d_1,d_2)\right)\to1$, recovering the results of Ein and Lazarsfeld for $\PP^n\times\PP^m$. However, if $d_{1}$ is fixed and $d_{2}\to \infty$ (i.e. semi-ample growth) my results bound the asymptotic percentage of non-zero syzygies away from zero. In fact I conjecture that, unlike in previously studied cases, in the semi-ample setting $\rho_{q}\left(\PP^{n}\times\PP^{m}; \cO(d_1,d_2)\right)$ does not approach 1. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case  \cite[Conjectures~7.1,~7.5]{einLazarsfeld12}.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Homological Algebra on Toric Varieties}\label{subsec:prior:homological-algebra-on-toric}
+\subsection{Eisenbud-Goto on Products of Projective Space}\label{subsec:prior:homological-algebra-on-toric}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -309,6 +343,10 @@ Let $M$ be a (saturated) finitely generated $\ZZ^{r}$-graded $S$-module:
 
 The proof of Theorem~\ref{thm:mgreg-main} is based in part on a spectral sequence argument that relates the Betti numbers of $M_{\geq\dd}$ to the Fourier--Mukai transform of $\widetilde{M}$ with Beilinson's resolution of the diagonal as the kernel.  Recent breakthroughs \cite{HHL23, brownErman23-2} understanding resolutions of the diagonal on arbitrary toric varieties mean that there is hope one may be able to generalize the above argument to arbitrary toric varieties. With this in mind, I am interested in pursuing the following question
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Asymptotic Multigraded Regularity of Ideals}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Building upon our work discussed above -- and inspired by previous work on $\PP^{r}$ \cite{BEL91,CHT99,Kodiyalam00} -- my collaborators and I also studied the asymptotic regularity of powers of ideals on arbitrary toric varieties. In particular, Definition~\ref{def:mg-reg} can be extended to all toric varieties by letting $S$ be Cox ring of the toric variety $X$, replacing $\ZZ^r$ with the Picard group of $X$, and replacing $\NN^{r}$ with the nef cone of $X$. My collaborators and I show that the multigraded regularity of powers of ideals is bounded and translates in a predictable way. In particular, the regularity of $I^{t}$ essentially translates within $\Nef X$ in fixed directions at a linear rate.
  
 
@@ -318,14 +356,20 @@ Building upon our work discussed above -- and inspired by previous work on $\PP^
 \end{theorem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Syzygies via Highly Distributed Computing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+It is quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. My co-authors and I exploited recent advances in numerical linear algebra and high-throughput high-performance computing to generate a number of new examples of Veronese syzygies. A follow-up project used similar computational approaches to compute the syzygies of $\PP^{1}\times\PP^{1}$ in over 200 new examples. This data provided support for several existing conjectures, as well as led us to make a number of new conjectures \cite{bruceErmanGoldsteinYang18,BCEGLY22}. 
+The resulting data is publicly available via the website SyzygyData and a package for Macaualy2 \cite{bruceErman19, M2}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Top-Weight Cohomology of $\mathcal{A}_{g}$}\label{subsec:prior:cohomology-of-ag}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorphism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}(2g, \ZZ)]$ where $\HH_{g}$ is the Siegel upper half-space. Notice this means that $\cA_{g}$  is a rational classifying space for the integral symplectic group $\mathrm{Sp}(2g,\ZZ)$. Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example, the (singular) cohomology is $\cA_{g}$ is only fully known for $g\leq 4$, with $g=0,1$ being relatively easy, $g=2$ which is a classical result of Igusa \cite{igusa62},  $g=3$ due to work of Hain \cite{hain02}, and $g=4$ being deducible from \cite{HT12,HT18}. In fact until recent work by myself and co-authors it was unknown whether $H^{2k+1}(\cA_{g};\QQ)\neq0$ for some $g$ and $k$. This was a question posed by Grushevsky. that my recent work answered \cite{grushevsky09}. 
-
-Building upon the work of Chan, Galatius, and Payne, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology classes in $H^{k}(\cA_{g}; \QQ)$ in a number of new cases. 
+The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorphism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}(2g, \ZZ)]$ where $\HH_{g}$ is the Siegel upper half-space. Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example, the (singular) cohomology is $\cA_{g}$ is only fully known for $g\leq 4$ \cite{igusa62,hain02,HT12,HT18}. Further, Grushevsky \cite{grushevsky09} posed the question whether $H^{2k+1}(\cA_{g};\QQ)\neq0$ for some $g$ and $k$. Building upon the work of Chan, Galatius, and Payne, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology classes in $H^{k}(\cA_{g}; \QQ)$ in a number of new cases and answer Grushevsky's question. 
 
 \begin{theorem}\cite[Theorem A]{BBCMMW24}\label{thm:Ag}
 The rational cohomology $H^{k}\left(\cA_{g};\QQ\right)\neq0$ for:
@@ -334,10 +378,7 @@ The rational cohomology $H^{k}\left(\cA_{g};\QQ\right)\neq0$ for:
 \]
 \end{theorem}
 
-For broader context, since $\cA_g$ is a rational classifying space for $\mathrm{Sp}_{2g}(\ZZ)$ there is natural isomorphism $H^*(\cA_g;\QQ) \cong H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$. In particular, the above results provide new non-vanishing results for $H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$. However, my work takes advantage of the fact that since $\cA_g$  is a smooth and separated Deligne Mumford stack with a coarse moduli space which is an algebraic variety, permitting Deligne's mixed Hodge theory to be applied to study the rational cohomology of these groups. In particular, the rational cohomology of a %smooth 
-complex algebraic variety $X$ of dimension $d$ admits a weight filtration with graded pieces $\Gr_{j}^W\!H^k(X;\mathbb{Q})$. %with $j$ ranging from %$k$ 
-%$0$ to ${\rm min}\{2k, 2d\}$. 
-As $\Gr_{j}^W\!H^k(X;\mathbb{Q})$ vanishes whenever $j>2d$, $\Gr_{2d}^W\!H^k(X;\mathbb{Q})$ is referred to as the {\em top-weight} part of $H^k(X;\QQ)$.)  In this way we deduce Theorem~\ref{thm:Ag} above as a corollary to computing the top-weight cohomology of $\cA_{g}$ for all $g\leq 7$.  
+For broader context, since $\cA_g$ is a rational classifying space for $\mathrm{Sp}_{2g}(\ZZ)$ there is natural isomorphism $H^*(\cA_g;\QQ) \cong H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$. In particular, the above results provide new non-vanishing results for $H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$. However, my work takes advantage of the fact that since $\cA_g$  is a smooth and separated Deligne Mumford stack with a coarse moduli space which is an algebraic variety, permitting Deligne's mixed Hodge theory to be applied to study the rational cohomology of these groups. In this way we deduce Theorem~\ref{thm:Ag} above as a corollary to computing the top-weight cohomology of $\cA_{g}$ for all $g\leq 7$.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -345,11 +386,11 @@ As $\Gr_{j}^W\!H^k(X;\mathbb{Q})$ vanishes whenever $j>2d$, $\Gr_{2d}^W\!H^k(X;\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Organizing}\label{subsubsec:prior-organizing} I organized 11 conferences: \textit{Math Careers Beyond Academia } (50 participants), \textit{M2@UW} (45 participants), \textit{Geometry and Arithmetic of Surfaces} (40 participants), \textit{CAZoom} (70 participants), \textit{Western Algebraic Geometry Symposium} (100 participants), \textit{Gems of Combinatorics I \& II} (40 \& 30 participants), $\Spec(\overline{\QQ})$ (50 participants), \textit{BATMOBILE (2022)} (20 participants),  \textit{Gems of Commutative Algebra I \& II} (35 \& 40 participants). Additionally, I have organized three special sessions at AMS Sectional Meetings and the Joint Math Meetings. Many of these workshops, namely the \textit{Gems of} series, focused on supporting  the next generation of researchers by building research communities and networks.%When organizing these conferences I have paid special attention to promoting women and other underrepresented groups in mathematics. For example, \textit{Graduate Workshop in Commutative Algebra for Women \& Mathematicians of Other Minority Genders} and \textit{GEMS in Combinatorics/Commutative Algebra}  focused on forming communities of women and non-binary researchers in commutative algebra and combinatorics. Further, $\Spec(\overline{\QQ})$ highlighted the research of LGBTQ+ mathematicians.
+\subsubsection{Organizing}\label{subsubsec:prior-organizing} I organized 11 conferences: \textit{Math Careers Beyond Academia } (50 participants), \textit{M2@UW} (45 participants), \textit{Geometry \& Arithmetic of Surfaces} (40 participants), \textit{CAZoom} (70 participants), \textit{WAGS} (100 participants), \textit{Gems of Combinatorics I \& II} (40 \& 30 participants), $\Spec(\overline{\QQ})$ (50 participants), \textit{BATMOBILE (2022)} (20 participants),  \textit{Gems of Commutative Algebra I \& II} (35 \& 40 participants). In this time I organized three special sessions at AMS Sectional Meetings and the Joint Math Meetings. Many of these workshops, namely the \textit{Gems of} series, focused on supporting  the next generation of researchers by building community and networks.
 
 
 \subsubsection{Math Circles}
-	From 2015 through 2018 I was heavily involved in the Madison Math Circle, including  2 years as the lead organizer. As an organizer, I worked to build stronger connections between the Madison Math Circle, local schools and teachers, and other outreach organizations focused on underrepresented groups. This led to weekly attendance to more than double. I also created a new outreach arm of the circle, which visits high schools around the state of Wisconsin to better serve students from underrepresented groups. This dramatically expanded the reach of the Madison Math Circle, and during my final year as an organizer, the circle reached over 300 students. While a post-doc at UC Berkeley I volunteered as a speaker with the Berkeley Math Circle. 
+	From 2015 through 2018 I was heavily involved in the Madison Math Circle, including  2 years as the lead organizer. As an organizer, I worked to build stronger connections between the Madison Math Circle, local schools, teachers, and other outreach organizations. This led to weekly attendance to more than double. I also created a new outreach arm of the circle, which visits high schools around the state of Wisconsin to better serve students. While a post-doc at UC Berkeley I volunteered as a speaker with the Berkeley Math Circle. 
 
 \subsubsection{Mentoring}
 I have actively sought out ways to mentor undergraduate and graduate students, especially those from generally underrepresented groups. While a graduate student, I led reading courses with three undergraduates. One of these students, an undergraduate woman, worked with me for over a year, during which time I helped her apply for summer research projects. Working with \textit{Girls' Math Night Out} I lead two girls in high school through a project exploring cryptography. During 2018-2019, I mentored 6 first-year graduate students (all women or non-binary students). I also mentored two undergraduate women via the AWM's Mentoring Network. 
@@ -359,12 +400,12 @@ I advised two summer research projects for undergraduate students. The first of 
 \subsubsection{Virtual Mathematics}
 In response to the COVID-19 pandemic and the shift of many mathematical activities to virtual formats, I worked to find ways for these online activities to reach those often at the periphery. During Summer and Fall 2020, I helped with Ravi Vakil's \textit{Algebraic Geometry in the Time of Covid} project. This massive online open-access course in algebraic geometry brought together $\sim2,000$ participants from around the world. In Spring 2021, I organized an 8-week virtual reading course for undergraduates in algebraic geometry and commutative algebra. 
 
-\subsubsection{t} 
-While a graduate student I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM, which eventually grew to over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around... Thanks so much for organizing this stuff -- it's really helpful''. From 2017-2020 I led the campus social organization for LGBTQ+ graduate and post-graduate students, which had over 350 members. 
-
-Since Fall 2020 I have organized \textit{Trans Math Day}, an annual one-day virtual conference promoting the work of transgender and non-binary mathematicians. Highlighting the importance of such conferences one student participant said, ``I've been really considering leaving mathematics.  [Trans Math Day 2020] reminded me why I'm here and why I want to stay. ... If a conference like this had been around for me five years ago, my life would have been a lot better.'' Trans Math Day regularly has ~50 participants. 
-
-During 2020-2023 I served as a board member for \textit{Spectra: The Association for LGBTQ+ Mathematicians}, including the inaugural president. I oversaw the growth and formalization of the organization, including the creation and adoption of bylaws, the creation of an invited lecture at the Joint Math Meetings, and a fundraising campaign that has raised over \$20,000.
+%\subsubsection{t} 
+%While a graduate student I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM, which eventually grew to over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around... Thanks so much for organizing this stuff -- it's really helpful''. From 2017-2020 I led the campus social organization for LGBTQ+ graduate and post-graduate students, which had over 350 members. 
+%
+%Since Fall 2020 I have organized \textit{Trans Math Day}, an annual one-day virtual conference promoting the work of transgender and non-binary mathematicians. Highlighting the importance of such conferences one student participant said, ``I've been really considering leaving mathematics.  [Trans Math Day 2020] reminded me why I'm here and why I want to stay. ... If a conference like this had been around for me five years ago, my life would have been a lot better.'' Trans Math Day regularly has ~50 participants. 
+%
+%During 2020-2023 I served as a board member for \textit{Spectra: The Association for LGBTQ+ Mathematicians}, including the inaugural president. I oversaw the growth and formalization of the organization, including the creation and adoption of bylaws, the creation of an invited lecture at the Joint Math Meetings, and a fundraising campaign that has raised over \$20,000.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -416,9 +457,7 @@ Let $\cX$ be stacky curve whose coarse space has genus $\geq 1$ and let $e$ be t
 	Let $\cX$ be a stacky whose coarse space has genus $g$. For what $k$ does the canonical ring $R(\cX;K_{\cK})$ satisfy begin $k$-Koszul in the sense above.
 \end{problem}
 
-The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cite{schreyer91} to show the existence of a Gr\"{o}bner basis for the canonical ring of a stacky curve whose elements have certain degrees. However, Voight and Zureick-Brown do not explicitly construct such Gr\"{o}bner bases. Instead, they prove the existence of such a Gr\"{o}bner basis via a delicate induction argument, which allows them to reduce to cases when $\cX$ has relatively few stacky points, the stacky points of $\cX$ have stabilizers of small order, or the coarse space of $\cX$ has small genus. It should be possible to make their arguments explicit for simple stacky curves. 
-
-With this in mind, one approach toward Problem~\ref{prob:stackyGreens} is to make Voight and Zureick-Brown's arguments explicit for a large number of examples, and then use a computer algebra system like Macaulay2 to compute the minimal graded free resolutions for these examples.  
+The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cite{schreyer91} to show the existence of a Gr\"{o}bner basis for the canonical ring of a stacky curve whose elements have certain degrees. However, Voight and Zureick-Brown do not explicitly construct such Gr\"{o}bner bases. It should be possible to make their arguments explicit for simple stacky curves.  With this in mind, one approach toward Problem~\ref{prob:stackyGreens} is to make Voight and Zureick-Brown's arguments explicit for a large number of examples, and then use a computer algebra system like Macaulay2 to compute the minimal graded free resolutions for these examples.  
 
 \begin{problem}\label{prob:comp-canonical-stacky}
 	Compute the minimal graded free resolution of the canonical ring $R(\cX, K_{\cX})$ for stacky curves $\cX$ where:
