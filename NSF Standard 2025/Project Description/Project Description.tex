@@ -279,25 +279,24 @@ Of the 12 new papers the PI posted to the arXiv during these periods of support 
 \subsection{Asymptotic Syzygies}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Broadly speaking, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. For a smooth projective variety $X\subset \PP^{n_{d}}$ embedded by a very ample line bundle $L_{d}$, following \cite{ermanYang18}, set,
+Broadly, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. For a smooth projective variety $X\subset \PP^{n_{d}}$ embedded by a very ample line bundle $L_{d}$, following \cite{ermanYang18}, set,
 \begin{align*}
 \rho_q\left(X,L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\NN |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{n_{d}},
 \end{align*}
-which is the percentage of degrees in which non-zero syzygies appear \cite{eisenbud05}*{Theorem~1.1}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \NN}$. In this language, Green's foundational work on the syzygies of high degree curves can be phrased in the following way. 
-
+which is the percentage of non-zero syzygies appearing in a row $q$ of the Betti table \cite[Theorem~1.1]{eisenbud05}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \NN}$. In this language, Green's work on the syzygies of high degree curves can be phrased as follows.
 \begin{theorem}\cite{green84-I}
 Let $X\subset \PP^n$ be a smooth projective curve. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then $\lim_{d\to \infty} \rho_{2}\left(X;L_{d}\right) = 0$.
 \end{theorem}
 
-Put differently, asymptotically the syzygies of curves are as simple as possible, occurring in the lowest possible degree. Ein and Lazarsfeld established the opposite asymptotic behavior for higher dimensional varieties under the analogous positiivty condition. 
+Put differently, asymptotically the syzygies of curves are as simple as possible, occurring in the lowest possible degree. Ein and Lazarsfeld established the opposite asymptotic behavior for higher dimensional varieties under the analogous positivity condition. 
 
-\begin{theorem}\cite{einLazarsfeld12}*{Theorem~C}
+\begin{theorem}\cite[Theorem~C]{einLazarsfeld12}
 Let $X\subset \PP^n$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq \dim X$. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample then $\lim_{d\to\infty} \rho_{q}\left(X; L_d\right) = 1$.
 \end{theorem}
 
 My work weakens the ample-growth hypothesis to semi-ample growth, recall a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$ (e.g.  $\cO(1,0)$ on $\PP^{n}\times \PP^{m}$). I established the following asymptotic nonvanishing result for $PP^{n}\times\PP^{m}$ embedded by $\cO(d_{1},d_{2})$. 
 
-\begin{theorem}\cite{bruce19-semiample}*{Corollary~B}\label{thm:bruce-semiample}
+\begin{theorem}\cite[Corollary~B]{bruce24}\label{thm:bruce-semiample}
 Let $X=\PP^{n}\times\PP^{m}$ and fix an index $1\leq q \leq n+m$. There exist constants $C_{i,j}$ and $D_{i,j}$ such that
 \[
 \rho_{q}\left(X; \cO\left(d_1,d_2\right)\right)\geq1-\sum_{\substack{i+j=q \\  i \leq n, \; j \leq m}}\left(
@@ -419,8 +418,8 @@ Building upon our work discussed above -- and inspired by previous work on $\PP^
 \subsubsection{Syzygies via Highly Distributed Computing}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-It is quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. My co-authors and I exploited recent advances in numerical linear algebra and high-throughput high-performance computing to generate a number of new examples of Veronese syzygies. A follow-up project used similar computational approaches to compute the syzygies of $\PP^{1}\times\PP^{1}$ in over 200 new examples. This data provided support for several existing conjectures, as well as led us to make a number of new conjectures \cite{bruceErmanGoldsteinYang18,BCEGLY22}. 
-The resulting data is publicly available via the website SyzygyData and a package for Macaualy2 \cite{bruceErman19, M2}.
+It is quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. My co-authors and I exploited recent advances in numerical linear algebra and high-throughput high-performance computing to generate a number of new examples of Veronese syzygies. A follow-up project used similar computational approaches to compute the syzygies of $\PP^{1}\times\PP^{1}$ in over 200 new examples. This data provided support for several existing conjectures, as well as led us to make a number of new conjectures \cite{BEGY20,BCEGLY22}. 
+The data is publicly available via SyzygyData.com and a package for Macaualy2 \cite{bruceErman19, M2}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -429,7 +428,7 @@ The resulting data is publicly available via the website SyzygyData and a packag
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorphism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}(2g, \ZZ)]$ where $\HH_{g}$ is the Siegel upper half-space. Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example, the (singular) cohomology is $\cA_{g}$ is only fully known for $g\leq 4$ \cite{igusa62,hain02,HT12,HT18}. Further, Grushevsky \cite{grushevsky09} posed the question whether $H^{2k+1}(\cA_{g};\QQ)\neq0$ for some $g$ and $k$. Building upon the work of Chan, Galatius, and Payne, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology classes in $H^{k}(\cA_{g}; \QQ)$ in a number of new cases and answer Grushevsky's question. 
+The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorphism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}(2g, \ZZ)]$ where $\HH_{g}$ is the Siegel upper half-space. Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example, the (singular) cohomology is $\cA_{g}$ is only fully known for $g\leq 4$ \cite{igusa62,hain02,HT12,HT18}. Further, Grushevsky \cite{grushevsky09} posed the question whether $H^{2k+1}(\cA_{g};\QQ)\neq0$ for some $g$ and $k$. Building upon the work of Chan, Galatius, and Payne \cite{CPG21}, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology classes in $H^{k}(\cA_{g}; \QQ)$ in a number of new cases and answer Grushevsky's question. 
 
 \begin{theorem}\cite[Theorem A]{BBCMMW24}\label{thm:Ag}
 The rational cohomology $H^{k}\left(\cA_{g};\QQ\right)\neq0$ for:
@@ -560,7 +559,7 @@ As a vast generalization of the Noether-Petri theorem, the following conjecture 
 	\]
 \end{conjecture}
 
-Stated differently Green's conjecture say that one can read the Clifford index of a smooth curve (which is an intrinsic invariant of the curve, not dependent on the embedding) from the vanishing of the syzygies of the canonical embedding of the curve (which are extrinsic to the curve, dependent on the choice of the embedding). Breakthrough work of Voisin proved this conjecture for general curves of even genus \cite{voisin02,voisin05}, and in recent years several new proofs of this result have been found \cite{aproduFarkas19,kemeny21}. Additionally, substantial work has gone into finding refinements and extensions of Green's Conjecture \cite{farkasMustataPopa03,chiodoEFS13,farkasKemeny16,farkasKemeny17,deopurkar18}.
+Stated differently Green's conjecture say that one can read the Clifford index of a smooth curve (which is an intrinsic invariant of the curve, not dependent on the embedding) from the vanishing of the syzygies of the canonical embedding of the curve (which are extrinsic to the curve, dependent on the choice of the embedding). Breakthrough work of Voisin proved this conjecture for general curves of even genus \cite{voisin02,voisin05}, and in recent years several new proofs of this result have been found \cite{aprodu19,kemeny21}. Additionally, substantial work has gone into finding refinements and extensions of Green's Conjecture \cite{farkasMustataPopa03,chiodoEFS13,farkasKemeny16,farkasKemeny17,deopurkar18,kemeny24}.
 
 
 \begin{goal}\label{goal:stackyGreens}
@@ -614,7 +613,7 @@ Let $\cX$ be a stacky curve with three stacky points whose stabilizers are $\ZZ/
 \end{center}
 \end{example}
 
-The approach of using large-scale computations to find conjectures concerning syzygies is very much in the same spirit as my prior work on the syzygies of surfaces \cite{bruceErmanGoldsteinYang18,BCEGLY22}. While the precise techniques need to address Problem~\ref{prob:comp-canonical-stacky} will likely be different much of the general framework of organizing, distributing, and publicizing such computations will likely be similar. 
+The approach of using large-scale computations to find conjectures concerning syzygies is very much in the same spirit as my prior work on the syzygies of surfaces \cite{BEGY20,BCEGLY22}. While the precise techniques need to address Problem~\ref{prob:comp-canonical-stacky} will likely be different much of the general framework of organizing, distributing, and publicizing such computations will likely be similar. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Asymptotic Syzygies of Weighted Projective Stacks}
@@ -784,7 +783,7 @@ In order to see the difference between linear and quasilinear resolutions we not
 	  S(-2,-3)
 	  & \lar 0.
 	\end{tikzcd}\]
-In particular, we see that the minimal graded free resolution $S/B$ is not $(0,0)$-linear since $(-1,-1) \not\in L_1(0,0)$, however, it is $(0,0)$-quasilinear. Further, it is not the case that $M$ being $\dd$-regular implies $M_{\geq \dd}$ has a linear resolution \cite[Example 4.2]{bruce21}. 
+In particular, we see that the minimal graded free resolution $S/B$ is not $(0,0)$-linear since $(-1,-1) \not\in L_1(0,0)$, however, it is $(0,0)$-quasilinear. Further, it is not the case that $M$ being $\dd$-regular implies $M_{\geq \dd}$ has a linear resolution \cite[Example 4.2]{bruceHellerSayrafi21}. 
 \end{example}
 
 The structure of the Cox ring $S$ and the geometry of the irrelevant ideal $B$ often obstruct the existence of linear resolutions. This necessitates weaker notions of linearity, such as quasi-linear resolutions, or the use of virtual resolutions . We seek to generalize the classical connections between regularity and resolutions to the multigraded setting.

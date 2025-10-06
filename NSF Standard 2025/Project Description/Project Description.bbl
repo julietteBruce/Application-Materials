@@ -1,10 +1,16 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{BEGY21}
+\begin{thebibliography}{FMtaP03}
 
 \bibitem[ABLS20]{ABLS20}
 Ayah Almousa, Juliette Bruce, Michael Loper, and Mahrud Sayrafi.
 \newblock The virtual resolutions package for {M}acaulay2.
 \newblock {\em J. Softw. Algebra Geom.}, 10(1):51--60, 2020.
+
+\bibitem[AFP{\etalchar{+}}19]{aprodu19}
+Marian Aprodu, Gavril Farkas, \c~Stefan Papadima, Claudiu Raicu, and Jerzy
+  Weyman.
+\newblock Koszul modules and {G}reen's conjecture.
+\newblock {\em Invent. Math.}, 218(3):657--720, 2019.
 
 \bibitem[BBB{\etalchar{+}}17]{BBBKR17}
 Madeline Brandt, Juliette Bruce, Taylor Brysiewicz, Robert Krone, and Elina
@@ -40,11 +46,6 @@ Juliette Bruce and Daniel Erman.
 \newblock A probabilistic approach to systems of parameters and {N}oether
   normalization.
 \newblock {\em Algebra Number Theory}, 13(9):2081--2102, 2019.
-
-\bibitem[BE24]{brownErman23-2}
-Michael~K. Brown and Daniel Erman.
-\newblock A short proof of the {H}anlon-{H}icks-{L}azarev theorem.
-\newblock {\em Forum Math. Sigma}, 12:Paper No. e56, 6, 2024.
 
 \bibitem[BEGY20]{BEGY20}
 Juliette Bruce, Daniel Erman, Steve Goldstein, and Jay Yang.
@@ -93,20 +94,110 @@ Juliette Bruce.
 \newblock Asymptotic syzygies for products of projective spaces.
 \newblock {\em J. Algebra}, 649:347--391, 2024.
 
+\bibitem[CEFS13]{chiodoEFS13}
+Alessandro Chiodo, David Eisenbud, Gavril Farkas, and Frank-Olaf Schreyer.
+\newblock Syzygies of torsion bundles and the geometry of the level {$\ell$}
+  modular variety over {$\overline{\mathcal{M}}_g$}.
+\newblock {\em Invent. Math.}, 194(1):73--118, 2013.
+
 \bibitem[CHT99]{CHT99}
 S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
 \newblock Asymptotic behaviour of the {C}astelnuovo-{M}umford regularity.
 \newblock {\em Compositio Math.}, 118(3):243--261, 1999.
+
+\bibitem[Deo18]{deopurkar18}
+Anand Deopurkar.
+\newblock The canonical syzygy conjecture for ribbons.
+\newblock {\em Math. Z.}, 288(3-4):1157--1164, 2018.
 
 \bibitem[EG84]{eisenbudGoto84}
 David Eisenbud and Shiro Goto.
 \newblock Linear free resolutions and minimal multiplicity.
 \newblock {\em J. Algebra}, 88(1):89--133, 1984.
 
-\bibitem[HHL24]{HHL23}
-Andrew Hanlon, Jeff Hicks, and Oleg Lazarev.
-\newblock Resolutions of toric subvarieties by line bundles and applications,
-  2024.
+\bibitem[Eis05]{eisenbud05}
+David Eisenbud.
+\newblock {\em The geometry of syzygies}, volume 229 of {\em Graduate Texts in
+  Mathematics}.
+\newblock Springer-Verlag, New York, 2005.
+\newblock A second course in commutative algebra and algebraic geometry.
+
+\bibitem[EL12]{einLazarsfeld12}
+Lawrence Ein and Robert Lazarsfeld.
+\newblock Asymptotic syzygies of algebraic varieties.
+\newblock {\em Invent. Math.}, 190(3):603--646, 2012.
+
+\bibitem[EY18]{ermanYang18}
+Daniel Erman and Jay Yang.
+\newblock Random flag complexes and asymptotic syzygies.
+\newblock {\em Algebra Number Theory}, 12(9):2151--2166, 2018.
+
+\bibitem[FK16]{farkasKemeny16}
+Gavril Farkas and Michael Kemeny.
+\newblock The generic {G}reen-{L}azarsfeld secant conjecture.
+\newblock {\em Invent. Math.}, 203(1):265--301, 2016.
+
+\bibitem[FK17]{farkasKemeny17}
+Gavril Farkas and Michael Kemeny.
+\newblock The {P}rym-{G}reen conjecture for torsion line bundles of high order.
+\newblock {\em Duke Math. J.}, 166(6):1103--1124, 2017.
+
+\bibitem[FMtaP03]{farkasMustataPopa03}
+Gavril Farkas, Mircea Musta\c~t\v a, and Mihnea Popa.
+\newblock Divisors on {$\mathcal{M}_{g,g+1}$} and the minimal resolution
+  conjecture for points on canonical curves.
+\newblock {\em Ann. Sci. \'Ecole Norm. Sup. (4)}, 36(4):553--581, 2003.
+
+\bibitem[Gre84]{green84-I}
+Mark~L. Green.
+\newblock Koszul cohomology and the geometry of projective varieties.
+\newblock {\em J. Differential Geom.}, 19(1):125--171, 1984.
+\newblock With an appendix by Robert Lazarsfeld and Green.
+
+\bibitem[Gru09]{grushevsky09}
+Samuel Grushevsky.
+\newblock Geometry of {$\mathcal{A}_g$} and its compactifications.
+\newblock In {\em Algebraic geometry---{S}eattle 2005. {P}art 1}, volume 80,
+  Part 1 of {\em Proc. Sympos. Pure Math.}, pages 193--234. Amer. Math. Soc.,
+  Providence, RI, 2009.
+
+\bibitem[GS]{M2}
+Daniel~R. Grayson and Michael~E. Stillman.
+\newblock Macaulay2, a software system for research in algebraic geometry.
+\newblock Available at \url{http://www2.macaulay2.com}.
+
+\bibitem[Hai02]{hain02}
+Richard Hain.
+\newblock The rational cohomology ring of the moduli space of abelian 3-folds.
+\newblock {\em Math. Res. Lett.}, 9(4):473--491, 2002.
+
+\bibitem[HT12]{HT12}
+Klaus Hulek and Orsola Tommasi.
+\newblock Cohomology of the second {V}oronoi compactification of {$\mathcal{
+  A}_4$}.
+\newblock {\em Doc. Math.}, 17:195--244, 2012.
+
+\bibitem[HT18]{HT18}
+Klaus Hulek and Orsola Tommasi.
+\newblock The topology of {$\mathcal{A}_g$} and its compactifications.
+\newblock In {\em Geometry of moduli}, volume~14 of {\em Abel Symp.}, pages
+  135--193. Springer, Cham, 2018.
+\newblock With an appendix by Olivier Ta\"ibi.
+
+\bibitem[Igu62]{igusa62}
+Jun-ichi Igusa.
+\newblock On {S}iegel modular forms of genus two.
+\newblock {\em Amer. J. Math.}, 84:175--200, 1962.
+
+\bibitem[Kem21]{kemeny21}
+Michael Kemeny.
+\newblock Universal secant bundles and syzygies of canonical curves.
+\newblock {\em Invent. Math.}, 223(3):995--1026, 2021.
+
+\bibitem[Kem24]{kemeny24}
+Michael Kemeny.
+\newblock The rank of syzygies of canonical curves.
+\newblock {\em J. Reine Angew. Math.}, 810:97--138, 2024.
 
 \bibitem[Kod00]{Kodiyalam00}
 Vijay Kodiyalam.
@@ -117,5 +208,26 @@ Vijay Kodiyalam.
 Diane Maclagan and Gregory~G. Smith.
 \newblock Multigraded {C}astelnuovo-{M}umford regularity.
 \newblock {\em J. Reine Angew. Math.}, 571:179--212, 2004.
+
+\bibitem[Sch91]{schreyer91}
+Frank-Olaf Schreyer.
+\newblock A standard basis approach to syzygies of canonical curves.
+\newblock {\em J. Reine Angew. Math.}, 421:83--123, 1991.
+
+\bibitem[Voi02]{voisin02}
+Claire Voisin.
+\newblock Green's generic syzygy conjecture for curves of even genus lying on a
+  {$K3$} surface.
+\newblock {\em J. Eur. Math. Soc. (JEMS)}, 4(4):363--404, 2002.
+
+\bibitem[Voi05]{voisin05}
+Claire Voisin.
+\newblock Green's canonical syzygy conjecture for generic curves of odd genus.
+\newblock {\em Compos. Math.}, 141(5):1163--1190, 2005.
+
+\bibitem[VZB22]{voightZurieckBrown22}
+John Voight and David Zureick-Brown.
+\newblock The canonical ring of a stacky curve.
+\newblock {\em Mem. Amer. Math. Soc.}, 277(1362):v+144, 2022.
 
 \end{thebibliography}

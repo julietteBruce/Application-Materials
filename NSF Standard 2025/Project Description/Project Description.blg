@@ -3,50 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Project Description.aux
 The style file: alpha.bst
 Database file #1: sample.bib
-Warning--I didn't find a database entry for "igusa62"
-Warning--I didn't find a database entry for "hain02"
-Warning--I didn't find a database entry for "HT12"
-Warning--I didn't find a database entry for "HT18"
-Warning--I didn't find a database entry for "grushevsky09"
-You've used 22 entries,
+You've used 42 entries,
             2543 wiz_defined-function locations,
-            711 strings with 7774 characters,
-and the built_in function-call counts, 9574 in all, are:
-= -- 964
-> -- 510
-< -- 6
-+ -- 189
-- -- 180
-* -- 766
-:= -- 1596
-add.period$ -- 63
-call.type$ -- 22
-change.case$ -- 152
-chr.to.int$ -- 21
-cite$ -- 22
-duplicate$ -- 310
-empty$ -- 657
-format.name$ -- 203
-if$ -- 1895
+            840 strings with 10508 characters,
+and the built_in function-call counts, 17610 in all, are:
+= -- 1815
+> -- 797
+< -- 22
++ -- 286
+- -- 269
+* -- 1376
+:= -- 2868
+add.period$ -- 129
+call.type$ -- 42
+change.case$ -- 265
+chr.to.int$ -- 41
+cite$ -- 42
+duplicate$ -- 631
+empty$ -- 1275
+format.name$ -- 322
+if$ -- 3534
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 110
-num.names$ -- 66
-pop$ -- 122
+missing$ -- 39
+newline$ -- 214
+num.names$ -- 126
+pop$ -- 198
 preamble$ -- 1
-purify$ -- 174
+purify$ -- 308
 quote$ -- 0
-skip$ -- 271
+skip$ -- 529
 stack$ -- 0
-substring$ -- 630
-swap$ -- 33
-text.length$ -- 6
-text.prefix$ -- 4
+substring$ -- 1252
+swap$ -- 77
+text.length$ -- 22
+text.prefix$ -- 15
 top$ -- 0
-type$ -- 176
+type$ -- 332
 warning$ -- 0
-while$ -- 98
-width$ -- 28
-write$ -- 279
-(There were 5 warnings)
+while$ -- 187
+width$ -- 44
+write$ -- 550
