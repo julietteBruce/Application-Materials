@@ -4,45 +4,45 @@ The top-level auxiliary file: Project Description.aux
 The style file: alpha.bst
 Database file #1: sample.bib
 Warning--there's a number but no volume in kerberMarkwig09
-You've used 61 entries,
+You've used 84 entries,
             2543 wiz_defined-function locations,
-            956 strings with 13439 characters,
-and the built_in function-call counts, 26062 in all, are:
-= -- 2685
-> -- 1198
-< -- 29
-+ -- 428
-- -- 406
-* -- 2053
-:= -- 4233
-add.period$ -- 186
-call.type$ -- 61
-change.case$ -- 390
-chr.to.int$ -- 59
-cite$ -- 62
-duplicate$ -- 918
-empty$ -- 1887
-format.name$ -- 481
-if$ -- 5243
+            1093 strings with 16088 characters,
+and the built_in function-call counts, 34884 in all, are:
+= -- 3596
+> -- 1526
+< -- 46
++ -- 534
+- -- 508
+* -- 2726
+:= -- 5649
+add.period$ -- 254
+call.type$ -- 84
+change.case$ -- 519
+chr.to.int$ -- 82
+cite$ -- 85
+duplicate$ -- 1263
+empty$ -- 2575
+format.name$ -- 617
+if$ -- 7027
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 56
-newline$ -- 307
-num.names$ -- 183
-pop$ -- 292
+missing$ -- 79
+newline$ -- 420
+num.names$ -- 252
+pop$ -- 394
 preamble$ -- 1
-purify$ -- 452
+purify$ -- 606
 quote$ -- 0
-skip$ -- 776
+skip$ -- 1054
 stack$ -- 0
-substring$ -- 1893
-swap$ -- 114
-text.length$ -- 29
-text.prefix$ -- 19
+substring$ -- 2546
+swap$ -- 152
+text.length$ -- 46
+text.prefix$ -- 31
 top$ -- 0
-type$ -- 484
+type$ -- 660
 warning$ -- 1
-while$ -- 274
-width$ -- 64
-write$ -- 795
+while$ -- 369
+width$ -- 89
+write$ -- 1090
 (There was 1 warning)

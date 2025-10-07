@@ -163,6 +163,7 @@
 \newcommand{\one}{\mathbf{1}}
 \newcommand{\pp}{\mathbf{p}}
 \newcommand{\qq}{\mathbf{q}}
+\newcommand{\zero}{\mathbf{0}}
 
 \renewcommand{\AA}{\mathbb{A}}
 \newcommand{\BB}{\mathbb{B}}
@@ -269,7 +270,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-During 2020-2022 the PI was supported by an NSF Postdoctoral Research Fellowship (NSF Grant No. MSPRF DMS-2002239, \$150,000) titled \textit{Asymptotic Syzygies in Algebraic Geometry}. In this period the PI made major contributions to extending our understanding of homological algebra on toric varieties (see Section~\ref{subsec:prior:homological-algebra-on-toric}) and the cohomology of moduli spaces (see Section~\ref{subsec:prior:cohomology-of-ag}). These works resulted in 5 new papers being posted to the arXiv \cite{BCEGLY22,bruceHellerSayrafi21,bruceHellerSayrafi22,brandtBruceCorey23,BBCMMW24}.
+During 2020-2022 the PI was supported by an NSF Postdoctoral Research Fellowship (NSF Grant No. MSPRF DMS-2002239, \$150,000) titled \textit{Asymptotic Syzygies in Algebraic Geometry}. In this period the PI made major contributions to extending our understanding of homological algebra on toric varieties (Section~\ref{subsec:prior:homological-algebra-on-toric}) and the cohomology of moduli spaces (Section~\ref{subsec:prior:cohomology-of-ag}). These works resulted in 6 papers being posted to the arXiv \cite{BCEGLY22,bruceHellerSayrafi21,bruceHellerSayrafi22,brandtBruceCorey23,BBCMMW24,ABBCV25}.
 
 During 2015-2020 the PI was supported by an NSF Graduate Research Fellowship (NSF Grant No. DGE-1256259, \$150,000) title \textit{Syzygies in Algebraic Geometry}. In this period the PI made substantial contributions to commutative algebra and algebraic geometry, including furthering our understanding of syzygies on higher dimensional varieties. This resulted in the PI posting 8 new papers to the arXiv \cite{ABLS20,BBBKR17,bruceErman19,bruceLi20,BEGY20,BEGY21,bruce24,bruce22}.
 
@@ -320,14 +321,12 @@ The Castelnuovo–Mumford Regularity of a projective variety $X\subset \PP^{r}$ 
 Let $\cF$ be a coherent sheaf on $\PP^{n}$ and $M=\bigoplus_{e\in\ZZ} H^0(\PP^{r},\cF(e))$ the corresponding section module. The following are equivalent: (1) $M$ is $d$-regular; (2) $\beta_{p,q}(M)=0$ for all $p\geq0$ and $q>d+i$; (3) $M_{\geq d}$ has a linear resolution. 
 \end{theorem}
 
-A toric variety $Y$ is a ``nice'' compactification of a torus, which under minor hypotheses can be thought of as the quotient $[(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r]$ where $\VV(B)$ is the fixed locus of the action of $(\CC^{\times})^r$ on $\CC^{n}$. The ideal $B$ defining this fixed locus is called the irrelevant ideal, and when $Y\cong \PP^n$ it is precisely the maximal homogenous ideal $\langle x_0,\ldots,x_n\rangle$. Cox proved a beautiful correspondence between coherent sheaves on $Y$ and $\ZZ^r$-graded modules over a $\ZZ^r$-graded polynomial ring $S=\CC[x_0,\ldots,x_n]$, which is known as the Cox ring of $Y$. This suggests there may be a rich dictionary between \emph{multigraded} homological algebra over the Cox ring and geometry of the toric variety. 
-
-Maclagan and Smith introduced multigraded Castelnuovo--Mumford regularity on toric varieties; defined in terms of the vanishing of cohomology groups,  Let $Y$ be a smooth projective toric variety, the Picard group of $Y$ is isomorphic to $\ZZ^r$ and the cone of numerically effective line bundles on $Y$ -- the nef cone of $X$ -- is a full dimensional cone of $\Pic(Y)\cong \ZZ^r$.  We define multigraded regularity in terms of vanishing of higher cohomology groups with respect to translates of this cone. Given $\vv \in \ZZ^r$ set $|\vv|\coloneqq v_1+v_2+\cdots v_r$. 
+A toric variety $Y$ is a ``nice'' compactification of a torus, which under minor hypotheses, can be written as a quotient $Y=[(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r]$ where $\VV(B)$ is \emph{irrelevant ideal} of $Y$; for $Y\cong \PP^n$ the irrelevant ideal $B=\langle x_0,\ldots,x_n\rangle$. Cox proved a beautiful correspondence between coherent sheaves on $Y$ and $\ZZ^r$-graded ($B$-saturated) modules over a $\ZZ^r$-graded polynomial ring $S=\CC[x_0,\ldots,x_n]$, which is known as the Cox ring of $Y$ \cite{cox95}. This yields a rich dictionary between \emph{multigraded} homological algebra over $S$ and the geometry of $Y$. Maclagan and Smith defined multigraded Castelnuovo--Mumford regularity on toric varieties in terms of the vanishing of cohomology groups,  Let $Y$ be a smooth projective toric variety so that $\Pic(Y)\cong \ZZ^r$ and the nef cone of $Y$  is a full dimensional cone of $\Pic(Y)_{\RR}$. For $\vv \in \ZZ^r$ set $|\vv|\coloneqq v_1+v_2+\cdots v_r$. 
 
 \begin{defn}\cite[Definition 6.1]{maclaganSmith04}\label{def:mg-reg}
 With the set-up as in the previous paragraph if $\cF$ is a coherent module on $X$ then we say that $\cF$ is \emph{$\dd$-regular} for $\dd \in \ZZ^r$ if and only if $H^i(Y, \cF(\ee))=0$ for all $i>0$ and all $\ee \in L_{i}(\dd)$ where
 \[
-L_{i}(\dd) \coloneqq \bigcup_{\substack{\vv\in \ZZ^r \\ |\vv|=i}} \left(\dd-\vv + \Nef(X)\right).
+L_{i}(\dd) \coloneqq \bigcup_{\substack{\vv\in \ZZ^r, |\vv|=i}} \left(\dd-\vv + \Nef(X)\right).
 \]
 We then define the \emph{multigraded regularity} of $\cF$ to be $\reg(\cF)\coloneqq \{\dd\in \ZZ^r \;\; | \;\; \text{$\cF$ is $\dd$-regular}\}$. 
 \end{defn}
@@ -389,7 +388,7 @@ We can define the multigraded regularity of a $\ZZ^r$-graded module $M$ over $S$
 
 The obvious approaches to generalize Theorem~\ref{thm:eisenbud-goto} to a product of projective spaces fail For example, the multigraded Betti numbers do not determine multigraded Castelnuovo--Mumford regularity \cite[Example 5.1]{bruceHellerSayrafi21}. Despite this we show that part (3) of Theorem~\ref{thm:eisenbud-goto} can be generalized. To do so we introduce the following generalization of linear resolutions. 
 
-\begin{defn}
+\begin{defn}\label{defn:quasilinear}
 A complex $F_{\bullet}$ of $\ZZ^{r}$-graded free $S$-modules is $\dd$-quasilinear if and only if $F_{0}$ is generated in degree $\dd$ and each twist of $F_{i}$ is contained in $L_{i-1}(\dd-\one)$.
 \end{defn}
 
@@ -406,7 +405,7 @@ The proof of Theorem~\ref{thm:mgreg-main} is based on a spectral sequence argume
 \subsection{Asymptotic Multigraded Regularity of Ideals}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Building upon our work discussed above -- and inspired by previous work on $\PP^{r}$ \cite{BEL91,CHT99,Kodiyalam00} -- my collaborators and I also studied the asymptotic regularity of powers of ideals on arbitrary toric varieties. In particular, Definition~\ref{def:mg-reg} can be extended to all toric varieties by letting $S$ be Cox ring of the toric variety $X$, replacing $\ZZ^r$ with the Picard group of $X$, and replacing $\NN^{r}$ with the nef cone of $X$. My collaborators and I show that the multigraded regularity of powers of ideals is bounded and translates in a predictable way. In particular, the regularity of $I^{t}$ essentially translates within $\Nef X$ in fixed directions at a linear rate.
+Building upon our work discussed above -- and inspired by previous work on $\PP^{r}$ \cite{BEL91,CHT99,Kodiyalam00} -- I studied the asymptotic regularity of powers of ideals on arbitrary toric varieties. My collaborators and I show that the multigraded regularity of powers of ideals is bounded and translates in a predictable way. In particular, the regularity of $I^{t}$ essentially translates within $\Nef X$ in fixed directions at a linear rate.
  
 
 \begin{theorem}\cite[Theorem 4.1]{bruceHellerSayrafi22}
@@ -428,7 +427,7 @@ The data is publicly available via SyzygyData.com and a package for Macaualy2 \c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorphism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}(2g, \ZZ)]$ where $\HH_{g}$ is the Siegel upper half-space. Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example, the (singular) cohomology is $\cA_{g}$ is only fully known for $g\leq 4$ \cite{igusa62,hain02,HT12,HT18}. Further, Grushevsky \cite{grushevsky09} posed the question whether $H^{2k+1}(\cA_{g};\QQ)\neq0$ for some $g$ and $k$. Building upon the work of Chan, Galatius, and Payne \cite{CGP21}, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology classes in $H^{k}(\cA_{g}; \QQ)$ in a number of new cases and answer Grushevsky's question. 
+The moduli stack of abelian varieties of dimension $g$, $\cA_g$, is the smooth DM stack $[\mathbb{H}_g/\mathrm{Sp}(2g, \ZZ)]$ parameterizing isomorphism classes of principally polarized abelian varieties of dimension $g$. Despite extensive study, much of its geometry is unknown, for example its rational cohomology is fully known only for $g\leq 4$ \cite{igusa62,hain02,HT12,HT18} and Grushevsky asked $H^{2k+1}(\cA_{g};\QQ)\neq0$ for some $g$ and $k$ \cite{grushevsky09}. Building on Chan–Galatius–Payne \cite{CGP21}, my co-authors and I developed methods to analyze a canonical quotient of $H^{k}(\cA_{g}; \QQ)$ and produced new nontrivial classes.
 
 \begin{theorem}\cite[Theorem A]{BBCMMW24}\label{thm:Ag}
 The rational cohomology $H^{k}\left(\cA_{g};\QQ\right)\neq0$ for:
@@ -437,27 +436,24 @@ The rational cohomology $H^{k}\left(\cA_{g};\QQ\right)\neq0$ for:
 \]
 \end{theorem}
 
-For broader context, since $\cA_g$ is a rational classifying space for $\mathrm{Sp}_{2g}(\ZZ)$ there is natural isomorphism $H^*(\cA_g;\QQ) \cong H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$. In particular, the above results provide new non-vanishing results for $H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$. However, my work takes advantage of the fact that since $\cA_g$  is a smooth and separated Deligne Mumford stack with a coarse moduli space which is an algebraic variety, permitting Deligne's mixed Hodge theory to be applied to study the rational cohomology of these groups. In this way we deduce Theorem~\ref{thm:Ag} above as a corollary to computing the top-weight cohomology of $\cA_{g}$ for all $g\leq 7$.  
-
+This theorem provided an answer to Grushevsky. Since $\cA_g$ is a rational classifying space for $\mathrm{Sp}_{2g}(\ZZ)$ we have $H^*(\cA_g;\QQ) \cong H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$, and thus, Theorem~\ref{thm:Ag} gives new non-vanishing results for $\mathrm{Sp}_{2g}(\ZZ)$. Our approach uses that $\cA_g$ is smooth, separated DM stack with algebraic coarse modul allowing one to use Deligne’s mixed Hodge theory; we then develop a tropical theory allowing the computation of the top-weight cohomology of $\cA_g$ for $g\leq 7$. Subsequent work of the PI with others generalized this to a theory of tropicalizing shimura varieties \cite{ABBCV25}, highlighted in 2025 SRI in Algebraic Geometry plenary. 
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Broader Impacts from Prior NSF Support}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Organizing}\label{subsubsec:prior-organizing} I organized 11 conferences: \textit{Math Careers Beyond Academia } (50 participants), \textit{M2@UW} (45 participants), \textit{Geometry \& Arithmetic of Surfaces} (40 participants), \textit{CAZoom} (70 participants), \textit{WAGS} (100 participants), \textit{Gems of Combinatorics I \& II} (40 \& 30 participants), $\Spec(\overline{\QQ})$ (50 participants), \textit{BATMOBILE (2022)} (20 participants),  \textit{Gems of Commutative Algebra I \& II} (35 \& 40 participants). In this time I organized three special sessions at AMS Sectional Meetings and the Joint Math Meetings. Many of these workshops, namely the \textit{Gems of} series, focused on supporting  the next generation of researchers by building community and networks.
+\subsubsection{Organizing.}\label{subsubsec:prior-organizing} I organized 11 conferences: \textit{Math Careers Beyond Academia } (50 participants), \textit{M2@UW} (45 participants), \textit{Geometry \& Arithmetic of Surfaces} (40 participants), \textit{CAZoom} (70 participants), \textit{WAGS} (100 participants), \textit{Gems of Combinatorics I \& II} (40 \& 30 participants), $\Spec(\overline{\QQ})$ (50 participants), \textit{BATMOBILE (2022)} (20 participants),  \textit{Gems of Commutative Algebra I \& II} (35 \& 40 participants). In this time I organized three special sessions at AMS Sectional Meetings and the Joint Math Meetings. Many of these workshops, namely the \textit{Gems of} series, focused on supporting  the next generation of researchers by building community and networks.
 
-
-\subsubsection{Math Circles}
+\subsubsection{Math Circles.}
 	From 2015 through 2018 I was heavily involved in the Madison Math Circle, including  2 years as the lead organizer. As an organizer, I worked to build stronger connections between the Madison Math Circle, local schools, teachers, and other outreach organizations. This led to weekly attendance to more than double. I also created a new outreach arm of the circle, which visits high schools around the state of Wisconsin to better serve students. While a post-doc at UC Berkeley I volunteered as a speaker with the Berkeley Math Circle. 
 
-\subsubsection{Mentoring}
-I have actively sought out ways to mentor undergraduate and graduate students, especially those from generally underrepresented groups. While a graduate student, I led reading courses with three undergraduates. One of these students, an undergraduate woman, worked with me for over a year, during which time I helped her apply for summer research projects. Working with \textit{Girls' Math Night Out} I lead two girls in high school through a project exploring cryptography. During 2018-2019, I mentored 6 first-year graduate students (all women or non-binary students). I also mentored two undergraduate women via the AWM's Mentoring Network. 
-
-I advised two summer research projects for undergraduate students. The first of these projects ran virtually during Summer 2021 when 6 undergraduates worked on combinatorial questions related to my work in \cite{BBCMMW24}. In Summer 2022 I advised an undergraduate student on a research project related to my work on syzygies discussed in Section~\ref{subsec:prior:homological-algebra-on-toric}. This student is now a graduate student in mathematics and received an NSF GRF. As a postdoc, I began research projects with three graduate students (a majority of whom identify with a generally underrepresented group). These projects have resulted in two pre-prints, with additional projects still ongoing. Throughout the Spring and Summer of 2022, I did a reading course with a first-year graduate woman on algebraic geometry.
-
-\subsubsection{Virtual Mathematics}
+\subsubsection{Mentoring.} While a graduate student and post-doc I led four reading courses with undergraduates in algebraic and geometry, volunteered for \textit{Girls' Math Night Out} to promote mathematics to high schoolers, and mentored 6+ students via the AWM's Mentoring Network. During Summer 2021 I led 6 undergraduates on a research project related to \cite{BBCMMW24}. In Summer 2022 I advised an undergraduate student -- now a math Ph.D. student with an NSF GRF -- on a research project related to the work Section~\ref{subsec:prior:homological-algebra-on-toric}. 
+\subsubsection{Virtual Mathematics.}
 In response to the COVID-19 pandemic and the shift of many mathematical activities to virtual formats, I worked to find ways for these online activities to reach those often at the periphery. During Summer and Fall 2020, I helped with Ravi Vakil's \textit{Algebraic Geometry in the Time of Covid} project. This massive online open-access course in algebraic geometry brought together $\sim2,000$ participants from around the world. In Spring 2021, I organized an 8-week virtual reading course for undergraduates in algebraic geometry and commutative algebra. 
+
+\subsubsection{Community.} While a graduate student I founded co-founded oSTEM@UW as a resource for students in STEM, and organized a peer networking event \textit{qGrads}, which had over 350 members. During 2020-2023 I served on the board of \textit{Spectra}, including its inaugural president. I oversaw the growth and formalization of the organization, including the creation and adoption of bylaws, the creation of an invited lecture at the JMM, and a fundraising campaign that has raised over \$20,000.
 
 %\subsubsection{t} 
 %While a graduate student I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM, which eventually grew to over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around... Thanks so much for organizing this stuff -- it's really helpful''. From 2017-2020 I led the campus social organization for LGBTQ+ graduate and post-graduate students, which had over 350 members. 
@@ -594,10 +590,10 @@ To define a meaningful Clifford index, we need a robust theory of linear series 
 
 The PI plans to use deformation theory and degeneration techniques to study the geometry of $\cW_{d}^{r}(\cX)$. Establishing the basic properties of these loci is crucial for defining $\cliff(\cX)$ and formulating a precise analogue of Green's conjecture. We expect the stacky Clifford index to depend on the genus of the coarse space and the configuration of the stabilizer groups.
 
-Another approach one may take towards Goal~\ref{goal:stackyGreens} is by studying the algebraic properties of the canonical rings $R(\cX;K_{\cK})$. As a first step towards this, together with Maya Banks and Christopher Manon, we have shown that just like normal non-stacky curves, the canonical ring of stacky curves is Gorenstein.  
+Another approach one may take towards Goal~\ref{goal:stackyGreens} is by studying the algebraic properties of the canonical rings $R(\cX;K_{\cK})$. As a step in this direction the PI and co-author has shown that just like classical curves \cite{VF93,PP97}, the canonical ring of stacky curves is generally Gorenstein.  
 
 \begin{lemma}
-	If $\cX$ is a stacky curve then the canonical ring $R(\cX;K_{\cK})$ is Gorenstein. 
+	If $\cX$ is a stacky curve whose coarse space is not hyperelliptic, trigonal, or isomorphic to a plane quintic then the canonical ring $R(\cX;K_{\cK})$ is Gorenstein. 
 \end{lemma}
 
 The argument to prove the above lemma largely follows the classical argument, which some slight delicateness needed in handling the non-standard weighting on ambient polynomial ring. A significantly more subtle algebraic question would be to determine when $R(\cX; K_{\cX})$ is Koszul. It is worth noting here that the \juliette{ADD}
@@ -659,30 +655,40 @@ The stack $\cP(1,1,a)$ has a single stacky point with stabilizer $\ZZ/a\ZZ$. Its
 \subsection{Computations with Toric Stacks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While, such a framework in general is fairly hopeless, however, restricting our attention to \emph{toric stacks} things are much more promising. In particular, the combinatorial theory of toric stacks is well-developed, with toric stacks roughly being equivalent to the data of a \emph{stacky fan} -- a fan $\Sigma \subset N$ and a lattice homomorphism $\beta:N\to L$ \cite{toricStacks1,toricStacks2,borisovChenSmith05}. Despite this no implementation of toric stacks exists for any computer algebra system as far as the PI is aware. This combined with the fact that the \textit{NormalToricVarieties} package for \textit{Macaualy2} being one of the most useful and robust packages suggest the following project would be beneficial both to the PI as she approaches projects in this proposal, but also the wider research community. 
+The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While a general framework is out of reach,  toric stacks are tractable: their combinatorics are well developed,  they correspond to \emph{stacky fans} -- the data of a fan $\Sigma \subset N_{\RR}$ and a lattice map $\beta:N\to L$ \cite{toricStacks1,toricStacks2,borisovChenSmith05} -- that makes computation with them feasible. Despite this the PI is not aware of any computer-algebra implementation for working with them. Given the success of the \textit{NormalToricVarieties} package in \textit{Macaulay2}, a toric-stacks package would benefit both this project and the community.
+
 
 \begin{problem}\label{prob:toric-stacks-m2}
 Develop a robust software package for \textit{Macaualy2} allowing for computations with toric stacks. 
 \end{problem}
 
-I plan to develop a \textit{Macaulay2} package \textit{toricStacks} implementing the necessary data structure and methods for working with toric stacks. This includes implementing: stacky fans, morphisms of stacky fans, line bundles on toric stacks, the cox ring of a toric stack, and cohomology computations involving sheaves on toric stacks. Work on such a package began in Summer 2025 with Maya Banks and John Cobb. The PI has extensive experience developing \textit{Macaulay2} packages and will involve graduate students in this project. The package will be open-source.
+I will develop the Macaulay2 package \textit{toricStacks}, implementing stacky fans and their morphisms, line bundles on toric stacks, Cox rings, and sheaf cohomology. Work began in Summer 2025 with Maya Banks and John Cobb. I have extensive experience building Macaulay2 packages and will involve graduate students. The package will be open-source.
+
+
+
 
 
 \begin{problem}
-	Compute the graded Betti tables of $\cP(1,1,1,a)$ embedded by $\cO(d)$ for all $1<a \leq 15$ and all $2\leq d \leq 6$ by adapting the high-performance computing approaches developed in \juliette{BEGY20,BCEGLY22}. 
+	Adapt  the high-performance computing methods in \cite{BEGY20,BCEGLY22} to compute the graded Betti numbers of $\cP(1,1,a)$ embedded by $\cO(d)$ for $1<a \leq 15$ and $2\leq d \leq 6$.
 \end{problem}
 
 
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Castelnuovo–Mumford Regularity: Resolutions, Bounds, and Asymptotic Behavoir}\label{sec:multigraded-regularity}
+\section{Castelnuovo–Mumford Regularity: Resolutions, Bounds, and Asymptotic Behavior}\label{sec:multigraded-regularity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As discussed in \juliette{citation} toric varieties can be viewed as generalizations of projective space. Where $\PP^n$ is the quotient $(\CC^{n+1}-\{0\})/\CC^{\times}$ a general toric variety is of the form $Y=(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r$ where $B$ is the ideal, called the irrelevant ideal, defining the fixed locus of the action of $(\CC^{\times})^r$ on $\CC^{n}$. We associated to such a toric variety a $\Cl(Y)$-graded polynomial ring $S=\CC[x_1,\ldots,x_n]$ called the Cox ring of $Y$ and $B \subset S$.When $Y$ is smooth $\Cl(Y) \cong \Pic(Y) \cong \ZZ^r$, and we will generally make this assumption going forward for simplicity. 
+As discussed in Section~\ref{subsec:prior:homological-algebra-on-toric} toric varieties are generalizations of projective space. Where $\PP^n$ is the quotient $(\CC^{n+1}-\{0\})/\CC^{\times}$ a general toric variety is of the form $Y=(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r$ where $B$ is thet the irrelevant ideal. We associated to such a toric variety a $\Pic(Y)$-graded polynomial ring $S=\CC[x_1,\ldots,x_n]$ called the Cox ring of $Y$ and $B \subset S$.
 
-A central invariant measuring the complexity of a $\Pic(Y)$-graded $S$-module $M$ or a is coherent sheaf $\cF$ on $Y$ is the multigraded  Castelnuovo-Mumford regularity (or just multigraded regularity) of $M$ or $\cF$. (See Section \juliette{NEEED} for the definition. Crucially, $\reg(M)$ is not a single degree, but a region in $\Pic(X)$. Unlike in the classical setting, even for relatively simple examples the multigraded regularity does not necessarily have a unique minimal element (see Figure~\ref{fig:example-of-reg}).
+\begin{notation}\label{not:toric}
+	We let $Y$ be a smooth projective toric variety coming from a fan $\Sigma \subset N_{\RR}$ with $\Pic(Y) \cong \ZZ^r$, We denote the $\Pic(Y)$-graded Cox ring of $Y$ by $S=\CC[x_1,\ldots,x_n]$ and let $B\subset S$ be the irrelevant ideal of $Y$. 
+\end{notation}
+
+ Cox proved a beautiful correspondence between coherent sheaves on $Y$ and $\ZZ^r$-graded ($B$-saturated) modules over a $\ZZ^r$-graded polynomial ring $S=\CC[x_0,\ldots,x_n]$, which is known as the Cox ring of $Y$ \cite{cox95}. As discussed in Section~\ref{subsec:prior:homological-algebra-on-toric}, Macalagan and Smith, defined multigraded regularity for coherent sheaves on toric varieties or equivalently $\ZZ^r$-graded modules over the Cox ring $S$ (see Definition~\ref{def:mg-reg}). Just as in the classical standard graded setting regularity is a central invariant measuring the complexity of module $M$, however, in the multigraded setting there are a number of nuances and new phenomena. For example, $\reg(M)$ is not a single degree, but a region in $\Pic(Y)$ that does not necessarily a unique minimal element (see Figure~\ref{fig:example-of-reg}). This project aims to deepen our understanding of multigraded regularity, its asymptotic behavior, and its relationship to the structure of free resolutions and positivity. 
+
+
 
 \begin{center}
 \begin{figure}\label{fig:example-of-reg}
@@ -718,20 +724,20 @@ A central invariant measuring the complexity of a $\Pic(Y)$-graded $S$-module $M
 \caption{Left: The multigraded Castelnuovo--Mumford regularity of $\cO_{X}$ where $X\subset \PP^{1}\times \PP^{1}$ is the three points $([1:1],[1:4])$, $([1:2],[1:5])$, $([1:3],[1:6])$. Right: The multigraded Castelnuovo--Mumford regularity of $\cO_{\cH_{3}}$.}
 \end{figure}
 \end{center}
-This project aims to deepen our understanding of multigraded regularity, its asymptotic behavior, and its relationship to the structure of free resolutions and positivity. 
+
 
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \subsection{Asymptotics and Bounds on Multigraded Regularity}
+ \subsection{Asymptotic Behavoir and Bounds on Multigraded Regularity}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
  \begin{problem}\label{prob:seshardri}
- 	Let $X$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring. Understand the asymptotic behavior of $\reg(I^p)$ and $\reg(\cI^p)$ where $I \subset S$ is an $\ZZ^r$-graded ideal and $\cI\subset \cO_{Y}$ is an ideal sheaf.
+ 	Using Notation~\ref{not:toric}, understand the asymptotic behavior of $\reg(I^p)$ and $\reg(\cI^p)$ where $I \subset S$ is an $\ZZ^r$-graded ideal and $\cI\subset \cO_{Y}$ is an ideal sheaf.
 \end{problem}
 
 Ongoing work of the PI with Lauren Cranton Heller, Mahrud Sayrafi, and Alexandra Seceleanu on led to the following conjecture, which would provide a precise answer to Problem~\ref{prob:seshardri}. 
@@ -744,7 +750,7 @@ Ongoing work of the PI with Lauren Cranton Heller, Mahrud Sayrafi, and Alexandra
 where the limit is in the sense of Painlevé–Kuratowski convergence of subsets of $\RR^n$. 
  \end{conjecture}
  
-We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves} the Seshadri region of $\cI$ as it is a natural multigraded analog \juliette{NEDEDEDE}.  This conjecture suggests that the asymptotic regularity has many surprising and nice properties. For example, depot $\reg(\cI^p)$ rarely being convex the Seshadri region is convex. 
+We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves} the Seshadri region of $\cI$ as it is a natural multigraded analog Seshadri constants, which measure positivity. This conjecture suggests that the asymptotic regularity has many surprising and nice properties. For example, depot $\reg(\cI^p)$ rarely being convex the Seshadri region is convex.  In ongoing work we hope to prove Conjecture~\ref{conj:reg-ideal-sheaves} and extend it to symmetric powers of vector bundles. 
 
 \begin{figure}[H]
 \newcommand{\makegrid}{
@@ -829,59 +835,57 @@ We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves
 \caption{Toy picture of the convergence of $\frac{\reg(\cI^{p})_{\RR}}{p}$ to the Seshadri region of $\cI$ predicted Conjecture~\ref{conj:reg-ideal-sheaves}.}
 \end{figure}
 
- 
- \begin{problem}
- 	Prove Conjecture~\ref{conj:reg-ideal-sheaves}. 
- \end{problem}
- 
- \juliette{ADDD SOMETHING HERE}
- 
+Given it's definition and nature measuring positivity of an ideal sheaf, it is natural to wonder whether the Seshadri region of $\cI$ predicted Conjecture~\ref{conj:reg-ideal-sheaves} is connected to theory of Newton-Okunkov bodies, which are also convex bodies roughly measuring positivity of a linear series along a flag of subvarieties that have received significant study \cite{okounkov96,okounkov03, lazarsfeldMustata09,KK12,anderson13,kaveh15} 
+
   \begin{problem}
  	Is the Seshadri regions defined above be determined by the Newton-Okunkov body of some flag on $Y$. 
  \end{problem}
  
-In addition to understanding the asymptotic limit of $\reg(I^p)$ and $\reg(\cI^p)$ is would be interesting to attempt to refine our understanding of the growth of the regularity in the settings. In particular, based on computations -- and as generally implied by Conjecture~\ref{conj:reg-ideal-sheaves} -- the number of minimal generator -- i.e. ``corners''  of $\reg(I^p)$ and $\reg(\cI^p)$, with respect to the $\Nef(Y)$ ordering, seems to grown with $p$. This is a phenomena new to the multigraded setting since on $\PP^n$ the regularity is always generated by a single element. It would be interesting to try to better understand this growth.
+Beyond the asymptotics of $\reg(I^p)$ and $\reg(\cI^p)$ it would be useful to have a finer understanding of how these regions grown and change with $p$. Computation and Conjecture~\ref{conj:reg-ideal-sheaves} suggest that the number of minimal generators with respect to the $\Nef(Y)$ ordering, i.e., “corners”, of $\reg(I^p)$ and $\reg(\cI^p)$ increases with $p$. This growth is a genuinely multigraded phenomenon, as on $\PP^n$ regularity is generated by a single element.  Quantifying and explaining this growth would be an interesting direction that appears within reach. 
 
  \begin{problem}\label{prob:corners}
- 	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring. Le If $I\subset S$ is a $\ZZ^r$-graded ideal and $\cI \subset \cO_{Y}$ and ideal sheaf on $Y$. 
-	\begin{enumerate}
-	\item Bound the number of minimal generators of $\reg(I^p)$ as a function of $p$.
-	\item Bound the number of minimal generators of $\reg(\cI^p)$ as a function of $p$.
-	\end{enumerate}
+ 	Using Notation~\ref{not:toric} let $I\subset S$ be a $\ZZ^r$-graded ideal and $\cI \subset \cO_{Y}$ an ideal sheaf on $Y$: (1)  Bound the number of minimal generators of $\reg(I^p)$ as a function of $p$. (2)  Bound the number of minimal generators of $\reg(\cI^p)$ as a function of $p$.
 \end{problem}
 
 My hope in approaching Problem~\ref{prob:corners} is to.... \juliette{FILL IN}
+
+ In a different direction, I would like to produce meaningful bounds on the regularity of the defining ideals of subvarieties of $Y$ in the vein of classical results like Gruson, Lazarsfeld, Peskine \cite{GLP83},  Bertram, Ein, Lazarsfeld \cite{BEL91}, and the Eisenbud--Goto conjecture \cite{eisenbudGoto84} (which was recently proven false \cite{MP18}). 
  	
  \begin{problem}\label{prob:subvariety-bound}
- 	Let $Y$ be a smooth projective toric variety and $Z\subset Y$ a smooth subvariety. Can one bound the multigraded regularity of $I_{Z}$ in terms of the codimension of $Z\subset Y$ and the degrees of minimal generators of $I_{Z}$?
+ 	Using Notation~\ref{not:toric} let  $Z\subset Y$ be smooth subvariety. Bound the multigraded regularity of $I_{Z}$ and $S/I_{Z}$ in terms of $\codim(Z\subset Y)$ and the degrees of minimal generators of $I_{Z}$?
 \end{problem}
 
 I will approach Problem~\ref{prob:subvariety-bound} by beginning with understanding the regularity of $I_{Z}$ when $Z$ is a torus invariant subvariety of $Y$. In this setting there is a bijection between such subvarieties and cones in the fan defining $X$, and the defining equations of $Z$ are entirely determined by the combinatorics of the corresponding cone.
 
-\begin{problem}
+\begin{problem}\label{prob:torus-invariant-mg}
 	Compute the multigraded regularity of torus invariant subvarieties of $Y$ in terms of the combinatorics of the cone defining them.
 \end{problem}
 
-Despite being a relatively simple class of subvarieties it has been shown that their multigraded regularity behaves in nuanced ways \juliette{needED} and more generally many simple results fail to generalize to multigraded regularity in ``easy'' ways. \juliette{needED}
+Despite being a relatively simple class of subvarieties it has been shown that their multigraded regularity behaves in nuanced ways \cite{bruceHellerSayrafi22}.  The goal for appraoching Problem~\ref{prob:torus-invariant-mg} is to compute both the higher cohomology of $\cI_Z$ and its Hilbert function using the combinatorics of the corresponding cone and working inductively on codimension.
 
-
-Lastly as a somewhat losely connected project, I would like to explore the following specific example. The Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, has long been of interest because of its rich geometry and combinatorics \cite{knudsen83,GHvdP88,keel92,kerberMarkwig09,manin13,CGM21,GGL23}. Building upon work of Kapranov \cite{kapranov93}, Tevelev and Tevelev showed there is an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding $\partial \overline{M}_{0,n} + K_{\overline{M}_{0,n}}$ naturally factors \cite{keelTevelev09}. Monin and Rana \cite{moninRana17} produced a set of equations, arising as the $2\times 2$ minors of certain matrices of linear forms, they conjectured defined the scheme theoretic image of $\Omega_{n}$, this was recently prove true by Gillepsie, Griffin, and Levinson \cite{GGL22}. 
+Lastly I will pursue the following focused project concerting the defining equations and regularity of the Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, which has rich geometry and combinatorics \cite{knudsen83,GHvdP88,keel92,kapranov93,kerberMarkwig09,manin13,CGM21,GGL23}. Tevelev and Tevelev constructed an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding given by $\partial \overline{M}_{0,n} + K_{\overline{M}_{0,n}}$ factors \cite{keelTevelev09}. Monin and Rana \cite{moninRana17} produced explicit equations, discussed below, which they conjectured defined the scheme theoretic image of $\Omega_{n}$. Gillepsie, Griffin, and Levinson recently proved this \cite{GGL22}. 
 
 \begin{problem}\label{prob:m0n}
  	Compute the multigraded Castelnuovo--Mumford Regularity and minimal graded free resolution of the defining ideal of $\Omega_{n}(\overline{M}_{0,n}) \subset \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$.
 \end{problem}
 
-Using \textit{Macaulay2} the regularity and free resolution of $\Omega_{n}(\overline{M}_{0,n})$ is computable for $n=4,5,6,7$. I hope to take two-step approach two answering Problem~\ref{prob:m0n} two-fold: First, leverage the fact that $\Omega_{n}(\overline{M}_{0,n})$ is \juliette{ADDD}. Second, use mapping cone constructions to convert the resolution computed in part one to  \juliette{ADD}
-Lastly, it is of interest to note that this \juliette{ADD}
+Using \textit{Macaulay2} the regularity and free resolution of $\Omega_{n}(\overline{M}_{0,n})$ is computable for $n=4,5,6,7$. The Monin-Rana equations defining $\Omega_{n}(\overline{M}_{0,n})$ arise as follows: Let $x_0^{(i)},x_1^{(i)}, \ldots, x_i^{(i)}$ denote the coordinates on $\PP^i$, then for each $i<j$ let
+\[
+M_{i,j} \coloneqq \begin{pmatrix}
+x_{0}^{(i)}(x_{0}^{(j)}-x_i^{(j)} & x_{1}^{(i)}(x_{1}^{(j)}-x_i^{(j)}  & x_{2}^{(i)}(x_{2}^{(j)}-x_i^{(j)}  & \cdots & x_{i}^{(i)}(x_{i}^{(j)}-x_i^{(j)} \\
+x_0^{(j)} & x_1^{(j)} & x_2^{(j)} & \cdots & x_i^{(j)}
+\end{pmatrix}.
+\]
+Define $J_{i,j}$ to be the ideal generated by the $2\times 2$ minors of $M_{i,j}$. The ideal defining $\Omega_{n}(\overline{M}_{0,n})$ is then $I_{n}=\sum_{1\leq i<j\leq n-3} J_{i,j}$. Each ideal $J_{i,j}$ is independent of $n$ and is resolved by an Eagon-Northcott complex. Further the defining ideals of $I_{n}$ have natural inductive structure since $I_{n}=I_{n-1}+J_{1,n-3}+\cdots+J_{n-4,n-3}$. Working inductively and using a mapping cone construction over the  short exact sequence arising from ideal sums we can produce a non-minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. The key technical step is to control the multigraded resolutions of intersections $J_{i,j}\cap J_{i',j'}$. If we can control these we can then hope to minimize the resulting resolution to get the minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. This picture is also compatible with the following alternative approach: $\Omega_{n}(\overline{M}_{0,n})$ is the image of a product of $\GL$-equivariant bundles and we may thus how to use Kempf collapsing and the Kemp, Lascoux, Weyman geometric technique for computing syzygies \cite{kempf76,lascoux78,weyman03}, which has recently been applied sucessfully in similar situations \cite{bergetFink25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{A Generalized Eisenbud--Goto Theorem for Toric Varieties}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The relationship between Castelnuovo-Mumford regularity and the existence of linear resolutions is fundamental in classical commutative algebra. If a module $M$ over a standard graded polynomial ring is generated in degree $d$, then $M$ is $d$-regular if and only if it has a $d$-linear resolution (i.e., all entries in the matrices of the resolution are linear forms). In the multigraded setting of a toric variety $Y$, this equivalence breaks down dramatically. 
+The relationship between Castelnuovo-Mumford regularity, graded Betti numbers, and linear resolutions is fundamental in classical commutative algebra (see Theorem~\label{thm:eisenbud-goto} \cite{eisenbudGoto84}). In the multigraded the analog of a linear resolution is a resolution such that each twist at homological degree $i$ is in $L_{i}(\zero)$, i.e., the entries of the differential have total degree one. However, with these definitions the relationship between linear resolutions and regularity breaks down dramatically.
 
 \begin{example}
-In order to see the difference between linear and quasilinear resolutions we note that on a product of projective spaces the irrelevant ideal generally will have a quasilinear resolution, not a linear resolution.  For example, if we consider $\PP^{1}\times \PP^{2}$ so that $S=\KK[x_{0},x_{1},y_{0},y_{1},y_{2}]$ and $B=\langle x_{0},x_{1}\rangle\cap\langle y_{0},y_{1},y_{2}\rangle$ then the minimal graded free resolution of $S/B$ is: 
+Consider $\PP^{1}\times \PP^{2}$ so that $S=\KK[x_{0},x_{1},y_{0},y_{1},y_{2}]$ and $B=\langle x_{0},x_{1}\rangle\cap\langle y_{0},y_{1},y_{2}\rangle$. One checks that $S/B$ is $(0,0)$-regular. The minimal graded free resolution of $(S/B)_{\geq\zero}=S/B$ is: 
 	\[\begin{tikzcd}[column sep=1.75em]
 	S & \lar S(-1,-1)^6 & \lar
 	  \begin{matrix}
@@ -900,46 +904,44 @@ In order to see the difference between linear and quasilinear resolutions we not
 	  S(-2,-3)
 	  & \lar 0.
 	\end{tikzcd}\]
-In particular, we see that the minimal graded free resolution $S/B$ is not $(0,0)$-linear since $(-1,-1) \not\in L_1(0,0)$, however, it is $(0,0)$-quasilinear. Further, it is not the case that $M$ being $\dd$-regular implies $M_{\geq \dd}$ has a linear resolution \cite[Example 4.2]{bruceHellerSayrafi21}. 
+In particular, $S/B$ does not have a linear resolution as $(-1,-1) \not\in L_1(\zero)$, and so being $\dd$-regular does not imply $M_{\geq\dd}$ has linear resolution. In alignment with Theorem~\ref{thm:mgreg-main} this resolution is $\zero$-quasilinear.
 \end{example}
 
-The structure of the Cox ring $S$ and the geometry of the irrelevant ideal $B$ often obstruct the existence of linear resolutions. This necessitates weaker notions of linearity, such as quasi-linear resolutions, or the use of virtual resolutions . We seek to generalize the classical connections between regularity and resolutions to the multigraded setting.
+Examples like the one above led the PI and co-authors to introduce the weaker notion of quasilinear resolutions (see Definition~\ref{defn:quasilinear}) which they used to characterize multigraded regularity on products of projective space \cite{bruceHellerSayrafi21}. The PI would like to generalize these results to other toric varieties. 
 
  \begin{problem}\label{prob:eisenbud-goto}
- 	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring and $B$ its irrelevant ideal. Let $M$ be a $\Pic(Y)$-graded $S$-module.  Find the correction generalization of $d$-quasi-linear resolution such that a $\Pic(Y)$-graded $S$-module  $M$ is $d$-regular if and only if the truncation $M_{\geq d}$ has a $d$-quasilinear resolution. 
+ 	Using Notation~\ref{not:toric} let $M$ be a $\Pic(Y)$-graded $S$-module.  Find the correction generalization of $d$-quasi-linear resolution such that a $\Pic(Y)$-graded $S$-module  $M$ is $d$-regular if and only if the truncation $M_{\geq d}$ has a $d$-quasilinear resolution. 
 \end{problem}
 
-We propose that the constraints on the degrees of the resolution matrices should be dictated by the geometry of the nef cone $\Nef(Y)$ and the degrees of the generators of the irrelevant ideal $B$.
+We will begin with the case of Hirzebruch surfaces $\cH_t=\PP(\cO_{\PP^1}\oplus \cO_{\PP^1}(t))$ where the PI has the following precise conjecture. 
 
-We will begin with the fundamental case of Hirzebruch surfaces $H_t$. The PI proposes the following conjecture, which  
  \begin{conjecture}\label{conj:eg-hirzebruch}
-	Let $S$ be the $\ZZ^2$-graded Cox ring of the Hirzebruch surface $H_{t}$. If $M$ is a $\ZZ^2$-graded $S$-module then $M_{\geq d}$ has a $d$-linear resolution if and only if $d+\reg(S) \subset \reg(M)$. 
+	Let $S$ be the $\ZZ^2$-graded Cox ring of the Hirzebruch surface $\cH_{t}$. If $M$ is a $\ZZ^2$-graded $S$-module then $M_{\geq d}$ has a $d$-linear resolution if and only if $d+\reg(S) \subset \reg(M)$. 
 \end{conjecture}
 
-\begin{problem}
-	Prove Conjecture~\ref{conj:eg-hirzebruch}
-\end{problem}
+\juliette{ADD HOW}
  
- While not equivalent to being regular, characterizing when $M_{\geq\dd}$ has a linear resolution in the traditional sense is still of interest algebraically. Using the same methods of controling the Betti numbers needed to answer Problem~\ref{prob:eisenbud-goto} would likely provide a way to give a cohomological characterization for when $M_{\geq\dd}$ has a linear resolution. 
- 
+ While not equivalent to being regular, characterizing when $M_{\geq\dd}$ has a linear resolution in the traditional sense is still of interest algebraically.
+  
 \begin{problem}
- 	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring and $B$ its irrelevant ideal. Let $M$ be a $\Pic(Y)$-graded $S$-module.  Find a characterization for when the truncation $M_{\geq d}$ for $d\in \Pic(Y)$ has a linear resolution in terms of vanishing of the local cohomology groups $H^i_{B}(M)_{t}$. 
+ 	Using Notation~\ref{not:toric} let $M$ be a $\Pic(Y)$-graded $S$-module.  Characterize when $M_{\geq \dd}$ has a linear resolution in terms of vanishing of the local cohomology groups $H^i_{B}(M)_{t}$. 
 \end{problem}
 
-Note the PI  provided an answer to this question when $Y$ is a product of projective spaces \cite[Theorem 6.2]{bruceHellerSayrafi21}. 
+The PI  answer to this question for products of projective spaces \cite[Theorem 6.2]{bruceHellerSayrafi21}. Using the same methods of controlling the Betti numbers needed to answer Problem~\ref{prob:eisenbud-goto} would likely provide a way to give a cohomological characterization for when $M_{\geq\dd}$ has a linear resolution. 
 
-Computing the regularity of a module $M$ directly from the definition is quite difficult as local cohomology computations tend to be slow in practice. Compute the truncation $M_{\geq \dd}$ and its associated minimal free resolution tends to be significantly quicker, and thus, Theorem~\juliette{ADD} and a resolution of Conjecture~\ref{conj:eg-hirzebruch} and Problem~\ref{prob:eisenbud-goto} provide a practical algorithm for checking whether a module is regular at a single multidegree $\dd\in \ZZ^r$. Finding an algorithm to compute all of the regularity region of $M$ remains an open question. 
+Direct computation of the regularity of a module $M$ is often prohibitively slow due to the complexity of local cohomology. A significantly faster approach involves computing the truncation $M_{\geq \dd}$ and its associated minimal free resolution. Consequently, Theorem~\ref{thm:mgreg-main}, combined with the resolution of Conjecture~\ref{conj:eg-hirzebruch} and Problem~\ref{prob:eisenbud-goto}, yields a practical algorithm for determining regularity at a single multidegree $\dd\in \ZZ^r$. However, developing an algorithm to compute the entire regularity region of M remains a major open challenge.
 
 \begin{problem}\label{prob:mg-reg-alg}
 	Find an algorithm to compute a minimal generating set for $\reg(M)$. 
 \end{problem}
 
-This question is open in all cases except $Y=\PP^n$. The difficulty to this is finding a box, in which one is guaranteed all the minimal generators of $\reg(M)$ live. Right now most bounds look like $L$-shaped regions, i.e. translates of $\Nef(X)$, which does not constraint the search space of minimal generators of $\reg(M)$. In this way finding an answer to Problem~\ref{prob:mg-reg-alg} is closely related to the question of questions around bounding multigraded regularity proposed in this project. 
+This question is open in all cases except $Y=\PP^n$. The primary obstacle is determining a box guaranteed to contain all minimal generators of $\reg(M)$. Current bounds typically resemble L-shaped regions (i.e., translates of $\Nef(Y)$), which do not sufficiently constrain the search space for these generators. Therefore, addressing Problem~\ref{prob:mg-reg-alg} is intrinsically linked to this project's objective of establishing tighter bounds on multigraded regularity.
+
 
 Finally, as noted above, my previous work shows that the multigraded Betti numbers of a module do not determine its multigraded regularity. One might hope this can be saved by considering the multigraded Betti numbers of all virtual resolutions of $M$. A virtual resolution of a module $M$ is a free $\ZZ^r$-graded complex of $S$-modules $F_{\bullet}$ such that the corresponding complex $\tilde{F}_{\bullet}$ of locally free $\cO_{Y}$-modules is a resolution of the sheaf $\tilde{M}$ \cite[Definition 1.1]{BES20}. 
 
 \begin{problem}
-	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring and $B$ its irrelevant ideal. Let $M$ be a $\Pic(Y)$-graded $S$-module. Does the set of (multigraded) Betti numbers of all virtual resolutions of $M$ determine the multigraded regularity of $M$? 
+	Using Notation~\ref{not:toric} let $M$ be a $\Pic(Y)$-graded $S$-module. Does the graded Betti numbers of all virtual resolutions of $M$ determine the multigraded regularity of $M$? 
 \end{problem}
 
 
@@ -986,25 +988,22 @@ I am proposing to circumventing this by noting there is natural construction of 
  \subsection{Homological Invariants and Wall Crossings}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- As the fan $\Sigma$ crosses a wall, the irrelevant ideal $B$ changes, leading to changes in the associated multigraded regularity and Betti numbers (since the notion of saturation changes). We aim to establish precise wall-crossing formulas that describe these changes.
+An alternative approach to attempting a more unified approach of studying homological algebra on all toric varieties with the same Cox ring simultaneously is to understand how things like minimal free resolutions and multigraded regularity change when moving between adjacent chambers $\Gamma$ and $\Gamma'$ of the secondary fan. Geometrically, this corresponds to a birational transformation between the toric varieties $Y_{\Gamma}$ and $Y_{\Gamma}$, (e.g. a flip or flop). Algebraically this corresponds to the irrelevant ideal changing $B_{\Gamma}$ to $B_{\Gamma'}$. 
 
- \begin{problem}
- 	Let $I \subset S$ be a $\ZZ^r$-graded homogenous ideal. Let $Y$ and $Y'$ be toric varieties corresponding to two chambers $\Gamma, \Gamma' \subset \Sigma_{GKZ}$ that share a wall, with $B,B' \subset S$ the respective irrelevant ideals. Prove there exists a ``small'' subset $F \subset \ZZ^r$ depending only on $Y$ and $Y'$ such that:
+Geometrically we can think of sheaves crossing between $\Gamma$ and $\Gamma'$ by the pushing or pulling along the corresponding birational transformation $Y_{\Gamma} \to  Y_{\Gamma'}$. Geometrically, this roughly corresponds to fixing a $\ZZ^r$-graded module $M$ on the ring $S$ and then saturating with respect to $B_{\Gamma}$ or $B_{\Gamma'}$ to get modules $M_{\Gamma}$ and $M_{\Gamma'}$ corresponding to sheaves on $Y_{\Gamma}$ and  $Y_{\Gamma'}$ respectively. A \emph{wall-crossing formula} seeks to relate the algebraic or geometric invariants of $M_{\Gamma}$ and $M_{\Gamma'}$. We aim to establish precise wall-crossing formulas for multigraded regularity and multigraded Betti numbers. 
+
+ \begin{problem}\label{prob:wall-crossing-reg}
+ 	Fix $I \subset S$ a $\ZZ^r$-graded ideal. Let $\Gamma$ and $\Gamma'$ be adjacent chambers in the secondary fan. Prove there exists a ``small'' subset $F \subset \ZZ^r$ independent of $I$ such that:
 	\[
-	\reg_{Y}\left((J :_{S} B^{\infty})\right)+F =\reg_{Y'}\left((J :_{S} B'^{\infty})\right)+F.
+	\reg_{Y_{\Gamma}}\left((I :_{S} B_{\Gamma}^{\infty})\right)+F =\reg_{Y_{\Gamma'}}\left((I :_{S} B_{\Gamma'}^{\infty})\right)+F.
 	\]
  \end{problem}
- 
- The subset $F$ represents a controlled shift in the regularity region. Proving this would establish that the homological complexity does not change arbitrarily under birational transformations, but rather follows predictable patterns dictated by the VGIT structure.
-
-
-We also expect the minimal free resolutions of the saturated ideals to be closely related, particularly in the degrees corresponding to the "core" of the module that is unaffected by the change in saturation.
 
 \begin{problem}\label{prob:wall-crossing-betti}
-	With the set up as above, prove the minimal graded free $S$-resolutions of $(J :_{S} B^{\infty})$ and $(J :_{S} B'^{\infty})$ agree in small degree.
+	Fix $I \subset S$ a $\ZZ^r$-graded ideal. Let $\Gamma$ and $\Gamma'$ be adjacent chambers in $\Sigma_{\GKZ}$. Prove the minimal graded free resolutions of $(I :_{S} B_{\Gamma}^{\infty})$ and $(I :_{S} B_{\Gamma'}^{\infty})$ agree in small degree.
 \end{problem}
 
-The PI plans to use techniques from VGIT, the theory of derived equivalences induced by flops, and the study of local cohomology under changes of the irrelevant ideal to study these wall-crossing phenomena.
+Proving these would establish that the homological complexity does not change arbitrarily under birational transformations, but rather follows predictable patterns dictated by VGIT. A approach for Problem~\ref{prob:wall-crossing-reg} is to give an explicit combinatorial description of the differences between $B_{\Gamma}$ and $B_{\Gamma'}$, possibly by representing them as simplicial complexes, following \cite[Theorem 15.3.13]{CLS11}. Then utilize a Mayer-Vietoris type sequence to try to relate the local cohomology modules $H^i_{B_{\Gamma}}((I :_{S} B_{\Gamma}^{\infty}))$ and $H^i_{B_{\Gamma'}}((I :_{S} B_{\Gamma'}^{\infty}))$. From this approach the ``small'' set $F$ should arise as the difference of $B_{\Gamma}$ and $B_{\Gamma'}$ in some way. Towards Problem~\ref{prob:wall-crossing-betti} one could hope to leverage the fact that the birational maps $Y_{\Gamma} \to Y_{\Gamma'}$ often induce equivalences on the derived categories $D(Y_{\Gamma'}) \to D(Y_{\Gamma})$ \cite{kawamata05,kawamata06,kawamata13,DHL15,kawamata16,ballardFaveroKatzarkov19}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1013,20 +1012,13 @@ The PI plans to use techniques from VGIT, the theory of derived equivalences ind
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Organizing} As discussed previously, I have organized 10+ national/international conferences, and I plan to continue organizing conferences at roughly this pace. Currently, I am organizing two research conferences in algebraic geometry \textit{Algebraic Geometry Northeastern Series (AGNES)} and \textit{BATMOBILE} both occurring in late 2024. I am also in the early stages of organizing an international workshop with Diane Maclagan on multigraded homological algebra and toric geometry, which I hope will occur in 2025. Tyler Kelly, Mike Hill, and I are also in the planning stages of organizing a satellite conference for LGBTQ+ mathematicians for the 2026 ICM in Philadelphia. 
+\subsection{Organizing} In addition to the 10+ conferences and workshops mentioned in Section~RNED, since beginning my position at Dartmouth In 2024 I organized two research conferences in algebraic geometry \textit{AGNES} (150 participants) and \textit{BATMOBILE} (50 participants) in Fall 2024. I am currently organizing this year's edition of \textit{BATMOBILE} to occur at Amherst College in November 2024, which will highlight recent work in combinatorial algebraic geometry and commutative algebra.  I am in the process of preparing a proposal for a conference title \textit{The Geometry of Syzygies: Past \& Future} I hope to submit to BIRS's next proposal period. I plan to organize the next edition of \textit{Gems of Commutative Algebra} at Dartmouth in Winter 2027 to continue promoting community among the next generation of researchers in commutative algebra. If this edition of \textit{Gems of...} is successful I hope to write a short article for the Notices of the AMS discussing these efforts and how other researchers might go about organizing similar conferences, with a focus on the current logistical hurdles. I am an organizer of the \textit{Algebra \& Number Theory} seminar at Dartmouth.  
 
+\subsection{Campus Community.} In an effort to promote community among math majors on Dartmouth's campus I serve as the faculty advisor to the college's \textit{AWM Student Chapter} and  am also working with the campuses \textit{oSTEM} chapter to broaden participation in STEM. Beginning in Fall 2025 I am organizing a graduate student seminar \textit{Unwritten Rules} providing professional development to graduate students facing additional career challenges.
 
-The``GEMS'' workshop series that I co-founded sought to build a diverse community of mathematicians to address gender equity in the mathematical community from new perspectives. In particular, these conferences are indented to supplement the affinity group model of the \textit{Women in...} conference series by promoting broad conversations and networks. Going forward I am interested in expanding these ``GEMS'' workshops to other areas of mathematics and creating cross-field discussions that broaden the standard notion of gender equity in mathematics. In particular, there is a planned follow-up to \textit{GEMS in Commutative Algebra} scheduled for Fall 2025, and I am tentatively planning a version of \textit{GEMS in Algebraic Geometry} for 2026. As more of these conferences occur, I have plans to try to work with mathematicians in other fields to organize their own version of \textit{GEMS in...} conferences in their fields. 
+\subsection{ National \& International Advocacy.} I have worked with the Executive Committee of the \textit{AWM} to consider ways they could expand their support of broader groups of mathematicians. I hope to continue this work and find further ways the AWM can support more mathematicians. From Winter 2023 to Spring 2025 I served on SLMath's (formerly MSRI's)  \textit{Committee on Women in Mathematics} until its dissolution. I have since agreed to serve on two committees for the \textit{AMS} and I am excited to work to promote mathematics and the mathematical community in these roles. I am hoping to return to working with \textit{Spectra} after taking a 2 year hiatus from the organization after serving as its inaugural president. 
 
-When organizing these conferences I paid particular attention to making them as inclusive of women and non-binary researchers as possible. For example, I designed the registration form to be thoughtful of the concerns of transgender researchers and highlighted the locations of single occupancy and ADA-compliant restrooms. The importance of such efforts was highlighted by the following comment I received from a participant, ``I just wanted to thank you for making this workshop inclusive for people with all gender identifications. ... I have always felt out of place when I participated in conferences/workshops for women when they do not specify that non-binary people are welcome ... I really appreciate those questions you put in the registration form. It means a lot to me.'' I would like to work with various professional societies (AMS, AWM, NAM, Spectra, etc.) and research institutes (SLMath, ICERM, IAS, etc.) to produce a guide of best practices for organizing welcoming and inclusive mathematics conferences. By doing this I hope to make it easier for others to organize welcoming events. 
-
-\subsection{ National \& International Advocacy.} I have worked with the Executive Committee of the \textit{Association for Women in Mathematics} to consider ways they could expand their support of women and non-binary mathematicians. I hope to continue this work and find further ways the AWM can support both women and non-binary mathematicians. Since Winter 2023 I joined SLMath's (formerly MSRI's)  \textit{Committee on Women in Mathematics}. I plan to remain on this committee until 2028 when my term is set to expire. In this role, I am hoping to organize a yearly retreat at SLMath that brings together small groups of 5-8 women (and underrepresented individuals more generally) who have been implementing innovative ideas promoting equity in mathematics and brainstorm ways to scale their efforts and effect radical positive change for women in mathematics.  
-
-
-\subsection{A More Inclusive Learning Community.}  Going forward I am excited to continue my work supporting LGBTQ+ students, and would love to continue building organizations to do so. In particular, given the amazing successes of programs like MSRI-UP and the EDGE Program, I would love to organize a summer REU program specifically aimed at supporting and promoting LGBTQ+ mathematicians. Further, I am in the early stages of planning a mentorship program to help guide LGBTQ+ undergraduates through the process of applying to graduate programs in mathematics and helping young LGBTQ+ graduate students establish themselves. The plan would be to break participants into groups with each group having LGBTQ+ mathematicians at various career stages, thus allowing participants to exchange advice, find support, and build mentoring networks.
-
-\subsection{Mentoring.} As a new faculty member at Dartmouth College I hope to continue and expand the mentoring I do with students, continuing a focus on mentoring students from underrepresented groups. Since arriving on campus in the late Summer I have begun mentoring one graduate student and one undergraduate woman. While still early it seems likely that I will end up co-advising the graduate student and advising the undergraduate's senior thesis. I am also working with the college's AWM Student Chapter and the Out in STEM Student Chapter. 
-
+\subsection{Mentoring.} I continue to mentor two graduate students Bailee Z. (Michigan) and Jacob B. (KSU) on a project at the intersection of combinatorics and tropical geometry that began at the Midwest Research Experience for Graduates (MREG) in 2023. We expect to post a pre-print in the next 1-2 months. Since joining Dartmouth in Fall 2024 I have begun mentoring two undergraduates (Joanna S. \& Lisa S.) with the first doing a summer reading course in algebraic geometry and the second considering applying to math graduate school. I am co-advising one graduate student (Will D.) with Asher Auel who is currently working on a project connecting the homological algebra of points on surfaces and the geometry of the moduli of spin curves. I am currently pre-advising three students (Allison T., Alex M., and Aidan H.) interested in combinatorics and algebra; they are all currently doing a reading course with me in algebraic geometry. I imagine at least one of them will become my students and I plan to offer them a number of the projects in this proposal in Winter 2026 as potential first projects. Finally, I have agreed to lead an undergraduate summer research project at \textit{Count Me In} organized in part by Milena Hering and Diane Maclagan. 
 
 \newpage
 \renewcommand{\bibliofont}{\normalsize}

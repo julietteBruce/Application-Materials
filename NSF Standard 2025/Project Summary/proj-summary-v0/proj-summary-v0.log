@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  26 SEP 2025 11:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  7 OCT 2025 08:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1114,7 +1114,7 @@ Package rerunfilecheck Info: File `proj-summary-v0.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  29642 strings out of 473201
- 568429 string characters out of 5716121
+ 568427 string characters out of 5716121
  1024340 words of memory out of 5000000
  52175 multiletter control sequences out of 15000+600000
  568391 words of font info for 94 fonts, out of 8000000 for 9000
@@ -1127,7 +1127,7 @@ usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
 r/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
 ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
 cal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on proj-summary-v0.pdf (1 page, 89261 bytes).
+Output written on proj-summary-v0.pdf (1 page, 89630 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  33 compressed objects within 1 object stream

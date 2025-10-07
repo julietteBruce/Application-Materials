@@ -1,6 +1,10 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{GHvdP88}
 
+\bibitem[ABB{\etalchar{+}}25]{ABBCV25}
+Eran Assaf, Madeline Brandt, Juliette Bruce, Melody Chan, and Raluca Vlad.
+\newblock Tropicalizations of locally symmetric varieties, 2025.
+
 \bibitem[ABLS20]{ABLS20}
 Ayah Almousa, Juliette Bruce, Michael Loper, and Mahrud Sayrafi.
 \newblock The virtual resolutions package for {M}acaulay2.
@@ -11,6 +15,11 @@ Marian Aprodu, Gavril Farkas, \c~Stefan Papadima, Claudiu Raicu, and Jerzy
   Weyman.
 \newblock Koszul modules and {G}reen's conjecture.
 \newblock {\em Invent. Math.}, 218(3):657--720, 2019.
+
+\bibitem[And13]{anderson13}
+Dave Anderson.
+\newblock Okounkov bodies and toric degenerations.
+\newblock {\em Math. Ann.}, 356(3):1183--1202, 2013.
 
 \bibitem[BBB{\etalchar{+}}17]{BBBKR17}
 Madeline Brandt, Juliette Bruce, Taylor Brysiewicz, Robert Krone, and Elina
@@ -79,6 +88,16 @@ Christine Berkesch, Daniel Erman, and Gregory~G. Smith.
 \newblock Virtual resolutions for a product of projective spaces.
 \newblock {\em Algebr. Geom.}, 7(4):460--481, 2020.
 
+\bibitem[BF25]{bergetFink25}
+Andrew Berget and Alex Fink.
+\newblock The external activity complex of a pair of matroids, 2025.
+
+\bibitem[BFK19]{ballardFaveroKatzarkov19}
+Matthew Ballard, David Favero, and Ludmil Katzarkov.
+\newblock Variation of geometric invariant theory quotients and derived
+  categories.
+\newblock {\em J. Reine Angew. Math.}, 746:235--303, 2019.
+
 \bibitem[BHS22]{bruceHellerSayrafi22}
 Juliette Bruce, Lauren~Cranton Heller, and Mahrud Sayrafi.
 \newblock Bounds on multigraded regularity, 2022.
@@ -131,6 +150,17 @@ Melody Chan, S\o~ren Galatius, and Sam Payne.
 S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
 \newblock Asymptotic behaviour of the {C}astelnuovo-{M}umford regularity.
 \newblock {\em Compositio Math.}, 118(3):243--261, 1999.
+
+\bibitem[CLS11]{CLS11}
+David~A. Cox, John~B. Little, and Henry~K. Schenck.
+\newblock {\em Toric varieties}, volume 124 of {\em Graduate Studies in
+  Mathematics}.
+\newblock American Mathematical Society, Providence, RI, 2011.
+
+\bibitem[Cox95]{cox95}
+David~A. Cox.
+\newblock The homogeneous coordinate ring of a toric variety.
+\newblock {\em J. Algebraic Geom.}, 4(1):17--50, 1995.
 
 \bibitem[Deo18]{deopurkar18}
 Anand Deopurkar.
@@ -196,6 +226,12 @@ L.~Gerritzen, F.~Herrlich, and M.~van~der Put.
 \newblock Stable {$n$}-pointed trees of projective lines.
 \newblock {\em Nederl. Akad. Wetensch. Indag. Math.}, 50(2):131--163, 1988.
 
+\bibitem[GLP83]{GLP83}
+L.~Gruson, R.~Lazarsfeld, and C.~Peskine.
+\newblock On a theorem of {C}astelnuovo, and the equations defining space
+  curves.
+\newblock {\em Invent. Math.}, 72(3):491--506, 1983.
+
 \bibitem[Gre84]{green84-I}
 Mark~L. Green.
 \newblock Koszul cohomology and the geometry of projective varieties.
@@ -229,6 +265,11 @@ Richard Hain.
 \newblock The rational cohomology ring of the moduli space of abelian 3-folds.
 \newblock {\em Math. Res. Lett.}, 9(4):473--491, 2002.
 
+\bibitem[HL15]{DHL15}
+Daniel Halpern-Leistner.
+\newblock The derived category of a {GIT} quotient.
+\newblock {\em J. Amer. Math. Soc.}, 28(3):871--912, 2015.
+
 \bibitem[HT12]{HT12}
 Klaus Hulek and Orsola Tommasi.
 \newblock Cohomology of the second {V}oronoi compactification of {$\mathcal{
@@ -253,11 +294,41 @@ M.~M. Kapranov.
   M_{0,n}$}.
 \newblock {\em J. Algebraic Geom.}, 2(2):239--262, 1993.
 
+\bibitem[Kav15]{kaveh15}
+Kiumars Kaveh.
+\newblock Crystal bases and {N}ewton-{O}kounkov bodies.
+\newblock {\em Duke Math. J.}, 164(13):2461--2506, 2015.
+
+\bibitem[Kaw05]{kawamata05}
+Yujiro Kawamata.
+\newblock Log crepant birational maps and derived categories.
+\newblock {\em J. Math. Sci. Univ. Tokyo}, 12(2):211--231, 2005.
+
+\bibitem[Kaw06]{kawamata06}
+Yujiro Kawamata.
+\newblock Derived categories of toric varieties.
+\newblock {\em Michigan Math. J.}, 54(3):517--535, 2006.
+
+\bibitem[Kaw13]{kawamata13}
+Yujiro Kawamata.
+\newblock Derived categories of toric varieties {II}.
+\newblock {\em Michigan Math. J.}, 62(2):353--363, 2013.
+
+\bibitem[Kaw16]{kawamata16}
+Yujiro Kawamata.
+\newblock Derived categories of toric varieties {III}.
+\newblock {\em Eur. J. Math.}, 2(1):196--207, 2016.
+
 \bibitem[Kee92]{keel92}
 Sean Keel.
 \newblock Intersection theory of moduli space of stable {$n$}-pointed curves of
   genus zero.
 \newblock {\em Trans. Amer. Math. Soc.}, 330(2):545--574, 1992.
+
+\bibitem[Kem76]{kempf76}
+George~R. Kempf.
+\newblock On the collapsing of homogeneous bundles.
+\newblock {\em Invent. Math.}, 37(3):229--239, 1976.
 
 \bibitem[Kem21]{kemeny21}
 Michael Kemeny.
@@ -268,6 +339,12 @@ Michael Kemeny.
 Michael Kemeny.
 \newblock The rank of syzygies of canonical curves.
 \newblock {\em J. Reine Angew. Math.}, 810:97--138, 2024.
+
+\bibitem[KK12]{KK12}
+Kiumars Kaveh and A.~G. Khovanskii.
+\newblock Newton-{O}kounkov bodies, semigroups of integral points, graded
+  algebras and intersection theory.
+\newblock {\em Ann. of Math. (2)}, 176(2):925--978, 2012.
 
 \bibitem[KM09]{kerberMarkwig09}
 Michael Kerber and Hannah Markwig.
@@ -290,6 +367,21 @@ Vijay Kodiyalam.
 Sean Keel and Jenia Tevelev.
 \newblock Equations for {$\overline M_{0,n}$}.
 \newblock {\em Internat. J. Math.}, 20(9):1159--1184, 2009.
+
+\bibitem[Las78]{lascoux78}
+Alain Lascoux.
+\newblock Syzygies des vari\'et\'es d\'eterminantales.
+\newblock {\em Adv. in Math.}, 30(3):202--237, 1978.
+
+\bibitem[LMta09]{lazarsfeldMustata09}
+Robert Lazarsfeld and Mircea Musta\c~t\u a.
+\newblock Convex bodies associated to linear series.
+\newblock {\em Ann. Sci. \'Ec. Norm. Sup\'er. (4)}, 42(5):783--835, 2009.
+
+\bibitem[MP18]{MP18}
+Jason McCullough and Irena Peeva.
+\newblock Counterexamples to the {E}isenbud-{G}oto regularity conjecture.
+\newblock {\em J. Amer. Math. Soc.}, 31(2):473--496, 2018.
 
 \bibitem[MR17]{moninRana17}
 Leonid Monin and Julie Rana.
@@ -315,10 +407,33 @@ David Mumford.
   {C}iclo, {V}arenna, 1969)}, Centro Internazionale Matematico Estivo
   (C.I.M.E.), pages 29--100. Ed. Cremonese, Rome, 1970.
 
+\bibitem[Oko96]{okounkov96}
+Andrei Okounkov.
+\newblock Brunn-{M}inkowski inequality for multiplicities.
+\newblock {\em Invent. Math.}, 125(3):405--411, 1996.
+
+\bibitem[Oko03]{okounkov03}
+Andrei Okounkov.
+\newblock Why would multiplicities be log-concave?
+\newblock In {\em The orbit method in geometry and physics ({M}arseille,
+  2000)}, volume 213 of {\em Progr. Math.}, pages 329--347. Birkh\"auser
+  Boston, Boston, MA, 2003.
+
+\bibitem[PP97]{PP97}
+Giuseppe Pareschi and B.~P. Purnaprajna.
+\newblock Canonical ring of a curve is {K}oszul: a simple proof.
+\newblock {\em Illinois J. Math.}, 41(2):266--271, 1997.
+
 \bibitem[Sch91]{schreyer91}
 Frank-Olaf Schreyer.
 \newblock A standard basis approach to syzygies of canonical curves.
 \newblock {\em J. Reine Angew. Math.}, 421:83--123, 1991.
+
+\bibitem[VF93]{VF93}
+A.~Vishik and M.~Finkelberg.
+\newblock The coordinate ring of general curve of genus {$g\geq 5$} is
+  {K}oszul.
+\newblock {\em J. Algebra}, 162(2):535--539, 1993.
 
 \bibitem[Voi02]{voisin02}
 Claire Voisin.
@@ -335,5 +450,11 @@ Claire Voisin.
 John Voight and David Zureick-Brown.
 \newblock The canonical ring of a stacky curve.
 \newblock {\em Mem. Amer. Math. Soc.}, 277(1362):v+144, 2022.
+
+\bibitem[Wey03]{weyman03}
+Jerzy Weyman.
+\newblock {\em Cohomology of vector bundles and syzygies}, volume 149 of {\em
+  Cambridge Tracts in Mathematics}.
+\newblock Cambridge University Press, Cambridge, 2003.
 
 \end{thebibliography}
