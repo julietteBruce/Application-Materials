@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  7 OCT 2025 13:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  7 OCT 2025 14:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -957,10 +957,6 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 
 LaTeX Warning: Label `thm:eisenbud-goto' multiply defined.
 
-
-LaTeX Warning: Label `sec:uniform-homological-algebra-on-toric' multiply define
-d.
-
 )
 \openout1 = `"Project Description.aux"'.
 
@@ -1098,11 +1094,6 @@ Underfull \vbox (badness 2205) has occurred while \output is active []
 [4]
 
 [5]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmss' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
 
 [6]
 
@@ -1119,10 +1110,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 [12]
 
 [13]
-
-LaTeX Warning: Citation `CLS' on page 14 undefined on input line 950.
-
-
 
 [14]
 
@@ -1165,18 +1152,15 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29719 strings out of 473201
- 573703 string characters out of 5716121
- 1107238 words of memory out of 5000000
- 52066 multiletter control sequences out of 15000+600000
- 579016 words of font info for 200 fonts, out of 8000000 for 9000
+ 29726 strings out of 473201
+ 573705 string characters out of 5716121
+ 1107632 words of memory out of 5000000
+ 52074 multiletter control sequences out of 15000+600000
+ 578749 words of font info for 199 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  102i,18n,107p,1333b,1143s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1192,20 +1176,19 @@ sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
 ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/loca
 l/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/20
-24/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/202
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "Project Description.pdf" (21 pages, 385122 bytes).
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
+024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/202
+4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
+/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texl
+ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on "Project Description.pdf" (21 pages, 376240 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 121 compressed objects within 2 object streams
+ 187 PDF objects out of 1000 (max. 8388607)
+ 118 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 37389 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 35341 words of extra memory for PDF output out of 35830 (max. 10000000)
 

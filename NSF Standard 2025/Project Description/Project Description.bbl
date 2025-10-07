@@ -183,10 +183,25 @@ David~A. Cox.
 \newblock The homogeneous coordinate ring of a toric variety.
 \newblock {\em J. Algebraic Geom.}, 4(1):17--50, 1995.
 
+\bibitem[CPJ22a]{CPJ22-2}
+Kaelin Cook-Powell and David Jensen.
+\newblock Components of {B}rill-{N}oether loci for curves with fixed gonality.
+\newblock {\em Michigan Math. J.}, 71(1):19--45, 2022.
+
+\bibitem[CPJ22b]{CPJ22}
+Kaelin Cook-Powell and David Jensen.
+\newblock Tropical methods in {H}urwitz-{B}rill-{N}oether theory.
+\newblock {\em Adv. Math.}, 398:Paper No. 108199, 42, 2022.
+
 \bibitem[Deo18]{deopurkar18}
 Anand Deopurkar.
 \newblock The canonical syzygy conjecture for ribbons.
 \newblock {\em Math. Z.}, 288(3-4):1157--1164, 2018.
+
+\bibitem[DM25]{DB25}
+Caitlin~M. Davis and Boyana Martinova.
+\newblock The koszul property for truncations of nonstandard graded polynomial
+  rings, 2025.
 
 \bibitem[EEL16]{EEL16}
 Lawrence Ein, Daniel Erman, and Robert Lazarsfeld.
@@ -225,6 +240,11 @@ Gavril Farkas and Michael Kemeny.
 \newblock The {P}rym-{G}reen conjecture for torsion line bundles of high order.
 \newblock {\em Duke Math. J.}, 166(6):1103--1124, 2017.
 
+\bibitem[FL81]{FL81}
+W.~Fulton and R.~Lazarsfeld.
+\newblock On the connectedness of degeneracy loci and special divisors.
+\newblock {\em Acta Math.}, 146(3-4):271--283, 1981.
+
 \bibitem[FMtaP03]{farkasMustataPopa03}
 Gavril Farkas, Mircea Musta\c~t\v a, and Mihnea Popa.
 \newblock Divisors on {$\mathcal{M}_{g,g+1}$} and the minimal resolution
@@ -242,10 +262,21 @@ Maria Gillespie, Sean~T. Griffin, and Jake Levinson.
   {$\overline M_{0,n}$}.
 \newblock {\em Comb. Theory}, 3(1):Paper No. 3, 26, 2023.
 
+\bibitem[GH80]{GH80}
+Phillip Griffiths and Joseph Harris.
+\newblock On the variety of special linear systems on a general algebraic
+  curve.
+\newblock {\em Duke Math. J.}, 47(1):233--272, 1980.
+
 \bibitem[GHvdP88]{GHvdP88}
 L.~Gerritzen, F.~Herrlich, and M.~van~der Put.
 \newblock Stable {$n$}-pointed trees of projective lines.
 \newblock {\em Nederl. Akad. Wetensch. Indag. Math.}, 50(2):131--163, 1988.
+
+\bibitem[Gie82]{g82}
+D.~Gieseker.
+\newblock Stable curves and special divisors: {P}etri's conjecture.
+\newblock {\em Invent. Math.}, 66(2):251--275, 1982.
 
 \bibitem[GLP83]{GLP83}
 L.~Gruson, R.~Lazarsfeld, and C.~Peskine.
@@ -313,6 +344,11 @@ Klaus Hulek and Orsola Tommasi.
 Jun-ichi Igusa.
 \newblock On {S}iegel modular forms of genus two.
 \newblock {\em Amer. J. Math.}, 84:175--200, 1962.
+
+\bibitem[JR21]{JR21}
+David Jensen and Dhruv Ranganathan.
+\newblock Brill-{N}oether theory for curves of a fixed gonality.
+\newblock {\em Forum Math. Pi}, 9:Paper No. e1, 33, 2021.
 
 \bibitem[Kap93]{kapranov93}
 M.~M. Kapranov.
@@ -394,10 +430,25 @@ Sean Keel and Jenia Tevelev.
 \newblock Equations for {$\overline M_{0,n}$}.
 \newblock {\em Internat. J. Math.}, 20(9):1159--1184, 2009.
 
+\bibitem[Lar21a]{larson21}
+Hannah~K. Larson.
+\newblock Refined {B}rill-{N}oether theory for all trigonal curves.
+\newblock {\em Eur. J. Math.}, 7(4):1524--1536, 2021.
+
+\bibitem[Lar21b]{larson21-2}
+Hannah~K. Larson.
+\newblock A refined {B}rill-{N}oether theory over {H}urwitz spaces.
+\newblock {\em Invent. Math.}, 224(3):767--790, 2021.
+
 \bibitem[Las78]{lascoux78}
 Alain Lascoux.
 \newblock Syzygies des vari\'et\'es d\'eterminantales.
 \newblock {\em Adv. in Math.}, 30(3):202--237, 1978.
+
+\bibitem[LLV25]{LLV25}
+Eric Larson, Hannah Larson, and Isabel Vogt.
+\newblock Global {B}rill-{N}oether theory over the {H}urwitz space.
+\newblock {\em Geom. Topol.}, 29(1):193--257, 2025.
 
 \bibitem[LMta09]{lazarsfeldMustata09}
 Robert Lazarsfeld and Mircea Musta\c~t\u a.
@@ -444,6 +495,11 @@ Andrei Okounkov.
 \newblock In {\em The orbit method in geometry and physics ({M}arseille,
   2000)}, volume 213 of {\em Progr. Math.}, pages 329--347. Birkh\"auser
   Boston, Boston, MA, 2003.
+
+\bibitem[Pfl17]{p17}
+Nathan Pflueger.
+\newblock Brill-{N}oether varieties of {$k$}-gonal curves.
+\newblock {\em Adv. Math.}, 312:46--63, 2017.
 
 \bibitem[PP97]{PP97}
 Giuseppe Pareschi and B.~P. Purnaprajna.
