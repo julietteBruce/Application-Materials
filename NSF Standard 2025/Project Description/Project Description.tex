@@ -258,7 +258,7 @@
 \begin{itemize}[leftmargin=*]
 	\item \S~\ref{sec:prior-work} \textbf{Results of Prior NSF Support.} 
 	\item \S~\ref{sec:syzygies-on-stacks} \textbf{The Geometry of Multigraded Syzygies on Stacks}
-	\item \S~\ref{sec:multigraded-regularity} \textbf{Castelnuovo–Mumford Regularity: Resolutions, Bounds, and Asymptotics}
+	\item \S~\ref{sec:multigraded-regularity} \textbf{Castelnuovo–Mumford Regularity: Asymptotic Behavior, Bounds, and Resolutions}
 	\item \S~\ref{sec:uniform-homological-algebra-on-toric} \textbf{Uniform Homological Algebra on Toric Varieties}
 	\item \S~\ref{sec:broader-impacts} \textbf{Broader Impacts.}
 \end{itemize}
@@ -276,7 +276,7 @@ During 2015-2020 the PI was supported by an NSF Graduate Research Fellowship (NS
 Of the 12 new papers the PI posted to the arXiv during these periods of support 9 of these above-mentioned papers were accepted for publication, including in such journals as \textit{Algebra \& Number Theory} \cite{bruceErman19}, \textit{Geometry \& Topology} \cite{BBCMMW24}, \textit{Journal of Algebra} \cite{BCEGLY22}, and \textit{Experimental Mathematics} \cite{BEGY20}. The PI contributed to 4 open-source software packages, one public-facing database, and two articles for the \textit{Notices of the AMS} \cite{BBB21,bruceNotices22}. A more detailed summary of these results and their intellectual merits continues in the following sections. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Asymptotic Syzygies}
+\subsection{Asymptotic Syzygies}\label{subsec:asymptic-prior}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Broadly, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. For a smooth projective variety $X\subset \PP^{n_{d}}$ embedded by a very ample line bundle $L_{d}$, following \cite{ermanYang18}, set,
@@ -428,7 +428,7 @@ The data is publicly available via SyzygyData.com and a package for Macaualy2 \c
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorphism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}(2g, \ZZ)]$ where $\HH_{g}$ is the Siegel upper half-space. Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example, the (singular) cohomology is $\cA_{g}$ is only fully known for $g\leq 4$ \cite{igusa62,hain02,HT12,HT18}. Further, Grushevsky \cite{grushevsky09} posed the question whether $H^{2k+1}(\cA_{g};\QQ)\neq0$ for some $g$ and $k$. Building upon the work of Chan, Galatius, and Payne \cite{CPG21}, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology classes in $H^{k}(\cA_{g}; \QQ)$ in a number of new cases and answer Grushevsky's question. 
+The moduli space of (principally polarized) abelian varieties of dimension $g$, is a smooth variety $\cA_{g}$ (truthfully a smooth Delinge--Mumford stack) whose points are in one to one correspondence with isomorphism classes of principally polarized abelian varieties of dimension $g$. Concretely, we may view it as the quotient $[\mathbb{H}_g/\mathrm{Sp}(2g, \ZZ)]$ where $\HH_{g}$ is the Siegel upper half-space. Similar to the moduli space of curves $\cA_{g}$ has long been studied, but much remains unknown about its geometry. For example, the (singular) cohomology is $\cA_{g}$ is only fully known for $g\leq 4$ \cite{igusa62,hain02,HT12,HT18}. Further, Grushevsky \cite{grushevsky09} posed the question whether $H^{2k+1}(\cA_{g};\QQ)\neq0$ for some $g$ and $k$. Building upon the work of Chan, Galatius, and Payne \cite{CGP21}, my co-authors and I developed new methods for understanding a certain canonical quotient of the cohomology of $\cA_{g}$. In particular, our results construct non-trivial cohomology classes in $H^{k}(\cA_{g}; \QQ)$ in a number of new cases and answer Grushevsky's question. 
 
 \begin{theorem}\cite[Theorem A]{BBCMMW24}\label{thm:Ag}
 The rational cohomology $H^{k}\left(\cA_{g};\QQ\right)\neq0$ for:
@@ -481,21 +481,14 @@ Let $X$ be a projective variety and $L$ a very ample line bundle. Considering th
 \end{center}
 where $F_{p}$ is a graded free $S$-module, and the differentials satisfy some minimality conditions. Since $F_{p}$ is a graded free $S$-module it can be written as $\bigoplus_{q}S(-q)^{\beta_{p,q}(S_{X})}$. The module $S(-q)$ is the ring $S$ with a twisted grading, so that $S(-q)_{d}$ is equal to $S_{d-q}$ where $S_{d-q}$ is the graded piece of degree $d-q$. The $\beta_{p,q}(S_{X})$ are known as the graded Betti numbers (or syzygies) of the pair $(X,L)$, and we often denote them as $\beta_{p,q}(X;L)$ to indicate their dependence not just on $X$ but on the line bundle $L$ as well. That is to say the syzygies depend on the extrinsic embedding of $X$ into $\PP^{n}$. An overarching theme in the study of syzygies in algebraic geometry is understanding ways that minimal graded free resolutions and grade Betti numbers also capture the intrinsic geometry of $X$.   
 
-For example, Mumford's work on the geN
-
-The connection between the geometry of $X$ and its minimal graded free resolutions has been made most precise when $X$ is a curve. This sec
-
- For example, consider the following classical theorem of Noether and Petri concerning canonical curves.
+An example of this is Mumford's work showing varieties of high degree are defined by quadrics \cite{mumford70}. The connection between the geometry of $X$ and its minimal graded free resolutions has been made most precise when $X$ is a curve. For example, consider the following classical theorem of Noether and Petri concerning canonical curves.
 
 \begin{theorem}[Noether-Petri Theorem]\label{thm:noether-petri}
 	Let $X$ be a smooth projective curve of genus $g$. If $X$ does not have a degree $2$ cover of $\PP^{1}$ then the canonical bundle $K_{X}$ defines a projectively normal embedding of $X$ into $\PP^{g-1}$. Further, if $X$ does not admit a degree 3 cover of $\PP^{1}$ then the image of $X\subset \PP^{g-1}$ is defined by quadrics. 
 \end{theorem}
 
-In the language of minimal graded free resolutions this theorem can be translated as follows: 
-\begin{itemize}
-\item If $X$ does not admit a cover of $\P^{1}$ of degree $2$ then $\beta_{0,0}(X;K_X)=1$ and $\beta_{0,q}(X;K_X)=0$ for all $q\neq0$. 
-\item If $X$ does not admit a cover of $\P^{1}$ of degree $3$ then $\beta_{1,q}(X;K_X)=0$ for all $q\neq2$. 
-\end{itemize}
+In the language of minimal graded free resolutions this theorem can be translated as follows:  i) If $X$ does not admit a cover of $\PP^{1}$ of degree $2$ then $\beta_{0,0}(X;K_X)=1$ and $\beta_{0,q}(X;K_X)=0$ for all $q\neq0$, and ii) If $X$ does not admit a cover of $\PP^{1}$ of degree $3$ then $\beta_{1,q}(X;K_X)=0$ for all $q\neq2$. Other results in this vein for curves include Castelnuovo's theorem that if $\deg(L)\geq 2g+1$ then $L$ is very ample and if $\deg(L)\geq 2g+2$ then $I_X$ is generated by quadrics, and the theorem that if $\deg(L)\geq 2g+1$ then $S_{X}$ is Cohen-Macaulay. 
+ 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -503,13 +496,9 @@ In the language of minimal graded free resolutions this theorem can be translate
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-A \textit{stacky curve} is a smooth proper geometrically connected Deligne-Mumford stack of dimension 1 which contains a dense open subscheme. intuitively one may think about a stacky curve as being a curve with a finite number of special points -- called stacky points -- which have ``fractional degrees''. Note this intuition can be made precise in the sense that any stacky curve is (Zariski) locally the quotient of a smooth affine curve by a finite group \cite{voightZurieckBrown22}*{Lemma~5.3.10}. For simplicity we work over $\CC$, however, everything remains true over an arbitrary field if one places minor conditions on the stacky curve. 
+A \textit{stacky curve} is a smooth proper geometrically connected Deligne-Mumford stack of dimension 1 which contains a dense open subscheme. intuitively one may think about a stacky curve as being a curve with a finite number of special points -- called stacky points -- which have ``fractional degrees''. Note this intuition can be made precise in the sense that any stacky curve is (Zariski) locally the quotient of a smooth affine curve by a finite group \cite[Lemma~5.3.10]{voightZurieckBrown22}. For simplicity we work over $\CC$, however, everything remains true over an arbitrary field if one places minor conditions on the stacky curve. 
 
 In \cite{voightZurieckBrown22} Voight and Zureick-Brown develop a theory of line bundles, including canonical divisors, for stacky curves. Roughly this theory proceeds by noting that every stacky curve $\cX$ admits a coarse space $\pi:\cX\to X$ where $X$ is a smooth (non-stacky) curve. The theory of line bundles on $\cX$ can be developed by carefully transferring properties of divisors on $X$ to $\cX$ via the map $\pi$. The key thing to note is that since the degree of a stacky point need not be an integers the degree of a line bundle on a stacky curve maybe be a rational number. Associated to stacky curve $\cX$ and a line bundle $\cL$ the \emph{section module} of $\cX$ with respect to $\cL$ is $R(\cX;\cL)\coloneqq \bigoplus_{k\in \ZZ}H^{0}(\cX,k\cL)$. 
-
-\begin{goal}
-	Understand the syzygies of $R(\cX,\cL)$ where $\cX$ is a stacky curve and $\cL$ is a line bundle on $\cX$. 
-\end{goal}
 
 A fundamental difference between the the classical theory on varieties is that a line bundle $\cL$ on stacky curve does not define an embedding into projective space, instead it defines an embedding into we weighted projective stack. Algebraically this corresponds to the fact that $R(\cX;\cL)$ is a module over a polynomial ring with a non-standard $\ZZ$-grading. That is there exists a $\ZZ$-graded polynomial ring $S=\CC[x_{1},x_{2},\ldots,x_{n}]$ where $\deg(x_{i})=w_{i}\in\ZZ$ such that $R(\cX;\cL) \cong S/I$ for some homogeneous ideal $I\subset S$.
 
@@ -518,20 +507,39 @@ Suppose $\cX$ is a stacky curve with two stacky points each having $\ZZ/2\ZZ$ as
 \[
 R(\cX;K_{\cX})\cong \CC[x_{1},x_{2},x_{3}]/\langle x_{3}^{2}x_{1}-bx_{3}x_{2}^{6}-x_{1}^{2}-ax_{2}^{8}\rangle
 \]
-where $a,b\in \CC$ and $\deg(x_{1})=4$, $\deg(x_{2})=1$, and $\deg(x_{3})=2$ \cite{voightZurieckBrown22}*{Remark 8.3.6}. 
+where $a,b\in \CC$ and $\deg(x_{1})=4$, $\deg(x_{2})=1$, and $\deg(x_{3})=2$ \cite[Remark 8.3.6]{voightZurieckBrown22} 
 \end{example}
+
+
+\begin{goal}
+	Understand the syzygies of $R(\cX,\cL)$ where $\cX$ is a stacky curve and $\cL$ is a line bundle on $\cX$. 
+\end{goal}
+
+The rough heuristic in approaching this goal is two-fold: i) the syzygies of section rings of stacky curves should behave roughly like the syzygies of weighted log complete series on non-stacky curves, and ii) Stacky-ness should be thought of as increasing the positivity of line bundle. Justification for the first heuristic comes in the form of the following lemma
+
+\begin{lemma}
+	Let $\cX$ be a stacky curve with $\pi:\cX\to X$ its coarse space. If $\cL$ a line bundle on $\cX$ then there exists as weighted log incomplete series $W$ on $X$ such that $R(\cX;\cL)\cong \bigoplus_{d\in \ZZ} H^0(X, dW)$.
+\end{lemma}
+
+Justification for the second is more imprecise, however, for example, if $\cL$ is a line bundle on $\cX$ then $\deg(\cL)$ is equal to $\deg(L)+ \sum_{i}(1-\tfrac{1}{e_i})$ where $L$ is a line bundle on the coarse space $X$ and $e_i$ are the order of the stabilizers of the stacky points. Thus, the degree of $\cL$ is ``increased'' by the presence of stacky points. 
 
 \begin{problem}
 	Let $\cX$ be a stacky curve with $e$ the maximum order of the stabilizer groups of stacky points on $\cX$. Let $\cL$ a line bundle on $\cX$. 
 	\begin{enumerate}
 	\item Find a characterization in terms of $\deg(\cL)$ for when $R(\cX:\cL)$ is Cohen-Macaulay.
-	\item Find a characteriz in terms of $\deg(\cL)$ for when $R(\cX:\cL)$ is generated in degrees$\leq 2e$. 
+	\item Find a characterization in terms of $\deg(\cL)$ for when $R(\cX:\cL)$ is generated in degrees$\leq 2e$. 
 	\end{enumerate}
 \end{problem}
+
+Taken further the next natural question I would like to address is to understand what $N_p$ properties stacky curves satisfy. Building on the work of Green \cite{green84-I} and the second hueristic  .
 
 \begin{problem}
 	Let $\cX$ be a stacky curve whose coarse space has genus 0 or 1. If $\cL$ is a line bundle on $\cX$ and $\deg(\cL)\gg0$, what $N_{p}$ conditions does $R(\cX; \cL)$ satisfy? Determine precise bounds on $\deg(\cL)$ guaranteeing $N_p$.
 \end{problem}
+
+\begin{defn}
+\juliette{ADD KERNEL BUNDLES STUFFFF}
+\end{defn}
 
 \begin{example}[Weighted Projective Line]
 Consider the stacky curve $\cX = \cP(1,e)$, the weighted projective line. Its coarse space is $\PP^1$. It has one stacky point with stabilizer $\ZZ/e\ZZ$. The coordinate ring corresponding to the ample generator of $\Pic(\cX)$ is $R = \KK[x,y]$, where $\deg(x)=1$ and $\deg(y)=e$. This is not standard graded. If we embed $\cX$ by a high degree line bundle $\cL$, the resulting ring $R(\cX;\cL)$ will be a Veronese subring of $\KK[x,y]$. The syzygies must be studied relative to the weights of the variables.
@@ -539,7 +547,7 @@ Consider the stacky curve $\cX = \cP(1,e)$, the weighted projective line. Its co
 
 We will begin with the genus 0 case (weighted projective lines). We will adapt techniques from Koszul cohomology and the theory of kernel bundles (e.g., the $M_L$-type bundles used in the proof of Green's theorem) to the stacky setting. The Riemann-Roch theorem for stacky curves relates $h^0(\cX, \cL)$ to $\deg(\cL)$ and the orders $e_i$. We expect the bounds on $\deg(\cL)$ to depend explicitly on the $e_i$, likely involving the least common multiple of the orders.
 
-For the genus 1 case, the geometry is richer. Stacky elliptic curves can be described as quotients of $\CC$ by a lattice and a finite group action. The PI plans to leverage techniques inspired by the work of Polishchuk on the Fourier-Mukai transform for elliptic curves, generalized to the equivariant setting, to analyze the stability and splitting types of the relevant kernel bundles.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Green's Conjecture for Canonical Stacky Curves} 
@@ -566,32 +574,41 @@ Stated differently Green's conjecture say that one can read the Clifford index o
 Find and prove an appropriate generalization of Green's conjecture describing the vanishing of the syzygies of the canonical rings of stacky curves. 
 \end{goal}
 
-\begin{theorem}\cite{voightZurieckBrown22}*{Theorem 8.4.1}\label{thm:voight-dzb}
+The first steps towards Goal~\ref{goal:stackyGreens} were taken by Voight and Zureick-Brown who proved an stacky analog of the Noether-Petri theorem.
+
+\begin{theorem}\cite[Theorem 8.4.1]{voightZurieckBrown22}\label{thm:voight-dzb}
 Let $\cX$ be stacky curve whose coarse space has genus $\geq 1$ and let $e$ be the maximum order of the stabilizer groups of the stacky points; then the canonical ring $R(\cX; K_{\cX})$ is  generated by elements in degree at most $3e$ with relations in degree at most $6e$. 
 \end{theorem}
 
-This theorem shows that complexity is bounded by the stacky structure, but these bounds are likely not sharp (when $e=1$, they recover classical bounds, but do not reflect the finer control provided by the Clifford index). We propose to refine Theorem~\ref{thm:voight-dzb} by introducing a notion of Clifford index for stacky curves.
+This theorem shows that complexity is bounded by the stacky structure, but these bounds are likely not sharp. For example $e=1$ this fails to recover the classical result, instead allowing both quadrics and cubics. Further, it lacks it does not provide a geometric explanation of the failure of \juliette{finish}. We propose to refine Theorem~\ref{thm:voight-dzb} by studying the relationship between weighted linear series on $\cX$ and the syzygies of the canonical ring of $\cX$. A far reaching goal of this would be to introduce a notion of Clifford index for stacky curves.
 
 \begin{problem}
 	Can Theorem~\ref{thm:voight-dzb} be refined by considering the existence of certain stacky or weighted linear series on $\cX$? Formulate a stacky analogue of Clifford's index. 
 \end{problem}
 
-To define a meaningful Clifford index, we need a robust theory of linear series on stacks. This involves studying the geometry of the stacky Brill-Noether loci $\cW_{d}^{r}(\cX)$, parameterizing line bundles of degree $d$ with at least $r+1$ independent sections, accounting for the stacky structure. The classical Brill-Noether theorem describes the expected dimension of these loci for a general curve.
+To define a meaningful Clifford index, we need a robust theory of linear series on stacks. This involves studying the geometry of the stacky Brill-Noether loci $\cW_{d}^{r}(\cX)$, parameterizing line bundles of degree $d$ with at least $r+1$ independent sections, accounting for the stacky structure. The classical Brill-Noether theorem describes the expected dimension of these loci for a general curve. In recent years significant work has gone into finding refinements and extensions to the classical statements of Brill-Noether theory. 
+
 \begin{problem}
 	If $\cX$ is a general stacky curve, is the stacky Brill-Noether locus $\cW_{d}^{r}(\cX)$ of expected dimension, smooth away from $\cW_{d}^{r+1}(\cX)$, and irreducible when positive dimensional?
 \end{problem}
 
 The PI plans to use deformation theory and degeneration techniques to study the geometry of $\cW_{d}^{r}(\cX)$. Establishing the basic properties of these loci is crucial for defining $\cliff(\cX)$ and formulating a precise analogue of Green's conjecture. We expect the stacky Clifford index to depend on the genus of the coarse space and the configuration of the stabilizer groups.
 
+Another approach one may take towards Goal~\ref{goal:stackyGreens} is by studying the algebraic properties of the canonical rings $R(\cX;K_{\cK})$. As a first step towards this, together with Maya Banks and Christopher Manon, we have shown that just like normal non-stacky curves, the canonical ring of stacky curves is Gorenstein.  
+
 \begin{lemma}
 	If $\cX$ is a stacky curve then the canonical ring $R(\cX;K_{\cK})$ is Gorenstein. 
 \end{lemma}
 
+The argument to prove the above lemma largely follows the classical argument, which some slight delicateness needed in handling the non-standard weighting on ambient polynomial ring. A significantly more subtle algebraic question would be to determine when $R(\cX; K_{\cX})$ is Koszul. It is worth noting here that the \juliette{ADD}
+
 \begin{problem}
-	Let $\cX$ be a stacky whose coarse space has genus $g$. For what $k$ does the canonical ring $R(\cX;K_{\cK})$ satisfy begin $k$-Koszul in the sense above.
+	Let $\cX$ be a stacky whose coarse space has genus $g$. For what $t$ does the canonical ring $R(\cX;K_{\cK})$ satisfy the $t$-Koszul property above.  
 \end{problem}
 
-The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cite{schreyer91} to show the existence of a Gr\"{o}bner basis for the canonical ring of a stacky curve whose elements have certain degrees. However, Voight and Zureick-Brown do not explicitly construct such Gr\"{o}bner bases. It should be possible to make their arguments explicit for simple stacky curves.  With this in mind, one approach toward Problem~\ref{prob:stackyGreens} is to make Voight and Zureick-Brown's arguments explicit for a large number of examples, and then use a computer algebra system like Macaulay2 to compute the minimal graded free resolutions for these examples.  
+At time I have no strong guess for what the correct characterization of when $R(\cX;K_{\cK})$ is $t$-Koszul should be. However, in practice checking $t$-Koszul-ness can be done computationally in examples.
+
+The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cite{schreyer91} to show the existence of a Gr\"{o}bner basis for the canonical ring of a stacky curve whose elements have certain degrees. However, Voight and Zureick-Brown do not explicitly construct such Gr\"{o}bner bases. It should be possible to make their arguments explicit for simple stacky curves.  With this in mind, one approach toward Goalt~\ref{goal:stackyGreens} is to make Voight and Zureick-Brown's arguments explicit for a large number of examples, and then use a computer algebra system like Macaulay2 to compute the minimal graded free resolutions for these examples.  
 
 \begin{problem}\label{prob:comp-canonical-stacky}
 	Compute the minimal graded free resolution of the canonical ring $R(\cX, K_{\cX})$ for stacky curves $\cX$ where:
@@ -602,7 +619,7 @@ The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cit
 	\end{itemize}
 \end{problem}
 
-Building upon code generously shared by Voight and Zureick-Brown, I have carried out Problem~\ref{prob:comp-canonical-stacky} for most of the genus zero examples. In many of these computed cases, and as noted in \cite{voightZurieckBrown22}*{Appendix}, the canonical ring is a (weighted) complete intersection. However, there are examples showing that even for small examples the canonical ring of a stacky curve is quite complicated.
+Building upon code generously shared by Voight and Zureick-Brown, I have carried out Problem~\ref{prob:comp-canonical-stacky} for most of the genus zero examples. In many of these computed cases, and as noted in \cite[Appendix]{voightZurieckBrown22}, the canonical ring is a (weighted) complete intersection. However, there are examples showing that even for small examples the canonical ring of a stacky curve is quite complicated.
 
 \begin{example}
 Let $\cX$ be a stacky curve with three stacky points whose stabilizers are $\ZZ/4\ZZ$, $\ZZ/4\ZZ$, and $\ZZ/5\ZZ$ whose coarse space has genus zero. The canonical ring $R(\cX;K_{\cX})$ can be presented as $S/I$ where $S=\CC[x_{1},x_{2},x_{3},x_{4},x_{5}]$ where $\deg(x_{1})=3$, $\deg(x_{2})=\deg(x_{3})=4$, and $\deg(x_{4})=\deg(x_{5})=5$ and $I$ is an ideal generated by 7 homogenous polynomials of degrees $8,8,9,9,10,13,13$. The minimal graded free resolution of $R(\cX;K_{\cX})$ is shown below (with the degrees suppressed for brevity):
@@ -633,43 +650,40 @@ Let $\cX$ be a smooth toric DM stack, $\dim \cX \geq2$, and fix an index $1\leq 
 We will begin by focusing on specific examples, such as weighted projective planes.
 
 \begin{problem}\label{prob:projective-plan-np}
-	Fix a positive integer $a>1$. For what values of $p$ does the weighted projective stacky plane $\cP(1,1,1,a)$ embedded by $\cO(d)$ satitify $N_{p}$. 
+	Fix a positive integer $a>1$. For what values of $p$ does the weighted projective stacky plane $\cP(1,1,1,a)$ embedded by $\cO(d)$ satisfy or not satisfy $N_{p}$. 
 \end{problem}
 
-The stack $\cP(1,1,a)$ has a single stacky point with stabilizer $\ZZ/a\ZZ$. Its Cox ring is $S = \KK[x,y,z]$ with $\deg(x)=\deg(y)=1$ and $\deg(z)=a$. We anticipate that the required degree $d$ for $N_p$ to hold will grow linearly with $a$. I hope to approach both Problem~\ref{prob:asym-stacks} and Problem~\ref{prob:projective-plan-np} in a somewhat unified method. In particular, I believe it will be possible to adopt the methods of consructing explicit non-zero syzygies in the Koszol cohomology of NEDEDE after quotienting by a regular sequence. This will produce non-vanishing results for both NEDEDEDEDED. Ideally these can be extended asymptotic results for toric stacks by using a weighted version of Noether normalization argument. 
+The stack $\cP(1,1,a)$ has a single stacky point with stabilizer $\ZZ/a\ZZ$. Its Cox ring is $S = \KK[x,y,z]$ with $\deg(x)=\deg(y)=1$ and $\deg(z)=a$. We anticipate that the required degree $d$ for $N_p$ to hold will grow linearly with $a$. I hope to approach both Problem~\ref{prob:asym-stacks} and Problem~\ref{prob:projective-plan-np} in a somewhat unified method. In particular, I believe it will be possible to adopt the methods of constructing explicit non-zero syzygies in the Koszul cohomology after quotienting by a regular sequence developed in \cite{EEL16} and extended by the PI (see Section~\ref{subsec:asymptic-prior} and \cite{bruce24}). Ideally these can be extended asymptotic results for toric stacks by using a weighted version of Noether normalization argument. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Computations with Toric Stacks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While, such a framework in general is fairly hopeless, however, restricting our attention to \emph{toric stacks} things are much more promising. In particular, the combinatorial theory of toric stacks is well-developed, with toric stacks roughly being equivalent to the data of a \emph{stacky fan} -- a fan $\Sigma \subset N$ and a lattice homomorphism $\beta:N\to L$. Despite this no implementation of toric stacks exists for any computer algebra system as far as the PI is aware. This combinded with the fact that the \textit{NormalToricVarieties} package for \textit{Macaualy2} being one of the most used and robust packages suggest the following project would be benifical both to the PI as she approaches projects in this proposal, but also the wider research community. 
+The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While, such a framework in general is fairly hopeless, however, restricting our attention to \emph{toric stacks} things are much more promising. In particular, the combinatorial theory of toric stacks is well-developed, with toric stacks roughly being equivalent to the data of a \emph{stacky fan} -- a fan $\Sigma \subset N$ and a lattice homomorphism $\beta:N\to L$ \cite{toricStacks1,toricStacks2,borisovChenSmith05}. Despite this no implementation of toric stacks exists for any computer algebra system as far as the PI is aware. This combined with the fact that the \textit{NormalToricVarieties} package for \textit{Macaualy2} being one of the most useful and robust packages suggest the following project would be beneficial both to the PI as she approaches projects in this proposal, but also the wider research community. 
 
 \begin{problem}\label{prob:toric-stacks-m2}
 Develop a robust software package for \textit{Macaualy2} allowing for computations with toric stacks. 
 \end{problem}
 
-I plan to develop a \textit{Macaulay2} package \textit{toricStacks} implementing the necesary data structure and methods for working with toric stacks. This includes implementing: stacky fans, morphisms of stacky fans, line bundles on toric stacks, the cox ring of a toric stack, and cohomology computations involving sheaves on toric stacks. Work on such a package began in Summer 2025 with Maya Banks and John Cobb. The PI has extensive experience developing \textit{Macaulay2} packages and will involve graduate students in this project. The package will be open-source.
+I plan to develop a \textit{Macaulay2} package \textit{toricStacks} implementing the necessary data structure and methods for working with toric stacks. This includes implementing: stacky fans, morphisms of stacky fans, line bundles on toric stacks, the cox ring of a toric stack, and cohomology computations involving sheaves on toric stacks. Work on such a package began in Summer 2025 with Maya Banks and John Cobb. The PI has extensive experience developing \textit{Macaulay2} packages and will involve graduate students in this project. The package will be open-source.
 
 
 \begin{problem}
-	Compute the graded Betti tables of $\cP(1,1,1,a)$ embedded by $\cO(d)$ for all $1<a \leq 15$ and all $2\leq d \leq 6$ by adapting the high-performance computing approaches developed in \juliette{cite}
+	Compute the graded Betti tables of $\cP(1,1,1,a)$ embedded by $\cO(d)$ for all $1<a \leq 15$ and all $2\leq d \leq 6$ by adapting the high-performance computing approaches developed in \juliette{BEGY20,BCEGLY22}. 
 \end{problem}
+
+
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Castelnuovo–Mumford Regularity: Resolutions, Bounds, and Asymptotics}\label{sec:multigraded-regularity}
+\section{Castelnuovo–Mumford Regularity: Resolutions, Bounds, and Asymptotic Behavoir}\label{sec:multigraded-regularity}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 As discussed in \juliette{citation} toric varieties can be viewed as generalizations of projective space. Where $\PP^n$ is the quotient $(\CC^{n+1}-\{0\})/\CC^{\times}$ a general toric variety is of the form $Y=(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r$ where $B$ is the ideal, called the irrelevant ideal, defining the fixed locus of the action of $(\CC^{\times})^r$ on $\CC^{n}$. We associated to such a toric variety a $\Cl(Y)$-graded polynomial ring $S=\CC[x_1,\ldots,x_n]$ called the Cox ring of $Y$ and $B \subset S$.When $Y$ is smooth $\Cl(Y) \cong \Pic(Y) \cong \ZZ^r$, and we will generally make this assumption going forward for simplicity. 
 
-A central invariant measuring the complexity of a $\Pic(X)$-graded $S$-module $M$ is the **multigraded Castelnuovo-Mumford regularity**. Classically, regularity is an integer bounding the degrees of the generators of the syzygy modules. In the multigraded setting, regularity is defined via the vanishing of local cohomology with respect to the irrelevant ideal $B$.
+A central invariant measuring the complexity of a $\Pic(Y)$-graded $S$-module $M$ or a is coherent sheaf $\cF$ on $Y$ is the multigraded  Castelnuovo-Mumford regularity (or just multigraded regularity) of $M$ or $\cF$. (See Section \juliette{NEEED} for the definition. Crucially, $\reg(M)$ is not a single degree, but a region in $\Pic(X)$. Unlike in the classical setting, even for relatively simple examples the multigraded regularity does not necessarily have a unique minimal element (see Figure~\ref{fig:example-of-reg}).
 
-\begin{defn}
-The multigraded regularity $\reg(M)$ of a module $M$ is the set of degrees $d \in \Pic(X)_{\RR}$ such that $H^i_B(M)_{d-a} = 0$ for all $i\geq 0$ and all $a \in \Nef(X)$, where $\Nef(X)$ is the cone of nef divisors on $X$.
-\end{defn}
-
-Crucially, $\reg(M)$ is not a single degree, but a region in $\Pic(X)$. Unlike in the classical setting, even for relatively simple examples the multigraded Castelnuovo--Mumford regularity does not necessarily have a unique minimal element (see Figure~\ref{fig:example-of-reg}).
 \begin{center}
 \begin{figure}\label{fig:example-of-reg}
 \newcommand{\makegrid}{
@@ -701,10 +715,9 @@ Crucially, $\reg(M)$ is not a single degree, but a region in $\Pic(X)$. Unlike i
   %\fill[Gray,fill=Gray] (-1,0) circle (6pt);
  % \fill[Gray,fill=Gray] (0,-1) circle (6pt);
 \end{tikzpicture} 
-\caption{Left: The multigraded Castelnuovo--Mumford regularity of $\cO_{X}$ where $X\subset \PP^{1}\times \PP^{1}$ is the subschem of three points $([1:1],[1:4])$, $([1:2],[1:5])$, $([1:3],[1:6])$. Right: The multigraded Castelnuovo--Mumford regularity of $\cO_{\cH_{3}}$.}
+\caption{Left: The multigraded Castelnuovo--Mumford regularity of $\cO_{X}$ where $X\subset \PP^{1}\times \PP^{1}$ is the three points $([1:1],[1:4])$, $([1:2],[1:5])$, $([1:3],[1:6])$. Right: The multigraded Castelnuovo--Mumford regularity of $\cO_{\cH_{3}}$.}
 \end{figure}
 \end{center}
-
 This project aims to deepen our understanding of multigraded regularity, its asymptotic behavior, and its relationship to the structure of free resolutions and positivity. 
 
 
@@ -712,50 +725,154 @@ This project aims to deepen our understanding of multigraded regularity, its asy
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \subsection{Asymptotic Regularity of Powers of Ideals and Ideal Sheaves}
+ \subsection{Asymptotics and Bounds on Multigraded Regularity}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \begin{goal}
+
+
+ \begin{problem}\label{prob:seshardri}
  	Let $X$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring. Understand the asymptotic behavior of $\reg(I^p)$ and $\reg(\cI^p)$ where $I \subset S$ is an $\ZZ^r$-graded ideal and $\cI\subset \cO_{Y}$ is an ideal sheaf.
-\end{goal}
+\end{problem}
+
+Ongoing work of the PI with Lauren Cranton Heller, Mahrud Sayrafi, and Alexandra Seceleanu on led to the following conjecture, which would provide a precise answer to Problem~\ref{prob:seshardri}. 
  
  \begin{conjecture}\label{conj:reg-ideal-sheaves}
- 	Let $Y$ be a smooth projective toric variety and $\cI \subset \cO_{Y}$ an ideal sheaf. With the notation as above:
+ 	Let $Y$ be a smooth projective toric variety and $\cI \subset \cO_{Y}$ an ideal sheaf. If $\pi: \tilde{Y} \to Y$ be the blow-up of $Y$ along $\cI$ and let $E$ denote the exceptional divisor then:
 	\[
-	\lim_{p\to \infty} \frac{\reg\left(\cI^p\right)_{\RR}}{p} = \left\{ \; L \in \Pic(Y)_{\RR} \;\; \big| \;\; \pi^*(L)-E \text{ is nef on $\tilde{Y}$} \;\right\}.
+	\lim_{p\to \infty} \frac{\reg\left(\cI^p\right)_{\RR}}{p} = \left\{ \; L \in \Pic(Y)_{\RR} \;\; \big| \;\; \pi^*(L)-E \text{ is nef on $\tilde{Y}$} \;\right\}
 	\]
+where the limit is in the sense of Painlevé–Kuratowski convergence of subsets of $\RR^n$. 
  \end{conjecture}
+ 
+We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves} the Seshadri region of $\cI$ as it is a natural multigraded analog \juliette{NEDEDEDE}.  This conjecture suggests that the asymptotic regularity has many surprising and nice properties. For example, depot $\reg(\cI^p)$ rarely being convex the Seshadri region is convex. 
+
+\begin{figure}[H]
+\newcommand{\makegrid}{
+  \path[use as bounding box] (-1.45,-1.25) rectangle (9.45,7.25);
+  %\foreach \x in {-1,...,6}
+  %\foreach \y in {-1,...,6}
+    %{ \fill[gray,fill=gray] (\x,\y) circle (1.5pt); }
+  \draw[-,  semithick] (-1,0)--(9,0);
+  \draw[-,  semithick] (0,-1)--(0,7);
+  \node at (-1,3) (a) {\scriptsize $(0,3)$};
+  \node at (7,-1) (a) {\scriptsize $(7,0)$};
+  \fill[fill=Black] (6.95,-.15) rectangle (7.05,0.15);
+  \fill[fill=Black] (-.15,2.95) rectangle (0.15,3.05);
+    \draw[-,  dashed] (0,3)--(7,0);
+}
+
+\begin{tikzpicture}[scale=.3]
+ % \node at (2,7) (a) {\scriptsize $A_1$};
+  \path[fill=PineGreen!45] (7, 0)--(7, 3)--(0, 3)--(0,7)--(9,7)--(9,0)--(7,0);
+  \makegrid
+
+  \draw[->, ultra thick,PineGreen] (7,0)--(9,0);
+  \draw[-, cap=round,ultra thick,PineGreen] (7, 0)--(7, 3)--(0, 3);
+  \draw[->, ultra thick,PineGreen] (0,3)--(0,7);
+
+  \fill[TealBlue,fill=PineGreen] (7,0) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (0,3) circle (5pt);
+      \node at (5,4.55) (a) {\scriptsize $\frac{\reg(\cI)_{\RR}}{1}$};
+\end{tikzpicture}\quad
+\begin{tikzpicture}[scale=.3]
+ % \node at (2,7) (a) {\scriptsize $A_1$};
+  \path[fill=PineGreen!45] (7,0)--(7,1)--(4.66667,1)--(4.66667,2)--(2.33333,2)--(2.33333,3)--(0,3)--(0,7)--(9,7)--(9,0)--(7,0);
+  \makegrid
+
+  \draw[->, ultra thick,PineGreen] (7,0)--(9,0);
+  \draw[-, cap=round,ultra thick,PineGreen] (7,0)--(7,1)--(4.66667,1)--(4.66667,2)--(2.33333,2)--(2.33333,3)--(0,3);
+  \draw[->, ultra thick,PineGreen] (0,3)--(0,7);
+
+  \fill[TealBlue,fill=PineGreen] (7,0) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (0,3) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (4.66667,1) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (2.33333,2) circle (5pt);
+
+      \node at (5,4.55) (a) {\scriptsize $\frac{\reg(\cI^3)_{\RR}}{3}$};
+\end{tikzpicture}\quad
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tikzpicture}[scale=.3]
+ % \node at (2,7) (a) {\scriptsize $A_1$};
+  \path[fill=PineGreen!45] (7,0)--(7,.6)--(5.6,.6)--(5.6,1.2)--(4.2,1.2)--(4.2,1.8)--(2.8,1.8)--(2.8
+      ,2.4)--(1.4,2.4)--(1.4,3)--(0,3)--(0,7)--(9,7)--(9,0)--(7,0);
+  \makegrid
+
+  \draw[->, ultra thick,PineGreen] (7,0)--(9,0);
+  \draw[-, cap=round,ultra thick,PineGreen] (7,0)--(7,.6)--(5.6,.6)--(5.6,1.2)--(4.2,1.2)--(4.2,1.8)--(2.8,1.8)--(2.8
+      ,2.4)--(1.4,2.4)--(1.4,3)--(0,3);
+  \draw[->, ultra thick,PineGreen] (0,3)--(0,7);
+
+  \fill[TealBlue,fill=PineGreen] (7,0) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (0,3) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (5.6,.6) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (4.2,1.2) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (2.8,1.8) circle (5pt);
+  \fill[TealBlue,fill=PineGreen] (1.4,2.4) circle (5pt);
+
+      \node at (5,4.55) (a) {\scriptsize $\frac{\reg(\cI^5)_{\RR}}{5}$};
+\end{tikzpicture}\quad
+\begin{tikzpicture}[scale=.3]
+ % \node at (2,7) (a) {\scriptsize $A_1$};
+  \path[fill=MidnightBlue!45]  (0,3)--(7,0)--(9,0)--(9,7)--(0,7)--(0,3);
+  \makegrid
+
+  \draw[->, ultra thick,MidnightBlue] (7,0)--(9,0);
+  \draw[-, cap=round,ultra thick,MidnightBlue] (0,3)--(7,0);
+  \draw[->, ultra thick,MidnightBlue] (0,3)--(0,7);
+
+  \fill[TealBlue,fill=MidnightBlue] (7,0) circle (5pt);
+  \fill[TealBlue,fill=MidnightBlue] (0,3) circle (5pt);
+      \node at (3.5,4.55) (a) {\scriptsize $L=\lim\{\widehat{A}_p\}$};
+\end{tikzpicture}
+\caption{Toy picture of the convergence of $\frac{\reg(\cI^{p})_{\RR}}{p}$ to the Seshadri region of $\cI$ predicted Conjecture~\ref{conj:reg-ideal-sheaves}.}
+\end{figure}
+
  
  \begin{problem}
  	Prove Conjecture~\ref{conj:reg-ideal-sheaves}. 
  \end{problem}
  
+ \juliette{ADDD SOMETHING HERE}
+ 
   \begin{problem}
  	Is the Seshadri regions defined above be determined by the Newton-Okunkov body of some flag on $Y$. 
  \end{problem}
  
- \subsection{Bounds on Multigraded Regularity}
- 
- \begin{problem}
- 	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring. If $I\subset S$ is a $\ZZ^r$-graded ideal bound the number of minimal generators of $\reg(I^p)$ as a function of $p$ in terms of invariants of $I$?
+In addition to understanding the asymptotic limit of $\reg(I^p)$ and $\reg(\cI^p)$ is would be interesting to attempt to refine our understanding of the growth of the regularity in the settings. In particular, based on computations -- and as generally implied by Conjecture~\ref{conj:reg-ideal-sheaves} -- the number of minimal generator -- i.e. ``corners''  of $\reg(I^p)$ and $\reg(\cI^p)$, with respect to the $\Nef(Y)$ ordering, seems to grown with $p$. This is a phenomena new to the multigraded setting since on $\PP^n$ the regularity is always generated by a single element. It would be interesting to try to better understand this growth.
+
+ \begin{problem}\label{prob:corners}
+ 	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring. Le If $I\subset S$ is a $\ZZ^r$-graded ideal and $\cI \subset \cO_{Y}$ and ideal sheaf on $Y$. 
+	\begin{enumerate}
+	\item Bound the number of minimal generators of $\reg(I^p)$ as a function of $p$.
+	\item Bound the number of minimal generators of $\reg(\cI^p)$ as a function of $p$.
+	\end{enumerate}
 \end{problem}
+
+My hope in approaching Problem~\ref{prob:corners} is to.... \juliette{FILL IN}
  	
- \begin{problem}
+ \begin{problem}\label{prob:subvariety-bound}
  	Let $Y$ be a smooth projective toric variety and $Z\subset Y$ a smooth subvariety. Can one bound the multigraded regularity of $I_{Z}$ in terms of the codimension of $Z\subset Y$ and the degrees of minimal generators of $I_{Z}$?
 \end{problem}
+
+I will approach Problem~\ref{prob:subvariety-bound} by beginning with understanding the regularity of $I_{Z}$ when $Z$ is a torus invariant subvariety of $Y$. In this setting there is a bijection between such subvarieties and cones in the fan defining $X$, and the defining equations of $Z$ are entirely determined by the combinatorics of the corresponding cone.
 
 \begin{problem}
 	Compute the multigraded regularity of torus invariant subvarieties of $Y$ in terms of the combinatorics of the cone defining them.
 \end{problem}
 
+Despite being a relatively simple class of subvarieties it has been shown that their multigraded regularity behaves in nuanced ways \juliette{needED} and more generally many simple results fail to generalize to multigraded regularity in ``easy'' ways. \juliette{needED}
 
-Lastly as a somewhat losely connected project, I would like to explore the following specific example. The Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, has long been of interest because of its rich geometry and combinatorics. Building upon work of Kapranov, Tevelev and Tevelev showed there is an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding $\partial \overline{M}_{0,} + K_{\overline{M}_{0,n}}$ naturally factors. This embedding has been studied signficantly \juliette{fill in}, In particular, Monin and Rana produced a set of equations, arising as the $2\times 2$ minors of certain matrices of linear forms, the conjectured defined the scheme theoretic image of $\Omega_{n}$, this was recently prove true by Gillepsie, Griffin, and Levinson. This leads to the following natural question
 
-\begin{problem}
- 	Compute the multigraded Castelunovo--Mumford Regularity and minimal graded free resolution of the defining ideal of $\Omega_{n}(\overline{M}_{0,n}) \subset \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$.
+Lastly as a somewhat losely connected project, I would like to explore the following specific example. The Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, has long been of interest because of its rich geometry and combinatorics \cite{knudsen83,GHvdP88,keel92,kerberMarkwig09,manin13,CGM21,GGL23}. Building upon work of Kapranov \cite{kapranov93}, Tevelev and Tevelev showed there is an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding $\partial \overline{M}_{0,n} + K_{\overline{M}_{0,n}}$ naturally factors \cite{keelTevelev09}. Monin and Rana \cite{moninRana17} produced a set of equations, arising as the $2\times 2$ minors of certain matrices of linear forms, they conjectured defined the scheme theoretic image of $\Omega_{n}$, this was recently prove true by Gillepsie, Griffin, and Levinson \cite{GGL22}. 
+
+\begin{problem}\label{prob:m0n}
+ 	Compute the multigraded Castelnuovo--Mumford Regularity and minimal graded free resolution of the defining ideal of $\Omega_{n}(\overline{M}_{0,n}) \subset \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$.
 \end{problem}
 
-Early explorations computing both the regularity and free resolution of $\Omega_{n}(\overline{M}_{0,n})$ for $n=4,5,6,7$ using \textit{Macaulay2} suggest, unsurprisingly, that both have significant NEDEDED. The proposed approach is two-fold: First, NEDEDED. Secondly, in order to produce the multigraded regularity of NEDEDEDED. Lastly, it is of interest to note that this NEDEDEDEDED
+Using \textit{Macaulay2} the regularity and free resolution of $\Omega_{n}(\overline{M}_{0,n})$ is computable for $n=4,5,6,7$. I hope to take two-step approach two answering Problem~\ref{prob:m0n} two-fold: First, leverage the fact that $\Omega_{n}(\overline{M}_{0,n})$ is \juliette{ADDD}. Second, use mapping cone constructions to convert the resolution computed in part one to  \juliette{ADD}
+Lastly, it is of interest to note that this \juliette{ADD}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{A Generalized Eisenbud--Goto Theorem for Toric Varieties}
@@ -789,7 +906,7 @@ In particular, we see that the minimal graded free resolution $S/B$ is not $(0,0
 The structure of the Cox ring $S$ and the geometry of the irrelevant ideal $B$ often obstruct the existence of linear resolutions. This necessitates weaker notions of linearity, such as quasi-linear resolutions, or the use of virtual resolutions . We seek to generalize the classical connections between regularity and resolutions to the multigraded setting.
 
  \begin{problem}\label{prob:eisenbud-goto}
- 	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring and $B$ its irelevant ideal. Let $M$ be a $\Pic(Y)$-graded $S$-module.  Find the correction generalization of $d$-quasi-linear resolution such that a $\Pic(Y)$-graded $S$-module  $M$ is $d$-regular if and only if the truncation $M_{\geq d}$ has a $d$-quasilinear resolution. 
+ 	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring and $B$ its irrelevant ideal. Let $M$ be a $\Pic(Y)$-graded $S$-module.  Find the correction generalization of $d$-quasi-linear resolution such that a $\Pic(Y)$-graded $S$-module  $M$ is $d$-regular if and only if the truncation $M_{\geq d}$ has a $d$-quasilinear resolution. 
 \end{problem}
 
 We propose that the constraints on the degrees of the resolution matrices should be dictated by the geometry of the nef cone $\Nef(Y)$ and the degrees of the generators of the irrelevant ideal $B$.
@@ -809,7 +926,7 @@ We will begin with the fundamental case of Hirzebruch surfaces $H_t$. The PI pro
  	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring and $B$ its irrelevant ideal. Let $M$ be a $\Pic(Y)$-graded $S$-module.  Find a characterization for when the truncation $M_{\geq d}$ for $d\in \Pic(Y)$ has a linear resolution in terms of vanishing of the local cohomology groups $H^i_{B}(M)_{t}$. 
 \end{problem}
 
-Note the PI has provide an answer to this question when $Y$ is a product of proejctive spaces \juliette{CITATION}. 
+Note the PI  provided an answer to this question when $Y$ is a product of projective spaces \cite[Theorem 6.2]{bruceHellerSayrafi21}. 
 
 Computing the regularity of a module $M$ directly from the definition is quite difficult as local cohomology computations tend to be slow in practice. Compute the truncation $M_{\geq \dd}$ and its associated minimal free resolution tends to be significantly quicker, and thus, Theorem~\juliette{ADD} and a resolution of Conjecture~\ref{conj:eg-hirzebruch} and Problem~\ref{prob:eisenbud-goto} provide a practical algorithm for checking whether a module is regular at a single multidegree $\dd\in \ZZ^r$. Finding an algorithm to compute all of the regularity region of $M$ remains an open question. 
 
@@ -817,15 +934,14 @@ Computing the regularity of a module $M$ directly from the definition is quite d
 	Find an algorithm to compute a minimal generating set for $\reg(M)$. 
 \end{problem}
 
-Note this question is open in basically all cases except when $Y=\PP^n$, for example, even the case of $\PP^1\times \PP^1$ would be innovative. As right now even in these simple cases it requires quite a bit of ad hoc argument to showing that one has found all the minimal elements of $\reg(M)$. The difficulty to this is finding a box, in which one is guaranteed all the minimal generators of $\reg(M)$ live. Right now most bounds look like $L$-shaped regions, i.e. translates of $\Nef(X)$, which does not constraint the search space of minimal generators of $\reg(M)$. In this way finding an answer to Problem~\ref{prob:mg-reg-alg} is closely related to the question of questions around bounding multigraded regularity proposed in this project. 
+This question is open in all cases except $Y=\PP^n$. The difficulty to this is finding a box, in which one is guaranteed all the minimal generators of $\reg(M)$ live. Right now most bounds look like $L$-shaped regions, i.e. translates of $\Nef(X)$, which does not constraint the search space of minimal generators of $\reg(M)$. In this way finding an answer to Problem~\ref{prob:mg-reg-alg} is closely related to the question of questions around bounding multigraded regularity proposed in this project. 
 
-Finally, as noted above, my previous work shows that the multigraded Betti numbers of a module do not determine its multigraded regularity. One might hope this can be saved by considering the multigraded Betti numbers of all virtual resolutions of $M$. A virtual resolution of a module $M$ is a free $\ZZ^r$-graded complex of $S$-modules with sheafifies to a resolution of $\tilde{M}$. 
+Finally, as noted above, my previous work shows that the multigraded Betti numbers of a module do not determine its multigraded regularity. One might hope this can be saved by considering the multigraded Betti numbers of all virtual resolutions of $M$. A virtual resolution of a module $M$ is a free $\ZZ^r$-graded complex of $S$-modules $F_{\bullet}$ such that the corresponding complex $\tilde{F}_{\bullet}$ of locally free $\cO_{Y}$-modules is a resolution of the sheaf $\tilde{M}$ \cite[Definition 1.1]{BES20}. 
 
 \begin{problem}
 	Let $Y$ be a smooth projective toric variety with $S$ it's $\Pic(Y)$-graded Cox ring and $B$ its irrelevant ideal. Let $M$ be a $\Pic(Y)$-graded $S$-module. Does the set of (multigraded) Betti numbers of all virtual resolutions of $M$ determine the multigraded regularity of $M$? 
 \end{problem}
 
-This question feels somewhat speculative, as I do not have a strong feeling for whether or not I believe it to be true. However, NEDEDEDEDDE
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -833,38 +949,38 @@ This question feels somewhat speculative, as I do not have a strong feeling for 
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This project aims to establish a uniform framework for studying homological invariants across different geometric realizations of the same Cox ring. A remarkable feature of toric geometry, arising from the construction of a toric variety as s GIT quotient, $Y=(\CC^n\setminus \VV(B))/(\CC^{\times})^r$, is that multiple toric varieties can have the same Cox ring $S$, as a graded ring, with the delineation between the different toric varieties only being captured by each variety having a different irrelevant ideal. Fixing a $\ZZ^r$-graded polynomial ring $S=\CC[x_1,\ldots,x_n]$ is equivalent to fixing a fan $\Sigma$ in $\RR^n$. The possible toric varieties with $S$ as it's Cox ring is governed by the second fan, also called the GKZ fan. 
+This project aims to establish a uniform framework for studying homological invariants across different geometric realizations of the same Cox ring. A remarkable feature of toric geometry, arising from the construction of a toric variety as s GIT quotient, $Y=(\CC^n\setminus \VV(B))/(\CC^{\times})^r$, is that multiple toric varieties can have the same Cox ring $S$, as a graded ring, with the delineation between the different toric varieties only being captured by each variety having a different irrelevant ideal. Fixing a $\ZZ^r$-graded polynomial ring $S=\CC[x_1,\ldots,x_n]$ is equivalent to fixing a fan $\Sigma$ in $\RR^n$. The possible toric varieties with $S$ as its Cox ring is governed by the second fan, also called the GKZ fan. 
 
-Concretely the \juliette{ADDD} The choice of a chamber in $\Sigma_{\GKZ}$ can be thought of as specifying and of the following equivalent things: i) a toric variety $Y$ with Cox ring $S$, ii) an irrelevant ideal $B_{Y} \subset S$, iii) a stability condition \juliette{NNNEDED}. As described in \juliette{NDDD} the secondary fan also closely controls the birational geometry of a toric variety as when one moves between chambers the resulting toric varieties are related by birrational flips.  
+Concretely the \juliette{ADDD} The choice of a chamber in $\Sigma_{\GKZ}$ can be thought of as specifying and of the following equivalent things: i) a toric variety $Y$ with Cox ring $S$, ii) an irrelevant ideal $B_{Y} \subset S$, iii) a stability condition \juliette{NNNEDED}. As described in \juliette{NDDD} the secondary fan also closely controls the birational geometry of a toric variety as when one moves between chambers the resulting toric varieties are related by birational flips.  
 
-It is a developing theme that many homological properties of toric varieties depend primarily on the underlying graded ring $S$, rather than the specific geometric realization $Y$. In particular, it seems like one NEDEDED We propose a uniform framework for studying homological algebra across all such varieties.
+It is a developing theme that many homological properties of toric varieties depend primarily on the underlying graded ring $S$, rather than the specific geometric realization $Y$. In particular, it seems like one \juliette{ADD} We propose a uniform framework for studying homological algebra across all such varieties.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{Regularity on the $D_{\Cox}$ Category}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-A recent instantiation of these ideas is the work of \juliette{cite} showing that birational variant of King's conjecture, on the existence of full strong exceptional collections of line bundles, is true if one is willing to work on a certain unifying derived category called $D_{\Cox}(X)$, called the Cox category of $X$. Roughly speaking the Cox category of $X$ is the smallest derived category containing the derived category $D(\cX_i)$ for each toric stack $\cX_i$ corresponding to maximal chambers in the secondary fan of $X$. While $D_{\Cox}(X)$ may \emph{not} be the derived category of any stack, it does have many nice properites. In particular
+A recent instantiation of these ideas is the work of \cite{longLiveKing} showing that birational variant of King's conjecture, on the existence of full strong exceptional collections of line bundles, is true if one is willing to work on a certain unifying derived category called $D_{\Cox}(X)$, called the Cox category of $X$. Roughly speaking the Cox category of $X$ is the smallest derived category containing the derived category $D(\cX_i)$ for each toric stack $\cX_i$ corresponding to maximal chambers in the secondary fan of $X$. While $D_{\Cox}(X)$ may \emph{not} be the derived category of any stack, it does have many nice properties. In particular
 
  \begin{problem}
- 	Develop a theory of Castelunovo--Mumford regularity on the category $D_{\Cox}$ the restrict to the classical notion of regularity $Y_{i}$. 
+ 	Develop a theory of Castelnuovo--Mumford regularity on the category $D_{\Cox}$ the restrict to the classical notion of regularity $Y_{i}$. 
  \end{problem}
  
- One natural approach to developing such a theory is to note that $D_{\Cox}(X)$ can be realized as an explicit full subcategory of $D(\tilde{\cX})$ where $\tilde{\cX}$ is any smooth toric stack with proper birational morphisms to the $\cX_i$. One could thus, hope to using the notion of multigraded regularity on $\tilde{\cX}$ and restrict it approaitely to the $D_{\Cox}(X)$ subcategory. A main obstruction to this is the choice of such a $\tilde{\cX}$ is not unique, and thus, defining regularity in this way may depend on the choice of $\tilde{\cX}$. 
+ One natural approach to developing such a theory is to note that $D_{\Cox}(X)$ can be realized as an explicit full subcategory of $D(\tilde{\cX})$ where $\tilde{\cX}$ is any smooth toric stack with proper birational morphisms to the $\cX_i$. One could thus, hope to using the notion of multigraded regularity on $\tilde{\cX}$ and restrict it to the $D_{\Cox}(X)$ subcategory. A main obstruction to this is the choice of such a $\tilde{\cX}$ is not unique, and thus, defining regularity in this way may depend on the choice of $\tilde{\cX}$. 
  
-I am proposing to circumventing this by noting there is natural construction of one such $\tilde{\cX}$ provided in \juliette{CITE}. Roughly speaking it is achived by building a toric stack via a combinatorial construction on each cone of the secondary fan of $X$. I believe that the stack resulting from this construction, while not unique to $D_{\Cox}(X)$ does seem to have nice universality properties. ADDDDD. 
+I am proposing to circumventing this by noting there is natural construction of one such $\tilde{\cX}$ provided in \cite[Section 3]{longLiveKing}. Roughly speaking it is achieved by building a toric stack via a combinatorial construction on each cone of the secondary fan of $X$. I believe that the stack resulting from this construction, while not unique to $D_{\Cox}(X)$ does seem to have nice universality properties. \juliette{EXPAND}. 
  
  \begin{problem}
- 	Characterize the ``uniqueness'' or ``universality'' of the $\cX_{\GKZ}$ stack construction.
+ 	Characterize the universality of the $\cX_{\GKZ}$ stack construction.
  \end{problem}
  
- Proving a strong version of universality would provide a strong step towards defining regularity on $D_{\Cox}(X)$ via $D(\cX_{\GKZ})$ in a unique way.  As an effort in this direction, and with hopes to making expicit some of the steps of the construction provided in JULIETTE, I plan to implement the construction of the $\cX_{\GKZ}$ stack in \textit{Macaualay2}. 
+ Proving a strong version of universality would provide a strong step towards defining regularity on $D_{\Cox}(X)$ via $D(\cX_{\GKZ})$ in a unique way.  As an effort in this direction, and with hopes to making explicit some of the steps of the construction provided in \cite{longLiveKing}, I plan to implement the construction of the $\cX_{\GKZ}$ stack in \textit{Macaulay2}. 
  
 \begin{problem}
-	Implement the construction of the $\cX_{\GKZ}$ stack in the \textit{toricStacks} package being developed for \textit{Macaulay2} as part of \juliette{}
+	Implement the construction of the $\cX_{\GKZ}$ stack in the \textit{toricStacks} package being developed for \textit{Macaulay2} as part of Problem~\ref{prob:toric-stacks-m2},
 \end{problem}
  
- Work on this problem is currently on going with Maya Banks and John Cobb, and where have rough code that can compute $\cX_{\GKZ}$ in a narrow number of cases. We are working to expand its functionality. 
+ Work on this problem is  ongoing with Maya Banks and John Cobb. We have rough code that can compute $\cX_{\GKZ}$ in a narrow number of cases, and we  are working to expand its functionality. 
  
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{Homological Invariants and Wall Crossings}

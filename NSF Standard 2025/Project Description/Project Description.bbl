@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{FMtaP03}
+\begin{thebibliography}{GHvdP88}
 
 \bibitem[ABLS20]{ABLS20}
 Ayah Almousa, Juliette Bruce, Michael Loper, and Mahrud Sayrafi.
@@ -25,6 +25,12 @@ Anthony Bonato, Juliette Bruce, and Ron Buckmire.
 \newblock Spaces for all: the rise of {LGBTQ}+ mathematics conferences.
 \newblock {\em Notices Amer. Math. Soc.}, 68(6):998--1003, 2021.
 
+\bibitem[BBB{\etalchar{+}}24]{longLiveKing}
+Matthew~R. Ballard, Christine Berkesch, Michael~K. Brown, Lauren~Cranton
+  Heller, Daniel Erman, David Favero, Sheel Ganatra, Andrew Hanlon, and Jesse
+  Huang.
+\newblock King's conjecture and birational geometry, 2024.
+
 \bibitem[BBC23]{brandtBruceCorey23}
 Madeline Brandt, Juliette Bruce, and Daniel Corey.
 \newblock The virtual euler characteristic for binary matroids, 2023.
@@ -40,6 +46,11 @@ Juliette Bruce, Daniel Corey, Daniel Erman, Steve Goldstein, Robert~P. Laudone,
   and Jay Yang.
 \newblock Syzygies of {$\mathbb{P}^1\times\mathbb{P}^1$}: data and conjectures.
 \newblock {\em J. Algebra}, 593:589--621, 2022.
+
+\bibitem[BCS05]{borisovChenSmith05}
+Lev~A. Borisov, Linda Chen, and Gregory~G. Smith.
+\newblock The orbifold {C}how ring of toric {D}eligne-{M}umford stacks.
+\newblock {\em J. Amer. Math. Soc.}, 18(1):193--215, 2005.
 
 \bibitem[BE19]{bruceErman19}
 Juliette Bruce and Daniel Erman.
@@ -62,6 +73,11 @@ Aaron Bertram, Lawrence Ein, and Robert Lazarsfeld.
 \newblock Vanishing theorems, a theorem of {S}everi, and the equations defining
   projective varieties.
 \newblock {\em J. Amer. Math. Soc.}, 4(3):587--602, 1991.
+
+\bibitem[BES20]{BES20}
+Christine Berkesch, Daniel Erman, and Gregory~G. Smith.
+\newblock Virtual resolutions for a product of projective spaces.
+\newblock {\em Algebr. Geom.}, 7(4):460--481, 2020.
 
 \bibitem[BHS22]{bruceHellerSayrafi22}
 Juliette Bruce, Lauren~Cranton Heller, and Mahrud Sayrafi.
@@ -100,6 +116,17 @@ Alessandro Chiodo, David Eisenbud, Gavril Farkas, and Frank-Olaf Schreyer.
   modular variety over {$\overline{\mathcal{M}}_g$}.
 \newblock {\em Invent. Math.}, 194(1):73--118, 2013.
 
+\bibitem[CGM21]{CGM21}
+Renzo Cavalieri, Maria Gillespie, and Leonid Monin.
+\newblock Projective embeddings of {$\overline M_{0,n}$} and parking functions.
+\newblock {\em J. Combin. Theory Ser. A}, 182:Paper No. 105471, 30, 2021.
+
+\bibitem[CGP21]{CGP21}
+Melody Chan, S\o~ren Galatius, and Sam Payne.
+\newblock Tropical curves, graph complexes, and top weight cohomology of
+  {$\mathcal{M}_g$}.
+\newblock {\em J. Amer. Math. Soc.}, 34(2):565--594, 2021.
+
 \bibitem[CHT99]{CHT99}
 S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
 \newblock Asymptotic behaviour of the {C}astelnuovo-{M}umford regularity.
@@ -109,6 +136,11 @@ S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
 Anand Deopurkar.
 \newblock The canonical syzygy conjecture for ribbons.
 \newblock {\em Math. Z.}, 288(3-4):1157--1164, 2018.
+
+\bibitem[EEL16]{EEL16}
+Lawrence Ein, Daniel Erman, and Robert Lazarsfeld.
+\newblock A quick proof of nonvanishing for asymptotic syzygies.
+\newblock {\em Algebr. Geom.}, 3(2):211--222, 2016.
 
 \bibitem[EG84]{eisenbudGoto84}
 David Eisenbud and Shiro Goto.
@@ -148,6 +180,22 @@ Gavril Farkas, Mircea Musta\c~t\v a, and Mihnea Popa.
   conjecture for points on canonical curves.
 \newblock {\em Ann. Sci. \'Ecole Norm. Sup. (4)}, 36(4):553--581, 2003.
 
+\bibitem[GGL22]{GGL22}
+Maria Gillespie, Sean~T. Griffin, and Jake Levinson.
+\newblock A proof of a conjecture by monin and rana on equations defining
+  $\bar{M}_{0,n}$, 2022.
+
+\bibitem[GGL23]{GGL23}
+Maria Gillespie, Sean~T. Griffin, and Jake Levinson.
+\newblock Lazy tournaments and multidegrees of a projective embedding of
+  {$\overline M_{0,n}$}.
+\newblock {\em Comb. Theory}, 3(1):Paper No. 3, 26, 2023.
+
+\bibitem[GHvdP88]{GHvdP88}
+L.~Gerritzen, F.~Herrlich, and M.~van~der Put.
+\newblock Stable {$n$}-pointed trees of projective lines.
+\newblock {\em Nederl. Akad. Wetensch. Indag. Math.}, 50(2):131--163, 1988.
+
 \bibitem[Gre84]{green84-I}
 Mark~L. Green.
 \newblock Koszul cohomology and the geometry of projective varieties.
@@ -165,6 +213,16 @@ Samuel Grushevsky.
 Daniel~R. Grayson and Michael~E. Stillman.
 \newblock Macaulay2, a software system for research in algebraic geometry.
 \newblock Available at \url{http://www2.macaulay2.com}.
+
+\bibitem[GS15a]{toricStacks1}
+Anton Geraschenko and Matthew Satriano.
+\newblock Toric stacks {I}: {T}he theory of stacky fans.
+\newblock {\em Trans. Amer. Math. Soc.}, 367(2):1033--1071, 2015.
+
+\bibitem[GS15b]{toricStacks2}
+Anton Geraschenko and Matthew Satriano.
+\newblock Toric stacks {II}: {I}ntrinsic characterization of toric stacks.
+\newblock {\em Trans. Amer. Math. Soc.}, 367(2):1073--1094, 2015.
 
 \bibitem[Hai02]{hain02}
 Richard Hain.
@@ -189,6 +247,18 @@ Jun-ichi Igusa.
 \newblock On {S}iegel modular forms of genus two.
 \newblock {\em Amer. J. Math.}, 84:175--200, 1962.
 
+\bibitem[Kap93]{kapranov93}
+M.~M. Kapranov.
+\newblock Veronese curves and {G}rothendieck-{K}nudsen moduli space {$\overline
+  M_{0,n}$}.
+\newblock {\em J. Algebraic Geom.}, 2(2):239--262, 1993.
+
+\bibitem[Kee92]{keel92}
+Sean Keel.
+\newblock Intersection theory of moduli space of stable {$n$}-pointed curves of
+  genus zero.
+\newblock {\em Trans. Amer. Math. Soc.}, 330(2):545--574, 1992.
+
 \bibitem[Kem21]{kemeny21}
 Michael Kemeny.
 \newblock Universal secant bundles and syzygies of canonical curves.
@@ -199,15 +269,51 @@ Michael Kemeny.
 \newblock The rank of syzygies of canonical curves.
 \newblock {\em J. Reine Angew. Math.}, 810:97--138, 2024.
 
+\bibitem[KM09]{kerberMarkwig09}
+Michael Kerber and Hannah Markwig.
+\newblock Intersecting {P}si-classes on tropical {$\mathcal{M}_{0,n}$}.
+\newblock {\em Int. Math. Res. Not. IMRN}, (2):221--240, 2009.
+
+\bibitem[Knu83]{knudsen83}
+Finn~F. Knudsen.
+\newblock The projectivity of the moduli space of stable curves. {III}. {T}he
+  line bundles on {$M_{g,n}$}, and a proof of the projectivity of
+  {$\overline{M}_{g,n}$}\ in characteristic {$0$}.
+\newblock {\em Math. Scand.}, 52(2):200--212, 1983.
+
 \bibitem[Kod00]{Kodiyalam00}
 Vijay Kodiyalam.
 \newblock Asymptotic behaviour of {C}astelnuovo-{M}umford regularity.
 \newblock {\em Proc. Amer. Math. Soc.}, 128(2):407--411, 2000.
 
+\bibitem[KT09]{keelTevelev09}
+Sean Keel and Jenia Tevelev.
+\newblock Equations for {$\overline M_{0,n}$}.
+\newblock {\em Internat. J. Math.}, 20(9):1159--1184, 2009.
+
+\bibitem[MR17]{moninRana17}
+Leonid Monin and Julie Rana.
+\newblock Equations of {$\overline {\rm M}_{0,n}$}.
+\newblock In {\em Combinatorial algebraic geometry}, volume~80 of {\em Fields
+  Inst. Commun.}, pages 113--132. Fields Inst. Res. Math. Sci., Toronto, ON,
+  2017.
+
 \bibitem[MS04]{maclaganSmith04}
 Diane Maclagan and Gregory~G. Smith.
 \newblock Multigraded {C}astelnuovo-{M}umford regularity.
 \newblock {\em J. Reine Angew. Math.}, 571:179--212, 2004.
+
+\bibitem[MS13]{manin13}
+Yu.~I. Manin and M.~N. Smirnov.
+\newblock On the derived category of {$\overline M_{0,n}$}.
+\newblock {\em Izv. Ross. Akad. Nauk Ser. Mat.}, 77(3):93--108, 2013.
+
+\bibitem[Mum70]{mumford70}
+David Mumford.
+\newblock Varieties defined by quadratic equations.
+\newblock In {\em Questions on {A}lgebraic {V}arieties ({C}.{I}.{M}.{E}., {III}
+  {C}iclo, {V}arenna, 1969)}, Centro Internazionale Matematico Estivo
+  (C.I.M.E.), pages 29--100. Ed. Cremonese, Rome, 1970.
 
 \bibitem[Sch91]{schreyer91}
 Frank-Olaf Schreyer.
