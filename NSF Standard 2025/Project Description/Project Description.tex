@@ -511,7 +511,7 @@ where $a,b\in \CC$ and $\deg(x_{1})=4$, $\deg(x_{2})=1$, and $\deg(x_{3})=2$ \ci
 	Understand the syzygies of $R(\cX,\cL)$ where $\cX$ is a stacky curve and $\cL$ is a line bundle on $\cX$. 
 \end{goal}
 
-The rough heuristic in approaching this goal is two-fold: i) the syzygies of section rings of stacky curves should behave roughly like the syzygies of weighted log complete series on non-stacky curves, and ii) Stacky-ness should be thought of as increasing the positivity of line bundle. Justification for the first heuristic comes in the form of the following lemma
+The rough heuristic in approaching this goal is two-fold: i) the syzygies of section rings of stacky curves should behave roughly like the syzygies of weighted log complete series on non-stacky curves, and ii) Stacky-ness should be thought of as increasing the positivity of line bundle. Justification for the first heuristic comes in the form of the following lemma and the notion of weighted log incomplete series given in \cite{brownErman25}.
 
 \begin{lemma}
 	Let $\cX$ be a stacky curve with $\pi:\cX\to X$ its coarse space. If $\cL$ a line bundle on $\cX$ then there exists as weighted log incomplete series $W$ on $X$ such that $R(\cX;\cL)\cong \bigoplus_{d\in \ZZ} H^0(X, dW)$.
@@ -527,11 +527,13 @@ Justification for the second is more imprecise, however, for example, if $\cL$ i
 	\end{enumerate}
 \end{problem}
 
-Taken further the next natural question I would like to address is to understand what $N_p$ properties stacky curves satisfy. Building on the work of Green \cite{green84-I} and the second hueristic  .
-
+Brown and Erman recently introduced an analog of Green's $N_{p}$ conditions for varieties embedded in weighted projective space \cite[Definition 1.2]{brownErman25}. Given this I would like to address is to understand what $N_p$ properties stacky curves satisfy.
 \begin{problem}
 	Let $\cX$ be a stacky curve whose coarse space has genus 0 or 1. If $\cL$ is a line bundle on $\cX$ and $\deg(\cL)\gg0$, what $N_{p}$ conditions does $R(\cX; \cL)$ satisfy? Determine precise bounds on $\deg(\cL)$ guaranteeing $N_p$.
 \end{problem}
+
+Building on the work of Green \cite{green84-I} and the second heuristic above I expect that as $\deg(\cL)$ and number of stacky points grows $R(\cX; \cL)$ shol
+
 
 \begin{defn}
 \juliette{ADD KERNEL BUNDLES STUFFFF}
@@ -686,7 +688,7 @@ As discussed in Section~\ref{subsec:prior:homological-algebra-on-toric} toric va
 	We let $Y$ be a smooth projective toric variety coming from a fan $\Sigma \subset N_{\RR}$ with $\Pic(Y) \cong \ZZ^r$, We denote the $\Pic(Y)$-graded Cox ring of $Y$ by $S=\CC[x_1,\ldots,x_n]$ and let $B\subset S$ be the irrelevant ideal of $Y$. 
 \end{notation}
 
- Cox proved a beautiful correspondence between coherent sheaves on $Y$ and $\ZZ^r$-graded ($B$-saturated) modules over a $\ZZ^r$-graded polynomial ring $S=\CC[x_0,\ldots,x_n]$, which is known as the Cox ring of $Y$ \cite{cox95}. As discussed in Section~\ref{subsec:prior:homological-algebra-on-toric}, Macalagan and Smith, defined multigraded regularity for coherent sheaves on toric varieties or equivalently $\ZZ^r$-graded modules over the Cox ring $S$ (see Definition~\ref{def:mg-reg}). Just as in the classical standard graded setting regularity is a central invariant measuring the complexity of module $M$, however, in the multigraded setting there are a number of nuances and new phenomena. For example, $\reg(M)$ is not a single degree, but a region in $\Pic(Y)$ that does not necessarily a unique minimal element (see Figure~\ref{fig:example-of-reg}). This project aims to deepen our understanding of multigraded regularity, its asymptotic behavior, and its relationship to the structure of free resolutions and positivity. 
+ Cox proved a beautiful correspondence between coherent sheaves on $Y$ and $\ZZ^r$-graded ($B$-saturated) modules over a $\ZZ^r$-graded polynomial ring $S=\CC[x_0,\ldots,x_n]$, which is known as the Cox ring of $Y$ \cite{cox95}. As discussed in Section~\ref{subsec:prior:homological-algebra-on-toric}, Macalagan and Smith, defined multigraded regularity for coherent sheaves on toric varieties or equivalently $\ZZ^r$-graded modules over the Cox ring $S$ (see Definition~\ref{def:mg-reg}). Just as in the classical standard graded setting regularity is a central invariant measuring the complexity of module $M$, however, in the multigraded setting there are a number of nuances and new phenomena. For example, $\reg(M)$ is not a single degree, but a region in $\Pic(Y)$ that does not necessarily a unique minimal element (see Figure~\ref{fig:example-of-reg}). Further, $\reg(M)$  is not determined by the multigraded Betti numbers of $M$ \cite[Example 5.1]{bruceHellerSayrafi21}. This project aims to deepen our understanding of multigraded regularity, its asymptotic behavior, and its relationship to the structure of free resolutions and positivity. 
 
 
 
@@ -847,7 +849,7 @@ Beyond the asymptotics of $\reg(I^p)$ and $\reg(\cI^p)$ it would be useful to ha
  	Using Notation~\ref{not:toric} let $I\subset S$ be a $\ZZ^r$-graded ideal and $\cI \subset \cO_{Y}$ an ideal sheaf on $Y$: (1)  Bound the number of minimal generators of $\reg(I^p)$ as a function of $p$. (2)  Bound the number of minimal generators of $\reg(\cI^p)$ as a function of $p$.
 \end{problem}
 
-My hope in approaching Problem~\ref{prob:corners} is to.... \juliette{FILL IN}
+My hope for part (2) of Problem~\ref{prob:corners} is to refine the convergence in Conjecture~\ref{conj:reg-ideal-sheaves} to produce a lower bound on the number of minimal generators of $\reg(\cI^p)$ in terms of the number of lattice points ``near'' the Seshadri region of $\cI$ via Ehrhart theory.
 
  In a different direction, I would like to produce meaningful bounds on the regularity of the defining ideals of subvarieties of $Y$ in the vein of classical results like Gruson, Lazarsfeld, Peskine \cite{GLP83},  Bertram, Ein, Lazarsfeld \cite{BEL91}, and the Eisenbud--Goto conjecture \cite{eisenbudGoto84} (which was recently proven false \cite{MP18}). 
  	
@@ -855,13 +857,13 @@ My hope in approaching Problem~\ref{prob:corners} is to.... \juliette{FILL IN}
  	Using Notation~\ref{not:toric} let  $Z\subset Y$ be smooth subvariety. Bound the multigraded regularity of $I_{Z}$ and $S/I_{Z}$ in terms of $\codim(Z\subset Y)$ and the degrees of minimal generators of $I_{Z}$?
 \end{problem}
 
-I will approach Problem~\ref{prob:subvariety-bound} by beginning with understanding the regularity of $I_{Z}$ when $Z$ is a torus invariant subvariety of $Y$. In this setting there is a bijection between such subvarieties and cones in the fan defining $X$, and the defining equations of $Z$ are entirely determined by the combinatorics of the corresponding cone.
+I will approach Problem~\ref{prob:subvariety-bound} by beginning with understanding the regularity of $I_{Z}$ when $Z$ is a torus invariant subvariety of $Y$. In this setting there is a bijection between such subvarieties and cones in the fan defining $X$, and the defining equations of $Z$ are entirely determined by the combinatorics of the corresponding cone. 
 
 \begin{problem}\label{prob:torus-invariant-mg}
 	Compute the multigraded regularity of torus invariant subvarieties of $Y$ in terms of the combinatorics of the cone defining them.
 \end{problem}
 
-Despite being a relatively simple class of subvarieties it has been shown that their multigraded regularity behaves in nuanced ways \cite{bruceHellerSayrafi22}.  The goal for appraoching Problem~\ref{prob:torus-invariant-mg} is to compute both the higher cohomology of $\cI_Z$ and its Hilbert function using the combinatorics of the corresponding cone and working inductively on codimension.
+Despite being a relatively simple class of subvarieties it has been shown that their multigraded regularity behaves in nuanced ways \cite{bruceHellerSayrafi22}.  The goal for appraoching Problem~\ref{prob:torus-invariant-mg} is to compute both the higher cohomology of $\cI_Z$ and its Hilbert function using the combinatorics of the corresponding cone and working inductively on codimension. A degeneration argument and upper semicontinuity could then be used to extend answer to Problem~\ref{prob:torus-invariant-mg} to an answer for Problem~\ref{prob:subvariety-bound}.
 
 Lastly I will pursue the following focused project concerting the defining equations and regularity of the Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, which has rich geometry and combinatorics \cite{knudsen83,GHvdP88,keel92,kapranov93,kerberMarkwig09,manin13,CGM21,GGL23}. Tevelev and Tevelev constructed an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding given by $\partial \overline{M}_{0,n} + K_{\overline{M}_{0,n}}$ factors \cite{keelTevelev09}. Monin and Rana \cite{moninRana17} produced explicit equations, discussed below, which they conjectured defined the scheme theoretic image of $\Omega_{n}$. Gillepsie, Griffin, and Levinson recently proved this \cite{GGL22}. 
 
@@ -919,7 +921,7 @@ We will begin with the case of Hirzebruch surfaces $\cH_t=\PP(\cO_{\PP^1}\oplus 
 	Let $S$ be the $\ZZ^2$-graded Cox ring of the Hirzebruch surface $\cH_{t}$. If $M$ is a $\ZZ^2$-graded $S$-module then $M_{\geq d}$ has a $d$-linear resolution if and only if $d+\reg(S) \subset \reg(M)$. 
 \end{conjecture}
 
-\juliette{ADD HOW}
+The PI's work in \cite{bruceHellerSayrafi21} suggests a general approach to Problem~\ref{prob:eisenbud-goto} and Conjecture~\ref{conj:eg-hirzebruch}: i) Find an appropriate collection of line bundles $L_1,\ldots,L_t$ on $Y$ in which one can resolve the diagonal in $\Delta \subset Y\times Y$, ii) Understand the image of these line bundles under the Fourier-Mukai transform whose kernel is this resolution of $\Delta$, iii) Prove strong vanishing results for the higher cohomology of the given line bundles $L_i$ This allows us to construct an explicit resolution of $M_{\geq \dd}$ whose graded Betti numbers are given, roughy, by the cohomology of $\tilde{M}\otimes L_i$. Recent work by Hanlon, Hicks, and Lazarev has shown that one reasonable choice for the $L_i$'s is the Bondal-Thomsen collection as they give a nice explicit resolution of the diagonal of an arbitrary toric variety and generally have strong vanishing properties   \cite{HHL24,brownErman24-1}. Further, some work has gone into step (ii) for this collection \cite{CH25}. On Hirzebruch surfaces various collection has been studied even further \cite{brownSayrafi24}. 
  
  While not equivalent to being regular, characterizing when $M_{\geq\dd}$ has a linear resolution in the traditional sense is still of interest algebraically.
   

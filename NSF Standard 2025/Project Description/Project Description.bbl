@@ -67,6 +67,11 @@ Juliette Bruce and Daniel Erman.
   normalization.
 \newblock {\em Algebra Number Theory}, 13(9):2081--2102, 2019.
 
+\bibitem[BE24]{brownErman24-1}
+Michael~K. Brown and Daniel Erman.
+\newblock A short proof of the {H}anlon-{H}icks-{L}azarev theorem.
+\newblock {\em Forum Math. Sigma}, 12:Paper No. e56, 6, 2024.
+
 \bibitem[BEGY20]{BEGY20}
 Juliette Bruce, Daniel Erman, Steve Goldstein, and Jay Yang.
 \newblock Conjectures and computations about {V}eronese syzygies.
@@ -129,6 +134,12 @@ Juliette Bruce.
 \newblock Asymptotic syzygies for products of projective spaces.
 \newblock {\em J. Algebra}, 649:347--391, 2024.
 
+\bibitem[BS24]{brownSayrafi24}
+Michael~K. Brown and Mahrud Sayrafi.
+\newblock A short resolution of the diagonal for smooth projective toric
+  varieties of {P}icard rank 2.
+\newblock {\em Algebra Number Theory}, 18(10):1923--1943, 2024.
+
 \bibitem[CEFS13]{chiodoEFS13}
 Alessandro Chiodo, David Eisenbud, Gavril Farkas, and Frank-Olaf Schreyer.
 \newblock Syzygies of torsion bundles and the geometry of the level {$\ell$}
@@ -145,6 +156,11 @@ Melody Chan, S\o~ren Galatius, and Sam Payne.
 \newblock Tropical curves, graph complexes, and top weight cohomology of
   {$\mathcal{M}_g$}.
 \newblock {\em J. Amer. Math. Soc.}, 34(2):565--594, 2021.
+
+\bibitem[CH25]{CH25}
+Lauren Cranton~Heller.
+\newblock Explicit constructions of short virtual resolutions of truncations.
+\newblock {\em Bulletin of the London Mathematical Society}, September 2025.
 
 \bibitem[CHT99]{CHT99}
 S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
@@ -264,6 +280,11 @@ Anton Geraschenko and Matthew Satriano.
 Richard Hain.
 \newblock The rational cohomology ring of the moduli space of abelian 3-folds.
 \newblock {\em Math. Res. Lett.}, 9(4):473--491, 2002.
+
+\bibitem[HHL24]{HHL24}
+Andrew Hanlon, Jeff Hicks, and Oleg Lazarev.
+\newblock Resolutions of toric subvarieties by line bundles and applications.
+\newblock {\em Forum Math. Pi}, 12:Paper No. e24, 58, 2024.
 
 \bibitem[HL15]{DHL15}
 Daniel Halpern-Leistner.
