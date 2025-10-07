@@ -1,48 +1,48 @@
 This is BibTeX, Version 0.99d (TeX Live 2024)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Project Description.aux
-The style file: alpha.bst
+The style file: plain.bst
 Database file #1: sample.bib
 Warning--there's a number but no volume in kerberMarkwig09
 You've used 100 entries,
-            2543 wiz_defined-function locations,
-            1181 strings with 17948 characters,
-and the built_in function-call counts, 41405 in all, are:
-= -- 4274
-> -- 1787
-< -- 51
-+ -- 622
-- -- 590
-* -- 3230
-:= -- 6703
+            2118 wiz_defined-function locations,
+            1120 strings with 17502 characters,
+and the built_in function-call counts, 33836 in all, are:
+= -- 3463
+> -- 1338
+< -- 14
++ -- 558
+- -- 430
+* -- 2564
+:= -- 5544
 add.period$ -- 301
 call.type$ -- 100
-change.case$ -- 612
-chr.to.int$ -- 96
+change.case$ -- 512
+chr.to.int$ -- 0
 cite$ -- 101
-duplicate$ -- 1487
-empty$ -- 3076
-format.name$ -- 719
-if$ -- 8343
-int.to.chr$ -- 5
-int.to.str$ -- 0
+duplicate$ -- 1150
+empty$ -- 2776
+format.name$ -- 430
+if$ -- 6968
+int.to.chr$ -- 0
+int.to.str$ -- 100
 missing$ -- 94
-newline$ -- 499
-num.names$ -- 300
-pop$ -- 452
+newline$ -- 498
+num.names$ -- 200
+pop$ -- 415
 preamble$ -- 1
-purify$ -- 715
+purify$ -- 415
 quote$ -- 0
-skip$ -- 1250
+skip$ -- 799
 stack$ -- 0
-substring$ -- 3119
+substring$ -- 2919
 swap$ -- 168
-text.length$ -- 51
-text.prefix$ -- 35
+text.length$ -- 14
+text.prefix$ -- 0
 top$ -- 0
-type$ -- 788
+type$ -- 394
 warning$ -- 1
-while$ -- 436
-width$ -- 105
-write$ -- 1294
+while$ -- 373
+width$ -- 103
+write$ -- 1093
 (There was 1 warning)

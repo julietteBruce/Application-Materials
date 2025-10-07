@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  7 OCT 2025 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  7 OCT 2025 15:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1083,9 +1083,6 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 [1{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/l
 ocal/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \vbox (badness 2205) has occurred while \output is active []
-
-
 
 [2]
 
@@ -1113,19 +1110,17 @@ Underfull \vbox (badness 2205) has occurred while \output is active []
 
 [14]
 
-[15]
+[15] (./Project Description.bbl
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[16] (./Project Description.bbl
+
+
+[16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [17]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[18]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1135,14 +1130,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[19]
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[20])
+[19])
 
-[21] (./Project Description.aux)
+[20] (./Project Description.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1156,13 +1151,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 29726 strings out of 473201
- 573705 string characters out of 5716121
- 1107632 words of memory out of 5000000
- 52074 multiletter control sequences out of 15000+600000
- 578749 words of font info for 199 fonts, out of 8000000 for 9000
+ 29715 strings out of 473201
+ 573615 string characters out of 5716121
+ 1108515 words of memory out of 5000000
+ 52073 multiletter control sequences out of 15000+600000
+ 578209 words of font info for 194 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,18n,107p,1333b,1143s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,18n,107p,1305b,1143s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1185,10 +1180,10 @@ ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "Project Description.pdf" (21 pages, 376240 bytes).
+Output written on "Project Description.pdf" (20 pages, 374435 bytes).
 PDF statistics:
- 187 PDF objects out of 1000 (max. 8388607)
- 118 compressed objects within 2 object streams
+ 184 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  35341 words of extra memory for PDF output out of 35830 (max. 10000000)
 
