@@ -20,6 +20,11 @@ Marian Aprodu, Gavril Farkas, \c~Stefan Papadima, Claudiu Raicu, and Jerzy
 Eran Assaf, Madeline Brandt, Juliette Bruce, Melody Chan, and Raluca Vlad.
 \newblock Tropicalizations of locally symmetric varieties, 2025.
 
+\bibitem{BCHT13}
+Amir Bagheri, Marc Chardin, and Huy~T\`ai H\`a.
+\newblock The eventual shape of {B}etti tables of powers of ideals.
+\newblock {\em Math. Res. Lett.}, 20(6):1033--1046, 2013.
+
 \bibitem{ballardFaveroKatzarkov19}
 Matthew Ballard, David Favero, and Ludmil Katzarkov.
 \newblock Variation of geometric invariant theory quotients and derived
@@ -56,6 +61,10 @@ Anthony Bonato, Juliette Bruce, and Ron Buckmire.
 Lev~A. Borisov, Linda Chen, and Gregory~G. Smith.
 \newblock The orbifold {C}how ring of toric {D}eligne-{M}umford stacks.
 \newblock {\em J. Amer. Math. Soc.}, 18(1):193--215, 2005.
+
+\bibitem{braggOlssonWebb24}
+Daniel Bragg, Martin Olsson, and Rachel Webb.
+\newblock Ample vector bundles and moduli of tame stacks, 2024.
 
 \bibitem{BBBKR17}
 Madeline Brandt, Juliette Bruce, Taylor Brysiewicz, Robert Krone, and Elina
@@ -155,6 +164,11 @@ Melody Chan, S\o~ren Galatius, and Sam Payne.
   {$\mathcal{M}_g$}.
 \newblock {\em J. Amer. Math. Soc.}, 34(2):565--594, 2021.
 
+\bibitem{chandler97}
+Karen~A. Chandler.
+\newblock Regularity of the powers of an ideal.
+\newblock {\em Comm. Algebra}, 25(12):3773--3776, 1997.
+
 \bibitem{chiodoEFS13}
 Alessandro Chiodo, David Eisenbud, Gavril Farkas, and Frank-Olaf Schreyer.
 \newblock Syzygies of torsion bundles and the geometry of the level {$\ell$}
@@ -187,10 +201,26 @@ Lauren Cranton~Heller.
 \newblock Explicit constructions of short virtual resolutions of truncations.
 \newblock {\em Bulletin of the London Mathematical Society}, September 2025.
 
+\bibitem{cutkoskySrinivas93}
+S.~D. Cutkosky and V.~Srinivas.
+\newblock On a problem of {Z}ariski on dimensions of linear systems.
+\newblock {\em Ann. of Math. (2)}, 137(3):531--559, 1993.
+
+\bibitem{cutkosky00}
+S.~Dale Cutkosky.
+\newblock Irrational asymptotic behaviour of {C}astelnuovo-{M}umford
+  regularity.
+\newblock {\em J. Reine Angew. Math.}, 522:93--103, 2000.
+
 \bibitem{CHT99}
 S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
 \newblock Asymptotic behaviour of the {C}astelnuovo-{M}umford regularity.
 \newblock {\em Compositio Math.}, 118(3):243--261, 1999.
+
+\bibitem{CEL01}
+Steven~Dale Cutkosky, Lawrence Ein, and Robert Lazarsfeld.
+\newblock Positivity and complexity of ideal sheaves.
+\newblock {\em Math. Ann.}, 321(2):213--234, 2001.
 
 \bibitem{DB25}
 Caitlin~M. Davis and Boyana Martinova.
