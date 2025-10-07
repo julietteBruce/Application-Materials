@@ -532,20 +532,12 @@ Brown and Erman recently introduced an analog of Green's $N_{p}$ conditions for 
 	Let $\cX$ be a stacky curve whose coarse space has genus 0 or 1. If $\cL$ is a line bundle on $\cX$ and $\deg(\cL)\gg0$, what $N_{p}$ conditions does $R(\cX; \cL)$ satisfy? Determine precise bounds on $\deg(\cL)$ guaranteeing $N_p$.
 \end{problem}
 
-Building on the work of Green \cite{green84-I} and the second heuristic above I expect that as $\deg(\cL)$ and number of stacky points grows $R(\cX; \cL)$ shol
+Building on the work of Green \cite{green84-I} and the second heuristic above I expect that as $\deg(\cL)$ and number of stacky points grows $R(\cX; \cL)$ should satisfy higher $N_{p}$-conditions. 
 
 
 \begin{defn}
 \juliette{ADD KERNEL BUNDLES STUFFFF}
 \end{defn}
-
-\begin{example}[Weighted Projective Line]
-Consider the stacky curve $\cX = \cP(1,e)$, the weighted projective line. Its coarse space is $\PP^1$. It has one stacky point with stabilizer $\ZZ/e\ZZ$. The coordinate ring corresponding to the ample generator of $\Pic(\cX)$ is $R = \KK[x,y]$, where $\deg(x)=1$ and $\deg(y)=e$. This is not standard graded. If we embed $\cX$ by a high degree line bundle $\cL$, the resulting ring $R(\cX;\cL)$ will be a Veronese subring of $\KK[x,y]$. The syzygies must be studied relative to the weights of the variables.
-\end{example}
-
-We will begin with the genus 0 case (weighted projective lines). We will adapt techniques from Koszul cohomology and the theory of kernel bundles (e.g., the $M_L$-type bundles used in the proof of Green's theorem) to the stacky setting. The Riemann-Roch theorem for stacky curves relates $h^0(\cX, \cL)$ to $\deg(\cL)$ and the orders $e_i$. We expect the bounds on $\deg(\cL)$ to depend explicitly on the $e_i$, likely involving the least common multiple of the orders.
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Green's Conjecture for Canonical Stacky Curves} 
@@ -953,11 +945,22 @@ Finally, as noted above, my previous work shows that the multigraded Betti numbe
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This project aims to establish a uniform framework for studying homological invariants across different geometric realizations of the same Cox ring. A remarkable feature of toric geometry, arising from the construction of a toric variety as s GIT quotient, $Y=(\CC^n\setminus \VV(B))/(\CC^{\times})^r$, is that multiple toric varieties can have the same Cox ring $S$, as a graded ring, with the delineation between the different toric varieties only being captured by each variety having a different irrelevant ideal. Fixing a $\ZZ^r$-graded polynomial ring $S=\CC[x_1,\ldots,x_n]$ is equivalent to fixing a fan $\Sigma$ in $\RR^n$. The possible toric varieties with $S$ as its Cox ring is governed by the second fan, also called the GKZ fan. 
+This project aims to establish a uniform framework for studying homological invariants across different geometric realizations of the same Cox ring. A remarkable feature of toric geometry, arising from the construction of a toric variety as s GIT quotient, $Y=(\CC^n\setminus \VV(B))/(\CC^{\times})^r$, is that multiple toric varieties can have the same Cox ring $S$, as a graded ring, with the delineation between the different toric varieties being delineated by different irrelevant ideal $B\subset S$, which determines the unstable locus $\VV(B)$ removed before taking the quotient.
 
-Concretely the \juliette{ADDD} The choice of a chamber in $\Sigma_{\GKZ}$ can be thought of as specifying and of the following equivalent things: i) a toric variety $Y$ with Cox ring $S$, ii) an irrelevant ideal $B_{Y} \subset S$, iii) a stability condition \juliette{NNNEDED}. As described in \juliette{NDDD} the secondary fan also closely controls the birational geometry of a toric variety as when one moves between chambers the resulting toric varieties are related by birational flips.  
+While fixing the graded ring $S$ fixes the fundamental algebraic data, it does not determine a unique geometric realization. Instead, the landscape of all possible projective toric varieties that admit $S$ as their Cox ring is governed by the secondary fan or the Gelfand-Kapranov-Zelevinsky (GKZ) fan of $S$ \cite{CLS}. This fan arises naturally in the study of the Variation of Geometric Invariant Theory (VGIT) and provides a complete classification of the geometric outcomes arising from the data encoded in S.
 
-It is a developing theme that many homological properties of toric varieties depend primarily on the underlying graded ring $S$, rather than the specific geometric realization $Y$. In particular, it seems like one \juliette{ADD} We propose a uniform framework for studying homological algebra across all such varieties.
+This is an expanded version of the introduction section, filling in the gaps and providing more context and references.
+
+\section{Uniform Homological Algebra on Toric Varieties}\label{sec:uniform-homological-algebra-on-toric}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+This project aims to establish a uniform framework for studying homological invariants across different geometric realizations of the same Cox ring. A remarkable feature of toric geometry, arising from the construction of a toric variety as s GIT quotient, $Y=(\CC^n\setminus \VV(B))/(\CC^{\times})^r$, is that multiple toric varieties can have the same Cox ring $S$, with different toric varieties having $S$ as their Cox ring being delineated by the choice of irrelvant ideals $B\subset S$, which determines the semistable locus $\VV(B)$ removed before taking the quotient. While fixing the graded ring S fixes the fundamental algebraic data (the polynomial ring and the torus action), it does not determine a unique geometric realization. Instead, the landscape of all possible projective toric varieties that admit S as their Cox ring is governed by the secondary fan, or the Gelfand-Kapranov-Zelevinsky (GKZ) fan. 
+
+This fan arises naturally in the study of the Variation of Geometric Invariant Theory (VGIT) and provides a complete classification of the geometric outcomes arising from the data encoded in S. Concretely, the secondary fan $\Sigma_{\GKZ}$ parameterizes the choices of stability conditions required for the GIT construction. The choice of a maximal cone $\Gamma$, i.e., chamber in the $\Sigma_{\GKZ}$ fis equivalent to specifying any of the following data: i) a specific toric variety $Y_{\Gamma}$ with Cox ring $S$, ii) an irrelevant ideal $B_{\Gamma} \subset S$, iii) a GIT stability condition determining the semi-stable locus of the quotient. Furthermore, the secondary fan precisely controls the birational geometry of these varieties. As described in the foundational work on VGIT, when one moves between adjacent chambers by crossing a wall in the secondary fan, the stability condition changes, and the resulting toric varieties are related by explicit birational transformations, such as flips or flops.
+
+A developing theme is that many crucial homological properties of toric varieties depend primarily on the underlying graded ring $S$, rather than the specific variety $Y$ \cite{kawamata06,kawamata13,DHL15,ballardFaveroKatzarkov19}. In particular, any failure of the classical algebra-geometry dictionary on $\PP^n$ to generalize may suggest a need to create a algebra-geometry dictionary that takes into account all VGIT quotients for $S$. One does not see these complexities when working on projective space since the secondary fan of $\PP^n$ is a single point. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{Regularity on the $D_{\Cox}$ Category}
