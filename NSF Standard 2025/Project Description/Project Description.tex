@@ -586,10 +586,10 @@ This theorem shows that complexity is bounded by the stacky structure, but these
 To define a meaningful Clifford index, we need a robust theory of linear series on stacks; including studying the geometry of the stacky Brill-Noether loci $\cW_{d}^{r}(\cX)$, parameterizing line bundles of degree $d$ with at least $r+1$ independent sections, taking the stacky structure into account. The classical Brill-Noether theorem describes the expected dimension, irreducibility and smoothness of these loci for a general curve \cite{GH80,FL81,g82}.
 
 \begin{problem}\label{prob:brill}
-	If $\cX$ is a general stacky curve, is the stacky Brill-Noether locus $\cW_{d}^{r}(\cX)$ of expected dimension, smooth away from $\cW_{d}^{r+1}(\cX)$, and irreducible when positive dimensional?
+	For a general stacky curve $\cX$ compute the expected dimension of $\cW_{d}^{r}(\cX)$ in terms of the genus of the coarse space and the stacky invariants, and determine whether the stacky Brill-Noether locus is of the expected dimension, smooth away from $\cW_{d}^{r+1}(\cX)$ and irreducible when positive dimensional.
 \end{problem}
-
-Recent work refines classical Brill–Noether theory by tracking data analogous to stacky structure (e.g., specified ramification) \cite{p17,larson21,larson21-2,JR21,CPJ22,CPJ22-2,LLV25}. The resulting toolkit -- degenerations, limit linear series, and tropical/logarithmic method, etc. -- appears well suited to possible adaption to the stacky setting, and I am optimistic that these techniques can be adapted to address Problem~\ref{prob:brill}.
+	
+Recent work refines classical Brill–Noether theory by tracking data analogous to stacky structure (e.g., specified ramification) \cite{p17,larson21,larson21-2,JR21,CPJ22,CPJ22-2,LLV25}. The resulting toolkit -- degenerations, limit linear series, and tropical/logarithmic method, etc. -- appears well suited to possible adaption to the stacky setting, and I am optimistic that these techniques can be adapted to address Problem~\ref{prob:brill}. As an achievable first step (suitable for a graduate student project), we will resolve this question completely for stacky curves whose coarse space has genus 0 or 1 with at most 3 or 4 stacky points, where explicit computation of $\cW_{d}^{r}(\cX)$ is more tractable. 
 
 Another approach one may take towards Goal~\ref{goal:stackyGreens} is by studying the algebraic properties of the canonical rings $R(\cX;K_{\cX})$. As a step in this direction the PI and co-author has shown that just like classical curves \cite{VF93,PP97}, the canonical ring of stacky curves is generally Gorenstein.  
 
@@ -603,7 +603,7 @@ The proof of this lemma largely follows the classical argument, after passing to
 	Let $\cX$ be a stacky curve whose coarse space has genus $g$. For what $t$ does the canonical ring $R(\cX;K_{\cX})$ satisfy the $t$-Koszul property above.  
 \end{problem}
 
-At this time I have no strong guess for what the correct characterization of when $R(\cX;K_{\cX})$ is $t$-Koszul should be. However, in practice checking $t$-Koszul-ness can be done computationally in examples.
+At this time I have no strong guess for what the correct characterization of when $R(\cX;K_{\cX})$ is $t$-Koszul should be. However, in exaplace checking $t$-Koszul-ness can be done computationally.
 
 The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cite{schreyer91} to show the existence of a Gr\"{o}bner basis for the canonical ring of a stacky curve whose elements have certain degrees. Voight and Zureick-Brown do not explicitly construct such Gr\"{o}bner bases, however, this should be possible for simple stacky curves.  A starting point towards Goal~\ref{goal:stackyGreens} is to make Voight and Zureick-Brown's arguments explicit, and then use a computer algebra system like Macaulay2 to compute the minimal graded free resolutions for many examples.  
 
@@ -628,9 +628,7 @@ The approach of using large-scale computations to find conjectures concerning sy
 \subsection{Asymptotic Syzygies of Weighted Projective Stacks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The study of asymptotic syzygies investigates the behavior of Betti numbers $\beta_{p,q}(X, L_d)$ as the positivity of the embedding line bundle $L_d$ grows. Ein and Lazarsfeld showed that for a smooth projective variety $X$, the shape of the Betti table stabilizes as $d\to\infty$. They introduced the invariant $\rho_{q}(X; L_d)$, measuring the density of non-zero Betti numbers in the $q$-th strand, and proved that the limit $\lim_{d\to\infty} \rho_{q}(X; L_d)$ exists.
-
-We propose to generalize this theory to smooth DM stacks. Toric stacks, including weighted projective stacks, provide a natural setting for this investigation.
+The study of asymptotic syzygies investigates the behavior of Betti numbers $\beta_{p,q}(X, L_d)$ as the positivity of the embedding line bundle $L_d$ grows. Ein and Lazarsfeld showed that for a smooth projective variety $X$, the shape of the Betti table stabilizes as $d\to\infty$ (see Section~\ref{subsec:asymptic-prior}). I propose to generalize this theory to smooth DM stacks. Toric stacks, including weighted projective stacks, provide a natural setting for this investigation.
 
 \begin{problem}\label{prob:asym-stacks}
 Let $\cX$ be a smooth toric DM stack, $\dim \cX \geq2$, and fix an index $1\leq q \leq \dim \cX$. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample compute the limit (if it exists):
@@ -639,7 +637,7 @@ Let $\cX$ be a smooth toric DM stack, $\dim \cX \geq2$, and fix an index $1\leq 
 \]
 \end{problem}
 
-We will begin by focusing on specific examples, such as weighted projective planes. Let $\cP(a,b,c)$ be the quotient stack $(\CC^{3}\setminus \{0\})/\CC^{\times}$ where $\CC^{\times}$ acts by $\lambda\cdot (x,y,z)=(\lambda^a x, \lambda^b y \lambda^c z)$. The coarse space of $\cP(a,b,c)$ is the usual weighted projective space $\PP(a,b,c)$.
+We will begin by focusing on specific examples, such as weighted projective planes. Let $\cP(a,b,c)$ be the quotient stack $(\CC^{3}\setminus \{0\})/\CC^{\times}$ where $\CC^{\times}$ acts by $\lambda\cdot (x,y,z)=(\lambda^a x, \lambda^b y,\lambda^c z)$. The coarse space of $\cP(a,b,c)$ is the usual weighted projective space $\PP(a,b,c)$.
 
 
 \begin{problem}\label{prob:projective-plan-np}
@@ -652,7 +650,7 @@ The stack $\cP(1,1,a)$ has a single stacky point with stabilizer $\ZZ/a\ZZ$. Its
 \subsection{Computations with Toric Stacks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While a general framework is out of reach,  toric stacks are tractable: their combinatorics is well developed,  they correspond to \emph{stacky fans} -- a fan $\Sigma \subset N_{\RR}$ and a lattice map $\beta:N\to L$ -- that makes computations feasible \cite{toricStacks1,toricStacks2,borisovChenSmith05}. Despite this, the PI is not aware of an implementation for working with them. Given the success of the \textit{NormalToricVarieties} package in \textit{Macaulay2}, a toric-stacks package would benefit both this project and the community.
+The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While a general framework is out of reach,  toric stacks are tractable: their combinatorics is well developed,  they correspond to \emph{stacky fans} -- a fan $\Sigma \subset N_{\RR}$ and a lattice map $\beta:N\to L$ -- that makes computations feasible \cite{toricStacks1,toricStacks2,borisovChenSmith05}. I am not aware of an implementation for working with them. Given the success of the \textit{NormalToricVarieties} package, a \textit{toricStacks} package would benefit both this project and the community.
 
 
 \begin{problem}\label{prob:toric-stacks-m2}
@@ -770,7 +768,7 @@ We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves
     \draw[-,  dashed] (0,3)--(7,0);
 }
 
-\begin{tikzpicture}[scale=.3]
+\begin{tikzpicture}[scale=.28]
  % \node at (2,7) (a) {\scriptsize $A_1$};
   \path[fill=PineGreen!45] (7, 0)--(7, 3)--(0, 3)--(0,7)--(9,7)--(9,0)--(7,0);
   \makegrid
@@ -783,7 +781,7 @@ We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves
   \fill[TealBlue,fill=PineGreen] (0,3) circle (5pt);
       \node at (5,4.55) (a) {\scriptsize $\frac{\reg(\cI)_{\RR}}{1}$};
 \end{tikzpicture}\quad
-\begin{tikzpicture}[scale=.3]
+\begin{tikzpicture}[scale=.28]
  % \node at (2,7) (a) {\scriptsize $A_1$};
   \path[fill=PineGreen!45] (7,0)--(7,1)--(4.66667,1)--(4.66667,2)--(2.33333,2)--(2.33333,3)--(0,3)--(0,7)--(9,7)--(9,0)--(7,0);
   \makegrid
@@ -802,7 +800,7 @@ We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tikzpicture}[scale=.3]
+\begin{tikzpicture}[scale=.28]
  % \node at (2,7) (a) {\scriptsize $A_1$};
   \path[fill=PineGreen!45] (7,0)--(7,.6)--(5.6,.6)--(5.6,1.2)--(4.2,1.2)--(4.2,1.8)--(2.8,1.8)--(2.8
       ,2.4)--(1.4,2.4)--(1.4,3)--(0,3)--(0,7)--(9,7)--(9,0)--(7,0);
@@ -822,7 +820,7 @@ We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves
 
       \node at (5,4.55) (a) {\scriptsize $\frac{\reg(\cI^5)_{\RR}}{5}$};
 \end{tikzpicture}\quad
-\begin{tikzpicture}[scale=.3]
+\begin{tikzpicture}[scale=.28]
  % \node at (2,7) (a) {\scriptsize $A_1$};
   \path[fill=MidnightBlue!45]  (0,3)--(7,0)--(9,0)--(9,7)--(0,7)--(0,3);
   \makegrid
@@ -852,7 +850,7 @@ Beyond the asymptotics of $\reg(I^p)$ and $\reg(\cI^p)$ it would be useful to ha
 
 My hope for part (2) of Problem~\ref{prob:corners} is to refine the convergence in Conjecture~\ref{conj:reg-ideal-sheaves} to produce a lower bound on the number of minimal generators of $\reg(\cI^p)$ in terms of the number of lattice points ``near'' the Seshadri region of $\cI$ via Ehrhart theory.
 
- In a different direction, I will prove meaningful bounds on the regularity of the defining ideals of subvarieties of $Y$ in the vein of classical results like Gruson, Lazarsfeld, Peskine \cite{GLP83},  Bertram, Ein, Lazarsfeld \cite{BEL91}, and the Eisenbud--Goto conjecture \cite{eisenbudGoto84} )(recently shown false \cite{MP18}). 
+ In a different direction, I will prove meaningful bounds on the regularity of the defining ideals of subvarieties of $Y$ in the vein of classical results like Gruson, Lazarsfeld, Peskine \cite{GLP83},  Bertram, Ein, Lazarsfeld \cite{BEL91}, and the Eisenbud--Goto conjecture \cite{eisenbudGoto84} (recently shown false \cite{MP18}). 
  	
  \begin{problem}\label{prob:subvariety-bound}
  	Using Notation~\ref{not:toric} let  $Z\subset Y$ be smooth subvariety. Bound the multigraded regularity of $I_{Z}$ and $S/I_{Z}$ in terms of $\codim(Z\subset Y)$ and the degrees of minimal generators of $I_{Z}$?
@@ -972,7 +970,7 @@ The space of all such GIT models is controlled by the secondary (GKZ) fan $\Sigm
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{tikzpicture}[scale=.35]
+\begin{tikzpicture}[scale=.33]
   \path[fill=blue!25] (6,0)--(0,0)--(0,6)--(6,6);
   \path[fill=green!25] (0,6)--(0,0)--(-6,2)--(-6,6);
   \makegrid
@@ -993,7 +991,7 @@ Consider the case of the Hirzebruch surface $\cH_3$. Here the Cox ring is $S=\CC
 
 \end{example}
 
-A developing theme is that many homological properties of toric varieties depend primarily on the graded ring $S$ rather than on a specific model $Y$\cite{kawamata06,kawamata13,DHL15,ballardFaveroKatzarkov19, HHL24, longLiveKing}. Thus, where the classical algebra–geometry dictionary on $\PP^n$ fails to generalize, it suggests the need for a dictionary that simultaneously accounts for all VGIT quotients of a fixed ring $S$. These issues are invisible on projective space because the secondary fan of $\PP^n$ consists of a single chamber. This project aims to establish a uniform framework for studying homological invariants across different geometric realizations of the same Cox ring.
+A developing theme is that many homological properties of toric varieties depend primarily on the graded ring $S$ rather than on a specific model $Y$\cite{kawamata06,kawamata13,DHL15,ballardFaveroKatzarkov19, HHL24, longLiveKing}. Thus, where the classical algebra–geometry dictionary on $\PP^n$ fails to generalize, it suggests the need for a dictionary that simultaneously accounts for all VGIT quotients of a fixed ring $S$. These issues are invisible on $|\PP^n$ because the secondary fan of $\PP^n$ has a single chamber. This project aims to establish a uniform framework for studying homological invariants across different realizations of the same Cox ring.
 
 
 
@@ -1009,9 +1007,7 @@ A recent instantiation of these ideas is the work of \cite{longLiveKing} showing
  	Develop a theory of Castelnuovo--Mumford regularity on the category $D_{\Cox}$ that restricts to multigraded regularity on each $Y_{i}$. 
  \end{problem}
  
- One natural approach to developing such a theory is to note that $D_{\Cox}(Y)$ can be realized as an explicit full subcategory of $D(\tilde{\cY})$ where $\tilde{\cY}$ is any smooth toric stack with proper birational morphisms to the $\cY_i$. One could thus, hope to using the notion of multigraded regularity on $\tilde{\cY}$ and restrict it to the $D_{\Cox}(Y)$ subcategory. A main obstruction is that the choice of $\tilde{\cY}$ is not unique, and thus, defining regularity in this way may depend on the choice of $\tilde{\cY}$. 
- 
-I hope to circumventing this by showing that there is in a sense a best choice for $\tilde{\cY}$. This is the toric stack $\cY_{\GKZ}$ constructed in \cite[Section 3]{longLiveKing} by gluing the stack corresponding to each camber of $\Sigma_{\GKZ}$ in a precise way. While not unique to $D_{\Cox}(Y)$ this construction of a $\tilde{\cY}$ should be universal in some sense that seems missing from \cite[Section 3]{longLiveKing}.
+ One natural approach to developing such a theory is to note that $D_{\Cox}(Y)$ can be realized as an explicit full subcategory of $D(\tilde{\cY})$ where $\tilde{\cY}$ is any smooth toric stack with proper birational morphisms to the $\cY_i$. One could thus, hope to using the notion of multigraded regularity on $\tilde{\cY}$ and restrict it to the $D_{\Cox}(Y)$ subcategory. A main obstruction is that the choice of $\tilde{\cY}$ is not unique, and thus, defining regularity in this way may depend on the choice of $\tilde{\cY}$. I hope to circumventing this by showing that there is, in a sense, a best choice for $\tilde{\cY}$; namely the toric stack $\cY_{\GKZ}$ constructed in \cite[Section 3]{longLiveKing} by gluing the stack corresponding to each camber of $\Sigma_{\GKZ}$ While not unique to $D_{\Cox}(Y)$ this construction of a $\tilde{\cY}$ should be universal in some sense that seems missing from \cite[Section 3]{longLiveKing}.
 %\begin{example}
 %Continuing the running example of the Hirzebruch surface $\cH_3$ began in Example~\ref{exm:hirzebruch} and Figure~\ref{fig:example-of-secondary}; one obtains the stack $\tilde{\cX}$ in this case by gluing $\cH_3$ and $\cP(1,1,3)$, as stacks, along the variety $\PP(1,1,3)$. (See \cite[Example~3.1]{longLiveKing}).
 %\end{example} 
@@ -1062,11 +1058,11 @@ Proving these would establish that the homological complexity does not change ar
 
 \subsection{Organizing} In addition to the 10+ conferences noted in Section~\ref{subsubsec:prior-organizing}, since starting at Dartmouth in 2024 I organized two algebraic geometry conferences: \textit{AGNES} (150 participants) and \textit{BATMOBILE} (50 participants). I am organizing this year's \textit{BATMOBILE}, to occur at Amherst College in November 2025, highlighting recent work in combinatorial algebraic geometry and commutative algebra. I am preparing a BIRS proposal titled \textit{The Geometry of Syzygies: Past \& Future} and plan to organize the next \textit{Gems of Commutative Algebra} at Dartmouth in Winter 2027 to promote community among the next generation of researchers; if successful, I will write a short Notices of the AMS article on these efforts and how to organize similar conferences amid current logistical hurdles. I am an organizer of Dartmouth's \textit{Algebra \& Number Theory} seminar. 
 
-\subsection{Campus Community.} In an effort to promote community among math majors on Dartmouth's campus, I serve as the faculty advisor to the college's \textit{AWM Student Chapter} and  am also working with the campus's \textit{oSTEM} chapter to broaden participation in STEM. Beginning in Fall 2025 I am organizing a graduate student seminar \textit{Unwritten Rules} providing professional development to graduate students facing additional career challenges.
+\subsection{Campus Community.} In an effort to promote community among math majors on Dartmouth's campus, I serve as the faculty advisor to the college's \textit{AWM Student Chapter} and  am also working with the campus's \textit{oSTEM} chapter to broaden participation in STEM. Beginning in Fall 2025 I am organizing a graduate student seminar \textit{Unwritten Rules} providing professional development to graduate students in the department facing additional career challenges.
 
 \subsection{ National \& International Advocacy.} I have worked with the \textit{AWM} Executive Committee to expand support for broader groups of mathematicians and plan to continue this effort. From Winter 2023 to Spring 2025 I served on SLMath's  \textit{Committee on Women in Mathematics} until its dissolution. I have since agreed to serve on two \textit{AMS} committees to promote mathematics and the community. I hope to resume work with \textit{Spectra}, where I previously served as inaugural president.
 
-\subsection{Mentoring.} I am mentoring two graduate students, Bailee Z. (Michigan) and Jacob B. (KSU), on a tropical geometry project begun at MREG 2023; a preprint is expected soon. Since Fall 2024, I’ve mentored two undergraduates: Joanna S. (summer algebraic geometry reading) and Lisa S. (exploring math graduate school). Together with Asher Auel I am co-advising one graduate student, Will D., working on using free resolutions of points on surfaces to study the geometry of the moduli of spin curves. I am pre-advising three students (Allison T., Alex M., Aidan H.) interested in combinatorics/algebra. With these students I am beginning the development of a reading course in algebraic geometry aimed at increasing retention among students who are often pushed away from the field. I hope to make the notes from this course, which include both exercises in algebraic geometry and community building, available on my website. I expect to become the advisor for at least one of these students.  I’ve also agreed to lead an undergraduate summer research project at \textit{Count Me In} (organized in part by Milena Hering and Diane Maclagan).
+\subsection{Mentoring.} I am mentoring two graduate students, Bailee Z. (Michigan) and Jacob B. (KSU), on a tropical geometry project begun at MREG 2023; a preprint is expected soon. Since Fall 2024, I’ve mentored two undergraduates: Joanna S. (algebra reading course) and Lisa S. (exploring math graduate school). Together with Asher Auel I am co-advising one graduate student, Will D., working on using free resolutions of points on surfaces to study the geometry of the moduli of spin curves. I am pre-advising three students (Allison T., Alex M., Aidan H.) interested in combinatorics/algebra. With these students I am developing a reading course in algebraic geometry aimed at increasing retention among students who are often pushed away from the field, by taking a humanistic approach, combining active learning, exercises in algebraic geometry, and approaches to community building. I will make the notes I am writing for for this available on my website. I expect to become the advisor for at least one of these students.  I’ve also agreed to lead an undergraduate summer research project at \textit{Count Me In} (organized in part by Milena Hering and Diane Maclagan).
 
 
 \newpage

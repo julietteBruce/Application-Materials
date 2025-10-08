@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  7 OCT 2025 20:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.2)  7 OCT 2025 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1145,11 +1145,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 29721 strings out of 473201
- 573759 string characters out of 5716121
- 1108690 words of memory out of 5000000
+ 29717 strings out of 473201
+ 573725 string characters out of 5716121
+ 1108691 words of memory out of 5000000
  52089 multiletter control sequences out of 15000+600000
- 577909 words of font info for 189 fonts, out of 8000000 for 9000
+ 577693 words of font info for 187 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  102i,18n,107p,1296b,1143s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -1174,7 +1174,7 @@ ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texl
 ive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/t
 exlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "Project Description.pdf" (20 pages, 380194 bytes).
+Output written on "Project Description.pdf" (20 pages, 380175 bytes).
 PDF statistics:
  184 PDF objects out of 1000 (max. 8388607)
  116 compressed objects within 2 object streams
