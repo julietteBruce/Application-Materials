@@ -539,7 +539,7 @@ Brown and Erman recently introduced an analog of Green's $N_{p}$ conditions for 
 	Let $\cX$ be a stacky curve whose coarse space has genus 0 or 1. If $\cL$ is a line bundle on $\cX$ and $\deg(\cL)\gg0$, what $N_{p}$ conditions does $R(\cX; \cL)$ satisfy? Determine precise bounds on $\deg(\cL)$ guaranteeing $N_p$.
 \end{problem}
 
-We conjecture that $R(\cX; \cL)$ satisfies higher $N_{p}$ conditions that grow roughly linearly with $\deg(\cL)$. In ongoing work with Maya Banks and Christopher Manon, we are generalizing Green's kernel bundle techniques \cite{green84-I} to prove this and resolve Problem~\ref{prob:gen01-np}. We have successfully constructed a multigraded generalization of these bundles whose cohomology computes the multigraded Betti numbers of $R(\cX; \cL)$. Our current objective is to prove the necessary vanishing theorems for these bundles, which would establish the conjecture.
+We conjecture that $R(\cX; \cL)$ satisfies higher $N_{p}$ conditions that grow roughly linearly with $\deg(\cL)$. In ongoing work with Maya Banks and Christopher Manon, we are generalizing Green's kernel bundle techniques \cite{green84-I} to prove this and resolve Problem~\ref{prob:gen01-np}. We have successfully constructed a multigraded generalization of these bundles whose cohomology computes the multigraded Betti numbers of $R(\cX; \cL)$. Our current objective is to prove the necessary vanishing theorems for these bundles, which would establish the conjecture; even just under the assumptions the the coarse space of $\cX$ has genus 0 or 1. 
 
 
 
@@ -631,9 +631,9 @@ The approach of using large-scale computations to find conjectures concerning sy
 The study of asymptotic syzygies investigates the behavior of Betti numbers $\beta_{p,q}(X, L_d)$ as the positivity of the embedding line bundle $L_d$ grows. Ein and Lazarsfeld showed that for a smooth projective variety $X$, the shape of the Betti table stabilizes as $d\to\infty$ (see Section~\ref{subsec:asymptic-prior}). I propose to generalize this theory to smooth DM stacks. Toric stacks, including weighted projective stacks, provide a natural setting for this investigation.
 
 \begin{problem}\label{prob:asym-stacks}
-Let $\cX$ be a smooth toric DM stack, $\dim \cX \geq2$, and fix an index $1\leq q \leq \dim \cX$. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample compute the limit (if it exists):
+Let $\cX$ be a smooth toric DM stack, $\dim \cX \geq2$, and fix an index $1\leq q \leq \dim \cX$. If $(\cL_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $\cL_{d+1}-\cL_{d}$ is constant and ample compute the limit (if it exists):
 \[
-\lim_{d\to\infty} \rho_{q}\left(\cX; L_d\right) = \lim_{d\to\infty} \frac{\#\left\{p\in\NN \; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{n_{d}}.
+\lim_{d\to\infty} \rho_{q}\left(\cX; \cL_d\right) = \lim_{d\to\infty} \frac{\#\left\{p\in\NN \; \big| \; \beta_{p,p+q}\left(\cX,\cL_{d}\right)\neq0\right\}}{n_{d}}.
 \]
 \end{problem}
 
