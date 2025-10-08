@@ -280,11 +280,11 @@ Of the 14 new papers the PI posted to the arXiv during these periods of support 
 \subsection{Asymptotic Syzygies}\label{subsec:asymptic-prior}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Broadly, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. For a smooth projective variety $X\subset \PP^{n_{d}}$ embedded by a very ample line bundle $L_{d}$, following \cite{ermanYang18}, set,
+Broadly, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. For a smooth projective variety $X\subset \PP^{n_{d}}$ embedded by a very ample line bundle $L_{d}$; following \cite{ermanYang18}, set,
 \begin{align*}
 \rho_q\left(X,L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\NN |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{n_{d}},
 \end{align*}
-which is the percentage of non-zero syzygies appearing in a row $q$ of the Betti table \cite[Theorem~1.1]{eisenbud05}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \NN}$. In this language, Green's work on the syzygies of high degree curves can be phrased as follows.
+which is the percentage of non-zero syzygies appearing in row $q$ of the Betti table \cite[Theorem~1.1]{eisenbud05}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \NN}$. In this language, Green's work on the syzygies of high degree curves can be phrased as follows.
 \begin{theorem}\cite{green84-I}
 Let $X\subset \PP^n$ be a smooth projective curve. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then $\lim_{d\to \infty} \rho_{2}\left(X;L_{d}\right) = 0$.
 \end{theorem}
@@ -295,7 +295,7 @@ Put differently, asymptotically the syzygies of curves are as simple as possible
 Let $X\subset \PP^n$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq \dim X$. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample then $\lim_{d\to\infty} \rho_{q}\left(X; L_d\right) = 1$.
 \end{theorem}
 
-My work weakens the ample-growth hypothesis to semi-ample growth, recall a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$ (e.g.  $\cO(1,0)$ on $\PP^{n}\times \PP^{m}$). I established the following asymptotic nonvanishing result for $PP^{n}\times\PP^{m}$ embedded by $\cO(d_{1},d_{2})$. 
+My work weakens the ample-growth hypothesis to semi-ample growth. Recall that a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$ (e.g.  $\cO(1,0)$ on $\PP^{n}\times \PP^{m}$). I established the following asymptotic nonvanishing result for $PP^{n}\times\PP^{m}$ embedded by $\cO(d_{1},d_{2})$. 
 
 \begin{theorem}\cite[Corollary~B]{bruce24}\label{thm:bruce-semiample}
 Let $X=\PP^{n}\times\PP^{m}$ and fix an index $1\leq q \leq n+m$. There exist constants $C_{i,j}$ and $D_{i,j}$ such that
@@ -315,13 +315,13 @@ If both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\PP^{n}\times
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The Castelnuovo–Mumford Regularity of a projective variety $X\subset \PP^{r}$ is a measure of the complexity of $X$ given in terms of the vanishing of certain cohomology groups of $X$. Roughly speaking one should think about Castelnuovo--Mumford regularity as being a numerical measure of geometric complexity. Eisenbud and Goto showed that regularity is also closely connected to interesting homological properties.
+The Castelnuovo--Mumford Regularity of a projective variety $X\subset \PP^{r}$ is a measure of the complexity of $X$ given in terms of the vanishing of certain cohomology groups of $X$. Roughly speaking one should think about Castelnuovo--Mumford regularity as being a numerical measure of geometric complexity. Eisenbud and Goto showed that regularity is closely connected to interesting homological properties.
 
 \begin{theorem}\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
-Let $\cF$ be a coherent sheaf on $\PP^{n}$ and $M=\bigoplus_{e\in\ZZ} H^0(\PP^{r},\cF(e))$ the corresponding section module. The following are equivalent: (1) $M$ is $d$-regular; (2) $\beta_{p,q}(M)=0$ for all $p\geq0$ and $q>d+i$; (3) $M_{\geq d}$ has a linear resolution. 
+Let $\cF$ be a coherent sheaf on $\PP^{n}$ and $M=\bigoplus_{e\in\ZZ} H^0(\PP^{n},\cF(e))$ the corresponding section module. The following are equivalent: (1) $M$ is $d$-regular; (2) $\beta_{p,q}(M)=0$ for all $p\geq0$ and $q>d+i$; (3) $M_{\geq d}$ has a linear resolution. 
 \end{theorem}
 
-A toric variety $Y$ is a ``nice'' compactification of a torus, which under minor hypotheses, can be written as a quotient $Y=[(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r]$ where $\VV(B)$ is \emph{irrelevant ideal} of $Y$; for $Y\cong \PP^n$ the irrelevant ideal $B=\langle x_0,\ldots,x_n\rangle$. Cox proved a beautiful correspondence between coherent sheaves on $Y$ and $\ZZ^r$-graded ($B$-saturated) modules over a $\ZZ^r$-graded polynomial ring $S=\CC[x_0,\ldots,x_n]$, which is known as the Cox ring of $Y$ \cite{cox95}. This yields a rich dictionary between \emph{multigraded} homological algebra over $S$ and the geometry of $Y$. Maclagan and Smith defined multigraded Castelnuovo--Mumford regularity on toric varieties in terms of the vanishing of cohomology groups,  Let $Y$ be a smooth projective toric variety so that $\Pic(Y)\cong \ZZ^r$ and the nef cone of $Y$  is a full-dimensional cone of $\Pic(Y)_{\RR}$. For $\vv \in \ZZ^r$ set $|\vv|\coloneqq v_1+v_2+\cdots v_r$. 
+A toric variety $Y$ is a well-behaved compactification of a torus, which under minor hypotheses, can be written as a quotient $Y=[(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r]$ where $B$ is the \emph{irrelevant ideal} of $Y$; for $Y\cong \PP^n$ the irrelevant ideal $B=\langle x_0,\ldots,x_n\rangle$. Cox proved a beautiful correspondence between coherent sheaves on $Y$ and $\ZZ^r$-graded ($B$-saturated) modules over a $\ZZ^r$-graded polynomial ring $S=\CC[x_0,\ldots,x_n]$, which is known as the Cox ring of $Y$ \cite{cox95}. This yields a rich dictionary between \emph{multigraded} homological algebra over $S$ and the geometry of $Y$. Maclagan and Smith defined multigraded Castelnuovo--Mumford regularity on toric varieties in terms of the vanishing of cohomology groups,  Let $Y$ be a smooth projective toric variety so that $\Pic(Y)\cong \ZZ^r$ and the nef cone of $Y$  is a full-dimensional cone of $\Pic(Y)_{\RR}$. For $\vv \in \ZZ^r$ set $|\vv|\coloneqq v_1+v_2+\cdots v_r$. 
 
 \begin{defn}\cite[Definition 6.1]{maclaganSmith04}\label{def:mg-reg}
 With the set-up as in the previous paragraph if $\cF$ is a coherent module on $X$ then we say that $\cF$ is \emph{$\dd$-regular} for $\dd \in \ZZ^r$ if and only if $H^i(Y, \cF(\ee))=0$ for all $i>0$ and all $\ee \in L_{i}(\dd)$ where
@@ -384,7 +384,7 @@ We then define the \emph{multigraded regularity} of $\cF$ to be $\reg(\cF)\colon
 \end{figure}
 \end{center}
 
-We can define the multigraded regularity of a $\ZZ^r$-graded module $M$ over $S$ in terms of analogous vanishing of local cohomology modules $H_{B}^I(M)$ where $B$ is the irrelevant ideal of $Y$. The multigraded Castelnuovo--Mumford regularity of is not a single number, but an infinite subset of $\ZZ^{r}$. 
+We can define the multigraded regularity of a $\ZZ^r$-graded module $M$ over $S$ in terms of analogous vanishing of local cohomology modules $H_{B}^I(M)$ where $B$ is the irrelevant ideal of $Y$. The multigraded Castelnuovo--Mumford regularity is not a single number, but an infinite subset of $\ZZ^{r}$. 
 
 The obvious approaches to generalize Theorem~\ref{thm:eisenbud-goto} to a product of projective spaces fail. For example, the multigraded Betti numbers do not determine multigraded Castelnuovo--Mumford regularity \cite[Example 5.1]{bruceHellerSayrafi21}. Despite this we show that part (3) of Theorem~\ref{thm:eisenbud-goto} can be generalized. To do so we introduce the following generalization of linear resolutions. 
 
@@ -405,12 +405,12 @@ The proof of Theorem~\ref{thm:mgreg-main} is based on a spectral sequence argume
 \subsection{Asymptotic Multigraded Regularity of Ideals}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Building upon our work discussed above -- and inspired by previous work on $\PP^{r}$ \cite{BEL91,CHT99,Kodiyalam00} -- I studied the asymptotic regularity of powers of ideals on arbitrary toric varieties. My collaborators and I show that the multigraded regularity of powers of ideals is bounded and translates in a predictable way. In particular, the regularity of $I^{t}$ essentially translates within $\Nef X$ in fixed directions at a linear rate.
+Building upon our work discussed above -- and inspired by previous work on $\PP^{n}$ \cite{BEL91,CHT99,Kodiyalam00} -- I studied the asymptotic regularity of powers of ideals on arbitrary toric varieties. My collaborators and I show that the multigraded regularity of powers of ideals is bounded and translates in a predictable way. In particular, the regularity of $I^{t}$ essentially translates within $\Nef(Y)$ in fixed directions at a linear rate.
  
 
 \begin{theorem}\cite[Theorem 4.1]{bruceHellerSayrafi22}
-  There exists a degree $\aa\in\Pic X$, depending only on $I$, such that for each integer $t>0$ and each pair of degrees $\qq_1,\qq_2\in\Pic X$ satisfying $\qq_1\geq\deg f_i\geq\qq_2$ for all generators $f_i$ of $I$, we have
-	\[ t\qq_1+\aa+\reg S \subseteq \reg\!\left(I^t\right) \subseteq t\qq_2+\Nef X. \]
+  There exists a degree $\aa\in\Pic(Y)$, depending only on $I$, such that for each integer $t>0$ and each pair of degrees $\qq_1,\qq_2\in\Pic(Y)$ satisfying $\qq_1\geq\deg f_i\geq\qq_2$ for all generators $f_i$ of $I$, we have
+	\[ t\qq_1+\aa+\reg S \subseteq \reg\!\left(I^t\right) \subseteq t\qq_2+\Nef(Y). \]
 \end{theorem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -436,7 +436,7 @@ The rational cohomology $H^{k}\left(\cA_{g};\QQ\right)\neq0$ for:
 \]
 \end{theorem}
 
-This theorem provided an answer to Grushevsky. Since $\cA_g$ is a rational classifying space for $\mathrm{Sp}_{2g}(\ZZ)$ we have $H^*(\cA_g;\QQ) \cong H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$, and thus, Theorem~\ref{thm:Ag} gives new non-vanishing results for $\mathrm{Sp}_{2g}(\ZZ)$. Our approach use's Deligne’s mixed Hodge theory and tropical geometry to compute the top-weight cohomology of $\cA_g$ for $g\leq 7$. Subsequent work of the PI generalized this to tropicalizing shimura varieties \cite{ABBCV25}, highlighted in a 2025 SRI in Algebraic Geometry plenary. 
+This theorem provided an answer to Grushevsky. Since $\cA_g$ is a rational classifying space for $\mathrm{Sp}_{2g}(\ZZ)$ we have $H^*(\cA_g;\QQ) \cong H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$, and thus, Theorem~\ref{thm:Ag} gives new non-vanishing results for $\mathrm{Sp}_{2g}(\ZZ)$. Our approach uses Deligne’s mixed Hodge theory and tropical geometry to compute the top-weight cohomology of $\cA_g$ for $g\leq 7$. Subsequent work of the PI generalized this to tropicalizing Shimura varieties \cite{ABBCV25}, highlighted in a 2025 SRI in Algebraic Geometry plenary. 
 
 
 %uses that $\cA_g$ is smooth, separated, DM stack, with algebraic coarse moduli, allowing us to use Deligne’s mixed Hodge theory; we then develop a tropical theory allowing the computation of the top-weight cohomology of $\cA_g$ for $g\leq 7$. Subsequent work of the PI with others generalized this to a theory of tropicalizing shimura varieties \cite{ABBCV25}, highlighted in a 2025 SRI in Algebraic Geometry plenary. 
@@ -452,11 +452,11 @@ This theorem provided an answer to Grushevsky. Since $\cA_g$ is a rational class
 \subsubsection{Math Circles.}
 	From 2015 through 2018 I was heavily involved in the Madison Math Circle, including  2 years as the lead organizer. As an organizer, I worked to build stronger connections between the Madison Math Circle, local schools, teachers, and other outreach organizations. This led to weekly attendance to more than double. I also created a new outreach arm of the circle, which visits high schools around the state of Wisconsin to better serve students. While a post-doc at UC Berkeley I volunteered as a speaker with the Berkeley Math Circle. 
 
-\subsubsection{Mentoring.} While a graduate student and post-doc I led four reading courses with undergraduates in algebraic and geometry, volunteered for \textit{Girls' Math Night Out} to promote mathematics to high schoolers, and mentored 6+ students via the AWM's Mentoring Network. During Summer 2021 I led 6 undergraduates on a research project related to \cite{BBCMMW24}. In Summer 2022 I advised an undergraduate student -- now a math Ph.D. student with an NSF GRF -- on a research project related to the work Section~\ref{subsec:prior:homological-algebra-on-toric}. 
+\subsubsection{Mentoring.} While a graduate student and post-doc I led four reading courses with undergraduates in algebraic and geometry, volunteered for \textit{Girls' Math Night Out} to promote mathematics to high schoolers, and mentored 6+ students via the AWM's Mentoring Network. During Summer 2021 I led 6 undergraduates on a research project related to \cite{BBCMMW24}. In Summer 2022 I advised an undergraduate student -- now a math Ph.D. student with an NSF GRF -- on a research project related to the work in Section~\ref{subsec:prior:homological-algebra-on-toric}. 
 \subsubsection{Virtual Mathematics.}
 In response to the COVID-19 pandemic and the shift of many mathematical activities to virtual formats, I worked to find ways for these online activities to reach those often at the periphery. During Summer and Fall 2020, I helped with Ravi Vakil's \textit{Algebraic Geometry in the Time of Covid} project. This massive online open-access course in algebraic geometry brought together $\sim2,000$ participants from around the world. In Spring 2021, I organized an 8-week virtual reading course for undergraduates in algebraic geometry and commutative algebra. 
 
-\subsubsection{Community.} While a graduate student I founded co-founded oSTEM@UW as a resource for students in STEM, and organized a peer networking event \textit{qGrads}, which had over 350 members. During 2020-2023 I served on the board of \textit{Spectra}, including as its inaugural president. I oversaw the growth and formalization of the organization, including the creation and adoption of bylaws, the creation of an invited lecture at the JMM, and a fundraising campaign that has raised over \$20,000.
+\subsubsection{Community.} While a graduate student I co-founded oSTEM@UW as a resource for students in STEM, and organized a peer networking event \textit{qGrads}, which had over 350 members. During 2020-2023 I served on the board of \textit{Spectra}, including as its inaugural president. I oversaw the growth and formalization of the organization, including the creation and adoption of bylaws, the creation of an invited lecture at the JMM, and a fundraising campaign that has raised over \$20,000.
 
 %\subsubsection{t} 
 %While a graduate student I co-founded oSTEM@UW as a resource for LGBTQ+ students in STEM, which eventually grew to over fifty active members. As one member said, ``It made me very happy to see other friendly LGBTQ+ faces around... Thanks so much for organizing this stuff -- it's really helpful''. From 2017-2020 I led the campus social organization for LGBTQ+ graduate and post-graduate students, which had over 350 members. 
@@ -497,9 +497,9 @@ In the language of minimal graded free resolutions this theorem can be translate
 
 A \textit{stacky curve} is a smooth proper geometrically connected Deligne-Mumford stack of dimension 1 which contains a dense open subscheme. Effectively a stacky curve is a curve with a finite number of special points -- called stacky points -- which have ``fractional degrees''. Note this intuition can be made precise in the sense that any stacky curve is (Zariski) locally the quotient of a smooth affine curve by a finite group \cite[Lemma~5.3.10]{voightZurieckBrown22}. For simplicity we work over $\CC$, however, everything remains true over an arbitrary field if one places minor conditions on the stacky curve. 
 
-In \cite{voightZurieckBrown22} Voight and Zureick-Brown develop a theory of line bundles on stacky curves by transferring properties of divisors from their smooth coarse spaces. The key thing to note is that the degree of a line bundle on a stacky curve may be a rational number. Associated to stacky curve $\cX$ and a line bundle $\cL$ the \emph{section module} of $\cX$ with respect to $\cL$ is $R(\cX;\cL)\coloneqq \bigoplus_{k\in \ZZ}H^{0}(\cX,k\cL)$. 
+In \cite{voightZurieckBrown22} Voight and Zureick-Brown develop a theory of line bundles on stacky curves by transferring properties of divisors from their smooth coarse spaces. The key thing to note is that the degree of a line bundle on a stacky curve may be a rational number. Associated to a stacky curve $\cX$ and a line bundle $\cL$ the \emph{section module} of $\cX$ with respect to $\cL$ is $R(\cX;\cL)\coloneqq \bigoplus_{k\in \ZZ}H^{0}(\cX,k\cL)$. 
 
-A fundamental difference from the classical theory is that $\cL$ provides an embedding into a weighted projective stack, not standard projective space \cite{braggOlssonWebb24}. Algebraically this means that $R(\cX;\cL)$ is a module over a polynomial ring with a non-standard $\ZZ$-grading. Assuming $\cL$ is sufficiently positive $R(\cX;\cL) \cong S/I$ for a non-standard $\ZZ$-graded polynomial ring $S=\CC[x_{1},x_{2},\ldots,x_{n}]$ where $\deg(x_{i})=w_{i}\in\ZZ$ and $I\subset S$ some homogenous ideal. 
+A fundamental difference from the classical theory is that $\cL$ provides an embedding into a weighted projective stack, not standard projective space \cite{braggOlssonWebb24}. Algebraically this means that $R(\cX;\cL)$ is a module over a polynomial ring with a non-standard $\ZZ$-grading. Assuming $\cL$ is sufficiently positive $R(\cX;\cL) \cong S/I$ for a non-standard $\ZZ$-graded polynomial ring $S=\CC[x_{1},x_{2},\ldots,x_{n}]$ where $\deg(x_{i})=w_{i}\in\ZZ$ and $I\subset S$ some homogeneous ideal. 
 
 %ncluding canonical divisors, for stacky curves. Roughly this theory proceeds by noting that every stacky curve $\cX$ admits a coarse space $\pi:\cX\to X$ where $X$ is a smooth (non-stacky) curve. The theory of line bundles on $\cX$ can be developed by carefully transferring properties of divisors on $X$ to $\cX$ via the map $\pi$. The key thing to note is that since the degree of a stacky point need not be an integers the degree of a line bundle on a stacky curve may be a rational number. Associated to stacky curve $\cX$ and a line bundle $\cL$ the \emph{section module} of $\cX$ with respect to $\cL$ is $R(\cX;\cL)\coloneqq \bigoplus_{k\in \ZZ}H^{0}(\cX,k\cL)$. 
 
@@ -518,13 +518,13 @@ where $a,b\in \CC$ and $\deg(x_{1})=4$, $\deg(x_{2})=1$, and $\deg(x_{3})=2$ \ci
 	Understand the syzygies of $R(\cX,\cL)$ where $\cX$ is a stacky curve and $\cL$ is a line bundle on $\cX$. 
 \end{goal}
 
-The heuristic for goal is two-fold: i) the syzygies of section rings of stacky curves should behave roughly like the syzygies of weighted log complete series on a curves (see \cite{brownErman25}), and ii) Stacky-ness should be thought of as increasing the positivity of line bundle. Justification for the first heuristic comes in the form of the following lemma.
+The heuristic for this goal is two-fold: i) the syzygies of section rings of stacky curves should behave roughly like the syzygies of weighted log complete series on a curves (see \cite{brownErman25}), and ii) Stacky-ness should be thought of as increasing the positivity of line bundle. Justification for the first heuristic comes in the form of the following lemma.
 
 \begin{lemma}
-	Let $\cX$ be a stacky curve with $\pi:\cX\to X$ its coarse space. If $\cL$ a line bundle on $\cX$ then there exists a weighted log incomplete series $W$ on $X$ such that $R(\cX;\cL)\cong \bigoplus_{d\in \ZZ} H^0(X, dW)$.
+	Let $\cX$ be a stacky curve with $\pi:\cX\to X$ its coarse space. If $\cL$ is a line bundle on $\cX$ then there exists a weighted log incomplete series $W$ on $X$ such that $R(\cX;\cL)\cong \bigoplus_{d\in \ZZ} H^0(X, dW)$.
 \end{lemma}
 
-Justification for the second heuristic is less precise, however,, if $\cL$ is a line bundle on $\cX$ then $\deg(\cL)$ is equal to $\deg(L)+ \sum_{i}(1-\tfrac{1}{e_i})$ where $L$ is a line bundle on $X$ and $e_i$ are the order of the stabilizers of the stacky points. Thus, $\deg(\cL)$  is `increased'' by the presence of stacky points. 
+Justification for the second heuristic is less precise, however, if $\cL$ is a line bundle on $\cX$ then $\deg(\cL)$ is equal to $\deg(L)+ \sum_{i}(1-\tfrac{1}{e_i})$ where $L$ is a line bundle on $X$ and $e_i$ are the order of the stabilizers of the stacky points. Thus, $\deg(\cL)$  is ``increased'' by the presence of stacky points. 
 
 \begin{problem}
 	Let $\cX$ be a stacky curve with $e$ the maximum order of the stabilizer groups of stacky points on $\cX$. Let $\cL$ a line bundle on $\cX$. 
@@ -539,7 +539,7 @@ Brown and Erman recently introduced an analog of Green's $N_{p}$ conditions for 
 	Let $\cX$ be a stacky curve whose coarse space has genus 0 or 1. If $\cL$ is a line bundle on $\cX$ and $\deg(\cL)\gg0$, what $N_{p}$ conditions does $R(\cX; \cL)$ satisfy? Determine precise bounds on $\deg(\cL)$ guaranteeing $N_p$.
 \end{problem}
 
-We conjecture that $R(\cX; \cL)$ satisfies higher $N_{p}$ conditions roughly linear in the $\deg(\cL)$. In ongoing work with Maya Banks and Christopher Manon, we are generalizing Green's kernel bundle techniques \cite{green84-I} to prove this and resolve Problem~\ref{prob:gen01-np}. We have successfully constructed a multigraded generalization of these bundles whose cohomology computes the multigraded Betti numbers of $R(\cX; \cL)$. Our current objective is to prove the necessary vanishing theorems for these bundles, which would establish the conjecture.
+We conjecture that $R(\cX; \cL)$ satisfies higher $N_{p}$ conditions that grow roughly linearly with $\deg(\cL)$. In ongoing work with Maya Banks and Christopher Manon, we are generalizing Green's kernel bundle techniques \cite{green84-I} to prove this and resolve Problem~\ref{prob:gen01-np}. We have successfully constructed a multigraded generalization of these bundles whose cohomology computes the multigraded Betti numbers of $R(\cX; \cL)$. Our current objective is to prove the necessary vanishing theorems for these bundles, which would establish the conjecture.
 
 
 
@@ -555,7 +555,7 @@ One perspective on the Noether-Petri Theorem is that the syzygies of a smooth pr
 \cliff(X)\coloneqq \min \left\{\deg(L) - 2 \dim H^{0}(X,L)+2 \quad \bigg| \begin{matrix} L\in \Pic(X) \\
 \deg(L)\leq g-1 \quad \dim H^0(X,L)\geq2\end{matrix}\right\}.
 \]
-As a vast generalization of the Noether-Petri theorem, the following conjecture of Green says that the syzygies of canonical curves (i.e. the syzygies of a (non-hyperelliptic) curve embedded by the complete linear series of the canonical divisor) are controlled by the Clifford index.
+As a vast generalization of the Noether-Petri theorem, Green's conjecture states that the syzygies of canonical curves (i.e. the syzygies of a (non-hyperelliptic) curve embedded by the complete linear series of the canonical divisor) are controlled by the Clifford index.
 
 \begin{conjecture}[Green's Conjecture \cite{green84-I}]
 	If $X$ is a smooth projective curve then:
@@ -577,7 +577,7 @@ The first steps towards Goal~\ref{goal:stackyGreens} were taken by Voight and Zu
 Let $\cX$ be stacky curve whose coarse space has genus $\geq 1$ and let $e$ be the maximum order of the stabilizer groups of the stacky points; then the canonical ring $R(\cX; K_{\cX})$ is  generated by elements in degree at most $3e$ with relations in degree at most $6e$. 
 \end{theorem}
 
-This theorem shows that complexity is bounded by the stacky structure, but these bounds are likely not sharp. For example, when $e=1$ this fails to recover the classical result, instead allowing both quadrics and cubics. Further, it lacks it does not provide a geometric explanation of the failure of $R(\cX;K_{\cX})$ to be generated in the smallest single degree. We propose to refine Theorem~\ref{thm:voight-dzb} by studying the relationship between weighted linear series on $\cX$ and the syzygies of the canonical ring of $\cX$. A far-reaching goal of this would be to introduce a notion of Clifford index for stacky curves.
+This theorem shows that complexity is bounded by the stacky structure, but these bounds are likely not sharp. For example, when $e=1$ this fails to recover the classical result, instead allowing both quadrics and cubics. Further, it does not provide a geometric explanation of the failure of $R(\cX;K_{\cX})$ to be generated in the smallest single degree. We propose to refine Theorem~\ref{thm:voight-dzb} by studying the relationship between weighted linear series on $\cX$ and the syzygies of the canonical ring of $\cX$. A far-reaching goal of this would be to introduce a notion of Clifford index for stacky curves.
 
 \begin{problem}
 	Can Theorem~\ref{thm:voight-dzb} be refined by considering the existence of certain stacky or weighted linear series on $\cX$? Formulate a stacky analogue of Clifford's index. 
@@ -589,7 +589,7 @@ To define a meaningful Clifford index, we need a robust theory of linear series 
 	If $\cX$ is a general stacky curve, is the stacky Brill-Noether locus $\cW_{d}^{r}(\cX)$ of expected dimension, smooth away from $\cW_{d}^{r+1}(\cX)$, and irreducible when positive dimensional?
 \end{problem}
 
-Recent work refines classical Brill–Noether theory by tracking data analogous to stacky structure (e.g., specified ramification) \cite{p17,larson21,larson21-2,JR21,CPJ22,CPJ22-2,LLV25}. The resulting toolkit, degenerations, limit linear series, and tropical/logarithmic method. appears well suited to the stacky setting. While I am not a specialist in these refinements, I feel they are 1-2 steps removed from much of my previous work, and I am optimistic that these techniques can be adapted to address Problem~\ref{prob:brill}.
+Recent work refines classical Brill–Noether theory by tracking data analogous to stacky structure (e.g., specified ramification) \cite{p17,larson21,larson21-2,JR21,CPJ22,CPJ22-2,LLV25}. The resulting toolkit -- degenerations, limit linear series, and tropical/logarithmic method, etc. -- appears well suited to possible adaption to the stacky setting, and I am optimistic that these techniques can be adapted to address Problem~\ref{prob:brill}.
 
 Another approach one may take towards Goal~\ref{goal:stackyGreens} is by studying the algebraic properties of the canonical rings $R(\cX;K_{\cX})$. As a step in this direction the PI and co-author has shown that just like classical curves \cite{VF93,PP97}, the canonical ring of stacky curves is generally Gorenstein.  
 
@@ -603,7 +603,7 @@ The proof of this lemma largely follows the classical argument, after passing to
 	Let $\cX$ be a stacky curve whose coarse space has genus $g$. For what $t$ does the canonical ring $R(\cX;K_{\cX})$ satisfy the $t$-Koszul property above.  
 \end{problem}
 
-At time I have no strong guess for what the correct characterization of when $R(\cX;K_{\cX})$ is $t$-Koszul should be. However, in practice checking $t$-Koszul-ness can be done computationally in examples.
+At this time I have no strong guess for what the correct characterization of when $R(\cX;K_{\cX})$ is $t$-Koszul should be. However, in practice checking $t$-Koszul-ness can be done computationally in examples.
 
 The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cite{schreyer91} to show the existence of a Gr\"{o}bner basis for the canonical ring of a stacky curve whose elements have certain degrees. Voight and Zureick-Brown do not explicitly construct such Gr\"{o}bner bases, however, this should be possible for simple stacky curves.  A starting point towards Goal~\ref{goal:stackyGreens} is to make Voight and Zureick-Brown's arguments explicit, and then use a computer algebra system like Macaulay2 to compute the minimal graded free resolutions for many examples.  
 
@@ -614,7 +614,7 @@ The proof of Theorem~\ref{thm:voight-dzb} builds upon the ideas of Schreyer \cit
 Building upon code shared by Voight and Zureick-Brown, I have carried out Problem~\ref{prob:comp-canonical-stacky} for most of the genus zero examples. In many of these computed cases, and as noted in \cite[Appendix]{voightZurieckBrown22}, the canonical ring is a (weighted) complete intersection. However, there are examples showing that even for small examples the canonical ring of a stacky curve is quite complicated.
 
 \begin{example}
-Let $\cX$ be a stacky curve with three stacky points whose stabilizers are $\ZZ/4\ZZ$, $\ZZ/4\ZZ$, and $\ZZ/5\ZZ$ whose coarse space has genus zero. The canonical ring $R(\cX;K_{\cX})$ can be presented as $S/I$ where $S=\CC[x_{1},x_{2},x_{3},x_{4},x_{5}]$ where $\deg(x_{1})=3$, $\deg(x_{2})=\deg(x_{3})=4$, and $\deg(x_{4})=\deg(x_{5})=5$ and $I$ is an ideal generated by 7 homogenous polynomials of degrees $8,8,9,9,10,13,13$. The minimal graded free resolution of $R(\cX;K_{\cX})$ is shown below (with the degrees suppressed for brevity):
+Let $\cX$ be a stacky curve with three stacky points whose stabilizers are $\ZZ/4\ZZ$, $\ZZ/4\ZZ$, and $\ZZ/5\ZZ$ whose coarse space has genus zero. The canonical ring $R(\cX;K_{\cX})$ can be presented as $S/I$ where $S=\CC[x_{1},x_{2},x_{3},x_{4},x_{5}]$ where $\deg(x_{1})=3$, $\deg(x_{2})=\deg(x_{3})=4$, and $\deg(x_{4})=\deg(x_{5})=5$ and $I$ is an ideal generated by 7 homogeneous polynomials of degrees $8,8,9,9,10,13,13$. The minimal graded free resolution of $R(\cX;K_{\cX})$ is shown below (with the degrees suppressed for brevity):
 \begin{center}
 \begin{tikzcd}[column sep = 2em]
 0 & \lar R(\cX;K_{\cX}) & \lar S & \lar S^{\oplus7} & \lar S^{\oplus20} & \lar S^{\oplus30} & \lar S^{\oplus 22} & \lar S^{\oplus6} & \lar 0.
@@ -639,7 +639,7 @@ Let $\cX$ be a smooth toric DM stack, $\dim \cX \geq2$, and fix an index $1\leq 
 \]
 \end{problem}
 
-We will begin by focusing on specific examples, such as weighted projective planes. Let $\cP(a,b,c)$ be the quotient stack $(\CC^{3}\setminus \{0\})/\CC^{\times}$ where $\CC^{\times}$ acts by $\lambda\cdot (x,y,z)=(\lambda^a x, \lambda^b,  y \lambda^c z)$. The coarse space of $\cP(a,b,c)$ is the usual weighted projective space $\PP(a,b,c)$.
+We will begin by focusing on specific examples, such as weighted projective planes. Let $\cP(a,b,c)$ be the quotient stack $(\CC^{3}\setminus \{0\})/\CC^{\times}$ where $\CC^{\times}$ acts by $\lambda\cdot (x,y,z)=(\lambda^a x, \lambda^b y \lambda^c z)$. The coarse space of $\cP(a,b,c)$ is the usual weighted projective space $\PP(a,b,c)$.
 
 
 \begin{problem}\label{prob:projective-plan-np}
@@ -652,7 +652,7 @@ The stack $\cP(1,1,a)$ has a single stacky point with stabilizer $\ZZ/a\ZZ$. Its
 \subsection{Computations with Toric Stacks}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While a general framework is out of reach,  toric stacks are tractable: their combinatorics are well developed,  they correspond to \emph{stacky fans} -- the data of a fan $\Sigma \subset N_{\RR}$ and a lattice map $\beta:N\to L$ -- that makes computations feasible \cite{toricStacks1,toricStacks2,borisovChenSmith05}. Despite this, the PI is not know of any implementation for working with them. Given the success of the \textit{NormalToricVarieties} package in \textit{Macaulay2}, a toric-stacks package would benefit both this project and the community.
+The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While a general framework is out of reach,  toric stacks are tractable: their combinatorics is well developed,  they correspond to \emph{stacky fans} -- a fan $\Sigma \subset N_{\RR}$ and a lattice map $\beta:N\to L$ -- that makes computations feasible \cite{toricStacks1,toricStacks2,borisovChenSmith05}. Despite this, the PI is not aware of an implementation for working with them. Given the success of the \textit{NormalToricVarieties} package in \textit{Macaulay2}, a toric-stacks package would benefit both this project and the community.
 
 
 \begin{problem}\label{prob:toric-stacks-m2}
@@ -661,7 +661,7 @@ Develop a robust software package for \textit{Macaulay2} allowing for computatio
 
 I will develop the Macaulay2 package \textit{toricStacks}, implementing stacky fans and their morphisms, line bundles on toric stacks, Cox rings, and sheaf cohomology. Work began in Summer 2025 with Maya Banks and John Cobb. I have extensive experience building Macaulay2 packages and will involve graduate students. The package will be open-source.
 
-As computations of examples of syzygies have frequently proven fruitful I would like to extend the database of syzygies I created in \cite{BEGY20,BCEGLY22}. 
+As computations of examples of syzygies have frequently proven fruitful, I would like to extend the database of syzygies I created in \cite{BEGY20,BCEGLY22}. 
 
 \begin{problem}
 	Adapt  the high-performance computing methods in \cite{BEGY20,BCEGLY22} to compute the graded Betti numbers of $\cP(1,1,a)$ embedded by $\cO(d)$ for $1<a \leq 15$ and $2\leq d \leq 6$.
@@ -735,10 +735,10 @@ Building directly on the PI's work \cite{bruceHellerSayrafi21,bruceHellerSayrafi
  \subsection{Asymptotic Behavior and Bounds on Multigraded Regularity}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In the classical setting of standard graded polynomial rings, significant attention have been given studying the asymptotic behave Castelnuovo–Mumford regularity in various families -- e.g. powers of ideals \cite{chandler97,Kodiyalam00,CHT99,BCHT13}  and powers of ideal sheave \cite{cutkoskySrinivas93,cutkosky00,CEL01} --  and providing meaningful geometric bounds on the regularity of ideals defining smooth subvarieties \cite{GLP83, eisenbudGoto84, BEL91, MP18}. The same questions for multigraded regularity remain widely open. The PI hopes to resolve this by building upon her recent work \cite{bruceHellerSayrafi22}
+In the classical setting of standard graded polynomial rings, significant attention has been given to studying the asymptotic behavior of Castelnuovo–Mumford regularity in various families, e.g., powers of ideals \cite{chandler97,Kodiyalam00,CHT99,BCHT13} and powers of ideal sheave \cite{cutkoskySrinivas93,cutkosky00,CEL01}, and providing meaningful geometric bounds on the regularity of ideals defining smooth subvarieties \cite{GLP83, eisenbudGoto84, BEL91, MP18}. The same questions for multigraded regularity remain widely open. The PI hopes to resolve this by building upon her recent work \cite{bruceHellerSayrafi22}
 
  \begin{problem}\label{prob:seshardri}
- 	Using Notation~\ref{not:toric}, understand the asymptotic behavior of $\reg(I^p)$ and $\reg(\cI^p)$ where $I \subset S$ is an $\ZZ^r$-graded ideal and $\cI\subset \cO_{Y}$ is an ideal sheaf.
+ 	Using Notation~\ref{not:toric}, understand the asymptotic behavior of $\reg(I^p)$ and $\reg(\cI^p)$ where $I \subset S$ is a $\ZZ^r$-graded ideal and $\cI\subset \cO_{Y}$ is an ideal sheaf.
 \end{problem}
 
 Ongoing work of the PI with Lauren Cranton Heller, Mahrud Sayrafi, and Alexandra Seceleanu on led to the following conjecture, which would provide a precise answer to Problem~\ref{prob:seshardri}. 
@@ -835,7 +835,7 @@ We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves
   \fill[TealBlue,fill=MidnightBlue] (0,3) circle (5pt);
       \node at (3.5,4.55) (a) {\scriptsize $L=\lim\{\widehat{A}_p\}$};
 \end{tikzpicture}
-\caption{Toy picture of the convergence of $\frac{\reg(\cI^{p})_{\RR}}{p}$ to the Seshadri region of $\cI$ predicted Conjecture~\ref{conj:reg-ideal-sheaves}.}
+\caption{The picture of the convergence of $\frac{\reg(\cI^{p})_{\RR}}{p}$ to the Seshadri region of $\cI$ predicted Conjecture~\ref{conj:reg-ideal-sheaves}.}
 \end{figure}
 
 Given its definition and that it is a measure of positivity for an ideal sheaf, it is natural to wonder whether the Seshadri region of $\cI$ predicted Conjecture~\ref{conj:reg-ideal-sheaves} is connected to the theory of Newton-Okounkov bodies, which are also convex bodies roughly measuring positivity of a linear series along a flag of subvarieties that have received significant study \cite{okounkov96,okounkov03, lazarsfeldMustata09,KK12,anderson13,kaveh15} 
@@ -866,7 +866,7 @@ I will approach Problem~\ref{prob:subvariety-bound} by beginning with understand
 
 Despite being a relatively simple class of subvarieties it has been shown that their multigraded regularity behaves in nuanced ways \cite{bruceHellerSayrafi22}.  The goal for approaching Problem~\ref{prob:torus-invariant-mg} is to compute both the higher cohomology of $\cI_Z$ and its Hilbert function using the combinatorics of the corresponding cone and working inductively on codimension. A degeneration argument and upper semicontinuity could then be used to extend an answer for Problem~\ref{prob:torus-invariant-mg} to an answer for Problem~\ref{prob:subvariety-bound}.
 
-Lastly I will pursue the following focused project concerning the defining equations and regularity of the Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, which has rich geometry and combinatorics \cite{knudsen83,GHvdP88,keel92,kapranov93,kerberMarkwig09,manin13,CGM21,GGL23}. Keel and Tevelev constructed an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding given by $\partial \overline{M}_{0,n} + K_{\overline{M}_{0,n}}$ factors \cite{keelTevelev09}. Monin and Rana \cite{moninRana17} produced explicit equations, discussed below, which they conjectured defined the scheme-theoretic image of $\Omega_{n}$. Gillepsie, Griffin, and Levinson recently proved this \cite{GGL22}. 
+Lastly I will pursue the following focused project concerning the defining equations and regularity of the Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, which has rich geometry and combinatorics \cite{knudsen83,GHvdP88,keel92,kapranov93,kerberMarkwig09,manin13,CGM21,GGL23}. Keel and Tevelev constructed an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding given by $\partial \overline{M}_{0,n} + K_{\overline{M}_{0,n}}$ factors \cite{keelTevelev09}. Monin and Rana \cite{moninRana17} produced explicit equations, discussed below, which they conjectured defined the scheme-theoretic image of $\Omega_{n}$. Gillespie, Griffin, and Levinson recently proved this \cite{GGL22}. 
 
 \begin{problem}\label{prob:m0n}
  	Compute the multigraded Castelnuovo--Mumford Regularity and minimal graded free resolution of the defining ideal of $\Omega_{n}(\overline{M}_{0,n}) \subset \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$.
@@ -875,17 +875,17 @@ Lastly I will pursue the following focused project concerning the defining equat
 Using \textit{Macaulay2}, the regularity and free resolution of $\Omega_{n}(\overline{M}_{0,n})$ is computable for $n=4,5,6,7$. The Monin-Rana equations defining $\Omega_{n}(\overline{M}_{0,n})$ arise as follows: Let $x_0^{(i)},x_1^{(i)}, \ldots, x_i^{(i)}$ denote the coordinates on $\PP^i$, then for each $i<j$ let
 \[
 M_{i,j} \coloneqq \begin{pmatrix}
-x_{0}^{(i)}(x_{0}^{(j)}-x_i^{(j)} & x_{1}^{(i)}(x_{1}^{(j)}-x_i^{(j)}  & x_{2}^{(i)}(x_{2}^{(j)}-x_i^{(j)}  & \cdots & x_{i}^{(i)}(x_{i}^{(j)}-x_i^{(j)} \\
-x_0^{(j)} & x_1^{(j)} & x_2^{(j)} & \cdots & x_i^{(j)}
+x_{0}^{(i)}(x_{0}^{(j)}-x_i^{(j)}) & x_{1}^{(i)}(x_{1}^{(j)}-x_i^{(j)})  & x_{2}^{(i)}(x_{2}^{(j)}-x_i^{(j)})  & \cdots & x_{i}^{(i)}(x_{i+1}^{(j)}-x_{i}^{(j)}) \\
+x_0^{(j)} & x_1^{(j)} & x_2^{(j)} & \cdots & x_{i+1}^{(j)}
 \end{pmatrix}.
 \]
-Define $J_{i,j}$ to be the ideal generated by the $2\times 2$ minors of $M_{i,j}$. The ideal defining $\Omega_{n}(\overline{M}_{0,n})$ is then $I_{n}=\sum_{1\leq i<j\leq n-3} J_{i,j}$. Each ideal $J_{i,j}$ is independent of $n$ and is resolved by an Eagon-Northcott complex. Further the defining ideals of $I_{n}$ have natural inductive structure since $I_{n}=I_{n-1}+J_{1,n-3}+\cdots+J_{n-4,n-3}$. Working inductively and using a mapping cone construction over the  short exact sequence arising from ideal sums we can produce a non-minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. The key technical step is to control the multigraded resolutions of intersections $J_{i,j}\cap J_{i',j'}$. If we can control these we can then hope to minimize the resulting resolution to get the minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. This picture is also compatible with the following alternative approach: $\Omega_{n}(\overline{M}_{0,n})$ is the image of a product of $\GL$-equivariant bundles and so can use Kempf collapsing and the Kempf--Lascoux--Weyman geometric technique for computing syzygies \cite{kempf76,lascoux78,weyman03}, which has recently been applied sucessfully in similar situations \cite{bergetFink25}
+Define $J_{i,j}$ to be the ideal generated by the $2\times 2$ minors of $M_{i,j}$. The ideal defining $\Omega_{n}(\overline{M}_{0,n})$ is then $I_{n}=\sum_{1\leq i<j\leq n-3} J_{i,j}$. Each ideal $J_{i,j}$ is independent of $n$ and is resolved by an Eagon-Northcott complex. Further the defining ideals of $I_{n}$ have natural inductive structure since $I_{n}=I_{n-1}+J_{1,n-3}+\cdots+J_{n-4,n-3}$. Working inductively and using a mapping cone construction over the  short exact sequence arising from ideal sums we can produce a non-minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. The key technical step is to control the multigraded resolutions of intersections $J_{i,j}\cap J_{i',j'}$. If we can control these, we can then hope to minimize the resulting resolution to get the minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. This picture is also compatible with the following alternative approach: $\Omega_{n}(\overline{M}_{0,n})$ is the image of a product of $\GL$-equivariant bundles and so can use Kempf collapsing and the Kempf--Lascoux--Weyman geometric technique for computing syzygies \cite{kempf76,lascoux78,weyman03}, which has recently been applied successfully in similar situations \cite{bergetFink25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{A Generalized Eisenbud--Goto Theorem for Toric Varieties}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The relationship between Castelnuovo-Mumford regularity, graded Betti numbers, and linear resolutions is fundamental in classical commutative algebra (see Theorem~\label{thm:eisenbud-goto} \cite{eisenbudGoto84}). In the multigraded the analog of a linear resolution is a resolution such that each twist at homological degree $i$ is in $L_{i}(\zero)$, i.e., the entries of the differential have total degree one. However, with these definitions the relationship between linear resolutions and regularity breaks down dramatically.
+The relationship between Castelnuovo-Mumford regularity, graded Betti numbers, and linear resolutions is fundamental in classical commutative algebra (see Theorem~\ref{thm:eisenbud-goto} \cite{eisenbudGoto84}). In the multigraded the analog of a linear resolution is a resolution such that each twist at homological degree $i$ is in $L_{i}(\zero)$, i.e., the entries of the differential have total degree one. However, with these definitions the relationship between linear resolutions and regularity breaks down dramatically.
 
 \begin{example}
 Consider $\PP^{1}\times \PP^{2}$ so that $S=\KK[x_{0},x_{1},y_{0},y_{1},y_{2}]$ and $B=\langle x_{0},x_{1}\rangle\cap\langle y_{0},y_{1},y_{2}\rangle$. One checks that $S/B$ is $(0,0)$-regular. The minimal graded free resolution of $(S/B)_{\geq\zero}=S/B$ is: 
@@ -922,7 +922,7 @@ We will begin with the case of Hirzebruch surfaces $\cH_t=\PP(\cO_{\PP^1}\oplus 
 	Let $S$ be the $\ZZ^2$-graded Cox ring of the Hirzebruch surface $\cH_{t}$. If $M$ is a $\ZZ^2$-graded $S$-module then $M_{\geq d}$ has a $d$-linear resolution if and only if $d+\reg(S) \subset \reg(M)$. 
 \end{conjecture}
 
-The PI's work in \cite{bruceHellerSayrafi21} suggests a general approach to Problem~\ref{prob:eisenbud-goto} and Conjecture~\ref{conj:eg-hirzebruch}: i) Find an appropriate collection of line bundles $L_1,\ldots,L_t$ on $Y$ in which one can resolve the diagonal in $\Delta \subset Y\times Y$, ii) Understand the image of these line bundles under the Fourier-Mukai transform whose kernel is this resolution of $\Delta$, iii) Prove strong vanishing results for the higher cohomology of the given line bundles $L_i$ This allows us to construct an explicit resolution of $M_{\geq \dd}$ whose graded Betti numbers are given, roughly, by the cohomology of $\tilde{M}\otimes L_i$. Recent work by Hanlon, Hicks, and Lazarev suggest the Bondal-Thomsen collection is a natural choice for the $L_i$; as they give a nice explicit resolution of the diagonal of an arbitrary toric variety and generally have strong vanishing properties   \cite{HHL24,brownErman24-1}. Further, some work has gone into step (ii) for this collection \cite{CH25}. On Hirzebruch surfaces various collection has been studied even further \cite{brownSayrafi24}. 
+The PI's work in \cite{bruceHellerSayrafi21} suggests a general approach to Problem~\ref{prob:eisenbud-goto} and Conjecture~\ref{conj:eg-hirzebruch}: i) Find an appropriate collection of line bundles $L_1,\ldots,L_t$ on $Y$ in which one can resolve the diagonal in $\Delta \subset Y\times Y$, ii) Understand the image of these line bundles under the Fourier-Mukai transform whose kernel is this resolution of $\Delta$, iii) Prove strong vanishing results for the higher cohomology of the given line bundles $L_i$. This allows us to construct an explicit resolution of $M_{\geq \dd}$ whose graded Betti numbers are given, roughly, by the cohomology of $\tilde{M}\otimes L_i$. Recent work by Hanlon, Hicks, and Lazarev suggest the Bondal-Thomsen collection is a natural choice for the $L_i$; as they give a nice explicit resolution of the diagonal of an arbitrary toric variety and generally have strong vanishing properties   \cite{HHL24,brownErman24-1}. Further, some work has gone into step (ii) for this collection \cite{CH25}. On Hirzebruch surfaces various collections have been studied even further \cite{brownSayrafi24}. 
  
  While not equivalent to being regular, characterizing when $M_{\geq\dd}$ has a linear resolution in the traditional sense is still of interest algebraically.
   
@@ -930,7 +930,7 @@ The PI's work in \cite{bruceHellerSayrafi21} suggests a general approach to Prob
  	Using Notation~\ref{not:toric} let $M$ be a $\Pic(Y)$-graded $S$-module.  Characterize when $M_{\geq \dd}$ has a linear resolution in terms of vanishing of the local cohomology groups $H^i_{B}(M)_{t}$. 
 \end{problem}
 
-The PI  answer to this question for products of projective spaces \cite[Theorem 6.2]{bruceHellerSayrafi21}. Using the same methods of controlling the Betti numbers needed to answer Problem~\ref{prob:eisenbud-goto} would likely provide a way to give a cohomological characterization for when $M_{\geq\dd}$ has a linear resolution. 
+The PI answered this question for products of projective spaces \cite[Theorem 6.2]{bruceHellerSayrafi21}. Using the same methods of controlling the Betti numbers needed to answer Problem~\ref{prob:eisenbud-goto} would likely provide a way to give a cohomological characterization for when $M_{\geq\dd}$ has a linear resolution. 
 
 Direct computation of the regularity of a module $M$ is often prohibitively slow due to the complexity of local cohomology. A significantly faster approach involves computing the truncation $M_{\geq \dd}$ and its associated minimal free resolution. Consequently, Theorem~\ref{thm:mgreg-main}, combined with the resolution of Conjecture~\ref{conj:eg-hirzebruch} and Problem~\ref{prob:eisenbud-goto}, yields a practical algorithm for determining regularity at a single multidegree $\dd\in \ZZ^r$. However, developing an algorithm to compute the entire regularity region of M remains a major open challenge.
 
@@ -989,7 +989,7 @@ The space of all such GIT models is controlled by the secondary (GKZ) fan $\Sigm
 \end{center}
 
 \begin{example}\label{exm:hirzebruch}
-Consider the case of the Hirzebruch surface $\cH_3$. Here the Cox ring is $S=\CC[x_1,x_2,x_3,x_4]$ with the $\ZZ^2$-grading given by $\deg(x_1)=\deg(x_3)=(1,0)$, $\deg(x_4)=(1,0)$, and $\deg(x_2)=(-3,1)$. The secondary/GKZ fan of this Cox ring is shown in Figure~\ref{fig:example-of-secondary}, and has two chambers one corresponding to $\cH_3$ and one corresponding to the weighted projective plane $\PP(1,1,3)$. The irrelevant ideals are $B_{\cH_3}=\langle x_1, x_3\rangle \cap \langle x_2, x_4\rangle$ and $B_{\PP(1,1,3)}=\langle x_1, x_3, x_4\rangle \cap \langle x_2 \rangle$.
+Consider the case of the Hirzebruch surface $\cH_3$. Here the Cox ring is $S=\CC[x_1,x_2,x_3,x_4]$ with the $\ZZ^2$-grading given by $\deg(x_1)=\deg(x_3)=(1,0)$, $\deg(x_4)=(0,1)$, and $\deg(x_2)=(-3,1)$. The secondary/GKZ fan of this Cox ring is shown in Figure~\ref{fig:example-of-secondary}, and has two chambers one corresponding to $\cH_3$ and one corresponding to the weighted projective plane $\PP(1,1,3)$. The irrelevant ideals are $B_{\cH_3}=\langle x_1, x_3\rangle \cap \langle x_2, x_4\rangle$ and $B_{\PP(1,1,3)}=\langle x_1, x_3, x_4\rangle \cap \langle x_2 \rangle$.
 
 \end{example}
 
@@ -1011,7 +1011,7 @@ A recent instantiation of these ideas is the work of \cite{longLiveKing} showing
  
  One natural approach to developing such a theory is to note that $D_{\Cox}(Y)$ can be realized as an explicit full subcategory of $D(\tilde{\cY})$ where $\tilde{\cY}$ is any smooth toric stack with proper birational morphisms to the $\cY_i$. One could thus, hope to using the notion of multigraded regularity on $\tilde{\cY}$ and restrict it to the $D_{\Cox}(Y)$ subcategory. A main obstruction is that the choice of $\tilde{\cY}$ is not unique, and thus, defining regularity in this way may depend on the choice of $\tilde{\cY}$. 
  
-I hope to circumventing this by showing that there is in a sense a best choice for $\tilde{\cY}$. This is the toric stack $\cY_{\GKZ}$ constructed in \cite[Section 3]{longLiveKing} by glue the stack corresponding to each camber of $\Sigma_{\GKZ}$ in a precise way. While not unique to $D_{\Cox}(Y)$ this construction of a $\tilde{\cY}$ should be universal in some sense that seems missing from \cite[Section 3]{longLiveKing}.
+I hope to circumventing this by showing that there is in a sense a best choice for $\tilde{\cY}$. This is the toric stack $\cY_{\GKZ}$ constructed in \cite[Section 3]{longLiveKing} by gluing the stack corresponding to each camber of $\Sigma_{\GKZ}$ in a precise way. While not unique to $D_{\Cox}(Y)$ this construction of a $\tilde{\cY}$ should be universal in some sense that seems missing from \cite[Section 3]{longLiveKing}.
 %\begin{example}
 %Continuing the running example of the Hirzebruch surface $\cH_3$ began in Example~\ref{exm:hirzebruch} and Figure~\ref{fig:example-of-secondary}; one obtains the stack $\tilde{\cX}$ in this case by gluing $\cH_3$ and $\cP(1,1,3)$, as stacks, along the variety $\PP(1,1,3)$. (See \cite[Example~3.1]{longLiveKing}).
 %\end{example} 
@@ -1019,7 +1019,7 @@ I hope to circumventing this by showing that there is in a sense a best choice f
  	Characterize the universality of the $\cY_{\GKZ}$ stack construction.
  \end{problem}
  
- Proving a strong version of universality would provide a strong step towards defining regularity on $D_{\Cox}(Y)$ via $D(\cY_{\GKZ})$.  As an effort in this direction, and with hopes of making explicit, some of the steps of the construction provided in \cite{longLiveKing}, I plan to implement this construction in \textit{Macaulay2}. 
+ Proving a strong version of universality would provide a strong step towards defining regularity on $D_{\Cox}(Y)$ via $D(\cY_{\GKZ})$.  As an effort in this direction, and with aim of making explicit some of the steps of the construction provided in \cite{longLiveKing}, I plan to implement this construction in \textit{Macaulay2}. 
  
 \begin{problem}
 	Implement the construction of the $\cX_{\GKZ}$ stack in the \textit{toricStacks} package being developed for \textit{Macaulay2} as part of Problem~\ref{prob:toric-stacks-m2}.
@@ -1033,10 +1033,10 @@ I hope to circumventing this by showing that there is in a sense a best choice f
 
 An alternative approach of studying homological algebra on all toric varieties with the same Cox ring simultaneously is to understand how things like minimal free resolutions and multigraded regularity change when moving between adjacent chambers $\Gamma$ and $\Gamma'$ of the secondary fan. Geometrically, this corresponds to a birational transformation between the toric varieties $Y_{\Gamma}$ and $Y_{\Gamma'}$, (e.g. a flip or flop). Algebraically this corresponds to the irrelevant ideal changing $B_{\Gamma}$ to $B_{\Gamma'}$. 
 
-Geometrically we can think of sheaves crossing between $\Gamma$ and $\Gamma'$ by the pushing or pulling along the corresponding birational transformation $Y_{\Gamma} \to  Y_{\Gamma'}$. Geometrically, this roughly corresponds to fixing a $\ZZ^r$-graded module $M$ on the ring $S$ and then saturating with respect to $B_{\Gamma}$ or $B_{\Gamma'}$ to get modules $M_{\Gamma}$ and $M_{\Gamma'}$ corresponding to sheaves on $Y_{\Gamma}$ and  $Y_{\Gamma'}$ respectively. A \emph{wall-crossing formula} seeks to relate the algebraic or geometric invariants of $M_{\Gamma}$ and $M_{\Gamma'}$. We aim to establish precise wall-crossing formulas for multigraded regularity and multigraded Betti numbers. 
+Geometrically we can think of sheaves crossing between $\Gamma$ and $\Gamma'$ by the pushing or pulling along the corresponding birational transformation $Y_{\Gamma} \to  Y_{\Gamma'}$. Algebraically, this roughly corresponds to fixing a $\ZZ^r$-graded module $M$ on the ring $S$ and then saturating with respect to $B_{\Gamma}$ or $B_{\Gamma'}$ to get modules $M_{\Gamma}$ and $M_{\Gamma'}$ corresponding to sheaves on $Y_{\Gamma}$ and  $Y_{\Gamma'}$ respectively. A \emph{wall-crossing formula} seeks to relate the algebraic or geometric invariants of $M_{\Gamma}$ and $M_{\Gamma'}$. We aim to establish precise wall-crossing formulas for multigraded regularity and multigraded Betti numbers. 
 
  \begin{problem}\label{prob:wall-crossing-reg}
- 	Fix $I \subset S$ a $\ZZ^r$-graded ideal and $\Gamma$ and $\Gamma'$ be adjacent chambers in $\Sigma_{\GKZ}$. 
+ 	Fix $I \subset S$, a $\ZZ^r$-graded ideal and $\Gamma$ and $\Gamma'$ be adjacent chambers in $\Sigma_{\GKZ}$. 
 	\begin{enumerate}
 	\item (Wall-Crossing for Regularity): Prove there exists a ``small'' subset $F \subset \ZZ^r$ independent of $I$ such that:
 	\[
@@ -1050,7 +1050,7 @@ Geometrically we can think of sheaves crossing between $\Gamma$ and $\Gamma'$ by
 %	Fix $I \subset S$ a $\ZZ^r$-graded ideal. Let $\Gamma$ and $\Gamma'$ be adjacent chambers in $\Sigma_{\GKZ}$. Prove the minimal graded free resolutions of $(I :_{S} B_{\Gamma}^{\infty})$ and $(I :_{S} B_{\Gamma'}^{\infty})$ agree in small degree.
 %\end{problem}
 
-Proving these would establish that the homological complexity does not change arbitrarily under birational transformations, but rather follows predictable patterns dictated by VGIT. The strategy is to exploit the combinatorial control one over the irrelevant ideal during a wall-crossing, which corresponds to a bistellar flip that exchanges two minimal primes in the ideals $B_{\Gamma}$ and $B_{\Gamma'}$ \cite[Theorem 15.3.13]{CLS11}. A Mayer-Vietoris type spectral sequence can then relate the local cohomology modules $H^i_{B_{\Gamma}}((I :_{S} B_{\Gamma}^{\infty}))$ and $H^i_{B_{\Gamma'}}((I :_{S} B_{\Gamma'}^{\infty}))$ providing some control over the regularity and minimal free resolutions. This approach is further motivated by the fact the fact these birational maps often induce equivalences on derived categories \cite{kawamata05,kawamata06,kawamata13,DHL15,kawamata16,ballardFaveroKatzarkov19}. As a test case for Problems~\ref{prob:wall-crossing-reg}, I explore varieties Y with Picard rank two, where the secondary fan is two-dimensional.
+Proving these would establish that the homological complexity does not change arbitrarily under birational transformations, but rather follows predictable patterns dictated by VGIT. The strategy is to exploit the combinatorial control one over the irrelevant ideal during a wall-crossing, which corresponds to a bistellar flip that exchanges two minimal primes in the ideals $B_{\Gamma}$ and $B_{\Gamma'}$ \cite[Theorem 15.3.13]{CLS11}. A Mayer--Vietoris type spectral sequence can then relate the local cohomology modules $H^i_{B_{\Gamma}}((I :_{S} B_{\Gamma}^{\infty}))$ and $H^i_{B_{\Gamma'}}((I :_{S} B_{\Gamma'}^{\infty}))$ providing some control over the regularity and minimal free resolutions. This approach is further motivated by the fact these birational maps often induce equivalences on derived categories \cite{kawamata05,kawamata06,kawamata13,DHL15,kawamata16,ballardFaveroKatzarkov19}. As a test case for Problems~\ref{prob:wall-crossing-reg}, I explore varieties Y with Picard rank two, where the secondary fan is two-dimensional.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1060,13 +1060,13 @@ Proving these would establish that the homological complexity does not change ar
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{Organizing} In addition to the 10+ conferences noted in Section~\ref{subsubsec:prior-organizing}, since starting at Dartmouth in 2024 I organized two algebraic geometry conferences: \textit{AGNES} (150 participants) and \textit{BATMOBILE} (50 participants). I am organizing this year's \textit{BATMOBILE}, to occur at Amherst College in November 2024, highlighting recent work in combinatorial algebraic geometry and commutative algebra. I am preparing a BIRS proposal titled \textit{The Geometry of Syzygies: Past \& Future} and plan to organize the next \textit{Gems of Commutative Algebra} at Dartmouth in Winter 2027 to promote community among the next generation of researchers; if successful, I will write a short Notices of the AMS article on these efforts and how to organize similar conferences amid current logistical hurdles. I am an organizer of Dartmouth's \textit{Algebra \& Number Theory} seminar. 
+\subsection{Organizing} In addition to the 10+ conferences noted in Section~\ref{subsubsec:prior-organizing}, since starting at Dartmouth in 2024 I organized two algebraic geometry conferences: \textit{AGNES} (150 participants) and \textit{BATMOBILE} (50 participants). I am organizing this year's \textit{BATMOBILE}, to occur at Amherst College in November 2025, highlighting recent work in combinatorial algebraic geometry and commutative algebra. I am preparing a BIRS proposal titled \textit{The Geometry of Syzygies: Past \& Future} and plan to organize the next \textit{Gems of Commutative Algebra} at Dartmouth in Winter 2027 to promote community among the next generation of researchers; if successful, I will write a short Notices of the AMS article on these efforts and how to organize similar conferences amid current logistical hurdles. I am an organizer of Dartmouth's \textit{Algebra \& Number Theory} seminar. 
 
-\subsection{Campus Community.} In an effort to promote community among math majors on Dartmouth's campus I serve as the faculty advisor to the college's \textit{AWM Student Chapter} and  am also working with the campuses \textit{oSTEM} chapter to broaden participation in STEM. Beginning in Fall 2025 I am organizing a graduate student seminar \textit{Unwritten Rules} providing professional development to graduate students facing additional career challenges.
+\subsection{Campus Community.} In an effort to promote community among math majors on Dartmouth's campus, I serve as the faculty advisor to the college's \textit{AWM Student Chapter} and  am also working with the campus's \textit{oSTEM} chapter to broaden participation in STEM. Beginning in Fall 2025 I am organizing a graduate student seminar \textit{Unwritten Rules} providing professional development to graduate students facing additional career challenges.
 
 \subsection{ National \& International Advocacy.} I have worked with the \textit{AWM} Executive Committee to expand support for broader groups of mathematicians and plan to continue this effort. From Winter 2023 to Spring 2025 I served on SLMath's  \textit{Committee on Women in Mathematics} until its dissolution. I have since agreed to serve on two \textit{AMS} committees to promote mathematics and the community. I hope to resume work with \textit{Spectra}, where I previously served as inaugural president.
 
-\subsection{Mentoring.} I am mentoring two graduate students, Bailee Z. (Michigan) and Jacob B. (KSU), on a tropical geometry project begun at MREG 2023; a preprint is expected soon. Since Fall 2024, I’ve mentored two undergraduates: Joanna S. (summer algebraic geometry reading) and Lisa S. (exploring math graduate school). Together with Asher Auel I am co-advising one graduate student, Will D., wokring on using free resolutions ofoints on surfaces to study the geometry of the moduli of spin curves. I am pre-advising three students (Allison T., Alex M., Aidan H.) interested in combinatorics/algebra. With these students I am beginning the development of a reading course in algebraic geometry aimed at increasing retention among students who are often pushed away from the field. I hope to make the notes from this course, which include both exercises in algebraic geometry and community building, available on my website. I expect to become the advisor for at least one of these students.  I’ve also agreed to lead an undergraduate summer research project at \textit{Count Me In} (organized in part by Milena Hering and Diane Maclagan).
+\subsection{Mentoring.} I am mentoring two graduate students, Bailee Z. (Michigan) and Jacob B. (KSU), on a tropical geometry project begun at MREG 2023; a preprint is expected soon. Since Fall 2024, I’ve mentored two undergraduates: Joanna S. (summer algebraic geometry reading) and Lisa S. (exploring math graduate school). Together with Asher Auel I am co-advising one graduate student, Will D., working on using free resolutions of points on surfaces to study the geometry of the moduli of spin curves. I am pre-advising three students (Allison T., Alex M., Aidan H.) interested in combinatorics/algebra. With these students I am beginning the development of a reading course in algebraic geometry aimed at increasing retention among students who are often pushed away from the field. I hope to make the notes from this course, which include both exercises in algebraic geometry and community building, available on my website. I expect to become the advisor for at least one of these students.  I’ve also agreed to lead an undergraduate summer research project at \textit{Count Me In} (organized in part by Milena Hering and Diane Maclagan).
 
 
 \newpage
