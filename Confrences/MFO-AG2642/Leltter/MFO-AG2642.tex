@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+
+\usepackage{epsfig, longfbox, fullpage, url, datetime}
+
+%For dummy text
+\usepackage{lipsum}
+
+% Set the headers and footers
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+% headers
+\fancyhead[L]{}
+\fancyhead[C]{To the MFO Director \hfill\today\hfill Page \thepage}
+\fancyhead[R]{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headsep}{15pt}
+% footers
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{}
+\pagestyle{fancy}
+
+
+\usepackage{fontspec}
+%These resemble the original Computer Modern Roman (default \TeX\ font)
+\setmainfont{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+
+
+% Dartmouth green CMYK: 95, 0, 100, 50
+\usepackage{xcolor}
+\definecolor{DartmouthGreen}{cmyk}{.95,0,1,.5}
+
+\parskip=\medskipamount
+\begin{document}
+
+% Begin letterhead block
+\null\vspace{-1in}
+
+%Dartmouth seal
+\begin{longfbox}[width=.85truein,height=.8truein,
+                   baseline-skip=false,border-style=none] 
+   \includegraphics*[width=58pt]{D-Pine_CMYK.eps}
+  \end{longfbox}%
+  %
+%Department Title  
+\begin{longfbox}[width=2truein,height=.45truein,
+                   baseline-skip=false,vertical-align=bottom, border-style=none] 
+                   \textcolor{DartmouthGreen}{
+  \fontspec{Dartmouth Ruzicka}\Huge\symbol{"E0AA}}\\
+  \null\hspace{.04in}\textcolor{DartmouthGreen}{\fontspec{Dartmouth Ruzicka}Department of Mathematics}
+\end{longfbox}%
+%Department contact information
+\hspace{1.75in}
+\begin{longfbox}[%width=1.8truein,%height=.9truein,
+                   baseline-skip=false,vertical-align=bottom,text-align=left,
+                   border-style=none] 
+  \textcolor{DartmouthGreen}{\footnotesize\fontspec{Dartmouth Ruzicka}27 N. Main Street\\ Kemeny Hall \\
+    Hanover, NH 03755-3551\\\vspace{.2in}
+    \scriptsize\textsc{Department Phone:}  603-646-2415\\
+    \scriptsize\textsc{Department Fax:}  603-646-1312\\
+  }
+\end{longfbox}%
+% End letterhead block
+
+\hbox to \hsize{\textcolor{DartmouthGreen}{\hrulefill}}
+
+%Personal Identifiers
+\begin{longfbox}[width=3truein,%height=.3truein,
+    baseline-skip=false, border-style=none]
+  \textcolor{DartmouthGreen}
+  {\footnotesize\fontspec{Dartmouth Ruzicka} Juliette Bruce\\
+    \textit{Assistant Professor}}
+\end{longfbox}
+\hfill
+\begin{longfbox}[width=3truein,%height=.35truein,
+    baseline-skip=false, border-style=none,text-align=right]{
+  \textcolor{DartmouthGreen}{\fontspec{Dartmouth Ruzicka} 
+  \scriptsize \textsc{Email:\ }
+    \texttt{juliette.bruce@dartmouth.edu}\\
+        \textsc{Office Phone:\ }  603-646-2415\\   \vspace{-.07in}
+    \textsc{Url:\ } \url{https://www.juliettebruce.xyz}}}
+\end{longfbox}
+
+\thispagestyle{empty}
+  
+
+% date
+\usdate %Set \today to "English Month, dd, YYYY"
+%  \vspace{-.5in}
+\begin{longfbox}[width=7.25truein, border-style=none]
+    {\hspace{4truein}\today}
+\end{longfbox}
+
+% Addressee
+\vspace{.2in}
+\begin{longfbox}[width=7.25truein, %height=1.4truein,
+   baseline-skip=false, border-style=none]
+   {
+
+Arbeitsgemeinschaften: ID 2642 \\
+ New Homological Methods in Toric Geometry\\
+Mathematisches Forschungsinstitut Oberwolfach\\
+}
+\end{longfbox}
+
+%Text of letter
+\noindent Dear MFO Director / Arbeitsgemeinschaften Organizers, 
+
+This is my application to the Arbeitsgemeinschaften in \textit{New Homological Methods in Toric Geometry} (ID 2642) occurring October 11 to October 16, 2026. I would generally be happy giving any of the talks in this program, but of the talks my top three would be: 
+\begin{enumerate}
+	\item 3.3. The Cox category, II: Definition. 
+	\item 3.2. The Cox category, I: Background.
+	\item 4.2. Proof of Revised King’s Conjecture, II: Exceptionality.
+\end{enumerate}
+Following this letter is a copy of my CV, which includes a publication list. My full postal address is:
+\begin{center}
+Juliette Bruce \\
+27 N. Main Street \\
+Kemeny Hall \\
+Department of Mathematics \\
+Dartmouth College \\
+Hanover, NH 03755 USA
+\end{center}
+Thank you so much for your consideration. 
+\\
+\\
+\\
+% Closing
+\hspace{4truein}\begin{longfbox}
+  [width=7.25truein, border-style=none]
+  {Sincerely,\\
+    \null\hspace{-.5truein}\includegraphics*[width=3in]{juliette-signature.jpeg}\\
+    Juliette Bruce\\
+    Assistant Professor
+      }
+\end{longfbox}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: luatex % (or xetex)
+%%% End:
