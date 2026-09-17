@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.24)  26 AUG 2026 08:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.4)  15 SEP 2026 11:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,7 +6,7 @@ entering extended mode
 **"julietteBruce - CV.tex"
 (./julietteBruce - CV.tex
 LaTeX2e <2026-06-01>
-L3 programming layer <2026-06-18>
+L3 programming layer <2026-08-10>
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2026/texmf-dist/tex/latex/base/size11.clo
@@ -319,8 +319,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip62
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/tocloft/tocloft.sty
-Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
-Package tocloft Info: The document has section divisions on input line 51.
+Package: tocloft 2026-08-21 v3.0b parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 64.
 \cftparskip=\skip63
 \cftbeforetoctitleskip=\skip64
 \cftaftertoctitleskip=\skip65
@@ -550,8 +550,8 @@ valdx-TLF.
 )
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 128.
-(/usr/local/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/l3kernel/l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count319
 )
 (./julietteBruce - CV.aux
@@ -650,48 +650,43 @@ al/texlive/2026/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_2zeho7.enc}{/usr/loc
 al/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local
 /texlive/2026/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_2xv27p.enc}{/usr/local
 /texlive/2026/texmf-dist/fonts/enc/dvips/baskervaldx/zbv_m4qttc.enc}]
-[2]
+[2] [3]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 318.
+(Font)              scaled to size 8.0pt on input line 321.
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 318.
+(Font)              scaled to size 8.0pt on input line 321.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 318.
+(Font)              scaled to size 9.0pt on input line 321.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 318.
+(Font)              scaled to size 6.0pt on input line 321.
 LaTeX Font Info:    Font shape `TS1/Baskervaldx-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 318.
- [3]
-Overfull \hbox (0.83124pt too wide) in alignment at lines 355--355
+(Font)              scaled to size 6.0pt on input line 321.
+
+Overfull \hbox (0.83124pt too wide) in alignment at lines 358--358
 [] [] 
  []
 
-[4]
-Overfull \hbox (104.29764pt too wide) in alignment at lines 386--386
-[] [] 
- []
-
-[5] [6] [7]
+[4] [5] [6] [7]
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 772.
+(Font)              scaled to size 8.0pt on input line 775.
 LaTeX Font Info:    Font shape `T1/Baskervaldx-TLF/b/n' will be
-(Font)              scaled to size 6.0pt on input line 772.
+(Font)              scaled to size 6.0pt on input line 775.
  [8] [9] [10] [11] [12] [13] (./julietteBruce - CV.aux)
  ***********
 LaTeX2e <2026-06-01>
-L3 programming layer <2026-06-18>
+L3 programming layer <2026-08-10>
  ***********
 Package rerunfilecheck Info: File `"julietteBruce - CV".out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11772 strings out of 467168
- 181628 string characters out of 5409462
- 634242 words of memory out of 5000000
- 40833 multiletter control sequences out of 15000+600000
+ 11814 strings out of 467099
+ 182358 string characters out of 5408260
+ 636989 words of memory out of 5000000
+ 40945 multiletter control sequences out of 15000+600000
  668294 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,10n,84p,562b,620s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 74i,10n,84p,562b,619s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/baskervaldx/Baskervald
 x-Bol.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/baskervaldx/Ba
 skervaldx-Ita.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/basker
@@ -703,10 +698,10 @@ fonts/cm/cmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msbm10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/cm-
 super/sfsx1200.pfb>
-Output written on "julietteBruce - CV.pdf" (13 pages, 170870 bytes).
+Output written on "julietteBruce - CV.pdf" (13 pages, 171090 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 149 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
  14 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

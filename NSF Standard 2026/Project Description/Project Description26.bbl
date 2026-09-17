@@ -1,0 +1,548 @@
+\begin{thebibliography}{10}
+
+\bibitem{AGV08}
+Dan Abramovich, Tom Graber, and Angelo Vistoli.
+\newblock {Gromov--Witten} theory of {Deligne--Mumford} stacks.
+\newblock {\em Amer. J. Math.}, 130(5):1337--1398, 2008.
+
+\bibitem{abramovichVistoli02}
+Dan Abramovich and Angelo Vistoli.
+\newblock Compactifying the space of stable maps.
+\newblock {\em J. Amer. Math. Soc.}, 15(1):27--75, 2002.
+
+\bibitem{ABLS20}
+Ayah Almousa, Juliette Bruce, Michael Loper, and Mahrud Sayrafi.
+\newblock The virtual resolutions package for {M}acaulay2.
+\newblock {\em J. Softw. Algebra Geom.}, 10(1):51--60, 2020.
+
+\bibitem{aprodu19}
+Marian Aprodu, Gavril Farkas, \c~Stefan Papadima, Claudiu Raicu, and Jerzy
+  Weyman.
+\newblock Koszul modules and {G}reen's conjecture.
+\newblock {\em Invent. Math.}, 218(3):657--720, 2019.
+
+\bibitem{ABBCV25}
+Eran Assaf, Madeline Brandt, Juliette Bruce, Melody Chan, and Raluca Vlad.
+\newblock Tropicalizations of locally symmetric varieties, 2025.
+\newblock arXiv:2505.10504.
+
+\bibitem{banksCobbSayrafi26}
+Maya Banks, John Cobb, and Mahrud Sayrafi.
+\newblock Weighted syzygies of pointed curves, 2026.
+\newblock arXiv:2609.00312.
+
+\bibitem{bayerStillman87}
+David Bayer and Michael Stillman.
+\newblock A criterion for detecting {$m$}-regularity.
+\newblock {\em Invent. Math.}, 87(1):1--11, 1987.
+
+\bibitem{benson04}
+Dave Benson.
+\newblock {Dickson} invariants, regularity and computation in group cohomology.
+\newblock {\em Illinois Journal of Mathematics}, 48(1):171--197, 2004.
+
+\bibitem{BES20}
+Christine Berkesch, Daniel Erman, and Gregory~G. Smith.
+\newblock Virtual resolutions for a product of projective spaces.
+\newblock {\em Algebr. Geom.}, 7(4):460--481, 2020.
+
+\bibitem{BEL91}
+Aaron Bertram, Lawrence Ein, and Robert Lazarsfeld.
+\newblock Vanishing theorems, a theorem of {S}everi, and the equations defining
+  projective varieties.
+\newblock {\em J. Amer. Math. Soc.}, 4(3):587--602, 1991.
+
+\bibitem{bhargavaPoonen20}
+Manjul Bhargava and Bjorn Poonen.
+\newblock The local-global principle for integral points on stacky curves.
+\newblock {\em J. Algebraic Geom.}, 31(4):773--782, 2022.
+
+\bibitem{BCGY23}
+Christin Bibby, Melody Chan, Nir Gadish, and Claudia~He Yun.
+\newblock Homology representations of compactified configurations on graphs
+  applied to {$\mathcal{M}_{2,n}$}.
+\newblock {\em Exp. Math.}, 33(4):611--623, 2024.
+
+\bibitem{borel74}
+Armand Borel.
+\newblock Stable real cohomology of arithmetic groups.
+\newblock {\em Ann. Sci. {\'E}cole Norm. Sup. (4)}, 7(2):235--272, 1974.
+
+\bibitem{borisovChenSmith05}
+Lev~A. Borisov, Linda Chen, and Gregory~G. Smith.
+\newblock The orbifold {C}how ring of toric {D}eligne-{M}umford stacks.
+\newblock {\em J. Amer. Math. Soc.}, 18(1):193--215, 2005.
+
+\bibitem{botbolChardin17}
+Nicol\'as Botbol and Marc Chardin.
+\newblock Castelnuovo {M}umford regularity with respect to multigraded ideals.
+\newblock {\em J. Algebra}, 474:361--392, 2017.
+
+\bibitem{braggOlssonWebb24}
+Daniel Bragg, Martin Olsson, and Rachel Webb.
+\newblock Ample vector bundles and moduli of tame stacks, 2024.
+\newblock arXiv:2407.01743.
+
+\bibitem{BBCMMW24}
+Madeline Brandt, Juliette Bruce, Melody Chan, Margarida Melo, Gwyneth Moreland,
+  and Corey Wolfe.
+\newblock On the top-weight rational cohomology of {$\mathcal{A}_g$}.
+\newblock {\em Geom. Topol.}, 28(2):497--538, 2024.
+
+\bibitem{brandtBruceCorey23}
+Madeline Brandt, Juliette Bruce, and Daniel Corey.
+\newblock The virtual {Euler} characteristic for binary matroids, 2023.
+\newblock arXiv:2301.10108.
+
+\bibitem{Brown23}
+Francis Brown.
+\newblock Bordifications of the moduli spaces of tropical curves and abelian
+  varieties, and unstable cohomology of {$\mathrm{GL}_{g}(\mathbb{Z})$} and
+  {$\mathrm{SL}_{g}(\mathbb{Z})$}.
+\newblock {\em Invent. Math.}, 241(1):35--152, 2025.
+
+\bibitem{BCGP24}
+Francis Brown, Melody Chan, S{\o}ren Galatius, and Sam Payne.
+\newblock {Hopf} algebras in the cohomology of {$\mathcal{A}_g$},
+  {$\mathrm{GL}_n(\mathbb{Z})$}, and {$\mathrm{SL}_n(\mathbb{Z})$}, 2024.
+\newblock arXiv:2405.11528.
+
+\bibitem{brownErmanStrands24}
+Michael~K. Brown and Daniel Erman.
+\newblock Linear strands of multigraded free resolutions.
+\newblock {\em Math. Ann.}, 390(2):2707--2725, 2024.
+
+\bibitem{brownErman24-2}
+Michael~K. Brown and Daniel Erman.
+\newblock Positivity and nonstandard graded {B}etti numbers.
+\newblock {\em Bull. Lond. Math. Soc.}, 56(1):111--123, 2024.
+
+\bibitem{brownErman24-1}
+Michael~K. Brown and Daniel Erman.
+\newblock A short proof of the {H}anlon-{H}icks-{L}azarev theorem.
+\newblock {\em Forum Math. Sigma}, 12:e56, 2024.
+
+\bibitem{brownErman25}
+Michael~K. Brown and Daniel Erman.
+\newblock Linear syzygies of curves in weighted projective space.
+\newblock {\em Compos. Math.}, 161(4):916--944, 2025.
+
+\bibitem{brownErmanTate}
+Michael~K. Brown and Daniel Erman.
+\newblock Tate resolutions on toric varieties.
+\newblock {\em J. Eur. Math. Soc.}, 28(1):269--304, 2026.
+
+\bibitem{brownSayrafi24}
+Michael~K. Brown and Mahrud Sayrafi.
+\newblock A short resolution of the diagonal for smooth projective toric
+  varieties of {P}icard rank 2.
+\newblock {\em Algebra Number Theory}, 18(10):1923--1943, 2024.
+
+\bibitem{BBZ26}
+Juliette Bruce, Jacob Bucciarelli, and Bailee Zacovic.
+\newblock Explorations of matroid complexes, 2026.
+\newblock arXiv:2605.24695.
+
+\bibitem{BCEGLY22}
+Juliette Bruce, Daniel Corey, Daniel Erman, Steve Goldstein, Robert~P. Laudone,
+  and Jay Yang.
+\newblock Syzygies of {$\mathbb{P}^1\times\mathbb{P}^1$}: data and conjectures.
+\newblock {\em J. Algebra}, 593:589--621, 2022.
+
+\bibitem{bruceHellerSayrafi22}
+Juliette Bruce, Lauren Cranton~Heller, and Mahrud Sayrafi.
+\newblock Bounds on multigraded regularity, 2022.
+\newblock arXiv:2208.11115.
+
+\bibitem{bruceHellerSayrafi26}
+Juliette Bruce, Lauren Cranton~Heller, and Mahrud Sayrafi.
+\newblock Characterizing multigraded regularity and virtual resolutions on
+  products of projective spaces.
+\newblock {\em Advances in Mathematics}, 500:111049, 2026.
+
+\bibitem{bruceHellerSayrafiSeceleanu25}
+Juliette Bruce, Lauren Cranton~Heller, Mahrud Sayrafi, and Alexandra Seceleanu.
+\newblock {Seshadri} regions and the asymptotic shape of multigraded
+  regularity, 2025.
+\newblock arXiv:2512.05289.
+
+\bibitem{BEGY20}
+Juliette Bruce, Daniel Erman, Steve Goldstein, and Jay Yang.
+\newblock Conjectures and computations about {V}eronese syzygies.
+\newblock {\em Exp. Math.}, 29(4):398--413, 2020.
+
+\bibitem{cadman07}
+Charles Cadman.
+\newblock Using stacks to impose tangency conditions on curves.
+\newblock {\em Amer. J. Math.}, 129(2):405--427, 2007.
+
+\bibitem{canningLarsonPayne23}
+Samir Canning, Hannah Larson, and Sam Payne.
+\newblock The eleventh cohomology group of {$\overline{\mathcal{M}}_{g,n}$}.
+\newblock {\em Forum Math. Sigma}, 11:Paper No. e62, 18 pp., 2023.
+
+\bibitem{castelnuovo1893}
+Guido Castelnuovo.
+\newblock Sui multipli di una serie lineare di gruppi di punti appartenente ad
+  una curva algebrica.
+\newblock {\em Rend. Circ. Mat. Palermo}, 7:89--110, 1893.
+
+\bibitem{CCMPV19}
+Giulio Caviglia, Marc Chardin, Jason McCullough, Irena Peeva, and Matteo
+  Varbaro.
+\newblock Regularity of prime ideals.
+\newblock {\em Math. Z.}, 291(1-2):421--435, 2019.
+
+\bibitem{CGP21}
+Melody Chan, S\o~ren Galatius, and Sam Payne.
+\newblock Tropical curves, graph complexes, and top weight cohomology of
+  {$\mathcal{M}_g$}.
+\newblock {\em J. Amer. Math. Soc.}, 34(2):565--594, 2021.
+
+\bibitem{CGP22}
+Melody Chan, S{\o}ren Galatius, and Sam Payne.
+\newblock Topology of moduli spaces of tropical curves with marked points.
+\newblock In Paolo Aluffi, David Anderson, Milena Hering, Mircea
+  Musta{\c{t}}{\u{a}}, and Sam Payne, editors, {\em Facets of Algebraic
+  Geometry: A Collection in Honor of William Fulton's 80th Birthday. Vol. 1},
+  volume 472 of {\em London Mathematical Society Lecture Note Series}, pages
+  77--131. Cambridge University Press, 2022.
+
+\bibitem{chardinNemati20}
+Marc Chardin and Navid Nemati.
+\newblock Multigraded regularity of complete intersections, 2020.
+\newblock arXiv:2012.14899.
+
+\bibitem{chiodoEFS13}
+Alessandro Chiodo, David Eisenbud, Gavril Farkas, and Frank-Olaf Schreyer.
+\newblock Syzygies of torsion bundles and the geometry of the level {$\ell$}
+  modular variety over {$\overline{\mathcal{M}}_g$}.
+\newblock {\em Invent. Math.}, 194(1):73--118, 2013.
+
+\bibitem{cobb24}
+John Cobb.
+\newblock Syzygies of curves in products of projective spaces.
+\newblock {\em Math. Z.}, 306(2):Paper No. 27, 19 pp., 2024.
+
+\bibitem{CPJ22}
+Kaelin Cook-Powell and David Jensen.
+\newblock Tropical methods in {H}urwitz-{B}rill-{N}oether theory.
+\newblock {\em Adv. Math.}, 398:Paper No. 108199, 42, 2022.
+
+\bibitem{cox95}
+David~A. Cox.
+\newblock The homogeneous coordinate ring of a toric variety.
+\newblock {\em J. Algebraic Geom.}, 4(1):17--50, 1995.
+
+\bibitem{CHT99}
+S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
+\newblock Asymptotic behaviour of the {C}astelnuovo-{M}umford regularity.
+\newblock {\em Compositio Math.}, 118(3):243--261, 1999.
+
+\bibitem{CEL01}
+Steven~Dale Cutkosky, Lawrence Ein, and Robert Lazarsfeld.
+\newblock Positivity and complexity of ideal sheaves.
+\newblock {\em Math. Ann.}, 321(2):213--234, 2001.
+
+\bibitem{DB25}
+Caitlin~M. Davis and Boyana Martinova.
+\newblock The {Koszul} property for truncations of nonstandard graded
+  polynomial rings, 2025.
+\newblock arXiv:2503.17541.
+
+\bibitem{demazure88}
+Michel Demazure.
+\newblock Anneaux gradu{\'e}s normaux.
+\newblock In {\em Introduction {\`a} la th{\'e}orie des singularit{\'e}s,
+  {II}}, volume~37 of {\em Travaux en Cours}, pages 35--68. Hermann, Paris,
+  1988.
+
+\bibitem{deopurkar18}
+Anand Deopurkar.
+\newblock The canonical syzygy conjecture for ribbons.
+\newblock {\em Math. Z.}, 288(3-4):1157--1164, 2018.
+
+\bibitem{einLazarsfeld93}
+Lawrence Ein and Robert Lazarsfeld.
+\newblock Syzygies and {K}oszul cohomology of smooth projective varieties of
+  arbitrary dimension.
+\newblock {\em Invent. Math.}, 111(1):51--67, 1993.
+
+\bibitem{EES15}
+David Eisenbud, Daniel Erman, and Frank-Olaf Schreyer.
+\newblock {Tate} resolutions for products of projective spaces.
+\newblock {\em Acta Math. Vietnam.}, 40(1):5--36, 2015.
+
+\bibitem{eisenbudGoto84}
+David Eisenbud and Shiro Goto.
+\newblock Linear free resolutions and minimal multiplicity.
+\newblock {\em J. Algebra}, 88(1):89--133, 1984.
+
+\bibitem{EMS00}
+David Eisenbud, Mircea Musta{\c{t}}{\u{a}}, and Mike Stillman.
+\newblock Cohomology on toric varieties and local cohomology with monomial
+  supports.
+\newblock {\em J. Symbolic Comput.}, 29(4--5):583--600, 2000.
+
+\bibitem{farkasKemeny16}
+Gavril Farkas and Michael Kemeny.
+\newblock The generic {G}reen-{L}azarsfeld secant conjecture.
+\newblock {\em Invent. Math.}, 203(1):265--301, 2016.
+
+\bibitem{farkasKemeny17}
+Gavril Farkas and Michael Kemeny.
+\newblock The {P}rym-{G}reen conjecture for torsion line bundles of high order.
+\newblock {\em Duke Math. J.}, 166(6):1103--1124, 2017.
+
+\bibitem{farkasMustataPopa03}
+Gavril Farkas, Mircea Musta\c~t\v a, and Mihnea Popa.
+\newblock Divisors on {$\mathcal{M}_{g,g+1}$} and the minimal resolution
+  conjecture for points on canonical curves.
+\newblock {\em Ann. Sci. \'Ecole Norm. Sup. (4)}, 36(4):553--581, 2003.
+
+\bibitem{faveroHuang23}
+David Favero and Jesse Huang.
+\newblock {Rouquier} dimension is {Krull} dimension for normal toric varieties.
+\newblock {\em Eur. J. Math.}, 9(4):Paper No. 91, 2023.
+
+\bibitem{toricStacks1}
+Anton Geraschenko and Matthew Satriano.
+\newblock Toric stacks {I}: {T}he theory of stacky fans.
+\newblock {\em Trans. Amer. Math. Soc.}, 367(2):1033--1071, 2015.
+
+\bibitem{toricStacks2}
+Anton Geraschenko and Matthew Satriano.
+\newblock Toric stacks {II}: {I}ntrinsic characterization of toric stacks.
+\newblock {\em Trans. Amer. Math. Soc.}, 367(2):1073--1094, 2015.
+
+\bibitem{gotzmann78}
+Gerd Gotzmann.
+\newblock Eine bedingung f{\"u}r die flachheit und das {Hilbertpolynom} eines
+  graduierten {Ringes}.
+\newblock {\em Math. Z.}, 158(1):61--70, 1978.
+
+\bibitem{green84-I}
+Mark~L. Green.
+\newblock {K}oszul cohomology and the geometry of projective varieties.
+\newblock {\em J. Differential Geom.}, 19(1):125--171, 1984.
+\newblock With an appendix by Mark L. Green and Robert Lazarsfeld.
+
+\bibitem{grothendieck61}
+Alexander Grothendieck.
+\newblock Techniques de construction et th{\'e}or{\`e}mes d'existence en
+  g{\'e}om{\'e}trie alg{\'e}brique {IV}: les sch{\'e}mas de {Hilbert}.
+\newblock In {\em S{\'e}minaire Bourbaki: ann{\'e}es 1960/61, expos{\'e}s
+  205--222}, number~6 in S{\'e}minaire Bourbaki, pages 249--276.
+  Soci{\'e}t{\'e} Math{\'e}matique de France, 1961.
+\newblock Expos{\'e} 221.
+
+\bibitem{grushevsky09}
+Samuel Grushevsky.
+\newblock Geometry of {$\mathcal{A}_g$} and its compactifications.
+\newblock In {\em Algebraic geometry---{S}eattle 2005. {P}art 1}, volume 80,
+  Part 1 of {\em Proc. Sympos. Pure Math.}, pages 193--234. Amer. Math. Soc.,
+  Providence, RI, 2009.
+
+\bibitem{GLP83}
+Laurent Gruson, Robert Lazarsfeld, and Christian Peskine.
+\newblock On a theorem of {C}astelnuovo, and the equations defining space
+  curves.
+\newblock {\em Invent. Math.}, 72(3):491--506, 1983.
+
+\bibitem{hain02}
+Richard Hain.
+\newblock The rational cohomology ring of the moduli space of abelian 3-folds.
+\newblock {\em Math. Res. Lett.}, 9(4):473--491, 2002.
+
+\bibitem{HHL24}
+Andrew Hanlon, Jeff Hicks, and Oleg Lazarev.
+\newblock Resolutions of toric subvarieties by line bundles and applications.
+\newblock {\em Forum Math. Pi}, 12:Paper No. e24, 58, 2024.
+
+\bibitem{hoffmanWang04}
+J.~William Hoffman and Hao~Hao Wang.
+\newblock {C}astelnuovo--{M}umford regularity in biprojective spaces.
+\newblock {\em Adv. Geom.}, 4(4):513--536, 2004.
+
+\bibitem{HT12}
+Klaus Hulek and Orsola Tommasi.
+\newblock Cohomology of the second {Voronoi} compactification of
+  {$\mathcal{A}_4$}.
+\newblock {\em Doc. Math.}, 17:195--244, 2012.
+
+\bibitem{HT18}
+Klaus Hulek and Orsola Tommasi.
+\newblock The topology of {$\mathcal{A}_g$} and its compactifications.
+\newblock In Jan~Arthur Christophersen and Kristian Ranestad, editors, {\em
+  Geometry of moduli}, volume~14 of {\em Abel Symp.}, pages 135--193. Springer,
+  Cham, 2018.
+\newblock With an appendix by Olivier Ta\"ibi.
+
+\bibitem{igusa62}
+Jun-ichi Igusa.
+\newblock On {S}iegel modular forms of genus two.
+\newblock {\em Amer. J. Math.}, 84(1):175--200, 1962.
+
+\bibitem{JR21}
+David Jensen and Dhruv Ranganathan.
+\newblock Brill-{N}oether theory for curves of a fixed gonality.
+\newblock {\em Forum Math. Pi}, 9:Paper No. e1, 33, 2021.
+
+\bibitem{kemeny21}
+Michael Kemeny.
+\newblock Universal secant bundles and syzygies of canonical curves.
+\newblock {\em Invent. Math.}, 223(3):995--1026, 2021.
+
+\bibitem{kemeny24}
+Michael Kemeny.
+\newblock The rank of syzygies of canonical curves.
+\newblock {\em J. Reine Angew. Math.}, 810:97--138, 2024.
+
+\bibitem{kobinZB25}
+Andrew Kobin and David Zureick-Brown.
+\newblock Wild stacky curves and rings of mod {$p$} modular forms, 2025.
+\newblock arXiv:2510.08821.
+
+\bibitem{Kodiyalam00}
+Vijay Kodiyalam.
+\newblock Asymptotic behaviour of {C}astelnuovo-{M}umford regularity.
+\newblock {\em Proc. Amer. Math. Soc.}, 128(2):407--411, 2000.
+
+\bibitem{kwak98}
+Sijong Kwak.
+\newblock {C}astelnuovo regularity for smooth subvarieties of dimensions 3 and
+  4.
+\newblock {\em J. Algebraic Geom.}, 7(1):195--206, 1998.
+
+\bibitem{kwak00}
+Sijong Kwak.
+\newblock Generic projections, the equations defining projective varieties and
+  {C}astelnuovo regularity.
+\newblock {\em Math. Z.}, 234(3):413--434, 2000.
+
+\bibitem{LLV25}
+Eric Larson, Hannah Larson, and Isabel Vogt.
+\newblock Global {B}rill-{N}oether theory over the {H}urwitz space.
+\newblock {\em Geom. Topol.}, 29(1):193--257, 2025.
+
+\bibitem{larson21}
+Hannah~K. Larson.
+\newblock Refined {B}rill-{N}oether theory for all trigonal curves.
+\newblock {\em Eur. J. Math.}, 7(4):1524--1536, 2021.
+
+\bibitem{lazarsfeld87}
+Robert Lazarsfeld.
+\newblock A sharp {C}astelnuovo bound for smooth surfaces.
+\newblock {\em Duke Math. J.}, 55(2):423--429, 1987.
+
+\bibitem{maclaganSmith04}
+Diane Maclagan and Gregory~G. Smith.
+\newblock Multigraded {C}astelnuovo-{M}umford regularity.
+\newblock {\em J. Reine Angew. Math.}, 571:179--212, 2004.
+
+\bibitem{maclaganSmith05}
+Diane Maclagan and Gregory~G. Smith.
+\newblock Uniform bounds on multigraded regularity.
+\newblock {\em J. Algebraic Geom.}, 14(1):137--164, 2005.
+
+\bibitem{martinova25}
+Boyana Martinova.
+\newblock Asymptotic syzygies of weighted projective spaces, 2025.
+\newblock arXiv:2510.12708.
+
+\bibitem{MP18}
+Jason McCullough and Irena Peeva.
+\newblock Counterexamples to the {E}isenbud-{G}oto regularity conjecture.
+\newblock {\em J. Amer. Math. Soc.}, 31(2):473--496, 2018.
+
+\bibitem{McCulloughPeeva20}
+Jason McCullough and Irena Peeva.
+\newblock The regularity conjecture for prime ideals in polynomial rings.
+\newblock {\em EMS Surv. Math. Sci.}, 7(1):173--206, 2020.
+
+\bibitem{mumford65}
+David Mumford.
+\newblock {\em Geometric invariant theory}, volume~34 of {\em Ergebnisse der
+  Mathematik und ihrer Grenzgebiete, (N.F.)}.
+\newblock Springer-Verlag, Berlin-New York, 1965.
+
+\bibitem{nasserdenXiao20}
+Brett Nasserden and Stanley~Yao Xiao.
+\newblock The density of rational points on {$\mathbb{P}^1$} with three stacky
+  points, 2020.
+\newblock arXiv:2011.06586.
+
+\bibitem{pareschiPopa03}
+Giuseppe Pareschi and Mihnea Popa.
+\newblock Regularity on abelian varieties {I}.
+\newblock {\em Journal of the American Mathematical Society}, 16(2):285--302,
+  2003.
+
+\bibitem{payneWillwacher21}
+Sam Payne and Thomas Willwacher.
+\newblock Weight two compactly supported cohomology of moduli spaces of curves.
+\newblock {\em Duke Math. J.}, 173(16):3107--3178, 2024.
+
+\bibitem{p17}
+Nathan Pflueger.
+\newblock Brill-{N}oether varieties of {$k$}-gonal curves.
+\newblock {\em Adv. Math.}, 312:46--63, 2017.
+
+\bibitem{pinkham77}
+Henry~C. Pinkham.
+\newblock Normal surface singularities with {$\mathbb{C}^{*}$} action.
+\newblock {\em Math. Ann.}, 227(2):183--193, 1977.
+
+\bibitem{pinkham86}
+Henry~C. Pinkham.
+\newblock A {C}astelnuovo bound for smooth surfaces.
+\newblock {\em Invent. Math.}, 83(2):321--332, 1986.
+
+\bibitem{sidmanVanTuylWang06}
+Jessica Sidman, Adam Van~Tuyl, and Haohao Wang.
+\newblock Multigraded regularity: coarsenings and resolutions.
+\newblock {\em Journal of Algebra}, 301(2):703--727, 2006.
+
+\bibitem{swanson97}
+Irena Swanson.
+\newblock Powers of ideals: primary decompositions, {Artin--Rees} lemma and
+  regularity.
+\newblock {\em Math. Ann.}, 307(2):299--313, 1997.
+
+\bibitem{symonds10}
+Peter Symonds.
+\newblock On the {Castelnuovo--Mumford} regularity of the cohomology ring of a
+  group.
+\newblock {\em Journal of the American Mathematical Society}, 23(4):1159--1173,
+  2010.
+
+\bibitem{symonds11}
+Peter Symonds.
+\newblock On the {Castelnuovo--Mumford} regularity of rings of polynomial
+  invariants.
+\newblock {\em Annals of Mathematics}, 174(1):499--517, 2011.
+
+\bibitem{voightZurieckBrown22}
+John Voight and David Zureick-Brown.
+\newblock The canonical ring of a stacky curve.
+\newblock {\em Mem. Amer. Math. Soc.}, 277(1362):v+144, 2022.
+
+\bibitem{voisin02}
+Claire Voisin.
+\newblock {G}reen's generic syzygy conjecture for curves of even genus lying on
+  a {$K3$} surface.
+\newblock {\em J. Eur. Math. Soc. (JEMS)}, 4(4):363--404, 2002.
+
+\bibitem{voisin05}
+Claire Voisin.
+\newblock {G}reen's canonical syzygy conjecture for generic curves of odd
+  genus.
+\newblock {\em Compos. Math.}, 141(5):1163--1190, 2005.
+
+\bibitem{watanabe81}
+Keiichi Watanabe.
+\newblock Some remarks concerning {Demazure}'s construction of normal graded
+  rings.
+\newblock {\em Nagoya Math. J.}, 83:203--211, 1981.
+
+\end{thebibliography}

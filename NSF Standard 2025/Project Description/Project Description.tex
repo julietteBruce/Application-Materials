@@ -276,37 +276,37 @@ During 2015-2020 the PI was supported by an NSF Graduate Research Fellowship (NS
 
 Of the 14 new papers the PI posted to the arXiv during these periods of support 10 have been accepted for publication, including in: \textit{Algebra \& Number Theory} \cite{bruceErman19}, \textit{Geometry \& Topology} \cite{BBCMMW24}, \textit{Journal of Algebra} \cite{BCEGLY22}, and \textit{Experimental Mathematics} \cite{BEGY20}. The PI contributed to 4 open-source software packages, one public-facing database, and two articles for the \textit{Notices of the AMS} \cite{BBB21,bruceNotices22}. A  detailed summary of these results and their intellectual merits continues in the following sections. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Asymptotic Syzygies}\label{subsec:asymptic-prior}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Broadly, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. For a smooth projective variety $X\subset \PP^{n_{d}}$ embedded by a very ample line bundle $L_{d}$; following \cite{ermanYang18}, set,
-\begin{align*}
-\rho_q\left(X,L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\NN |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{n_{d}},
-\end{align*}
-which is the percentage of non-zero syzygies appearing in row $q$ of the Betti table \cite[Theorem~1.1]{eisenbud05}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \NN}$. In this language, Green's work on the syzygies of high degree curves can be phrased as follows.
-\begin{theorem}\cite{green84-I}
-Let $X\subset \PP^n$ be a smooth projective curve. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then $\lim_{d\to \infty} \rho_{2}\left(X;L_{d}\right) = 0$.
-\end{theorem}
-
-Put differently, asymptotically the syzygies of curves are as simple as possible, occurring in the lowest possible degree. Ein and Lazarsfeld established the opposite asymptotic behavior for higher dimensional varieties under the analogous positivity condition. 
-
-\begin{theorem}\cite[Theorem~C]{einLazarsfeld12}
-Let $X\subset \PP^n$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq \dim X$. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample then $\lim_{d\to\infty} \rho_{q}\left(X; L_d\right) = 1$.
-\end{theorem}
-
-My work weakens the ample-growth hypothesis to semi-ample growth. Recall that a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$ (e.g.  $\cO(1,0)$ on $\PP^{n}\times \PP^{m}$). I established the following asymptotic nonvanishing result for $PP^{n}\times\PP^{m}$ embedded by $\cO(d_{1},d_{2})$. 
-
-\begin{theorem}\cite[Corollary~B]{bruce24}\label{thm:bruce-semiample}
-Let $X=\PP^{n}\times\PP^{m}$ and fix an index $1\leq q \leq n+m$. There exist constants $C_{i,j}$ and $D_{i,j}$ such that
-\[
-\rho_{q}\left(X; \cO\left(d_1,d_2\right)\right)\geq1-\sum_{\substack{i+j=q \\  i \leq n, \; j \leq m}}\left(
-\frac{C_{i,j}}{d_1^id_2^j}+\frac{D_{i,j}}{d_1^{n-i}d_2^{m-j}}\right)-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right).
-\]
-\end{theorem}
-
-If both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\PP^{n}\times\PP^{m}; \cO(d_1,d_2)\right)\to1$, recovering the results of Ein and Lazarsfeld for $\PP^n\times\PP^m$. However, if $d_{1}$ is fixed and $d_{2}\to \infty$ (i.e. semi-ample growth) my results bound the asymptotic percentage of non-zero syzygies away from zero. In fact I conjecture that, unlike in previously studied cases, in the semi-ample setting $\rho_{q}\left(\PP^{n}\times\PP^{m}; \cO(d_1,d_2)\right)$ does not approach 1. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case  \cite[Conjectures~7.1,~7.5]{einLazarsfeld12}.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Asymptotic Syzygies}\label{subsec:asymptic-prior}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%Broadly, asymptotic syzygies is the study of the graded Betti numbers (i.e. the syzygies) of a projective variety as the positivity of the embedding grows. For a smooth projective variety $X\subset \PP^{n_{d}}$ embedded by a very ample line bundle $L_{d}$; following \cite{ermanYang18}, set,
+%\begin{align*}
+%\rho_q\left(X,L_{d}\right)\;\;\coloneqq&\ \;\; \frac{\#\left\{p\in\NN |\; \big| \; \beta_{p,p+q}\left(X,L_{d}\right)\neq0\right\}}{n_{d}},
+%\end{align*}
+%which is the percentage of non-zero syzygies appearing in row $q$ of the Betti table \cite[Theorem~1.1]{eisenbud05}. The asymptotic perspective asks how $\rho_{q}(X;L_{d})$ behaves along the sequence of line bundles $(L_{d})_{d\in \NN}$. In this language, Green's work on the syzygies of high degree curves can be phrased as follows.
+%\begin{theorem}\cite{green84-I}
+%Let $X\subset \PP^n$ be a smooth projective curve. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles on $X$ such that $\deg L_{d} = d$ then $\lim_{d\to \infty} \rho_{2}\left(X;L_{d}\right) = 0$.
+%\end{theorem}
+%
+%Put differently, asymptotically the syzygies of curves are as simple as possible, occurring in the lowest possible degree. Ein and Lazarsfeld established the opposite asymptotic behavior for higher dimensional varieties under the analogous positivity condition. 
+%
+%\begin{theorem}\cite[Theorem~C]{einLazarsfeld12}
+%Let $X\subset \PP^n$ be a smooth projective variety, $\dim X \geq2$, and fix an index $1\leq q \leq \dim X$. If $(L_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $L_{d+1}-L_{d}$ is constant and ample then $\lim_{d\to\infty} \rho_{q}\left(X; L_d\right) = 1$.
+%\end{theorem}
+%
+%My work weakens the ample-growth hypothesis to semi-ample growth. Recall that a line bundle $L$ is \textit{semi-ample} if $|kL|$ is base point free for $k\gg0$ (e.g.  $\cO(1,0)$ on $\PP^{n}\times \PP^{m}$). I established the following asymptotic nonvanishing result for $PP^{n}\times\PP^{m}$ embedded by $\cO(d_{1},d_{2})$. 
+%
+%\begin{theorem}\cite[Corollary~B]{bruce24}\label{thm:bruce-semiample}
+%Let $X=\PP^{n}\times\PP^{m}$ and fix an index $1\leq q \leq n+m$. There exist constants $C_{i,j}$ and $D_{i,j}$ such that
+%\[
+%\rho_{q}\left(X; \cO\left(d_1,d_2\right)\right)\geq1-\sum_{\substack{i+j=q \\  i \leq n, \; j \leq m}}\left(
+%\frac{C_{i,j}}{d_1^id_2^j}+\frac{D_{i,j}}{d_1^{n-i}d_2^{m-j}}\right)-O\left(\begin{matrix}\text{lower ord.}\\ \text{terms}\end{matrix}\right).
+%\]
+%\end{theorem}
+%
+%If both $d_{1}\to \infty$ and $d_{2}\to\infty$ then $\rho_{q}\left(\PP^{n}\times\PP^{m}; \cO(d_1,d_2)\right)\to1$, recovering the results of Ein and Lazarsfeld for $\PP^n\times\PP^m$. However, if $d_{1}$ is fixed and $d_{2}\to \infty$ (i.e. semi-ample growth) my results bound the asymptotic percentage of non-zero syzygies away from zero. In fact I conjecture that, unlike in previously studied cases, in the semi-ample setting $\rho_{q}\left(\PP^{n}\times\PP^{m}; \cO(d_1,d_2)\right)$ does not approach 1. Proving this would require a vanishing result for asymptotic syzygies, which is open even in the ample case  \cite[Conjectures~7.1,~7.5]{einLazarsfeld12}.
+%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -413,13 +413,13 @@ Building upon our work discussed above -- and inspired by previous work on $\PP^
 	\[ t\qq_1+\aa+\reg S \subseteq \reg\!\left(I^t\right) \subseteq t\qq_2+\Nef(Y). \]
 \end{theorem}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Syzygies via Highly Distributed Computing}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-It is quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. My co-authors and I exploited recent advances in numerical linear algebra and high-throughput high-performance computing to generate a number of new examples of Veronese syzygies. A follow-up project used similar computational approaches to compute the syzygies of $\PP^{1}\times\PP^{1}$ in over 200 new examples. This data provided support for several existing conjectures, as well as led us to make a number of new conjectures \cite{BEGY20,BCEGLY22}. 
-The data is publicly available via SyzygyData.com and a package for Macaulay2 \cite{bruceErman19, M2}.
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsubsection{Syzygies via Highly Distributed Computing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%It is quite difficult to compute examples of syzygies. For example, until recently the syzygies of the projective plane embedded by the $d$-uple Veronese embedding were only known for $d\leq 5$. My co-authors and I exploited recent advances in numerical linear algebra and high-throughput high-performance computing to generate a number of new examples of Veronese syzygies. A follow-up project used similar computational approaches to compute the syzygies of $\PP^{1}\times\PP^{1}$ in over 200 new examples. This data provided support for several existing conjectures, as well as led us to make a number of new conjectures \cite{BEGY20,BCEGLY22}. 
+%The data is publicly available via SyzygyData.com and a package for Macaulay2 \cite{bruceErman19, M2}.
+%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -624,46 +624,34 @@ Let $\cX$ be a stacky curve with three stacky points whose stabilizers are $\ZZ/
 
 The approach of using large-scale computations to find conjectures concerning syzygies is very much in the same spirit as my prior work on the syzygies of surfaces \cite{BEGY20,BCEGLY22}. While the precise techniques needed to address Problem~\ref{prob:comp-canonical-stacky} will likely be different, much of the general framework of organizing, distributing, and publicizing such computations will likely be similar. 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Asymptotic Syzygies of Weighted Projective Stacks}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Asymptotic Syzygies of Weighted Projective Stacks}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%The study of asymptotic syzygies investigates the behavior of Betti numbers $\beta_{p,q}(X, L_d)$ as the positivity of the embedding line bundle $L_d$ grows. Ein and Lazarsfeld showed that for a smooth projective variety $X$, the shape of the Betti table stabilizes as $d\to\infty$ (see Section~\ref{subsec:asymptic-prior}). I propose to generalize this theory to smooth DM stacks. Toric stacks, including weighted projective stacks, provide a natural setting for this investigation.
+%
+%\begin{problem}\label{prob:asym-stacks}
+%Let $\cX$ be a smooth toric DM stack, $\dim \cX \geq2$, and fix an index $1\leq q \leq \dim \cX$. If $(\cL_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $\cL_{d+1}-\cL_{d}$ is constant and ample compute the limit (if it exists):
+%\[
+%\lim_{d\to\infty} \rho_{q}\left(\cX; \cL_d\right) = \lim_{d\to\infty} \frac{\#\left\{p\in\NN \; \big| \; \beta_{p,p+q}\left(\cX,\cL_{d}\right)\neq0\right\}}{n_{d}}.
+%\]
+%\end{problem}
+%
+%We will begin by focusing on specific examples, such as weighted projective planes. Let $\cP(a,b,c)$ be the quotient stack $(\CC^{3}\setminus \{0\})/\CC^{\times}$ where $\CC^{\times}$ acts by $\lambda\cdot (x,y,z)=(\lambda^a x, \lambda^b y,\lambda^c z)$. The coarse space of $\cP(a,b,c)$ is the usual weighted projective space $\PP(a,b,c)$.
+%
+%
+%\begin{problem}\label{prob:projective-plan-np}
+%	Fix a positive integer $a>1$. For what values of $p$ does the weighted projective stacky plane $\cP(1,1,a)$ embedded by $\cO(d)$ satisfy or not satisfy $N_{p}$. 
+%\end{problem}
+%
+%The stack $\cP(1,1,a)$ has a single stacky point with stabilizer $\ZZ/a\ZZ$. Its Cox ring is $S = \KK[x,y,z]$ with $\deg(x)=\deg(y)=1$ and $\deg(z)=a$. We anticipate that the required degree $d$ for $N_p$ to hold will grow linearly with $a$. I hope to approach both Problem~\ref{prob:asym-stacks} and Problem~\ref{prob:projective-plan-np} in a somewhat unified method. I believe it will be possible to adopt the methods of constructing explicit non-zero syzygies in the Koszul cohomology after quotienting by a regular sequence developed in \cite{EEL16} and extended by the PI (see Section~\ref{subsec:asymptic-prior} and \cite{bruce24}). Ideally these can be extended asymptotic results for toric stacks by using a weighted version of Noether normalization argument. 
 
-The study of asymptotic syzygies investigates the behavior of Betti numbers $\beta_{p,q}(X, L_d)$ as the positivity of the embedding line bundle $L_d$ grows. Ein and Lazarsfeld showed that for a smooth projective variety $X$, the shape of the Betti table stabilizes as $d\to\infty$ (see Section~\ref{subsec:asymptic-prior}). I propose to generalize this theory to smooth DM stacks. Toric stacks, including weighted projective stacks, provide a natural setting for this investigation.
-
-\begin{problem}\label{prob:asym-stacks}
-Let $\cX$ be a smooth toric DM stack, $\dim \cX \geq2$, and fix an index $1\leq q \leq \dim \cX$. If $(\cL_{d})_{d\in\NN}$ is a sequence of very ample line bundles such that $\cL_{d+1}-\cL_{d}$ is constant and ample compute the limit (if it exists):
-\[
-\lim_{d\to\infty} \rho_{q}\left(\cX; \cL_d\right) = \lim_{d\to\infty} \frac{\#\left\{p\in\NN \; \big| \; \beta_{p,p+q}\left(\cX,\cL_{d}\right)\neq0\right\}}{n_{d}}.
-\]
-\end{problem}
-
-We will begin by focusing on specific examples, such as weighted projective planes. Let $\cP(a,b,c)$ be the quotient stack $(\CC^{3}\setminus \{0\})/\CC^{\times}$ where $\CC^{\times}$ acts by $\lambda\cdot (x,y,z)=(\lambda^a x, \lambda^b y,\lambda^c z)$. The coarse space of $\cP(a,b,c)$ is the usual weighted projective space $\PP(a,b,c)$.
-
-
-\begin{problem}\label{prob:projective-plan-np}
-	Fix a positive integer $a>1$. For what values of $p$ does the weighted projective stacky plane $\cP(1,1,a)$ embedded by $\cO(d)$ satisfy or not satisfy $N_{p}$. 
-\end{problem}
-
-The stack $\cP(1,1,a)$ has a single stacky point with stabilizer $\ZZ/a\ZZ$. Its Cox ring is $S = \KK[x,y,z]$ with $\deg(x)=\deg(y)=1$ and $\deg(z)=a$. We anticipate that the required degree $d$ for $N_p$ to hold will grow linearly with $a$. I hope to approach both Problem~\ref{prob:asym-stacks} and Problem~\ref{prob:projective-plan-np} in a somewhat unified method. I believe it will be possible to adopt the methods of constructing explicit non-zero syzygies in the Koszul cohomology after quotienting by a regular sequence developed in \cite{EEL16} and extended by the PI (see Section~\ref{subsec:asymptic-prior} and \cite{bruce24}). Ideally these can be extended asymptotic results for toric stacks by using a weighted version of Noether normalization argument. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Computations with Toric Stacks}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While a general framework is out of reach,  toric stacks are tractable: their combinatorics is well developed,  they correspond to \emph{stacky fans} -- a fan $\Sigma \subset N_{\RR}$ and a lattice map $\beta:N\to L$ -- that makes computations feasible \cite{toricStacks1,toricStacks2,borisovChenSmith05}. I am not aware of an implementation for working with them. Given the success of the \textit{NormalToricVarieties} package, a \textit{toricStacks} package would benefit both this project and the community.
-
-
-\begin{problem}\label{prob:toric-stacks-m2}
-Develop a robust software package for \textit{Macaulay2} allowing for computations with toric stacks. 
-\end{problem}
-
-I will develop the Macaulay2 package \textit{toricStacks}, implementing stacky fans and their morphisms, line bundles on toric stacks, Cox rings, and sheaf cohomology. Work began in Summer 2025 with Maya Banks and John Cobb. I have extensive experience building Macaulay2 packages and will involve graduate students. The package will be open-source.
-
-As computations of examples of syzygies have frequently proven fruitful, I would like to extend the database of syzygies I created in \cite{BEGY20,BCEGLY22}. 
-
-\begin{problem}
-	Adapt  the high-performance computing methods in \cite{BEGY20,BCEGLY22} to compute the graded Betti numbers of $\cP(1,1,a)$ embedded by $\cO(d)$ for $1<a \leq 15$ and $2\leq d \leq 6$.
-\end{problem}
+%
+%As computations of examples of syzygies have frequently proven fruitful, I would like to extend the database of syzygies I created in \cite{BEGY20,BCEGLY22}. 
+%
+%\begin{problem}
+%	Adapt  the high-performance computing methods in \cite{BEGY20,BCEGLY22} to compute the graded Betti numbers of $\cP(1,1,a)$ embedded by $\cO(d)$ for $1<a \leq 15$ and $2\leq d \leq 6$.
+%\end{problem}
 
 
 	
@@ -734,113 +722,6 @@ Building directly on the PI's work \cite{bruceHellerSayrafi21,bruceHellerSayrafi
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In the classical setting of standard graded polynomial rings, significant attention has been given to studying the asymptotic behavior of Castelnuovo–Mumford regularity in various families, e.g., powers of ideals \cite{chandler97,Kodiyalam00,CHT99,BCHT13} and powers of ideal sheave \cite{cutkoskySrinivas93,cutkosky00,CEL01}, and providing meaningful geometric bounds on the regularity of ideals defining smooth subvarieties \cite{GLP83, eisenbudGoto84, BEL91, MP18}. The same questions for multigraded regularity remain widely open. The PI hopes to resolve this by building upon her recent work \cite{bruceHellerSayrafi22}
-
- \begin{problem}\label{prob:seshardri}
- 	Using Notation~\ref{not:toric}, understand the asymptotic behavior of $\reg(I^p)$ and $\reg(\cI^p)$ where $I \subset S$ is a $\ZZ^r$-graded ideal and $\cI\subset \cO_{Y}$ is an ideal sheaf.
-\end{problem}
-
-Ongoing work of the PI with Lauren Cranton Heller, Mahrud Sayrafi, and Alexandra Seceleanu on led to the following conjecture, which would provide a precise answer to Problem~\ref{prob:seshardri}. 
- 
- \begin{conjecture}\label{conj:reg-ideal-sheaves}
- 	Let $Y$ be a smooth projective toric variety and $\cI \subset \cO_{Y}$ an ideal sheaf. If $\pi: \tilde{Y} \to Y$ be the blow-up of $Y$ along $\cI$ and let $E$ denote the exceptional divisor then:
-	\[
-	\lim_{p\to \infty} \frac{\reg\left(\cI^p\right)_{\RR}}{p} = \left\{ \; L \in \Pic(Y)_{\RR} \;\; \big| \;\; \pi^*(L)-E \text{ is nef on $\tilde{Y}$} \;\right\}
-	\]
-where the limit is in the sense of Painlevé–Kuratowski convergence of subsets of $\RR^n$. 
- \end{conjecture}
- 
-We call the set on the right hand side of Conjecture~\ref{conj:reg-ideal-sheaves} the Seshadri region of $\cI$ as it is a natural multigraded analog of Seshadri constants, which measure positivity.  One can think of this conjecture as the natural analog of \cite{CEL01}. This conjecture suggests that the asymptotically, multigraded regularity -- which is typically complicated and non-convex -- is governed by a surprisingly simple, convex geometric object measuring positivity. In ongoing work, the PI has established key steps toward the proof and anticipates resolving this conjecture during the grant period.
-
-%This conjecture suggests that the asymptotic regularity has many surprising and nice properties. For example, depot $\reg(\cI^p)$ rarely being convex the Seshadri region is convex.  In ongoing work we hope to prove Conjecture~\ref{conj:reg-ideal-sheaves} and extend it to symmetric powers of vector bundles. 
-
-\begin{figure}[H]
-\newcommand{\makegrid}{
-  \path[use as bounding box] (-1.45,-1.25) rectangle (9.45,7.25);
-  %\foreach \x in {-1,...,6}
-  %\foreach \y in {-1,...,6}
-    %{ \fill[gray,fill=gray] (\x,\y) circle (1.5pt); }
-  \draw[-,  semithick] (-1,0)--(9,0);
-  \draw[-,  semithick] (0,-1)--(0,7);
-  \node at (-1,3) (a) {\scriptsize $(0,3)$};
-  \node at (7,-1) (a) {\scriptsize $(7,0)$};
-  \fill[fill=Black] (6.95,-.15) rectangle (7.05,0.15);
-  \fill[fill=Black] (-.15,2.95) rectangle (0.15,3.05);
-    \draw[-,  dashed] (0,3)--(7,0);
-}
-
-\begin{tikzpicture}[scale=.28]
- % \node at (2,7) (a) {\scriptsize $A_1$};
-  \path[fill=PineGreen!45] (7, 0)--(7, 3)--(0, 3)--(0,7)--(9,7)--(9,0)--(7,0);
-  \makegrid
-
-  \draw[->, ultra thick,PineGreen] (7,0)--(9,0);
-  \draw[-, cap=round,ultra thick,PineGreen] (7, 0)--(7, 3)--(0, 3);
-  \draw[->, ultra thick,PineGreen] (0,3)--(0,7);
-
-  \fill[TealBlue,fill=PineGreen] (7,0) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (0,3) circle (5pt);
-      \node at (5,4.55) (a) {\scriptsize $\frac{\reg(\cI)_{\RR}}{1}$};
-\end{tikzpicture}\quad
-\begin{tikzpicture}[scale=.28]
- % \node at (2,7) (a) {\scriptsize $A_1$};
-  \path[fill=PineGreen!45] (7,0)--(7,1)--(4.66667,1)--(4.66667,2)--(2.33333,2)--(2.33333,3)--(0,3)--(0,7)--(9,7)--(9,0)--(7,0);
-  \makegrid
-
-  \draw[->, ultra thick,PineGreen] (7,0)--(9,0);
-  \draw[-, cap=round,ultra thick,PineGreen] (7,0)--(7,1)--(4.66667,1)--(4.66667,2)--(2.33333,2)--(2.33333,3)--(0,3);
-  \draw[->, ultra thick,PineGreen] (0,3)--(0,7);
-
-  \fill[TealBlue,fill=PineGreen] (7,0) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (0,3) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (4.66667,1) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (2.33333,2) circle (5pt);
-
-      \node at (5,4.55) (a) {\scriptsize $\frac{\reg(\cI^3)_{\RR}}{3}$};
-\end{tikzpicture}\quad
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{tikzpicture}[scale=.28]
- % \node at (2,7) (a) {\scriptsize $A_1$};
-  \path[fill=PineGreen!45] (7,0)--(7,.6)--(5.6,.6)--(5.6,1.2)--(4.2,1.2)--(4.2,1.8)--(2.8,1.8)--(2.8
-      ,2.4)--(1.4,2.4)--(1.4,3)--(0,3)--(0,7)--(9,7)--(9,0)--(7,0);
-  \makegrid
-
-  \draw[->, ultra thick,PineGreen] (7,0)--(9,0);
-  \draw[-, cap=round,ultra thick,PineGreen] (7,0)--(7,.6)--(5.6,.6)--(5.6,1.2)--(4.2,1.2)--(4.2,1.8)--(2.8,1.8)--(2.8
-      ,2.4)--(1.4,2.4)--(1.4,3)--(0,3);
-  \draw[->, ultra thick,PineGreen] (0,3)--(0,7);
-
-  \fill[TealBlue,fill=PineGreen] (7,0) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (0,3) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (5.6,.6) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (4.2,1.2) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (2.8,1.8) circle (5pt);
-  \fill[TealBlue,fill=PineGreen] (1.4,2.4) circle (5pt);
-
-      \node at (5,4.55) (a) {\scriptsize $\frac{\reg(\cI^5)_{\RR}}{5}$};
-\end{tikzpicture}\quad
-\begin{tikzpicture}[scale=.28]
- % \node at (2,7) (a) {\scriptsize $A_1$};
-  \path[fill=MidnightBlue!45]  (0,3)--(7,0)--(9,0)--(9,7)--(0,7)--(0,3);
-  \makegrid
-
-  \draw[->, ultra thick,MidnightBlue] (7,0)--(9,0);
-  \draw[-, cap=round,ultra thick,MidnightBlue] (0,3)--(7,0);
-  \draw[->, ultra thick,MidnightBlue] (0,3)--(0,7);
-
-  \fill[TealBlue,fill=MidnightBlue] (7,0) circle (5pt);
-  \fill[TealBlue,fill=MidnightBlue] (0,3) circle (5pt);
-      \node at (3.5,4.55) (a) {\scriptsize $L=\lim\{\widehat{A}_p\}$};
-\end{tikzpicture}
-\caption{The picture of the convergence of $\frac{\reg(\cI^{p})_{\RR}}{p}$ to the Seshadri region of $\cI$ predicted Conjecture~\ref{conj:reg-ideal-sheaves}.}
-\end{figure}
-
-Given its definition and that it is a measure of positivity for an ideal sheaf, it is natural to wonder whether the Seshadri region of $\cI$ predicted Conjecture~\ref{conj:reg-ideal-sheaves} is connected to the theory of Newton-Okounkov bodies, which are also convex bodies roughly measuring positivity of a linear series along a flag of subvarieties that have received significant study \cite{okounkov96,okounkov03, lazarsfeldMustata09,KK12,anderson13,kaveh15} 
-
-  \begin{problem}
- 	Are the Seshadri regions Newton-Okounkov bodies for some flag on $Y$. 
- \end{problem}
  
 Beyond the asymptotics of $\reg(I^p)$ and $\reg(\cI^p)$ it would be useful to have a finer understanding of how these regions change with $p$. Computation and Conjecture~\ref{conj:reg-ideal-sheaves} suggest that the number of minimal generators with respect to the $\Nef(Y)$ ordering of $\reg(I^p)$ and $\reg(\cI^p)$ increases with $p$. This growth is a genuinely multigraded phenomenon, as on $\PP^n$ regularity is generated by a single element. Quantifying and explaining this growth is an interesting question within reach. 
 
@@ -864,20 +745,20 @@ I will approach Problem~\ref{prob:subvariety-bound} by beginning with understand
 
 Despite being a relatively simple class of subvarieties it has been shown that their multigraded regularity behaves in nuanced ways \cite{bruceHellerSayrafi22}.  The goal for approaching Problem~\ref{prob:torus-invariant-mg} is to compute both the higher cohomology of $\cI_Z$ and its Hilbert function using the combinatorics of the corresponding cone and working inductively on codimension. A degeneration argument and upper semicontinuity could then be used to extend an answer for Problem~\ref{prob:torus-invariant-mg} to an answer for Problem~\ref{prob:subvariety-bound}.
 
-Lastly I will pursue the following focused project concerning the defining equations and regularity of the Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, which has rich geometry and combinatorics \cite{knudsen83,GHvdP88,keel92,kapranov93,kerberMarkwig09,manin13,CGM21,GGL23}. Keel and Tevelev constructed an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding given by $\partial \overline{M}_{0,n} + K_{\overline{M}_{0,n}}$ factors \cite{keelTevelev09}. Monin and Rana \cite{moninRana17} produced explicit equations, discussed below, which they conjectured defined the scheme-theoretic image of $\Omega_{n}$. Gillespie, Griffin, and Levinson recently proved this \cite{GGL22}. 
-
-\begin{problem}\label{prob:m0n}
- 	Compute the multigraded Castelnuovo--Mumford Regularity and minimal graded free resolution of the defining ideal of $\Omega_{n}(\overline{M}_{0,n}) \subset \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$.
-\end{problem}
-
-Using \textit{Macaulay2}, the regularity and free resolution of $\Omega_{n}(\overline{M}_{0,n})$ is computable for $n=4,5,6,7$. The Monin-Rana equations defining $\Omega_{n}(\overline{M}_{0,n})$ arise as follows: Let $x_0^{(i)},x_1^{(i)}, \ldots, x_i^{(i)}$ denote the coordinates on $\PP^i$, then for each $i<j$ let
-\[
-M_{i,j} \coloneqq \begin{pmatrix}
-x_{0}^{(i)}(x_{0}^{(j)}-x_i^{(j)}) & x_{1}^{(i)}(x_{1}^{(j)}-x_i^{(j)})  & x_{2}^{(i)}(x_{2}^{(j)}-x_i^{(j)})  & \cdots & x_{i}^{(i)}(x_{i+1}^{(j)}-x_{i}^{(j)}) \\
-x_0^{(j)} & x_1^{(j)} & x_2^{(j)} & \cdots & x_{i+1}^{(j)}
-\end{pmatrix}.
-\]
-Define $J_{i,j}$ to be the ideal generated by the $2\times 2$ minors of $M_{i,j}$. The ideal defining $\Omega_{n}(\overline{M}_{0,n})$ is then $I_{n}=\sum_{1\leq i<j\leq n-3} J_{i,j}$. Each ideal $J_{i,j}$ is independent of $n$ and is resolved by an Eagon-Northcott complex. Further the defining ideals of $I_{n}$ have natural inductive structure since $I_{n}=I_{n-1}+J_{1,n-3}+\cdots+J_{n-4,n-3}$. Working inductively and using a mapping cone construction over the  short exact sequence arising from ideal sums we can produce a non-minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. The key technical step is to control the multigraded resolutions of intersections $J_{i,j}\cap J_{i',j'}$. If we can control these, we can then hope to minimize the resulting resolution to get the minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. This picture is also compatible with the following alternative approach: $\Omega_{n}(\overline{M}_{0,n})$ is the image of a product of $\GL$-equivariant bundles and so can use Kempf collapsing and the Kempf--Lascoux--Weyman geometric technique for computing syzygies \cite{kempf76,lascoux78,weyman03}, which has recently been applied successfully in similar situations \cite{bergetFink25}
+%Lastly I will pursue the following focused project concerning the defining equations and regularity of the Deligne-Mumford moduli space of $n$-pointed stable curves of genus zero, denoted by $\overline{M}_{0,n}$, which has rich geometry and combinatorics \cite{knudsen83,GHvdP88,keel92,kapranov93,kerberMarkwig09,manin13,CGM21,GGL23}. Keel and Tevelev constructed an embedding  $\Omega_{n}:\overline{M}_{0,n} \hookrightarrow \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$, through which the log canonical embedding given by $\partial \overline{M}_{0,n} + K_{\overline{M}_{0,n}}$ factors \cite{keelTevelev09}. Monin and Rana \cite{moninRana17} produced explicit equations, discussed below, which they conjectured defined the scheme-theoretic image of $\Omega_{n}$. Gillespie, Griffin, and Levinson recently proved this \cite{GGL22}. 
+%
+%\begin{problem}\label{prob:m0n}
+% 	Compute the multigraded Castelnuovo--Mumford Regularity and minimal graded free resolution of the defining ideal of $\Omega_{n}(\overline{M}_{0,n}) \subset \PP^{1}\times \PP^{2}\times \cdots \times \PP^{n-3}$.
+%\end{problem}
+%
+%Using \textit{Macaulay2}, the regularity and free resolution of $\Omega_{n}(\overline{M}_{0,n})$ is computable for $n=4,5,6,7$. The Monin-Rana equations defining $\Omega_{n}(\overline{M}_{0,n})$ arise as follows: Let $x_0^{(i)},x_1^{(i)}, \ldots, x_i^{(i)}$ denote the coordinates on $\PP^i$, then for each $i<j$ let
+%\[
+%M_{i,j} \coloneqq \begin{pmatrix}
+%x_{0}^{(i)}(x_{0}^{(j)}-x_i^{(j)}) & x_{1}^{(i)}(x_{1}^{(j)}-x_i^{(j)})  & x_{2}^{(i)}(x_{2}^{(j)}-x_i^{(j)})  & \cdots & x_{i}^{(i)}(x_{i+1}^{(j)}-x_{i}^{(j)}) \\
+%x_0^{(j)} & x_1^{(j)} & x_2^{(j)} & \cdots & x_{i+1}^{(j)}
+%\end{pmatrix}.
+%\]
+%Define $J_{i,j}$ to be the ideal generated by the $2\times 2$ minors of $M_{i,j}$. The ideal defining $\Omega_{n}(\overline{M}_{0,n})$ is then $I_{n}=\sum_{1\leq i<j\leq n-3} J_{i,j}$. Each ideal $J_{i,j}$ is independent of $n$ and is resolved by an Eagon-Northcott complex. Further the defining ideals of $I_{n}$ have natural inductive structure since $I_{n}=I_{n-1}+J_{1,n-3}+\cdots+J_{n-4,n-3}$. Working inductively and using a mapping cone construction over the  short exact sequence arising from ideal sums we can produce a non-minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. The key technical step is to control the multigraded resolutions of intersections $J_{i,j}\cap J_{i',j'}$. If we can control these, we can then hope to minimize the resulting resolution to get the minimal free resolution of $\Omega_{n}(\overline{M}_{0,n})$. This picture is also compatible with the following alternative approach: $\Omega_{n}(\overline{M}_{0,n})$ is the image of a product of $\GL$-equivariant bundles and so can use Kempf collapsing and the Kempf--Lascoux--Weyman geometric technique for computing syzygies \cite{kempf76,lascoux78,weyman03}, which has recently been applied successfully in similar situations \cite{bergetFink25}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \subsection{A Generalized Eisenbud--Goto Theorem for Toric Varieties}
@@ -1048,6 +929,18 @@ Geometrically we can think of sheaves crossing between $\Gamma$ and $\Gamma'$ by
 
 Proving these would establish that the homological complexity does not change arbitrarily under birational transformations, but rather follows predictable patterns dictated by VGIT. The strategy is to exploit the combinatorial control one over the irrelevant ideal during a wall-crossing, which corresponds to a bistellar flip that exchanges two minimal primes in the ideals $B_{\Gamma}$ and $B_{\Gamma'}$ \cite[Theorem 15.3.13]{CLS11}. A Mayer--Vietoris type spectral sequence can then relate the local cohomology modules $H^i_{B_{\Gamma}}((I :_{S} B_{\Gamma}^{\infty}))$ and $H^i_{B_{\Gamma'}}((I :_{S} B_{\Gamma'}^{\infty}))$ providing some control over the regularity and minimal free resolutions. This approach is further motivated by the fact these birational maps often induce equivalences on derived categories \cite{kawamata05,kawamata06,kawamata13,DHL15,kawamata16,ballardFaveroKatzarkov19}. As a test case for Problems~\ref{prob:wall-crossing-reg}, I explore varieties Y with Picard rank two, where the secondary fan is two-dimensional.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Development of Mathematical Software}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The lack of accessible computational tools is a significant bottleneck in the study of homological invariants of stacks. While a general framework is out of reach,  toric stacks are tractable: their combinatorics is well developed,  they correspond to \emph{stacky fans} -- a fan $\Sigma \subset N_{\RR}$ and a lattice map $\beta:N\to L$ -- that makes computations feasible \cite{toricStacks1,toricStacks2,borisovChenSmith05}. I am not aware of an implementation for working with them. Given the success of the \textit{NormalToricVarieties} package, a \textit{toricStacks} package would benefit both this project and the community.
+
+
+\begin{problem}\label{prob:toric-stacks-m2}
+Develop a robust software package for \textit{Macaulay2} allowing for computations with toric stacks. 
+\end{problem}
+
+I will develop the Macaulay2 package \textit{toricStacks}, implementing stacky fans and their morphisms, line bundles on toric stacks, Cox rings, and sheaf cohomology. Work began in Summer 2025 with Maya Banks and John Cobb. I have extensive experience building Macaulay2 packages and will involve graduate students. The package will be open-source.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,95 @@
+\documentclass[12pt]{amsart}
+\usepackage{fullpage,url,mathrsfs,setspace,amssymb,amsmath}
+
+
+\renewcommand{\arraystretch}{1.1}       %% lines 10\% further apart
+\newcommand{\Strut}{\rule{0pt}{13pt}}   %% extra height in table entry
+\newcommand{\genr}[1]{\langle#1\rangle} %% generated group
+
+  \newcommand{\setleftmargin}[1]{
+     \addtolength{\textwidth}{\oddsidemargin}
+      \addtolength{\textwidth}{1in}
+      \addtolength{\textwidth}{-#1}
+      \setlength{\oddsidemargin}{-1in}
+      \addtolength{\oddsidemargin}{#1}
+      \setlength{\evensidemargin}{\oddsidemargin}
+ }
+ 
+ \newcommand{\setrightmargin}[1]{
+      \setlength{\textwidth}{8.5in}
+      \addtolength{\textwidth}{-\oddsidemargin}
+      \addtolength{\textwidth}{-1in}
+      \addtolength{\textwidth}{-#1}
+ }
+ 
+ \newcommand{\setopmargin}[1]{
+      \addtolength{\textheight}{\topmargin}
+      \addtolength{\textheight}{1in}
+      \addtolength{\textheight}{\headheight}
+      \addtolength{\textheight}{\headsep}
+      \addtolength{\textheight}{-#1}
+      \setlength{\topmargin}{-1in}
+      \addtolength{\topmargin}{-\headheight}
+      \addtolength{\topmargin}{-\headsep}
+      \addtolength{\topmargin}{#1}
+ }
+ 
+ \newcommand{\setbottommargin}[1]{
+      \setlength{\textheight}{11in}
+      \addtolength{\textheight}{-\topmargin}
+      \addtolength{\textheight}{-1in}
+      \addtolength{\textheight}{-\footskip}
+      \addtolength{\textheight}{-#1}
+ }
+ 
+ \newcommand{\setallmargins}[1]{
+      \setbottommargin{#1}
+      \setopmargin{#1}
+      \setrightmargin{#1}
+      \setleftmargin{#1}
+ }
+ 
+%\setallmargins{1in}
+\setrightmargin{1.4in}
+\setleftmargin{1.4in}
+\setopmargin{1.4in}
+
+
+\usepackage{parskip}
+\begin{document}
+
+
+\begin{center}
+\textbf{Facilities, Equipment, and Other Resources}
+\end{center}
+
+\vspace{1cm}
+\textbf{Laboratory:}\\
+N/A
+\\
+\\
+\textbf{Clinical:}\\
+N/A
+\\
+\\
+\textbf{Animal:}\\
+N/A
+\\
+\\
+\textbf{Computer:}\\
+Dartmouth College and the Department of Mathematics at Dartmouth College have made significant investments in having the infrastructure necesary for large scale computation. Dartmouth Research computing has ,``A total of 6000+ CPU cores, 120,000 GPU cores, 12+TB of memory, and 1 PB of storage across all systems'' including many high-performance computing nodes. The Department of Mathematics has a number of its own servers dedicated to computational research. Dartmouth College also provides software licenses and access to Magma, Mathematica, Maple, R, Python, and other applications. 
+\\
+\\
+\textbf{Space:}\\
+All faculty, graduate students, and visitors are provided with sufficient office space to
+conduct their teaching and research.
+\\
+\\
+%\textbf{Project Effort:}\\
+%J. Bruce, as the PI on the project, and will devote full effort on the project.
+% \pagestyle{empty}
+%
+
+
+\end{document}
+
