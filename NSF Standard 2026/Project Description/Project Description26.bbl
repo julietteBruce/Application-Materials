@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{AGV08}
 Dan Abramovich, Tom Graber, and Angelo Vistoli.
@@ -26,6 +26,13 @@ Eran Assaf, Madeline Brandt, Juliette Bruce, Melody Chan, and Raluca Vlad.
 \newblock Tropicalizations of locally symmetric varieties, 2025.
 \newblock arXiv:2505.10504.
 
+\bibitem{longLiveKing}
+Matthew~R. Ballard, Christine Berkesch, Michael~K. Brown, Lauren
+  Cranton~Heller, Daniel Erman, David Favero, Sheel Ganatra, Andrew Hanlon, and
+  Jesse Huang.
+\newblock {King}'s conjecture and the {Cox} category, 2024.
+\newblock arXiv:2501.00130.
+
 \bibitem{banksCobbSayrafi26}
 Maya Banks, John Cobb, and Mahrud Sayrafi.
 \newblock Weighted syzygies of pointed curves, 2026.
@@ -40,6 +47,11 @@ David Bayer and Michael Stillman.
 Dave Benson.
 \newblock {Dickson} invariants, regularity and computation in group cohomology.
 \newblock {\em Illinois Journal of Mathematics}, 48(1):171--197, 2004.
+
+\bibitem{berkeschHellerSmithYang25}
+Christine Berkesch, Lauren {Cranton Heller}, Gregory~G. Smith, and Jay Yang.
+\newblock Cellular free resolutions for normalizations of toric ideals, 2025.
+\newblock \href{https://arxiv.org/abs/2512.17871}{arXiv:2512.17871}.
 
 \bibitem{BES20}
 Christine Berkesch, Daniel Erman, and Gregory~G. Smith.
@@ -67,6 +79,11 @@ Christin Bibby, Melody Chan, Nir Gadish, and Claudia~He Yun.
 Armand Borel.
 \newblock Stable real cohomology of arithmetic groups.
 \newblock {\em Ann. Sci. {\'E}cole Norm. Sup. (4)}, 7(2):235--272, 1974.
+
+\bibitem{borisovHan25}
+Lev Borisov and Zengrui Han.
+\newblock {Hanlon--Hicks--Lazarev} resolution revisited, 2025.
+\newblock \href{https://arxiv.org/abs/2509.11077}{arXiv:2509.11077}.
 
 \bibitem{borisovChenSmith05}
 Lev~A. Borisov, Linda Chen, and Gregory~G. Smith.
@@ -234,6 +251,12 @@ David~A. Cox.
 \newblock The homogeneous coordinate ring of a toric variety.
 \newblock {\em J. Algebraic Geom.}, 4(1):17--50, 1995.
 
+\bibitem{CH25}
+Lauren Cranton~Heller.
+\newblock Explicit constructions of short virtual resolutions of truncations.
+\newblock {\em Bulletin of the London Mathematical Society}, 57(12):4000--4014,
+  2025.
+
 \bibitem{CHT99}
 S.~Dale Cutkosky, J\"urgen Herzog, and Ng\^o{}~Vi\^et Trung.
 \newblock Asymptotic behaviour of the {C}astelnuovo-{M}umford regularity.
@@ -305,6 +328,17 @@ David Favero and Jesse Huang.
 \newblock {Rouquier} dimension is {Krull} dimension for normal toric varieties.
 \newblock {\em Eur. J. Math.}, 9(4):Paper No. 91, 2023.
 
+\bibitem{faveroHuang25}
+David Favero and Jesse Huang.
+\newblock Homotopy path algebras.
+\newblock {\em Selecta Mathematica, New Series}, 31(2):25, 2025.
+
+\bibitem{faveroSapronov24}
+David Favero and Mykola Sapronov.
+\newblock Line bundle resolutions via the coherent-constructible
+  correspondence, 2024.
+\newblock \href{https://arxiv.org/abs/2411.17873}{arXiv:2411.17873}.
+
 \bibitem{toricStacks1}
 Anton Geraschenko and Matthew Satriano.
 \newblock Toric stacks {I}: {T}he theory of stacky fans.
@@ -353,6 +387,11 @@ Laurent Gruson, Robert Lazarsfeld, and Christian Peskine.
 Richard Hain.
 \newblock The rational cohomology ring of the moduli space of abelian 3-folds.
 \newblock {\em Math. Res. Lett.}, 9(4):473--491, 2002.
+
+\bibitem{han26}
+Zengrui Han.
+\newblock Minimal resolutions of toric substacks by line bundles, 2026.
+\newblock \href{https://arxiv.org/abs/2604.14384}{arXiv:2604.14384}.
 
 \bibitem{HHL24}
 Andrew Hanlon, Jeff Hicks, and Oleg Lazarev.
@@ -471,12 +510,6 @@ Brett Nasserden and Stanley~Yao Xiao.
 \newblock The density of rational points on {$\mathbb{P}^1$} with three stacky
   points, 2020.
 \newblock arXiv:2011.06586.
-
-\bibitem{pareschiPopa03}
-Giuseppe Pareschi and Mihnea Popa.
-\newblock Regularity on abelian varieties {I}.
-\newblock {\em Journal of the American Mathematical Society}, 16(2):285--302,
-  2003.
 
 \bibitem{payneWillwacher21}
 Sam Payne and Thomas Willwacher.
