@@ -285,30 +285,27 @@
 \begin{document} 
 
 
-%\maketitle
-\begingroup  
+\begingroup
   \centering
   \scshape\bfseries Project Summary: Multigraded Homological Algebra \& Geometry\\[.5em]
 \endgroup
 \thispagestyle{empty}
-%\tableofcontents
-
-\setcounter{section}{0}
-
-\noindent \textbf{Overview.}\\
-\noindent This proposal advances the study of multigraded homological algebra, algebraic geometry, and combinatorics. It has three integrated projects: i) establishing connections between minimal graded free resolutions and geometry on stacky curves and toric stacks, ii) clarifying the connection between multigraded Castelnuovo–Mumford regularity and  free and virtual resolutions on toric varieties, and providing bounds and algorithms for multigraded regularity, and  iii) building a uniform framework to study homological invariants across all toric varieties with the same Cox ring. The PI expects the outcomes of this proposal to include new theorems linking homological algebra and toric geometry, developing open-source software, and targeted efforts to expand the mathematical community.
-\\ 
-\noindent \textbf{Intellectual Merit.}\\
-\noindent  The first project seeks to generalize classical results about the syzygies of algebraic varieties, e.g., Green's $N_p$-theorem for curves of high degree,  Green's conjecture concerning the syzygies of canonical curves, Ein and Lazarsfeld's  work on asymptotic syzygies, to stacky curves and toric stacks. As part of this work, the PI proposes a number of concrete questions developing a suitable theory of kernel bundles and Koszul cohomology adapted to the multigraded setting of toric stacks and stacky curves, studying non-standard graded analogs of Koszulness and their implications for the multigraded Betti numbers of stacky curves. The PI plans to develop software for computing with toric stacks and expand the database of syzygy computations the PI maintains.
-
-The PI's second project aims to further understanding of multigraded Castelnuovo–Mumford regularity, and other measures of algebraic and geometric complexity, in the multigraded and toric settings. As part of this, the PI seeks to generalize her recent work showing the precise relationship between free resolutions, virtual resolutions, and multigraded regularity on products of projective spaces to arbitrary toric varieties. The PI proposes several directions to develop meaningful bounds on multigraded regularity and to study its asymptotic behavior.  As a consequence of this work, the PI hopes to develop algorithms for effectively computing multigraded regularity. 
-
-The third project expands upon a developing theme that many homological properties of toric varieties only depend on the underlying graded ring. The main direction of this project is developing uniform homological algebra tools (multigraded regularity and virtual resolutions)  in the $D_{\text{Cox}}$ category. Using these tools, the PI hopes to prove: i) uniform vanishing and regularity statements that hold for all toric varieties with a fixed Cox ring, ii) descriptions of controlled changes in multigraded Betti numbers under variation of GIT stability, and iii) relate the local cohomology of modules after saturating by different monomial ideals corresponding to sheaves on different quotients. This project is closely connected to the first two projects.
+ 
+ \noindent \textbf{Overview.} 
 \\
-\noindent \textbf{Broader Impacts.}\\
-\noindent
-The PI will continue her work to broaden the mathematical community and develop the next generation of mathematicians. This includes continued mentoring of two undergraduates and three graduate students, organizing the \textit{Unspoken Rules} seminar, providing professional development to graduate students facing additional career challenges, and leading a project at a summer undergraduate research program in 2026. The PI has served in a number of roles seeking to support the growth and promotion of the mathematical community. This has included serving on committees for the AMS and SLMath, and being  the inaugural president of \textit{Spectra}. The PI will continue serving on AMS committees, and plans to re-engage in organizing for \textit{Spectra}.  The PI has organized several conferences: \textit{AGNES} (2024),  \textit{GEMS of Commutative Algebra} (2019, 2023), $\Spec(\overline{\Q})$ (2022), \textit{WAGS} (2021), \textit{GEMS of Combinatorics} (2023), \textit{Geometry \& Arithmetic of Surfaces} (2019), and \textit{M2@UW} (2018). The PI plans to organize: BATMOBILE in Fall 2025, \textit{GEMS of Commutative Algebra} in Winter 2027, and is preparing a BIRS proposal for a conference on syzygies and geometry. 
+Syzygies, the relations among equations, encode algebra and geometry, but much of the classical theory applies works best for standard graded rings. Rings with weighted or multiple gradings are unavoidable in modern commutative algebra and geometry: modular curves, section rings of stacky curves, and Cox rings of toric varieties all require multi/nonstandard gradings. This project develops multigraded homological algebra in three directions: (i) the syzygies of stacky curves, aimed at an analog of Green's conjecture for stacky curves; (ii) the shape and bounds of multigraded Castelnuovo--Mumford regularity and its connections to Betti numbers and toric geometry; and (iii) a regularity theory on the Cox category that repairs fragilities of multigraded regularity. New \textit{Macaulay2} tools, mentoring, educational resources, and organizing complement the research.
+\\
+\noindent \textbf{Intellectual Merit.} 
+\\
+The first direction develops syzygies of stacky curves, where fractional divisors play the role classically played by degree. The PI will determine the generator degrees of stacky canonical rings, sharpening Voight and Zureick-Brown's stacky Noether--Petri theorem, and relate their syzygies to those of the coarse curve. Since stacky points enlarge the Betti table beyond its classical shape, the stacky analog of Green's conjecture splits in two: a weak form, predicting that the coarse curve controls the linear strand and weighted $N_p$-properties, and a strong form, predicting that the full Betti table depends only on the coarse curve and the signature. Further projects study high-degree line bundles and log canonical rings on stacky curves.
+ 
+The second direction explains the shape of multigraded regularity on smooth projective toric varieties, where regularity is a region the Betti table does not determine. The PI proposes that support geometry governs the directions in which this region opens and that syzygies govern where its boundary lies. Together, these ideas will clarify how regularity relates to Betti numbers and yield the first finite algorithm for computing a module's full regularity region. A central goal is a toric analog of the Gruson--Lazarsfeld--Peskine theorem, which bounds the regularity of a projective curve by its degree: the PI conjectures an explicit bound in terms of the curve's numerical class and combinatorial data of the ambient variety. Finally, the PI will seek combinatorial formulas for the regularity of torus-invariant subvarieties, which extend to bounds on arbitrary subvarieties. 
 
-	
+The third direction asks whether multigraded regularity is the right definition in the wrong category. Working in the Cox category, which unifies all toric birational models sharing a Cox ring, the PI uses the uniform Hanlon--Hicks--Lazarev (HHL) resolution and the Bondal--Thomsen collection to propose a new definition of regularity that recovers the classical one on projective space and makes the structure sheaf $\mathbf{0}$-regular on every smooth projective model. Central questions in this project are whether regularity in the PI's sense persists under nef twists, whether it implies global generation, and how it relates to Maclagan--Smith regularity. %The project will deepen our understanding of the HHL resolution and the Cox category.
 
+Two software projects yield community tools: further development of the \textit{Macaulay2} package \texttt{toricStacks} and a database of the expert-chosen examples in \textit{Macaulay2}'s documentation, tracking authorship, as a first step toward community-centered AI/ML tools.
+\\ 
+\noindent \textbf{Broader Impacts.}
+\\
+ The PI advises three Ph.D.\ students on problems central to the proposal and will continue mentoring undergraduates. The PI will turn her Preliminary Arizona Winter School lectures and commutative algebra course notes into a modern, inquiry-based introductory book on algebraic geometry and commutative algebra. The PI is leading a \texttt{toricStacks} group at the 2027 \textit{Macaulay2} conference and will host \textit{Gems of Commutative Algebra III} in Fall 2028. The PI has submitted a proposal to organize a 2030 Fields thematic semester in combinatorial algebraic geometry. The PI will continue organizing \textit{Unwritten Rules} and working with Dartmouth's AWM chapter. The PI's work on AMS committees and the \textit{Spectra} Board of Trustees extends these efforts nationally.
 \end{document}
