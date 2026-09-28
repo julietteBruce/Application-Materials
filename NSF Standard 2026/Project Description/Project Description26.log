@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.4)  24 SEP 2026 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.4)  25 SEP 2026 13:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1028,40 +1028,34 @@ Package: wrapfig 2003/01/31  v 3.6
 File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count359
 )
-(./Project Description26.aux
-
-LaTeX Warning: Label `subsec:weighted-canonical' multiply defined.
-
-
-LaTeX Warning: Label `conj:middle' multiply defined.
-
-)
+(./Project Description26.aux)
 \openout1 = `"Project Description26.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 275.
-LaTeX Font Info:    ... okay on input line 275.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 275
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 257.
+LaTeX Font Info:    ... okay on input line 257.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 257
 .
- (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 275
+LaTeX Font Info:    Trying to load font information for U+msb on input line 257
 .
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1092,17 +1086,17 @@ e
 
 Package hyperref Warning: Draft mode on.
 
-Package hyperref Info: Link coloring OFF on input line 275.
+Package hyperref Info: Link coloring OFF on input line 257.
 Package microtype Info: Patching varwidth to enable character protrusion.
 \MT@vwid@leftmargin=\dimen362
 \MT@vwid@rightmargin=\dimen363
-LaTeX Info: Redefining \microtypecontext on input line 275.
-Package microtype Info: Applying patch `item' on input line 275.
-Package microtype Info: Applying patch `toc' on input line 275.
-Package microtype Info: Applying patch `eqnum' on input line 275.
-Package microtype Info: Applying patch `footnote' on input line 275.
-Package microtype Info: Applying patch `verbatim' on input line 275.
-LaTeX Info: Redefining \microtypesetup on input line 275.
+LaTeX Info: Redefining \microtypecontext on input line 257.
+Package microtype Info: Applying patch `item' on input line 257.
+Package microtype Info: Applying patch `toc' on input line 257.
+Package microtype Info: Applying patch `eqnum' on input line 257.
+Package microtype Info: Applying patch `footnote' on input line 257.
+Package microtype Info: Applying patch `verbatim' on input line 257.
+LaTeX Info: Redefining \microtypesetup on input line 257.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1157,7 +1151,7 @@ Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/sc' undefined
-(Font)              using `OT1/cmr/bx/n' instead on input line 280.
+(Font)              using `OT1/cmr/bx/n' instead on input line 262.
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
@@ -1165,46 +1159,76 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6284) has occurred while \output is active []
 
  [1{/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/
-local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [2] [
-3]
+local/texlive/2026/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+LaTeX Warning: Citation `beilinson78' on page 2 undefined on input line 404.
+
+[2] [3]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [4]
-[5] [6] [7] [8] [9]
+ [4] [5] [6]
 
-LaTeX Warning: Citation `keeler03' on page 10 undefined on input line 1012.
+LaTeX Warning: Citation `eisenbudHarris86' on page 7 undefined on input line 62
+1.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 103
-6.
+[7]
+
+LaTeX Warning: Citation `greenLazarsfeld88' on page 8 undefined on input line 6
+36.
+
+[8]
+
+LaTeX Warning: Citation `keeler03' on page 9 undefined on input line 684.
+
+[9]
+
+LaTeX Warning: Citation `BCHT13' on page 10 undefined on input line 716.
+
+LaTeX Font Info:    Trying to load font information for U+euf on input line 716
+.
 (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 (/usr/local/texlive/2026/texmf-dist/tex/latex/microtype/mt-euf.cfg
 File: mt-euf.cfg 2006/07/03 v1.1 microtype config. file: AMS Euler Fraktur (RS)
 
-) [10]
+)
+
+LaTeX Warning: Citation `lozovanuSmith12' on page 10 undefined on input line 72
+3.
+
+[10]
 
 Package enumitem Warning: Negative labelwidth. This does not make much
-(enumitem)                sense, on input line 1134.
+(enumitem)                sense, on input line 734.
 
-[11] [12] [13] [14]
+
+LaTeX Warning: Citation `lozovanu09' on page 11 undefined on input line 769.
+
+[11] [12] [13]
 
 LaTeX Font Warning: Font shape `OT1/cmtt/bx/sc' undefined
-(Font)              using `OT1/cmtt/bx/n' instead on input line 1560.
+(Font)              using `OT1/cmtt/bx/n' instead on input line 937.
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1560.
-
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 937.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/scit' undefined
-(Font)              using `OT1/cmr/bx/it' instead on input line 1560.
+(Font)              using `OT1/cmr/bx/it' instead on input line 937.
 
-[15] [16] [17] (./Project Description26.bbl
+
+LaTeX Warning: Citation `NormalToricVarietiesSource' on page 14 undefined on in
+put line 939.
+
+
+LaTeX Warning: Citation `M2' on page 14 undefined on input line 942.
+
+[14] [15] (./Project Description26.bbl
 Underfull \hbox (badness 4353) in paragraph at lines 84--87
 []\OT1/cmr/m/n/10.95 (+20) Lev Borisov and Zen-grui Han. Hanlon--Hicks--Lazarev
  res-o-lu-tion re-vis-ited, 2025.
@@ -1213,17 +1237,17 @@ Underfull \hbox (badness 4353) in paragraph at lines 84--87
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [20]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [21])
-[22] (./Project Description26.aux)
+ [19])
+[20] (./Project Description26.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
@@ -1235,18 +1259,15 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 32748 strings out of 467099
- 632966 string characters out of 5408260
- 1214093 words of memory out of 5000000
- 61076 multiletter control sequences out of 15000+600000
- 653710 words of font info for 247 fonts, out of 8000000 for 9000
+ 32740 strings out of 467099
+ 632919 string characters out of 5408260
+ 1214022 words of memory out of 5000000
+ 61078 multiletter control sequences out of 15000+600000
+ 653441 words of font info for 242 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 92i,20n,117p,1915b,990s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,20n,117p,1808b,990s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
@@ -1277,10 +1298,10 @@ dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2026/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2026
 /texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2026/t
 exmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on "Project Description26.pdf" (22 pages, 485397 bytes).
+Output written on "Project Description26.pdf" (20 pages, 476933 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 144 compressed objects within 2 object streams
+ 224 PDF objects out of 1000 (max. 8388607)
+ 140 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  55821 words of extra memory for PDF output out of 61914 (max. 10000000)
 
