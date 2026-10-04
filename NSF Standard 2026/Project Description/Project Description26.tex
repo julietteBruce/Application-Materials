@@ -237,7 +237,7 @@
 \DeclareMathOperator{\Coh}{Coh}
 
 \newcommand{\juliette}[1]{{\color{red} \sf $\spadesuit\spadesuit\spadesuit$ Juliette: [#1]}}
-
+\captionsetup{skip=4pt,font=small,margin=0pt}
 \newcommand{\kit}[1]{{\color{blue} \sf Kit: [#1]}}
 \newcommand{\jcite}{{\color{blue} \sf $\heartsuit\heartsuit\heartsuit$:cite}}
 
@@ -264,11 +264,13 @@
 
 \setcounter{section}{0}
 
-\noindent\textbf{Overview.} Castelnuovo--Mumford regularity and graded Betti numbers are standard tools linking the geometry of a projective variety to the algebra of its equations. This proposal extends parts of this theory beyond the standard graded setting: to nonstandard $\ZZ$-gradings, which arise from stacky curves, and to $\ZZ^r$-gradings, which arise from toric varieties. After reviewing prior support (\S\ref{sec:prior-work}), we develop a Green's-conjecture-type theory of syzygies of stacky canonical curves (\S\ref{sec:syzygies-on-stacks}); structural results and geometric bounds for multigraded regularity (\S\ref{sec:multigraded-regularity}); a uniform regularity theory on the Cox category of a toric variety (\S\ref{sec:uniform-homological-algebra-on-toric}); and open-source software (\S\ref{sec:comp}), with broader impacts in \S\ref{sec:broader-impacts}.
+\noindent\textbf{Overview.} Castelnuovo--Mumford regularity and graded Betti numbers link the geometry of a projective variety to the algebra of its equations. This proposal carries this theory beyond the standard grading: to nonstandard $\ZZ$-gradings, which arise from stacky curves, and to $\ZZ^r$-gradings, which arise from toric varieties. After reviewing results of prior NSF support (\S\ref{sec:prior-work}), we develop a Green's-conjecture-type theory for stacky canonical curves (\S\ref{sec:syzygies-on-stacks}); structural results and geometric bounds for multigraded regularity (\S\ref{sec:multigraded-regularity}); a uniform regularity theory on the Cox category of a toric variety (\S\ref{sec:uniform-homological-algebra-on-toric}); and open-source software (\S\ref{sec:comp}), with broader impacts in \S\ref{sec:broader-impacts}.
 
 \section{Results of Prior NSF Support}\label{sec:prior-work}
 
-From 2020 to 2022, the PI held an NSF Postdoctoral Research Fellowship (MSPRF DMS-2002239, \$150,000), \textit{Asymptotic Syzygies in Algebraic Geometry}. Since research projects and journal timelines extend past the award, the figures below span 2020--2025: 7 arXiv preprints \cite{BCEGLY22,bruceHellerSayrafi26,bruceHellerSayrafi22,brandtBruceCorey23,BBCMMW24,ABBCV25,bruceHellerSayrafiSeceleanu25} and 7 published articles, including in \textit{Geometry \& Topology} \cite{BBCMMW24}, \textit{Journal of Algebra} \cite{BCEGLY22}, and \textit{Experimental Mathematics} \cite{BEGY20}. This work substantially advanced homological algebra on toric varieties (\S\ref{subsec:prior:homological-algebra-on-toric}) and the cohomology of moduli spaces (\S\ref{subsec:prior:cohomology-of-ag}).
+\subsection{Intellectual Merit from Prior NSF Support}
+
+From 2020 to 2022, the PI held an NSF Postdoctoral Research Fellowship (MSPRF DMS-2002239, \$150,000), \textit{Asymptotic Syzygies in Algebraic Geometry}. As publication lags the award, these figures span 2020--2025:: 7 arXiv preprints \cite{BCEGLY22,bruceHellerSayrafi26,bruceHellerSayrafi22,brandtBruceCorey23,BBCMMW24,ABBCV25,bruceHellerSayrafiSeceleanu25} and 7 published articles, including in \textit{Geometry \& Topology} \cite{BBCMMW24}, \textit{Journal of Algebra} \cite{BCEGLY22}, and \textit{Experimental Mathematics} \cite{BEGY20}. This work advanced multigraded homological algebra (\S\ref{subsec:prior:homological-algebra-on-toric}) and the cohomology of moduli spaces (\S\ref{subsec:prior:cohomology-of-ag}).
 
 \subsection{Eisenbud--Goto on Products of Projective Spaces}\label{subsec:prior:homological-algebra-on-toric}
 
@@ -277,19 +279,17 @@ The Castelnuovo--Mumford regularity of a projective variety $X\subset \PP^{r}$ m
 \begin{theorem}\cite{eisenbudGoto84}\label{thm:eisenbud-goto}
 Let $\cF$ be a coherent sheaf on $\PP^{n}$ and $M=\bigoplus_{e\in\ZZ} H^0(\PP^{n},\cF(e))$ the corresponding section module. The following are equivalent:
 \begin{enumerate}
-\item $M$ is $d$-regular in the sense of \cite{mumford65};
+\item $M$ is $d$-regular in the sense of \cite[Lect.~14]{mumford66};
 \item $\beta_{p,q}(M)=0$ for all $p\geq0$ and $q>d+p$; and
 \item $M_{\geq d}$ has a $d$-linear resolution in the sense of \cite{eisenbudGoto84}.
 \end{enumerate}
 \end{theorem}
 
-Nearly every use of regularity in the literature---regularity of powers of ideals \cite{CHT99,Kodiyalam00}, the Eisenbud--Goto conjecture \cite{MP18}, the construction and boundedness of Hilbert schemes \cite{grothendieck61,gotzmann78}, Gr\"obner basis complexity \cite{bayerStillman87}---passes through these equivalences.
+Nearly every use of regularity in the literature, regularity of powers of ideals \cite{CHT99,Kodiyalam00}, the Eisenbud--Goto conjecture \cite{MP18}, the construction and boundedness of Hilbert schemes \cite{grothendieck61,gotzmann78}, Gr\"obner basis complexity \cite{bayerStillman87}, passes through these equivalences.
 
-A toric variety $X$ is a well-behaved compactification of a torus and, under mild hypotheses, a quotient $X=(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r$, where $B$ is the \emph{irrelevant ideal} of $X$; for $X = \PP^n$, this is $B=\langle x_0,\ldots,x_n\rangle$. Cox's theorem \cite{cox95} identifies coherent sheaves on $X$ with $B$-saturated $\ZZ^r$-graded modules over the \emph{Cox ring} $S=\CC[x_1,\ldots,x_n]$, translating the geometry of $X$ into multigraded commutative algebra. This dictionary is far subtler than in the standard graded case, and its subtleties drive much current work: virtual resolutions and resolutions of the diagonal \cite{BES20, HHL24, brownErman24-1, faveroHuang23}, generalizations of the BGG correspondence \cite{EES15,brownErmanTate}, and multigraded local cohomology \cite{botbolChardin17, chardinNemati20}.
+A toric variety $X$ is a well-behaved compactification of a torus and, under mild hypotheses, a quotient $X=(\CC^{n}\setminus \VV(B))/(\CC^{\times})^r$, where $B$ is the \emph{irrelevant ideal} of $X$; for $X = \PP^n$, this is $B=\langle x_0,\ldots,x_n\rangle$. Cox's theorem \cite{cox95} identifies coherent sheaves on $X$ with $B$-saturated $\ZZ^r$-graded modules over the \emph{Cox ring} $S=\CC[x_1,\ldots,x_n]$, translating the geometry of $X$ into multigraded commutative algebra. This dictionary is far subtler than for $\PP^n$, and its subtleties drive much current work: virtual resolutions and resolutions of the diagonal \cite{BES20, HHL24, brownErman24-1, faveroHuang23}, generalizations of the BGG correspondence \cite{EES15,brownErmanTate}, and multigraded local cohomology \cite{botbolChardin17, chardinNemati20}.
 
-Extending regularity beyond projective space has a long history. Early developments include Benson's treatment of nonstandard $\ZZ$-graded rings \cite{benson04}, later developed by Symonds in his groundbreaking work on invariant theory \cite{symonds10,symonds11}, and Hoffman and Wang's theory for products of two projective spaces \cite{hoffmanWang04}. In the toric setting, Maclagan and Smith gave a cohomological definition of multigraded regularity \cite{maclaganSmith04} that subsumes the weighted and biprojective theories and has become the standard framework for extending the classical theory to toric varieties.
-
-Throughout, $X$ denotes a smooth projective toric variety, so that $\Pic(X)\cong \ZZ^r$ and the nef cone $\Nef(X)_{\RR} \subset \Pic(X)_{\RR}$ is full-dimensional. We write $\Nef(X)\coloneqq \Nef(X)_{\RR} \cap \Pic(X)$ for the nef monoid and $B_{1},\ldots,B_{s}$ for its unique minimal generators. For an integer vector $\vv=(v_1,\ldots,v_t)$ of any length, set $|\vv|\coloneqq v_1+\cdots+v_t$.
+Extending regularity beyond projective space has a long history: Benson's theory for nonstandard $\ZZ$-graded rings \cite{benson04}, developed by Symonds in his groundbreaking work on invariant theory \cite{symonds10,symonds11}, and Hoffman--Wang's for products of two projective spaces \cite{hoffmanWang04}. Maclagan and Smith's cohomological definition \cite{maclaganSmith04} subsumes both and is the standard framework on toric varieties. Throughout, $X$ denotes a smooth projective toric variety, so that $\Pic(X)\cong \ZZ^r$ and the nef cone $\Nef(X)_{\RR} \subset \Pic(X)_{\RR}$ is full-dimensional. We write $\Nef(X)\coloneqq \Nef(X)_{\RR} \cap \Pic(X)$ for the nef monoid and $B_{1},\ldots,B_{s}$ for its unique minimal generators. For an integer vector $\vv=(v_1,\ldots,v_t)$ of any length, set $|\vv|\coloneqq v_1+\cdots+v_t$.
 
 \begin{defn}\cite[Def.~6.6]{maclaganSmith04}\label{def:mg-reg}
 A coherent sheaf $\cF$ on $X$ is \emph{$\dd$-regular}, for $\dd\in\ZZ^r$, if, for all $i>0$,
@@ -345,8 +345,8 @@ The regularity $\reg(M)$ of a $\ZZ^r$-graded $S$-module $M$ is defined by the an
         (2,0) -- (2,1) -- (1,1) -- (1,2) -- (0,2);
       \draw[reg ray] (2,0) -- (5,0);
       \draw[reg ray] (0,2) -- (0,5);
-    \end{tikzpicture}\par\smallskip
-    {\small (a)}
+  \node[anchor=north east,font=\small,fill=white,inner sep=1pt] at (5.4,-0.3) {(a)};
+    \end{tikzpicture}
   \end{minipage}\hfill
   \begin{minipage}[b]{.36\linewidth}
     \centering
@@ -360,8 +360,8 @@ The regularity $\reg(M)$ of a $\ZZ^r$-graded $S$-module $M$ is defined by the an
       \draw[reg boundary] (1,0) -- (1,1) -- (0,1);
       \draw[reg ray] (1,0) -- (7,0);
       \draw[reg ray] (0,1) -- (0,7);
-    \end{tikzpicture}\par\smallskip
-    {\small (b)}
+      \node[anchor=north east,font=\small,fill=white,inner sep=1pt] at (7.5,-0.3) {(b)};
+    \end{tikzpicture}
   \end{minipage}\hfill
   \begin{minipage}[b]{.36\linewidth}
     \centering
@@ -381,15 +381,15 @@ The regularity $\reg(M)$ of a $\ZZ^r$-graded $S$-module $M$ is defined by the an
         -- (-4,2) -- (-4,3) -- (-6,3) -- (-6,4) -- (-7,4);
       \draw[reg ray] (0,0) -- (7,0);
       \fill[regTeal] (0,0) circle[radius=2pt];
-    \end{tikzpicture}\par\smallskip
-    {\small (c)}
+      \node[anchor=north east,font=\small,fill=white,inner sep=1pt] at (7.5,-0.3) {(c)};
+    \end{tikzpicture}
   \end{minipage}
   \endgroup
   \caption{Regularity regions of (a) $S/I_Z$ for three points $Z=\{([1:1],[1:4]), ([1:2],[1:5]), ([1:3],[1:6])\}\subset\PP^1\times\PP^1$; (b) $\cO_{\cH_2}$; (c) $S/I_p$ for a point $p\in\cH_2$.}
   \label{fig:example-of-reg}
 \end{figure}
 
-Multigraded regularity has become a central tool in the study of uniform bounds and Hilbert schemes \cite{maclaganSmith05}, syzygies and local cohomology \cite{sidmanVanTuylWang06,botbolChardin17}, virtual resolutions \cite{BES20,bruceHellerSayrafi26}, and asymptotic regularity \cite{bruceHellerSayrafiSeceleanu25}. Yet for more than fifteen years after its introduction, a foundational question remained open: \emph{Is there a multigraded Eisenbud--Goto theorem?} That is, can multigraded regularity be characterized by free resolutions and truncations, as in Theorem~\ref{thm:eisenbud-goto}? Direct generalizations fail even for products of projective spaces. Answering a question of Maclagan--Smith, further studied by Botbol--Chardin \cite{botbolChardin17}, the PI and coauthors showed that multigraded Betti numbers do not determine regularity \cite[Ex.~5.1]{bruceHellerSayrafi26}, ruling out an analogue of condition~(2). Likewise, a $\dd$-regular module $M$ need not have $M_{\geq \dd}$ with a linear resolution, so condition~(3) must also be reformulated.
+Multigraded regularity has become a central tool in the study of uniform bounds and Hilbert schemes \cite{maclaganSmith05,aramovaCronaDeNegri00}, syzygies and local cohomology \cite{sidmanVanTuylWang06,HSS06,botbolChardin17}, virtual resolutions \cite{BES20,bruceHellerSayrafi26}, and asymptotic regularity \cite{haStrunk07,bruceHellerSayrafiSeceleanu25}. Yet for more than fifteen years after its introduction, a foundational question remained open: \emph{Is there a multigraded Eisenbud--Goto theorem?} That is, can multigraded regularity be characterized by free resolutions and truncations, as in Theorem~\ref{thm:eisenbud-goto}? Direct generalizations fail even for products of projective spaces. Answering a question of Maclagan--Smith, further studied by Botbol--Chardin \cite{botbolChardin17}, the PI and coauthors showed that multigraded Betti numbers do not determine regularity \cite[Ex.~5.1]{bruceHellerSayrafi26}, ruling out an analogue of condition~(2). Likewise, the truncation $M_{\geq \dd}$ of a $\dd$-regular module $M$ need not have a linear resolution, so condition~(3) must also be reformulated.
 
 A major advance came with Berkesch, Erman, and Smith's characterization of multigraded regularity on products of projective spaces via virtual resolutions with controlled degrees \cite[Thm.~2.9]{BES20}, a counterpart to condition~(2). Building on these ideas, the PI and coauthors introduced \emph{quasilinear resolutions} and proved a multigraded Eisenbud--Goto theorem in which quasilinear resolutions of truncations play the role of condition~(3).
 
@@ -401,7 +401,7 @@ Let $\cF$ be a coherent sheaf on $X=\PP^{n_1}\times \cdots \times \PP^{n_r}$ and
 \item $M_{\geq \dd}$ has a $\dd$-quasilinear resolution in the sense of \cite{bruceHellerSayrafi26}.
 \end{enumerate}
 \end{theorem}
-When $r=1$, Theorem~\ref{thm:mgreg-main} recovers the classical Eisenbud--Goto theorem, and (1)$\Leftrightarrow$(3) holds for every finitely generated $M$ with $H^0_B(M)=0$. Equally important are its methods: rather than resolving $M_{\geq\dd}$ directly, we compute its multigraded Betti numbers via a spectral sequence arising from the Fourier--Mukai transform of $\widetilde{M}$ with Beilinson's resolution of the diagonal~\cite{beilinson78} as kernel. This ``resolution of the diagonal'' approach is now a central technique \cite{brownErmanTate,brownErman24-1,HHL24,brownSayrafi24}. It also yields an effective algorithm, implemented in \cite{ABLS20}, for testing $\dd$-regularity and producing short virtual resolutions.
+When $r=1$, Theorem~\ref{thm:mgreg-main} recovers the classical Eisenbud--Goto theorem, and (1)$\Leftrightarrow$(3) holds for every finitely generated $M$ with $H^0_B(M)=0$. Equally important are its methods: rather than resolving $M_{\geq\dd}$ directly, we compute its multigraded Betti numbers via a spectral sequence arising from the Fourier--Mukai transform of $\widetilde{M}$ with Beilinson's resolution of the diagonal~\cite{beilinson78} as kernel. This ``resolution of the diagonal'' approach, now a central technique \cite{brownErmanTate,brownErman24-1,HHL24,brownSayrafi24}, also yields an effective algorithm~\cite{ABLS20,crantonHellerNemati22} for testing $\dd$-regularity and producing short virtual resolutions.
 
 \subsection{Bounds \& Asymptotic Behavior of Multigraded Regularity of Ideals}
 
@@ -412,8 +412,8 @@ Let $M$ be a finitely generated graded $S$-module with $\ann(M)=0$ and $\widetil
 \end{theorem}
 The proof uses the fact that $\dd$-regularity forces $M_{\geq\dd}$ to be generated in degree $\dd$; a chamber-and-determinant argument turns a violation of the bound into a nonzero annihilator of $M$. It applies to every nonzero homogeneous ideal $I\subseteq S$, though $\reg(S/I)$ may have infinitely many corners.
 
-For ordinary ideal powers in the standard graded setting, Swanson established linear bounds on regularity~\cite{swanson97}, and Cutkosky--Herzog--Trung and Kodiyalam proved eventual linearity~\cite{CHT99,Kodiyalam00}. Combining our bound with a resolution of the Rees algebra gives the first multigraded analog of these results, showing that regularity of powers of ideals translates at a linear rate.
-
+Classically, the regularity of powers is linearly bounded (Swanson~\cite{swanson97}) and eventually linear (Cutkosky--Herzog--Trung, Kodiyalam~\cite{CHT99,Kodiyalam00}). Combining our bound with a resolution of the Rees algebra gives the first multigraded analog: regularity of powers translates at a linear rate.
+ 
 \begin{cor}\cite[Thm.~5.1]{bruceHellerSayrafi22}
 Let $I=\langle f_1,\ldots,f_s\rangle\subseteq S$ be a nonzero homogeneous ideal. There is $\aa\in\Pic(X)$ such that for all integers $t>0$ and all $\qq_1,\qq_2\in\Pic(X)$ with $\qq_1\geq\deg f_i\geq\qq_2$ for all $i$,
 \[
@@ -429,38 +429,38 @@ The moduli stack of principally polarized abelian varieties of dimension $g$, $\
 The rational cohomology satisfies $H^{k}(\cA_{g};\QQ)\neq0$ for $(g,k)=(5,15)$, $(5,20)$, $(6,30)$, $(7,28)$, $(7,33)$, $(7,37)$, and $(7,42)$.
 \end{theorem}
 
-Theorem~\ref{thm:Ag} answers Grushevsky's question affirmatively and, since $H^*(\cA_g;\QQ) \cong H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$, produces new unstable cohomology for the symplectic group. These results inspired a Hopf algebra structure on the top-weight cohomology of $\cA_{g}$ \cite{BCGP24} and Brown's bordification of $\cA_g^{\trop}$ \cite{Brown23}, both producing further unstable cohomology of $\mathrm{GL}_n(\ZZ)$. The framework of \cite{BBCMMW24} is the template for the PI's subsequent work on tropicalizing general Shimura varieties \cite{ABBCV25}, the subject of a plenary lecture at the 2025 AMS Summer Research Institute in Algebraic Geometry.
+Theorem~\ref{thm:Ag} answers Grushevsky's question affirmatively and, since $H^*(\cA_g;\QQ) \cong H^*(\mathrm{Sp}_{2g}(\ZZ);\QQ)$, produces new unstable cohomology for the symplectic group. These results inspired a Hopf algebra structure on the top-weight cohomology of $\cA_{g}$ \cite{BCGP24} and Brown's bordification of $\cA_g^{\trop}$ \cite{Brown23}, both producing further unstable cohomology of $\mathrm{GL}_n(\ZZ)$. The framework of \cite{BBCMMW24} is the template for the PI's subsequent work on tropicalizing general Shimura varieties \cite{ABBCV25,ABBCV26}, the subject of a plenary lecture at the 2025 AMS Summer Research Institute in Algebraic Geometry.
 
 \subsection{Broader Impacts from Prior NSF Support}\label{subsec:prior-broader-impacts}
 
-During the award, I organized five conferences: \textit{WAGS} (100 participants), \textit{Gems of Combinatorics I} (40), $\Spec(\overline{\QQ})$ (50), \textit{BATMOBILE 2022} (20), and \textit{Gems of Commutative Algebra II} (40), plus special sessions at AMS Sectional Meetings. The \textit{Gems of} series builds research networks for the next generation.
+\subsubsection{Organizing.} During the award, I organized five conferences: \textit{WAGS} (100 participants), \textit{Gems of Combinatorics I} (40), $\Spec(\overline{\QQ})$ (50), \textit{BATMOBILE 2022} (20), and \textit{Gems of Commutative Algebra II} (40), plus AMS special sessions. The \textit{Gems of} series builds early-career research networks.
 
-\subsubsection{Mentoring \& Virtual Mathematics.} I led four undergraduate reading courses in algebra and geometry and volunteered with the \textit{Berkeley Math Circle} to promote mathematics to high schoolers. In Summer 2021 I led 6 undergraduates on a research project related to \cite{BBCMMW24}, and in Summer 2022 I advised an undergraduate---now a math Ph.D.\ student with an NSF GRF---on a project on tropical abelian varieties. As mathematics moved online during COVID-19, I worked to make virtual activities reach those often at the periphery. In Summer and Fall 2020 I helped run Ravi Vakil's \textit{Algebraic Geometry in the Time of Covid}, a massive open-access online course with $\sim$2,000 participants worldwide, and in Spring 2021 I organized an 8-week virtual undergraduate reading course in algebraic geometry and commutative algebra.
+\subsubsection{Mentoring \& Virtual Mathematics.} I led four undergraduate algebra and geometry reading courses and volunteered with the \textit{Berkeley Math Circle}, promoting mathematics to high schoolers. In Summer 2021, I led six undergraduates in research related to \cite{BBCMMW24} and advised a Summer 2022 project on tropical abelian varieties; that undergraduate is now a mathematics Ph.D.\ student with an NSF GRF. To reach those at the periphery as mathematics moved online during COVID-19, I helped run Ravi Vakil's massive open-access online course \textit{Algebraic Geometry in the Time of Covid} in Summer and Fall 2020 ($\sim$2,000 participants worldwide) and organized an 8-week virtual undergraduate reading course in commutative algebra in Spring 2021.
 
 \subsubsection{Community.}  During 2020--2023, I served on the board of \textit{Spectra}, including as its inaugural president. I oversaw its growth and formalization, including the adoption of bylaws, the creation of an invited lecture at the JMM, and a fundraising campaign that has raised over \$20,000.
 
 \section{The Geometry of Syzygies on Stacky Curves}\label{sec:syzygies-on-stacks}
+Let $X$ be a projective variety and $L$ a very ample line bundle. For the embedding $X \hookrightarrow \PP H^{0}(X,L)\cong \PP^{n}$ defined by $L$, let $S_{X}=S/I_{X}$, where $S=\CC[x_{0},\ldots,x_{n}]$ is the standard graded polynomial ring and $I_{X}$ is the homogeneous defining ideal of $X$. The minimal graded free resolution $0\leftarrow S_X\xleftarrow{\,\epsilon\,}F_0\xleftarrow{\,d_1\,}F_1\xleftarrow{\,d_2\,}\cdots$ of $S_X$ has terms $F_p=\bigoplus_q S(-q)^{\beta_{p,q}(X;L)}$, where $S(-q)_d=S_{d-q}$. The \emph{graded Betti numbers (or syzygies)} $\beta_{p,q}(X;L)$ depend on the extrinsic embedding, not just on $X$; a central theme of the field is how they nonetheless capture the intrinsic geometry of $X$.
 
-Let $X$ be a projective variety and $L$ a very ample line bundle. For the embedding $X \hookrightarrow \PP H^{0}(X,L)\cong \PP^{n}$ defined by $L$, let $S_{X}=S/I_{X}$, where $S=\CC[x_{0},\ldots,x_{n}]$ is the standard graded polynomial ring and $I_{X}$ is the homogeneous defining ideal of $X$. The minimal graded free resolution of $S_{X}$
-\begin{center}
-\begin{tikzcd}[column sep = 3em]
-0 & \lar{} S_{X} & \arrow[l,"\epsilon" above]  F_{0} & \arrow[l,"d_{1}" above] \cdots &  & \cdots & \arrow[l,"d_{k-1}" above]  F_{k-1} & \arrow[l,"d_{k}" above] F_{k} & \lar \cdots
-\end{tikzcd}
-\end{center}
-has terms $F_p=\bigoplus_q S(-q)^{\beta_{p,q}(X;L)}$, where $S(-q)_d=S_{d-q}$. The \emph{graded Betti numbers (or syzygies)} $\beta_{p,q}(X;L)$ depend on the extrinsic embedding, not just on $X$; an overarching theme in the geometry of syzygies is understanding how they nonetheless capture the intrinsic geometry of $X$.
+%Let $X$ be a projective variety and $L$ a very ample line bundle. For the embedding $X \hookrightarrow \PP H^{0}(X,L)\cong \PP^{n}$ defined by $L$, let $S_{X}=S/I_{X}$, where $S=\CC[x_{0},\ldots,x_{n}]$ is the standard graded polynomial ring and $I_{X}$ is the homogeneous defining ideal of $X$. The minimal graded free resolution of $S_{X}$
+%\begin{center}
+%\begin{tikzcd}[column sep = 3em]
+%0 & \lar{} S_{X} & \arrow[l,"\epsilon" above]  F_{0} & \arrow[l,"d_{1}" above] \cdots &  & \cdots & \arrow[l,"d_{k-1}" above]  F_{k-1} & \arrow[l,"d_{k}" above] F_{k} & \lar \cdots
+%\end{tikzcd}
+%\end{center}
+%has terms $F_p=\bigoplus_q S(-q)^{\beta_{p,q}(X;L)}$, where $S(-q)_d=S_{d-q}$. The \emph{graded Betti numbers (or syzygies)} $\beta_{p,q}(X;L)$ depend on the extrinsic embedding, not just on $X$; an overarching theme in the geometry of syzygies is understanding how they nonetheless capture the intrinsic geometry of $X$.
 
 Forty years after Green's work, this connection is best understood for smooth non-hyperelliptic canonical curves of genus $g\geq3$ ($L=K_X$). Green's conjecture \cite{green84-I} predicts the vanishing threshold of the quadratic strand:
 \begin{equation}\label{eq:greens}
 \beta_{p,p+2}(X;K_X)=0 \quad\Longleftrightarrow\quad p<\cliff(X),
 \qquad 0\leq p\leq g-3.
 \end{equation}
-Here $\cliff(X)\coloneqq\min\{\deg(L)-2h^0(X,L)+2:h^0(X,L),h^1(X,L)\geq2\}$, with the convention $\cliff(X)=1$ for a non-hyperelliptic curve of genus $3$. Breakthrough work of Voisin proved this for general curves of every genus \cite{voisin02,voisin05}; new proofs \cite{aprodu19,kemeny21} and many refinements followed \cite{farkasMustataPopa03,chiodoEFS13,farkasKemeny16,farkasKemeny17,deopurkar18,kemeny24}.
-
-This project develops the corresponding theory for \emph{stacky curves} \cite{abramovichVistoli02,cadman07,AGV08}, where $S$ has a nonstandard grading and the geometry appears only after accounting for fractional divisors. The classical theory of Noether, Petri, Mumford, and Green is a theory of standard graded rings, and it breaks down as soon as the divisor fails to be very ample. Already for a point $O$ on an elliptic curve $E$, the section ring $\bigoplus_n H^0(E,nO)$ needs generators in degrees $1,2,3$, and its presentation is the Weierstrass equation $y^2=x^3+axz^4+bz^6$, a sextic in $\PP(1,2,3)$; the canonical ring of a hyperelliptic curve needs generators in degree $2$, with the hyperelliptic equation a relation in degree $4$. Stacky curves are the systematic setting for this phenomenon: by Demazure--Pinkham \cite{pinkham77,demazure88,watanabe81}, every two-dimensional normal graded domain is $\bigoplus_n H^0(C,\lfloor nD\rfloor)$ for an ample $\QQ$-divisor $D$ on a curve $C$, i.e., a section ring on a stacky curve whose stacky points record the fractional part of $D$. The most important examples are modular curves: $X(1)=\cP(4,6)$ has section ring $\CC[E_4,E_6]$, and rings of modular forms on $X_0(N)$ and on Shimura curves are (log) canonical rings of stacky curves with stacky points at the elliptic points. Voight and Zureick-Brown \cite{voightZurieckBrown22} prove a stacky Noether--Petri theorem, but analogues of Mumford's normal generation, Green's $N_p$ theorem, and Koszulness are open even for $X(1)$. The goal is a theory in which fractional divisors play the role that degree plays classically, extending Mumford's and Green's theorems and answering \cite[Ques.~7.7]{brownErman25}.
+Here $\cliff(X)\coloneqq\min\{\deg(L)-2h^0(X,L)+2:h^0(X,L),h^1(X,L)\geq2\}$, with the convention $\cliff(X)=1$ for a non-hyperelliptic curve of genus $3$. Voisin's breakthrough proved it for general curves of every genus \cite{voisin02,voisin05}; new proofs \cite{aprodu19,raicuSam22,kemeny21,kemeny25Odd} and refinements \cite{farkasMustataPopa03,chiodoEFS13,farkasKemeny16,farkasKemeny17,deopurkar18,kemeny24} followed.
+ 
+This project develops the corresponding theory for \emph{stacky curves} \cite{abramovichVistoli02,cadman07,AGV08}, where $S$ is nonstandard graded and its geometry is visible only through fractional divisors. The classical theory of Noether, Petri, Mumford, and Green is a theory of standard graded rings, and it fails the moment the divisor is not very ample. Already for a point $O$ on an elliptic curve $E$, the section ring $\bigoplus_n H^0(E,nO)$ needs generators in degrees $1,2,3$ and is cut out by the Weierstrass equation $y^2=x^3+axz^4+bz^6$, a sextic in $\PP(1,2,3)$. This is not an edge case but the general picture. By Demazure--Pinkham \cite{pinkham77,demazure88,watanabe81}, every two-dimensional normal graded domain is $\bigoplus_n H^0(C,\lfloor nD\rfloor)$ for an ample $\QQ$-divisor $D$ on a curve $C$: a section ring on a stacky curve whose stacky points record the fractional part of $D$. The flagship examples are modular curves; $X(1)=\cP(4,6)$ has section ring $\CC[E_4,E_6]$, and rings of modular forms on $X_0(N)$ and on Shimura curves are (log) canonical rings of stacky curves, stacky exactly at the elliptic points. Voight and Zureick-Brown \cite{voightZurieckBrown22} proved a stacky Noether--Petri theorem presenting these rings (see also~\cite{odorney15,LRZ16}), but their syzygies are uncharted: stacky analogues of Green's $N_p$ theorem and Green's conjecture are wide open. This project builds a theory in which fractional divisors play the role that degree plays classically, extending Mumford's and Green's theorems to stacky curves and answering \cite[Ques.~7.7]{brownErman25}. Results without citations in this section are proved by the PI joint with M. Banks and P. Wei. 
 
 \subsection{Weighted Canonical Rings}\label{subsec:weighted-canonical}
-
-A \defi{stacky curve} $\cX$ is a smooth proper geometrically connected Deligne--Mumford stack of dimension one with a dense open subscheme. (Throughout this section, $\KK=\CC$.) Concretely, we may think of $\cX$ as a curve $C$ together with finitely many \emph{stacky points} carrying cyclic stabilizers \cite[Lem.~5.3.10]{voightZurieckBrown22}, and the coarse space map $\pi\colon \cX \to C$ forgets these stabilizers. If $x_1,\ldots,x_s$ are the stacky points, $e_i = \#G(x_i)$, $P_i = \pi(x_i)$, and $g = g(C)$, the \emph{signature} of $\cX$ is $(g;e_1,\ldots,e_s)$. Following \cite{voightZurieckBrown22}, the \emph{canonical divisor} on such a stacky curve is defined to be
+A \emph{stacky curve} $\cX$ is a smooth proper geometrically connected Deligne--Mumford stack of dimension one with a dense open subscheme. (Throughout this section, $\KK=\CC$.) Concretely, $\cX$ is a curve $C$ with finitely many \emph{stacky points} carrying cyclic stabilizers \cite[Lem.~5.3.10]{voightZurieckBrown22}, and the coarse space map $\pi\colon \cX \to C$ forgets these stabilizers. If $x_1,\ldots,x_s$ are the stacky points, $e_i = \#G(x_i)$, $P_i = \pi(x_i)$, and $g = g(C)$, the \emph{signature} of $\cX$ is $(g;e_1,\ldots,e_s)$. Following \cite{voightZurieckBrown22}, the \emph{canonical divisor} of $\cX$ is
 \begin{equation}\label{eq:floor}
 	K_{\cX}=\pi^*K_C+\sum_{i}\left(e_i-1\right) x_i = \pi^*D \qquad \text{where} \qquad D=K_{C}+\sum_{i}\left(1-\tfrac{1}{e_i}\right)P_i
 \end{equation}
@@ -472,19 +472,16 @@ where the \emph{round-down} of a $\QQ$-divisor $D=\sum_i a_iP_i$ on $C$ is the h
 
 This round-down is the essential difference from the classical theory. Since $\lfloor D\rfloor=K_C$, $R_1=H^0(\cX,K_{\cX})\cong H^0(C,K_C)$ has dimension $g(C)$ rather than $g(\cX)$. When stacky points are present, these sections vanish along the ramification divisor $K_{\cX}-\pi^*K_C$, so they neither embed $\cX$ nor generate $R$. Adding higher-degree generators yields an embedding into a weighted projective stack \cite{braggOlssonWebb24}; algebraically, $R$ is a quotient of a polynomial ring with a nonstandard $\ZZ$-grading.
 
-Following Brown and Erman \cite[\S~3.1]{brownErman25}, define the \emph{minimal weighted canonical series} $\cW=\bigoplus_{d\geq1}\cW_d$ by setting $\cW_1=R_1$ and, for $d\geq2$, choosing $\cW_d$ as a complement in $R_d$ to the degree-$d$ part of the subalgebra generated by $\cW_1,\ldots,\cW_{d-1}$. Then $\cW$ embeds $\cX$ into $\cP(\cW)$, and $R\cong S/I_{\cX}$, where $S=\Sym(\cW)$. For $g\geq2$, Voight and Zureick-Brown's stacky Noether--Petri theorem gives sharp degree bounds of $e\coloneqq\max(1,e_1,\ldots,e_s)$ for generators and $2e$ for relations, subject to exceptional cases \cite[Cor.~1.4.2]{voightZurieckBrown22}. These bounds do not specify the minimal generator degrees. The first goal of this project is to close this gap by making the generation bound exact.
+Following Brown and Erman \cite[\S~3.1]{brownErman25}, define the \emph{minimal weighted canonical series} $\cW=\bigoplus_{d\geq1}\cW_d$ by setting $\cW_1=R_1$ and, for $d\geq2$, choosing $\cW_d$ as a complement in $R_d$ to the degree-$d$ part of the subalgebra generated by $\cW_1,\ldots,\cW_{d-1}$. Then $\cW$ embeds $\cX$ into $\cP(\cW)$, and $R\cong S/I_{\cX}$, where $S=\Sym(\cW)$. For $g\geq2$, the stacky Noether--Petri theorem gives sharp degree bounds of $e\coloneqq\max(1,e_1,\ldots,e_s)$ for generators and $2e$ for relations, subject to exceptional cases
+\cite[Cor.~1.4.2]{voightZurieckBrown22}. Their inductive presentation also describes relative generators and gives criteria for minimality \cite[Thm.~8.3.1(a),(d)]{voightZurieckBrown22}. Theorem~\ref{conj:weights} makes the full weight multiset explicit in our setting. Let $\nu_d = \dim \cW_d$; the \emph{weight multiset} of $\cW$ has $\nu_d$ copies of each weight $d$, written $d^{\nu_d}$. Set $N = \sum_d \nu_d$, so $\PP(\cW)=\PP(1^{\nu_1},2^{\nu_2},\ldots)$ has dimension $N-1$, $\sigma = \sum_d d\,\nu_d$, and $c = N-2$.
 
-Let $\nu_d = \dim \cW_d$; the \emph{weight multiset} of $\cW$ has $\nu_d$ copies of each weight $d$, written $d^{\nu_d}$. Set $N = \sum_d \nu_d$, so $\PP(\cW)=\PP(1^{\nu_1},2^{\nu_2},\ldots)$ has dimension $N-1$, $\sigma = \sum_d d\,\nu_d$, and $c = N-2$.
+\begin{theorem}\label{conj:weights}
+Let $\cX$ be a hyperbolic stacky curve with $g\geq3$. The weight multiset of $\cW$ is $(1^{g},\ (2,3,\ldots,e_1),\ \ldots,\ (2,3,\ldots,e_s))$, with $2^{g-2}$ inserted if and only if $C$ is hyperelliptic.
+\end{theorem}
 
-\begin{conjecture}\label{conj:weights}
-Let $\cX$ be a hyperbolic stacky curve with $g\geq3$. The weight multiset of $\cW$ is $(1^{g},\ (2,3,\ldots,e_1),\ \ldots,\ (2,3,\ldots,e_s))$  with $2^{g-2}$ inserted if and only if $C$ is hyperelliptic.
-\end{conjecture}
+Thus the weights detect whether $C$ is hyperelliptic, and the generation degree is exactly $e$. \emph{Proof idea:} Riemann--Roch gives sections $y_{i,j}\in R_j$ with exactly one pole, at $P_i$ of order $j-1$. As every generator of degree $m$ has pole order at most $m-1$, these are indecomposable, and products $\omega\prod_sy_{i,j_s}$ with $\omega(P_i)\ne0$ realize every admissible pole order. Filter $R$ by pole order at the stacky points: $F_{\ell}R_d \coloneqq H^0\big(C,dK_C+\sum_i\min\{\ell,b_i(d)\}P_i\big)$ with $b_i(d)=\lfloor d(e_i-1)/e_i\rfloor$. This multiplicative exhaustive filtration has $F_{0}R = R(C, K_C)$. Let $T_e = \CC[\Gamma_e]$ for the semigroup $\Gamma_e=\{(n,\ell):0\leq\ell\leq\lfloor n\tfrac{e-1}{e}\rfloor\}$. The Rees construction flatly degenerates $R$ to $\operatorname{gr}_F R$, separating principal parts at the stacky points.
 
-This conjecture implies that the weight multiset already detects whether $C$ is hyperelliptic, and that the generation degree is exactly $e$. We will prove this by producing a generator $y_{i,j}\in R_j$ of pole order exactly $j-1$ at $P_i$ for $2\leq j\leq e_i$, and then showing these are minimal because $\lfloor d\tfrac{e-1}{e}\rfloor\leq d-1$ forces a product of $k\geq2$ generators of total degree $j$ to have pole order at most $j-k$. That these elements in fact generate is the content of the following conjecture.
-
-Filter $R$ by the order of the poles at the stacky points by letting $F_{\ell}R_d \coloneqq H^0\big(C,dK_C+\sum_i\min\{\ell,b_i(d)\}P_i\big)$ with $b_i(d)=\lfloor d(e_i-1)/e_i\rfloor$. This is a multiplicative exhaustive filtration on $R$, and $F_{0}R = R(C, K_C)$. Let $T_e = \CC[\Gamma_e]$ for the semigroup $\Gamma_e=\{(n,\ell):0\leq\ell\leq\lfloor n\tfrac{e-1}{e}\rfloor\}$. The pole filtration gives a flat Rees degeneration from $R$ to $\operatorname{gr}_F R$. We expect its special fiber to separate the principal parts at the stacky points, with products between distinct positive-pole contributions vanishing and coarse canonical sections acting by evaluation.
-
-\begin{conjecture}\label{conj:degeneration}
+\begin{theorem}\label{conj:degeneration}
 Let $\cX$ be a hyperbolic stacky curve with $g\geq3$. Then $\operatorname{gr}_F R$ is the fiber product of $R(C,K_C)$ and $\prod_iT_{e_i}$ over $\prod_i\CC[z_i]$, where the maps evaluate coarse sections at $P_i$ and kill positive-pole monomials in $T_{e_i}$. In particular, there is an exact sequence
 \begin{equation}\label{eq:fiber}
 0\longrightarrow\operatorname{gr}_F R
@@ -492,42 +489,42 @@ Let $\cX$ be a hyperbolic stacky curve with $g\geq3$. Then $\operatorname{gr}_F 
 \longrightarrow\bigoplus_i\CC[z_i]
 \longrightarrow0.
 \end{equation}
-\end{conjecture}
+\end{theorem}
 
-Computations, including Figure~\ref{fig:betti}, support this description. I will prove it by identifying the graded pieces and their multiplication through principal parts. With pole-order minimality, this would prove the formula in Conjecture~\ref{conj:weights}. The resulting long exact sequence in $\Tor$ is the starting point for computing special-fiber syzygies and the cancellations recovering the Betti table of $R$.
-
+Since $H^1(C,nK_C)=0$ for $n\ge2$, graded pieces are leading coefficients of principal parts, which multiply monomially at one point and vanish across distinct points. As the generators of Theorem~\ref{conj:weights} generate $\operatorname{gr}_FR$, $\beta(R)$ is $\beta(\operatorname{gr}_FR)$, computed from~\eqref{eq:fiber}, minus consecutive cancellations.
+ 
 \subsection{The Shape of Stacky Green's Conjecture}\label{subsec:shape-stacky-green}
 
-Classically, the Betti table of a canonical curve has four rows and $g-1$ columns. The top and bottom rows each contain a single $1$, so the content lies in the two middle rows, which are exchanged by the Gorenstein duality $\beta_{p,q}(C,K_{C})=\beta_{g-2-p,\,g+1-q}(C,K_C)$. Thus Green's conjecture \eqref{eq:greens} does two things at once: (i) it determines the length of the linear strand of every canonical curve, and (ii) together with the Hilbert function, it determines the entire Betti table of a general curve, since for general $C$ the two middle rows do not overlap. Stacky canonical rings remain Gorenstein, but can have far more than four rows.
+Classically, the Betti table of a canonical curve has four rows and $g-1$ columns. The top and bottom rows each contain a single $1$, so the content lies in the two middle rows, which are exchanged by the Gorenstein duality $\beta_{p,q}(C,K_{C})=\beta_{g-2-p,\,g+1-q}(C,K_C)$. Thus Green's conjecture does two things at once: (i) it determines the length of the linear strand of every canonical curve, and (ii) together with the Hilbert function, it determines the entire Betti table of a general curve, since for general $C$ the two middle rows do not overlap. Stacky canonical rings remain Gorenstein, but can have far more than four rows.
 
 \begin{theorem}\label{thm:duality}
 Let $\cX$ be a hyperbolic stacky curve with $g\geq3$. Let $R=S/I$ be a minimal graded presentation, where $S=\KK[x_1,\ldots,x_N]$ has total weight $\sigma$, and let $c=N-2$.
 \begin{enumerate}
 \item $R$ is Gorenstein, with $\beta_{i,j}(R)=\beta_{c-i,\sigma+1-j}(R)$.
 \item The weighted regularity, in the sense of \cite{brownErman25}, of $R$ is $3$.
-\item Its nonzero Betti entries lie in the row range $0\leq j-i\leq\rho-1$, where $\rho=\sigma-N+4$; both endpoint
-rows are attained. Assuming Conjecture~\ref{conj:weights} for $g\geq3$, we have that
-\[
-\rho=\begin{cases}
-4+\sum_i\binom{e_i}{2},&C\text{ non-hyperelliptic},\\
-g+2+\sum_i\binom{e_i}{2},&C\text{ hyperelliptic}.
-\end{cases}
-\]
-Intervening rows may be empty.
+\item Its nonzero Betti entries lie in rows $0\leq j-i\leq\rho-1$, where $\rho=\sigma-N+4$, and both endpoint rows are attained. By Theorem~\ref{conj:weights}, $\rho=4+\sum_i\tbinom{e_i}{2}$ if $C$ is non-hyperelliptic and $\rho=g+2+\sum_i\tbinom{e_i}{2}$ if $C$ is hyperelliptic.
+%\item Its nonzero Betti entries lie in the row range $0\leq j-i\leq\rho-1$, where $\rho=\sigma-N+4$; both endpoint
+%rows are attained. By Theorem~\ref{conj:weights} for $g\geq3$, we have that
+%\[
+%\rho=\begin{cases}
+%4+\sum_i\binom{e_i}{2},&C\text{ non-hyperelliptic},\\
+%g+2+\sum_i\binom{e_i}{2},&C\text{ hyperelliptic}.
+%\end{cases}
+%\]
+%Intervening rows may be empty.
 \end{enumerate}
 \end{theorem}
 
-Parts (1) and (2) follow from a local cohomology calculation showing that $R$ is a two-dimensional Cohen--Macaulay normal domain with $\pd_SR=c$, together with graded local duality, or alternatively from Watanabe's canonical module formula \cite{watanabe81}. The pattern behind part (3) is striking: over a non-hyperelliptic coarse curve, whose canonical Betti table has $4$ rows and $g-1$ columns, each stacky point of order $e$ adds $e-1$ columns and $\binom{e}{2}$ rows. The two consequences of classical Green's conjecture thus become separate, new problems in the stacky world.
+Parts (1) and (2) follow from a local cohomology calculation showing that $R$ is a two-dimensional Cohen--Macaulay normal domain with $\pd_SR=c$, together with graded local duality, or alternatively from Watanabe's canonical module formula \cite{watanabe81}. The pattern behind part (3) is striking: over a non-hyperelliptic coarse curve, whose canonical Betti table has $4$ rows and $g-1$ columns, each stacky point of order $e$ adds $e-1$ columns and $\binom{e}{2}$ rows (Figure~\ref{fig:betti}). The two consequences of classical Green's conjecture thus become separate, new problems in the stacky world.
 
 \begin{problem}\label{prob:ws}
-Let $\cX$ be a hyperbolic stacky curve with coarse space $C$, which is a smooth non-hyperelliptic curve of genus $g\geq3$.
-\begin{enumerate}
+Let $\cX$ be hyperbolic, with non-hyperelliptic coarse space $C$ of genus $g\geq3$.\begin{enumerate}
 \item (Weak Stacky Green's Conjecture):  Is the linear strand of $\beta(\cX;K_{\cX})$ determined by $\cliff(C)$?
 \item (Strong Stacky Green's Conjecture): For a sufficiently general stacky curve $\cX$, is $\beta(\cX;K_{\cX})$ determined by $\cliff(C)$ and its Hilbert function?
 \end{enumerate}
 \end{problem}
 
-In the following subsections, $\cX$ and $C$ are as in Research Problem~\ref{prob:ws}, unless otherwise noted.
+%In the following subsections, $\cX$ and $C$ are as in Research Problem~\ref{prob:ws}, unless otherwise noted.
 
 \begin{figure}
 \centering
@@ -567,31 +564,31 @@ In the following subsections, $\cX$ and $C$ are as in Research Problem~\ref{prob
 
 \end{tabular}
 \end{adjustbox}
-\caption{The Betti tables of a genus-$6$ trigonal canonical curve $C$ and two stacky curves with signatures $(6;2)$ and $(6;3)$ and coarse space $C$.}\label{fig:betti}
+\caption{Betti tables of a genus-$6$ trigonal canonical curve $C$ and of stacky curves $(6;2)$, $(6;3)$ over $C$.}\label{fig:betti}
 \end{figure}
 
-\subsection{Towards a Weak Form of Stacky Green's Conjecture}\label{subsec:stacky-green}
+\subsection{Toward a Weak Form of Stacky Green's Conjecture}\label{subsec:stacky-green}
 
-The weak form requires Green's $N_p$-conditions for nonstandard gradings. Brown and Erman call $Z\subset\PP(\cW)$ \defi{weighted $N_p$} if it is normally generated and $F_i$ is generated in degree at most $w^{i+1}$ for all $i\leq p$, where $w^j$ is the sum of the $j$ largest weights \cite[Def.~1.2]{brownErman25}; for standard weights, this is Green's classical $N_p$. Let $\tau_{\BE}(\cX)$ be the smallest $p\geq1$ for which weighted $N_p$ fails. For non-stacky curves, Brown and Erman prove a weighted $N_p$ theorem: a smooth curve of genus $g$ embedded by a normally generated weighted linear series $\cW$ associated to a line bundle of degree at least $2g+1$, with $\nu_1>g$, satisfies weighted $N_p$ for all $1\leq p\leq \dim\cW-g-2$ \cite[Thm.~1.7]{brownErman25}. The stacky canonical series has $\nu_1=g$, so their methods do not apply directly; their framework is nonetheless the right one, and \cite[Ques.~7.7]{brownErman25} asks for precisely the canonical analogue. We predict that the threshold is governed by the length of the coarse linear strand, $\ell(C)\coloneqq\max\{r\geq1:\beta_{r,r+1}(C;K_C)\neq0\}$.
+Here and in \S\ref{subsec:middle}, $\cX$ and $C$ are as in Research Problem~\ref{prob:ws}. The weak form uses Brown--Erman's nonstandard $N_p$-conditions: $Z\subset\PP(\cW)$ is \emph{weighted $N_p$} if it is normally generated and $F_i$ is generated in degree at most $w^{i+1}$ for all $i\leq p$, where $w^j$ sums the $j$ largest weights \cite[Def.~1.2]{brownErman25}; standard weights recover Green's classical $N_p$. Let $\tau_{\BE}(\cX)$ be the smallest $p\geq1$ at which weighted $N_p$ fails. For non-stacky curves, their theorem gives weighted $N_p$ for $1\leq p\leq\dim\cW-g-2$ for any normally generated weighted series $\cW$ of a line bundle of degree $\ge2g+1$ with $\nu_1>g$ \cite[Thm.~1.7]{brownErman25}. The stacky canonical series has $\nu_1=g$, beyond their methods; \cite[Ques.~7.7]{brownErman25} requests this canonical analogue. We predict that stacky points shift the coarse threshold by $\kappa\coloneqq N-g=\sum_i(e_i-1)$, the number of higher-weight generators. Let $\tau(C,K_C)$ be the first failure of classical $N_p$. By duality, $\tau(C,K_C)=g-2-\ell(C)$, where $\ell(C)\coloneqq\max\bigl(\{0\}\cup \{r\ge1:\beta_{r,r+1}(C;K_C)\ne0\}\bigr)$.
 
-\begin{conjecture}[General Weak Stacky Green's Conjecture]\label{con:WSGC}
-The threshold is $\tau_{\BE}(\cX)=(N-2)-\ell(C)$.
+\begin{conjecture}[Weak Stacky Green's Conjecture]\label{con:WSGC}
+The threshold is $\tau_{\BE}(\cX)=\tau(C,K_C)+\kappa$; equivalently, $\tau_{\BE}(\cX)=(N-2)-\ell(C)$.
 \end{conjecture}
 
-Green's conjecture predicts $\ell(C)=g-2-\cliff(C)$, so $\tau_{\BE}(\cX)=N-g+\cliff(C)$; combined with Voisin's theorem \cite{voisin02,voisin05}, Conjecture~\ref{con:WSGC} would determine the threshold for a general coarse curve of every genus $g\geq3$, uniformly over all signatures and positions of stacky points. The first ingredient in proving Conjecture~\ref{con:WSGC} is the following comparison result for linear strands.
+For general coarse curves, Voisin's theorem~\cite{voisin02,voisin05} gives $\tau(C,K_C)=\cliff(C)$, so Conjecture~\ref{con:WSGC} predicts $\tau_{\BE}(\cX)=N-g+\cliff(C)$, uniformly over signatures and markings. The same shift motivates Conjectures~\ref{conj:high-degree} and~\ref{conj:weighted-secant}. The first ingredient is the following comparison of linear strands.
 
 \begin{prop}\label{prop:linear-strand}
-Assuming Conjecture~\ref{conj:weights}, for every $r\geq1$, the inclusion $R(C,K_C)\hookrightarrow R$ induces an isomorphism $K_{r,1}(C,K_C)\xrightarrow{\ \sim\ }K_{r,1}(\cX,K_{\cX})$.
+For every $r\geq1$, the inclusion $R(C,K_C)\hookrightarrow R$ induces an isomorphism $K_{r,1}(C,K_C)\xrightarrow{\ \sim\ }K_{r,1}(\cX,K_{\cX})$.
 In particular, $\beta_{r,r+1}(\cX;K_{\cX})=\beta_{r,r+1}(C;K_C)$.
 \end{prop}
 
-The proof of Proposition~\ref{prop:linear-strand} is a direct Koszul calculation, using minimality of the weighted generators to identify linear-strand cycles and boundaries with those of the coarse canonical ring. Combined with Theorem~\ref{thm:duality}, this gives the nonvanishing half of Conjecture~\ref{con:WSGC}.  It remains to prove the vanishing half $\beta_{p,q}(R)=0$ for $1\leq p<c-\ell(C)$ and $q>w^{p+1}$. Equivalently, if $u_k$ is the sum of the $k$ smallest weights, duality asks for $\beta_{r,q}(R)=0$ when $\ell(C)<r<c$ and $q\leq u_{r+1}$. For $r<g$ this follows already from the comparison and minimality; the new work is confined to $g\leq r<c$. I will study these remaining groups through the pole filtration and its Koszul spectral sequence given by Conjecture~\ref{conj:degeneration}. The special fiber can have extra syzygies, so identifying its cancellation maps, rather than applying semicontinuity alone, is essential.
+Proposition~\ref{prop:linear-strand} follows by comparing Koszul cycles and boundaries using minimality of the weighted generators. Together with duality (and the final Betti entry when $\ell(C)=0$), it gives the nonvanishing half of Conjecture~\ref{con:WSGC}. For vanishing, let $u_k$ be the sum of the $k$ smallest weights. Duality reduces the problem to $\beta_{r,q}(R)=0$ for $\ell(C)<r<c$ and $q\leq u_{r+1}$. Comparison and minimality settle $r<g$. I will begin with one order-four point, where the only new requirement is $\beta_{g,g+2}=0$, equivalently $\beta_{1,8}=0$. The mapping cone of~\eqref{eq:fiber}, using the semigroup relations of $T_4$, will test this on the special fiber and isolate any cancellation needed after deformation. For arbitrary signatures, I will insert the weighted Eagon--Northcott resolutions of the regraded rational-normal-curve rings $T_{e_i}$ (see ~\cite{davisSobieska25,banksRamkumar26}) into the fiber-product mapping cone and bound its surviving shifts. Showing that every surviving shift in homological degree $g\leq r<c$ exceeds $u_{r+1}$ would complete the vanishing argument, proving Conjecture~\ref{con:WSGC}.
 
 Finally, gonality and Clifford index supply no additional stacky invariant (here $\cliff(\cX)$ is defined using line bundles with $h^0,h^1\geq2$, with the usual low-genus conventions).
 
-\begin{prop}[Brill--Noether rigidity]\label{prop:bn-rigidity}
+\begin{lemma}[Brill--Noether rigidity]\label{prop:bn-rigidity}
 We have $\cliff(\cX)=\cliff(C)$ and $\gon(\cX)=\gon(C)$. Every line bundle attaining either minimum is a pullback.
-\end{prop}
+\end{lemma}
 
 Indeed, write $\cL=\pi^*M\otimes\bigotimes_i\cT_i^{a_i}$, where $\cT_i=\cO_{\cX}(x_i)$ and $0\leq a_i<e_i$. The round-down formula gives $\dim H^i(\cX,\cL)=\dim H^i(C,M)$ and $\deg_{\cX}\cL=\deg M+\sum_i\frac{a_i}{e_i}$. Nonzero fractional parts increase degree without changing cohomology. This proves both equalities and forces every minimizer to have trivial stacky characters. The remaining Betti rows may require finer invariants.
 
@@ -612,15 +609,18 @@ where $\varepsilon_{p,q}=1$ exactly for
 $(p,q)\in\{(1,1),(0,2),(g-1,2),(g-2,3)\}$.
 \end{theorem}
 
-Thus Problem~\ref{prob:ws}(2) has an affirmative answer here: $\beta(R)$ is independent of $P$. Indeed, $\cW$ has weights $1^g,2$, so $N=g+1$, $c=g-1$, and $\rho=5$. Proposition~\ref{prop:linear-strand} and Theorem~\ref{thm:duality} specify rows $0,1,3,4$, leaving only row $2$. In each internal degree $j$, the Hilbert numerator determines the alternating Betti sum and hence its sole unknown entry, $\beta_{j-2,j}$; by \eqref{eq:floor}, the Hilbert series depends only on the signature. For $\rho\geq7$, at least three rows remain unknown and these equations no longer suffice.
-
+Thus Problem~\ref{prob:ws}(2) has an affirmative answer here: $\beta(R)$ is independent of $P$. Indeed, $\cW$ has weights $1^g,2$, so $N=g+1$, $c=g-1$, and $\rho=5$. Proposition~\ref{prop:linear-strand} and Theorem~\ref{thm:duality} specify rows $0,1,3,4$, leaving only row $2$. In each degree $j$ the Hilbert numerator, which depends only on the signature, determines the sole unknown $\beta_{j-2,j}$; for $\rho\geq7$ this fails.
+ 
 \begin{conjecture}[Strong Stacky Green's Conjecture I]\label{conj:middle-I}
 The Betti numbers $\beta_{p,q}(\cX;K_{\cX})$ depend only on $C$ and the signature of $\cX$, and not on the position of the stacky points.
 \end{conjecture}
 
-Since the Hilbert series depends only on the signature, Proposition~\ref{prop:linear-strand} and Theorem~\ref{thm:duality} confine any positional dependence to the middle Betti rows, and Proposition~\ref{prop:bn-rigidity} forces any invariant governing them to be local at the marked points rather than global on line bundles. This points toward pointed Brill--Noether theory with prescribed ramification, and toward limit linear series~\cite{eisenbudHarris86} and tropical methods for imposing ramification conditions~\cite{p17,larson21,JR21,CPJ22,LLV25}.
+Proposition~\ref{prop:linear-strand} and Theorem~\ref{thm:duality} confine positional dependence to the middle rows. I will test it through the connecting-map ranks below; rank drops would identify pointed invariants beyond the gonality and Clifford index fixed by Lemma~\ref{prop:bn-rigidity}.
 
-The pole degeneration, together with the examples we have computed, suggests the following bold conjecture predicting the full Betti table of a canonical stacky curve. For a graded $S$-module $M$, write $B_M(t,u)=\sum_{p,j}\beta^S_{p,j}(M)t^pu^j$. Let $J\subset S$ be the ideal generated by the variables of degree $\geq 2$, and let $P_C$ denote the Betti polynomial of the coarse canonical ring over $S/J$. Set $B_J^\vee(t,u)=t^{c-1}u^{\sigma+1}B_J(t^{-1},u^{-1})$.
+
+%Proposition~\ref{prop:linear-strand} and Theorem~\ref{thm:duality} confine any positional dependence to the middle rows, and Lemma~\ref{prop:bn-rigidity} forces any invariant governing them to be local at the marked points, pointing toward pointed Brill--Noether theory, limit linear series~\cite{eisenbudHarris86}, and tropical methods~\cite{p17,larson21,JR21,CPJ22,LLV25}.
+
+The pole degeneration and our computed examples suggest the following bold conjecture for the full Betti table of a canonical stacky curve. For a graded $S$-module $M$, write $B_M(t,u)=\sum_{p,j}\beta^S_{p,j}(M)t^pu^j$. Let $J\subset S$ be the ideal generated by the variables of degree $\geq 2$, and let $P_C$ be the Betti polynomial of the coarse canonical ring over $S/J$. Set $B_J^\vee(t,u)=t^{c-1}u^{\sigma+1}B_J(t^{-1},u^{-1})$.
 
 \begin{conjecture}[Strong Stacky Green's Conjecture II]\label{conj:middle}
 We have
@@ -633,37 +633,82 @@ P_C+(1+tu)^{g-1}
 \]
 \end{conjecture}
 
-The first term combines the coarse resolution with the higher-weight generators and the Koszul complexes on canonical forms vanishing at each $P_i$. The subtracted terms record consecutive cancellations paired by Gorenstein duality. I will use the fiber-product sequence~\eqref{eq:fiber} to identify the cancellations indexed by $B_J$ in the special fiber, then show that deformation to $R$ cancels precisely the dual pairs. To control these cancellations geometrically, M.~Banks, P.~Wei, and I have developed a weighted analogue of Lazarsfeld's kernel-bundle method~\cite[\S~1]{greenLazarsfeld88}. Set $\cL=\cO_{\cX}(K_{\cX})$ and define
+The first term combines the coarse resolution with the higher-weight generators and the Koszul complexes on canonical forms vanishing at each $P_i$. The subtracted terms record consecutive cancellations paired by Gorenstein duality. To approach this formula, I will first compute the special-fiberesolution using~\eqref{eq:fiber}, then control its cancellations
+under deformation.
+
+\begin{goal}\label{goal:special-fiber}
+Prove that $B_{\operatorname{gr}_F R}$ equals the right-hand side of Conjecture~\ref{conj:middle} plus $(1+t)B_J^\vee$.
+\end{goal}
+
+Semicontinuity and Gorenstein duality would then bound. $\beta(R)$ by the conjectured table when $(1+t)B_J$ and $(1+t)B_J^\vee$ have disjoint support, as for $\kappa<g-2$. In this range, proving equality reduces to excluding further cancellations under deformation. To control these cancellations geometrically, M.~Banks, P.~Wei, and I have developed a weighted analogue of Lazarsfeld's kernel-bundle method~\cite{lazarsfeld89,greenLazarsfeld88}, as suggested in~\cite[\S7.3]{brownErman25}
+. Set $\cL=\cO_{\cX}(K_{\cX})$ and define
 \[
 0\longrightarrow\cM_{\cW}\longrightarrow
 \cE_{\cW}\coloneqq\bigoplus_{d\geq1}\cW_d\otimes\cL^{-d}
 \longrightarrow\cO_{\cX}\longrightarrow0.
 \]
-Exterior powers and cohomology then identify the weighted syzygies:
-\[
-\Tor_p^S(R,\CC)_j\cong
-\ker H^1\!\left(
+Exterior powers and cohomology give
+$\Tor_p^S(R,\CC)_j\cong
+\ker H^1\!\bigl(
 \wedge^{p+1}\cM_{\cW}\otimes\cL^j
-\longrightarrow
+\to
 \wedge^{p+1}\cE_{\cW}\otimes\cL^j
-\right).
-\]
-I will begin with $\cX=\sqrt[3]{(C,P)}$, the first signature beyond the order-two case, with weights $1^g,2,3$. Writing $\cT=\cO_{\cX}(x)$, successive evaluation maps filter $\cM_{\cW}$ with factors $\pi^*M_{K_C}\otimes\cL^{-1}$, $\cL^{-2}\otimes\cT^{-1}$, and $\cL^{-3}\otimes\cT^{-1}$. Exterior powers and pushforward reduce the calculation to twists of $\wedge^aM_{K_C}$ by powers of $K_C$ and multiples of $P$. The two extensions defining the filtration need not split; I will compute their connecting maps and combine them with the map to $\wedge^{p+1}\cE_{\cW}$ in the Tor formula above. For this signature, only rows $2,3,4$ remain undetermined, and duality exchanges rows $2$ and $4$, leaving $\beta_{p,p+2}$ and $\beta_{p,p+3}$ as the independent targets. I will calculate the relevant ranks for a general $P$, then determine whether they remain constant at special points. Establishing the predicted ranks would prove the full Betti formula in this first unresolved case. If ranks drop, the resulting determinantal loci would describe precisely where position independence fails and identify the pointed invariants needed to refine Conjecture~\ref{conj:middle}.
+\bigr)$. I will begin with $\cX=\sqrt[3]{(C,P)}$, the first signature beyond the order-two case, with weights $1^g,2,3$. Writing $\cT=\cO_{\cX}(x)$, successive evaluation maps filter $\cM_{\cW}$ with factors $\pi^*M_{K_C}\otimes\cL^{-1}$, $\cL^{-2}\otimes\cT^{-1}$, and $\cL^{-3}\otimes\cT^{-1}$. Exterior powers and pushforward reduce the calculation to twists of $\wedge^aM_{K_C}$ by powers of $K_C$ and multiples of $P$. The two extensions defining the filtration need not split; I will compute their connecting maps and combine them with the map to $\wedge^{p+1}\cE_{\cW}$ in the Tor formula. Here only rows $2,3,4$ remain undetermined, and duality exchanges rows $2$ and $4$, leaving $\beta_{p,p+2}$ and $\beta_{p,p+3}$ as the independent targets. For arbitrary signatures, I will express the differentials governing cancellation under the pole degeneration through the evaluation filtration and determine their ranks as the markings vary. Proving the prescribed ranks and ruling out additional cancellations would establish the full Betti formula for general markings; the loci where these ranks change would then show whether the formula extends to every marking or requires additional pointed invariants.
+
+Schreyer's early work on Green's conjecture~\cite{schreyer91} remains, to my mind, a lovely demonstration of computation laying bare the geometry of syzygies. In that spirit, I propose to push further the computational tools that led to the conjectures and partial results above.
+\begin{goal}
+Determine the generic Betti tables for signatures $(g;3)$, $(g;4)$, and $(g;2,2)$ with $3\leq g\leq 6$, letting computation test and guide Conjectures~\ref{conj:middle-I} and~\ref{conj:middle}.
+\end{goal}
+
 \subsection{Beyond Stacky Canonical Curves}\label{subsec:stacks-further}
 
-The proposed proof of Conjecture~\ref{conj:degeneration} never uses that the line bundle is $K_{\cX}$, so we expect it to extend to any divisor on a stacky curve of the form $\cD=\pi^*L\otimes\bigotimes_i\cT_i^{a_i}$, where $L$ is very ample on $C$ and $\cT_i=\cO_{\cX}(x_i)$ as above, so that $\deg\cT_i=1/e_i$ and $\cT_i^{e_i}\cong\pi^*\cO_C(P_i)$. Here $\ell(C)$ should be replaced by the Koszul cohomology invariant of $\lfloor\cD\rfloor$, and this would answer \cite[Ques.~7.6]{brownErman25}. The PI is pursuing the complementary high-degree regime; adapting the weighted kernel-bundle method above, we aim to prove:
+The canonical case suggests a broader principle: coarse geometry controls syzygetic thresholds, while stacky points shift their homological position. I will test this for general section rings, addressing Brown and Erman's question on weighted $N_p$~\cite[Ques.~7.6]{brownErman25}. Let $\cD=\pi^*L\otimes\bigotimes_i\cT_i^{a_i}$, where $L$ is very ample on $C$, $0<a_i<e_i$, $\gcd(a_i,e_i)=1$, and $\cT_i=\cO_{\cX}(x_i)$ as above, so $\deg\cT_i=1/e_i$, $\cT_i^{e_i}\cong\pi^*\cO_C(P_i)$, and $\lfloor\cD\rfloor=L$. When $\deg L\geq2g-1$, the coarse $H^1$ vanishings extend the pole filtration of Theorem~\ref{conj:degeneration} to $R(\cX,\cD)$, replacing $b_i(d)$ by $\lfloor da_i/e_i\rfloor$ and $T_{e_i}$ by the semigroup ring of $\{(n,\ell):0\leq\ell\leq\lfloor na_i/e_i\rfloor\}$.
+
+The first regime is $\deg L\geq2g+1$, where classical vanishing theorems ~\cite{green84-I,greenLazarsfeld88} provide a starting point. Let $\cW$ minimally generate $R(\cX,\cD)$ and set $\kappa=\dim\cW-h^0(C,L)$, the number of generators of weight greater than one. This depends on the stacky twist: $\kappa=\sum_i(e_i-1)$ when every $a_i=e_i-1$, but $\kappa=s$ when every $a_i=1$. I predict that these generators shift the coarse threshold without otherwise changing it. As in \S\ref{subsec:stacky-green}, $\tau_{\BE}(\cX,\cD)$ and $\tau(C,L)$ denote the first failures of weighted and ordinary $N_p$, respectively, with either threshold equal to $\infty$ if no failure occurs.
 
 \begin{conjecture}\label{conj:high-degree}
-Let $\cL=\pi^*L\otimes\bigotimes_i\cT_i^{a_i}$, with $0<a_i<e_i$, $\gcd(a_i,e_i)=1$, and $\deg L\geq2g+1$. If $\cW$ minimally generates $R(\cX,\cL)$, then $\tau_{\BE}(\cX,\cL)=\tau(C,L)+\dim\cW-h^0(C,L)$, where $\tau(C,L)$ is the first failure of ordinary $N_p$, and either threshold is $\infty$ if no failure occurs.
+If $\deg L\geq2g+1$, then $\tau_{\BE}(\cX,\cD)=\tau(C,L)+\kappa$.
 \end{conjecture}
-The correction $\dim\cW-h^0(C,L)$ counts the generators of weight greater than one: it is $\sum_i(e_i-1)$ when every $a_i=e_i-1$, but $s$ when every $a_i=1$. The proposed proof combines Watanabe's description of the canonical module~\cite{watanabe81} with Brown and Erman's bounds on strongly linear strands~\cite{brownErman25}, reducing the first failure to a comparison with the coarse canonical module. The kernel-bundle approach will also address the remaining Betti numbers and extensions beyond this high-degree range. For log canonical rings $R(\cX,K_{\cX}+\Delta)$, the same cohomological framework applies even without the Gorenstein self-duality used above. This area is moving fast: beyond \cite{brownErman25,brownErmanStrands24,banksCobbSayrafi26}, Brown and Erman have studied positivity and nonstandard graded Betti numbers \cite{brownErman24-2}, Martinova has begun the asymptotic theory of syzygies of weighted projective spaces \cite{martinova25}, and truncations of nonstandard graded polynomial rings are Koszul modules in the Herzog--Iyengar sense~\cite{DB25}.
+I will begin with one stacky point of order $e$ and $\cD=\pi^*L\otimes\cT$, so $\kappa=1$. Write $R=R(\cX,\cD)$. The evaluation filtration has factors $\pi^*M_L\otimes\cD^{-1}$ and $\cD^{-e}\otimes\cT^{-1}$. In the first forbidden degree $j=p+e+1$, exterior powers and pushforward give $\wedge^{p+1}M_L\otimes L^e(P)$ and $\wedge^pM_L\otimes L$. Coarse regularity kills the first $H^1$, the target $H^1$ in the Tor formula, and the terms in higher forbidden degrees; the second is $K_{p-1,2}(C,L)$. The first target is therefore the comparison $\Tor_p^S(R,\CC)_{p+e+1}\cong K_{p-1,2}(C,L)$, proving the shift by one. For general $\kappa$, I will track the vanishing orders removed by successive evaluation maps and show that only the factor containing all higher-weight generators can contribute in forbidden degrees. This would recover the coarse Koszul group and explain the full shift. I will then test the method on log canonical rings, including modular-form rings with cusps, without using Gorenstein duality. These thresholds would complement recent positivity and syzygy results in nonstandard gradings~\cite{brownErman24-2,brownErmanStrands24,banksCobbSayrafi26,martinova25,DB25}.
+
+At degree $2g$, secant geometry gives a sharper target. For $g=2n+1$ and $\cliff(C)=n$, Farkas--Kemeny show that a very ample, normally generated line bundle $L$ of degree $2g$ satisfies $N_{n-1}$ if and only if it is \emph{$n$-very ample}: every subscheme of length $n+1$ imposes independent conditions~\cite[Thm.~1.4]{farkasKemeny16}; see also~\cite{farkasDifference24}. I predict that for general stacky points this criteria, shifted by $\kappa$ still holds. 
+
+\begin{conjecture}[Stacky Secant Conjecture]\label{conj:weighted-secant}
+For $C,L$ above, fixed $e_i\ge2$, and general distinct
+$P_i\in C$, set $\cD=\pi^*L\otimes\bigotimes_i\cT_i^{e_i-1}$,
+$\kappa=\sum_i(e_i-1)$. $(\cX,\cD)$ is weighted
+$N_{n-1+\kappa}$ iff $L$ is $n$-very ample.
+\end{conjecture}
+
+The first test is genus five with one point of order two: weighted $N_2$ should distinguish general degree-ten line bundles from those with a length-three secant obstruction. Taking $L=K_C(D-Q)$, with $D$ a general effective divisor of degree three and $Q\notin\Supp(D)$, gives an explicit family: $L$ is nonspecial, but $D$ imposes only two conditions. For arbitrary odd genus and signature, I will filter the evaluation kernel one stacky generator at a time and seek a comparison of all groups forbidden by weighted $N_{n-1+\kappa}$ with shifted coarse Koszul groups. The key is to use the $2$-regularity of $R(C,L)$ to eliminate the other $H^1$-terms, leaving Farkas--Kemeny's theorem to identify the surviving coarse obstruction with failure of $n$-very ampleness.
+%\subsection{Beyond Stacky Canonical Curves}\label{subsec:stacks-further}
+%
+%The proposed proof of Conjecture~\ref{conj:degeneration} never uses that the line bundle is $K_{\cX}$, so we expect it to extend to any divisor on a stacky curve of the form $\cD=\pi^*L\otimes\bigotimes_i\cT_i^{a_i}$, where $L$ is very ample on $C$ and $\cT_i=\cO_{\cX}(x_i)$ as above, so that $\deg\cT_i=1/e_i$ and $\cT_i^{e_i}\cong\pi^*\cO_C(P_i)$. Here $\ell(C)$ should be replaced by the Koszul cohomology invariant of $\lfloor\cD\rfloor$, and this would answer \cite[Ques.~7.6]{brownErman25}. The PI is pursuing the complementary high-degree regime; adapting the weighted kernel-bundle method above, we aim to prove:
+%
+%\begin{conjecture}\label{conj:high-degree}
+%Let $\cL=\pi^*L\otimes\bigotimes_i\cT_i^{a_i}$, with $0<a_i<e_i$, $\gcd(a_i,e_i)=1$, and $\deg L\geq2g+1$. If $\cW$ minimally generates $R(\cX,\cL)$, then $\tau_{\BE}(\cX,\cL)=\tau(C,L)+\dim\cW-h^0(C,L)$, where $\tau(C,L)$ is the first failure of ordinary $N_p$, and either threshold is $\infty$ if no failure occurs.
+%\end{conjecture}
+%The correction $\dim\cW-h^0(C,L)$ counts the generators of weight greater than one: it is $\sum_i(e_i-1)$ when every $a_i=e_i-1$, but $s$ when every $a_i=1$. The proposed proof combines Watanabe's description of the canonical module~\cite{watanabe81} with Brown and Erman's bounds on strongly linear strands~\cite{brownErman25}, reducing the first failure to a comparison with the coarse canonical module. The kernel-bundle approach will also address the remaining Betti numbers and extensions beyond this high-degree range. For log canonical rings $R(\cX,K_{\cX}+\Delta)$, the same cohomological framework applies even without the Gorenstein self-duality used above. This area is moving fast: beyond \cite{brownErman25,brownErmanStrands24,banksCobbSayrafi26}, Brown and Erman have studied positivity and nonstandard graded Betti numbers \cite{brownErman24-2}, Martinova has begun the asymptotic theory of syzygies of weighted projective spaces \cite{martinova25}, and truncations of nonstandard graded polynomial rings are Koszul modules in the Herzog--Iyengar sense~\cite{DB25}.
+%
+%At the first degree below this range, secant geometry should determine the obstruction. If $g=2n+1$ and $\cliff(C)=n$, Farkas--Kemeny show that a very ample, normally generated line bundle of degree $2g$ satisfies $N_{n-1}$ precisely when it is $n$-very ample~\cite[Thm.~1.4]{farkasKemeny16}. Here $n$-very ample means that sections separate every subscheme of length $n+1$. I predict that general stacky markings preserve this criterion after the homological shift appearing in Conjecture~\ref{conj:high-degree}.
+%
+%\begin{conjecture}[Weighted Secant Conjecture]\label{conj:weighted-secant}
+%Let $C$ have genus $g=2n+1\geq5$ and $\cliff(C)=n$, and let $L$ be very ample and normally generated with $\deg L=2g$. For fixed orders $e_i\geq2$ and general distinct points $P_i\in C$, let $\cX$ be the corresponding stacky curve and set $\cL=\pi^*L\otimes\bigotimes_i\cT_i^{e_i-1}$. If $\cW$ minimally generates $R(\cX,\cL)$ and $\kappa=\dim\cW-h^0(C,L)$, then
+%\[
+%(\cX,\cL)\text{ satisfies weighted }N_{n-1+\kappa}
+%\quad\Longleftrightarrow\quad
+%L\text{ is }n\text{-very ample}.
+%\]
+%\end{conjecture}
+%
+%Thus coarse secants should determine the failure locus, while the higher-weight generators determine its homological position. I will compare the lowest-degree Koszul groups of the coarse and stacky canonical modules to identify the nonvanishing, then use the weighted kernel-bundle method to study the complementary vanishing. The first test is genus five with one point of order two: weighted $N_2$ should distinguish general degree-ten line bundles from those with a length-three secant obstruction. For the latter, take $L=K_C(D-Q)$, where $D$ is a general effective divisor of degree three and $Q\notin\operatorname{Supp}(D)$. Then $h^1(C,L)=0$ but $h^1(C,L(-D))=1$, giving an explicit family in which to track the predicted nonvanishing. Establishing the criterion would extend the proposed threshold formula to a range where the geometry of the embedding, beyond its degree, controls the answer.
 
 \section{Multigraded Castelnuovo--Mumford Regularity: Bounds and Behavior}\label{sec:multigraded-regularity}
 
-As discussed in Section~\ref{subsec:prior:homological-algebra-on-toric}, Castelnuovo--Mumford regularity links cohomological vanishing to the degrees of equations and syzygies. The PI's work extends this link to products of projective spaces and proves finite-generation and asymptotic results for regularity on toric varieties~\cite{bruceHellerSayrafi22,bruceHellerSayrafi26}. Basic questions remain open: regularity can have infinitely many corners, it is not determined by the multigraded Betti numbers, and few geometric bounds are known. This project aims to explain the shape of the regularity region through the geometry of its support, bound its corners using syzygies, and bound the regularity of curves using intersection theory. Throughout, $X$, $S$, $B$, and $B_1,\ldots,B_s$ are as in \S\ref{sec:prior-work}, with $n=\dim X$ and ground field $\KK$ algebraically closed of characteristic zero.
-
+The PI linked cohomological vanishing and syzygies on products of projective spaces and proved finite-generation and asymptotic results for toric regularity (\S\ref{sec:prior-work},~\cite{bruceHellerSayrafi22,bruceHellerSayrafi26}). Yet regularity can have infinitely many corners, multigraded Betti numbers do not determine it, and geometric bounds remain scarce. I will explain its shape through support geometry, bound corners using syzygies, and bound curve regularity through intersection theory. Throughout, $X$, $S$, $B$, $B_1,\ldots,B_s$ are as in \S\ref{sec:prior-work}, $n=\dim X$, and $\KK$ is algebraically closed of characteristic zero.
+ 
 \subsection{The Shape and Minimal Degrees of Multigraded Regularity}\label{subsec:shape-of-regularity}
-As the PI showed, the coordinate ring $S/I_p$ of a point $p\in\cH_2$ has infinitely many minimal regular degrees (Figure~\ref{fig:example-of-reg}(c), \cite{bruceHellerSayrafi22}), although $\cO_p$ is regular in every degree. These corners are measured relative to $\Nef(X)$, and I propose that their infinitude reflects the choice of cone: the ambient nef cone can be too small to account for the directions of positivity available to $M$. A cone that sees the module should recover a form of persistence and finite generation, up to a uniform shift. The point example supports this expectation: its support-relative regularity has only one corner. This leads to three connected problems: determine the directions of regularity from support geometry, bound its minimal degrees using syzygies, and control the growth of its corners for powers of ideals. For a finitely generated graded $S$-module $M$, write $\cF= \widetilde{M}\neq0$ and $Z=\supp(\cF)$. Writing $D_\rho$ for the torus-invariant prime divisor associated to a ray $\rho$, set
+As the PI showed, the coordinate ring $S/I_p$ of a point $p\in\cH_2$ has infinitely many minimal regular degrees (Figure~\ref{fig:example-of-reg}(c), \cite{bruceHellerSayrafi22}), although $\cO_p$ is regular in every degree. These corners are measured relative to $\Nef(X)$, and I propose that their infinitude reflects the choice of cone: the ambient nef cone can be too small to account for the directions of positivity available to $M$. A cone adapted to $M$ should recover persistence and finite generation, up to a uniform shift. The point example supports this expectation: its support-relative regularity has only one corner. This leads to three connected problems: determine the directions of regularity from geometry, bound its minimal degrees using syzygies, and control the number of corners. For a finitely generated graded $S$-module $M$, let $\cF= \widetilde{M}\neq0$ and $Z=\supp(\cF)$. With $D_\rho$ the torus-invariant prime divisor of a ray $\rho$, set
 \[
 K_Z=\bigcap_{p\in Z}\cone\{[D_\rho]:p\notin D_\rho\},
 \qquad
@@ -683,7 +728,7 @@ If $H_B^0(M)=0$, there are $\aa_M,\bb_M,\aa_{\cF},\bb_{\cF}\in\Pic(X)$ such that
 
 Module and sheaf regularity differ exactly by $H_B^1(M)$, the failure of sections to lift. In Figure~\ref{fig:example-of-reg}(c), $\reg(S/I_p)$ fills $K_p\supsetneq\Nef(X)_{\RR}$, while $C_p=\Pic(X)_{\RR}$. For the diagonal $\Delta\subset\PP^1\times\PP^1$, $K_\Delta$ is the nef cone but $C_\Delta$ is a half-plane: $\reg(S/(x_0y_1-x_1y_0))=\NN^2$, while $\reg(\cO_\Delta)=\{(a,b):a+b\ge0\}$, so one module corner shatters into infinitely many sheaf corners. I will approach the module bounds through toric modifications of linear systems whose base loci avoid $Z$. For sheaves, Fujita vanishing on $Z$~\cite[Thm.~1.5]{keeler03} and the global generation forced by regularity point to the two inclusions, and comparing first syzygies along support curves offers a route to effective translates~\cite{maclaganSmith04}.
 
-For syzygies, our faithfulness theorem (\S\ref{sec:prior-work}) gives finitely many corners, but no box, and when $K_Z\supsetneq\Nef(X)_{\RR}$, Conjecture~\ref{conj:support-cone-duality} forces infinitely many corners. So we measure corners relative to $\Gamma_Z\coloneqq K_{Z}\cap \Pic(X)$ instead. Define $\reg_Z(M)$ as Maclagan--Smith regularity with $\Gamma_Z$ in place of $\Nef(X)$: $\dd\in\reg_Z(M)$ if and only if $H_B^i(M)_{\dd-\mathbf g_1-\cdots-\mathbf g_{i-1}+\gamma}=0$ for all $i\ge1$ and $\gamma\in\Gamma_Z$, with each $\mathbf g_j$ among $B_1,\ldots,B_s$ and the minimal generators of $\Gamma_Z$. Then $\reg_Z(M)\subseteq\reg(M)$ is $\Gamma_Z$-stable. It equals $\reg(M)$ on products, and in Figure~\ref{fig:example-of-reg}(c), $\reg_Z(S/I_p)=\Gamma_p$ has one corner instead of infinitely many. I conjecture that, up to a uniform shift, regularity \emph{is} support-relative regularity, generated in a box determined by the Betti table.
+Our faithfulness theorem (\S\ref{sec:prior-work}) gives finitely many corners but does not locate them, and when $K_Z\supsetneq\Nef(X)_{\RR}$, Conjecture~\ref{conj:support-cone-duality} forces infinitely many. I therefore measure corners relative to $\Gamma_Z\coloneqq K_Z\cap\Pic(X)$: let $\reg_Z(M)$ be Maclagan--Smith regularity~\cite{maclaganSmith04} with respect to $B_1,\ldots,B_s$ together with the minimal generators of $\Gamma_Z$, so that $\Gamma_Z$ plays the role of $\Nef(X)$. Then $\reg_Z(M)\subseteq\reg(M)$ is $\Gamma_Z$-stable, with equality on products, and in Figure~\ref{fig:example-of-reg}(c), $\reg_Z(S/I_p)=\Gamma_p$ has a single corner. I conjecture that, up to a uniform shift, regularity \emph{is} support-relative regularity, with corners in a box determined by the Betti table.
 
 \begin{conjecture}\label{conj:betti-boxes}
 Fix $X$ and a basis of $\Pic(X)$. There are $\mathbf c_X\in\Nef(X)$ and, for each multigraded Betti table $\beta$, an explicit finite box $Q_X(\beta)$ such that every finitely generated graded $S$-module $M$ with $\beta^S(M)=\beta$, $\widetilde M\ne0$, and $H_B^0(M)=0$ satisfies
@@ -691,88 +736,122 @@ Fix $X$ and a basis of $\Pic(X)$. There are $\mathbf c_X\in\Nef(X)$ and, for eac
 \mathbf c_X+\reg(M)\;\subseteq\;\reg_Z(M)\;=\;\big(Q_X(\beta)\cap\reg_Z(M)\big)+\Gamma_Z.
 \]
 \end{conjecture}
+The inclusion gives persistence along $\Gamma_Z$, and the equality locates its corners; together they imply the module half of Conjecture~\ref{conj:support-cone-duality}. I will approach the inclusion by adapting the Maclagan--Smith nonzerodivisor argument to sufficiently divisible degrees in $\Gamma_Z$, tracking the nef shift through induction on $\dim Z$. For the box, Lauren Cranton Heller have proved the followng
 
-The inclusion is a support-relative nef persistence, and the equality says the Betti table locates every $\Gamma_Z$-corner; since $\Gamma_Z$ contains a translate of $K_Z\cap\Pic(X)$, together they imply the module half of Conjecture~\ref{conj:support-cone-duality}, with $\aa_M,\bb_M$ depending only on $\beta$. For the inclusion, general forms of each degree in $\Gamma_Z$ are nonzerodivisors on $M$, so the Maclagan--Smith argument~\cite{maclaganSmith04} should run by induction on $\dim Z$: it gives equality when $\dim Z=0$, and each further dimension should cost a bounded nef shift, uniform because $\Gamma_Z$ depends only on which torus orbits meet $Z$. The box is the heart of the matter. On products, where $\mathbf c_X=\zero$, ongoing work with Lauren Cranton Heller suggests $Q_X(\beta)=\prod_{j}[\ell_j(\beta),U_j(\beta)]$ with $\ell_j(\beta)=\min\{a_j:\beta_{0,\aa}\ne0\}$; we have proved this for $r=2$ and are extending it via projections and partial Koszul complexes. In general, persistence along faces of $\Gamma_Z$ and resolutions of the diagonal offer an approach~\cite{botbolChardin17,HHL24,brownSayrafi24}.
+\begin{lemma}\label{lem:bigraded-betti-box}
+Under the hypotheses of Conjecture~\ref{conj:betti-boxes},
+with $X=\PP^{n_1}\times\PP^{n_2}$, every corner of $\reg(M)$
+lies in $\prod_{j=1}^2[\ell_j(\beta),U_j(\beta)]$, where
+$\ell_j(\beta)=\min_{\beta_{0,\aa}\ne0}a_j$ and
+$U_j(\beta)=\max_{\beta_{i,\aa}\ne0}a_j$.
+\end{lemma}
 
-%\begin{cor}\label{cor:finite-regularity-test}
-%Assume Conjecture~\ref{conj:betti-boxes} and fix $\beta$. Only finitely many regions $\reg_Z(M)$ occur, each computable by finitely many tests in $Q_X(\beta)$, and $\reg_Z(M)\subseteq\reg(M)\subseteq\reg_Z(M)-\mathbf c_X$.
-%\end{cor}
-
+For $r\ge3$, I will seek coordinatewise descent: if $\dd\in\reg(M)$ and $d_j>U_j(\beta)$, then $\dd-\mathbf e_j\in\reg(M)$; iterating would trap corners in a box. I will start with three factors, isolating one direction via partial Koszul complexes, then extend to faces of $\Gamma_Z$ via diagonal resolutions~\cite{botbolChardin17,chardinHolanda22,HHL24,brownSayrafi24}.
 
 \begin{cor}\label{cor:finite-regularity-test}
-Assume Conjecture~\ref{conj:betti-boxes}, and fix $X$ and $\beta$. Among modules satisfying its hypotheses, only finitely many regions $\reg_Z(M)$ occur. Each is determined by $\Gamma_Z$ and the finite set $Q_X(\beta)\cap\reg_Z(M)$, and
-\[
-\reg_Z(M)\subseteq\reg(M)\subseteq\reg_Z(M)-\mathbf c_X.
-\]
+Assume Conjecture~\ref{conj:betti-boxes} and fix $\beta$. Among modules satisfying its hypotheses, only finitely many regions $\reg_Z(M)$ occur. Each is determined by $\Gamma_Z$ and the finite set $Q_X(\beta)\cap\reg_Z(M)$, and $\reg_Z(M)\subseteq\reg(M)\subseteq\reg_Z(M)-\mathbf c_X$.
 \end{cor}
 
-
-There are only finitely many possible monoids $\Gamma_Z$, since $K_Z$ depends only on which torus orbits meet $Z$. The corollary therefore reduces the possible regions to finitely many candidate degrees, but testing membership in $\reg_Z(M)$ still requires vanishing over all $\gamma\in\Gamma_Z$. I will seek a finite criterion for these tests, adapting the nonzerodivisor argument of~\cite[Cor.~4.8]{maclaganSmith04} to actual section degrees and using computable local cohomology~\cite{EMS00}. Such a criterion would make the corollary effective. On products, $\Gamma_Z=\Nef(X)$, so the Maclagan--Smith criterion applies directly; alternatively, Theorem~\ref{thm:mgreg-main} computes regularity by quasilinear truncations. Combined with our box theorem, this gives a complete algorithm for $\PP^{n_1}\times\PP^{n_2}$. Existing implementations, including ours~\cite{ABLS20}, inspect a fixed window and can miss corners outside it. Our asymptotic theorem (\S\ref{sec:prior-work}) bounds $\reg(I^p)$ between translates moving linearly in $p$ but does not exclude superlinear motion of corners along a face.
+This holds as $\Gamma_Z$ depends only on which torus orbits meet $Z$, so only finitely many monoids occur; testing a corner still needs vanishing on all of $\Gamma_Z$. On products, $\Gamma_Z=\Nef(X)$ and the Maclagan--Smith criterion applies, so the $r=2$ box theorem gives a complete algorithm for $\reg(M)$ on $\PP^{n_1}\times\PP^{n_2}$, towards~\cite[Prob.~4.10]{maclaganSmith04}; existing implementations, including ours~\cite{ABLS20}, scan a fixed window and can miss corners outside it. In general, I will seek a finite criterion adapting the nonzerodivisor argument of~\cite[Cor.~4.8]{maclaganSmith04}. Our asymptotic theorem traps $\reg(I^p)$ between translates moving linearly in $p$, but corners may run superlinearly along faces.
 
 \begin{conjecture}\label{conj:linear-windows-powers}
-Let $X=\PP^{n_1}\times\cdots\times\PP^{n_r}$, $I\subseteq S$ homogeneous, and $M$ a finitely generated graded $S$-module. There are constants $A,C$ such that for every corner $\vv \in \reg(I^pM)$ we have $\|\vv\|_\infty\le Ap+C$.
+Let $X=\PP^{n_1}\times\cdots\times\PP^{n_r}$, $I\subset S$ be homogeneous, and $M$ be a finitely generated graded $S$-module. There are constants $A,C$ such that $\|\vv\|_\infty\le Ap+C$ for every corner $\vv\in\reg(I^pM)$.
 \end{conjecture}
 
-The Betti degrees of $I^pM$ are bounded linearly in $p$ via the Rees module~\cite[Thm.~1.1]{BCHT13}, so this follows from Conjecture~\ref{conj:betti-boxes} if $U_j(\beta)$ is linear in the degrees of $\beta$. As corners form an antichain, the window allows $O(p^{r-1})$ of them, which is sharp: for $\mathfrak m$ generated by all Cox variables, $\reg(\mathfrak m^p)=\{\dd\in\NN^r:\sum_jd_j\ge p\}$ has $m(m-1)(R-1)/2+m\epsilon$ corners.
+The Betti degrees of $I^pM$ grow linearly in $p$~\cite[Thm.~1.1]{BCHT13}, so the proposed coordinatewise box on products would imply this when $H_B^0(M)=0$; our $r=2$ theorem already gives this case. For general $M$, I will separately bound the contribution of $B$-torsion using the Rees module. Since corners form an antichain, the window allows $O(p^{r-1})$ of them, and this is sharp: for the ideal $\mathfrak m$ of all Cox variables, $\reg(\mathfrak m^p)=\{\dd\in\NN^r:|\dd|\ge p\}$ has $\binom{p+r-1}{r-1}$ corners. For ordinary powers I predict an arithmetic structure. Set $\cC(I)\coloneqq\{(p,\dd)\in\NN\times\ZZ^r : p\geq1,\ \dd\text{ is a corner of }\reg(I^p)\}$, and call a set \emph{semilinear} if it is a finite union of translates of finitely generated additive monoids.
 
- \subsection{A Gruson, Lazarsfeld, and Peskine Style Bound for Multigraded Regularity}
- A foundational result of Gruson, Lazarsfeld, and Peskine \cite{GLP83} states that if $C \subset \PP^r_{\KK}$ is an integral nondegenerate curve defined over an algebraically closed field $\KK$, then
-\[
-\reg\left(I_{C}\right) \leq \deg(C)-r+2,
-\]
-where $I_{C} \subset \KK[x_0,\ldots,x_r]$ is the (saturated) homogeneous defining ideal of $C$. Since $\deg(C) = C \cdot H$ for the hyperplane class $H$, the theorem is a strong bridge between the intersection theory of $C$ and the degrees of its equations and syzygies. It sharpens classical work of Castelnuovo \cite{castelnuovo1893} on space curves and settles the curve case of the Eisenbud--Goto conjecture $\reg(I_C) \leq \deg(C) - \codim(C) + 1$ \cite{eisenbudGoto84}. It has inspired decades of work on optimal bounds \cite{pinkham86,lazarsfeld87,kwak98,kwak00} and on bounding regularity by the degrees of defining equations \cite{BEL91,einLazarsfeld93,CEL01,lozovanuSmith12}, and recent counterexamples to the general Eisenbud--Goto conjecture \cite{MP18,CCMPV19,McCulloughPeeva20} make such geometric bounds all the more valuable.
+\begin{conjecture}\label{conj:semilinear-corners}
+Let $X=\PP^{n_1}\times\cdots\times\PP^{n_r}$ with $n_j\geq1$, and let $0\neq I\subsetneq S$ be homogeneous. There is $p_0$ such that $\cC(I)\cap\{p\geq p_0\}$ is semilinear.
+\end{conjecture}
+
+This would make the number of corners eventually quasipolynomial in $p$, of degree at most $r-1$ \cite{woods15}. I will first prove the monomial case. For monomial ideals, I will adapt constructibility under local cohomology~\cite[Thm.~8.1]{DMMOW25}, then use Presburger quantification over fine degrees and nef shifts to describe regularity and its corners. In general, I will test Rees degenerations on $\PP^1\times\PP^1$ and $\PP^1\times\PP^2$, seeking conditions that prevent cohomological cancellation along the boundary. Even where corners change, this produces explicit bounds complementing the asymptotic sheaf regions of~\cite{bruceHellerSayrafiSeceleanu25}.
+
+%For syzygies, our faithfulness theorem (\S\ref{sec:prior-work}) gives finitely many corners, but no box, and when $K_Z\supsetneq\Nef(X)_{\RR}$, Conjecture~\ref{conj:support-cone-duality} forces infinitely many corners. So we measure corners relative to $\Gamma_Z\coloneqq K_{Z}\cap \Pic(X)$ instead. Define $\reg_Z(M)$ as Maclagan--Smith regularity with $\Gamma_Z$ in place of $\Nef(X)$: $\dd\in\reg_Z(M)$ if and only if $H_B^i(M)_{\dd-\mathbf g_1-\cdots-\mathbf g_{i-1}+\gamma}=0$ for all $i\ge1$ and $\gamma\in\Gamma_Z$, with each $\mathbf g_j$ among $B_1,\ldots,B_s$ and the minimal generators of $\Gamma_Z$. This is Maclagan--Smith regularity for the finite set $\{B_j\}\cup\{\text{generators of }\Gamma_Z\}$, which their framework allows~\cite{maclaganSmith04}; the new input is a choice adapted to $Z$. Then $\reg_Z(M)\subseteq\reg(M)$ is $\Gamma_Z$-stable. It equals $\reg(M)$ on products, and in Figure~\ref{fig:example-of-reg}(c), $\reg_Z(S/I_p)=\Gamma_p$ has one corner instead of infinitely many. I conjecture that, up to a uniform shift, regularity \emph{is} support-relative regularity, generated in a box determined by the Betti table.
+%
+%\begin{conjecture}\label{conj:betti-boxes}
+%Fix $X$ and a basis of $\Pic(X)$. There are $\mathbf c_X\in\Nef(X)$ and, for each multigraded Betti table $\beta$, an explicit finite box $Q_X(\beta)$ such that every finitely generated graded $S$-module $M$ with $\beta^S(M)=\beta$, $\widetilde M\ne0$, and $H_B^0(M)=0$ satisfies
+%\[
+%\mathbf c_X+\reg(M)\;\subseteq\;\reg_Z(M)\;=\;\big(Q_X(\beta)\cap\reg_Z(M)\big)+\Gamma_Z.
+%\]
+%\end{conjecture}
+%
+%The inclusion is a support-relative nef persistence, and the equality says the Betti table locates every $\Gamma_Z$-corner; since $\Gamma_Z$ contains a translate of $K_Z\cap\Pic(X)$, together they imply the module half of Conjecture~\ref{conj:support-cone-duality}, with $\aa_M,\bb_M$ depending only on $\beta$. For the inclusion, general forms of each degree in $\Gamma_Z$ are nonzerodivisors on $M$, so the Maclagan--Smith argument~\cite{maclaganSmith04} should run by induction on $\dim Z$: it gives equality when $\dim Z=0$, and each further dimension should cost a bounded nef shift, uniform because $\Gamma_Z$ depends only on which torus orbits meet $Z$. The box is the heart of the matter. On products, where $\mathbf c_X=\zero$, ongoing work with Lauren Cranton Heller suggests $Q_X(\beta)=\prod_{j}[\ell_j(\beta),U_j(\beta)]$ with $\ell_j(\beta)=\min\{a_j:\beta_{0,\aa}\ne0\}$ and $U_j(\beta)=\max\{a_j:\beta_{i,\aa}\ne0\text{ for some }i\}$; we have proved this for $r=2$ and are extending it via projections and partial Koszul complexes. That $U(\beta)+\NN^r\subseteq\reg(M)$ is elementary (split the resolution); the content is that no corner escapes the box along a face. In general, persistence along faces of $\Gamma_Z$ and resolutions of the diagonal offer an approach~\cite{botbolChardin17,HHL24,brownSayrafi24}.
+%
+%%\begin{cor}\label{cor:finite-regularity-test}
+%%Assume Conjecture~\ref{conj:betti-boxes} and fix $\beta$. Only finitely many regions $\reg_Z(M)$ occur, each computable by finitely many tests in $Q_X(\beta)$, and $\reg_Z(M)\subseteq\reg(M)\subseteq\reg_Z(M)-\mathbf c_X$.
+%%\end{cor}
+%
+%
+%\begin{cor}\label{cor:finite-regularity-test}
+%Assume Conjecture~\ref{conj:betti-boxes}, and fix $X$ and $\beta$. Among modules satisfying its hypotheses, only finitely many regions $\reg_Z(M)$ occur. Each is determined by $\Gamma_Z$ and the finite set $Q_X(\beta)\cap\reg_Z(M)$, and
+%\[
+%\reg_Z(M)\subseteq\reg(M)\subseteq\reg_Z(M)-\mathbf c_X.
+%\]
+%\end{cor}
+%
+%
+%There are only finitely many possible monoids $\Gamma_Z$, since $K_Z$ depends only on which torus orbits meet $Z$. The corollary therefore reduces the possible regions to finitely many candidate degrees, but testing membership in $\reg_Z(M)$ still requires vanishing over all $\gamma\in\Gamma_Z$. I will seek a finite criterion for these tests, adapting the nonzerodivisor argument of~\cite[Cor.~4.8]{maclaganSmith04} to actual section degrees and using computable local cohomology~\cite{EMS00}. Such a criterion would make the corollary effective. On products, $\Gamma_Z=\Nef(X)$, so the Maclagan--Smith criterion applies directly; alternatively, Theorem~\ref{thm:mgreg-main} computes regularity by quasilinear truncations. Combined with our box theorem, this gives a complete algorithm for $\PP^{n_1}\times\PP^{n_2}$. Existing implementations, including ours~\cite{ABLS20}, inspect a fixed window and can miss corners outside it. Our asymptotic theorem (\S\ref{sec:prior-work}) bounds $\reg(I^p)$ between translates moving linearly in $p$ but does not exclude superlinear motion of corners along a face.
+%
+%\begin{conjecture}\label{conj:linear-windows-powers}
+%Let $X=\PP^{n_1}\times\cdots\times\PP^{n_r}$, $I\subseteq S$ homogeneous, and $M$ a finitely generated graded $S$-module. There are constants $A,C$ such that for every corner $\vv \in \reg(I^pM)$ we have $\|\vv\|_\infty\le Ap+C$.
+%\end{conjecture}
+%
+%The Betti degrees of $I^pM$ are bounded linearly in $p$ via the Rees module~\cite[Thm.~1.1]{BCHT13}, so this follows from Conjecture~\ref{conj:betti-boxes} if $U_j(\beta)$ is linear in the degrees of $\beta$. As corners form an antichain, the window allows $O(p^{r-1})$ of them. This is sharp: for $\mathfrak m$ generated by all Cox variables, $\reg(\mathfrak m^p)=\{\dd\in\NN^r:\sum_jd_j\geq p\}$ has $\binom{p+r-1}{r-1}$ corners. For ordinary ideal powers, I predict a stronger arithmetic structure. Set
+%\[
+%\cC(I)\coloneqq\left\{(p,\dd)\in\NN\times\ZZ^r\;\middle|\;
+%p\geq1,\ \dd\text{ is a corner of }\reg(I^p)\right\}.
+%\]
+%A set is \emph{semilinear} if it is a finite union of translates of finitely generated additive monoids.
+%
+%\begin{conjecture}[Semilinearity of Regularity Corners]\label{conj:semilinear-corners}
+%Let $X=\PP^{n_1}\times\cdots\times\PP^{n_r}$ with $n_j\geq1$, and let $0\neq I\subsetneq S$ be homogeneous. There is $p_0$ such that $\cC(I)\cap\{p\geq p_0\}$ is semilinear.
+%\end{conjecture}
+%
+%This would give a finite arithmetic description of all corners of sufficiently high powers, strengthening Conjecture~\ref{conj:linear-windows-powers} for ideals. In particular, their number would eventually be quasipolynomial in $p$, of degree at most $r-1$. The structured behavior of Betti degrees of powers~\cite{BCHT13} suggests such a description, but does not imply it: multigraded Betti numbers do not determine regularity. I will begin with monomial ideals, describing membership in their powers by integer linear conditions and using toric \v{C}ech complexes to detect local-cohomology vanishing. The next targets are nonmonomial ideals with controlled Rees degenerations on $\PP^1\times\PP^1$ and $\PP^1\times\PP^2$. The difficulty is to control cohomological cancellations: a degeneration bounds regularity but need not preserve its corners. This would complement the asymptotic Seshadri regions for ideal-sheaf powers~\cite{bruceHellerSayrafiSeceleanu25} with an exact description of the eventual corner sets of ordinary Cox-module powers.
+
+ \subsection{A Bound for Multigraded Regularity in the Style of Gruson, Lazarsfeld, and Peskine}
+ A foundational result of Gruson, Lazarsfeld, and Peskine \cite{GLP83} states that if $C \subset \PP^r_{\KK}$ is an integral nondegenerate curve defined over an algebraically closed field $\KK$, then $\reg\left(I_{C}\right) \leq \deg(C)-r+2$, where $I_{C} \subset \KK[x_0,\ldots,x_r]$ is the (saturated) homogeneous defining ideal of $C$. Since $\deg(C) = C \cdot H$ for the hyperplane class $H$, the theorem is a strong bridge between the intersection theory of $C$ and the degrees of its equations and syzygies. It sharpens classical work of Castelnuovo \cite{castelnuovo1893} on space curves and settles the curve case of the Eisenbud--Goto conjecture $\reg(I_C) \leq \deg(C) - \codim(C) + 1$ \cite{eisenbudGoto84}. It has inspired decades of work on optimal bounds \cite{pinkham86,lazarsfeld87,kwak98,kwak00,giaimo06} and on bounding regularity by the degrees of defining equations \cite{BEL91,einLazarsfeld93,CEL01,lozovanuSmith12}, and recent counterexamples to the general Eisenbud--Goto conjecture \cite{MP18,CCMPV19,McCulloughPeeva20} make such geometric bounds all the more valuable.
 
  \begin{problem}\label{prob:GLP}
- 	Prove a multigraded analogue of Gruson, Lazarsfeld, and Peskine's theorem for curves in smooth projective toric varieties.
+ 	Prove a multigraded analogue of Gruson, Lazarsfeld, and Peskine's (GLP) theorem for curves in smooth projective toric varieties.
 \end{problem}
 
-The objective is an explicit subset of $\reg(\cI_C)$ whose shape reflects the divisor relations of the ambient variety~\cite{maclaganSmith04}. Cobb has made progress toward Problem~\ref{prob:GLP} by adapting the kernel bundle techniques of Gruson, Lazarsfeld, and Peskine to products of projective spaces~\cite{cobb24}. My proposed answer is modeled on the proof of the classical bound. Recall that $\cI_C$ is $m$-regular if $H^q(\cI_C(m-q))=0$ for $q\geq1$; the sequence $0\to\cI_C\to\cO_{\PP^r}\to\cO_C\to0$ splits this vanishing into three questions. (i) \emph{Ambient} ($q\geq3$): since $H^{q-1}(\cO_C(m-q))=0$, we have $H^q(\cI_C(m-q))\cong H^q(\cO_{\PP^r}(m-q))$, which vanishes at these twists because $\PP^r$ has no intermediate cohomology. (ii) \emph{Speciality} ($q=2$): $H^2(\cI_C(m-2))\cong H^1(\cO_C(m-2))$ vanishes when $\cO_C(m-2)$ is nonspecial, e.g., when $(m-2)\deg(C)>2p_a(C)-2$, which holds at $m=\deg(C)-r+2$ by Castelnuovo's genus bound. (iii) \emph{Interpolation} ($q=1$): $H^1(\cI_C(m-1))$ is the cokernel of the restriction $H^0(\cO_{\PP^r}(m-1))\to H^0(\cO_C(m-1))$, so it vanishes if and only if every section on $C$ extends to $\PP^r$. This surjectivity, proved by kernel bundle arguments, is the heart of the theorem.
+I seek an explicit region in $\reg(\cI_C)$ shaped by $X$'s divisor relations~\cite{maclaganSmith04}. Cobb adapted the kernel bundle techniques of GLP to products of projective spaces~\cite{GLP83,cobb24}, and Brown--Erman ask for a weighted analogue~\cite[Ques.~7.5]{brownErman25}. Classically, $0\to\cI_C\to\cO_{\PP^r}\to\cO_C\to0$ reduces $m$-regularity of $\cI_C$ to three tests. (i) \emph{Ambient} ($q\geq3$): $H^q(\cI_C(m-q))\cong H^q(\cO_{\PP^r}(m-q))=0$, since $H^{q-1}(\cO_C(m-q))=0$ and $\PP^r$ has no intermediate cohomology. (ii) \emph{Speciality} ($q=2$): $H^2(\cI_C(m-2))\cong H^1(\cO_C(m-2))$ vanishes for nonspecial $\cO_C(m-2)$, and $(m-2)\deg(C)>2p_a(C)-2$ suffices, holding at $m=\deg(C)-r+2$ by Castelnuovo's genus bound. (iii) \emph{Interpolation} ($q=1$): $H^1(\cI_C(m-1))$ is the cokernel of $H^0(\cO_{\PP^r}(m-1))\to H^0(\cO_C(m-1))$, vanishing exactly when sections on $C$ extend to $\PP^r$. Kernel bundles prove this surjectivity. Nondegeneracy gives $\length(C\cap\ell)\leq\deg(C)-r+2$ for every secant line $\ell$; interpolation on an $s$-secant line forces $\reg(\cI_C)\geq s$, so maximal secants govern the bound.
+%The objective is an explicit subset of $\reg(\cI_C)$ whose shape reflects the divisor relations of $X$~\cite{maclaganSmith04}. Cobb has made progress by adapting the kernel bundle techniques of \cite{GLP83} to products of projective spaces~\cite{cobb24}. My proposed answer is modeled on the classical proof. Recall that $\cI_C$ is $m$-regular if $H^q(\cI_C(m-q))=0$ for $q\geq1$; the sequence $0\to\cI_C\to\cO_{\PP^r}\to\cO_C\to0$ splits this vanishing into three questions. (i) \emph{Ambient} ($q\geq3$): $H^q(\cI_C(m-q))\cong H^q(\cO_{\PP^r}(m-q))=0$, since $H^{q-1}(\cO_C(m-q))=0$ and $\PP^r$ has no intermediate cohomology. (ii) \emph{Speciality} ($q=2$): $H^2(\cI_C(m-2))\cong H^1(\cO_C(m-2))$ vanishes when $\cO_C(m-2)$ is nonspecial, e.g., when $(m-2)\deg(C)>2p_a(C)-2$, which holds at $m=\deg(C)-r+2$ by Castelnuovo's genus bound. (iii) \emph{Interpolation} ($q=1$): $H^1(\cI_C(m-1))$ is the cokernel of the restriction $H^0(\cO_{\PP^r}(m-1))\to H^0(\cO_C(m-1))$, so it vanishes if and only if every section on $C$ extends to $\PP^r$. This surjectivity, proved by kernel bundle arguments, is the heart of the theorem. The constant $\deg(C)-r+2$ also has a geometric meaning: by nondegeneracy, every secant line $\ell$ meets $C$ in length at most $\deg(C)-r+2$, and interpolation along $\ell$ shows that an $s$-secant line forces $\reg(\cI_C)\geq s$. Thus the bound is governed by maximal secant lines.
 
-The constant $\deg(C)-r+2$ also has a geometric meaning: by nondegeneracy, every secant line $\ell$ meets $C$ in length at most $\deg(C)-r+2$, and interpolation along $\ell$ shows that an $s$-secant line forces $\reg(\cI_C)\geq s$. Thus the bound is governed by maximal secant lines.
-
-Now let $X$ be as in this section with $n\geq2$. Say that an integral curve $C\subset X$ is \emph{nondegenerate} if each restriction $H^0(X,B_j)\to H^0(C,B_j|_C)$ is injective. Set $r_j\coloneqq\dim_\KK H^0(X,B_j)-1$, $d_j\coloneqq\langle B_j\cdot C\rangle$, and the \emph{defect} $\delta_j\coloneqq d_j-r_j$. Maclagan--Smith regularity of $\cI_C$ at $\dd$ tests the twists $\dd-B_i$, then $\dd-B_i-B_j$, and so on, so the same three questions arise. I propose answering each by a region depending only on the numerical class of $C$ and on $X$:
-\begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
-
-\item \emph{Ambient vanishing.} Membership in $\reg(\cO_X)$ gives $H^q(X,\cO_X(\dd-\sum_jv_jB_j))=0$ for $q>0$ and $|\vv|=q$. Since $C$ is a curve, for $q\geq3$ these are exactly the ideal-sheaf tests.
-
-\item \emph{Nonspeciality.} Choose an explicit numerical bound $\widehat G_X([C])\geq p_a(C)$. For example, $A=\sum_jB_j$ is very ample, and multiplication of the restricted section spaces shows that $C$ spans at least a $\PP^R$, where $R=\sum_jr_j$. Thus one may take Castelnuovo's bound $\pi(D,R)$, where $D=\sum_jd_j$: writing $D-1=m(R-1)+\epsilon$ with $0\leq\epsilon<R-1$, this is $\binom{m}{2}(R-1)+m\epsilon$. On a surface, adjunction gives the exact genus and can be used instead. Every second twist is nonspecial on
-\[
-\cH_X([C])\coloneqq
-\left\{\dd\in\Pic(X)\ \middle|\
-\dd\cdot C\geq2\widehat G_X([C])-1+2\max\{d_j\}\right\},
-\]
-because $\deg\cO_C(\dd-B_i-B_j)>2p_a(C)-2$.
-
-\item \emph{Interpolation.} Guided by the secant-line explanation above, set $M_X\coloneqq\overline{\operatorname{NE}}(X)\cap N_1(X)_{\ZZ}$ and $e_j(\gamma)\coloneqq B_j\cdot\gamma$. Call $0\neq\gamma\in M_X$ \emph{eligible} if $e_j(\gamma)<r_j$ for some $j$, and put
-\[
-q_C(\gamma)\coloneqq\min_{j:\,e_j(\gamma)<r_j}
-\bigl(\delta_j+e_j(\gamma)\bigr),
-\qquad w(\gamma)\coloneqq\max_je_j(\gamma).
-\]
-If an integral rational curve $C'\neq C$ has eligible class $\gamma$, its image under $B_j$ spans at most $\PP^{e_j(\gamma)}$. The resulting sections vanishing on $C'$, together with nondegeneracy of $C$, give $\length(C\cap C')\leq q_C(\gamma)+1$. When $C'$ is smooth, arbitrary values on a subscheme of length $q_C(\gamma)+1$ can be interpolated by a line bundle of degree at least $q_C(\gamma)$. Requiring this degree at every first twist motivates:
+Now let $X$ be as in this section with $n\geq2$. Say that an integral curve $C\subset X$ is \emph{nondegenerate} if each restriction $H^0(X,B_j)\to H^0(C,B_j|_C)$ is injective. Set $r_j\coloneqq\dim_\KK H^0(X,B_j)-1$, $d_j\coloneqq\langle B_j\cdot C\rangle$, and the \emph{defect} $\delta_j\coloneqq d_j-r_j$. Maclagan--Smith regularity of $\cI_C$ at $\dd$ tests the twists $\dd-B_i$, then $\dd-B_i-B_j$, and so on, so the same three questions arise. I propose answering each by a region depending only on $X$ and the numerical class of $C$: (i) \emph{Ambient.} Membership in $\reg(\cO_X)$ gives $H^q(X,\cO_X(\dd-\sum_jv_jB_j))=0$ for $q>0$ and $|\vv|=q$. Since $C$ is a curve, for $q\geq3$ these are exactly the ideal-sheaf tests. (ii) \emph{Speciality.} Choose an explicit numerical bound $\widehat G_X([C])\geq p_a(C)$. For example, $A=\sum_jB_j$ is very ample, and multiplication of the restricted section spaces shows that $C$ spans at least a $\PP^R$, where $R=\sum_jr_j$. Thus one may take Castelnuovo's bound $\pi(D,R)$~\cite[Ch.~III]{ACGH85}, where $D=\sum_jd_j$: writing $D-1=m(R-1)+\epsilon$ with $0\leq\epsilon<R-1$, this is $\binom{m}{2}(R-1)+m\epsilon$. On a surface, adjunction gives the exact genus and can be used instead. Every second twist is nonspecial on $\cH_X([C])\coloneqq\{\dd\in\Pic(X) : \dd\cdot C\geq2\widehat G_X([C])-1+2\max_j d_j\}$, because $\deg\cO_C(\dd-B_i-B_j)>2p_a(C)-2$. (iii) \emph{Interpolation.} Guided by the secant-line explanation above, set $M_X\coloneqq\overline{\operatorname{NE}}(X)\cap N_1(X)_{\ZZ}$ and $e_j(\gamma)\coloneqq B_j\cdot\gamma$. Call $0\neq\gamma\in M_X$ \emph{eligible} if $e_j(\gamma)<r_j$ for some $j$, and put $q_C(\gamma)\coloneqq\min_{j:\,e_j(\gamma)<r_j}(\delta_j+e_j(\gamma))$ and $w(\gamma)\coloneqq\max_je_j(\gamma)$.
+If an integral rational curve $C'\neq C$ has eligible class $\gamma$, its image under $B_j$ spans at most $\PP^{e_j(\gamma)}$. The resulting sections vanishing on $C'$ and nondegeneracy of $C$ give $\length(C\cap C')\leq q_C(\gamma)+1$. When $C'$ is smooth, any values on a subscheme of length $q_C(\gamma)+1$ are interpolated by line bundles of degree $\geq q_C(\gamma)$. Requiring this degree at every first twist motivates:
 \[
 \cS_X([C])\coloneqq
 \left\{\dd\in\Pic(X)\ \middle|\
 \dd\cdot\gamma\geq q_C(\gamma)+w(\gamma)
 \text{ for every eligible }\gamma\in M_X\right\}.
 \]
-The definition tests all eligible lattice classes, including nonprimitive ones; the claim that these numerical inequalities suffice for interpolation is conjectural.
-\end{enumerate}
 
-\begin{conjecture}\label{conj:multigraded-glp}
+\begin{conjecture}[Multigraded GLP]\label{conj:multigraded-glp}
 If $C\subset X$ is an integral nondegenerate curve, then
 \[
 \cR_X([C])\coloneqq\cS_X([C])\cap\cH_X([C])\cap\reg(\cO_X)\ \subseteq\ \reg(\cI_C).
 \]
 \end{conjecture}
 
-On $\PP^r$, the line class gives $m\geq\deg(C)-r+2$, higher eligible multiples give weaker inequalities, and Castelnuovo's genus bound supplies nonspeciality at the same threshold, so the conjecture recovers the classical theorem. The proposed bound improves on Cobb's even for a simple curve: the image $C\subset X=\PP^2\times\PP^2$ of $[u:v]\mapsto\bigl([u^3:u^2v:v^3],[u^2:uv:v^2]\bigr)$, which pairs the normalization of a cuspidal plane cubic with the conic embedding and is therefore smooth. It has multidegree $(3,2)$ and defects $(1,0)$. The inequalities defining $\cS_X([C])$ reduce to $a\geq1$ and $b\geq2$; the genus estimate $\widehat G_X([C])=\pi(5,4)=1$ adds only the redundant $3a+2b\geq7$. In fact, $\cR_X([C])=\reg(\cI_C)=(1,2)+\NN^2$, so the bound is sharp (Lozovanu also obtains this corner over $\CC$~\cite[Thm.~A]{lozovanu09}), whereas Cobb's bound gives $(3,3)+\NN^2$~\cite[Prop.~B]{cobb24}. I have proved the conjecture for curves in $\PP^{n_1}\times\PP^{n_2}$ with a minimal-degree projection, and computations for curves in $\Bl_p\PP^3$ have found no counterexamples. What remains is precise: the ambient and nonspeciality conditions give the other regularity tests, so it suffices to prove that $H^0(X,\cO_X(\dd-B_i))\to H^0(C,\cO_C(\dd-B_i))$ is surjective for every $\dd\in\cR_X([C])$ and each $i$. For general $X$, I will combine the classical auxiliary line bundle on the normalization with the Hanlon--Hicks--Lazarev resolution of the diagonal~\cite{GLP83,cobb24,HHL24}, whose terms are $\cD_p=\bigoplus_\lambda\cO_X(-A_{p\lambda})\boxtimes\cO_X(-E_{p\lambda})$. For the normalization $f\colon\widetilde C\to X$ and a line bundle $L$ on $\widetilde C$, pullback, tensor product, and pushforward give a spectral sequence
-\[
-E_1^{-p,q}=\bigoplus_\lambda
-H^q\!\left(\widetilde C,L\otimes f^*\cO_X(-A_{p\lambda})\right)
-\otimes\cO_X(-E_{p\lambda}),\qquad q=0,1,
-\]
-converging to $f_*L$ in total degree zero. The task is to choose $L$ killing the relevant $H^1$ groups, then control the resulting presentation and its determinantal equations via the inequalities defining $\cR_X([C])$; singular curves also require controlling the finite-length discrepancy from normalization. I will begin with Brown and Sayrafi's explicit resolution in Picard rank two~\cite{brownSayrafi24}, with $\Bl_p\PP^3$ as a concrete test and curves in $\PP^1\times\PP^2$ as a first graduate-student project. A proof would give intersection-theoretic bounds for equations in Cox rings~\cite{maclaganSmith04} and, on products, for the quasilinear truncations of Theorem~\ref{thm:mgreg-main}.
+On $\PP^r$, the line class gives $m\geq\deg(C)-r+2$, higher eligible multiples give weaker inequalities, and Castelnuovo's genus bound supplies nonspeciality at the same threshold, so the conjecture recovers the classical theorem. I have proved it for curves in $\PP^{n_1}\times\PP^{n_2}$ with a minimal-degree projection, and computations for curves in $\Bl_p\PP^3$ have found no counterexamples. The bound is sharper than Cobb's even for a simple curve: the image $C\subset X=\PP^2\times\PP^2$ of $[u:v]\mapsto\bigl([u^3:u^2v:v^3],[u^2:uv:v^2]\bigr)$, which pairs the normalization of a cuspidal cubic with the conic embedding and is therefore smooth, with multidegree $(3,2)$ and defects $(1,0)$. The inequalities defining $\cS_X([C])$ reduce to $a\geq1$ and $b\geq2$; the genus estimate $\widehat G_X([C])=\pi(5,4)=1$ adds only the redundant $3a+2b\geq7$. In fact, $\cR_X([C])=\reg(\cI_C)=(1,2)+\NN^2$, so the bound is sharp (Lozovanu also obtains this corner over $\CC$~\cite[Thm.~A]{lozovanu09}), whereas Cobb's bound gives $(3,3)+\NN^2$~\cite[Prop.~B]{cobb24}.
+ 
+ What remains is precise: the ambient and nonspeciality conditions give the other regularity tests, so it suffices to prove that $H^0(X,\cO_X(\dd-B_i))\to H^0(C,\cO_C(\dd-B_i))$ is surjective for all $\dd\in\cR_X([C])$ and $i$. For general $X$, I will combine the classical auxiliary line bundle on the normalization $f\colon\widetilde C\to X$ with the Hanlon--Hicks--Lazarev diagonal~\cite{GLP83,cobb24,HHL24}, whose terms are $\cD_p=\bigoplus_\lambda\cO_X(-A_{p\lambda})\boxtimes\cO_X(-E_{p\lambda})$. For a line
+bundle $L$ on $\widetilde C$, pulling back, tensoring, and
+pushing forward give a spectral sequence with
+$E_1^{-p,q}=\bigoplus_\lambda
+H^q\!\bigl(\widetilde C,L\otimes f^*\cO_X(-A_{p\lambda})\bigr)
+\otimes\cO_X(-E_{p\lambda})$ for $q=0,1$,
+converging to $f_*L$ in total degree zero. I will first use Brown--Sayrafi's diagonal on $\Bl_p\PP^3$~\cite{brownSayrafi24}. For general $L$, the inequalities $\deg L-A_{p\lambda}\cdot C\ge g(\widetilde C)-1$ kill the relevant $H^1$. I will compute the resulting presentation and test whether its determinantal complex yields first-twist surjectivity throughout $\cR_X([C])$, beginning with smooth curves. Should extra positivity be needed, I will obtain an explicit weaker region and identify the missing sharpening. For singular curves, I will track the normalization quotient; curves in $\PP^1\times\PP^2$ are a first graduate-student project.
+
+%What remains is precise: the ambient and nonspeciality conditions give the other regularity tests, so it suffices to prove that $H^0(X,\cO_X(\dd-B_i))\to H^0(C,\cO_C(\dd-B_i))$ is surjective for every $\dd\in\cR_X([C])$ and each $i$. For general $X$, I will combine the classical auxiliary line bundle on the normalization with the Hanlon--Hicks--Lazarev resolution of the diagonal~\cite{GLP83,cobb24,HHL24}, whose terms are $\cD_p=\bigoplus_\lambda\cO_X(-A_{p\lambda})\boxtimes\cO_X(-E_{p\lambda})$. For the normalization $f\colon\widetilde C\to X$ and a line
+%bundle $L$ on $\widetilde C$, pulling back, tensoring, and
+%pushing forward give a spectral sequence with
+%$E_1^{-p,q}=\bigoplus_\lambda
+%H^q\!\bigl(\widetilde C,L\otimes f^*\cO_X(-A_{p\lambda})\bigr)
+%\otimes\cO_X(-E_{p\lambda})$ for $q=0,1$,
+%converging to $f_*L$ in total degree zero. I will first use Brown--Sayrafi's diagonal on $\Bl_p\PP^3$~\cite{brownSayrafi24}. For general $L$, the inequalities $\deg L-A_{p\lambda}\cdot C\ge g(\widetilde C)-1$ kill the corresponding $H^1$ groups. I will compute the resulting presentation and test whether its determinantal complex yields first-twist surjectivity throughout $\cR_X([C])$, beginning with smooth curves. If the construction requires additional positivity, it will give an explicit weaker region and identify the missing sharpening. For singular curves, I will track the normalization quotient; curves in $\PP^1\times\PP^2$ provide a first graduate-student project.
 
  \subsection{Multigraded Regularity of Torus-Invariant Subvarieties}
 
@@ -782,45 +861,38 @@ On a smooth projective toric variety $X = X_\Sigma$, the torus-invariant irreduc
 	Let $Z_{\sigma} \subset X$ be an irreducible torus-invariant subvariety corresponding to the cone $\sigma$. Give an explicit combinatorial characterization of $\reg(I_{Z_\sigma})$ and $\reg(S/I_{Z_\sigma})$.
 \end{problem}
 
-We ask for both because, unlike in the standard graded case, $\reg(S)$ need not have a single corner, so the two can behave quite differently \cite{bruceHellerSayrafi22}. Our approach combines the combinatorics of Hilbert functions with explicit computations of the higher cohomology of line bundles on torus-invariant subvarieties. With Jacob Lehman Duke, I have settled torus-fixed points. For a maximal cone $\sigma$, the variables surviving in $S/I_{Z_\sigma}$ are indexed by rays outside $\sigma$, and the degrees of surviving monomials form the monoid $Q_\sigma=\{\sum_{\rho\notin\sigma(1)}a_\rho[D_\rho]\mid a_\rho\in\NN\}\subset\Pic(X)$. By smoothness, the classes $[D_\rho]$ for $\rho\notin\sigma(1)$ form a lattice basis of $\Pic(X)$, so the Hilbert function of $S/I_{Z_\sigma}$ is $1$ on $Q_\sigma$ and $0$ elsewhere.
+We ask for both because, unlike in the standard graded case, $\reg(S)$ need not have a single corner, so the two can behave quite differently \cite{bruceHellerSayrafi22}. Our approach combines Hilbert-function combinatorics with explicit higher cohomology of line bundles on torus-invariant subvarieties. With Jacob Lehman Duke, I have settled torus-fixed points. For a maximal cone $\sigma$, the variables surviving in $S/I_{Z_\sigma}$ are indexed by rays outside $\sigma$, and the degrees of surviving monomials form the monoid $Q_\sigma=\{\sum_{\rho\notin\sigma(1)}a_\rho[D_\rho]\mid a_\rho\in\NN\}\subset\Pic(X)$. By smoothness, the classes $[D_\rho]$ for $\rho\notin\sigma(1)$ form a lattice basis of $\Pic(X)$, so the Hilbert function of $S/I_{Z_\sigma}$ is $1$ on $Q_\sigma$ and $0$ elsewhere.
 
 \begin{prop}
-	If $Z_{\sigma} \in X$ is a torus-fixed point corresponding to a maximal cone $\sigma \in \Sigma$, then
-	\[
-		\reg\left(S/I_{Z_\sigma}\right) = Q_{\sigma} \quad \quad \text{and} \quad \quad  \reg\left(I_{Z_\sigma}\right) = \reg\left(S \right) \cap \bigcap_{j=1}^{s} \left(B_{j}+Q_{\sigma}\right).
-	\]
+If $Z_{\sigma} \subset X$ is a torus-fixed point corresponding to a maximal cone $\sigma \in \Sigma$, then $\reg(S/I_{Z_\sigma}) = Q_{\sigma}$ and $\reg(I_{Z_\sigma}) = \reg(S) \cap \bigcap_{j=1}^{s} (B_{j}+Q_{\sigma})$.
 \end{prop}
 
-Since $S/I_{Z_{\sigma}}$ has no higher sheaf cohomology, its regularity is the set of degrees where its Hilbert function equals its Hilbert polynomial~\cite[Prop.~6.4]{maclaganSmith04}, namely $Q_\sigma$. A cohomology argument then reduces $\reg(I_{Z_\sigma})$ to surjectivity of evaluation at each first twist, i.e.\ $\dd-B_j\in Q_\sigma$ for all $j$, giving the intersection. Notably, $\reg(S/I_{Z_\sigma})$ depends only on the rays of $\Sigma$ and on $\sigma$, so it is unchanged across toric models sharing these data. For positive-dimensional torus-invariant subvarieties, a similar monomial count gives the Hilbert function of $S/I_{Z_\sigma}$, leaving the higher cohomology of line bundles restricted to $Z_\sigma$. Since $Z_\sigma$ is toric, with fan given by the images of the cones containing $\sigma$ modulo $\sigma$, we plan to compute these vanishing regions inductively via toric \v{C}ech complexes.
+Since $S/I_{Z_{\sigma}}$ has no higher sheaf cohomology, its regularity is the set of degrees where Hilbert function and polynomial agree~\cite[Prop.~6.4]{maclaganSmith04}, namely $Q_\sigma$. A cohomology argument reduces $\reg(I_{Z_\sigma})$ to surjectivity of evaluation at each first twist, i.e.\ $\dd-B_j\in Q_\sigma$ for all $j$, giving the intersection. $\reg(S/I_{Z_\sigma})$ depends only on $\sigma$ and the rays of $\Sigma$, so it is shared by all toric models with these data. Next are invariant curves $Z_\sigma\cong\PP^1$, whose sheaf regularity is the half-space $\dd\cdot Z_\sigma\ge\max_j(B_j\cdot Z_\sigma)-1$, so I will determine which sections surviving Cox monomials represent. In higher dimension, I will combine these character counts with the toric \v{C}ech complex of the star of $\sigma$.
 
-Such descriptions would also make existing degeneration bounds explicit. Maclagan and Smith bound the regularity of a monomial quotient by intersecting shifted regularity regions of the factors in a Stanley filtration, which for saturated monomial ideals are coordinate rings of orbit closures~\cite[Thm.~4.1]{maclaganSmith05}. A combinatorial answer to Problem~\ref{prob:torus-invariant-mg} would compute these directly from the fan, and the bounds pass from initial ideals to the quotient by semicontinuity~\cite[Prop.~6.13]{maclaganSmith04}.
+Such descriptions would also make the degeneration bounds of Maclagan and Smith explicit: they bound the regularity of a monomial quotient by intersecting shifted regularity regions of the factors in a Stanley filtration, which for saturated monomial ideals are coordinate rings of orbit closures~\cite[Thm.~4.1]{maclaganSmith05}. Answering Problem~\ref{prob:torus-invariant-mg} combinatorially would compute these from the fan, and semicontinuity carries the bounds from initial ideals to the quotient~\cite[Prop.~6.13]{maclaganSmith04}.
 
 \section{Uniform Homological Algebra: Regularity on the Cox Category}
 \label{sec:uniform-homological-algebra-on-toric}
 
-This part of the proposal is deliberately speculative: \emph{multigraded regularity may be asking the right questions, but in the wrong category.} Work of the PI and others exposes the fragility of the classical link between cohomological vanishing and syzygies~\cite{maclaganSmith04,bruceHellerSayrafi26,bruceHellerSayrafi22}. Even the Cox ring of the Hirzebruch surface $\cH_2$, as a free module over itself, is not $\zero$-regular~\cite[Ex.~4.3]{maclaganSmith04}. I propose to test whether treating birational models together provides a more natural setting.
+%This part of the proposal is deliberately speculative: \emph{multigraded regularity may be asking the right questions, but in the wrong category.} Work of the PI and others exposes the fragility of the classical link between cohomological vanishing and syzygies~\cite{maclaganSmith04,bruceHellerSayrafi26,bruceHellerSayrafi22}. Even the Cox ring of the Hirzebruch surface $\cH_2$, as a free module over itself, is not $\zero$-regular~\cite[Ex.~4.3]{maclaganSmith04}. I propose to test whether treating birational models together provides a more natural setting.
+%
+%Uniformity across toric birational models is a growing theme in multigraded algebra, beginning with Hanlon--Hicks--Lazarev's diagonal, which depends only on the fan rays~\cite{HHL24}. Work on short resolutions, cellular constructions, and derived categories has developed this theme~\cite{brownErman24-1,faveroHuang23,faveroHuang25,faveroSapronov24,CH25,borisovHan25,berkeschHellerSmithYang25,han26}. Ballard et al. give a striking reformulation of King's conjecture: a full strong exceptional collection of line bundles can fail to exist on an individual smooth projective toric variety, yet exists in the \emph{Cox category} incorporating its birational models~\cite{longLiveKing}. I propose to use its uniform diagonal to ``repair'' classical regularity and make the structure sheaf $\zero$-regular on every smooth projective model.
 
-Uniformity across toric birational models is a growing theme in multigraded algebra, beginning with Hanlon--Hicks--Lazarev's diagonal, which depends only on the fan rays~\cite{HHL24}. Work on short resolutions, cellular constructions, and derived categories has developed this theme~\cite{brownErman24-1,faveroHuang23,faveroHuang25,faveroSapronov24,CH25,borisovHan25,berkeschHellerSmithYang25,han26}. Ballard et al. give a striking reformulation of King's conjecture: a full strong exceptional collection of line bundles can fail to exist on an individual smooth projective toric variety, yet exists in the \emph{Cox category} incorporating its birational models~\cite{longLiveKing}. I propose to use its uniform diagonal to ``repair'' classical regularity and make the structure sheaf $\zero$-regular on every smooth projective model.
-
-
+I propose a deliberately speculative test: \emph{multigraded regularity may be asking the right questions, but in the wrong category.} Work of the PI and others shows that the classical link between cohomological vanishing and syzygies is fragile~\cite{maclaganSmith04,bruceHellerSayrafi26,bruceHellerSayrafi22}: even the Cox ring of the Hirzebruch surface $\cH_2$, free over itself, is not $\zero$-regular~\cite[Ex.~4.3]{maclaganSmith04}. Uniformity across toric birational models is a growing theme. It begins with the Hanlon--Hicks--Lazarev resolution of the diagonal, which depends only on the rays of the fan~\cite{HHL24}, and extends to short resolutions, cellular constructions, and derived categories~\cite{brownErman24-1,faveroHuang23,faveroHuang25,faveroSapronov24,CH25,borisovHan25,berkeschHellerSmithYang25,han26,EHLZ25}. King's conjecture, that every smooth projective toric variety has a full strong exceptional collection of line bundles, is false~\cite{hillePerling06,mateusz11}; Ballard et al.\ recover it by passing to the \emph{Cox category}, which sees all birational models at once~\cite{longLiveKing}. I will use this uniform diagonal to define regularity where the structure sheaf is $\zero$-regular on every smooth model.
 \subsection{The Cox Category and Diagonal Heights}\label{subsec:cox-diagonal}
-Let $X$ be a projective normal toric variety over an algebraically closed field $\KK$ of characteristic zero, with Cox ring $S$. The maximal GKZ chambers give models $X_i$ and smooth toric stacks $\cX_i$, with $\cX_i=X_i$ when $X_i$ is smooth. Following Ballard et al., choose a common smooth toric stack with proper birational maps $\pi_i\colon\widetilde{\cX}\to\cX_i$ and set $D_{\Cox}(X)\coloneqq\langle\pi_i^*D^b(\cX_i)\rangle\subseteq D^b(\widetilde{\cX})$. Here $D^b(-)=D^b(\Coh(-))$, and all functors are derived. The category is independent of this choice and contains each $D^b(\cX_i)$ fully faithfully. The divisor-class map $Q\colon\ZZ^{\Sigma(1)}\to\Cl(X)$ determines the half-open zonotope $Z_X=Q_{\RR}((-1,0]^{\Sigma(1)})$ and the finite \emph{Bondal--Thomsen collection} $\Theta$ of classes mapping into $Z_X$. Pulling back $\cO(\alpha)$ from a chamber containing $-\alpha$ gives well-defined objects $T_\alpha\coloneqq\cO_{\Cox}(\alpha)$ forming a full strong exceptional collection~\cite{longLiveKing}.
+Let $X$ be a projective normal toric variety over an algebraically closed field $\KK$ of characteristic zero, with Cox ring $S$. The maximal GKZ chambers give models $X_i$ and smooth toric stacks $\cX_i$, with $\cX_i=X_i$ when $X_i$ is smooth. Following \cite{longLiveKing}. choose a common smooth toric stack with proper birational maps $\pi_i\colon\widetilde{\cX}\to\cX_i$ and set $D_{\Cox}(X)\coloneqq\langle\pi_i^*D^b(\cX_i)\rangle\subseteq D^b(\widetilde{\cX})$. Here $D^b(-)=D^b(\Coh(-))$, and all functors are derived. The category is independent of this choice and contains each $D^b(\cX_i)$ fully faithfully. The divisor-class map $Q\colon\ZZ^{\Sigma(1)}\to\Cl(X)$ determines the half-open zonotope $Z_X=Q_{\RR}((-1,0]^{\Sigma(1)})$ and the finite \emph{Bondal--Thomsen collection} $\Theta$ of classes mapping into $Z_X$~\cite{thomsen00,bondal06}. Pulling back $\cO(\alpha)$ from a chamber containing $-\alpha$ gives objects $T_\alpha\coloneqq\cO_{\Cox}(\alpha)$ forming a full strong exceptional collection~\cite{longLiveKing}.
 
-The uniform HHL complex lifts to a diagonal kernel inducing the identity on $D_{\Cox}(X)$~\cite{longLiveKing}. Take its minimal representative in the additive category generated by the fixed external products $T_\alpha\boxtimes T_\beta$, with terms $D_p=\bigoplus_{\alpha,\beta\in\Theta}(T_\alpha\boxtimes T_\beta)^{m_{p,\alpha,\beta}}$ for $p\ge0$. Use the first factor as cohomological input, with $p=0$ adjacent to the augmentation. For the occurring input labels $\alpha\in\Theta_H$, set $h(\alpha)\coloneqq\min\{p:m_{p,\alpha,\beta}\ne0\text{ for some }\beta\}$ and $\nu(\alpha)\coloneqq\max\{1,h(\alpha)\}$. The \emph{height} records first occurrence in the minimal diagonal, not necessarily face codimension in the zonotope.
+The uniform HHL complex lifts to a diagonal kernel inducing the identity on $D_{\Cox}(X)$~\cite[\S~6]{longLiveKing}. Take its minimal representative in the additive category generated by the fixed external products $T_\alpha\boxtimes T_\beta$, with terms $D_p=\bigoplus_{\alpha,\beta\in\Theta}(T_\alpha\boxtimes T_\beta)^{m_{p,\alpha,\beta}}$ for $p\ge0$. Use the first factor as cohomological input, with $p=0$ adjacent to the augmentation. For the occurring input labels $\alpha\in\Theta_H$, set $h(\alpha)\coloneqq\min\{p:m_{p,\alpha,\beta}\ne0\text{ for some }\beta\}$ and $\nu(\alpha)\coloneqq\max\{1,h(\alpha)\}$. The \emph{height} records first occurrence in the minimal diagonal, not necessarily face codimension in the zonotope.
 
-\begin{defn}[Proposed Cox regularity]\label{def:cox-regularity}
-An object $\cE\in D_{\Cox}(X)$ is \emph{$\zero$-regular} if
-\[
-\Ext^q(T_\alpha^\vee,\cE)=0
-\qquad\text{for all }\alpha\in\Theta_H\text{ and }q\ge\nu(\alpha).
-\]
+\begin{defn}\label{def:cox-regularity}
+Call $\cE\in D_{\Cox}(X)$ \emph{$\zero$-(Cox) regular} if $\Ext^q(T_\alpha^\vee,\cE)=0$ for $\alpha\in\Theta_H$, $q\ge\nu(\alpha)$.
 \end{defn}
-Degree-$q$ cohomology in diagonal degree $p$ contributes in position $p-q$. The cutoff leaves only positive positions at positive height and allows sections at height zero. On $\PP^n$, $h(-j)=j$ for $0\le j\le n$, recovering classical $\zero$-regularity for coherent sheaves.
+Degree-$q$ cohomology in diagonal degree $p$ contributes in position $p-q$. The cutoff leaves only positive positions at positive height and allows sections at height zero. On $\PP^n$, $h(-j)=j$ for $0\le j\le n$, recovering classical $0$-regularity. Regularity relative to an exceptional collection goes back to Costa--Mir\'o-Roig~\cite{costaMiroRoig07geometric,costaMRR07}; the new feature is the height cutoff, uniform across models.
 
 \begin{problem}\label{prob:cox-heights}
 Find a combinatorial formula for $h(\alpha)$ from the zonotope and GKZ fan.
 \end{problem}
-I will use Favero--Sapronov's stratified-torus methods and Han's minimal-resolution constructions~\cite{faveroSapronov24,han26} to relate heights to Cox degrees and GKZ walls. In Figure~\ref{fig:h2-zonotopes}, two labels of different heights become the same line bundle on the weighted projective stack.
+Starting from the Betti-number formulas of Favero--Sapronov and Han~\cite{faveroSapronov24,han26}, I will express Cox heights directly through zonotope geometry and GKZ wall identifications. In Figure~\ref{fig:h2-zonotopes}, two labels of different heights become the same line bundle on the weighted projective stack.
 
 \begin{figure}[htbp]
 \centering
@@ -840,7 +912,7 @@ I will use Favero--Sapronov's stratified-torus methods and Han's minimal-resolut
 }
 \begin{minipage}[t]{.35\linewidth}
 \centering\vspace{0pt}
-\begin{tikzpicture}[x=.55cm,y=.78cm,>=Stealth,font=\fontsize{8}{9.5}\selectfont]
+\begin{tikzpicture}[x=.66cm,y=.66cm,>=Stealth,font=\fontsize{8}{9.5}\selectfont]
   \path[use as bounding box] (-4.45,-1.30) rectangle (3.65,3.35);
   \node[cox title] at (-.40,3.05) {(a) GKZ fan};
   \fill[coxNavy!9] (0,0)--(3.25,0)--(3.25,2.5)--(0,2.5)--cycle;
@@ -881,7 +953,7 @@ I will use Favero--Sapronov's stratified-torus methods and Han's minimal-resolut
 \end{minipage}\hfill
 \begin{minipage}[t]{.33\linewidth}
 \centering\vspace{0pt}
-\begin{tikzpicture}[x=.83cm,y=.78cm,>=Stealth,font=\fontsize{8}{9.5}\selectfont]
+\begin{tikzpicture}[x=.78cm,y=.66cm,>=Stealth,font=\fontsize{8}{9.5}\selectfont]
   \path[use as bounding box] (-2.65,-3.15) rectangle (2.65,1.50);
   \node[cox title] at (0,1.15) {(c) Projective-model heights};
   \node at (0,.52) {Other chamber: stack $\PP(1,1,2)$};
@@ -901,7 +973,7 @@ I will use Favero--Sapronov's stratified-torus methods and Han's minimal-resolut
 \end{tikzpicture}
 \end{minipage}
 \endgroup
-\caption{GKZ fan and diagonal heights for $\cH_2$. (a) GKZ chambers; contracting $e$ gives $\PP(1,1,2)$. (b) Heights from the diagonal of~\cite[\S4]{CH25}; dashed edges and open vertices are excluded. (c) Heights on the stack $\PP(1,1,2)$ and, for comparison, $\PP^2$.}
+\caption{Diagonal heights for $\cH_2$. (a) GKZ chambers; contracting $e$ gives $\PP(1,1,2)$. (b) Heights from the diagonal of~\cite[\S4]{CH25}; dashed edges and open vertices are excluded. (c) Heights on $\PP(1,1,2)$ and on $\PP^2$.}
 %In (b,c), filled markers and solid boundaries are included; open vertices and dashed boundaries are excluded.}
 \label{fig:h2-models-heights}
 \label{fig:h2-gkz}
@@ -909,34 +981,101 @@ I will use Favero--Sapronov's stratified-torus methods and Han's minimal-resolut
 \end{figure}
 
 \subsection{The Structure Sheaf and Nef Geometry}\label{subsec:cox-regularity}
-For a coherent sheaf $\cF$ on a smooth projective model $X_i$, let $\cR_i(\cF)$ be the classes $\dd\in\Pic(X_i)$ for which $\pi_i^*(\cF(\dd))$ is $\zero$-regular. The $\Theta$-Transform Lemma~\cite[Lemma~1.6]{longLiveKing} and the projection formula give $\Ext^q(T_\alpha^\vee,\pi_i^*(\cF(\dd)))\cong H^q(X_i,\cF(\dd+\alpha))$.
+
+The first test of Definition~\ref{def:cox-regularity} is whether it repairs the failure on $\cH_2$ that motivated it. To compare with classical regularity on a single model, fix a smooth projective model $X_i$ and, for a coherent sheaf $\cF$ on $X_i$, let $\cR_i(\cF)\subseteq\Pic(X_i)$ be the set of $\dd$ for which $\pi_i^*(\cF(\dd))$ is $\zero$-regular. The $\Theta$-Transform Lemma~\cite[Lemma~1.6]{longLiveKing} and the projection formula translate the definition into ordinary sheaf cohomology on $X_i$: $\Ext^q(T_\alpha^\vee,\pi_i^*(\cF(\dd)))\cong H^q(X_i,\cF(\dd+\alpha))$. Thus $\dd\in\cR_i(\cF)$ exactly when $H^q(X_i,\cF(\dd+\alpha))=0$ for all $\alpha\in\Theta_H$ and $q\ge\nu(\alpha)$, a finite list of vanishing conditions indexed by the zonotope.
 
 \begin{lemma}\label{lem:cox-structure-regular}
-The object $\cO_{\Cox}$ is $\zero$-regular. On every smooth projective model $X_i$, every nef line bundle is $\zero$-regular; in particular, $\Nef(X_i)_{\ZZ}\subseteq\cR_i(\cO_{X_i})$.
+The object $\cO_{\Cox}$ is $\zero$-regular, and $\Nef(X_i)\subseteq\cR_i(\cO_{X_i})$ on every smooth model $X_i$.
 \end{lemma}
 
-Bondal--Thomsen vanishing gives $H^q(\cX_i,\cO_{\cX_i}(\alpha))=0$ and $H^q(X_i,\cO_{X_i}(\dd+\alpha))=0$ for $q>0$, $\alpha\in\Theta$, and nef $\dd$~\cite[Theorem~2.11]{longLiveKing}. The $\Theta$-Transform Lemma and $\nu(\alpha)\ge1$ imply both claims; the common pullback of the structure sheaves is $\cO_{\Cox}$.
+Indeed, Bondal--Thomsen vanishing gives $H^q(\cX_i,\cO_{\cX_i}(\alpha))=0$ and $H^q(X_i,\cO_{X_i}(\dd+\alpha))=0$ for $q>0$, $\alpha\in\Theta$, and nef $\dd$~\cite[Thm.~2.11]{longLiveKing}. Since $\nu(\alpha)\ge1$ and $\cO_{\Cox}$ is the common pullback of the structure sheaves, both claims follow. So, unlike Maclagan--Smith regularity, Cox regularity makes the structure sheaf $\zero$-regular on every model, as on $\PP^n$. The lemma uses only $\nu\ge1$; the heights enter in the converse: does Cox regularity keep the positivity consequences of classical regularity?
+ 
 
 \begin{question}\label{q:cox-regularity-tests}
-For every smooth projective model $X_i$ and coherent sheaf $\cF$, is $\cR_i(\cF)+\Nef(X_i)_{\ZZ}\subseteq\cR_i(\cF)$? Is $\cF(\dd)$ globally generated for every $\dd\in\cR_i(\cF)$?
+Let $\cF$ be a coherent sheaf on a smooth projective model $X_i$. Is $\cR_i(\cF)+\Nef(X_i)\subseteq\cR_i(\cF)$? Is $\cF(\dd)$ globally generated for every $\dd\in\cR_i(\cF)$?
 \end{question}
-By Lemma~\ref{lem:cox-structure-regular}, a positive answer would give $\cR_i(\cO_{X_i})=\Nef(X_i)_{\ZZ}$, since globally generated line bundles are nef. Since nef translates of test line bundles can leave $Z_X$, I will seek resolutions of them by the original labels with controlled heights, starting with toric Koszul complexes on products and Hirzebruch surfaces, then scrolls and GKZ wall crossing. For global generation, I will analyze evaluation maps from degree-zero diagonal terms.
 
-Every $\cE\in D_{\Cox}(X)$ is represented by a bounded minimal complex of finite direct sums of the $T_\beta$, unique up to isomorphism of complexes. Write $C_p(\cE)=\bigoplus_{\beta\in\Theta}T_\beta^{\,b_{p,\beta}(\cE)}$ for $p\in\ZZ$. The multiplicities $b_{p,\beta}(\cE)$ are its \emph{Cox Betti numbers}.
+Since globally generated line bundles are nef, global generation would give $\cR_i(\cO_{X_i})=\Nef(X_i)$. To prove persistence, I will resolve $\cO_{X_i}(\alpha+B_j)$, for Hilbert-basis generators $B_j$ of $\Nef(X_i)$, by sums of test line bundles $\cO_{X_i}(\beta)$ with $\nu(\beta)\le\nu(\alpha)+p$ in homological degree $p$; the cohomology spectral sequence then gives vanishing, and iteration handles all nef translates. I will construct these finite certificates first on Hirzebruch surfaces, then on scrolls. For global generation, the height cutoff leaves only diagonal-degree-zero sections in position zero; I will identify their output bundles and show that their evaluation maps have globally generated images.
 
-\begin{question}\label{q:cox-betti}
-What is the relationship between the proposed regularity and Cox Betti numbers?
-\end{question}
-The uniform diagonal constructs a Cox complex from the cohomology defining regularity; minimization determines which terms survive. Guided by classical regularity, I will study how this passage relates cohomological vanishing to degrees and homological positions in minimal Cox complexes.
+The decisive test is multiplication of sections. On $\PP^n$, Mumford's theorem makes multiplication by sections surjective above the regularity of a locally free sheaf. Maclagan--Smith regularity keeps this~\cite{maclaganSmith04}, but at the cost seen on $\cH_2$: nef twists of $\cO$ need not be regular. Cox regularity reverses the trade-off, making it a test of \emph{Oda's conjecture}: on a smooth projective toric variety, $H^0(\cO(\dd))\otimes H^0(\cO(A))\to H^0(\cO(\dd+A))$ is surjective for $\dd$ nef and $A$ ample \cite{oda08}. It is known for surfaces~\cite{fakhruddin03} and for threefolds up to finitely many ample classes~\cite{xin23}, but open in general; with $\dd=kA$ it would make every smooth lattice polytope normal, itself open in dimension three~\cite{BHHHJKM19}.
+
+\begin{conjecture}[Cox--Mumford Multiplication]\label{conj:cox-multiplication}
+Let $\cF$ be locally free on a smooth projective model $X_i$, and let $\dd\in\cR_i(\cF)$. For every ample Cartier divisor $A$ on $X_i$, the multiplication map $H^0(X_i,\cF(\dd))\otimes H^0(X_i,\cO_{X_i}(A))\to H^0(X_i,\cF(\dd+A))$ is surjective.
+\end{conjecture}
+
+By Lemma~\ref{lem:cox-structure-regular}, the case $\cF=\cO_{X_i}$  implies Oda's conjecture. So the provocation is testable: if $D_{\Cox}(X)$ is the right category, Mumford's argument there should prove Oda's conjecture; a counterexample would show where the heights mismeasure positivity. As modest evidence towards this granted bold conjecture, I have proved it for Hirzebruch surfaces via a mapping cone argument
+
+\begin{lemma}
+\label{lem:hirzebruch-cox-multiplication}
+Conjecture~\ref{conj:cox-multiplication} holds for every Hirzebruch surafce. 
+\end{lemma}
+
+I will extend the mapping-cone construction to split projective bundles, combining base and fiber evaluation
+sequences \cite{malaspinaSankaran25}. For general smooth toric models, the target is a finite resolution of the evaluation kernel $\cM_A$ by test
+bundles $\cO_{X_i}(\beta)$ with $\nu(\beta)\le p+1$ in homological degree $p$, uniformly in $A$.
+Cox regularity would then force $H^1(X_i,\cF(\dd)\otimes\cM_A)=0$, proving Conjecture~\ref{conj:cox-multiplication}. The Cox diagonal applied to $\cM_A$ gives such a resolution except for degree-zero terms $T_\alpha\boxtimes T_\beta$ with $\alpha\ne0$ (e.g.\ the label $(1,-1)$ in Figure~\ref{fig:h2-zonotopes}), which reintroduce multiplication maps and carry Oda's difficulty. When $0$ is the only height-zero label, as on products of projective spaces, the argument should go through; I will prove this case first. Intermediate goals are Problem~\ref{prob:cox-heights}, Question~\ref{q:cox-regularity-tests} for Hirzebruch surfaces and scrolls, and a computer search for counterexamples on smooth toric
+%Finally, the multigraded Eisenbud--Goto theorem suggests seeking a syzygetic characterization of Cox regularity. Since the $T_\beta$ form a full strong exceptional collection, every $\cE\in D_{\Cox}(X)$ is represented by a bounded minimal complex with terms $C_p(\cE)=\bigoplus_{\beta\in\Theta}T_\beta^{\,b_{p,\beta}(\cE)}$, unique up to isomorphism of complexes. Call the multiplicities $b_{p,\beta}(\cE)$ its \emph{Cox Betti numbers}. Multigraded Betti numbers do not determine regularity (\S\ref{subsec:prior:homological-algebra-on-toric}); do Cox Betti numbers determine Cox regularity?
+%
+%\begin{question}\label{q:cox-betti}
+%Is $\zero$-regularity of $\cE$ characterized by a vanishing pattern of its Cox Betti numbers governed by the heights, as condition~(2) of Theorem~\ref{thm:eisenbud-goto} characterizes regularity on $\PP^n$?
+%\end{question}
+%
+%The uniform diagonal builds a Cox complex for $\cE$ directly from the groups $\Ext^q(T_\alpha^\vee,\cE)$ that define regularity, and minimization determines which terms survive. I will study these cancellations for $\zero$-regular objects, beginning with $\cH_2$, where Figure~\ref{fig:h2-zonotopes} gives the heights explicitly.
 
 
+%\subsection{The Structure Sheaf and Nef Geometry}\label{subsec:cox-regularity}
+%For a coherent sheaf $\cF$ on a smooth projective model $X_i$, let $\cR_i(\cF)$ be the classes $\dd\in\Pic(X_i)$ for which $\pi_i^*(\cF(\dd))$ is $\zero$-regular. The $\Theta$-Transform Lemma~\cite[Lemma~1.6]{longLiveKing} and the projection formula give $\Ext^q(T_\alpha^\vee,\pi_i^*(\cF(\dd)))\cong H^q(X_i,\cF(\dd+\alpha))$.
+%
+%\begin{lemma}\label{lem:cox-structure-regular}
+%The object $\cO_{\Cox}$ is $\zero$-regular. On every smooth projective model $X_i$, every nef line bundle is $\zero$-regular; in particular, $\Nef(X_i)_{\ZZ}\subseteq\cR_i(\cO_{X_i})$.
+%\end{lemma}
+%
+%Bondal--Thomsen vanishing gives $H^q(\cX_i,\cO_{\cX_i}(\alpha))=0$ and $H^q(X_i,\cO_{X_i}(\dd+\alpha))=0$ for $q>0$, $\alpha\in\Theta$, and nef $\dd$~\cite[Theorem~2.11]{longLiveKing}. The $\Theta$-Transform Lemma and $\nu(\alpha)\ge1$ imply both claims; the common pullback of the structure sheaves is $\cO_{\Cox}$.
+%
+%\begin{question}\label{q:cox-regularity-tests}
+%For every smooth projective model $X_i$ and coherent sheaf $\cF$, is $\cR_i(\cF)+\Nef(X_i)_{\ZZ}\subseteq\cR_i(\cF)$? Is $\cF(\dd)$ globally generated for every $\dd\in\cR_i(\cF)$?
+%\end{question}
+%
+%By Lemma~\ref{lem:cox-structure-regular}, a positive answer would give $\cR_i(\cO_{X_i})=\Nef(X_i)_{\ZZ}$, since globally generated line bundles are nef. Since nef translates of test line bundles can leave $Z_X$, I will seek resolutions of them by the original labels with controlled heights, starting with toric Koszul complexes on products and Hirzebruch surfaces, then scrolls and GKZ wall crossing. For global generation, I will analyze evaluation maps from degree-zero diagonal terms.
+%
+%For locally free sheaves, a stronger form of the global-generation assertion would control multiplication of sections. This is an essential feature of classical regularity, and a further test of whether the diagonal heights capture the appropriate positivity.
+%
+%\begin{conjecture}[Cox--Mumford Multiplication]\label{conj:cox-multiplication}
+%Let $\cF$ be locally free on a smooth projective model $X_i$, and let $\dd\in\cR_i(\cF)$. For every ample Cartier divisor $A$ on $X_i$, the multiplication map
+%\[
+%H^0\!\left(X_i,\cF(\dd)\right)\otimes
+%H^0\!\left(X_i,\cO_{X_i}(A)\right)
+%\longrightarrow
+%H^0\!\left(X_i,\cF(\dd+A)\right)
+%\]
+%is surjective.
+%\end{conjecture}
+%
+%Applying the conjecture to sufficiently large multiples of $A$ would give global generation of $\cF(\dd)$. Its implications already reach a central problem in toric geometry: by Lemma~\ref{lem:cox-structure-regular}, taking $\cF=\cO_{X_i}(B)$ for a nef divisor $B$ and $\dd=\zero$ gives Oda's conjecture on multiplication of an ample and a nef line bundle~\cite{maclaganSmith04}. On projective space, the assertion recovers Mumford's multiplication theorem. I will begin with nonsplit equivariant bundles on Hirzebruch surfaces, then projective bundles of Picard rank two.
+%
+%The evaluation sequence
+%\[
+%0\longrightarrow\cM_A\longrightarrow
+%H^0\!\left(X_i,\cO_{X_i}(A)\right)\otimes\cO_{X_i}
+%\longrightarrow\cO_{X_i}(A)\longrightarrow0
+%\]
+%reduces the problem to proving $H^1(X_i,\cF(\dd)\otimes\cM_A)=0$. I will seek resolutions of $\cM_A$ by the test line bundles $\cO_{X_i}(\alpha)$, with a summand in homological degree $p$ satisfying $\nu(\alpha)\leq p+1$. The defining vanishings for Cox regularity would then kill the terms contributing to this $H^1$. Controlling these resolutions is the key step: it would connect the cohomological definition to multiplication maps and to the homological positions of the diagonal labels.
+%
+%
+%Every $\cE\in D_{\Cox}(X)$ is represented by a bounded minimal complex of finite direct sums of the $T_\beta$, unique up to isomorphism of complexes. Write $C_p(\cE)=\bigoplus_{\beta\in\Theta}T_\beta^{\,b_{p,\beta}(\cE)}$ for $p\in\ZZ$. The multiplicities $b_{p,\beta}(\cE)$ are its \emph{Cox Betti numbers}.
+%
+%\begin{question}\label{q:cox-betti}
+%What is the relationship between the proposed regularity and Cox Betti numbers?
+%\end{question}
+%The uniform diagonal constructs a Cox complex from the cohomology defining regularity; minimization determines which terms survive. Guided by classical regularity, I will study how this passage relates cohomological vanishing to degrees and homological positions in minimal Cox complexes.
+%
+%
 
 \section{Extending Computational Algebra Software}\label{sec:comp}
-Computation drives much of the recent progress in multigraded commutative algebra and toric geometry, and the PI has a track record of building such tools. Each project below is targeted and produces a concrete community tool that also supports this proposal.
-
+Computation drives recent progress in multigraded commutative algebra and toric geometry. Building on the PI's track record, each project yields a community tool supporting this proposal.
  \subsection{The \texttt{toricStacks} Package for \textit{Macaulay2}}
 
-The lack of software is a major bottleneck for homological invariants of stacks. A general framework is out of reach, but toric stacks are tractable: they correspond to \emph{stacky fans}, whose well-developed combinatorics makes computation feasible \cite{toricStacks1,toricStacks2,borisovChenSmith05}, but no implementation exists. Given the success of \textit{NormalToricVarieties}~\cite{NormalToricVarietiesSource}, a \textit{toricStacks} package would benefit the community and directly support the experiments in \S\ref{sec:syzygies-on-stacks}.
+A lack of software is a major bottleneck for homological invariants of stacks. A general framework is out of reach, but toric stacks correspond to \emph{stacky fans}, whose well-developed combinatorics makes computation feasible \cite{toricStacks1,toricStacks2,borisovChenSmith05}; yet no implementation exists. Given the success of \textit{NormalToricVarieties}~\cite{NormalToricVarietiesSource}, a \textit{toricStacks} package would benefit the community and directly support the experiments in \S\ref{sec:syzygies-on-stacks}.
 
 \begin{problem}\label{prob:toric-stacks-m2}
 Develop a \textit{Macaulay2}~\cite{M2} package for computations with toric stacks.
@@ -945,25 +1084,25 @@ Develop a \textit{Macaulay2}~\cite{M2} package for computations with toric stack
 The package will (i) construct toric stacks from stacky fans and from families such as weighted projective stacks and root stacks, (ii) compute the Cox ring with its $\Cl(\cX)$-grading and irrelevant ideal, and (iii) support coherent sheaves, including sheaf cohomology via local cohomology \cite{EMS00}. This is joint work in progress with Maya Banks and John Cobb; (i) is complete and (ii) is underway.
 
  \subsection{A Database of Human-Generated Examples in Algebra}
-Good examples drive conjectures, theorems, and algorithms, and a trove of human-generated examples sits unused in the documentation and tests of open-source computer algebra systems. \textit{Macaulay2} and its roughly 250 packages contain thousands of rings, ideals, and modules, nearly all chosen by experts to illustrate something interesting. Yet they are scattered across source files, not easily accessible.
+Good examples drive conjectures, theorems, and algorithms. Thousands of expert-chosen rings, ideals, and modules lie scattered, largely untapped, across \textit{Macaulay2}'s open-source documentation and tests.
+ 
 \begin{problem}\label{prob:database-m2}
 	Build a \textit{Macaulay2} package collecting the algebraic objects in its source and documentation into a queryable database with provenance and invariants.
 \end{problem}
 
-The package will parse the \texttt{EXAMPLE} and \texttt{TEST} blocks of installed packages, re-execute them in a sandbox, and record each resulting object as directly callable, with its source location and authorship. Much of the parsing already exists; the work lies in execution and curation. The result would be a testbed for conjectures and a benchmark suite easing future \textit{Macaulay2} development. As calls grow for AI and machine learning tools built by mathematicians on mathematician-owned data, this is a small first step, with all authorship tracked and acknowledged.
-
+It will parse and rerun installed packages' \texttt{EXAMPLE}/\texttt{TEST} blocks in a sandbox, recording directly callable objects with source and authorship. Much of the parser exists; execution and curation remain. This conjecture testbed and benchmark suite meets growing demand for mathematician-built AI/ML on mathematician-owned, fully attributed data~\cite{commelin26}, complementing curated repositories~\cite{LMFDB,fevolaGoergen22}.
 \section{Broader Impacts}\label{sec:broader-impacts}
 \subsection{Organizing.} Building on Section~\ref{subsec:prior-broader-impacts}, since 2022 I have organized \textit{Gems of Combinatorics II} (30 participants), \textit{AGNES} (150), and \textit{BATMOBILE 2024 \& 2025} (50/30), and I co-organize Dartmouth's \textit{Algebra \& Number Theory} seminar. \emph{Future Plans:}  With co-organizers, I have proposed a \textit{Thematic Semester in Combinatorial Algebraic Geometry} to the Fields Institute for 2030. I will host the next \textit{Gems of Commutative Algebra} at Dartmouth in Fall 2028 and write a \textit{Notices of the AMS} article on organizing early-career conferences. John Voight and I are in the planning stages of a Macaulay2+Magma workshop on the future of mathematical software.
 
-\subsection{Open Educational Resources.} In Fall 2026 I am lecturing for the Preliminary Arizona Winter School, a nine-week virtual course with 300 students (200 undergraduate and master's students); all material (videos, 100 pages of IBL notes and problems, etc.)\ is freely available. Building on work of Karen Smith and Jack Jeffries, I designed an inquiry-based commutative algebra course of 16 worksheets (200+ pages). Both are on my website.  \emph{Future Plans:} I will develop these materials into an open-access introduction to algebraic geometry with Macaulay2 exercises.
-
+\subsection{Open Educational Resources.} In Fall 2026 I am lecturing for the Preliminary Arizona Winter School, a nine-week virtual course with 300 students (200 undergraduate and master's students); all materials (videos and 100 pages of IBL notes and problems) are freely available. Building on the work of Karen Smith, I designed an inquiry-based commutative algebra course of 16 worksheets (200+ pages). Both are on my website.  \emph{Future Plans:} I will develop these materials into an open-access introduction to algebraic geometry with Macaulay2 exercises.
+ 
 \subsection{Open Computational Resources.} I created \textit{Syzygy Data}, \url{syzygydata.com}, a public database of large syzygy computations, and co-authored four Macaulay2 packages. \emph{Future Plans:} I will lead a group developing \texttt{toricStacks} at the 2027 \textit{Macaulay2} conference at Auburn.
 
 \subsection{Campus Community.} I am the faculty advisor to Dartmouth's \textit{AWM Student Chapter} and work with the campus \textit{oSTEM} chapter to broaden participation in STEM. In Fall 2025 I founded \textit{Unwritten Rules}, a graduate seminar that makes the hidden curriculum of an academic career explicit. \emph{Future Plans:} I will continue \textit{Unwritten Rules} and extend it to Dartmouth postdocs.
 
 \subsection{National \& International Service.} I have worked with the \textit{AWM} Executive Committee to expand support for a broader range of mathematicians. From Winter 2023 until its dissolution in Spring 2025, I served on SLMath's \textit{Committee on Women in Mathematics}. I now serve on the \textit{AMS Committee on Engagement, Participation, \& Advancement} and the \textit{AMS Simons Travel Grant Committee}. In January 2026 I began a three-year term on the Board of Trustees of \textit{Spectra}.
 
-\subsection{Mentoring.} I advise three Ph.D.\ students on problems central to this proposal: Will D.\ (algebraic geometry + AI/ML), Jacob L-D.\ (regularity of torus-invariant subvarieties), and Alex M.\ (positivity of the BT collection). At MREG 2023 I began mentoring graduate students Bailee Z.\ (Michigan) and Jacob B.\ (KSU) on a project that led to~\cite{BBZ26}. In Summer 2026 I mentored three undergraduates through \textit{Count Me In} (organized by M.~Hering and D.~Maclagan), and since Fall 2024 I have mentored two Dartmouth undergraduates. \emph{Future Plans:} I will organize a summer undergraduate research program through Dartmouth's SHUR program.
+\subsection{Mentoring.} I advise three Ph.D.\ students on problems central to this proposal: Will D.\ (algebraic geometry + AI/ML), Jacob L-D.\ (regularity of torus-invariant subvarieties), and Alex M.\ (positivity of the BT collection). At MREG 2023 I began mentoring two graduate students on a project that led to~\cite{BBZ26}. In Summer 2026 I mentored three undergraduates through \textit{Count Me In} (organized by M.~Hering), and since Fall 2024 I have mentored two undergraduates. \emph{Future Plans:} I will organize a summer undergraduate research program through Dartmouth's SHUR program.
 
 \newpage
 \renewcommand{\bibliofont}{\normalsize}
