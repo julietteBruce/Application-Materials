@@ -16,7 +16,7 @@ Ayah Almousa, Juliette Bruce, Michael Loper, and Mahrud Sayrafi.
 \newblock {\em J. Softw. Algebra Geom.}, 10(1):51--60, 2020.
 
 \bibitem{aprodu19}
-Marian Aprodu, Gavril Farkas, \c~Stefan Papadima, Claudiu Raicu, and Jerzy
+Marian Aprodu, Gavril Farkas, {\c{S}}tefan Papadima, Claudiu Raicu, and Jerzy
   Weyman.
 \newblock Koszul modules and {G}reen's conjecture.
 \newblock {\em Invent. Math.}, 218(3):657--720, 2019.
@@ -85,7 +85,7 @@ A.~A. Beilinson.
 \bibitem{benson04}
 Dave Benson.
 \newblock {Dickson} invariants, regularity and computation in group cohomology.
-\newblock {\em Illinois Journal of Mathematics}, 48(1):171--197, 2004.
+\newblock {\em Illinois J. Math.}, 48(1):171--197, 2004.
 
 \bibitem{berkeschHellerSmithYang25}
 Christine Berkesch, Lauren {Cranton Heller}, Gregory~G. Smith, and Jay Yang.
@@ -127,12 +127,13 @@ Lev Borisov and Zengrui Han.
 
 \bibitem{borisovChenSmith05}
 Lev~A. Borisov, Linda Chen, and Gregory~G. Smith.
-\newblock The orbifold {C}how ring of toric {D}eligne-{M}umford stacks.
+\newblock The orbifold {C}how ring of toric {D}eligne--{M}umford stacks.
 \newblock {\em J. Amer. Math. Soc.}, 18(1):193--215, 2005.
 
 \bibitem{botbolChardin17}
 Nicol\'as Botbol and Marc Chardin.
-\newblock Castelnuovo {M}umford regularity with respect to multigraded ideals.
+\newblock {C}astelnuovo--{M}umford regularity with respect to multigraded
+  ideals.
 \newblock {\em J. Algebra}, 474:361--392, 2017.
 
 \bibitem{braggOlssonWebb24}
@@ -195,6 +196,12 @@ Michael~K. Brown and Mahrud Sayrafi.
   varieties of {P}icard rank 2.
 \newblock {\em Algebra Number Theory}, 18(10):1923--1943, 2024.
 
+\bibitem{bruce26}
+Juliette Bruce.
+\newblock Eventual nonstandard {Koszulness} fails for {Veronese} subrings of
+  weighted polynomial rings, 2026.
+\newblock arXiv:2608.23913.
+
 \bibitem{BBZ26}
 Juliette Bruce, Jacob Bucciarelli, and Bailee Zacovic.
 \newblock Explorations of matroid complexes, 2026.
@@ -215,7 +222,7 @@ Juliette Bruce, Lauren Cranton~Heller, and Mahrud Sayrafi.
 Juliette Bruce, Lauren Cranton~Heller, and Mahrud Sayrafi.
 \newblock Characterizing multigraded regularity and virtual resolutions on
   products of projective spaces.
-\newblock {\em Advances in Mathematics}, 500:111049, 2026.
+\newblock {\em Adv. Math.}, 500:111049, 2026.
 
 \bibitem{bruceHellerSayrafiSeceleanu25}
 Juliette Bruce, Lauren Cranton~Heller, Mahrud Sayrafi, and Alexandra Seceleanu.
@@ -251,7 +258,7 @@ Giulio Caviglia, Marc Chardin, Jason McCullough, Irena Peeva, and Matteo
 \newblock {\em Math. Z.}, 291(1-2):421--435, 2019.
 
 \bibitem{CGP21}
-Melody Chan, S\o~ren Galatius, and Sam Payne.
+Melody Chan, S{\o}ren Galatius, and Sam Payne.
 \newblock Tropical curves, graph complexes, and top weight cohomology of
   {$\mathcal{M}_g$}.
 \newblock {\em J. Amer. Math. Soc.}, 34(2):565--594, 2021.
@@ -295,8 +302,7 @@ Johan Commelin, Mateja Jamnik, Rodrigo Ochigame, Lenny Taelman, and Akshay
 \bibitem{costaMiroRoig07geometric}
 L.~Costa and R.~M. Mir{\'o}-Roig.
 \newblock Geometric collections and {C}astelnuovo--{M}umford regularity.
-\newblock {\em Math. Proc. Cambridge Philos. Soc.}, 143, 2007.
-\newblock Pages: please confirm against MathSciNet before submission.
+\newblock {\em Math. Proc. Cambridge Philos. Soc.}, 143(3):557--578, 2007.
 
 \bibitem{costaMRR07}
 L.~Costa and R.~M. Mir\'o-Roig.
@@ -312,8 +318,7 @@ David~A. Cox.
 \bibitem{CH25}
 Lauren Cranton~Heller.
 \newblock Explicit constructions of short virtual resolutions of truncations.
-\newblock {\em Bulletin of the London Mathematical Society}, 57(12):4000--4014,
-  2025.
+\newblock {\em Bull. Lond. Math. Soc.}, 57(12):4000--4014, 2025.
 
 \bibitem{crantonHellerNemati22}
 Lauren Cranton~Heller and Navid Nemati.
@@ -335,7 +340,7 @@ Hailong Dao, Ezra Miller, Jonathan Monta{\~n}o, Christopher O'Neill, and Kevin
   Woods.
 \newblock Quasipolynomial behavior via constructibility in multigraded algebra,
   2025.
-\newblock arXiv:2512.18536, version 2.
+\newblock arXiv:2512.18536.
 
 \bibitem{DB25}
 Caitlin~M. Davis and Boyana Martinova.
@@ -397,22 +402,22 @@ Najmuddin Fakhruddin.
 \bibitem{farkasDifference24}
 Gavril Farkas.
 \newblock Difference varieties and the {Green--Lazarsfeld} secant conjecture.
-\newblock {\em \'{E}pijournal G\'{e}om. Alg\'{e}brique}, pages Art. 15, 12 pp.,
-  2024.
+\newblock {\em \'{E}pijournal G\'{e}om. Alg\'{e}brique}, page~12, 2024.
 \newblock Special volume in honour of Claire Voisin.
 
 \bibitem{farkasKemeny16}
 Gavril Farkas and Michael Kemeny.
-\newblock The generic {G}reen-{L}azarsfeld secant conjecture.
+\newblock The generic {G}reen--{L}azarsfeld secant conjecture.
 \newblock {\em Invent. Math.}, 203(1):265--301, 2016.
 
 \bibitem{farkasKemeny17}
 Gavril Farkas and Michael Kemeny.
-\newblock The {P}rym-{G}reen conjecture for torsion line bundles of high order.
+\newblock The {P}rym--{G}reen conjecture for torsion line bundles of high
+  order.
 \newblock {\em Duke Math. J.}, 166(6):1103--1124, 2017.
 
 \bibitem{farkasMustataPopa03}
-Gavril Farkas, Mircea Musta\c~t\v a, and Mihnea Popa.
+Gavril Farkas, Mircea Musta{\c{t}}{\u{a}}, and Mihnea Popa.
 \newblock Divisors on {$\mathcal{M}_{g,g+1}$} and the minimal resolution
   conjecture for points on canonical curves.
 \newblock {\em Ann. Sci. \'Ecole Norm. Sup. (4)}, 36(4):553--581, 2003.
@@ -425,7 +430,7 @@ David Favero and Jesse Huang.
 \bibitem{faveroHuang25}
 David Favero and Jesse Huang.
 \newblock Homotopy path algebras.
-\newblock {\em Selecta Mathematica, New Series}, 31(2):25, 2025.
+\newblock {\em Selecta Math. (N.S.)}, 31(2):25, 2025.
 
 \bibitem{faveroSapronov24}
 David Favero and Mykola Sapronov.
@@ -455,8 +460,8 @@ Daniel Giaimo.
 
 \bibitem{gotzmann78}
 Gerd Gotzmann.
-\newblock Eine bedingung f{\"u}r die flachheit und das {Hilbertpolynom} eines
-  graduierten {Ringes}.
+\newblock Eine {Bedingung} f{\"u}r die {Flachheit} und das {Hilbertpolynom}
+  eines graduierten {Ringes}.
 \newblock {\em Math. Z.}, 158(1):61--70, 1978.
 
 \bibitem{M2}
@@ -516,7 +521,7 @@ Zengrui Han.
 \bibitem{HHL24}
 Andrew Hanlon, Jeff Hicks, and Oleg Lazarev.
 \newblock Resolutions of toric subvarieties by line bundles and applications.
-\newblock {\em Forum Math. Pi}, 12:Paper No. e24, 58, 2024.
+\newblock {\em Forum Math. Pi}, 12:Paper No. e24, 58 pp., 2024.
 
 \bibitem{HSS06}
 Milena Hering, Hal Schenck, and Gregory~G. Smith.
@@ -532,20 +537,6 @@ Lutz Hille and Markus Perling.
 J.~William Hoffman and Hao~Hao Wang.
 \newblock {C}astelnuovo--{M}umford regularity in biprojective spaces.
 \newblock {\em Adv. Geom.}, 4(4):513--536, 2004.
-
-\bibitem{HT12}
-Klaus Hulek and Orsola Tommasi.
-\newblock Cohomology of the second {Voronoi} compactification of
-  {$\mathcal{A}_4$}.
-\newblock {\em Doc. Math.}, 17:195--244, 2012.
-
-\bibitem{HT18}
-Klaus Hulek and Orsola Tommasi.
-\newblock The topology of {$\mathcal{A}_g$} and its compactifications.
-\newblock In Jan~Arthur Christophersen and Kristian Ranestad, editors, {\em
-  Geometry of moduli}, volume~14 of {\em Abel Symp.}, pages 135--193. Springer,
-  Cham, 2018.
-\newblock With an appendix by Olivier Ta\"ibi.
 
 \bibitem{igusa62}
 Jun-ichi Igusa.
@@ -640,7 +631,7 @@ Boyana Martinova.
 
 \bibitem{MP18}
 Jason McCullough and Irena Peeva.
-\newblock Counterexamples to the {E}isenbud-{G}oto regularity conjecture.
+\newblock Counterexamples to the {E}isenbud--{G}oto regularity conjecture.
 \newblock {\em J. Amer. Math. Soc.}, 31(2):473--496, 2018.
 
 \bibitem{McCulloughPeeva20}
@@ -649,7 +640,7 @@ Jason McCullough and Irena Peeva.
 \newblock {\em EMS Surv. Math. Sci.}, 7(1):173--206, 2020.
 
 \bibitem{mateusz11}
-Mateusz Micha\l~ek.
+Mateusz Micha{\l}ek.
 \newblock Family of counterexamples to {K}ing's conjecture.
 \newblock {\em C. R. Math. Acad. Sci. Paris}, 349(1-2):67--69, 2011.
 
@@ -699,7 +690,7 @@ Frank-Olaf Schreyer.
 \bibitem{sidmanVanTuylWang06}
 Jessica Sidman, Adam Van~Tuyl, and Haohao Wang.
 \newblock Multigraded regularity: coarsenings and resolutions.
-\newblock {\em Journal of Algebra}, 301(2):703--727, 2006.
+\newblock {\em J. Algebra}, 301(2):703--727, 2006.
 
 \bibitem{NormalToricVarietiesSource}
 Gregory~G. Smith.
@@ -717,14 +708,13 @@ Irena Swanson.
 Peter Symonds.
 \newblock On the {Castelnuovo--Mumford} regularity of the cohomology ring of a
   group.
-\newblock {\em Journal of the American Mathematical Society}, 23(4):1159--1173,
-  2010.
+\newblock {\em J. Amer. Math. Soc.}, 23(4):1159--1173, 2010.
 
 \bibitem{symonds11}
 Peter Symonds.
 \newblock On the {Castelnuovo--Mumford} regularity of rings of polynomial
   invariants.
-\newblock {\em Annals of Mathematics}, 174(1):499--517, 2011.
+\newblock {\em Ann. of Math.}, 174(1):499--517, 2011.
 
 \bibitem{LMFDB}
 {The LMFDB Collaboration}.
@@ -769,7 +759,7 @@ Kevin Woods.
 He~Xin.
 \newblock Some finiteness results on {Oda}'s question for pairs of line
   bundles.
-\newblock {\em Journal of the London Mathematical Society}, 114(3), 2026.
-\newblock First published September 10, 2026; preprint arXiv:2308.12786.
+\newblock {\em J. Lond. Math. Soc.}, 114(3), 2026.
+\newblock arXiv:2308.12786.
 
 \end{thebibliography}

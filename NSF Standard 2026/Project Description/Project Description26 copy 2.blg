@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99e (TeX Live 2026)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Project Description26 copy 2.aux
+The style file: plain.bst
+Database file #1: sample.bib
+Warning--there's a number but no volume in fevolaGoergen22
+You've used 138 entries,
+            2118 wiz_defined-function locations,
+            1333 strings with 23942 characters,
+and the built_in function-call counts, 44825 in all, are:
+= -- 4526
+> -- 1904
+< -- 12
++ -- 779
+- -- 615
+* -- 3277
+:= -- 7428
+add.period$ -- 425
+call.type$ -- 138
+change.case$ -- 717
+chr.to.int$ -- 0
+cite$ -- 139
+duplicate$ -- 1474
+empty$ -- 3661
+format.name$ -- 615
+if$ -- 9217
+int.to.chr$ -- 0
+int.to.str$ -- 138
+missing$ -- 111
+newline$ -- 699
+num.names$ -- 278
+pop$ -- 669
+preamble$ -- 1
+purify$ -- 581
+quote$ -- 0
+skip$ -- 1059
+stack$ -- 0
+substring$ -- 3469
+swap$ -- 195
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 548
+warning$ -- 1
+while$ -- 484
+width$ -- 141
+write$ -- 1512
+(There was 1 warning)
