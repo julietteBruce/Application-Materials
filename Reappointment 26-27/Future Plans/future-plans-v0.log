@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.4)  19 OCT 2026 20:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.4)  20 OCT 2026 09:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1105,13 +1105,13 @@ Package rerunfilecheck Info: File `future-plans-v0.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 30084 strings out of 467099
- 579948 string characters out of 5408260
+ 30104 strings out of 467099
+ 580098 string characters out of 5408260
  1056301 words of memory out of 5000000
  58684 multiletter control sequences out of 15000+600000
- 638480 words of font info for 110 fonts, out of 8000000 for 9000
+ 639113 words of font info for 120 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 102i,6n,107p,1291b,465s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,5n,107p,1301b,465s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1119,7 +1119,7 @@ Here is how much of TeX's memory you used:
 sr/local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
 local/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on future-plans-v0.pdf (2 pages, 100794 bytes).
+Output written on future-plans-v0.pdf (2 pages, 102400 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
