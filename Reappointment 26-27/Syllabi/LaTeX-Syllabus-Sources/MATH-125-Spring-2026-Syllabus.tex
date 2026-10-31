@@ -1,0 +1,247 @@
+
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in,top=0.67in,bottom=0.68in,headheight=14pt,headsep=18pt,footskip=25pt]{geometry}
+\usepackage{newpxtext,newpxmath}
+\renewcommand{\sfdefault}{qhv}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{array,tabularx,longtable,booktabs}
+\usepackage{enumitem,multicol}
+\usepackage{titlesec,fancyhdr,needspace}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\definecolor{Forest}{HTML}{174C43}
+\definecolor{Ink}{HTML}{232D30}
+\definecolor{Muted}{HTML}{65716F}
+\definecolor{Pale}{HTML}{EEF4F1}
+\definecolor{Rule}{HTML}{CBDAD3}
+\hypersetup{colorlinks=true,urlcolor=Forest,linkcolor=Forest,
+  pdfauthor={Juliette Bruce},pdftitle={MATH 125: Combinatorial Algebraic Geometry},
+  bookmarksopen=true,pdfborder={0 0 0}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 1pt}
+\setlength{\emergencystretch}{2em}
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+\setlist[itemize]{leftmargin=15pt,label=\textcolor{Forest}{\small\textbullet},
+  itemsep=2pt,parsep=0pt,topsep=4pt}
+\setlist[enumerate]{leftmargin=20pt,label=\textcolor{Forest}{\arabic*.},
+  itemsep=4pt,parsep=0pt,topsep=5pt}
+\titleformat{\section}{\sffamily\bfseries\Large\color{Forest}}{}{0pt}{}[\vspace{2pt}\color{Rule}\titlerule]
+\titlespacing*{\section}{0pt}{17pt}{10pt}
+\titleformat{\subsection}{\sffamily\bfseries\fontsize{11}{13}\selectfont\color{Forest}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\fontsize{8}{10}\selectfont\color{Muted}MATH 125 | Combinatorial Algebraic Geometry}
+\fancyhead[R]{\sffamily\fontsize{8}{10}\selectfont\color{Muted}Juliette Bruce}
+\fancyfoot[L]{\sffamily\fontsize{7.8}{9}\selectfont\color{Muted}\href{https://www.juliettebruce.xyz/teaching/125S26}{juliettebruce.xyz/teaching/125S26}}
+\fancyfoot[R]{\sffamily\fontsize{8}{10}\selectfont\color{Muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{conversionnote}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\sffamily\fontsize{8}{10}\selectfont\color{Muted}This syllabus was converted from Markdown to PDF using ChatGPT.}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\infotitle}[1]{{\sffamily\bfseries\fontsize{10.2}{13}\selectfont\color{Forest}#1}}
+\newcommand{\pageheading}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\begin{document}
+\fontsize{10.5}{14.2}\selectfont
+\color{Ink}
+\thispagestyle{conversionnote}
+{\sffamily\bfseries\fontsize{12}{15}\selectfont\color{Forest}MATH 125:\par}
+\vspace{4pt}
+{\fontsize{28}{31}\selectfont\color{Forest}Combinatorial Algebraic Geometry\par}
+\vspace{10pt}{\color{Forest}\hrule height 1.25pt}\vspace{8pt}
+\pdfbookmark[1]{Essential Information}{essential-information}
+\begingroup\setlength{\fboxsep}{10pt}
+\colorbox{Pale}{\begin{minipage}{\dimexpr\linewidth-20pt\relax}
+{\sffamily\bfseries\large\color{Forest}Essential Information}\par\vspace{5pt}
+\fontsize{10.2}{13.6}\selectfont
+\begin{tabularx}{\linewidth}{@{}l@{\hspace{18pt}}X@{}}
+\infotitle{Class Meetings (3B):} & Tuesday/Thursday 10:10am -- 12:00pm \\[3pt]
+\infotitle{X-Hour:} & Friday 3:30pm -- 4:20pm \\[3pt]
+\infotitle{Class Location:} & Kemeny 242 \\[3pt]
+\infotitle{Office Hours:} & Thursday: 1:30pm - 2:30pm \\[3pt]
+\infotitle{Instructor:} & Juliette Bruce \\[3pt]
+\infotitle{Instructor Email:} & \href{mailto:juliette.bruce@dartmouth.edu}{juliette.bruce@dartmouth.edu} \\[3pt]
+\infotitle{Instructor Office:} & Kemeny 334 \\[3pt]
+\end{tabularx}\end{minipage}}\endgroup
+
+\pageheading{Course Information}
+
+\subsection*{Course Description}
+
+This topics course explores interactions between combinatorics and algebraic geometry. Potential themes include Hilbert schemes Gröbner bases and degenerations, toric varieties and polytopes, tropical geometry, matroids and hyperplane arrangements, and related combinatorial models for intersection theory. The specific selection of topics will depend on student and instructor interest.
+
+\subsection*{Textbooks}
+
+There is no single textbook for this course as material will be pulled from numerous sources. Some resources you may wish to look at include:
+
+\begin{itemize}
+\item \emph{Toric Varieties} - Cox, Little, Schenck
+\item \emph{Introduction to Toric Varieties} - Fulton
+\item \emph{Combinatorial Commutative Algebra} - Miller, Sturmfels
+\item \emph{Introduction to Tropical Geometry} - Maclagan, Sturmfels
+\item \emph{Fundamental Algebraic Geometry: Grothendieck's FGA Explained} - Fantechi et. al
+\end{itemize}
+
+\clearpage
+\pageheading{Tentative Course Schedule}
+
+\begingroup
+\fontsize{9.5}{12.2}\selectfont
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\LTpre}{3pt}\setlength{\LTpost}{8pt}
+\begin{longtable}{L{30pt}L{218pt}L{78pt}L{62pt}L{74pt}}
+\toprule[0.9pt]
+\rowcolor{Pale}\sffamily\bfseries\color{Forest} Week & \sffamily\bfseries\color{Forest} Topic & \sffamily\bfseries\color{Forest} Reading & \sffamily\bfseries\color{Forest} Notes & \sffamily\bfseries\color{Forest} Misc. \\
+\midrule
+\endfirsthead
+\toprule[0.9pt]
+\rowcolor{Pale}\sffamily\bfseries\color{Forest} Week & \sffamily\bfseries\color{Forest} Topic & \sffamily\bfseries\color{Forest} Reading & \sffamily\bfseries\color{Forest} Notes & \sffamily\bfseries\color{Forest} Misc. \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1 & Review Algebraic Geometry & CLS-1.0 & \href{https://www.juliettebruce.xyz/teaching/125S26/Notes/Week1.pdf}{Week 1} & n/a \\
+\rowcolor{Pale!55}
+2 & Algebraic Tori & CLS-1.1 & \href{https://www.juliettebruce.xyz/teaching/125S26/Notes/Week2.pdf}{Week 2} & n/a \\
+3 & Review & CLS-1.0/1.1 & n/a & Students Only \\
+\rowcolor{Pale!55}
+4 & Affine Toric Varieties I & CLS-1.2-5 & \href{https://www.juliettebruce.xyz/teaching/125S26/Notes/Week4.pdf}{Week 4} & n/a \\
+5 & Affine Toric Varieties II & CLS-1.2-5 & \href{https://www.juliettebruce.xyz/teaching/125S26/Notes/Week5.pdf}{Week 5} & n/a \\
+\rowcolor{Pale!55}
+6 & Properties of Affine Toric Varieties & CLS-1.2-5 & \href{https://www.juliettebruce.xyz/teaching/125S26/Notes/Week6.pdf}{Week 6} & n/a \\
+7 & Projective Toric Varieties & CLS-3/4 & \href{https://www.juliettebruce.xyz/teaching/125S26/Notes/Week7.pdf}{Week 7} & n/a \\
+\rowcolor{Pale!55}
+8 & Divisors on Toric Varieties & CLS-4/5 & \href{https://www.juliettebruce.xyz/teaching/125S26/Notes/Week8.pdf}{Week 8} & n/a \\
+9 & Cox Rings \& GIT & CLS-5/14 & \href{https://www.juliettebruce.xyz/teaching/125S26/Notes/Week9.pdf}{Week 9} & n/a \\
+\end{longtable}
+\endgroup
+
+\begingroup
+\fontsize{10.2}{13.1}\selectfont
+\setlength{\parskip}{3pt plus 1pt}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\setlist[itemize]{leftmargin=15pt,label=\textcolor{Forest}{\small\textbullet},itemsep=1pt,parsep=0pt,partopsep=0pt,topsep=3pt}
+\pageheading{Course Format}
+
+\subsection*{Grading:}
+
+Your final grade will be calculated on the standard grade scale according to the following breakdown:
+
+\vspace{2pt}\begingroup\setlength{\fboxsep}{8pt}
+\colorbox{Pale}{\begin{minipage}{\dimexpr\linewidth-16pt\relax}
+\begin{tabularx}{\linewidth}{@{}XX@{}}
+{\sffamily\bfseries\color{Forest}50\% - Final Paper} & {\sffamily\bfseries\color{Forest}50\% - Notes}
+\end{tabularx}\end{minipage}}\endgroup\vspace{3pt}
+
+\subsection*{Final Paper}
+
+For your final paper you must select a topic or major theorem in combinatorial algebraic geometry not covered in this course and produce a report on this topic/theorem. The report should be 7-15 pages giving a detailed introduction/explanation of the topic/theoremwritten at a level appropriate for another student in the class. Your paper must be typeset in LaTeX. The final paper is due the last day of class: June 2, 2026. Late papers will not be accepted.
+
+Many topics and theorems are appropriate for this, and the goal is to allow you to find something that interests you. If you are unsure of whether a topic/theorem is approriate please come talk to me. You must tell me what your topic is by May 1, 2026. Here is an entirely random and idiosyncratic list of ideas:
+
+\setlength{\columnsep}{24pt}\setlength{\multicolsep}{4pt}
+\begin{multicols}{2}
+\fontsize{10}{12.5}\selectfont
+\begin{itemize}
+\item Stanley--Reisner Ideals/Rings
+\item Semi-group Rings \& Ehrhart Theory
+\item Newton--Okounkov Bodies
+\item Chow Rings of Matroids
+\item Hyperplane Arrangements
+\item Positive Geometry
+\item Hilbert Functions \& h-vectors
+\item Schubert Calculus \& Varieties
+\item Cluster Algebras
+\item Graph Complexes
+\item Mori Theory \& Mori Dream Spaces
+\item Fulton's F-Conjecture
+\item Pipe Dreams
+\item Multigraded Hilbert Schemes
+\item Toric/Tropical Vector Bundles
+\item Wonderful Compactifications
+\end{itemize}
+\end{multicols}
+
+\subsection*{Notes}
+
+You must choose two weeks to produce polished and typset notes from class.
+
+\endgroup
+\clearpage
+\pageheading{Course Policies}
+
+\subsection*{Typesetting \& Writing:}
+
+With the exception of in-class quizzes, all materials you submit for this class must be typeset in LaTeX. This includes your final project and your notes. Learning to write mathematics clearly in LaTeX is an important professional skill, and part of the goal of this course is to help you become comfortable with it. If you are new to LaTeX, there are numerous online resources that provide good introductions, including: \href{https://www.overleaf.com/learn/latex/Learn\_LaTeX\_in\_30\_minutes}{here}, \href{https://www.overleaf.com/learn/latex/Learn\_LaTeX\_in\_30\_minutes}{here}, \href{https://www.math.cmu.edu/~cnewstea/teaching/old/teaching/21-128-F15/latex-handout.pdf}{here}, and many mnay more.
+
+Mathematics is a form of writing, and your lab notebook and final project should follow professional best practices. This means writing in full, complete, and grammatically correct sentances. See \href{https://math.mit.edu/~poonen/papers/writing.pdf}{here} and \href{https://www.math.ucla.edu/~pak/papers/how-to-write1.pdf}{here} for some relatively good advice on this topic. Both your lab notebook and final project will be graded, in part, on your writing.
+
+\subsection*{Don't Use Generative AI:}
+
+Please do not use generative AI -- i.e. basically any and all large language models (LLMs) including ChatGPT, Claude, Gemini, DeepSeek, etc. -- in this course. While these can be helpful tools in learning mathematics, especially advanced mathematics, they are often not a panacea and can become a hindrance to learning. Using generative AI or LLMs for either your notes or final project will be considered cheating and a violation of the honor code.
+
+\subsection*{Course Expectations:}
+
+I believe in the axioms laid out by Professor Federico Ardila, and I will use them to guide my instruction in this course.
+
+\begin{enumerate}
+\item Mathematical potential is distributed equally among different groups, irrespective of geographic, demographic, and economic boundaries.
+\item Everyone can have joyful, meaningful, and empowering mathematical experiences.
+\item Mathematics is a powerful, malleable tool that can be shaped and used differently by various communities to serve their needs.
+\item Every student deserves to be treated with dignity and respect.
+\end{enumerate}
+
+Using these as guiding principles, I expect students to collaborate with me in developing and maintaining an inclusive learning environment where diversity and individual differences are understood, respected, and recognized as a source of strength. Racism, discrimination, harassment, and bullying will not be tolerated. I expect all participants in this course (students and faculty alike) to treat each other with courtesy and respect.
+
+Mathematics requires active participation. Before each class period, please read the assigned sections. Come to class ready to share what you have learned and also what remains confusing. Class meetings will involve some interactive lecture and other activities in a variety of formats; you will get the most out of each class day if you arrive ready to engage. In all settings, collaborate thoughtfully and ask questions respectfully: everyone should be able to participate.
+
+\subsection*{Honor Principle}
+
+We will strictly enforce Dartmouth's Academic Honor Principle.
+
+\clearpage
+\pageheading{Additional Information}
+
+\subsection*{Mental Health:}
+
+TThe academic environment at Dartmouth is challenging; our terms are intensive, and classes are not the only demanding part of your life. There are a number of resources available to you on campus to support your wellness:
+
+\begin{itemize}
+\item \href{https://students.dartmouth.edu/undergraduate-deans/}{Undergraduate Dean};
+\item \href{https://students.dartmouth.edu/health-service/counseling/about}{The Counseling Center}; and the
+\item \href{https://students.dartmouth.edu/wellness-center/}{Student Wellness Center}.
+\end{itemize}
+
+I encourage you to use these resources to take care of yourself throughout the term. Please come speak to me if you experience any difficulties, or would like help accessing any of these resources.
+
+\subsection*{Student Accessibility Services:}
+
+Students requesting disability-related accommodations and services for this course are encouraged to schedule a phone/video meeting with me as early in the term as possible. This conversation will help to establish what supports are built into my online course. In order for accommodations to be authorized, students are required to consult with Student Accessibility Services (\href{https://www.juliettebruce.xyz/teaching/student.accessibility.services@dartmouth.edu}{SAS}; 603-646-9900) and to email me their SAS accommodation form. We will then work together with SAS if accommodations need to be modified based on the online learning environment. If students have questions about whether they are eligible for accommodations, they should contact the SAS office. All inquiries and discussions will remain confidential.
+
+\subsection*{Title IX:}
+
+At Dartmouth, we value integrity, responsibility, and respect for the rights and interests of others, all central to our Principles of Community. We are dedicated to establishing and maintaining a safe and inclusive campus where all have equal access to the educational and employment opportunities Dartmouth offers. We strive to promote an environment of sexual respect, safety, and well-being. In its policies and standards, Dartmouth demonstrates unequivocally that sexual assault, gender-based harassment, domestic violence, dating violence, and stalking are not tolerated in our community.
+
+The [Sexual Respect Website]https://sexual-respect.dartmouth.edu) at Dartmouth provides a wealth of information on your rights with regard to sexual respect and resources that are available to all in our community.
+
+Please note that, as a faculty member, I am obligated to share disclosures regarding conduct under Title IX with Dartmouth's Title IX Coordinator. Confidential resources are also available, and include licensed medical or counseling professionals (e.g., a licensed psychologist), staff members of organizations recognized as rape crisis centers under state law (such as WISE), and ordained clergy (see \href{https://eoatix.dartmouth.edu}{here}).
+
+Should you have any questions, please feel free to contact Dartmouth's Title IX Coordinator or the Deputy Title IX Coordinator for the Guarini School. Their contact information can be found on the \href{https://sexual-respect.dartmouth.edu}{sexual respect website}.
+
+\subsection*{Religious Observances:}
+
+Some students may wish to take part in religious observances that occur during this academic term. If you have a religious observance that conflicts with your participation in the course, please meet with me as soon as possible, or before the end of the second week of the term (at the latest) to discuss appropriate adjustments. Dartmouth has a deep commitment to support students' religious observances and diverse faith practices.
+
+\end{document}

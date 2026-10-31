@@ -1,0 +1,293 @@
+
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in,top=0.67in,bottom=0.68in,headheight=14pt,headsep=18pt,footskip=25pt]{geometry}
+\usepackage{newpxtext,newpxmath}
+\renewcommand{\sfdefault}{qhv}
+\usepackage{microtype}
+\usepackage[table]{xcolor}
+\usepackage{array,tabularx,longtable,booktabs}
+\usepackage{enumitem,multicol}
+\usepackage{titlesec,fancyhdr,needspace}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\definecolor{Forest}{HTML}{174C43}
+\definecolor{Ink}{HTML}{232D30}
+\definecolor{Muted}{HTML}{65716F}
+\definecolor{Pale}{HTML}{EEF4F1}
+\definecolor{Rule}{HTML}{CBDAD3}
+\hypersetup{colorlinks=true,urlcolor=Forest,linkcolor=Forest,
+  pdfauthor={Juliette Bruce},pdftitle={MATH 101: Linear \& Multilinear Algebra},
+  bookmarksopen=true,pdfborder={0 0 0}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 1pt}
+\setlength{\emergencystretch}{2em}
+\widowpenalty=10000
+\clubpenalty=10000
+\raggedbottom
+\setlist[itemize]{leftmargin=15pt,label=\textcolor{Forest}{\small\textbullet},
+  itemsep=2pt,parsep=0pt,topsep=4pt}
+\setlist[enumerate]{leftmargin=20pt,label=\textcolor{Forest}{\arabic*.},
+  itemsep=4pt,parsep=0pt,topsep=5pt}
+\titleformat{\section}{\sffamily\bfseries\Large\color{Forest}}{}{0pt}{}[\vspace{2pt}\color{Rule}\titlerule]
+\titlespacing*{\section}{0pt}{17pt}{10pt}
+\titleformat{\subsection}{\sffamily\bfseries\fontsize{11}{13}\selectfont\color{Forest}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{12pt}{4pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\fontsize{8}{10}\selectfont\color{Muted}MATH 101 | Linear \& Multilinear Algebra}
+\fancyhead[R]{\sffamily\fontsize{8}{10}\selectfont\color{Muted}Juliette Bruce}
+\fancyfoot[L]{\sffamily\fontsize{7.8}{9}\selectfont\color{Muted}\href{https://www.juliettebruce.xyz/teaching/101F26}{juliettebruce.xyz/teaching/101F26}}
+\fancyfoot[R]{\sffamily\fontsize{8}{10}\selectfont\color{Muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{conversionnote}{%
+  \fancyhf{}%
+  \fancyfoot[L]{\sffamily\fontsize{8}{10}\selectfont\color{Muted}This syllabus was converted from Markdown to PDF using ChatGPT.}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\infotitle}[1]{{\sffamily\bfseries\fontsize{10.2}{13}\selectfont\color{Forest}#1}}
+\newcommand{\pageheading}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\begin{document}
+\fontsize{10.5}{14.2}\selectfont
+\color{Ink}
+\thispagestyle{conversionnote}
+{\sffamily\bfseries\fontsize{12}{15}\selectfont\color{Forest}MATH 101:\par}
+\vspace{4pt}
+{\fontsize{28}{31}\selectfont\color{Forest}Linear \& Multilinear Algebra\par}
+\vspace{10pt}{\color{Forest}\hrule height 1.25pt}\vspace{8pt}
+\pdfbookmark[1]{Essential Information}{essential-information}
+\begingroup\setlength{\fboxsep}{10pt}
+\colorbox{Pale}{\begin{minipage}{\dimexpr\linewidth-20pt\relax}
+{\sffamily\bfseries\large\color{Forest}Essential Information}\par\vspace{5pt}
+\fontsize{10.2}{13.6}\selectfont
+\begin{tabularx}{\linewidth}{@{}l@{\hspace{18pt}}X@{}}
+\infotitle{Class Meetings (3A):} & Monday/Wednesday 3:30pm -- 5:20pm \\[3pt]
+\infotitle{X-Hour:} & Monday 5:30pm -- 6:20pm \\[3pt]
+\infotitle{Class Location:} & Kemeny 242 \\[3pt]
+\infotitle{Office Hours:} & Thursday: 12:00pm - 1:30pm \\[3pt]
+\infotitle{Instructor:} & Juliette Bruce \\[3pt]
+\infotitle{Instructor Email:} & \href{mailto:juliette.bruce@dartmouth.edu}{juliette.bruce@dartmouth.edu} \\[3pt]
+\infotitle{Instructor Office:} & Kemeny 334 \\[3pt]
+\multicolumn{2}{@{}l@{}}{\textbf{\href{https://www.juliettebruce.xyz/teaching/101F26/dailyUpdate.pdf}{Daily Update}}} \\[2pt]
+\end{tabularx}\end{minipage}}\endgroup
+
+\pageheading{Course Information}
+
+\subsection*{Course Description}
+
+This graduate course in abstract algebra treats the subject of linear and multilinear algebra from an abstract point of view, setting up the theory of modules. Topics include tensor products, symmetric and exterior powers, universal properties, homological algebra, and module theory. Applications include the representation theory of finite groups and commutative algebra.
+
+\subsection*{Textbooks}
+
+There are many excellent textbooks introducing abstract algebra; however, I do not view any of them as perfect fits for this course. As such, I am going to suggest a number of books each with a different flavor:
+
+\begin{itemize}
+\item \emph{Abstract algebra} - David S. Dummit and Richard M. Foote
+\item \emph{Algebra: Chapter 0} - Paolo Aluffi
+\item \emph{Algebra} - Serge Lang
+\item \emph{Linear Algebra} - Kenneth Hoffman and Ray Kunze
+\end{itemize}
+
+Please choose the source that is best for you. I will do my best to match suggested readings to the sources above. Note the readings assigned are overly inclusive, and you will have to pick and choose what is on topic.
+
+\clearpage
+\pageheading{Tentative Course Schedule}
+
+\begingroup
+\fontsize{9.0}{11.4}\selectfont
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.2}
+\setlength{\LTpre}{3pt}\setlength{\LTpost}{8pt}
+\begin{longtable}{L{25pt}L{86pt}L{104pt}L{54pt}L{137pt}L{50pt}}
+\toprule[0.9pt]
+\rowcolor{Pale}\sffamily\bfseries\color{Forest} Week & \sffamily\bfseries\color{Forest} Date & \sffamily\bfseries\color{Forest} Topic & \sffamily\bfseries\color{Forest} Worksheet & \sffamily\bfseries\color{Forest} Reading & \sffamily\bfseries\color{Forest} Misc. \\
+\midrule
+\endfirsthead
+\toprule[0.9pt]
+\rowcolor{Pale}\sffamily\bfseries\color{Forest} Week & \sffamily\bfseries\color{Forest} Date & \sffamily\bfseries\color{Forest} Topic & \sffamily\bfseries\color{Forest} Worksheet & \sffamily\bfseries\color{Forest} Reading & \sffamily\bfseries\color{Forest} Misc. \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+1.1 & September 14 (M) & Rings I & \href{https://www.juliettebruce.xyz/teaching/101F26/1-1.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/1-1.tex}{tex} & DF 7.1--3, L II.1-3, A III.1-5 &  \\
+\rowcolor{Pale!55}
+1.2 & September 14 (Mx) & Rings I & \href{https://www.juliettebruce.xyz/teaching/101F26/1-1.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/1-1.tex}{tex} & DF 7.1--3, L II.1-3, A III.1-5 &  \\
+1.3 & September 16 (W) & Modules I & \href{https://www.juliettebruce.xyz/teaching/101F26/1-2.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/1-2.tex}{tex} & DF 10.1--2, L III.1-2, A III.1-5 &  \\
+\rowcolor{Pale!55}
+2.1 & September 21 (M) & Categories \& Vector Spaces I & \href{https://www.juliettebruce.xyz/teaching/101F26/2-1.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/2-1.tex}{tex} & DF 11.1-3/I-II, L XIII, A I.1-5 & \href{https://www.juliettebruce.xyz/teaching/101F26/Quiz1.pdf}{Quiz 1} \\
+2.2 & September 21 (Mx) & Categories \& Vector Spaces I & \href{https://www.juliettebruce.xyz/teaching/101F26/2-1.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/2-1.tex}{tex} & DF 11.1-3/I-II, L XIII, A I.1-5 &  \\
+\rowcolor{Pale!55}
+2.3 & September 23 (W) & Vector Spaces II & \href{https://www.juliettebruce.xyz/teaching/101F26/2-2.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/2-2.tex}{tex} & DF 11.1-3/I-II, L XIII, A I.1-5 & \href{https://www.juliettebruce.xyz/teaching/101F26/Quiz2.pdf}{Quiz 2} \\
+3.1 & September 28 (M) & Vector Spaces III & \href{https://www.juliettebruce.xyz/teaching/101F26/3-1.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/3-1.tex}{tex} & DF 11.1-5, L XV-XVI, A VIII.1-5 & \href{https://www.juliettebruce.xyz/teaching/101F26/Quiz3.pdf}{Quiz 3} \\
+\rowcolor{Pale!55}
+3.2 & September 28 (Mx) & Vector Spaces III & \href{https://www.juliettebruce.xyz/teaching/101F26/3-2.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/3-2.tex}{tex} & DF 11.1-5, L XV-XVI, A VIII.1-5 &  \\
+3.3 & September 30 (W) & Vector Spaces IV & \href{https://www.juliettebruce.xyz/teaching/101F26/3-3.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/3-3.tex}{tex} & DF 11.1-5, L XV-XVI, A VIII.1-5 & \href{https://www.juliettebruce.xyz/teaching/101F26/Quiz4.pdf}{Quiz 4} \\
+\rowcolor{Pale!55}
+4.1 & October 5 (M) & Modules II & \href{https://www.juliettebruce.xyz/teaching/101F26/4-1.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/4-1.tex}{tex} & DF 10, L III.1-6, A VI.1-4, VIII & \href{https://www.juliettebruce.xyz/teaching/101F26/Quiz5.pdf}{Quiz 5} \\
+4.2 & October 5 (Mx) & Modules III & \href{https://www.juliettebruce.xyz/teaching/101F26/4-2.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/4-2.tex}{tex} & DF 10, L III.1-6, A VI.1-4, VIII &  \\
+\rowcolor{Pale!55}
+4.3 & October 7 (W) & Modules IV & \href{https://www.juliettebruce.xyz/teaching/101F26/4-3.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/4-3.tex}{tex} & DF 10, L III.1-6, A VI.1-4, VIII &  \\
+5.1 & October 12 (M) & Modules V & \href{https://www.juliettebruce.xyz/teaching/101F26/4-3.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/4-3.tex}{tex} & DF 10, L III.1-6, A VI.1-4, VIII & Quiz 6 \\
+\rowcolor{Pale!55}
+5.2 & October 12 (Mx) & Review I & n/a &  &  \\
+5.3 & October 14 (W) & Review II & n/a &  &  \\
+\rowcolor{Pale!55}
+6.1 & October 19 (M) & Modules over PIDS I & \href{https://www.juliettebruce.xyz/teaching/101F26/6-1.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/6-1.tex}{tex} & DF 8/12, A VI.4-5 &  \\
+6.2 & October 19 (Mx) & Modules over PIDS II & \href{https://www.juliettebruce.xyz/teaching/101F26/6-1.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/6-1.tex}{tex} & DF 8/12, L III.7, A VI.4-5 &  \\
+\rowcolor{Pale!55}
+6.3 & October 21 (W) & Chain Conditions I & \href{https://www.juliettebruce.xyz/teaching/101F26/6-2.pdf}{pdf} / \href{https://www.juliettebruce.xyz/teaching/101F26/6-2.tex}{tex} & DF 12 & \href{https://www.juliettebruce.xyz/teaching/101F26/Quiz7.pdf}{Quiz 7} \\
+7.1 & October 26 (M) &  &  &  &  \\
+\rowcolor{Pale!55}
+7.2 & October 26 (Mx) &  &  &  &  \\
+7.3 & October 28 (W) &  &  &  &  \\
+\rowcolor{Pale!55}
+8.1 & November 2 (M) &  &  &  &  \\
+8.2 & November 2 (Mx) &  &  &  &  \\
+\rowcolor{Pale!55}
+8.3 & November 4 (W) &  &  &  &  \\
+9.1 & November 9 (M) &  &  &  &  \\
+\rowcolor{Pale!55}
+9.2 & November 9 (Mx) &  &  &  &  \\
+9.3 & November 11 (W) &  &  &  &  \\
+\rowcolor{Pale!55}
+10.1 & November 16 (M) &  &  &  &  \\
+10.2 & November 16 (Mx) &  &  &  &  \\
+\end{longtable}
+\endgroup
+
+\emph{Note: The preamble document for the LaTeX worksheets can be found \href{https://www.juliettebruce.xyz/teaching/101F26/101preamble.tex}{here}. As a warning this changes frequently as new worksheets are written.}
+
+\clearpage
+\begingroup
+\fontsize{10.2}{13.1}\selectfont
+\setlength{\parskip}{3pt plus 1pt}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\setlist[itemize]{leftmargin=15pt,label=\textcolor{Forest}{\small\textbullet},itemsep=1pt,parsep=0pt,partopsep=0pt,topsep=3pt}
+\pageheading{Course Format}
+
+\subsection*{Major Dates:}
+
+\begin{itemize}
+\item October 12, 2026: Last day to tell me your final project topic.
+\item November 16, 2026: Lab Notebook Due (via Canvas)
+\item November 16, 2026: Final Project Due (via Canvas)
+\end{itemize}
+
+\subsection*{Grading:}
+
+Your final grade will be calculated on the standard grade scale according to the following breakdown:
+
+\vspace{2pt}\begingroup\setlength{\fboxsep}{8pt}
+\colorbox{Pale}{\begin{minipage}{\dimexpr\linewidth-16pt\relax}
+\begin{tabularx}{\linewidth}{@{}XXX@{}}
+{\sffamily\bfseries\color{Forest}25\% - Quizzes} & {\sffamily\bfseries\color{Forest}50\% - Lab Notebook} & {\sffamily\bfseries\color{Forest}25\% - Final Project}
+\end{tabularx}\end{minipage}}\endgroup\vspace{3pt}
+
+\subsection*{Quizzes}
+
+Throughout the course, there will be short 5-15 minute quizes with the goal of helping us reflect on what we are learning, focus our attention on what areas where we are confused, and to hold ourselves accountable for engaging in the course. The quizzes may be announced or unannounced, and they may cover material found only in the assigned reading. Be sure to pay attention to the Daily Update! Your lowest quiz score will be dropped. Quizzes cannot be made up.
+
+\subsection*{Lab Notebook}
+
+Each class period will include a worksheet that we will work on in class in small groups. Everyone is expected to participate and work together in a collaborative setting. These worksheets are intentionally designed to be exploratory and may not include every definition or theorem needed to complete them. The goal is for you to develop the ideas together by experimenting with examples, making conjectures, and discussing possible approaches with your group. These worksheets will not be fully finished in-class.
+
+Each week you should find time to complete the worksheet and type up carefully thought-out solutions to the exercises on the weekly workseeets. These should be in your own words. At the end of the term, you will submit your lab notebook as a single typeset file containing solutions to every worksheet in the course. Your Lab Notebook is due the last day of class: November 16, 2026. Late lab notebooks will not be accepted.
+
+\subsection*{Final Project}
+
+For your final project you must select a narrow topic or major theorem in algebra related to but not covered in this course and produce short report on this topic/theorem. The report should include: i) a brief 3-6 page introduction/explanation of the topic/theoremwritten at a level appropriate for another student in the class, ii) a 1-2 page worksheet for the topic/theorem similar to those used in class, and iii) a solution key to your worksheet. All of these materials must be typeset in LaTeX. The final project is due the last day of class: June 2, 2026. Late projects will not be accepted.
+
+Many topics and theorems are appropriate for this, and the goal is to allow you to find something that interests yous. If you are unsure of whether a topic/theorem is approriate please come talk to me. You must tell me what your topic is by October 12, 2026. Here is an entirely random and idiosyncratic list of ideas:
+
+\setlength{\columnsep}{24pt}\setlength{\multicolsep}{4pt}
+\begin{multicols}{2}
+\fontsize{10}{12.5}\selectfont
+\begin{itemize}
+\item Morita Equivalence
+\item Yoneda Product on Ext
+\item Grothendieck Group of Modules
+\item Hilbert's Theorem 90
+\item Clifford Algebras
+\item Frobenius's Theorem for Division Algebras
+\item Derived Categories
+\item Schur-Weyl Duality
+\item Polynomial Reprensetations of GL
+\item Witt Decomposition
+\item Symplectic Linear Algebra
+\item SVD \& Low-Rank Approximation
+\item Jordan--Chevalley Decomposition
+\end{itemize}
+\end{multicols}
+
+\endgroup
+\clearpage
+\pageheading{Course Policies}
+
+\subsection*{Typesetting \& Writing:}
+
+With the exception of in-class quizzes, all materials you submit for this class must be typeset in LaTeX. This includes your lab notebook and your final project. Learning to write mathematics clearly in LaTeX is an important professional skill, and part of the goal of this course is to help you become comfortable with it. If you are new to LaTeX, there are numerous online resources that provide good introductions, including: \href{https://www.overleaf.com/learn/latex/Learn\_LaTeX\_in\_30\_minutes}{here}, \href{https://www.overleaf.com/learn/latex/Learn\_LaTeX\_in\_30\_minutes}{here}, \href{https://www.math.cmu.edu/~cnewstea/teaching/old/teaching/21-128-F15/latex-handout.pdf}{here}, and many mnay more.
+
+Mathematics is a form of writing, and your lab notebook and final project should follow professional best practices. This means writing in full, complete, and grammatically correct sentances. See \href{https://math.mit.edu/~poonen/papers/writing.pdf}{here} and \href{https://www.math.ucla.edu/~pak/papers/how-to-write1.pdf}{here} for some relatively good advice on this topic. Both your lab notebook and final project will be graded, in part, on your writing.
+
+\subsection*{Don't Use Generative AI:}
+
+Please do not use generative AI -- i.e. basically any and all large language models (LLMs) including ChatGPT, Claude, Gemini, DeepSeek, etc. -- in this course. While these can be helpful tools in learning mathematics, especially advanced mathematics, they are often not a panacea and can become a hindrance to learning. Using generative AI or LLMs for either your lab notebook or final project will be considered cheating and a violation of the honor code.
+
+\subsection*{Course Expectations:}
+
+I believe in the axioms laid out by Professor Federico Ardila, and I will use them to guide my instruction in this course.
+
+\begin{enumerate}
+\item Mathematical potential is distributed equally among different groups, irrespective of geographic, demographic, and economic boundaries.
+\item Everyone can have joyful, meaningful, and empowering mathematical experiences.
+\item Mathematics is a powerful, malleable tool that can be shaped and used differently by various communities to serve their needs.
+\item Every student deserves to be treated with dignity and respect.
+\end{enumerate}
+
+Using these as guiding principles, I expect students to collaborate with me in developing and maintaining an inclusive learning environment where diversity and individual differences are understood, respected, and recognized as a source of strength. Racism, discrimination, harassment, and bullying will not be tolerated. I expect all participants in this course (students and faculty alike) to treat each other with courtesy and respect.
+
+Mathematics requires active participation. Before each class period, please read the assigned sections. Come to class ready to share what you have learned and also what remains confusing. Class meetings will involve some interactive lecture and other activities in a variety of formats; you will get the most out of each class day if you arrive ready to engage. In all settings, collaborate thoughtfully and ask questions respectfully: everyone should be able to participate.
+
+\subsection*{Honor Principle}
+
+We will strictly enforce Dartmouth's Academic Honor Principle.
+
+\clearpage
+\pageheading{Additional Information}
+
+\subsection*{Mental Health:}
+
+TThe academic environment at Dartmouth is challenging; our terms are intensive, and classes are not the only demanding part of your life. There are a number of resources available to you on campus to support your wellness:
+
+\begin{itemize}
+\item \href{https://students.dartmouth.edu/undergraduate-deans/}{Undergraduate Dean};
+\item \href{https://students.dartmouth.edu/health-service/counseling/about}{The Counseling Center}; and the
+\item \href{https://students.dartmouth.edu/wellness-center/}{Student Wellness Center}.
+\end{itemize}
+
+I encourage you to use these resources to take care of yourself throughout the term. Please come speak to me if you experience any difficulties, or would like help accessing any of these resources.
+
+\subsection*{Student Accessibility Services:}
+
+Students requesting disability-related accommodations and services for this course are encouraged to schedule a phone/video meeting with me as early in the term as possible. This conversation will help to establish what supports are built into my online course. In order for accommodations to be authorized, students are required to consult with Student Accessibility Services (\href{https://www.juliettebruce.xyz/teaching/student.accessibility.services@dartmouth.edu}{SAS}; 603-646-9900) and to email me their SAS accommodation form. We will then work together with SAS if accommodations need to be modified based on the online learning environment. If students have questions about whether they are eligible for accommodations, they should contact the SAS office. All inquiries and discussions will remain confidential.
+
+\subsection*{Title IX:}
+
+At Dartmouth, we value integrity, responsibility, and respect for the rights and interests of others, all central to our Principles of Community. We are dedicated to establishing and maintaining a safe and inclusive campus where all have equal access to the educational and employment opportunities Dartmouth offers. We strive to promote an environment of sexual respect, safety, and well-being. In its policies and standards, Dartmouth demonstrates unequivocally that sexual assault, gender-based harassment, domestic violence, dating violence, and stalking are not tolerated in our community.
+
+The \href{https://sexual-respect.dartmouth.edu}{Sexual Respect Website} at Dartmouth provides a wealth of information on your rights with regard to sexual respect and resources that are available to all in our community.
+
+Please note that, as a faculty member, I am obligated to share disclosures regarding conduct under Title IX with Dartmouth's Title IX Coordinator. Confidential resources are also available, and include licensed medical or counseling professionals (e.g., a licensed psychologist), staff members of organizations recognized as rape crisis centers under state law (such as WISE), and ordained clergy (see \href{https://eoatix.dartmouth.edu}{here}).
+
+Should you have any questions, please feel free to contact Dartmouth's Title IX Coordinator or the Deputy Title IX Coordinator for the Guarini School. Their contact information can be found on the \href{https://sexual-respect.dartmouth.edu}{sexual respect website}.
+
+\subsection*{Religious Observances:}
+
+Some students may wish to take part in religious observances that occur during this academic term. If you have a religious observance that conflicts with your participation in the course, please meet with me as soon as possible, or before the end of the second week of the term (at the latest) to discuss appropriate adjustments. Dartmouth has a deep commitment to support students' religious observances and diverse faith practices.
+
+\end{document}
